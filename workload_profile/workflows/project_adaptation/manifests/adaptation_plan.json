@@ -1,0 +1,823 @@
+{
+  "schema_version": 5,
+  "plan_id": "qwen-dcu-workload-profile-workflow-capability-complete-v1",
+  "adaptation_mode": "workflow-capability-complete-adaptation",
+  "adaptation_scope": "source-preserving-plus-mandatory-workflow-gap-skills",
+  "phase": "control-plane-only",
+  "workflow_contract": "workload_profile/workflows/project_adaptation/workflow_skill_migration_contract.md",
+  "implementation_plan": "workload_profile/workflows/project_adaptation/adaptation_stage_implementation_plan.md",
+  "common_goal_contract": "workload_profile/workflows/project_adaptation/goals/common.md",
+  "extra_skill_roots": [
+    "workload_profile/skills"
+  ],
+  "min_codex_version": "0.145.0",
+  "default_model": "gpt-5.6-sol",
+  "effort": "max",
+  "stage_timeout_seconds": 14400,
+  "poll_seconds": 2.0,
+  "stage_order": [
+    "A00",
+    "A01",
+    "A02",
+    "A031",
+    "A041",
+    "A051",
+    "A032",
+    "A033",
+    "A042",
+    "A052",
+    "A07"
+  ],
+  "workflow_inventory": [
+    {
+      "path": "workload_profile/workflows/00_overview.md",
+      "classification": "runtime_workflow",
+      "contributes_to_runtime": true,
+      "sha256": "d3179d3ad0599ba0e4424b3878ef3e3fe817e8e2f4c81c5313d3f45edfe31380"
+    },
+    {
+      "path": "workload_profile/workflows/01_torch_profile_patch_targets.md",
+      "classification": "runtime_workflow",
+      "contributes_to_runtime": true,
+      "sha256": "4a3016fe213f9c9d103da2a86cb6fb702ab5010d5c897cf28ca2a75b7198c593"
+    },
+    {
+      "path": "workload_profile/workflows/02_algorithmic_trace_layer_selection.md",
+      "classification": "runtime_workflow",
+      "contributes_to_runtime": true,
+      "sha256": "5d3944dc2c37a2bf7e419b9deb53c71005966bd1b4a2257c40b0b007e16d426c"
+    },
+    {
+      "path": "workload_profile/workflows/03_1_04_1_dispatch_branch.md",
+      "classification": "runtime_workflow",
+      "contributes_to_runtime": true,
+      "sha256": "3f9662bef75dcdac7ae742bc79587a02612a9f3de0d9d1a5e4679e6d72130030"
+    },
+    {
+      "path": "workload_profile/workflows/03_2_04_2_fx_branch.md",
+      "classification": "runtime_workflow",
+      "contributes_to_runtime": true,
+      "sha256": "97d0e66b142c086ab468461f96d62288edd9575c5485c144028f2762cb38989a"
+    },
+    {
+      "path": "workload_profile/workflows/README.md",
+      "classification": "operator_documentation",
+      "contributes_to_runtime": false,
+      "sha256": "69d63911d825b3fc5838b94061f8efc0f285e15c156a7806bcff1df2725d90a8"
+    },
+    {
+      "path": "workload_profile/workflows/draft_prompt.md",
+      "classification": "superseded_control_plane_draft",
+      "contributes_to_runtime": false,
+      "sha256": "f237382cb0b882fe683cde66e6535fd16f5d356b22a0f4d3422f2688ff5d0948"
+    },
+    {
+      "path": "workload_profile/workflows/workflow_goal_decomposition_and_project_adaptation.md",
+      "classification": "superseded_control_plane_design",
+      "contributes_to_runtime": false,
+      "sha256": "ca556a4dffb95ef762ba407533cfd88671ef8c7f8aee12444e5ea2a99d34ff19"
+    }
+  ],
+  "capability_coverage": [
+    {
+      "id": "shared-run-contract-event-conservation",
+      "workflow": "workload_profile/workflows/00_overview.md",
+      "coverage_type": "workflow_gap",
+      "stages": [
+        "A00"
+      ]
+    },
+    {
+      "id": "profiler-to-patch-target-discovery",
+      "workflow": "workload_profile/workflows/01_torch_profile_patch_targets.md",
+      "coverage_type": "source_skill",
+      "stages": [
+        "A01"
+      ]
+    },
+    {
+      "id": "unit-1-contract-and-patch-handoff-boundary",
+      "workflow": "workload_profile/workflows/01_torch_profile_patch_targets.md",
+      "coverage_type": "source_skill_boundary",
+      "stages": [
+        "A00",
+        "A01"
+      ]
+    },
+    {
+      "id": "algorithmic-trace-and-canonical-selection",
+      "workflow": "workload_profile/workflows/02_algorithmic_trace_layer_selection.md",
+      "coverage_type": "source_skill",
+      "stages": [
+        "A02"
+      ]
+    },
+    {
+      "id": "unit-2-contract-selection-handoff-boundary",
+      "workflow": "workload_profile/workflows/02_algorithmic_trace_layer_selection.md",
+      "coverage_type": "source_skill_boundary",
+      "stages": [
+        "A00",
+        "A01",
+        "A02"
+      ]
+    },
+    {
+      "id": "dispatch-filtered-capture-and-profile-validation",
+      "workflow": "workload_profile/workflows/03_1_04_1_dispatch_branch.md",
+      "coverage_type": "source_skill",
+      "stages": [
+        "A031"
+      ]
+    },
+    {
+      "id": "dispatch-full-schema-handoff-boundary",
+      "workflow": "workload_profile/workflows/03_1_04_1_dispatch_branch.md",
+      "coverage_type": "source_skill_boundary",
+      "stages": [
+        "A00",
+        "A02",
+        "A031",
+        "A041"
+      ]
+    },
+    {
+      "id": "dispatch-reconstruction-tensor-dependency-onnx-audit",
+      "workflow": "workload_profile/workflows/03_1_04_1_dispatch_branch.md",
+      "coverage_type": "source_skill",
+      "stages": [
+        "A041"
+      ]
+    },
+    {
+      "id": "dispatch-manual-visualization-and-branch-completion",
+      "workflow": "workload_profile/workflows/03_1_04_1_dispatch_branch.md",
+      "coverage_type": "workflow_gap",
+      "stages": [
+        "A051"
+      ]
+    },
+    {
+      "id": "fx-selected-layer-fixed-input-trace",
+      "workflow": "workload_profile/workflows/03_2_04_2_fx_branch.md",
+      "coverage_type": "source_skill",
+      "stages": [
+        "A032"
+      ]
+    },
+    {
+      "id": "fx-entry-contract-and-trace-boundary",
+      "workflow": "workload_profile/workflows/03_2_04_2_fx_branch.md",
+      "coverage_type": "source_skill_boundary",
+      "stages": [
+        "A00",
+        "A02",
+        "A032"
+      ]
+    },
+    {
+      "id": "fx-rule-reconstruction",
+      "workflow": "workload_profile/workflows/03_2_04_2_fx_branch.md",
+      "coverage_type": "workflow_gap",
+      "stages": [
+        "A033"
+      ]
+    },
+    {
+      "id": "fx-process-explanation-and-manual-visualization",
+      "workflow": "workload_profile/workflows/03_2_04_2_fx_branch.md",
+      "coverage_type": "source_skill",
+      "stages": [
+        "A042"
+      ]
+    },
+    {
+      "id": "fx-final-coverage-and-completion",
+      "workflow": "workload_profile/workflows/03_2_04_2_fx_branch.md",
+      "coverage_type": "workflow_gap",
+      "stages": [
+        "A052"
+      ]
+    }
+  ],
+  "stages": [
+    {
+      "id": "A00",
+      "kind": "workflow_gap_skill_generation",
+      "depends_on": [],
+      "objective": "完成 A00：从 00_overview.md 中任何参考 Skill 都未独占覆盖的共享 run contract、canonical event keys、event-set conservation、evidence boundaries 与 shared completion checks，生成独立当前项目 Skill；不执行 Workflow。",
+      "goal_template": "workload_profile/workflows/project_adaptation/goals/A00.md",
+      "workflow_requirements": [
+        "workload_profile/workflows/00_overview.md"
+      ],
+      "workflow_authority": {
+        "path": "workload_profile/workflows/00_overview.md",
+        "sections": [
+          "Run Modes",
+          "Canonical Run Contract",
+          "Canonical Event Keys",
+          "Event Families And Conservation",
+          "Evidence Boundaries",
+          "Shared Completion Checks"
+        ],
+        "sha256": "d3179d3ad0599ba0e4424b3878ef3e3fe817e8e2f4c81c5313d3f45edfe31380"
+      },
+      "binding_evidence": [
+        {
+          "path": "workload_profile/algorithmic_trace/tools/finalize_r02.py",
+          "sha256": "26e603ba7e621d8b16c0ecd3e9f6b96ee43251872a5d5be9445cc81eac3d88b1"
+        },
+        {
+          "path": "workload_profile/fx/tools/finalize_r032.py",
+          "sha256": "f93fdd470af78537f68d55f9cea2526a6b4228a08e70ac14fc96f949adb3d489"
+        },
+        {
+          "path": "workload_profile/fx/tools/finalize_r042.py",
+          "sha256": "7546c5f75149427f6912ec533bc8d5fa4f53647fe975d95303585df0f0bed142"
+        }
+      ],
+      "unresolved_bindings": [
+        "worker/rank topology for multi-process runs",
+        "fresh-run concrete artifact roots and event counts"
+      ],
+      "required_markers": [
+        "REFERENCE_AUDIT",
+        "FRESH_RUN",
+        "layer_occurrence",
+        "event conservation",
+        "evidence boundary"
+      ],
+      "output_skill": {
+        "name": "qwen-dcu-workload-profile-contract-audit",
+        "path": "workload_profile/skills/qwen-dcu-workload-profile-contract-audit",
+        "file_set": [
+          "SKILL.md",
+          "agents/openai.yaml"
+        ]
+      },
+      "artifact_dir": "workload_profile/workflows/project_adaptation/artifacts/A00",
+      "handoff": "workload_profile/workflows/project_adaptation/artifacts/A00/handoff.json",
+      "final_gate": [
+        "python3",
+        "{project_root}/workload_profile/workflows/project_adaptation/scripts/verify_adaptation_output.py",
+        "--project-root",
+        "{project_root}",
+        "--plan",
+        "{plan_path}",
+        "--stage",
+        "A00"
+      ]
+    },
+    {
+      "id": "A01",
+      "kind": "source_skill_text_alignment",
+      "depends_on": [
+        "A00"
+      ],
+      "objective": "完成 A01：以 trace-patch-target-discovery 完整 Skill 为唯一迁移主体，镜像其结构并将旧项目文本绑定对齐到当前 Qwen3.5/vLLM V1/ROCm/DCU 项目；Workflow 只用于理解 profiler/patch-target 角色，不实现代码或运行 Workflow。",
+      "goal_template": "workload_profile/workflows/project_adaptation/goals/A01.md",
+      "workflow_requirements": [
+        "workload_profile/workflows/00_overview.md",
+        "workload_profile/workflows/01_torch_profile_patch_targets.md"
+      ],
+      "source_skill": {
+        "name": "trace-patch-target-discovery",
+        "scope": "full",
+        "tree_sha256": "e84ebc754f333c9602e97eb9f77c1a12111543929db851a54f3c68e20d6212e2",
+        "file_set": [
+          "SKILL.md",
+          "agents/openai.yaml"
+        ]
+      },
+      "output_skill": {
+        "name": "qwen-dcu-profile-patch-targets",
+        "path": "workload_profile/skills/qwen-dcu-profile-patch-targets",
+        "file_set": [
+          "SKILL.md",
+          "agents/openai.yaml"
+        ]
+      },
+      "artifact_dir": "workload_profile/workflows/project_adaptation/artifacts/A01",
+      "handoff": "workload_profile/workflows/project_adaptation/artifacts/A01/handoff.json",
+      "final_gate": [
+        "python3",
+        "{project_root}/workload_profile/workflows/project_adaptation/scripts/verify_adaptation_output.py",
+        "--project-root",
+        "{project_root}",
+        "--plan",
+        "{plan_path}",
+        "--stage",
+        "A01",
+        "--source-skill-root",
+        "{source_skill_root}"
+      ]
+    },
+    {
+      "id": "A02",
+      "kind": "source_skill_text_alignment",
+      "depends_on": [
+        "A01"
+      ],
+      "objective": "完成 A02：以 visipruner-trace-dispatch-profile 的 Algorithmic Trace/selection 能力段为唯一迁移主体，镜像源 Skill 结构并对齐当前项目文本；Workflow 只用于确定该能力段角色，不合并 A01 Skill 或 filtered Dispatch 内容。",
+      "goal_template": "workload_profile/workflows/project_adaptation/goals/A02.md",
+      "workflow_requirements": [
+        "workload_profile/workflows/00_overview.md",
+        "workload_profile/workflows/02_algorithmic_trace_layer_selection.md"
+      ],
+      "source_skill": {
+        "name": "visipruner-trace-dispatch-profile",
+        "scope": "algorithmic-trace-selection",
+        "tree_sha256": "bb35da60d5aead6be8793ec588a36503fe579ad143c771d074058105a19b197b",
+        "file_set": [
+          "SKILL.md",
+          "agents/openai.yaml"
+        ]
+      },
+      "output_skill": {
+        "name": "qwen-dcu-algorithmic-trace-selection",
+        "path": "workload_profile/skills/qwen-dcu-algorithmic-trace-selection",
+        "file_set": [
+          "SKILL.md",
+          "agents/openai.yaml"
+        ]
+      },
+      "artifact_dir": "workload_profile/workflows/project_adaptation/artifacts/A02",
+      "handoff": "workload_profile/workflows/project_adaptation/artifacts/A02/handoff.json",
+      "final_gate": [
+        "python3",
+        "{project_root}/workload_profile/workflows/project_adaptation/scripts/verify_adaptation_output.py",
+        "--project-root",
+        "{project_root}",
+        "--plan",
+        "{plan_path}",
+        "--stage",
+        "A02",
+        "--source-skill-root",
+        "{source_skill_root}"
+      ]
+    },
+    {
+      "id": "A031",
+      "kind": "source_skill_text_alignment",
+      "depends_on": [
+        "A02"
+      ],
+      "objective": "完成 A031：以 visipruner-trace-dispatch-profile 的 filtered Dispatch capture/profile validation 能力段为唯一迁移主体，镜像源 Skill 结构并对齐当前项目文本；不混入 Algorithmic Trace/selection 内容。",
+      "goal_template": "workload_profile/workflows/project_adaptation/goals/A031.md",
+      "workflow_requirements": [
+        "workload_profile/workflows/00_overview.md",
+        "workload_profile/workflows/03_1_04_1_dispatch_branch.md"
+      ],
+      "source_skill": {
+        "name": "visipruner-trace-dispatch-profile",
+        "scope": "filtered-dispatch-profile",
+        "tree_sha256": "bb35da60d5aead6be8793ec588a36503fe579ad143c771d074058105a19b197b",
+        "file_set": [
+          "SKILL.md",
+          "agents/openai.yaml"
+        ]
+      },
+      "output_skill": {
+        "name": "qwen-dcu-dispatch-trace",
+        "path": "workload_profile/skills/qwen-dcu-dispatch-trace",
+        "file_set": [
+          "SKILL.md",
+          "agents/openai.yaml"
+        ]
+      },
+      "artifact_dir": "workload_profile/workflows/project_adaptation/artifacts/A031",
+      "handoff": "workload_profile/workflows/project_adaptation/artifacts/A031/handoff.json",
+      "final_gate": [
+        "python3",
+        "{project_root}/workload_profile/workflows/project_adaptation/scripts/verify_adaptation_output.py",
+        "--project-root",
+        "{project_root}",
+        "--plan",
+        "{plan_path}",
+        "--stage",
+        "A031",
+        "--source-skill-root",
+        "{source_skill_root}"
+      ]
+    },
+    {
+      "id": "A041",
+      "kind": "source_skill_text_alignment",
+      "depends_on": [
+        "A031"
+      ],
+      "objective": "完成 A041：以 dispatch-layer-reconstruct-onnx 完整 Skill 为唯一迁移主体，镜像其结构并将旧项目文本绑定对齐到当前项目；Workflow 只用于理解 Dispatch reconstruction、tensor dependency、small-shape Torch、ONNX、review 与 audit 角色。",
+      "goal_template": "workload_profile/workflows/project_adaptation/goals/A041.md",
+      "workflow_requirements": [
+        "workload_profile/workflows/00_overview.md",
+        "workload_profile/workflows/03_1_04_1_dispatch_branch.md"
+      ],
+      "source_skill": {
+        "name": "dispatch-layer-reconstruct-onnx",
+        "scope": "full",
+        "tree_sha256": "4cb32459d00eeedc8a9da8090ff3bffb09849d4bf10f2d55f2b74b80a16b658b",
+        "file_set": [
+          "SKILL.md",
+          "agents/openai.yaml"
+        ]
+      },
+      "output_skill": {
+        "name": "qwen-dcu-dispatch-reconstruct-visualize",
+        "path": "workload_profile/skills/qwen-dcu-dispatch-reconstruct-visualize",
+        "file_set": [
+          "SKILL.md",
+          "agents/openai.yaml"
+        ]
+      },
+      "artifact_dir": "workload_profile/workflows/project_adaptation/artifacts/A041",
+      "handoff": "workload_profile/workflows/project_adaptation/artifacts/A041/handoff.json",
+      "final_gate": [
+        "python3",
+        "{project_root}/workload_profile/workflows/project_adaptation/scripts/verify_adaptation_output.py",
+        "--project-root",
+        "{project_root}",
+        "--plan",
+        "{plan_path}",
+        "--stage",
+        "A041",
+        "--source-skill-root",
+        "{source_skill_root}"
+      ]
+    },
+    {
+      "id": "A051",
+      "kind": "workflow_gap_skill_generation",
+      "depends_on": [
+        "A041"
+      ],
+      "objective": "完成 A051：从 Dispatch Workflow 中未被参考 Skill 覆盖的逐事件手工 character visualization、跨事件集合相等、人工 review 与 completion record，生成独立当前项目 Skill；无证据绑定必须保留为 runtime discovery。",
+      "goal_template": "workload_profile/workflows/project_adaptation/goals/A051.md",
+      "workflow_requirements": [
+        "workload_profile/workflows/00_overview.md",
+        "workload_profile/workflows/03_1_04_1_dispatch_branch.md"
+      ],
+      "workflow_authority": {
+        "path": "workload_profile/workflows/03_1_04_1_dispatch_branch.md",
+        "sections": [
+          "Manual Character Visualization",
+          "Strict Review And Audit",
+          "Manual Completion Record"
+        ],
+        "sha256": "3f9662bef75dcdac7ae742bc79587a02612a9f3de0d9d1a5e4679e6d72130030"
+      },
+      "binding_evidence": [],
+      "unresolved_bindings": [
+        "Qwen/DCU Dispatch profile and reconstruction roots",
+        "full-schema op/tensor-id/alias fields",
+        "review and audit commands",
+        "manual visualization and completion-record paths and schemas"
+      ],
+      "required_markers": [
+        "dispatch_process_visualization.md",
+        "tensor-id",
+        "character",
+        "event set",
+        "manual review"
+      ],
+      "output_skill": {
+        "name": "qwen-dcu-dispatch-visualization-coverage-audit",
+        "path": "workload_profile/skills/qwen-dcu-dispatch-visualization-coverage-audit",
+        "file_set": [
+          "SKILL.md",
+          "agents/openai.yaml"
+        ]
+      },
+      "artifact_dir": "workload_profile/workflows/project_adaptation/artifacts/A051",
+      "handoff": "workload_profile/workflows/project_adaptation/artifacts/A051/handoff.json",
+      "final_gate": [
+        "python3",
+        "{project_root}/workload_profile/workflows/project_adaptation/scripts/verify_adaptation_output.py",
+        "--project-root",
+        "{project_root}",
+        "--plan",
+        "{plan_path}",
+        "--stage",
+        "A051"
+      ]
+    },
+    {
+      "id": "A032",
+      "kind": "source_skill_text_alignment",
+      "depends_on": [
+        "A02"
+      ],
+      "objective": "完成 A032：以 visipruner-fx-trace-workflow 完整 Skill 为唯一迁移主体，镜像其 SKILL.md、agent 配置和 bundled script，并将旧项目文本绑定对齐到当前项目；不运行或实现 FX Workflow。",
+      "goal_template": "workload_profile/workflows/project_adaptation/goals/A032.md",
+      "workflow_requirements": [
+        "workload_profile/workflows/00_overview.md",
+        "workload_profile/workflows/03_2_04_2_fx_branch.md"
+      ],
+      "source_skill": {
+        "name": "visipruner-fx-trace-workflow",
+        "scope": "full",
+        "tree_sha256": "1fddaab4038dcdd6a959bf47061e330909ae53a83de04fe37080ee779937ba66",
+        "file_set": [
+          "SKILL.md",
+          "agents/openai.yaml",
+          "scripts/fx_dynamic_trace.py"
+        ]
+      },
+      "output_skill": {
+        "name": "qwen-dcu-fx-trace",
+        "path": "workload_profile/skills/qwen-dcu-fx-trace",
+        "file_set": [
+          "SKILL.md",
+          "agents/openai.yaml",
+          "scripts/fx_dynamic_trace.py"
+        ]
+      },
+      "artifact_dir": "workload_profile/workflows/project_adaptation/artifacts/A032",
+      "handoff": "workload_profile/workflows/project_adaptation/artifacts/A032/handoff.json",
+      "final_gate": [
+        "python3",
+        "{project_root}/workload_profile/workflows/project_adaptation/scripts/verify_adaptation_output.py",
+        "--project-root",
+        "{project_root}",
+        "--plan",
+        "{plan_path}",
+        "--stage",
+        "A032",
+        "--source-skill-root",
+        "{source_skill_root}"
+      ]
+    },
+    {
+      "id": "A033",
+      "kind": "workflow_gap_skill_generation",
+      "depends_on": [
+        "A032"
+      ],
+      "objective": "完成 A033：以 FX Workflow 的 Rule Reconstruction 为唯一能力权威，以固定 binding evidence 对齐当前 Qwen3.5 实现，生成独立 rule-reconstruction Skill；不得把 reconstruction 并入 FX visualization Skill。",
+      "goal_template": "workload_profile/workflows/project_adaptation/goals/A033.md",
+      "workflow_requirements": [
+        "workload_profile/workflows/00_overview.md",
+        "workload_profile/workflows/03_2_04_2_fx_branch.md"
+      ],
+      "workflow_authority": {
+        "path": "workload_profile/workflows/03_2_04_2_fx_branch.md",
+        "sections": [
+          "Ref: reconstruction responsibility boundary",
+          "2. Rule Reconstruction"
+        ],
+        "sha256": "97d0e66b142c086ab468461f96d62288edd9575c5485c144028f2762cb38989a"
+      },
+      "binding_evidence": [
+        {
+          "path": "pra2026-bh408/vllm/model_executor/models/qwen3_5.py",
+          "sha256": "76eeda13ad5d104b74ce8352e4a9766a0a93f29230ba359e9f7727aef4173f1d"
+        },
+        {
+          "path": "workload_profile/fx/tools/reconstruct_r042_fx_process.py",
+          "sha256": "4ad278d96538183acaec710d74b4889715439d9d5f0c60a7548e4f8fee8a9014"
+        },
+        {
+          "path": "workload_profile/fx/tools/validate_r042_fx_process.py",
+          "sha256": "faf6c15ebc31872433bc616ad94fc93f2305aa300ee23dfaccb9b221fd29b49f"
+        }
+      ],
+      "unresolved_bindings": [
+        "stable reconstruction command and parameters without the historical R042 name",
+        "new R033 runtime handoff path and schema",
+        "schema-drift handling for future FX artifacts"
+      ],
+      "required_markers": [
+        "rule reconstruction",
+        "ordered event",
+        "process",
+        "node",
+        "runtime discovery"
+      ],
+      "output_skill": {
+        "name": "qwen-dcu-fx-process-reconstruction",
+        "path": "workload_profile/skills/qwen-dcu-fx-process-reconstruction",
+        "file_set": [
+          "SKILL.md",
+          "agents/openai.yaml"
+        ]
+      },
+      "artifact_dir": "workload_profile/workflows/project_adaptation/artifacts/A033",
+      "handoff": "workload_profile/workflows/project_adaptation/artifacts/A033/handoff.json",
+      "final_gate": [
+        "python3",
+        "{project_root}/workload_profile/workflows/project_adaptation/scripts/verify_adaptation_output.py",
+        "--project-root",
+        "{project_root}",
+        "--plan",
+        "{plan_path}",
+        "--stage",
+        "A033"
+      ]
+    },
+    {
+      "id": "A042",
+      "kind": "source_skill_text_alignment",
+      "depends_on": [
+        "A033"
+      ],
+      "objective": "完成 A042：以 visipruner-fx-process-visualization 完整 Skill 为唯一迁移主体，镜像其结构并将旧项目文本绑定对齐到当前项目；只承担 rule reconstruction 之后的 FX process 解释和手工可视化。",
+      "goal_template": "workload_profile/workflows/project_adaptation/goals/A042.md",
+      "workflow_requirements": [
+        "workload_profile/workflows/00_overview.md",
+        "workload_profile/workflows/03_2_04_2_fx_branch.md"
+      ],
+      "source_skill": {
+        "name": "visipruner-fx-process-visualization",
+        "scope": "full",
+        "tree_sha256": "f064abaca35648a1be6d876edf03d3426086e424e00d8855babe8589661356f3",
+        "file_set": [
+          "SKILL.md",
+          "agents/openai.yaml"
+        ]
+      },
+      "output_skill": {
+        "name": "qwen-dcu-fx-reconstruct-visualize",
+        "path": "workload_profile/skills/qwen-dcu-fx-reconstruct-visualize",
+        "file_set": [
+          "SKILL.md",
+          "agents/openai.yaml"
+        ]
+      },
+      "artifact_dir": "workload_profile/workflows/project_adaptation/artifacts/A042",
+      "handoff": "workload_profile/workflows/project_adaptation/artifacts/A042/handoff.json",
+      "final_gate": [
+        "python3",
+        "{project_root}/workload_profile/workflows/project_adaptation/scripts/verify_adaptation_output.py",
+        "--project-root",
+        "{project_root}",
+        "--plan",
+        "{plan_path}",
+        "--stage",
+        "A042",
+        "--source-skill-root",
+        "{source_skill_root}"
+      ]
+    },
+    {
+      "id": "A052",
+      "kind": "workflow_gap_skill_generation",
+      "depends_on": [
+        "A042"
+      ],
+      "objective": "完成 A052：从 FX Workflow 中未被参考 Skill 覆盖的 final coverage audit、人工质量签核和 completion record 生成独立当前项目 Skill；不重新执行 trace、reconstruction 或 visualization。",
+      "goal_template": "workload_profile/workflows/project_adaptation/goals/A052.md",
+      "workflow_requirements": [
+        "workload_profile/workflows/00_overview.md",
+        "workload_profile/workflows/03_2_04_2_fx_branch.md"
+      ],
+      "workflow_authority": {
+        "path": "workload_profile/workflows/03_2_04_2_fx_branch.md",
+        "sections": [
+          "4. Final Coverage Audit",
+          "Manual Completion Record",
+          "Outputs",
+          "Completion Checks"
+        ],
+        "sha256": "97d0e66b142c086ab468461f96d62288edd9575c5485c144028f2762cb38989a"
+      },
+      "binding_evidence": [
+        {
+          "path": "workload_profile/fx/tools/validate_r042_fx_process.py",
+          "sha256": "faf6c15ebc31872433bc616ad94fc93f2305aa300ee23dfaccb9b221fd29b49f"
+        },
+        {
+          "path": "workload_profile/fx/tools/finalize_r042.py",
+          "sha256": "7546c5f75149427f6912ec533bc8d5fa4f53647fe975d95303585df0f0bed142"
+        }
+      ],
+      "unresolved_bindings": [
+        "R052 runtime handoff path and schema",
+        "manual visualization-review record schema",
+        "safe event-directory discovery if the FX artifact schema changes"
+      ],
+      "required_markers": [
+        "T == X == R == G == V == D",
+        "event-set",
+        "manual review",
+        "completion",
+        "runtime discovery"
+      ],
+      "output_skill": {
+        "name": "qwen-dcu-fx-coverage-audit",
+        "path": "workload_profile/skills/qwen-dcu-fx-coverage-audit",
+        "file_set": [
+          "SKILL.md",
+          "agents/openai.yaml"
+        ]
+      },
+      "artifact_dir": "workload_profile/workflows/project_adaptation/artifacts/A052",
+      "handoff": "workload_profile/workflows/project_adaptation/artifacts/A052/handoff.json",
+      "final_gate": [
+        "python3",
+        "{project_root}/workload_profile/workflows/project_adaptation/scripts/verify_adaptation_output.py",
+        "--project-root",
+        "{project_root}",
+        "--plan",
+        "{plan_path}",
+        "--stage",
+        "A052"
+      ]
+    },
+    {
+      "id": "A07",
+      "kind": "scheduler_generation",
+      "depends_on": [
+        "A00",
+        "A01",
+        "A02",
+        "A031",
+        "A041",
+        "A051",
+        "A032",
+        "A033",
+        "A042",
+        "A052"
+      ],
+      "objective": "完成 A07：消费全部十个已适配 Skill，生成 Dispatch 六阶段与 FX 七阶段串行 Goal 调度器及只含 Skill 绑定的 manifests；A07 是强制最终产出阶段，不执行运行时 Workflow。",
+      "goal_template": "workload_profile/workflows/project_adaptation/goals/A07.md",
+      "workflow_requirements": [
+        "workload_profile/workflows/00_overview.md"
+      ],
+      "runtime_branches": {
+        "dispatch": [
+          {
+            "id": "R00",
+            "stage": "A00"
+          },
+          {
+            "id": "R01",
+            "stage": "A01"
+          },
+          {
+            "id": "R02",
+            "stage": "A02"
+          },
+          {
+            "id": "R031",
+            "stage": "A031"
+          },
+          {
+            "id": "R041",
+            "stage": "A041"
+          },
+          {
+            "id": "R051",
+            "stage": "A051"
+          }
+        ],
+        "fx": [
+          {
+            "id": "R00",
+            "stage": "A00"
+          },
+          {
+            "id": "R01",
+            "stage": "A01"
+          },
+          {
+            "id": "R02",
+            "stage": "A02"
+          },
+          {
+            "id": "R032",
+            "stage": "A032"
+          },
+          {
+            "id": "R033",
+            "stage": "A033"
+          },
+          {
+            "id": "R042",
+            "stage": "A042"
+          },
+          {
+            "id": "R052",
+            "stage": "A052"
+          }
+        ]
+      },
+      "runtime_outputs": {
+        "scheduler": "workload_profile/scripts/run_workload_profile.py",
+        "dispatch": "workload_profile/manifests/dispatch_pipeline.json",
+        "fx": "workload_profile/manifests/fx_pipeline.json"
+      },
+      "output_skill": null,
+      "artifact_dir": "workload_profile/workflows/project_adaptation/artifacts/A07",
+      "handoff": "workload_profile/workflows/project_adaptation/artifacts/A07/handoff.json",
+      "final_gate": [
+        "python3",
+        "{project_root}/workload_profile/workflows/project_adaptation/scripts/verify_adaptation_output.py",
+        "--project-root",
+        "{project_root}",
+        "--plan",
+        "{plan_path}",
+        "--stage",
+        "A07"
+      ]
+    }
+  ]
+}

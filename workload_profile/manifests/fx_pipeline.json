@@ -1,0 +1,10 @@
+{
+  "branch": "fx",
+  "goals": ["R01", "R02", "R032", "R042"],
+  "bindings": {
+    "R01": {"skill": "qwen-dcu-profile-patch-targets"},
+    "R02": {"skill": "qwen-dcu-algorithmic-trace-selection"},
+    "R032": {"skill": "qwen-dcu-fx-trace"},
+    "R042": {"skill": "qwen-dcu-fx-reconstruct-visualize"}
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "selection_batch_id": "workflow05-gap-close-001",
+  "escalation_reason": "authorize_material_high-risk_unsampled_process",
+  "authorized_additional_process_targets": [
+    "pra.fx_process.input5_layer6.qkv_projection"
+  ],
+  "minimum_expected_evidence_value": {
+    "policy": "marginal_request_latency_fraction",
+    "value": 0.004
+  }
+}

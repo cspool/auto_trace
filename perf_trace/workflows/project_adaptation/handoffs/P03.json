@@ -1,0 +1,25 @@
+{
+  "stage": "P03",
+  "status": "complete",
+  "source_skill": "visipruner-process-performance-breakdown",
+  "output_skill": "qwen-dcu-process-performance-breakdown",
+  "outputs": [
+    "perf_trace/skills/qwen-dcu-process-performance-breakdown"
+  ],
+  "validation": {
+    "command": [
+      "python3",
+      "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/workflows/project_adaptation/scripts/verify_adaptation_output.py",
+      "--project-root",
+      "/public/home/tangyu408/Qwen_DCU_Worker_0",
+      "--plan",
+      "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/workflows/project_adaptation/manifests/adaptation_plan.json",
+      "--stage",
+      "P03",
+      "--source-skill-root",
+      "/root/.codex/skills/visipruner-process-performance-breakdown"
+    ],
+    "status": "pass"
+  },
+  "completed_at": "2026-07-29T10:49:31Z"
+}

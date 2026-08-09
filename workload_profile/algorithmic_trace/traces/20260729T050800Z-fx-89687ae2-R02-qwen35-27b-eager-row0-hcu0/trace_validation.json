@@ -1,0 +1,75 @@
+{
+  "actual_algorithm_decision_evidence_available": true,
+  "artifacts": {
+    "algorithmic_trace.json": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/algorithmic_trace/traces/20260729T050800Z-fx-89687ae2-R02-qwen35-27b-eager-row0-hcu0/algorithmic_trace.json",
+      "sha256": "68861924e9000e6d5e6b3c05b621b4556c7114e26a4bb7302296c5a2a1ef35e4",
+      "size_bytes": 3136903
+    },
+    "layer_trace.csv": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/algorithmic_trace/traces/20260729T050800Z-fx-89687ae2-R02-qwen35-27b-eager-row0-hcu0/layer_trace.csv",
+      "sha256": "ffb56e2207293a7129ada6d6a9a824b5b8e8371209bd782bdeb5030d315763de",
+      "size_bytes": 1141790
+    },
+    "operator_flops.csv": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/algorithmic_trace/traces/20260729T050800Z-fx-89687ae2-R02-qwen35-27b-eager-row0-hcu0/operator_flops.csv",
+      "sha256": "f7229d0f1f4cc820b7b7406ffe19fc2080400cff76bee124949bf8e74395a8e9",
+      "size_bytes": 3836433
+    },
+    "selection_trace.csv": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/algorithmic_trace/traces/20260729T050800Z-fx-89687ae2-R02-qwen35-27b-eager-row0-hcu0/selection_trace.csv",
+      "sha256": "76ed88839bba9fb7ffe9c7b654e6308e17e0f79b7463e4b9cce718d364010c33",
+      "size_bytes": 158479
+    }
+  },
+  "backend": "enforce_eager",
+  "comparison_baseline_run": false,
+  "contract_id": "pra2026-bh408@3d036144-16-32K-row0-greedy1024",
+  "current_optimized_runtime": true,
+  "decision_row_count": 171,
+  "effective_forward_count": 29,
+  "empty_async_drain_forward_count": 1,
+  "event_count": 8749,
+  "layer_event_count": 1856,
+  "operator_flop_row_count": 9280,
+  "result": "PASS",
+  "run_id": "20260729T050800Z-fx-89687ae2-R02",
+  "schema_version": 1,
+  "trace_tag": "20260729T050800Z-fx-89687ae2-R02-qwen35-27b-eager-row0-hcu0",
+  "validation": {
+    "actual_scheduler_cache_model_decisions_present": true,
+    "affected_decision_layers_join_uniquely": true,
+    "all_flops_marked_theoretical_not_latency": true,
+    "all_nonempty_forwards_cover_loaded_layers": true,
+    "all_zero_layer_forwards_explained_as_empty_async_drain": true,
+    "cache_allocations_all_succeeded": true,
+    "cache_free_transition_observed_and_reconciled": true,
+    "cache_initial_lookup_visible": true,
+    "contract_id_matches_r01": true,
+    "empty_decision_rows_explicitly_exempted": true,
+    "every_complete_forward_has_16_full_attention_pairs": true,
+    "every_complete_forward_has_48_gdn_calls": true,
+    "exactly_one_layer_worker_stream": true,
+    "flops_cover_every_layer_event": true,
+    "fresh_output_semantically_matches_r01_production_baseline": true,
+    "host_output_rows_match_generated_tokens": true,
+    "layer_indices_complete_per_forward": true,
+    "layer_join_fields_present": true,
+    "layer_occurrences_unique_and_zero": true,
+    "layer_types_match_loaded_config": true,
+    "loaded_layer_family_counts_are_48_linear_16_full": true,
+    "model_begin_end_forward_ids_equal": true,
+    "model_config_hash_matches_r01": true,
+    "model_layer_type_length_matches_num_hidden_layers": true,
+    "one_finished_output_with_stop_reason": true,
+    "past_plus_q_equals_kv": true,
+    "patch_error_count_zero": true,
+    "patch_loaded_in_all_four_processes_without_errors": true,
+    "qwen35_multimodal_pruning_disabled_in_source": true,
+    "r01_status_complete": true,
+    "r02_extension_loaded_in_all_four_processes": true,
+    "request_scoped_decisions_join_to_step_and_forward": true,
+    "single_request_observed": true,
+    "source_revision_matches_r01": true
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "command": [
+    "python3",
+    "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/workflows/project_adaptation/scripts/verify_adaptation_output.py",
+    "--project-root",
+    "/public/home/tangyu408/Qwen_DCU_Worker_0",
+    "--plan",
+    "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/workflows/project_adaptation/manifests/adaptation_plan.json",
+    "--stage",
+    "P02",
+    "--source-skill-root",
+    "/root/.codex/skills/visipruner-fx-process-nvtx-instrumentation"
+  ],
+  "completed_at": "2026-07-29T10:41:21.385672+00:00",
+  "phase": "final",
+  "returncode": 0,
+  "stage_id": "P02",
+  "started_at": "2026-07-29T10:41:20.342743+00:00",
+  "status": "pass",
+  "stderr": "",
+  "stdout": "{\n  \"status\": \"pass\",\n  \"plan\": \"/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/workflows/project_adaptation/manifests/adaptation_plan.json\",\n  \"mode\": \"stage\",\n  \"stage\": \"P02\",\n  \"source_skill\": \"visipruner-fx-process-nvtx-instrumentation\",\n  \"output_skill\": \"qwen-dcu-fx-process-nvtx-instrumentation\",\n  \"file_set\": [\n    \"SKILL.md\",\n    \"agents/openai.yaml\"\n  ],\n  \"skill_md_size_ratio\": 1.2483,\n  \"normalized_fidelity\": 0.814,\n  \"section_fidelity\": [\n    {\n      \"heading\": \"Establish the Run Contract\",\n      \"size_ratio\": 1.082,\n      \"fidelity\": 0.6762\n    },\n    {\n      \"heading\": \"Map FX Processes to Runtime Code\",\n      \"size_ratio\": 1.314,\n      \"fidelity\": 0.812\n    },\n    {\n      \"heading\": \"Instrument Ranges\",\n      \"size_ratio\": 1.522,\n      \"fidelity\": 0.7298\n    },\n    {\n      \"heading\": \"Write the Handoff\",\n      \"size_ratio\": 1.1134,\n      \"fidelity\": 0.9281\n    },\n    {\n      \"heading\": \"Validate Before Handoff\",\n      \"size_ratio\": 1.1497,\n      \"fidelity\": 0.8465\n    },\n    {\n      \"heading\": \"Evidence Boundary\",\n      \"size_ratio\": 1.7308,\n      \"fidelity\": 0.6826\n    }\n  ],\n  \"anomaly_signals\": [],\n  \"constraint_counts\": {\n    \"source\": 9,\n    \"target\": 18\n  },\n  \"handoff\": \"/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/workflows/project_adaptation/handoffs/P02.json\"\n}\n"
+}

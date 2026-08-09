@@ -1,0 +1,4 @@
+interface:
+  display_name: "Qwen DCU Segmented Process Attribution"
+  short_description: "Scale representative Qwen process traces with conservation"
+  default_prompt: "Use $qwen-dcu-segmented-process-attribution to patch maintained attribution tooling if needed and generate a conserved same-lineage full-layer Qwen3.5-27B process attribution without source-hash equality gates."

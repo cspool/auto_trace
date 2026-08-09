@@ -1,0 +1,24 @@
+{
+  "stage": "P05",
+  "status": "complete",
+  "authority_type": "workflow_gap",
+  "workflow_authority": "perf_trace/workflows/03_process_gpu_hardware_trace.md",
+  "output_skill": "qwen-dcu-process-gpu-hardware-trace",
+  "outputs": [
+    "perf_trace/skills/qwen-dcu-process-gpu-hardware-trace"
+  ],
+  "validation": {
+    "command": [
+      "python3",
+      "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/workflows/project_adaptation/scripts/verify_adaptation_output.py",
+      "--project-root",
+      "/public/home/tangyu408/Qwen_DCU_Worker_0",
+      "--plan",
+      "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/workflows/project_adaptation/manifests/adaptation_plan.json",
+      "--stage",
+      "P05"
+    ],
+    "status": "pass"
+  },
+  "completed_at": "2026-07-29T13:07:57Z"
+}

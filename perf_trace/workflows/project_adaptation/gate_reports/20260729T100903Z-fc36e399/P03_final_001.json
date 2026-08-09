@@ -1,0 +1,22 @@
+{
+  "command": [
+    "python3",
+    "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/workflows/project_adaptation/scripts/verify_adaptation_output.py",
+    "--project-root",
+    "/public/home/tangyu408/Qwen_DCU_Worker_0",
+    "--plan",
+    "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/workflows/project_adaptation/manifests/adaptation_plan.json",
+    "--stage",
+    "P03",
+    "--source-skill-root",
+    "/root/.codex/skills/visipruner-process-performance-breakdown"
+  ],
+  "completed_at": "2026-07-29T11:26:07.824964+00:00",
+  "phase": "final",
+  "returncode": 0,
+  "stage_id": "P03",
+  "started_at": "2026-07-29T11:26:04.920662+00:00",
+  "status": "pass",
+  "stderr": "",
+  "stdout": "{\n  \"status\": \"pass\",\n  \"plan\": \"/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/workflows/project_adaptation/manifests/adaptation_plan.json\",\n  \"mode\": \"stage\",\n  \"stage\": \"P03\",\n  \"source_skill\": \"visipruner-process-performance-breakdown\",\n  \"output_skill\": \"qwen-dcu-process-performance-breakdown\",\n  \"file_set\": [\n    \"SKILL.md\",\n    \"agents/openai.yaml\"\n  ],\n  \"skill_md_size_ratio\": 1.0517,\n  \"normalized_fidelity\": 0.8464,\n  \"section_fidelity\": [\n    {\n      \"heading\": \"Scope\",\n      \"size_ratio\": 1.6951,\n      \"fidelity\": 0.3052\n    },\n    {\n      \"heading\": \"Portable Projection Tool Contract\",\n      \"size_ratio\": 1.0108,\n      \"fidelity\": 0.9944\n    },\n    {\n      \"heading\": \"Required Report Shape\",\n      \"size_ratio\": 1.0,\n      \"fidelity\": 1.0\n    },\n    {\n      \"heading\": \"Default Workflow\",\n      \"size_ratio\": 0.6592,\n      \"fidelity\": 0.8406\n    },\n    {\n      \"heading\": \"Attribution Semantics\",\n      \"size_ratio\": 1.0271,\n      \"fidelity\": 0.9864\n    },\n    {\n      \"heading\": \"Validation Checklist\",\n      \"size_ratio\": 0.9332,\n      \"fidelity\": 0.8504\n    },\n    {\n      \"heading\": \"Editing Rules\",\n      \"size_ratio\": 1.0664,\n      \"fidelity\": 0.9677\n    }\n  ],\n  \"anomaly_signals\": [],\n  \"constraint_counts\": {\n    \"source\": 22,\n    \"target\": 30\n  },\n  \"handoff\": \"/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/workflows/project_adaptation/handoffs/P03.json\"\n}\n"
+}

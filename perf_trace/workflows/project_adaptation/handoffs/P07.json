@@ -1,0 +1,28 @@
+{
+  "stage": "P07",
+  "status": "complete",
+  "authority_type": "workflow_gap",
+  "workflow_authority": {
+    "path": "perf_trace/workflows/05_workflow04_guided_selective_process_trace_and_resource_gap_analysis.md",
+      "sha256": "b031000777d6ebe8c5777aed5ef1e83d304851e0f60ff4ea5984972b969363cb",
+    "scope": "目标; 核心原则; Required Inputs; Step 0-Step 3; Workflow04 reuse/candidate outputs; applicable Cost Controls and Completion Checks"
+  },
+  "output_skill": "qwen-dcu-workflow05-evidence-planning",
+  "outputs": [
+    "perf_trace/skills/qwen-dcu-workflow05-evidence-planning"
+  ],
+  "validation": {
+    "command": [
+      "python3",
+      "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/workflows/project_adaptation/scripts/verify_adaptation_output.py",
+      "--project-root",
+      "/public/home/tangyu408/Qwen_DCU_Worker_0",
+      "--plan",
+      "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/workflows/project_adaptation/manifests/adaptation_plan.json",
+      "--stage",
+      "P07"
+    ],
+    "status": "pass"
+  },
+  "completed_at": "2026-08-03T11:33:33Z"
+}

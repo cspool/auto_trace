@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>workflow05 replay-001 · hipprof 原生可视化</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    body { max-width: 1120px; margin: 0 auto; padding: 32px 22px 56px; line-height: 1.55; }
+    h1 { margin-bottom: .25rem; }
+    .subtitle, .note { color: #777; }
+    .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px; margin: 24px 0; }
+    .fact, .window { border: 1px solid #8886; border-radius: 10px; padding: 14px; }
+    .windows { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 12px; }
+    .window h2 { margin: 0 0 6px; font-size: 1.05rem; }
+    .window p { margin: 4px 0; overflow-wrap: anywhere; }
+    a.open { display: inline-block; margin-top: 9px; padding: 7px 11px; border-radius: 7px; background: #1677ff; color: white; text-decoration: none; }
+    code { overflow-wrap: anywhere; }
+    .warning { margin: 22px 0; padding: 14px; border-left: 4px solid #e9a100; background: #e9a10018; }
+  </style>
+</head>
+<body>
+  <h1>workflow05 replay-001 · hipprof 原生可视化</h1>
+  <p class="subtitle">由 <code>hipprof --output-type 1</code> 从冻结采集库的逐窗口副本离线导出；页面自包含，可在本机浏览器直接打开。</p>
+
+  <section class="facts">
+    <div class="fact"><strong>采集设备</strong><br>物理 DCU 1，单卡推理 trace</div>
+    <div class="fact"><strong>窗口数量</strong><br>9 个已选代表窗口</div>
+    <div class="fact"><strong>源数据库 SHA-256</strong><br><code>44792c9098a330dc9613324ad22200c85b1d83f9f548a066cb566abe8b53c916</code></div>
+    <div class="fact"><strong>数据保护</strong><br>只操作数据库副本；导出后源哈希未改变</div>
+  </section>
+
+  <div class="warning">
+    <strong>视图边界：</strong>这些页面是 hipprof 的原生 HIP runtime / kernel 流视图。后处理追加的精确 <code>pra.fx_process.*</code> 标记不会出现在该原生视图中；标记名称列在入口卡片中，精确叠加请使用 workflow05 的 Plotly/Chrome overlay 验收页。
+  </div>
+
+  <section class="windows">
+    <article class="window">
+      <h2>窗口 01 · Rank 1</h2>
+      <p><strong>事件：</strong><code>input1_layer7</code></p>
+      <p><strong>标记：</strong><code>pra.fx_process.input1_layer7.qkv_projection</code></p>
+      <p><strong>runtime index：</strong><code>1195655:1195710</code></p>
+      <a class="open" href="window_01/observed_hipprof_stream.html">打开原生 trace</a>
+    </article>
+
+    <article class="window">
+      <h2>窗口 02 · Rank 2</h2>
+      <p><strong>事件：</strong><code>input11_layer33</code></p>
+      <p><strong>标记：</strong><code>pra.fx_process.input11_layer33.gdn_gated_rmsnorm</code></p>
+      <p><strong>runtime index：</strong><code>1403807:1403826</code></p>
+      <a class="open" href="window_02/observed_hipprof_stream.html">打开原生 trace</a>
+    </article>
+
+    <article class="window">
+      <h2>窗口 03 · Rank 3</h2>
+      <p><strong>事件：</strong><code>input11_layer19</code></p>
+      <p><strong>标记：</strong><code>pra.fx_process.input11_layer19.mlp</code></p>
+      <p><strong>runtime index：</strong><code>1401241:1401274</code></p>
+      <a class="open" href="window_03/observed_hipprof_stream.html">打开原生 trace</a>
+    </article>
+
+    <article class="window">
+      <h2>窗口 04 · Rank 4</h2>
+      <p><strong>事件：</strong><code>input6_layer0</code></p>
+      <p><strong>标记：</strong><code>pra.fx_process.input6_layer0.output_projection.part01_mixer_out_proj</code></p>
+      <p><strong>runtime index：</strong><code>1322683:1322698</code></p>
+      <a class="open" href="window_04/observed_hipprof_stream.html">打开原生 trace</a>
+    </article>
+
+    <article class="window">
+      <h2>窗口 05 · Rank 5</h2>
+      <p><strong>事件：</strong><code>input2_layer50</code></p>
+      <p><strong>标记：</strong><code>pra.fx_process.input2_layer50.input_rmsnorm</code></p>
+      <p><strong>runtime index：</strong><code>1236785:1236804</code></p>
+      <a class="open" href="window_05/observed_hipprof_stream.html">打开原生 trace</a>
+    </article>
+
+    <article class="window">
+      <h2>窗口 06 · Rank 6</h2>
+      <p><strong>事件：</strong><code>input17_layer0</code></p>
+      <p><strong>标记：</strong><code>pra.fx_process.input17_layer0.qkv_projection</code></p>
+      <p><strong>runtime index：</strong><code>1473185:1473206</code></p>
+      <a class="open" href="window_06/observed_hipprof_stream.html">打开原生 trace</a>
+    </article>
+
+    <article class="window">
+      <h2>窗口 07 · Rank 7</h2>
+      <p><strong>事件：</strong><code>input24_layer11</code></p>
+      <p><strong>标记：</strong><code>pra.fx_process.input24_layer11.qkv_projection</code></p>
+      <p><strong>runtime index：</strong><code>1563483:1563539</code></p>
+      <a class="open" href="window_07/observed_hipprof_stream.html">打开原生 trace</a>
+    </article>
+
+    <article class="window">
+      <h2>窗口 08 · Rank 8</h2>
+      <p><strong>事件：</strong><code>input18_layer51</code></p>
+      <p><strong>标记：</strong><code>pra.fx_process.input18_layer51.rope</code></p>
+      <p><strong>runtime index：</strong><code>1495473:1495522</code></p>
+      <a class="open" href="window_08/observed_hipprof_stream.html">打开原生 trace</a>
+    </article>
+
+    <article class="window">
+      <h2>窗口 09 · Rank 9</h2>
+      <p><strong>事件：</strong><code>input13_layer10</code></p>
+      <p><strong>标记：</strong><code>pra.fx_process.input13_layer10.output_projection.part01_mixer_out_proj</code></p>
+      <p><strong>runtime index：</strong><code>1424663:1424678</code></p>
+      <a class="open" href="window_09/observed_hipprof_stream.html">打开原生 trace</a>
+    </article>
+  </section>
+
+  <p class="note">建议从本页逐个打开窗口。若浏览器限制本地文件导航，可在本目录运行 <code>python3 -m http.server 18081</code>。</p>
+</body>
+</html>

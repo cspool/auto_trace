@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "status": "retired",
+  "replacement_branch": "workflow01-10-fresh-e2e",
+  "branch": "workflow01-05-full",
+  "goals": [
+    "R01",
+    "R02",
+    "R03",
+    "R04",
+    "R05",
+    "R06",
+    "R07",
+    "R08",
+    "R09",
+    "R10"
+  ],
+  "bindings": {
+    "R01": {
+      "skill": "qwen-dcu-same-input-layer-wise-workflow"
+    },
+    "R02": {
+      "skill": "qwen-dcu-fx-process-nvtx-instrumentation"
+    },
+    "R03": {
+      "skill": "qwen-dcu-process-performance-breakdown"
+    },
+    "R04": {
+      "skill": "qwen-dcu-process-gpu-hardware-trace"
+    },
+    "R05": {
+      "skill": "qwen-dcu-segmented-process-attribution"
+    },
+    "R06": {
+      "skill": "qwen-dcu-workflow05-evidence-planning"
+    },
+    "R07": {
+      "skill": "qwen-dcu-workflow05-selective-process-trace"
+    },
+    "R08": {
+      "skill": "qwen-dcu-workflow05-targeted-hardware-gap-analysis"
+    },
+    "R09": {
+      "skill": "qwen-dcu-workflow05-utilization-concurrency-analysis"
+    },
+    "R10": {
+      "skill": "qwen-dcu-workflow05-trace-visualization-reporting"
+    }
+  },
+  "requires": []
+}

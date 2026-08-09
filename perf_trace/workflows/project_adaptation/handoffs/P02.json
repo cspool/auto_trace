@@ -1,0 +1,25 @@
+{
+  "stage": "P02",
+  "status": "complete",
+  "source_skill": "visipruner-fx-process-nvtx-instrumentation",
+  "output_skill": "qwen-dcu-fx-process-nvtx-instrumentation",
+  "outputs": [
+    "perf_trace/skills/qwen-dcu-fx-process-nvtx-instrumentation"
+  ],
+  "validation": {
+    "command": [
+      "python3",
+      "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/workflows/project_adaptation/scripts/verify_adaptation_output.py",
+      "--project-root",
+      "/public/home/tangyu408/Qwen_DCU_Worker_0",
+      "--plan",
+      "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/workflows/project_adaptation/manifests/adaptation_plan.json",
+      "--stage",
+      "P02",
+      "--source-skill-root",
+      "/root/.codex/skills/visipruner-fx-process-nvtx-instrumentation"
+    ],
+    "status": "pass"
+  },
+  "completed_at": "2026-07-29T10:40:20Z"
+}

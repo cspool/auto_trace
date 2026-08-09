@@ -1,0 +1,4 @@
+interface:
+  display_name: "Qwen DCU Process GPU Hardware Trace"
+  short_description: "Profile Qwen process hardware with DCU hipprof"
+  default_prompt: "Use $qwen-dcu-process-gpu-hardware-trace to patch profiling tooling if needed, then collect and audit same-lineage Qwen3.5-27B process hardware attributes with serial DCU 1 hipprof replay while keeping replay timing non-latency."

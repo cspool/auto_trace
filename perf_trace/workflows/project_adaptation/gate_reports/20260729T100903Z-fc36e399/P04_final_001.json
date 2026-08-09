@@ -1,0 +1,22 @@
+{
+  "command": [
+    "python3",
+    "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/workflows/project_adaptation/scripts/verify_adaptation_output.py",
+    "--project-root",
+    "/public/home/tangyu408/Qwen_DCU_Worker_0",
+    "--plan",
+    "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/workflows/project_adaptation/manifests/adaptation_plan.json",
+    "--stage",
+    "P04",
+    "--source-skill-root",
+    "/root/.codex/skills/visipruner-segmented-process-attribution"
+  ],
+  "completed_at": "2026-07-29T11:32:00.053079+00:00",
+  "phase": "final",
+  "returncode": 0,
+  "stage_id": "P04",
+  "started_at": "2026-07-29T11:31:59.260066+00:00",
+  "status": "pass",
+  "stderr": "",
+  "stdout": "{\n  \"status\": \"pass\",\n  \"plan\": \"/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/workflows/project_adaptation/manifests/adaptation_plan.json\",\n  \"mode\": \"stage\",\n  \"stage\": \"P04\",\n  \"source_skill\": \"visipruner-segmented-process-attribution\",\n  \"output_skill\": \"qwen-dcu-segmented-process-attribution\",\n  \"file_set\": [\n    \"SKILL.md\",\n    \"agents/openai.yaml\"\n  ],\n  \"skill_md_size_ratio\": 1.2032,\n  \"normalized_fidelity\": 0.8861,\n  \"section_fidelity\": [\n    {\n      \"heading\": \"Require Upstream Evidence\",\n      \"size_ratio\": 0.9699,\n      \"fidelity\": 0.9453\n    },\n    {\n      \"heading\": \"Build the Type Map\",\n      \"size_ratio\": 1.0,\n      \"fidelity\": 1.0\n    },\n    {\n      \"heading\": \"Allocate with Conservation\",\n      \"size_ratio\": 1.4237,\n      \"fidelity\": 0.8177\n    },\n    {\n      \"heading\": \"Generate the Evidence Package\",\n      \"size_ratio\": 1.2457,\n      \"fidelity\": 0.8566\n    },\n    {\n      \"heading\": \"Validate\",\n      \"size_ratio\": 1.0,\n      \"fidelity\": 1.0\n    },\n    {\n      \"heading\": \"Interpretation Rules\",\n      \"size_ratio\": 1.0537,\n      \"fidelity\": 0.9598\n    }\n  ],\n  \"anomaly_signals\": [],\n  \"constraint_counts\": {\n    \"source\": 12,\n    \"target\": 17\n  },\n  \"handoff\": \"/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/workflows/project_adaptation/handoffs/P04.json\"\n}\n"
+}

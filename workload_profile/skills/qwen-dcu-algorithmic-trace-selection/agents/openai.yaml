@@ -1,0 +1,4 @@
+interface:
+  display_name: "Qwen DCU Algorithmic Trace Selection"
+  short_description: "Trace Qwen3.5 vLLM V1 and select representative layers."
+  default_prompt: "Use $qwen-dcu-algorithmic-trace-selection to generate and validate a real Qwen3.5-27B vLLM V1 Algorithmic Trace on ROCm/DCU and select a small evidence-backed set of representative layer events."

@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "run_mode": "FRESH_RUN",
+  "runtime_goal": "R02",
+  "runtime_run_id": "20260729T050800Z-fx-89687ae2",
+  "trace_run_id": "20260729T050800Z-fx-89687ae2-R02",
+  "trace_tag": "20260729T050800Z-fx-89687ae2-R02-qwen35-27b-eager-row0-hcu0",
+  "contract_id": "pra2026-bh408@3d036144-16-32K-row0-greedy1024",
+  "previous_handoff": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/runtime/20260729T050800Z-fx-89687ae2/handoffs/R01.json",
+  "source": {
+    "repository": "/public/home/tangyu408/Qwen_DCU_Worker_0/pra2026-bh408",
+    "git_branch": "pra",
+    "revision": "3d03614452cd0a925abc82a7686560ff80252dfa",
+    "worktree_clean_before_run": true,
+    "installed_vllm_version": "0.18.1+das.dtk2604",
+    "installed_vllm_root": "/usr/local/lib/python3.10/dist-packages/vllm",
+    "installed_sources_byte_identical_to_repository": true
+  },
+  "model": {
+    "path": "/home/Qwen3.5-27B",
+    "served_name": "Qwen3.5-27B",
+    "architecture": "Qwen3_5ForConditionalGeneration",
+    "config_path": "/home/Qwen3.5-27B/config.json",
+    "config_sha256": "f8d190c5b89c1521220f935d2567a587d6e291ed69066a45a106560b05a2174c",
+    "dtype": "bfloat16",
+    "num_hidden_layers": 64,
+    "linear_attention_layers": 48,
+    "full_attention_layers": 16,
+    "use_cache": true
+  },
+  "request": {
+    "dataset_path": "/home/testdata/16-32K_throughput.jsonl",
+    "dataset_sha256": "633ba4c8b4f500d2ab28094de42698c5494e5232f40eafcd119c0a314b44b936",
+    "row_index": 0,
+    "request_line_sha256": "06c7c1cc0e97951303631942dea7a2759fe7b693a79e06d495a164a2354146fd",
+    "prompt_sha256": "3ced34eb878305fd769368f8aadb7931a6cec068e77f721003a710534c798d67",
+    "conversation_mode": "OpenAI chat; server default Qwen3 template with enable_thinking=false",
+    "num_prompts": 1,
+    "max_concurrency": 1,
+    "temperature": 0.0,
+    "custom_output_len": 1024,
+    "disable_shuffle": true,
+    "no_warmups": true
+  },
+  "runtime": {
+    "trace_mode": "enforce_eager",
+    "intentional_difference_from_production": "torch.compile and CUDAGraphs are disabled so Python decoder-layer and GDN calls remain observable",
+    "tensor_parallel_size": 1,
+    "pipeline_parallel_size": 1,
+    "data_parallel_size": 1,
+    "max_num_seqs": 128,
+    "max_num_batched_tokens": 4096,
+    "gpu_memory_utilization": 0.95,
+    "port": 8001,
+    "logical_device": 0,
+    "device_id": "HCU0:TCA23906041001",
+    "device_series": "BW",
+    "device_vram_mib": 65520,
+    "environment_script": "/public/home/tangyu408/Qwen_DCU_Worker_0/pra2026-bh408/scripts/cscc_gfx936_env.sh"
+  },
+  "instrumentation": {
+    "base_patch": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile_bk/tools/runtime_patch/vllm_trace_patch.py",
+    "base_patch_sha256": "289fa3ffe80870389c60c6513bd457224da8aeabdf4fbc92bd961900b332af76",
+    "bootstrap": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/algorithmic_trace/tools/runtime_patch/sitecustomize.py",
+    "bootstrap_sha256": "41ec2994ee5c04f33f70ffb053d38d215852d2dd7aca95bd7e13df72dab36488",
+    "extension": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/algorithmic_trace/tools/runtime_patch/r02_trace_extension.py",
+    "extension_sha256": "ea4a41ee6bb14990bfc23fcc41c2c7b158abd82803f26be7698091567962bbba",
+    "extension_scope": [
+      "enrich source_revision, trace_mode, rank, worker_id, and device_id",
+      "forbid device-tensor tolist conversion in small metadata summaries",
+      "record KVCacheManager.free before/after counters without tensor contents"
+    ]
+  },
+  "resolved_commands": {
+    "service": "source pra2026-bh408/scripts/cscc_gfx936_env.sh; HIP_VISIBLE_DEVICES=0 CUDA_VISIBLE_DEVICES=0 PYTHONPATH=workload_profile/algorithmic_trace/tools/runtime_patch:workload_profile_bk/tools/runtime_patch VLLM_TRACE_PATCH_ENABLE=1 VLLM_TRACE_PATCH_DIR=<trace_dir>/events VLLM_TRACE_PATCH_ARM_FILE=<trace_dir>/TRACE_ARMED VLLM_TRACE_RUN_ID=20260729T050800Z-fx-89687ae2-R02 VLLM_TRACE_CONTRACT_ID=pra2026-bh408@3d036144-16-32K-row0-greedy1024 VLLM_TRACE_SOURCE_REVISION=3d03614452cd0a925abc82a7686560ff80252dfa VLLM_TRACE_MODE=enforce_eager VLLM_TRACE_DEVICE_ID=HCU0:TCA23906041001 vllm serve /home/Qwen3.5-27B --served-model-name Qwen3.5-27B --port 8001 --trust-remote-code --dtype bfloat16 --tensor-parallel-size 1 --max-num-seqs 128 --max-num-batched-tokens 4096 --gpu-memory-utilization 0.95 --default-chat-template-kwargs '{\"enable_thinking\": false}' --reasoning-parser qwen3 --enable-auto-tool-choice --tool-call-parser qwen3_coder --enforce-eager",
+    "request": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile_bk/tools/run_single_request.sh <trace_dir>/request no-profile"
+  },
+  "comparison": {
+    "kind": "same-contract production torch.compile baseline from R01 evidence",
+    "result_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile_bk/runs/pra2026_single_request_16_32k_20260716_162341/unit1_profiler/baseline/request/result.json",
+    "request_contract_identical": true,
+    "source_revision_identical": true
+  },
+  "claim_scope": {
+    "current_optimized_runtime": true,
+    "comparison_baseline_run": false,
+    "single_request_only": true,
+    "concurrent_or_distributed_coverage": false,
+    "measured_kernel_latency": false
+  }
+}

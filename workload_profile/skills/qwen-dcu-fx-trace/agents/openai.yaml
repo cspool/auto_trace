@@ -1,0 +1,4 @@
+interface:
+  display_name: "Qwen DCU FX Trace"
+  short_description: "Generate selected-layer Qwen3.5 vLLM V1 FX traces"
+  default_prompt: "Use $qwen-dcu-fx-trace to generate and audit selected-layer FX traces for Qwen3.5-27B vLLM V1 on ROCm/DCU."

@@ -1,0 +1,7 @@
+"Name","Calls","TotalDurationNs","AverageNs","Percentage"
+"hipLaunchKernel","2","21340","10670","81.1098441657165"
+"hipGetDevice","10","2030","203","7.71569745343976"
+"hipSetDevice","6","1300","216","4.94108703914861"
+"__hipPushCallConfiguration","2","900","450","3.42075256556442"
+"__hipPopCallConfiguration","2","740","370","2.81261877613075"
+"Total","22","26310","1195","100.0"

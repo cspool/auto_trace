@@ -1,0 +1,85 @@
+{
+  "evidence_acquisition_mode": "fresh_no_prior_runtime_reuse",
+  "analysis_strategy": "fresh_run_full_request_e2e_timeline",
+  "measurement_contract_policy": "same_run_same_request",
+  "base_evidence_role_on_execution_path_change": "preserve_semantically_valid_stage_evidence",
+  "fresh_e2e_contract": {
+    "schema_version": 1,
+    "prior_runtime_evidence_policy": "forbidden_for_measurement_or_attribution",
+    "process_capture_scope": "one_fresh_run_request_all_process_ranges",
+    "process_target_transport": "newline_file",
+    "dependency_adapter_policy": "r07_generate_same_lineage_stage_fx",
+    "traffic_resource_model_policy": "r08_generate_same_lineage_pmc_and_fx",
+    "live_utilization_policy": "r07_rsmi_se_snapshot_empirical_cadence",
+    "clock_alignment_policy": "same_run_request_realtime_and_monotonic_anchors",
+    "acceptance_policy": "r10_self_contained_offline_e2e_hardware_views",
+    "source_change_policy": "stage_trace_instrumentation_allowed",
+    "source_hash_equality_required": false,
+    "lineage_split_on_source_change": false
+  },
+  "selection_batch_id": "fresh-e2e-dcu1-20260806",
+  "escalation_reason": "fresh_full_request_e2e_process_hardware_acceptance",
+  "target_cumulative_latency_coverage": 1.0,
+  "feature_diversity_budget_fraction": 0.0,
+  "maximum_selected_layer_input_count": 4096,
+  "maximum_selected_process_count": 25000,
+  "maximum_targeted_pmc_family_count": 32,
+  "maximum_profiling_wall_time_seconds": 28800,
+  "maximum_trace_export_interval_count": 256,
+  "maximum_trace_bundle_bytes": 8589934592,
+  "minimum_expected_evidence_value": {
+    "policy": "marginal_request_latency_fraction",
+    "value": 0.0
+  },
+  "utilization_classification_thresholds": {
+    "schema_version": 1,
+    "observed_se_active_cu_low_pct": 50.0,
+    "observed_hcu_utilization_low_pct": null,
+    "observed_cu_utilization_low_pct": null,
+    "observed_wave_utilization_low_pct": null,
+    "observed_memory_bandwidth_low_gbps": null,
+    "replay_projected_alu_activity_low_pct": 50.0,
+    "low_kernel_concurrency_max_active_kernels": 1,
+    "runtime_launch_gap_min_ns": 100000
+  },
+  "dependency_coverage_threshold": {
+    "policy": "verified_dependency_fraction",
+    "value": 0.0
+  },
+  "opportunity_gate_thresholds": {
+    "schema_version": 1,
+    "minimum_exposed_duration_ns": 100000,
+    "minimum_exposed_fraction": 0.01,
+    "slack_tolerance_ns": 1000,
+    "require_all_seven_gates": true
+  },
+  "live_hardware_sampling": {
+    "schema_version": 1,
+    "mode": "rsmi_se_snapshot",
+    "collector": {
+      "schema_version": 1,
+      "path": "pra2026-bh408/scripts/perf_trace/collect_dcu_live_utilization.py",
+      "sha256": "6441affded23f0c2188db084a77289e2936e808b03061f3c7efe2a29bc22153d"
+    },
+    "sample_interval_ms": 0.5,
+    "metrics": [
+      "se_active_cu_pct"
+    ],
+    "minimum_samples_per_process": 3,
+    "maximum_clock_alignment_error_ns": 1000000,
+    "require_resolution_finer_than_process_window": true
+  },
+  "timeline_visualization": {
+    "required": true,
+    "layer1_output": "E2E_PROCESS_TIMELINE.html",
+    "layer1_timing_semantics": "observed_fresh_run_request_process_and_device_timeline",
+    "layer2_track_groups": [
+      "observed_process",
+      "hip_runtime",
+      "gpu_queue",
+      "hardware_attributes",
+      "evidence"
+    ],
+    "hardware_counter_semantics": "observed_se_active_cu_samples_plus_replay_projected_pmc"
+  }
+}

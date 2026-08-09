@@ -1,0 +1,4 @@
+interface:
+  display_name: "Qwen DCU FX Reconstruct Visualize"
+  short_description: "Explain and draw Qwen3.5 FX process tensors"
+  default_prompt: "Use $qwen-dcu-fx-reconstruct-visualize to explain and manually visualize a Qwen3.5-27B vLLM V1 fixed-input FX process reconstruction on ROCm/DCU."

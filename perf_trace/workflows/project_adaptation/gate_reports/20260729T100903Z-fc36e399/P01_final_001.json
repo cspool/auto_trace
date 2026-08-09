@@ -1,0 +1,22 @@
+{
+  "command": [
+    "python3",
+    "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/workflows/project_adaptation/scripts/verify_adaptation_output.py",
+    "--project-root",
+    "/public/home/tangyu408/Qwen_DCU_Worker_0",
+    "--plan",
+    "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/workflows/project_adaptation/manifests/adaptation_plan.json",
+    "--stage",
+    "P01",
+    "--source-skill-root",
+    "/root/.codex/skills/visipruner-same-input-layer-wise-workflow"
+  ],
+  "completed_at": "2026-07-29T10:16:14.263662+00:00",
+  "phase": "final",
+  "returncode": 0,
+  "stage_id": "P01",
+  "started_at": "2026-07-29T10:16:13.523362+00:00",
+  "status": "pass",
+  "stderr": "",
+  "stdout": "{\n  \"status\": \"pass\",\n  \"plan\": \"/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/workflows/project_adaptation/manifests/adaptation_plan.json\",\n  \"mode\": \"stage\",\n  \"stage\": \"P01\",\n  \"source_skill\": \"visipruner-same-input-layer-wise-workflow\",\n  \"output_skill\": \"qwen-dcu-same-input-layer-wise-workflow\",\n  \"file_set\": [\n    \"SKILL.md\",\n    \"agents/openai.yaml\"\n  ],\n  \"skill_md_size_ratio\": 1.2655,\n  \"normalized_fidelity\": 0.7876,\n  \"section_fidelity\": [\n    {\n      \"heading\": \"Freeze the SAME_INPUT Contract\",\n      \"size_ratio\": 0.9653,\n      \"fidelity\": 0.9291\n    },\n    {\n      \"heading\": \"Run the Layer Trace\",\n      \"size_ratio\": 1.7089,\n      \"fidelity\": 0.5774\n    },\n    {\n      \"heading\": \"Generate Required Evidence\",\n      \"size_ratio\": 1.3117,\n      \"fidelity\": 0.8319\n    },\n    {\n      \"heading\": \"Enforce Strict Attribution\",\n      \"size_ratio\": 1.3327,\n      \"fidelity\": 0.7821\n    },\n    {\n      \"heading\": \"Audit Completeness\",\n      \"size_ratio\": 1.2571,\n      \"fidelity\": 0.7473\n    },\n    {\n      \"heading\": \"Preserve the Evidence Boundary\",\n      \"size_ratio\": 0.9811,\n      \"fidelity\": 0.9721\n    }\n  ],\n  \"constraint_counts\": {\n    \"source\": 11,\n    \"target\": 17\n  },\n  \"handoff\": \"/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/workflows/project_adaptation/handoffs/P01.json\"\n}\n"
+}

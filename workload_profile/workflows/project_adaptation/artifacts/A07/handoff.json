@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "stage_id": "A07",
+  "status": "complete",
+  "outputs": {
+    "scheduler": "workload_profile/scripts/run_workload_profile.py",
+    "dispatch": "workload_profile/manifests/dispatch_pipeline.json",
+    "fx": "workload_profile/manifests/fx_pipeline.json"
+  }
+}

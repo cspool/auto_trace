@@ -1,0 +1,14 @@
+{
+  "selection_batch_id": "workflow05-gap-close-r07-r10-001",
+  "escalation_reason": "authorize_material_unsampled_process_and_deferred_hardware_family_then_rebuild_analysis_and_acceptance",
+  "authorized_additional_process_targets": [
+    "pra.fx_process.input5_layer6.qkv_projection"
+  ],
+  "authorized_additional_hardware_family_keys": [
+    "pra2026-bh408@3d036144-qwen35-row0-greedy32-warmup1-eager-aiterua-dcu1/workflow05-current@0abe1e1d-2d523f7f/11/19/11/mlp/family=reduction_softmax"
+  ],
+  "minimum_expected_evidence_value": {
+    "policy": "marginal_request_latency_fraction",
+    "value": 0.004
+  }
+}

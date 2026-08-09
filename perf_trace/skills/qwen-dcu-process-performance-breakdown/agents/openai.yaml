@@ -1,0 +1,4 @@
+interface:
+  display_name: "Qwen DCU Process Performance Breakdown"
+  short_description: "Generate Qwen process-wise performance reports"
+  default_prompt: "Use $qwen-dcu-process-performance-breakdown to patch the maintained projector if needed and generate same-lineage Qwen3.5-27B process attribution from current R01/R02 evidence without requiring source-hash equality."

@@ -1,0 +1,20 @@
+{
+  "command": [
+    "python3",
+    "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/workflows/project_adaptation/scripts/verify_adaptation_output.py",
+    "--project-root",
+    "/public/home/tangyu408/Qwen_DCU_Worker_0",
+    "--plan",
+    "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/workflows/project_adaptation/manifests/adaptation_plan.json",
+    "--stage",
+    "P12"
+  ],
+  "completed_at": "2026-08-03T13:16:14.349488+00:00",
+  "phase": "final",
+  "returncode": 0,
+  "stage_id": "P12",
+  "started_at": "2026-08-03T13:16:13.846362+00:00",
+  "status": "pass",
+  "stderr": "",
+  "stdout": "{\n  \"status\": \"pass\",\n  \"plan\": \"/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/workflows/project_adaptation/manifests/adaptation_plan.json\",\n  \"mode\": \"stage\",\n  \"stage\": \"P12\",\n  \"kind\": \"scheduler_generation\",\n  \"scheduler\": \"/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/scripts/run_perf_trace_01_05.py\",\n  \"manifests\": [\n    \"/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/manifests/workflow01_05_full_pipeline.json\",\n    \"/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/manifests/workflow05_existing_evidence_pipeline.json\"\n  ],\n  \"runtime_branches\": {\n    \"workflow01-05-full\": [\n      \"R01\",\n      \"R02\",\n      \"R03\",\n      \"R04\",\n      \"R05\",\n      \"R06\",\n      \"R07\",\n      \"R08\",\n      \"R09\",\n      \"R10\"\n    ],\n    \"workflow05-existing-evidence\": [\n      \"R06\",\n      \"R07\",\n      \"R08\",\n      \"R09\",\n      \"R10\"\n    ]\n  },\n  \"persistent_goal_threads\": true,\n  \"handoff\": \"/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/workflows/project_adaptation/artifacts/P12/handoff.json\"\n}\n"
+}

@@ -1,0 +1,1519 @@
+{
+  "schema_version": 5,
+  "plan_id": "qwen-dcu-perf-trace-workflow01-05-complete-adaptation-v4",
+  "adaptation_mode": "workflow-capability-complete-adaptation",
+  "adaptation_scope": "source-preserving-alignment-workflow-gap-synthesis-and-workflow01-05-scheduler",
+  "project_root": "/public/home/tangyu408/Qwen_DCU_Worker_0",
+  "workflow_contract": "perf_trace/workflows/project_adaptation/workflow_skill_migration_contract.md",
+  "implementation_plan": "perf_trace/workflows/project_adaptation/adaptation_stage_implementation_plan.md",
+  "common_goal_contract": "perf_trace/workflows/project_adaptation/goals/common.md",
+  "runner": "perf_trace/workflows/project_adaptation/scripts/adapt_perf_trace.py",
+  "verifier": "perf_trace/workflows/project_adaptation/scripts/verify_adaptation_output.py",
+  "canonical_state": "perf_trace/workflows/project_adaptation/state/adaptation_state_source_skill_text_alignment.json",
+  "run_log_root": "perf_trace/workflows/project_adaptation/runs",
+  "gate_report_root": "perf_trace/workflows/project_adaptation/gate_reports",
+  "artifact_root": "perf_trace/workflows/project_adaptation/artifacts",
+  "handoff_root": "perf_trace/workflows/project_adaptation/handoffs",
+  "target_skill_root": "perf_trace/skills",
+  "extra_skill_roots": [
+    "perf_trace/skills",
+    "workload_profile/skills"
+  ],
+  "default_model": "gpt-5.6-sol",
+  "effort": "max",
+  "min_codex_version": "0.145.0",
+  "stage_timeout_seconds": 14400,
+  "poll_seconds": 2,
+  "contract_hash_policy": {
+    "algorithm": "sha256",
+    "includes": [
+      "manifest",
+      "contracts",
+      "active Goal prompts",
+      "all five Workflow authorities",
+      "every Workflow-gap binding-evidence file",
+      "source Skill trees",
+      "precommitted upstream target Skill trees"
+    ],
+    "validate_before_thread_creation": true,
+    "validate_before_commit_and_resume": true
+  },
+  "reference_runner": {
+    "path": "/root/.codex/skills/migrate-workflow-reference-skills/scripts/reference_adapt_workload_profile.py",
+    "sha256": "0cea9c1e378f24ca1ff0a0acd41762cfabc06d938e3fe3cf265c622168d33881",
+    "adaptation_rule": "copied byte-identically before project-specific adaptation; preserve paused bootstrap, Goal-owned continuations, external gate, atomic state, fail-stop and no-Goal dry-run"
+  },
+  "control_plane_files": [
+    "adaptation_stage_implementation_plan.md",
+    "goals/P01.md",
+    "goals/P02.md",
+    "goals/P03.md",
+    "goals/P04.md",
+    "goals/P05.md",
+    "goals/P06.md",
+    "goals/P07.md",
+    "goals/P08.md",
+    "goals/P09.md",
+    "goals/P10.md",
+    "goals/P11.md",
+    "goals/P12.md",
+    "goals/common.md",
+    "manifests/adaptation_plan.json",
+    "scripts/adapt_perf_trace.py",
+    "scripts/verify_adaptation_output.py",
+    "workflow_skill_migration_contract.md"
+  ],
+  "historical_goal_templates": [
+    "perf_trace/workflows/project_adaptation/goals/P06.md"
+  ],
+  "workflow05_extension": {
+    "predecessor_plan_id": "qwen-dcu-perf-trace-workflow-complete-adaptation-v3",
+    "predecessor_plan_sha256": "b4b8966805b2e2695314a53d381a4f7bf08aa6e29406505e97a08b85ad173672",
+    "predecessor_contract_sha256": "6d026760541f96db1f2025a86277eefb0e3e50d5144586ac3546c85023008fd6",
+    "predecessor_state_schema_version": 6,
+    "predecessor_orchestration_protocol": "goal-owned-turns-v6-perf-trace-source-skill-text-alignment",
+    "predecessor_stage_order": [
+      "P01",
+      "P02",
+      "P03",
+      "P04",
+      "P05",
+      "P06"
+    ],
+    "preserved_committed_stages": [
+      "P01",
+      "P02",
+      "P03",
+      "P04",
+      "P05"
+    ],
+    "superseded_scheduler_stage": "P06",
+    "added_stages": [
+      "P07",
+      "P08",
+      "P09",
+      "P10",
+      "P11",
+      "P12"
+    ],
+    "workflow05_gap_stages": [
+      "P07",
+      "P08",
+      "P09",
+      "P10",
+      "P11"
+    ],
+    "scheduler_stage": "P12",
+    "adoption_flag": "--adopt-workflow05-extension"
+  },
+  "predecessor_runtime_products": [
+    {
+      "path": "perf_trace/scripts/run_perf_trace.py",
+      "sha256": "7216714ad195fac179bc9795e3e3c61e845c1023e0836fbc65ee3230df9317fc",
+      "role": "completed Workflow 01-04 scheduler-generation product; preserved as historical predecessor"
+    },
+    {
+      "path": "perf_trace/manifests/core_attribution_pipeline.json",
+      "sha256": "e14fd5c15d275094d696bb3022617432e1d51598850f41930be5374e96d448c1",
+      "role": "completed Workflow 01-04 scheduler-generation product; preserved as historical predecessor"
+    },
+    {
+      "path": "perf_trace/workflows/project_adaptation/artifacts/P06/handoff.json",
+      "sha256": "9819f21526c29bbe29de670fcc9bcf758ebfa3191f58c30d9d7153ff2339813c",
+      "role": "completed Workflow 01-04 scheduler-generation product; preserved as historical predecessor"
+    }
+  ],
+  "predecessor_skill_handoffs": [
+    {
+      "stage": "P01",
+      "path": "perf_trace/workflows/project_adaptation/handoffs/P01.json",
+      "sha256": "034c83e00bffa4e859e5ded654961792a269c0356c35fe66ca8e0be7e1603eda"
+    },
+    {
+      "stage": "P02",
+      "path": "perf_trace/workflows/project_adaptation/handoffs/P02.json",
+      "sha256": "1e44105f6ae319226a568e500062bb48ca3c29f091a55f707a395521da90b66a"
+    },
+    {
+      "stage": "P03",
+      "path": "perf_trace/workflows/project_adaptation/handoffs/P03.json",
+      "sha256": "58914e969dcb5ee1e5bbc443238a4ccc8bf1fedcb83ee3b9e7640278e0e1b884"
+    },
+    {
+      "stage": "P04",
+      "path": "perf_trace/workflows/project_adaptation/handoffs/P04.json",
+      "sha256": "7dfceaf44df03f96d0a3b11a7d3c3ff0f11e8ca2500ce39b4dd6b266cba18cf3"
+    },
+    {
+      "stage": "P05",
+      "path": "perf_trace/workflows/project_adaptation/handoffs/P05.json",
+      "sha256": "3969c2121c8c04013aee9815cb57a4823dcd0c292a1b7d8dbe06c1446e3ecb9f"
+    }
+  ],
+  "target_project_evidence": [
+    {
+      "path": "README.md",
+      "sha256": "81c06c80451ddb7393dcb01c5863d8b477904c76ad3f15ce104b9f6452d5c534",
+      "role": "canonical project root, Qwen3.5-27B, pra2026-bh408, vLLM/PRA, and DCU bindings"
+    },
+    {
+      "path": "pra2026-bh408/scripts/perf_trace/analyze_qwen_hipprof_process_trace.py",
+      "sha256": "42b7252670eb300560c218fd9bfedfc78d8aff4ad9d91e3565d1f5ed38ab553e",
+      "role": "verified current HIPTX-runtime-index-HIPOPS ownership and process ordering implementation"
+    },
+    {
+      "path": "pra2026-bh408/scripts/perf_trace/prepare_qwen_dcu_hardware_plan.py",
+      "sha256": "7b610fabd7a7c3e64104b4722d6ec186897914b37187bec2b1e2ec9567b3fe54",
+      "role": "verified current representative family planning, contract and coverage implementation"
+    },
+    {
+      "path": "pra2026-bh408/scripts/perf_trace/run_qwen_hardware_profile_single_request.sh",
+      "sha256": "a3156cb4308c47ddd1d78922eaafe04d4eb22a3e007eb8f633d72b2f5696923a",
+      "role": "verified current hipprof pmc, pmc-read and pmc-write launcher"
+    },
+    {
+      "path": "pra2026-bh408/scripts/perf_trace/analyze_qwen_hipprof_pmc.py",
+      "sha256": "3ae7257b07b0c666a053907ea9b41c49db59078436382f540d5923b4e035eae4",
+      "role": "verified current strict PMC block to replay-kernel join"
+    },
+    {
+      "path": "pra2026-bh408/scripts/perf_trace/consolidate_qwen_dcu_hardware_metrics.py",
+      "sha256": "29af741cbc631ad79673280350bce037571322030deefd413b0ac294ad8cce1a",
+      "role": "verified current kernel-family projection, hardware diagnostics, coverage and replay timing boundary"
+    }
+  ],
+  "supplied_workflow_roots": [
+    "perf_trace/workflows/01_layer_wise_end_to_end_trace.md",
+    "perf_trace/workflows/02_representative_fx_process_wise_trace.md",
+    "perf_trace/workflows/03_process_gpu_hardware_trace.md",
+    "perf_trace/workflows/04_full_layer_fx_process_wise_estimate.md",
+    "perf_trace/workflows/05_workflow04_guided_selective_process_trace_and_resource_gap_analysis.md"
+  ],
+  "reference_workflows": [
+    {
+      "path": "perf_trace/workflows/01_layer_wise_end_to_end_trace.md",
+      "sha256": "90004fed427fb66b913b84c25d53d36104354a5e839b42475074fd22e9a6d812",
+      "role": "P01 full layer-wise denominator role only"
+    },
+    {
+      "path": "perf_trace/workflows/02_representative_fx_process_wise_trace.md",
+      "sha256": "b28cd69bb20322dc68646475f0be3abf3ef1c30365c4db772324ee6d92e610b6",
+      "role": "P02 producer and P03 consumer ordering only"
+    },
+    {
+      "path": "perf_trace/workflows/03_process_gpu_hardware_trace.md",
+      "sha256": "4f1b3e594344b3561e13b6c8c2c63ad1ea0ab553e283fa7f8cc22c8830656f48",
+      "role": "P03 process-boundary reference plus P05 authoritative uncovered hardware capability"
+    },
+    {
+      "path": "perf_trace/workflows/04_full_layer_fx_process_wise_estimate.md",
+      "sha256": "942e382242724dc9c7fce59ec144b336f91c6214140ea3bea3550d1c67e8d395",
+      "role": "P04 upstream/downstream role only"
+    },
+    {
+      "path": "perf_trace/workflows/05_workflow04_guided_selective_process_trace_and_resource_gap_analysis.md",
+      "sha256": "b031000777d6ebe8c5777aed5ef1e83d304851e0f60ff4ea5984972b969363cb",
+      "role": "sole Workflow 05 capability authority and runtime topology"
+    }
+  ],
+  "referenced_source_skills": [
+    {
+      "name": "visipruner-same-input-layer-wise-workflow",
+      "scope": "full",
+      "path": "/root/.codex/skills/visipruner-same-input-layer-wise-workflow",
+      "sha256": "2ab4eae5c31d82a1b787decd47933968981ddbfc2f00e77fbf259a3e04862425",
+      "file_set": [
+        "SKILL.md",
+        "agents/openai.yaml"
+      ]
+    },
+    {
+      "name": "visipruner-fx-process-nvtx-instrumentation",
+      "scope": "full",
+      "path": "/root/.codex/skills/visipruner-fx-process-nvtx-instrumentation",
+      "sha256": "1f931b4c3cbb1e886270a7927aa6bc149773058cb8f1f3ca7282c71d839c2ca9",
+      "file_set": [
+        "SKILL.md",
+        "agents/openai.yaml"
+      ]
+    },
+    {
+      "name": "visipruner-process-performance-breakdown",
+      "scope": "full",
+      "path": "/root/.codex/skills/visipruner-process-performance-breakdown",
+      "sha256": "ae373bb01308133c664d24782bc1226fdb0e960757f870a25c1b92a40372ea41",
+      "file_set": [
+        "SKILL.md",
+        "agents/openai.yaml"
+      ]
+    },
+    {
+      "name": "visipruner-segmented-process-attribution",
+      "scope": "full",
+      "path": "/root/.codex/skills/visipruner-segmented-process-attribution",
+      "sha256": "e2b023a5d4162961961ee0766dff1f53a1eb72c6c557abcb66efb7970e4ce083",
+      "file_set": [
+        "SKILL.md",
+        "agents/openai.yaml"
+      ]
+    }
+  ],
+  "reference_skill_resolution": {
+    "result": "none_declared_by_workflow",
+    "rule": "external tools and already migrated upstream target Skills are not normative source Skills for Workflow 05",
+    "fallback": "every Workflow 05 capability is scheduled as a mandatory workflow_gap_skill_generation Goal"
+  },
+  "precommitted_upstream_skills": [
+    {
+      "name": "qwen-dcu-same-input-layer-wise-workflow",
+      "path": "perf_trace/skills/qwen-dcu-same-input-layer-wise-workflow",
+      "tree_sha256": "9acf8816593901caed0119010d29ac30cb7ce0cb8dec98207fa5ed8e52f3e90e",
+      "role": "Workflow 01 measured layer denominator boundary",
+      "immutable": true
+    },
+    {
+      "name": "qwen-dcu-fx-process-nvtx-instrumentation",
+      "path": "perf_trace/skills/qwen-dcu-fx-process-nvtx-instrumentation",
+      "tree_sha256": "ffa29e4761276c27ef3f7b268cf88272d49ac4089c46d4bcc8522e004e2c1793",
+      "role": "Workflow 02 process marker and instrumentation boundary",
+      "immutable": true
+    },
+    {
+      "name": "qwen-dcu-process-performance-breakdown",
+      "path": "perf_trace/skills/qwen-dcu-process-performance-breakdown",
+      "tree_sha256": "0be7402c2609492d731278387bbfd8f587ff817973332124feba50016fa9e3ad",
+      "role": "Workflow 02/03 representative process attribution boundary",
+      "immutable": true
+    },
+    {
+      "name": "qwen-dcu-process-gpu-hardware-trace",
+      "path": "perf_trace/skills/qwen-dcu-process-gpu-hardware-trace",
+      "tree_sha256": "386f5f80a3d54e318e135e7c91e86abc4cbe388f9571146d9c49947d8a39cf64",
+      "role": "R4 representative replay hardware boundary",
+      "immutable": true
+    },
+    {
+      "name": "qwen-dcu-segmented-process-attribution",
+      "path": "perf_trace/skills/qwen-dcu-segmented-process-attribution",
+      "tree_sha256": "ca8de8d13cf141236a91f5060aa24e30e0b1c8303315bd8bd0491859ceeee043",
+      "role": "Workflow 04 full-layer estimate boundary",
+      "immutable": true
+    },
+    {
+      "name": "qwen-dcu-algorithmic-trace-selection",
+      "path": "workload_profile/skills/qwen-dcu-algorithmic-trace-selection",
+      "tree_sha256": "395d710953043381b05403febc554a2f6e97e8bac71889c2431a3d364ea08336",
+      "role": "theoretical FLOPs and shape-input boundary for P10",
+      "immutable": true
+    },
+    {
+      "name": "qwen-dcu-fx-reconstruct-visualize",
+      "path": "workload_profile/skills/qwen-dcu-fx-reconstruct-visualize",
+      "tree_sha256": "fa9f0ade7d6fc83a9fba9a25e00ec8ffb26dd4def63381fb4441400b9f180e5b",
+      "role": "FX process node/input/user boundary for P10",
+      "immutable": true
+    }
+  ],
+  "environment_observations": {
+    "observed_on": "2026-08-03",
+    "non_authoritative_runtime_probe_only": true,
+    "plotly": "6.6.0",
+    "networkx": "3.4.2",
+    "protobuf": "6.33.5",
+    "hipprof_path": "/opt/dtk/bin/hipprof",
+    "hipprof_sha256": "53f67d3dd4c1fe5aa9850f58d174ecf9f2c688f1e07519b456b19ca699c57f22",
+    "perfetto_python": "unavailable",
+    "trace_processor": "unavailable",
+    "rocprof_compute": "unavailable",
+    "rocprofv3": "unavailable",
+    "rocprof_sys": "unavailable"
+  },
+  "stage_order": [
+    "P01",
+    "P02",
+    "P03",
+    "P04",
+    "P05",
+    "P07",
+    "P08",
+    "P09",
+    "P10",
+    "P11",
+    "P12"
+  ],
+  "capability_coverage": [
+    {
+      "workflow": "perf_trace/workflows/01_layer_wise_end_to_end_trace.md",
+      "capability": "layer_wise_same_input_timing_denominator",
+      "coverage_kind": "source_skill",
+      "stages": [
+        "P01"
+      ],
+      "target_skills": [
+        "qwen-dcu-same-input-layer-wise-workflow"
+      ]
+    },
+    {
+      "workflow": "perf_trace/workflows/02_representative_fx_process_wise_trace.md",
+      "capability": "representative_process_instrumentation",
+      "coverage_kind": "source_skill",
+      "stages": [
+        "P02"
+      ],
+      "target_skills": [
+        "qwen-dcu-fx-process-nvtx-instrumentation"
+      ]
+    },
+    {
+      "workflow": "perf_trace/workflows/02_representative_fx_process_wise_trace.md",
+      "capability": "representative_process_performance_breakdown",
+      "coverage_kind": "source_skill",
+      "stages": [
+        "P03"
+      ],
+      "target_skills": [
+        "qwen-dcu-process-performance-breakdown"
+      ]
+    },
+    {
+      "workflow": "perf_trace/workflows/03_process_gpu_hardware_trace.md",
+      "capability": "process_boundary_and_non_replay_timing",
+      "coverage_kind": "source_skill_boundary",
+      "stages": [
+        "P02",
+        "P03"
+      ],
+      "target_skills": [
+        "qwen-dcu-fx-process-nvtx-instrumentation",
+        "qwen-dcu-process-performance-breakdown"
+      ]
+    },
+    {
+      "workflow": "perf_trace/workflows/03_process_gpu_hardware_trace.md",
+      "capability": "process_gpu_hardware_replay_join_and_report",
+      "coverage_kind": "workflow_gap",
+      "stages": [
+        "P05"
+      ],
+      "target_skills": [
+        "qwen-dcu-process-gpu-hardware-trace"
+      ]
+    },
+    {
+      "workflow": "perf_trace/workflows/04_full_layer_fx_process_wise_estimate.md",
+      "capability": "full_layer_segmented_process_attribution",
+      "coverage_kind": "source_skill",
+      "stages": [
+        "P04"
+      ],
+      "target_skills": [
+        "qwen-dcu-segmented-process-attribution"
+      ]
+    },
+    {
+      "workflow": "perf_trace/workflows/05_workflow04_guided_selective_process_trace_and_resource_gap_analysis.md",
+      "capability": "workflow05_upstream_reuse_and_candidate_planning",
+      "coverage_kind": "workflow_gap",
+      "stages": [
+        "P07"
+      ],
+      "target_skills": [
+        "qwen-dcu-workflow05-evidence-planning"
+      ]
+    },
+    {
+      "workflow": "perf_trace/workflows/05_workflow04_guided_selective_process_trace_and_resource_gap_analysis.md",
+      "capability": "workflow05_selective_non_replay_process_trace",
+      "coverage_kind": "workflow_gap",
+      "stages": [
+        "P08"
+      ],
+      "target_skills": [
+        "qwen-dcu-workflow05-selective-process-trace"
+      ]
+    },
+    {
+      "workflow": "perf_trace/workflows/05_workflow04_guided_selective_process_trace_and_resource_gap_analysis.md",
+      "capability": "workflow05_targeted_hardware_gap_analysis",
+      "coverage_kind": "workflow_gap",
+      "stages": [
+        "P09"
+      ],
+      "target_skills": [
+        "qwen-dcu-workflow05-targeted-hardware-gap-analysis"
+      ]
+    },
+    {
+      "workflow": "perf_trace/workflows/05_workflow04_guided_selective_process_trace_and_resource_gap_analysis.md",
+      "capability": "workflow05_utilization_and_concurrency_opportunity_analysis",
+      "coverage_kind": "workflow_gap",
+      "stages": [
+        "P10"
+      ],
+      "target_skills": [
+        "qwen-dcu-workflow05-utilization-concurrency-analysis"
+      ]
+    },
+    {
+      "workflow": "perf_trace/workflows/05_workflow04_guided_selective_process_trace_and_resource_gap_analysis.md",
+      "capability": "workflow05_linked_trace_visualization_and_reporting",
+      "coverage_kind": "workflow_gap",
+      "stages": [
+        "P11"
+      ],
+      "target_skills": [
+        "qwen-dcu-workflow05-trace-visualization-reporting"
+      ]
+    }
+  ],
+  "shared_invariants": [
+    "single SAME_INPUT contract",
+    "Workflow 04 estimate is not an observed process trace",
+    "non-replay timing is authoritative for latency",
+    "PMC replay duration is never latency",
+    "observed inferred estimated replay_projected heuristic and unavailable evidence remain distinct",
+    "no dependency-ready-slack evidence means no confirmed concurrency claim",
+    "selective evidence first and full sampling only after recorded escalation",
+    "existing Workflow 01-04 migration products remain immutable",
+    "Workflow 05 is downstream of the Workflow 01-04 R01-R05 chain",
+    "the full runtime branch executes R01 through R10 in strict order",
+    "historical P06 and its Workflow 01-04 runtime products remain preserved but are not the final scheduler stage"
+  ],
+  "runtime_outputs": [
+    "perf_trace/scripts/run_perf_trace_01_05.py",
+    "perf_trace/manifests/workflow01_05_full_pipeline.json",
+    "perf_trace/manifests/workflow05_existing_evidence_pipeline.json"
+  ],
+  "runtime_branches": [
+    {
+      "branch": "workflow01-05-full",
+      "manifest": "perf_trace/manifests/workflow01_05_full_pipeline.json",
+      "goals": [
+        "R01",
+        "R02",
+        "R03",
+        "R04",
+        "R05",
+        "R06",
+        "R07",
+        "R08",
+        "R09",
+        "R10"
+      ],
+      "bindings": {
+        "R01": {
+          "skill": "qwen-dcu-same-input-layer-wise-workflow"
+        },
+        "R02": {
+          "skill": "qwen-dcu-fx-process-nvtx-instrumentation"
+        },
+        "R03": {
+          "skill": "qwen-dcu-process-performance-breakdown"
+        },
+        "R04": {
+          "skill": "qwen-dcu-process-gpu-hardware-trace"
+        },
+        "R05": {
+          "skill": "qwen-dcu-segmented-process-attribution"
+        },
+        "R06": {
+          "skill": "qwen-dcu-workflow05-evidence-planning"
+        },
+        "R07": {
+          "skill": "qwen-dcu-workflow05-selective-process-trace"
+        },
+        "R08": {
+          "skill": "qwen-dcu-workflow05-targeted-hardware-gap-analysis"
+        },
+        "R09": {
+          "skill": "qwen-dcu-workflow05-utilization-concurrency-analysis"
+        },
+        "R10": {
+          "skill": "qwen-dcu-workflow05-trace-visualization-reporting"
+        }
+      },
+      "requires": []
+    },
+    {
+      "branch": "workflow05-existing-evidence",
+      "manifest": "perf_trace/manifests/workflow05_existing_evidence_pipeline.json",
+      "goals": [
+        "R06",
+        "R07",
+        "R08",
+        "R09",
+        "R10"
+      ],
+      "bindings": {
+        "R06": {
+          "skill": "qwen-dcu-workflow05-evidence-planning"
+        },
+        "R07": {
+          "skill": "qwen-dcu-workflow05-selective-process-trace"
+        },
+        "R08": {
+          "skill": "qwen-dcu-workflow05-targeted-hardware-gap-analysis"
+        },
+        "R09": {
+          "skill": "qwen-dcu-workflow05-utilization-concurrency-analysis"
+        },
+        "R10": {
+          "skill": "qwen-dcu-workflow05-trace-visualization-reporting"
+        }
+      },
+      "requires": [
+        "a compatible completed R01-R05 cumulative runtime handoff ledger supplied as a user parameter",
+        "no automatic rerun or modification of Workflow 01-04 products"
+      ]
+    }
+  ],
+  "stages": [
+    {
+      "id": "P01",
+      "kind": "source_skill_text_alignment",
+      "objective": "Mirror the complete visipruner-same-input-layer-wise-workflow Skill and align only its old-project text bindings to Qwen_DCU_Worker_0.",
+      "depends_on": [],
+      "goal_template": "perf_trace/workflows/project_adaptation/goals/P01.md",
+      "workflow_requirements": [
+        "perf_trace/workflows/01_layer_wise_end_to_end_trace.md"
+      ],
+      "source_skill": {
+        "name": "visipruner-same-input-layer-wise-workflow",
+        "scope": "full",
+        "path": "/root/.codex/skills/visipruner-same-input-layer-wise-workflow",
+        "sha256": "2ab4eae5c31d82a1b787decd47933968981ddbfc2f00e77fbf259a3e04862425",
+        "file_set": [
+          "SKILL.md",
+          "agents/openai.yaml"
+        ]
+      },
+      "output_skill": {
+        "name": "qwen-dcu-same-input-layer-wise-workflow",
+        "path": "perf_trace/skills/qwen-dcu-same-input-layer-wise-workflow"
+      },
+      "artifact_dir": "perf_trace/workflows/project_adaptation/artifacts/P01",
+      "handoff": "perf_trace/workflows/project_adaptation/handoffs/P01.json",
+      "final_gate": [
+        "python3",
+        "{project_root}/perf_trace/workflows/project_adaptation/scripts/verify_adaptation_output.py",
+        "--project-root",
+        "{project_root}",
+        "--plan",
+        "{plan_path}",
+        "--stage",
+        "{stage_id}",
+        "--source-skill-root",
+        "{source_skill_root}"
+      ]
+    },
+    {
+      "id": "P02",
+      "kind": "source_skill_text_alignment",
+      "objective": "Mirror the complete visipruner-fx-process-nvtx-instrumentation Skill and align only its old-project text bindings to Qwen_DCU_Worker_0.",
+      "depends_on": [],
+      "goal_template": "perf_trace/workflows/project_adaptation/goals/P02.md",
+      "workflow_requirements": [
+        "perf_trace/workflows/02_representative_fx_process_wise_trace.md"
+      ],
+      "source_skill": {
+        "name": "visipruner-fx-process-nvtx-instrumentation",
+        "scope": "full",
+        "path": "/root/.codex/skills/visipruner-fx-process-nvtx-instrumentation",
+        "sha256": "1f931b4c3cbb1e886270a7927aa6bc149773058cb8f1f3ca7282c71d839c2ca9",
+        "file_set": [
+          "SKILL.md",
+          "agents/openai.yaml"
+        ]
+      },
+      "output_skill": {
+        "name": "qwen-dcu-fx-process-nvtx-instrumentation",
+        "path": "perf_trace/skills/qwen-dcu-fx-process-nvtx-instrumentation"
+      },
+      "artifact_dir": "perf_trace/workflows/project_adaptation/artifacts/P02",
+      "handoff": "perf_trace/workflows/project_adaptation/handoffs/P02.json",
+      "final_gate": [
+        "python3",
+        "{project_root}/perf_trace/workflows/project_adaptation/scripts/verify_adaptation_output.py",
+        "--project-root",
+        "{project_root}",
+        "--plan",
+        "{plan_path}",
+        "--stage",
+        "{stage_id}",
+        "--source-skill-root",
+        "{source_skill_root}"
+      ]
+    },
+    {
+      "id": "P03",
+      "kind": "source_skill_text_alignment",
+      "objective": "Mirror the complete visipruner-process-performance-breakdown Skill and align only its old-project text bindings to Qwen_DCU_Worker_0; Workflow 03 supplies boundary role only.",
+      "depends_on": [
+        "P02"
+      ],
+      "goal_template": "perf_trace/workflows/project_adaptation/goals/P03.md",
+      "workflow_requirements": [
+        "perf_trace/workflows/02_representative_fx_process_wise_trace.md",
+        "perf_trace/workflows/03_process_gpu_hardware_trace.md"
+      ],
+      "source_skill": {
+        "name": "visipruner-process-performance-breakdown",
+        "scope": "full",
+        "path": "/root/.codex/skills/visipruner-process-performance-breakdown",
+        "sha256": "ae373bb01308133c664d24782bc1226fdb0e960757f870a25c1b92a40372ea41",
+        "file_set": [
+          "SKILL.md",
+          "agents/openai.yaml"
+        ]
+      },
+      "output_skill": {
+        "name": "qwen-dcu-process-performance-breakdown",
+        "path": "perf_trace/skills/qwen-dcu-process-performance-breakdown"
+      },
+      "artifact_dir": "perf_trace/workflows/project_adaptation/artifacts/P03",
+      "handoff": "perf_trace/workflows/project_adaptation/handoffs/P03.json",
+      "final_gate": [
+        "python3",
+        "{project_root}/perf_trace/workflows/project_adaptation/scripts/verify_adaptation_output.py",
+        "--project-root",
+        "{project_root}",
+        "--plan",
+        "{plan_path}",
+        "--stage",
+        "{stage_id}",
+        "--source-skill-root",
+        "{source_skill_root}"
+      ]
+    },
+    {
+      "id": "P04",
+      "kind": "source_skill_text_alignment",
+      "objective": "Mirror the complete visipruner-segmented-process-attribution Skill and align only its old-project text bindings to Qwen_DCU_Worker_0.",
+      "depends_on": [
+        "P01",
+        "P03"
+      ],
+      "goal_template": "perf_trace/workflows/project_adaptation/goals/P04.md",
+      "workflow_requirements": [
+        "perf_trace/workflows/04_full_layer_fx_process_wise_estimate.md"
+      ],
+      "source_skill": {
+        "name": "visipruner-segmented-process-attribution",
+        "scope": "full",
+        "path": "/root/.codex/skills/visipruner-segmented-process-attribution",
+        "sha256": "e2b023a5d4162961961ee0766dff1f53a1eb72c6c557abcb66efb7970e4ce083",
+        "file_set": [
+          "SKILL.md",
+          "agents/openai.yaml"
+        ]
+      },
+      "output_skill": {
+        "name": "qwen-dcu-segmented-process-attribution",
+        "path": "perf_trace/skills/qwen-dcu-segmented-process-attribution"
+      },
+      "artifact_dir": "perf_trace/workflows/project_adaptation/artifacts/P04",
+      "handoff": "perf_trace/workflows/project_adaptation/handoffs/P04.json",
+      "final_gate": [
+        "python3",
+        "{project_root}/perf_trace/workflows/project_adaptation/scripts/verify_adaptation_output.py",
+        "--project-root",
+        "{project_root}",
+        "--plan",
+        "{plan_path}",
+        "--stage",
+        "{stage_id}",
+        "--source-skill-root",
+        "{source_skill_root}"
+      ]
+    },
+    {
+      "id": "P05",
+      "kind": "workflow_gap_skill_generation",
+      "objective": "Generate a standalone Qwen/DCU process GPU hardware trace Skill for Workflow 03's uncovered hardware-counter capability using the current pra2026-bh408 hipprof implementation evidence.",
+      "depends_on": [
+        "P02",
+        "P03"
+      ],
+      "goal_template": "perf_trace/workflows/project_adaptation/goals/P05.md",
+      "workflow_requirements": [
+        "perf_trace/workflows/02_representative_fx_process_wise_trace.md",
+        "perf_trace/workflows/03_process_gpu_hardware_trace.md"
+      ],
+      "workflow_authority": {
+        "path": "perf_trace/workflows/03_process_gpu_hardware_trace.md",
+        "scope": "complete process GPU hardware attribute capability; process timing and boundary ownership remain with Workflow 02 Skills",
+        "sha256": "4f1b3e594344b3561e13b6c8c2c63ad1ea0ab553e283fa7f8cc22c8830656f48"
+      },
+      "binding_evidence": [
+        {
+          "path": "pra2026-bh408/scripts/perf_trace/analyze_qwen_hipprof_process_trace.py",
+          "sha256": "42b7252670eb300560c218fd9bfedfc78d8aff4ad9d91e3565d1f5ed38ab553e",
+          "role": "verified current HIPTX-runtime-index-HIPOPS ownership and process ordering implementation"
+        },
+        {
+          "path": "pra2026-bh408/scripts/perf_trace/prepare_qwen_dcu_hardware_plan.py",
+          "sha256": "7b610fabd7a7c3e64104b4722d6ec186897914b37187bec2b1e2ec9567b3fe54",
+          "role": "verified current representative family planning, contract and coverage implementation"
+        },
+        {
+          "path": "pra2026-bh408/scripts/perf_trace/run_qwen_hardware_profile_single_request.sh",
+          "sha256": "a3156cb4308c47ddd1d78922eaafe04d4eb22a3e007eb8f633d72b2f5696923a",
+          "role": "verified current hipprof pmc, pmc-read and pmc-write launcher"
+        },
+        {
+          "path": "pra2026-bh408/scripts/perf_trace/analyze_qwen_hipprof_pmc.py",
+          "sha256": "3ae7257b07b0c666a053907ea9b41c49db59078436382f540d5923b4e035eae4",
+          "role": "verified current strict PMC block to replay-kernel join"
+        },
+        {
+          "path": "pra2026-bh408/scripts/perf_trace/consolidate_qwen_dcu_hardware_metrics.py",
+          "sha256": "29af741cbc631ad79673280350bce037571322030deefd413b0ac294ad8cce1a",
+          "role": "verified current kernel-family projection, hardware diagnostics, coverage and replay timing boundary"
+        }
+      ],
+      "output_skill": {
+        "name": "qwen-dcu-process-gpu-hardware-trace",
+        "path": "perf_trace/skills/qwen-dcu-process-gpu-hardware-trace",
+        "file_set": [
+          "SKILL.md",
+          "agents/openai.yaml"
+        ]
+      },
+      "artifact_dir": "perf_trace/workflows/project_adaptation/artifacts/P05",
+      "handoff": "perf_trace/workflows/project_adaptation/handoffs/P05.json",
+      "final_gate": [
+        "python3",
+        "{project_root}/perf_trace/workflows/project_adaptation/scripts/verify_adaptation_output.py",
+        "--project-root",
+        "{project_root}",
+        "--plan",
+        "{plan_path}",
+        "--stage",
+        "{stage_id}"
+      ]
+    },
+    {
+      "id": "P07",
+      "kind": "workflow_gap_skill_generation",
+      "objective": "Generate the standalone Workflow 05 upstream-evidence reuse, capability-probe and selective-candidate planning Skill.",
+      "depends_on": [
+        "P01",
+        "P02",
+        "P03",
+        "P04",
+        "P05"
+      ],
+      "goal_template": "perf_trace/workflows/project_adaptation/goals/P07.md",
+      "workflow_requirements": [
+        "perf_trace/workflows/05_workflow04_guided_selective_process_trace_and_resource_gap_analysis.md"
+      ],
+      "workflow_authority": {
+        "path": "perf_trace/workflows/05_workflow04_guided_selective_process_trace_and_resource_gap_analysis.md",
+        "sha256": "b031000777d6ebe8c5777aed5ef1e83d304851e0f60ff4ea5984972b969363cb",
+        "scope": "目标; 核心原则; Required Inputs; Step 0-Step 3; Workflow04 reuse/candidate outputs; applicable Cost Controls and Completion Checks"
+      },
+      "binding_evidence": [
+        {
+          "path": "README.md",
+          "sha256": "81c06c80451ddb7393dcb01c5863d8b477904c76ad3f15ce104b9f6452d5c534",
+          "role": "canonical Qwen3.5-27B vLLM/PRA ROCm/DCU project identity"
+        },
+        {
+          "path": "perf_trace/manifests/core_attribution_pipeline.json",
+          "sha256": "e14fd5c15d275094d696bb3022617432e1d51598850f41930be5374e96d448c1",
+          "role": "committed upstream runtime stage and Skill bindings"
+        },
+        {
+          "path": "perf_trace/runtime/core-attribution/qwen35-core-attribution-20260729-01/runtime_handoff_ledger.json",
+          "sha256": "290ef5f88f8a9506f5e311c2bd711ce5791d8a32d3e085fb79081ddba4abcc26",
+          "role": "completed-run handoff ledger schema example only, never fresh evidence"
+        },
+        {
+          "path": "perf_trace/runtime/core-attribution/qwen35-core-attribution-20260729-01/handoffs/R01.json",
+          "sha256": "48d50f458b04802ef83e7a9a8b1ced2d6a0099c2476dd9270f96a044a33ab040",
+          "role": "R01 input and contract schema example"
+        },
+        {
+          "path": "perf_trace/runtime/core-attribution/qwen35-core-attribution-20260729-01/handoffs/R02.json",
+          "sha256": "11a66cee6cd9629e983cfc666c2b754ab3f00fb587e36cdec6684594af54233f",
+          "role": "R02 process marker and queryable trace schema example"
+        },
+        {
+          "path": "perf_trace/runtime/core-attribution/qwen35-core-attribution-20260729-01/handoffs/R03.json",
+          "sha256": "ca540a73bdba7b9db3f66c790ec7579aa5f3ff142adaa74ffda564b801e901f5",
+          "role": "R03 representative process schema example"
+        },
+        {
+          "path": "perf_trace/runtime/core-attribution/qwen35-core-attribution-20260729-01/handoffs/R04.json",
+          "sha256": "d58c55de6da049c35c0b59e8e778594c4c3ce3e9907227e78939256fcccc8cf0",
+          "role": "R4 hardware family schema example"
+        },
+        {
+          "path": "perf_trace/runtime/core-attribution/qwen35-core-attribution-20260729-01/handoffs/R05.json",
+          "sha256": "91b3bcb8bb09539be007d79a26e94d8038c827a7453b69bb24d4643cbae2233e",
+          "role": "Workflow 04 full-layer estimate and evidence schema example"
+        },
+        {
+          "path": "pra2026-bh408/scripts/perf_trace/generate_segmented_process_attribution.py",
+          "sha256": "4db17dfe590b083e1e540ec3a61c1a28f323c066057d3bd69fef09f7db795761",
+          "role": "verified full-layer attribution fields, template mapping and conservation implementation"
+        },
+        {
+          "path": "pra2026-bh408/scripts/perf_trace/analyze_qwen_hipprof_process_trace.py",
+          "sha256": "42b7252670eb300560c218fd9bfedfc78d8aff4ad9d91e3565d1f5ed38ab553e",
+          "role": "verified normalized process/runtime/kernel/ownership schema"
+        }
+      ],
+      "unresolved_bindings": [
+        "current compatible R01-R05 artifact roots must be supplied or discovered at runtime",
+        "current Plotly/NetworkX/Perfetto versions and usable interfaces must be probed at runtime",
+        "the scheduler supplies audited low-cost selection/cost defaults and records any explicit user overrides"
+      ],
+      "boundary_skills": [
+        "qwen-dcu-same-input-layer-wise-workflow",
+        "qwen-dcu-fx-process-nvtx-instrumentation",
+        "qwen-dcu-process-performance-breakdown",
+        "qwen-dcu-process-gpu-hardware-trace",
+        "qwen-dcu-segmented-process-attribution"
+      ],
+      "output_skill": {
+        "name": "qwen-dcu-workflow05-evidence-planning",
+        "path": "perf_trace/skills/qwen-dcu-workflow05-evidence-planning",
+        "file_set": [
+          "SKILL.md",
+          "agents/openai.yaml"
+        ]
+      },
+      "required_sections": [
+        "Scope",
+        "Upstream Evidence",
+        "Capability Probe",
+        "Whole-run Index",
+        "Candidate Selection",
+        "Outputs",
+        "Validation",
+        "Stop Conditions"
+      ],
+      "required_markers": [
+        "SAME_INPUT",
+        "Workflow 04",
+        "selective_trace_plan.csv",
+        "selective_hardware_plan.csv",
+        "inferred",
+        "ambiguous",
+        "cost",
+        "coverage"
+      ],
+      "artifact_dir": "perf_trace/workflows/project_adaptation/artifacts/P07",
+      "handoff": "perf_trace/workflows/project_adaptation/handoffs/P07.json",
+      "final_gate": [
+        "python3",
+        "{project_root}/perf_trace/workflows/project_adaptation/scripts/verify_adaptation_output.py",
+        "--project-root",
+        "{project_root}",
+        "--plan",
+        "{plan_path}",
+        "--stage",
+        "{stage_id}"
+      ]
+    },
+    {
+      "id": "P08",
+      "kind": "workflow_gap_skill_generation",
+      "objective": "Generate the standalone selective non-replay process-trace and strict timing calibration Skill.",
+      "depends_on": [
+        "P02",
+        "P03",
+        "P07"
+      ],
+      "goal_template": "perf_trace/workflows/project_adaptation/goals/P08.md",
+      "workflow_requirements": [
+        "perf_trace/workflows/05_workflow04_guided_selective_process_trace_and_resource_gap_analysis.md"
+      ],
+      "workflow_authority": {
+        "path": "perf_trace/workflows/05_workflow04_guided_selective_process_trace_and_resource_gap_analysis.md",
+          "sha256": "b031000777d6ebe8c5777aed5ef1e83d304851e0f60ff4ea5984972b969363cb",
+        "scope": "Step 4; Expression 1 selective measured layer; Selective measured outputs; timing/concurrency checks and escalation controls"
+      },
+      "binding_evidence": [
+        {
+          "path": "perf_trace/runtime/core-attribution/qwen35-core-attribution-20260729-01/handoffs/R02.json",
+          "sha256": "11a66cee6cd9629e983cfc666c2b754ab3f00fb587e36cdec6684594af54233f",
+          "role": "current process marker and strict trace handoff schema example"
+        },
+        {
+          "path": "pra2026-bh408/scripts/perf_trace/run_qwen_process_profile_single_request.sh",
+          "sha256": "ed2a2bc255336c4748cf695637103358a3b47b87477b62a82e3fda0f71ad6176",
+          "role": "verified exact-range process-profile hipprof launcher binding"
+        },
+        {
+          "path": "pra2026-bh408/scripts/perf_trace/profile_qwen_same_input_layer.py",
+          "sha256": "1408570be09e179b4d47ef040d6207f9393f24941dbbabd03e03524f0c07f6db",
+          "role": "verified SAME_INPUT profile entry and exact marker gate"
+        },
+        {
+          "path": "pra2026-bh408/scripts/perf_trace/prepare_workflow05_selective_capture.py",
+          "sha256": "55160c4986db5049a220d9ee00fbe0aa36347d8f37c04e3f4f65c6d29d8913e7",
+          "role": "verified current measurement child-contract, exact plan and inventory preparation"
+        },
+        {
+          "path": "pra2026-bh408/scripts/perf_trace/generate_qwen_fx_process_handoff.py",
+          "sha256": "a1cc6386b4bfcc910d2e9770e1b3ef8164ee8f028686ab125d25784125ad6b82",
+          "role": "verified process marker inventory and identity schema"
+        },
+        {
+          "path": "pra2026-bh408/scripts/perf_trace/analyze_qwen_hipprof_process_trace.py",
+          "sha256": "42b7252670eb300560c218fd9bfedfc78d8aff4ad9d91e3565d1f5ed38ab553e",
+          "role": "verified strict HIPTX-runtime-index-HIPOPS analyzer and selective-plan option"
+        }
+      ],
+      "unresolved_bindings": [
+        "the fixed exact-range gate must be rehashed and its marker-set equality verified before every capture",
+        "hipprof offline PFTrace/index-range behavior and timestamp clock must be probed on a disposable DB copy; failure degrades PFTrace presentation only",
+        "a current writable selective trace output root must be supplied per run"
+      ],
+      "boundary_skills": [
+        "qwen-dcu-fx-process-nvtx-instrumentation",
+        "qwen-dcu-process-performance-breakdown"
+      ],
+      "output_skill": {
+        "name": "qwen-dcu-workflow05-selective-process-trace",
+        "path": "perf_trace/skills/qwen-dcu-workflow05-selective-process-trace",
+        "file_set": [
+          "SKILL.md",
+          "agents/openai.yaml"
+        ]
+      },
+      "required_sections": [
+        "Scope",
+        "Inputs",
+        "Selective Capture",
+        "Strict Ownership",
+        "Timing Metrics",
+        "Outputs",
+        "Validation",
+        "Escalation and Stops"
+      ],
+      "required_markers": [
+        "non-replay",
+        "HIPTX",
+        "_Index",
+        "HIPOPS",
+        "strict",
+        "busy union",
+        "ambiguous",
+        "PFTrace",
+        "replay duration"
+      ],
+      "artifact_dir": "perf_trace/workflows/project_adaptation/artifacts/P08",
+      "handoff": "perf_trace/workflows/project_adaptation/handoffs/P08.json",
+      "final_gate": [
+        "python3",
+        "{project_root}/perf_trace/workflows/project_adaptation/scripts/verify_adaptation_output.py",
+        "--project-root",
+        "{project_root}",
+        "--plan",
+        "{plan_path}",
+        "--stage",
+        "{stage_id}"
+      ]
+    },
+    {
+      "id": "P09",
+      "kind": "workflow_gap_skill_generation",
+      "objective": "Generate the standalone R4-first targeted hardware and long-process gap-analysis Skill.",
+      "depends_on": [
+        "P05",
+        "P07",
+        "P08"
+      ],
+      "goal_template": "perf_trace/workflows/project_adaptation/goals/P09.md",
+      "workflow_requirements": [
+        "perf_trace/workflows/05_workflow04_guided_selective_process_trace_and_resource_gap_analysis.md"
+      ],
+      "workflow_authority": {
+        "path": "perf_trace/workflows/05_workflow04_guided_selective_process_trace_and_resource_gap_analysis.md",
+          "sha256": "b031000777d6ebe8c5777aed5ef1e83d304851e0f60ff4ea5984972b969363cb",
+        "scope": "Step 5; Expression 2 analytical requirements; targeted hardware and long-process outputs; hardware/gap checks and PMC cost controls"
+      },
+      "binding_evidence": [
+        {
+          "path": "perf_trace/runtime/core-attribution/qwen35-core-attribution-20260729-01/handoffs/R04.json",
+          "sha256": "d58c55de6da049c35c0b59e8e778594c4c3ce3e9907227e78939256fcccc8cf0",
+          "role": "R4 replay hardware schema and timing-boundary example"
+        },
+        {
+          "path": "perf_trace/runtime/core-attribution/qwen35-core-attribution-20260729-01/artifacts/R04/hardware_coverage.json",
+          "sha256": "14d384b2f393615e2658e3e2989b6521d6487d68406f431b366c3a10e04419d8",
+          "role": "completed R4 coverage/state vocabulary example only"
+        },
+        {
+          "path": "pra2026-bh408/scripts/perf_trace/prepare_qwen_dcu_hardware_plan.py",
+          "sha256": "7b610fabd7a7c3e64104b4722d6ec186897914b37187bec2b1e2ec9567b3fe54",
+          "role": "verified current contract and family-ledger planning implementation"
+        },
+        {
+          "path": "pra2026-bh408/scripts/perf_trace/run_qwen_hardware_profile_single_request.sh",
+          "sha256": "a3156cb4308c47ddd1d78922eaafe04d4eb22a3e007eb8f633d72b2f5696923a",
+          "role": "verified pmc/pmc-read/pmc-write launcher binding"
+        },
+        {
+          "path": "pra2026-bh408/scripts/perf_trace/analyze_qwen_hipprof_pmc.py",
+          "sha256": "3ae7257b07b0c666a053907ea9b41c49db59078436382f540d5923b4e035eae4",
+          "role": "verified strict PMC block to replay kernel join"
+        },
+        {
+          "path": "pra2026-bh408/scripts/perf_trace/consolidate_qwen_dcu_hardware_metrics.py",
+          "sha256": "29af741cbc631ad79673280350bce037571322030deefd413b0ac294ad8cce1a",
+          "role": "verified family projection, diagnostics, coverage and replay timing boundary"
+        }
+      ],
+      "unresolved_bindings": [
+        "filtered targeted replay support must be verified without relabeling a debug batch as complete",
+        "current PMC field availability and gfx936 constants must be probed per run",
+        "ROCm Compute Profiler and HPCToolkit remain optional until a gfx936 capability probe passes"
+      ],
+      "boundary_skills": [
+        "qwen-dcu-process-gpu-hardware-trace",
+        "qwen-dcu-workflow05-selective-process-trace"
+      ],
+      "output_skill": {
+        "name": "qwen-dcu-workflow05-targeted-hardware-gap-analysis",
+        "path": "perf_trace/skills/qwen-dcu-workflow05-targeted-hardware-gap-analysis",
+        "file_set": [
+          "SKILL.md",
+          "agents/openai.yaml"
+        ]
+      },
+      "required_sections": [
+        "Scope",
+        "Inputs",
+        "R4 Reuse",
+        "Targeted PMC",
+        "Strict Hardware Join",
+        "Long-process Gap",
+        "Outputs",
+        "Validation and Stops"
+      ],
+      "required_markers": [
+        "reused_exact_hardware",
+        "reused_shape_compatible_hardware",
+        "targeted",
+        "PMC",
+        "event_id",
+        "matched_kernel_family",
+        "non-replay",
+        "unavailable",
+        "replay_projected"
+      ],
+      "artifact_dir": "perf_trace/workflows/project_adaptation/artifacts/P09",
+      "handoff": "perf_trace/workflows/project_adaptation/handoffs/P09.json",
+      "final_gate": [
+        "python3",
+        "{project_root}/perf_trace/workflows/project_adaptation/scripts/verify_adaptation_output.py",
+        "--project-root",
+        "{project_root}",
+        "--plan",
+        "{plan_path}",
+        "--stage",
+        "{stage_id}"
+      ]
+    },
+    {
+      "id": "P10",
+      "kind": "workflow_gap_skill_generation",
+      "objective": "Generate the standalone theoretical-workload, low-utilization and concurrency-opportunity analysis Skill.",
+      "depends_on": [
+        "P01",
+        "P02",
+        "P03",
+        "P04",
+        "P05",
+        "P07",
+        "P08",
+        "P09"
+      ],
+      "goal_template": "perf_trace/workflows/project_adaptation/goals/P10.md",
+      "workflow_requirements": [
+        "perf_trace/workflows/05_workflow04_guided_selective_process_trace_and_resource_gap_analysis.md"
+      ],
+      "workflow_authority": {
+        "path": "perf_trace/workflows/05_workflow04_guided_selective_process_trace_and_resource_gap_analysis.md",
+          "sha256": "b031000777d6ebe8c5777aed5ef1e83d304851e0f60ff4ea5984972b969363cb",
+        "scope": "Step 6-Step 7; NetworkX/HTA code-reuse boundary; Expression 3 analytical requirements; theoretical/gap/opportunity outputs; stop controls and concurrency checks"
+      },
+      "binding_evidence": [
+        {
+          "path": "workload_profile/algorithmic_trace/tools/build_r02_algorithmic_trace.py",
+          "sha256": "7e5659f5ca931477fa309c5c7893ba975ab468df92189d1a130969831c4ad35d",
+          "role": "verified theoretical FLOPs and dynamic q/past/kv shape schema"
+        },
+        {
+          "path": "workload_profile/algorithmic_trace/tools/select_r02_layer_events.py",
+          "sha256": "463e0ff1e3e53fab1633fcaadebd6a07101ebce2aaa184949be4a9b65807582a",
+          "role": "verified evidence-based layer selection and theoretical-not-latency boundary"
+        },
+        {
+          "path": "workload_profile/fx/tools/reconstruct_r042_fx_process.py",
+          "sha256": "4ad278d96538183acaec710d74b4889715439d9d5f0c60a7548e4f8fee8a9014",
+          "role": "verified process stages, FX node args/users and external input/output schema"
+        },
+        {
+          "path": "workload_profile/fx/tools/validate_r042_fx_process.py",
+          "sha256": "faf6c15ebc31872433bc616ad94fc93f2305aa300ee23dfaccb9b221fd29b49f",
+          "role": "verified FX reconstruction coverage and evidence validation"
+        },
+        {
+          "path": "pra2026-bh408/scripts/perf_trace/analyze_qwen_hipprof_process_trace.py",
+          "sha256": "42b7252670eb300560c218fd9bfedfc78d8aff4ad9d91e3565d1f5ed38ab553e",
+          "role": "verified runtime/kernel/queue/strict ownership inputs"
+        },
+        {
+          "path": "perf_trace/runtime/core-attribution/qwen35-core-attribution-20260729-01/handoffs/R04.json",
+          "sha256": "d58c55de6da049c35c0b59e8e778594c4c3ce3e9907227e78939256fcccc8cf0",
+          "role": "hardware evidence and replay-boundary schema example"
+        },
+        {
+          "path": "perf_trace/runtime/core-attribution/qwen35-core-attribution-20260729-01/handoffs/R05.json",
+          "sha256": "91b3bcb8bb09539be007d79a26e94d8038c827a7453b69bb24d4643cbae2233e",
+          "role": "full-layer type, risk and process-identity schema example"
+        }
+      ],
+      "unresolved_bindings": [
+        "theoretical read/write bytes and working-set estimation are unresolved where current evidence exposes only FLOPs/shapes",
+        "complete process data/control dependency and ready timestamps are unresolved for opaque custom operations",
+        "HTA upstream commit, license-preserving adapter location and semantic tests must be resolved before code reuse",
+        "Chakra export is optional and has no verified current implementation"
+      ],
+      "boundary_skills": [
+        "qwen-dcu-algorithmic-trace-selection",
+        "qwen-dcu-fx-reconstruct-visualize",
+        "qwen-dcu-workflow05-targeted-hardware-gap-analysis"
+      ],
+      "output_skill": {
+        "name": "qwen-dcu-workflow05-utilization-concurrency-analysis",
+        "path": "perf_trace/skills/qwen-dcu-workflow05-utilization-concurrency-analysis",
+        "file_set": [
+          "SKILL.md",
+          "agents/openai.yaml"
+        ]
+      },
+      "required_sections": [
+        "Scope",
+        "Inputs",
+        "Theoretical Workload",
+        "Interval Analysis",
+        "Dependency and Critical Path",
+        "Concurrency Opportunities",
+        "Coverage and Escalation",
+        "Outputs",
+        "Validation"
+      ],
+      "required_markers": [
+        "theoretical",
+        "observed_in_current_selective_timeline",
+        "replay_projected",
+        "NetworkX",
+        "HTA",
+        "ready",
+        "slack",
+        "unknown dependency",
+        "exposed time",
+        "actual speedup"
+      ],
+      "artifact_dir": "perf_trace/workflows/project_adaptation/artifacts/P10",
+      "handoff": "perf_trace/workflows/project_adaptation/handoffs/P10.json",
+      "final_gate": [
+        "python3",
+        "{project_root}/perf_trace/workflows/project_adaptation/scripts/verify_adaptation_output.py",
+        "--project-root",
+        "{project_root}",
+        "--plan",
+        "{plan_path}",
+        "--stage",
+        "{stage_id}"
+      ]
+    },
+    {
+      "id": "P11",
+      "kind": "workflow_gap_skill_generation",
+      "objective": "Generate the standalone Perfetto/Plotly linked trace visualization and reporting Skill.",
+      "depends_on": [
+        "P01",
+        "P02",
+        "P03",
+        "P04",
+        "P05",
+        "P07",
+        "P08",
+        "P09",
+        "P10"
+      ],
+      "goal_template": "perf_trace/workflows/project_adaptation/goals/P11.md",
+      "workflow_requirements": [
+        "perf_trace/workflows/05_workflow04_guided_selective_process_trace_and_resource_gap_analysis.md"
+      ],
+      "workflow_authority": {
+        "path": "perf_trace/workflows/05_workflow04_guided_selective_process_trace_and_resource_gap_analysis.md",
+          "sha256": "b031000777d6ebe8c5777aed5ef1e83d304851e0f60ff4ea5984972b969363cb",
+        "scope": "direct tool/PFTrace/Perfetto/Plotly interfaces; Expression 1; presentation-only Expression 2/3; trace and human-readable outputs; tool/reuse checks"
+      },
+      "binding_evidence": [
+        {
+          "path": "perf_trace/manifests/core_attribution_pipeline.json",
+          "sha256": "e14fd5c15d275094d696bb3022617432e1d51598850f41930be5374e96d448c1",
+          "role": "current upstream branch identity"
+        },
+        {
+          "path": "perf_trace/runtime/core-attribution/qwen35-core-attribution-20260729-01/handoffs/R01.json",
+          "sha256": "48d50f458b04802ef83e7a9a8b1ced2d6a0099c2476dd9270f96a044a33ab040",
+          "role": "observed full-layer trace and timing schema example"
+        },
+        {
+          "path": "perf_trace/runtime/core-attribution/qwen35-core-attribution-20260729-01/handoffs/R04.json",
+          "sha256": "d58c55de6da049c35c0b59e8e778594c4c3ce3e9907227e78939256fcccc8cf0",
+          "role": "R4 hardware and evidence schema example"
+        },
+        {
+          "path": "perf_trace/runtime/core-attribution/qwen35-core-attribution-20260729-01/handoffs/R05.json",
+          "sha256": "91b3bcb8bb09539be007d79a26e94d8038c827a7453b69bb24d4643cbae2233e",
+          "role": "Workflow 04 estimate/evidence schema example"
+        },
+        {
+          "path": "pra2026-bh408/scripts/perf_trace/analyze_qwen_hipprof_process_trace.py",
+          "sha256": "42b7252670eb300560c218fd9bfedfc78d8aff4ad9d91e3565d1f5ed38ab553e",
+          "role": "normalized observed trace table schema"
+        },
+        {
+          "path": "pra2026-bh408/scripts/perf_trace/generate_segmented_process_attribution.py",
+          "sha256": "4db17dfe590b083e1e540ec3a61c1a28f323c066057d3bd69fef09f7db795761",
+          "role": "stable process/template/evidence fields used by the global index"
+        }
+      ],
+      "unresolved_bindings": [
+        "Perfetto trace_processor installation/version and CLI must be resolved at runtime for native mode",
+        "TrackEvent protobuf generation and multi-trace clock alignment are native-mode extensions; browser mode uses normalized tables",
+        "dashboard/report implementation path, localhost serving and deep-link base URL are unresolved",
+        "HTA adapter provenance and code location remain unresolved until P10 establishes them"
+      ],
+      "boundary_skills": [
+        "qwen-dcu-workflow05-evidence-planning",
+        "qwen-dcu-workflow05-selective-process-trace",
+        "qwen-dcu-workflow05-targeted-hardware-gap-analysis",
+        "qwen-dcu-workflow05-utilization-concurrency-analysis"
+      ],
+      "output_skill": {
+        "name": "qwen-dcu-workflow05-trace-visualization-reporting",
+        "path": "perf_trace/skills/qwen-dcu-workflow05-trace-visualization-reporting",
+        "file_set": [
+          "SKILL.md",
+          "agents/openai.yaml"
+        ]
+      },
+      "required_sections": [
+        "Scope",
+        "Inputs",
+        "Tool Capability",
+        "Perfetto Trace",
+        "Plotly Overview",
+        "Linked Views",
+        "Outputs",
+        "Validation and Stops"
+      ],
+      "required_markers": [
+        "PFTrace",
+        "TrackEvent",
+        "Trace Processor",
+        "Plotly",
+        "stable key",
+        "projected_composition",
+        "observed",
+        "replay_projected",
+        "workflow05_trace_index.csv",
+        "offline"
+      ],
+      "artifact_dir": "perf_trace/workflows/project_adaptation/artifacts/P11",
+      "handoff": "perf_trace/workflows/project_adaptation/handoffs/P11.json",
+      "final_gate": [
+        "python3",
+        "{project_root}/perf_trace/workflows/project_adaptation/scripts/verify_adaptation_output.py",
+        "--project-root",
+        "{project_root}",
+        "--plan",
+        "{plan_path}",
+        "--stage",
+        "{stage_id}"
+      ]
+    },
+    {
+      "id": "P12",
+      "kind": "scheduler_generation",
+      "objective": "Consume all ten committed Workflow 01-05 target Skills and generate the full sequential and existing-evidence runtime branches without executing either branch.",
+      "depends_on": [
+        "P01",
+        "P02",
+        "P03",
+        "P04",
+        "P05",
+        "P07",
+        "P08",
+        "P09",
+        "P10",
+        "P11"
+      ],
+      "goal_template": "perf_trace/workflows/project_adaptation/goals/P12.md",
+      "workflow_requirements": [
+        "perf_trace/workflows/01_layer_wise_end_to_end_trace.md",
+        "perf_trace/workflows/02_representative_fx_process_wise_trace.md",
+        "perf_trace/workflows/03_process_gpu_hardware_trace.md",
+        "perf_trace/workflows/04_full_layer_fx_process_wise_estimate.md",
+        "perf_trace/workflows/05_workflow04_guided_selective_process_trace_and_resource_gap_analysis.md"
+      ],
+      "output_skill": null,
+      "consumes_target_skills": [
+        "qwen-dcu-same-input-layer-wise-workflow",
+        "qwen-dcu-fx-process-nvtx-instrumentation",
+        "qwen-dcu-process-performance-breakdown",
+        "qwen-dcu-process-gpu-hardware-trace",
+        "qwen-dcu-segmented-process-attribution",
+        "qwen-dcu-workflow05-evidence-planning",
+        "qwen-dcu-workflow05-selective-process-trace",
+        "qwen-dcu-workflow05-targeted-hardware-gap-analysis",
+        "qwen-dcu-workflow05-utilization-concurrency-analysis",
+        "qwen-dcu-workflow05-trace-visualization-reporting"
+      ],
+      "runtime_outputs": [
+        "perf_trace/scripts/run_perf_trace_01_05.py",
+        "perf_trace/manifests/workflow01_05_full_pipeline.json",
+        "perf_trace/manifests/workflow05_existing_evidence_pipeline.json"
+      ],
+      "runtime_branches": [
+        {
+          "branch": "workflow01-05-full",
+          "manifest": "perf_trace/manifests/workflow01_05_full_pipeline.json",
+          "goals": [
+            "R01",
+            "R02",
+            "R03",
+            "R04",
+            "R05",
+            "R06",
+            "R07",
+            "R08",
+            "R09",
+            "R10"
+          ],
+          "bindings": {
+            "R01": {
+              "skill": "qwen-dcu-same-input-layer-wise-workflow"
+            },
+            "R02": {
+              "skill": "qwen-dcu-fx-process-nvtx-instrumentation"
+            },
+            "R03": {
+              "skill": "qwen-dcu-process-performance-breakdown"
+            },
+            "R04": {
+              "skill": "qwen-dcu-process-gpu-hardware-trace"
+            },
+            "R05": {
+              "skill": "qwen-dcu-segmented-process-attribution"
+            },
+            "R06": {
+              "skill": "qwen-dcu-workflow05-evidence-planning"
+            },
+            "R07": {
+              "skill": "qwen-dcu-workflow05-selective-process-trace"
+            },
+            "R08": {
+              "skill": "qwen-dcu-workflow05-targeted-hardware-gap-analysis"
+            },
+            "R09": {
+              "skill": "qwen-dcu-workflow05-utilization-concurrency-analysis"
+            },
+            "R10": {
+              "skill": "qwen-dcu-workflow05-trace-visualization-reporting"
+            }
+          },
+          "requires": []
+        },
+        {
+          "branch": "workflow05-existing-evidence",
+          "manifest": "perf_trace/manifests/workflow05_existing_evidence_pipeline.json",
+          "goals": [
+            "R06",
+            "R07",
+            "R08",
+            "R09",
+            "R10"
+          ],
+          "bindings": {
+            "R06": {
+              "skill": "qwen-dcu-workflow05-evidence-planning"
+            },
+            "R07": {
+              "skill": "qwen-dcu-workflow05-selective-process-trace"
+            },
+            "R08": {
+              "skill": "qwen-dcu-workflow05-targeted-hardware-gap-analysis"
+            },
+            "R09": {
+              "skill": "qwen-dcu-workflow05-utilization-concurrency-analysis"
+            },
+            "R10": {
+              "skill": "qwen-dcu-workflow05-trace-visualization-reporting"
+            }
+          },
+          "requires": [
+            "a compatible completed R01-R05 cumulative runtime handoff ledger supplied as a user parameter",
+            "no automatic rerun or modification of Workflow 01-04 products"
+          ]
+        }
+      ],
+      "artifact_dir": "perf_trace/workflows/project_adaptation/artifacts/P12",
+      "handoff": "perf_trace/workflows/project_adaptation/artifacts/P12/handoff.json",
+      "final_gate": [
+        "python3",
+        "{project_root}/perf_trace/workflows/project_adaptation/scripts/verify_adaptation_output.py",
+        "--project-root",
+        "{project_root}",
+        "--plan",
+        "{plan_path}",
+        "--stage",
+        "{stage_id}"
+      ]
+    }
+  ],
+  "retired_predecessor_binding_evidence": [
+    {
+      "path": "perf_trace_bk/README.md",
+      "sha256": "e66214575058fb04b4064f484d6a4c770bbfe149b3bd20cd6ca519b517422071",
+      "role": "read-only archived ROCm/DCU/HIP profiler and evidence-layout bindings",
+      "reason": "present and hash-pinned in the completed predecessor state, but no longer present in the current project; retained only as historical provenance and never required for the Workflow05 extension"
+    },
+    {
+      "path": "perf_trace_bk/tools/run_hipprof_single_request.sh",
+      "sha256": "8da2d58450873a9c908736e0751d893882fd122188d110c3c50113ad73c06caf",
+      "role": "verified hipprof trace and PMC/PMC-read/PMC-write collection modes for gfx936 DCU",
+      "reason": "present and hash-pinned in the completed predecessor state, but no longer present in the current project; retained only as historical provenance and never required for the Workflow05 extension"
+    },
+    {
+      "path": "perf_trace_bk/tools/analyze_hipprof_backend_trace.py",
+      "sha256": "38fe633494bc6849a35b98373e06e42a4f942bfd0d40a6a937f9dfa33715a5f0",
+      "role": "verified HIPTX-to-runtime-to-HIPOPS ownership and process order schema",
+      "reason": "present and hash-pinned in the completed predecessor state, but no longer present in the current project; retained only as historical provenance and never required for the Workflow05 extension"
+    },
+    {
+      "path": "perf_trace_bk/tools/analyze_hipprof_pmc.py",
+      "sha256": "13200c6cd79043d1680603a03d1f2b3fbfbd05a1904075e7cd442993153ed67e",
+      "role": "verified PMC replay parsing and strict-owned kernel join",
+      "reason": "present and hash-pinned in the completed predecessor state, but no longer present in the current project; retained only as historical provenance and never required for the Workflow05 extension"
+    },
+    {
+      "path": "perf_trace_bk/tools/consolidate_dcu_hardware_metrics.py",
+      "sha256": "2fd302dfd0e227f739cdcd2dc0038b276d1c6c7318fe2c275644ef424542c84e",
+      "role": "verified DCU kernel-family hardware projection, coverage, and report schema",
+      "reason": "present and hash-pinned in the completed predecessor state, but no longer present in the current project; retained only as historical provenance and never required for the Workflow05 extension"
+    }
+  ]
+}

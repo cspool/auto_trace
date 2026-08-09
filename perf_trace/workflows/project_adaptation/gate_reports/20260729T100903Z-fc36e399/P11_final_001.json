@@ -1,0 +1,20 @@
+{
+  "command": [
+    "python3",
+    "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/workflows/project_adaptation/scripts/verify_adaptation_output.py",
+    "--project-root",
+    "/public/home/tangyu408/Qwen_DCU_Worker_0",
+    "--plan",
+    "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/workflows/project_adaptation/manifests/adaptation_plan.json",
+    "--stage",
+    "P11"
+  ],
+  "completed_at": "2026-08-03T12:59:10.113816+00:00",
+  "phase": "final",
+  "returncode": 0,
+  "stage_id": "P11",
+  "started_at": "2026-08-03T12:59:09.976720+00:00",
+  "status": "pass",
+  "stderr": "",
+  "stdout": "{\n  \"status\": \"pass\",\n  \"plan\": \"/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/workflows/project_adaptation/manifests/adaptation_plan.json\",\n  \"mode\": \"stage\",\n  \"stage\": \"P11\",\n  \"kind\": \"workflow_gap_skill_generation\",\n  \"workflow_authority\": {\n    \"path\": \"perf_trace/workflows/05_workflow04_guided_selective_process_trace_and_resource_gap_analysis.md\",\n    \"sha256\": \"865bdd57e0f0a2d02990ebd513e5e9d3b679725e2b628cf95193697a6c4575b4\",\n    \"scope\": \"direct tool/PFTrace/Perfetto/Plotly interfaces; Expression 1; presentation-only Expression 2/3; trace and human-readable outputs; tool/reuse checks\"\n  },\n  \"output_skill\": \"qwen-dcu-workflow05-trace-visualization-reporting\",\n  \"file_set\": [\n    \"SKILL.md\",\n    \"agents/openai.yaml\"\n  ],\n  \"binding_evidence_count\": 6,\n  \"handoff\": \"/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/workflows/project_adaptation/handoffs/P11.json\"\n}\n"
+}

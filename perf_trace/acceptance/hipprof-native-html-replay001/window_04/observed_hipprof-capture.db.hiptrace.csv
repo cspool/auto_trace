@@ -1,0 +1,7 @@
+"Name","Calls","TotalDurationNs","AverageNs","Percentage"
+"hipExtModuleLaunchKernel","1","13750","13750","52.6819923371648"
+"hipMemcpyAsync","1","8620","8620","33.0268199233716"
+"hipGetDevice","9","2300","255","8.81226053639847"
+"hipSetDevice","4","1080","270","4.13793103448276"
+"hipGetLastError","1","350","350","1.34099616858238"
+"Total","16","26100","1631","100.0"

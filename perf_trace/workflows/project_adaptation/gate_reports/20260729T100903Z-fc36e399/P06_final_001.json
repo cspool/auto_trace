@@ -1,0 +1,20 @@
+{
+  "command": [
+    "python3",
+    "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/workflows/project_adaptation/scripts/verify_adaptation_output.py",
+    "--project-root",
+    "/public/home/tangyu408/Qwen_DCU_Worker_0",
+    "--plan",
+    "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/workflows/project_adaptation/manifests/adaptation_plan.json",
+    "--stage",
+    "P06"
+  ],
+  "completed_at": "2026-07-29T13:32:57.155573+00:00",
+  "phase": "final",
+  "returncode": 0,
+  "stage_id": "P06",
+  "started_at": "2026-07-29T13:32:56.903137+00:00",
+  "status": "pass",
+  "stderr": "",
+  "stdout": "{\n  \"status\": \"pass\",\n  \"plan\": \"/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/workflows/project_adaptation/manifests/adaptation_plan.json\",\n  \"mode\": \"stage\",\n  \"stage\": \"P06\",\n  \"kind\": \"scheduler_generation\",\n  \"scheduler\": \"/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/scripts/run_perf_trace.py\",\n  \"manifest\": \"/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/manifests/core_attribution_pipeline.json\",\n  \"runtime_goals\": [\n    \"R01\",\n    \"R02\",\n    \"R03\",\n    \"R04\",\n    \"R05\"\n  ],\n  \"persistent_goal_threads\": true,\n  \"handoff\": \"/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/workflows/project_adaptation/artifacts/P06/handoff.json\"\n}\n"
+}

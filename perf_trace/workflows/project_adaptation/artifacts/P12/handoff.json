@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "stage_id": "P12",
+  "status": "complete",
+  "outputs": {
+    "scheduler": "perf_trace/scripts/run_perf_trace_01_05.py",
+    "workflow01_05_full": "perf_trace/manifests/workflow01_05_full_pipeline.json",
+    "workflow05_existing_evidence": "perf_trace/manifests/workflow05_existing_evidence_pipeline.json"
+  }
+}

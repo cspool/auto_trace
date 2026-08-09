@@ -1,0 +1,4 @@
+interface:
+  display_name: "Legacy W05 Hardware Gaps"
+  short_description: "Collect bounded R08 hardware evidence"
+  default_prompt: "Use $qwen-dcu-workflow05-legacy-targeted-hardware-analysis to fill only authorized hardware-family gaps without using replay time as latency."

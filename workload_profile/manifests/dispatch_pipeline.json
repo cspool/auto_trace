@@ -1,0 +1,10 @@
+{
+  "branch": "dispatch",
+  "goals": ["R01", "R02", "R031", "R041"],
+  "bindings": {
+    "R01": {"skill": "qwen-dcu-profile-patch-targets"},
+    "R02": {"skill": "qwen-dcu-algorithmic-trace-selection"},
+    "R031": {"skill": "qwen-dcu-dispatch-trace"},
+    "R041": {"skill": "qwen-dcu-dispatch-reconstruct-visualize"}
+  }
+}

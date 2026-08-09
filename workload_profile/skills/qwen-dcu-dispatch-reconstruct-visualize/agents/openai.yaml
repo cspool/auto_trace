@@ -1,0 +1,4 @@
+interface:
+  display_name: "Qwen DCU Dispatch Reconstruction"
+  short_description: "Evidence-aligned Qwen dispatch layer ONNX"
+  default_prompt: "Use $qwen-dcu-dispatch-reconstruct-visualize to reconstruct Qwen3.5-27B vLLM V1 ROCm/DCU dispatch layers into evidence-aligned small-shape ONNX stages."

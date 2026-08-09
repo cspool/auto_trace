@@ -1,0 +1,5 @@
+"Name","Calls","TotalDurationNs","AverageNs","Percentage"
+"void LLGemm1_k5120_pairreduce640_kernel<2>(c10::BFloat16 const*, c10::BFloat16 const*, c10::BFloat16*)","1","244000","244000","62.169"
+"void LLGemm1_qwen35_output_kernel<17408, 1024>(c10::BFloat16 const*, c10::BFloat16 const*, c10::BFloat16*)","1","134560","134560","34.285"
+"_ZN4vllm18act_and_mul_kernelIN3c108BFloat16E15__hip_bfloat162TnPFT_RKS4_EXadL_ZNS_11silu_kernelIS2_EES4_S6_EETnPFT0_RKSA_EXadL_ZNS_18packed_silu_kernelIS3_EES4_S6_EELb1ELb1ELb0EEEvPS4_PS5_i","1","13920","13920","3.547"
+"Total","3","392480","130826","100.0"

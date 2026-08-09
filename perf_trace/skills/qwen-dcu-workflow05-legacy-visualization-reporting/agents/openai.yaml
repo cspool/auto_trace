@@ -1,0 +1,4 @@
+interface:
+  display_name: "Legacy W05 Reporting"
+  short_description: "Render separated legacy evidence axes"
+  default_prompt: "Use $qwen-dcu-workflow05-legacy-visualization-reporting to render clearly separated estimated and selectively observed evidence axes."

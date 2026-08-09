@@ -1,0 +1,28 @@
+{
+  "stage": "P08",
+  "status": "complete",
+  "authority_type": "workflow_gap",
+  "workflow_authority": {
+    "path": "perf_trace/workflows/05_workflow04_guided_selective_process_trace_and_resource_gap_analysis.md",
+      "sha256": "b031000777d6ebe8c5777aed5ef1e83d304851e0f60ff4ea5984972b969363cb",
+    "scope": "Step 4; Expression 1 selective measured layer; Selective measured outputs; timing/concurrency checks and escalation controls"
+  },
+  "output_skill": "qwen-dcu-workflow05-selective-process-trace",
+  "outputs": [
+    "perf_trace/skills/qwen-dcu-workflow05-selective-process-trace"
+  ],
+  "validation": {
+    "command": [
+      "python3",
+      "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/workflows/project_adaptation/scripts/verify_adaptation_output.py",
+      "--project-root",
+      "/public/home/tangyu408/Qwen_DCU_Worker_0",
+      "--plan",
+      "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/workflows/project_adaptation/manifests/adaptation_plan.json",
+      "--stage",
+      "P08"
+    ],
+    "status": "pass"
+  },
+  "completed_at": "2026-08-03T11:54:49Z"
+}

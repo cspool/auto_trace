@@ -1,0 +1,4 @@
+interface:
+  display_name: "Qwen DCU Fresh Hardware Evidence"
+  short_description: "Collect bounded PMC and build the traffic/resource model"
+  default_prompt: "Use $qwen-dcu-workflow05-targeted-hardware-gap-analysis to attach fresh serial DCU 1 PMC evidence to the same run's R07 families, preserve non-replay latency, probe gfx936 capabilities, and build the fresh-run traffic/resource model."

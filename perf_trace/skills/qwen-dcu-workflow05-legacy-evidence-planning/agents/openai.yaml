@@ -1,0 +1,4 @@
+interface:
+  display_name: "Legacy W05 Evidence Plan"
+  short_description: "Plan bounded R06 from existing evidence"
+  default_prompt: "Use $qwen-dcu-workflow05-legacy-evidence-planning to validate the supplied R01-R05 ledger and build a bounded selective evidence plan."

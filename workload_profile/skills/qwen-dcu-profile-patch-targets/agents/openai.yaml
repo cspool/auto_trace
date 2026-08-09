@@ -1,0 +1,4 @@
+interface:
+  display_name: "Qwen DCU Profile Patch Targets"
+  short_description: "Plan Qwen3.5 vLLM V1 ROCm/DCU runtime trace hooks."
+  default_prompt: "Use $qwen-dcu-profile-patch-targets to decide where to hook the pra2026-bh408 Qwen3.5-27B vLLM V1 runtime on ROCm/DCU for an algorithm-level execution trace."

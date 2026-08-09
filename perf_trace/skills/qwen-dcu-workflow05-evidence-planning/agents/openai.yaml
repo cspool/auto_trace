@@ -1,0 +1,4 @@
+interface:
+  display_name: "Qwen DCU Fresh-Run Evidence Planning"
+  short_description: "Plan current-run full trace and bounded PMC targets"
+  default_prompt: "Use $qwen-dcu-workflow05-evidence-planning to validate the same run's R01-R05 lineage, allow audited trace-instrumentation changes, generate complete R07 process targets and bounded R08 PMC targets, and probe offline visualization interfaces without GPU work."

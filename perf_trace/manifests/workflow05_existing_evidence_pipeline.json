@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "branch": "workflow05-existing-evidence",
+  "goals": [
+    "R06",
+    "R07",
+    "R08",
+    "R09",
+    "R10"
+  ],
+  "bindings": {
+    "R06": {
+      "skill": "qwen-dcu-workflow05-legacy-evidence-planning"
+    },
+    "R07": {
+      "skill": "qwen-dcu-workflow05-legacy-selective-process-trace"
+    },
+    "R08": {
+      "skill": "qwen-dcu-workflow05-legacy-targeted-hardware-analysis"
+    },
+    "R09": {
+      "skill": "qwen-dcu-workflow05-legacy-utilization-analysis"
+    },
+    "R10": {
+      "skill": "qwen-dcu-workflow05-legacy-visualization-reporting"
+    }
+  },
+  "requires": [
+    "a compatible completed R01-R05 cumulative runtime handoff ledger supplied as a user parameter",
+    "no automatic rerun or modification of Workflow 01-04 products"
+  ]
+}

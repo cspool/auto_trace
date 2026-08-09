@@ -1,0 +1,20 @@
+{
+  "command": [
+    "python3",
+    "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/workflows/project_adaptation/scripts/verify_adaptation_output.py",
+    "--project-root",
+    "/public/home/tangyu408/Qwen_DCU_Worker_0",
+    "--plan",
+    "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/workflows/project_adaptation/manifests/adaptation_plan.json",
+    "--stage",
+    "P05"
+  ],
+  "completed_at": "2026-07-29T13:12:00.278117+00:00",
+  "phase": "final",
+  "returncode": 0,
+  "stage_id": "P05",
+  "started_at": "2026-07-29T13:12:00.179626+00:00",
+  "status": "pass",
+  "stderr": "",
+  "stdout": "{\n  \"status\": \"pass\",\n  \"plan\": \"/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/workflows/project_adaptation/manifests/adaptation_plan.json\",\n  \"mode\": \"stage\",\n  \"stage\": \"P05\",\n  \"kind\": \"workflow_gap_skill_generation\",\n  \"authority_type\": \"workflow_gap\",\n  \"workflow_authority\": \"perf_trace/workflows/03_process_gpu_hardware_trace.md\",\n  \"output_skill\": \"qwen-dcu-process-gpu-hardware-trace\",\n  \"file_set\": [\n    \"SKILL.md\",\n    \"agents/openai.yaml\"\n  ],\n  \"binding_evidence_count\": 5,\n  \"handoff\": \"/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/workflows/project_adaptation/handoffs/P05.json\"\n}\n"
+}

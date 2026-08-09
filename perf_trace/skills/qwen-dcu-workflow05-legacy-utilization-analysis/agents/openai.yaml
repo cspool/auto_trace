@@ -1,0 +1,4 @@
+interface:
+  display_name: "Legacy W05 Utilization"
+  short_description: "Analyze independent selective capture axes"
+  default_prompt: "Use $qwen-dcu-workflow05-legacy-utilization-analysis to derive coverage, utilization, dependency, and opportunity tables from separate capture axes."

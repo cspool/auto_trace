@@ -1,0 +1,4 @@
+interface:
+  display_name: "Legacy W05 Selective Trace"
+  short_description: "Capture bounded R07 process windows"
+  default_prompt: "Use $qwen-dcu-workflow05-legacy-selective-process-trace to collect only the R06-authorized process windows and preserve separate capture clocks."

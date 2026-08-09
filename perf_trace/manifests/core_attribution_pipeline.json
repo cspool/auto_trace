@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "branch": "core-attribution",
+  "goals": [
+    "R01",
+    "R02",
+    "R03",
+    "R04",
+    "R05"
+  ],
+  "bindings": {
+    "R01": {
+      "skill": "qwen-dcu-same-input-layer-wise-workflow"
+    },
+    "R02": {
+      "skill": "qwen-dcu-fx-process-nvtx-instrumentation"
+    },
+    "R03": {
+      "skill": "qwen-dcu-process-performance-breakdown"
+    },
+    "R04": {
+      "skill": "qwen-dcu-process-gpu-hardware-trace"
+    },
+    "R05": {
+      "skill": "qwen-dcu-segmented-process-attribution"
+    }
+  }
+}

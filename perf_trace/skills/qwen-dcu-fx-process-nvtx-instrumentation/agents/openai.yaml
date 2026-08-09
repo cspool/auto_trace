@@ -1,0 +1,4 @@
+interface:
+  display_name: "Qwen DCU FX Process HIPTX Instrumentation"
+  short_description: "Map Qwen3.5 FX processes to auditable DCU ranges"
+  default_prompt: "Use $qwen-dcu-fx-process-nvtx-instrumentation to patch and validate the current Qwen3.5-27B vLLM/PRA FX-to-HIPTX ranges in the same fresh-run lineage, recording source deltas without a hash-equality gate."

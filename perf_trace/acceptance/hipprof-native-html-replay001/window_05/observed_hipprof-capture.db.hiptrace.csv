@@ -1,0 +1,6 @@
+"Name","Calls","TotalDurationNs","AverageNs","Percentage"
+"hipModuleLaunchKernel","1","13900","13900","66.0960532572515"
+"hipPointerGetAttribute","5","3970","794","18.8777936281503"
+"hipGetDevice","9","1980","220","9.4151212553495"
+"hipSetDevice","5","1180","236","5.61103185924869"
+"Total","20","21030","1051","100.0"

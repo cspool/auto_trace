@@ -1,0 +1,4 @@
+interface:
+  display_name: "Qwen DCU SAME_INPUT Layer Workflow"
+  short_description: "Capture complete Qwen3.5-27B vLLM/PRA DCU layer evidence"
+  default_prompt: "Use $qwen-dcu-same-input-layer-wise-workflow to patch if needed, then run and audit the full Qwen3.5-27B vLLM/PRA layer-wise SAME_INPUT trace as R01 of one continuous fresh lineage on ROCm/DCU/HIP."

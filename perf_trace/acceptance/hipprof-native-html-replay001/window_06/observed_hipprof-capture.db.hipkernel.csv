@@ -1,0 +1,4 @@
+"Name","Calls","TotalDurationNs","AverageNs","Percentage"
+"void LLGemm1_k5120_pairreduce640_kernel<2>(c10::BFloat16 const*, c10::BFloat16 const*, c10::BFloat16*)","1","116480","116480","96.296"
+"void LLGemm1_k5120_pairreduce640_kernel<4>(c10::BFloat16 const*, c10::BFloat16 const*, c10::BFloat16*)","1","4480","4480","3.704"
+"Total","2","120960","60480","100.0"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Qwen DCU Fresh Full-Request Trace"
+  short_description: "Collect one complete process trace with live utilization"
+  default_prompt: "Use $qwen-dcu-workflow05-full-request-process-trace to consume same-run R06 targets, collect one complete non-replay DCU 1 request with live SE utilization, enforce strict ownership, and build the fresh-run dependency adapter."

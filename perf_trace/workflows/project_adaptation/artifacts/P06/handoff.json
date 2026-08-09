@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "stage_id": "P06",
+  "status": "complete",
+  "outputs": {
+    "scheduler": "perf_trace/scripts/run_perf_trace.py",
+    "core_attribution": "perf_trace/manifests/core_attribution_pipeline.json"
+  }
+}

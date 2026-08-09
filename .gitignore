@@ -1,0 +1,17 @@
+# Generated runtime state and local agent-session logs.
+perf_trace/runtime/
+perf_trace/workflows/project_adaptation/runs/
+workload_profile/runtime/
+workload_profile/workflows/project_adaptation/state/adaptation_runs/
+
+# Generated FX trace outputs include container-owned artifacts.
+workload_profile/fx/traces/
+
+# Python caches and local test state.
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Codex app-server transcripts can contain private session content.
+**/app_server.jsonl
+**/progress.jsonl

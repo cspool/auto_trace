@@ -1,0 +1,4 @@
+interface:
+  display_name: "Qwen DCU Dispatch Trace"
+  short_description: "Profile selected Qwen3.5 vLLM V1 layer events."
+  default_prompt: "Use $qwen-dcu-dispatch-trace to capture and validate a filtered TorchDispatch profile for selected Qwen3.5-27B vLLM V1 layer events on ROCm/DCU."
