@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "adapt_run_id": "batch8-dp2-adapt-20260822T000000Z",
+  "adapt_goal": "A01",
+  "status": "pass",
+  "validation_kind": "migration_only_static_validation",
+  "workflow_execution_performed": false,
+  "project_skill_execution_performed": false,
+  "inputs": {
+    "plan": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/manifests/adapt_goals.json",
+      "sha256": "bc58cc41846454acc4f6627fdd97a1cb922434e9f479e64aab102a3c8a2152e2"
+    },
+    "adapt_goal_document": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/goals/A01.md",
+      "sha256": "45acd76087086f5d984e32a78315286a66b567fa8185d85a8a4b33b03dedf47d"
+    },
+    "workflow": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/01_layer_wise_end_to_end_trace.md",
+      "sha256": "78d7d54fdccb93de02b7ea3da42fbedd8002b1429d9836e5651e83cf9cc01fde"
+    },
+    "reference_skill_text": {
+      "requested_name": "visipruner-same-input-layer-wise-workflow",
+      "resolved_name": "visipruner-same-input-workflow",
+      "resolution": "semantic_fallback",
+      "path": "/root/.codex/skills/visipruner-same-input-workflow/SKILL.md",
+      "sha256": "13bc2e3fe256265aceb11085b8b6a2a5bdfa8b6a970ce3f996b1cb7e19080f6f"
+    },
+    "trace_profile": {
+      "profile_id": "batch8-dual-dcu-dp2",
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/configs/trace_targets/batch8_dual_dcu_dp2.json",
+      "sha256": "3b4c952063f48ae662b48b5ce9d8fd76e0ac4d74e170bdb1839ae8b1aaa23cce"
+    },
+    "cumulative_adapt_ledger": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-20260822T000000Z/adapt_handoff_ledger.json",
+      "sha256": "f9e54fdc20a9107b9fc581df16ea2a918dd467093a8bbbae9d368a9f9472f53c",
+      "validated_empty_prefix": true
+    },
+    "immediate_predecessor_handoff": null,
+    "adapt_goal_contract": {
+      "path": "/public/home/tangyu408/.codex/skills/adapt-workflows/references/adapt-goal-contract.md",
+      "sha256": "040137eef9c3f7a6e6e6581b29926e34297f757b3816bb1577a4de764e9a81de"
+    },
+    "project_skill_runtime_contract": {
+      "path": "/public/home/tangyu408/.codex/skills/adapt-workflows/references/project-skill-runtime-contract.md",
+      "sha256": "bc260e902a5a443a7e0e622a73eb0b665d69bbfffe3c3559e58e5c6d110ff197"
+    }
+  },
+  "target_binding": {
+    "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/pra2026-bh408-gqa-page784-k5120-batch8",
+    "expected_git_commit": "2b4b2119ae3cc2c4c626dc5690ef9593c1477f66",
+    "observed_git_commit": "2b4b2119ae3cc2c4c626dc5690ef9593c1477f66",
+    "branch": "repro-gqa-page784-k5120-batch8-final",
+    "clean": true,
+    "read_only_inspection": true,
+    "evidence_files": [
+      {
+        "path": "scripts/serve_cscc_dp2.sh",
+        "sha256": "233bb2ce6fee3654bc870e37e65b7ecf4de6874cb6c7fd1a6bd5687a40783699"
+      },
+      {
+        "path": "scripts/bench_cscc_multi_request.sh",
+        "sha256": "9b5e02116911729e901077866389e448c0e4a055e8bb901ed160dcdc7664a595"
+      },
+      {
+        "path": "docs/cscc/DP2_MULTI_REQUEST.md",
+        "sha256": "f83ebea84fd570908be0df58255eca371ad4c28c4dc9d70ec3db0401b1143569"
+      },
+      {
+        "path": "scripts/cscc_gfx936_env.sh",
+        "sha256": "58d483450c23e9c4fa87fb981b5e63cf4babf5e8d230fe93e400563596dfc18a"
+      }
+    ]
+  },
+  "project_skill": {
+    "name": "qwen-dcu-same-input-layer-wise-workflow",
+    "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/skills/qwen-dcu-same-input-layer-wise-workflow/SKILL.md",
+    "sha256": "07629a16022403d9bbef65ecf00466f731f0473c6dde9deb6f76d7b3af64f245"
+  },
+  "profile_coverage": {
+    "workload_mode": "batch8_concurrent_requests",
+    "request_count": 8,
+    "max_concurrency": 8,
+    "physical_devices": [
+      0,
+      1
+    ],
+    "dp_ranks": [
+      0,
+      1
+    ],
+    "rank_to_physical_device": {
+      "0": 0,
+      "1": 1
+    },
+    "world_size": 2,
+    "tensor_parallel_size": 1,
+    "pipeline_parallel_size": 1,
+    "data_parallel_size": 2,
+    "data_parallel_backend": "mp",
+    "required_skill_literals_missing": [],
+    "forbidden_skill_literals_present": []
+  },
+  "checks": {
+    "skill_exists_nonempty": true,
+    "frontmatter_name_valid": true,
+    "skill_structure_valid": true,
+    "content_migration_valid": true,
+    "source_hashes_valid": true,
+    "plan_goal_binding_valid": true,
+    "ledger_valid": true,
+    "predecessor_condition_valid": true,
+    "target_commit_valid": true,
+    "target_clean": true,
+    "trace_profile_hash_valid": true,
+    "complete_workload_present": true,
+    "complete_topology_present": true,
+    "rank_mapping_present": true,
+    "per_rank_per_device_coverage_gate_present": true,
+    "serial_runtime_contract_valid": true,
+    "advance_gate_present": true,
+    "required_profile_literals_present": true,
+    "forbidden_profile_literals_absent": true,
+    "workflow_only_constraints_packaged": true,
+    "adapt_execution_boundary_present": true
+  },
+  "all_checks_passed": true
+}

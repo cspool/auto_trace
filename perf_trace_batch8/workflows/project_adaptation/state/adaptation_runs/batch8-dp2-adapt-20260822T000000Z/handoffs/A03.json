@@ -1,0 +1,318 @@
+{
+  "schema_version": 1,
+  "adapt_run_id": "batch8-dp2-adapt-20260822T000000Z",
+  "adapt_goal": "A03",
+  "status": "complete",
+  "mode": "reference_migration",
+  "workflow_execution_performed": false,
+  "project_skill_execution_performed": false,
+  "inputs": {
+    "trace_profile": {
+      "profile_id": "batch8-dual-dcu-dp2",
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/configs/trace_targets/batch8_dual_dcu_dp2.json",
+      "sha256": "3b4c952063f48ae662b48b5ce9d8fd76e0ac4d74e170bdb1839ae8b1aaa23cce"
+    },
+    "workflow_files": [
+      {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/02_representative_fx_process_wise_trace.md",
+        "sha256": "88128f53d679b1e161a063b3659e3eeb2aba0d7eacbdf2ffad7e15726c8366a3"
+      }
+    ],
+    "reference_skills": [
+      {
+        "requested_name": "visipruner-process-performance-breakdown",
+        "resolved_name": "visipruner-process-performance-breakdown",
+        "path": "/root/.codex/skills/visipruner-process-performance-breakdown/SKILL.md",
+        "sha256": "4563e3358945612f4d454e91a0a4116e6b8533d93abe2dadce35119c7bc0f44a",
+        "resolution": "exact"
+      }
+    ],
+    "previous_adapt_handoff": {
+      "adapt_goal": "A02",
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-20260822T000000Z/handoffs/A02.json",
+      "sha256": "ba981776a989e6c8cd2f1de0ca5d18690b36bcdccbea88ab82351e51b7b70ff3",
+      "status": "complete"
+    },
+    "cumulative_adapt_ledger": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-20260822T000000Z/adapt_handoff_ledger.json",
+      "sha256": "5e0df4a39827df7fa78437b415ba18968d572839915268d9ed100d6af60cff65",
+      "validated_prefix": [
+        "A01",
+        "A02"
+      ]
+    },
+    "adapt_goal_document": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/goals/A03.md",
+      "sha256": "72f115f638ce4e012b978c673985ed85d300b19f39a02e32e3875b415dc77388"
+    },
+    "plan": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/manifests/adapt_goals.json",
+      "sha256": "bc58cc41846454acc4f6627fdd97a1cb922434e9f479e64aab102a3c8a2152e2"
+    }
+  },
+  "target_binding": {
+    "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/pra2026-bh408-gqa-page784-k5120-batch8",
+    "git_commit": "2b4b2119ae3cc2c4c626dc5690ef9593c1477f66",
+    "git_branch": "repro-gqa-page784-k5120-batch8-final",
+    "git_clean": true,
+    "inspection_only": true,
+    "project": "Qwen3.5-27B on the pinned vLLM ROCm/DCU checkout",
+    "runtime": "vLLM BF16 service with native hipprof process attribution on the complete dual-DCU DP2 topology",
+    "target_evidence": [
+      {
+        "role": "qwen35_model_and_linear_attention",
+        "path": "vllm/model_executor/models/qwen3_5.py",
+        "sha256": "f3c0479dbc37a8794c4d6b1c4c01906ae341b3276ed43e588c17d92b1ddb94d6"
+      },
+      {
+        "role": "decoder_and_full_attention",
+        "path": "vllm/model_executor/models/qwen3_next.py",
+        "sha256": "5a14b14a40fcf6382f9a20be4ca0f850b2b19b2840a3c57488821f0952d96053"
+      },
+      {
+        "role": "model_execution_boundary",
+        "path": "vllm/v1/worker/gpu_model_runner.py",
+        "sha256": "d63424d3cbe81bfaa2c0967a5c81b8c980c2d76bc7eb3b2f8fe2a079af825bce"
+      },
+      {
+        "role": "compatibility_marker_hooks",
+        "path": "vllm/utils/nvtx_pytorch_hooks.py",
+        "sha256": "e9711444f33242ce1864d6a32d051bbf0ba0b37b5f17965de6e5dbba0c0c75ff"
+      },
+      {
+        "role": "compiled_module_marker_wrapper",
+        "path": "vllm/compilation/wrapper.py",
+        "sha256": "b4dca93456e945ce8231e9a954792c8f687d5d48b427ed38bfb96011015d4090"
+      },
+      {
+        "role": "service_launcher",
+        "path": "scripts/serve_cscc_dp2.sh",
+        "sha256": "233bb2ce6fee3654bc870e37e65b7ecf4de6874cb6c7fd1a6bd5687a40783699"
+      },
+      {
+        "role": "benchmark_launcher",
+        "path": "scripts/bench_cscc_multi_request.sh",
+        "sha256": "9b5e02116911729e901077866389e448c0e4a055e8bb901ed160dcdc7664a595"
+      },
+      {
+        "role": "accelerator_environment",
+        "path": "scripts/cscc_gfx936_env.sh",
+        "sha256": "58d483450c23e9c4fa87fb981b5e63cf4babf5e8d230fe93e400563596dfc18a"
+      },
+      {
+        "role": "dp2_design_contract",
+        "path": "docs/cscc/DP2_MULTI_REQUEST.md",
+        "sha256": "f83ebea84fd570908be0df58255eca371ad4c28c4dc9d70ec3db0401b1143569"
+      }
+    ]
+  },
+  "project_skill": {
+    "name": "qwen-dcu-process-performance-breakdown",
+    "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/skills/qwen-dcu-process-performance-breakdown/SKILL.md",
+    "sha256": "3c5aebe72a461d92e9ea49e4cd1e7f0b34114854fd068848a97a34106a6d75cf"
+  },
+  "text_migrations": [
+    {
+      "source": "the VisiPrune representative eager project and generic per-variant process reports",
+      "destination": "the immutable Qwen3.5-27B vLLM checkout at commit 2b4b2119ae3cc2c4c626dc5690ef9593c1477f66 and the R03 Qwen DCU direct process report stage",
+      "reason": "Bind the consumer to the only plan-authorized project, model, source state and runtime Goal."
+    },
+    {
+      "source": "single-request 32-token VisiPrune SAME_INPUT examples and one selected accelerator",
+      "destination": "eight ordered 16-32K requests at concurrency eight, infinite rate, 1024 output tokens, two excluded warmups, temperature zero and ignored EOS on the complete dual-DCU DP2 topology",
+      "reason": "Apply the authoritative batch8-dual-dcu-dp2 trace profile instead of inheriting source defaults."
+    },
+    {
+      "source": "implicit single-process device identity",
+      "destination": "world size two with TP1, PP1, DP2 mp, rank 0 on physical DCU 0 and rank 1 on physical DCU 1 preserved in every raw, table, report, validation and handoff artifact",
+      "reason": "Make both native workers independently auditable and forbid single-device promotion."
+    },
+    {
+      "source": "fixed /workspace/VisiPrune source, experiment, output, report and backup paths",
+      "destination": "read-only pinned target source plus scheduler-assigned runtime_artifact_root for R03 business outputs and runtime_handoff_output for the scheduler record",
+      "reason": "Remove obsolete paths, preserve predecessor immutability and enforce scheduler/business-output separation."
+    },
+    {
+      "source": "generic current FX files and optional historical inputs",
+      "destination": "the same-run regenerated R02 FX_PROCESS_NVTX_INSTRUMENTATION_HANDOFF.md, process inventory, exact HIPTX adapter sidecar, alias/wrapper manifests, equivalence validations and artifact manifest",
+      "reason": "Make the producer handoff a strict hash-validated prerequisite and forbid stale, copied or external evidence."
+    },
+    {
+      "source": "NVTX ranges, CUDA Runtime launches, CUPTI kernels and an Nsight process sqlite as operational terms",
+      "destination": "exact HIPTX/ROCTX CPU ranges, proven HIP runtime kernel-launch calls, native hipprof device rows and the current-attempt hipprof DB/PFTrace, with legacy names retained only as labeled schema aliases",
+      "reason": "Use the native ROCm/DCU evidence chain without erasing compatibility fields required by Workflow 02."
+    },
+    {
+      "source": "layer-total split/projection as the default process attribution method",
+      "destination": "strict exact-range launch ownership as the only R03 completion path, while exact/nearest, bucket, split and weighting projection logic remains isolated as optional evidence_kind=projected sensitivity output",
+      "reason": "Preserve reusable reference logic but honor Workflow 02's explicit rejection of projected estimates as direct process timing."
+    },
+    {
+      "source": "profile_visprune_single_request.py, run_nsys_layer_profile_single_request.sh, analyze_layer_nsys.py and a fixed report generator",
+      "destination": "hash-recorded artifact-local Qwen batch8 hipprof preflight, capture, raw-inventory, native analyzer, report-generator and validator helpers",
+      "reason": "Bind tools to the pinned launchers and native profiler while leaving the target checkout unchanged."
+    },
+    {
+      "source": "a generic profiler capability probe from the scheduler shell",
+      "destination": "source scripts/cscc_gfx936_env.sh, prepend /opt/dtk/dcc/lib, classify libLLVM-17git.so failure as an environment defect and match pftrace case-insensitively with separate flag/format diagnostics",
+      "reason": "Package the batch8 fixed-tool preflight and prevent false unavailability or unnecessary capture."
+    },
+    {
+      "source": "a raw trace directory assumed to contain only two files",
+      "destination": "exactly one required DB and one required PFTrace plus explicitly allowed, hashed hipkernel/hiptrace auxiliaries and rejection of unknown raw files",
+      "reason": "Match the fixed hipprof export surface and make post-capture sealing auditable."
+    },
+    {
+      "source": "recapture after any report or inventory failure",
+      "destination": "byte-preserving offline repair after sizes/hashes and two-device release are recorded; only a proven capture failure can authorize a new full-DP2 attempt",
+      "reason": "Prevent costly or irreproducible reruns for post-capture tooling defects."
+    },
+    {
+      "source": "old process report names, comma-joined matched_kernel_families and summary-row GPU order",
+      "destination": "Qwen direct reports and native tables with one matched_kernel_family per row, family-specific launch-owned time, context-only process envelopes and per-parent order from first native kernel timestamps",
+      "reason": "Apply the Workflow 02 report schema and evidence semantics."
+    },
+    {
+      "source": "fixed VisiPrune counts for 35 FX events and 105/371 report rows",
+      "destination": "expected process, range and row counts derived from the current hash-validated R02 inventory and exact-name multiplicities",
+      "reason": "Avoid carrying project-specific historical cardinalities into the Qwen workload."
+    },
+    {
+      "source": "optional jq, rg and sqlite3 CLI checks",
+      "destination": "Python standard-library formal ledger, JSON/schema, database, inventory, correlation, conservation, report and hash validation with interactive tools optional only",
+      "reason": "Make missing shell utilities non-fatal and prevent them from triggering device reruns."
+    },
+    {
+      "source": "a standalone reporting capability without serial scheduler gates",
+      "destination": "R03 on workflow01-10-fresh-e2e consuming exact same-run R01 and R02 handoffs plus the immutable two-entry ledger, writing separate business/scheduler outputs and advancing only after complete validation",
+      "reason": "Bind the migrated skill to the required serial runtime lineage and handoff gate."
+    }
+  ],
+  "uncovered_constraints_packaged": [
+    "R03 validates a same-run cumulative runtime ledger containing exactly R01,R02 plus both handoff bytes and cross-checks the R02-recorded R01 hash before any runtime work.",
+    "The regenerated R02 business handoff must have all exact Workflow 02 headings, current target/profile/selection hashes, both real Qwen layer families, shallow/deep FX evidence, exact process inventory, alias-safe wrappers, equivalence, nesting, cleanup and a clean target.",
+    "The current R02 sidecar defines the ordered exact HIPTX adapter-name multiset and multiplicities; broad prefix matching and context markers such as qwen_dcu.generate_total cannot enter the measured set.",
+    "FX setitem and dynamic-view Proxy semantics, signature-aware input shape validation, declared layer occurrence counts and failed-attempt isolation are predecessor acceptance gates rather than work R03 may recreate or weaken.",
+    "Profiler preflight sources the pinned target environment, prepends the matching DCC library, distinguishes missing flags from formats and matches pftrace without case sensitivity.",
+    "A bare hipprof libLLVM-17git.so failure proves only that the environment was not loaded; repair and rerun no-measurement preflight without capturing the model.",
+    "Every accepted R03 capture preserves eight ordered 16-32K requests, concurrency eight, infinite request rate, 1024 outputs, two excluded warmups, deterministic sampling, ignored EOS, physical DCUs 0 and 1 and DP ranks 0 and 1 under TP1/PP1/DP2 mp.",
+    "The raw inventory requires one DB and one PFTrace, explicitly allows and hashes fixed hipkernel/hiptrace auxiliaries, rejects unknown files and never assumes the directory has only two files.",
+    "After a successful request, inventory, analyzer, classifier, correlation or report defects use unchanged raw bytes after both devices are released and cannot trigger recapture.",
+    "Strict attribution is exact HIPTX CPU range to proven HIP kernel-launch API whose start lies inside the range to a native device row with the same runtime correlation ID; time overlap, kernel name alone and layer projection are insufficient.",
+    "Nested ownership resolves to one deepest declared measured owner, fragments aggregate by aggregation_key, non-ancestor overlaps block strict attribution and one native kernel instance cannot have multiple exclusive owners.",
+    "GPU order and no-kernel fallback use first launch-owned device start, then first HIP runtime call start, then HIPTX start, exposed through gpu_order_basis.",
+    "Direct Markdown tables split matched_kernel_family into individual rows, keep family costs exclusive, label process envelope values as context and derive all timing/order tables from the same native database.",
+    "Reference exact/nearest matching, source buckets, family-aware/component-total splitting, semantic-cost/node-count weighting and projection conservation remain available only below a separate exploratory evidence_kind=projected tree.",
+    "Historical single-card timings, traces, mappings, handoffs and reports are forbidden; workload_profile contributes only taxonomy, vocabulary, schemas and reconstruction method.",
+    "Formal runtime validation has Python standard-library implementations; missing jq, rg or sqlite3 CLI is not failure and never authorizes a model rerun.",
+    "Failed R03 attempts are immutable and isolated; business outputs remain below runtime_artifact_root and the single scheduler handoff is written only to runtime_handoff_output after every gate passes."
+  ],
+  "runtime_contract": {
+    "branch": "workflow01-10-fresh-e2e",
+    "runtime_goal": "R03",
+    "runtime_predecessors": [
+      "R01",
+      "R02"
+    ],
+    "required_handoff_fields": [
+      "status",
+      "execution_status",
+      "evidence_status",
+      "coverage_target_met",
+      "runtime_branch",
+      "runtime_goal",
+      "runtime_run_id",
+      "trace_profile_sha256",
+      "cumulative_runtime_ledger_sha256",
+      "r01_handoff_sha256",
+      "r02_handoff_sha256",
+      "r02_business_handoff_sha256",
+      "r02_adapter_sidecar_sha256",
+      "raw_inventory_sha256",
+      "process_attribution_sha256",
+      "process_gpu_timeline_sha256",
+      "process_kernel_launch_order_sha256",
+      "artifact_manifest_sha256"
+    ],
+    "runtime_artifact_root": "scheduler-assigned",
+    "runtime_handoff_output": "scheduler-assigned",
+    "advance_only_after": "complete"
+  },
+  "profile_binding": {
+    "workload": {
+      "mode": "batch8_concurrent_requests",
+      "dataset_path": "/home/testdata/16-32K_throughput.jsonl",
+      "request_count": 8,
+      "max_concurrency": 8,
+      "request_rate": "inf",
+      "output_tokens_per_request": 1024,
+      "warmup_requests": 2,
+      "temperature": 0,
+      "ignore_eos": true
+    },
+    "topology": {
+      "accelerator": "ROCm/DCU/HIP gfx936",
+      "physical_devices": [
+        0,
+        1
+      ],
+      "hip_visible_devices": "0,1",
+      "cuda_visible_devices": "0,1",
+      "world_size": 2,
+      "tensor_parallel_size": 1,
+      "pipeline_parallel_size": 1,
+      "data_parallel_size": 2,
+      "data_parallel_backend": "mp",
+      "rank_to_physical_device": {
+        "0": 0,
+        "1": 1
+      }
+    },
+    "coverage_gate": {
+      "required_physical_devices": [
+        0,
+        1
+      ],
+      "required_dp_ranks": [
+        0,
+        1
+      ],
+      "required_measured_request_count": 8,
+      "require_per_rank_and_per_device_artifacts": true,
+      "forbid_single_device_promotion": true
+    }
+  },
+  "adapt_artifacts": [
+    {
+      "kind": "migration_validation",
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-20260822T000000Z/artifacts/A03/migration_validation.json",
+      "sha256": "c9ed42d5bd33d1907075547ec3023ffd1035828b0cb82423be6811aeadcd3849"
+    }
+  ],
+  "validation": {
+    "skill_structure_valid": true,
+    "serial_runtime_contract_valid": true,
+    "source_hashes_valid": true,
+    "content_migration_valid": true,
+    "trace_profile_hash_valid": true,
+    "complete_workload_and_topology_valid": true,
+    "required_profile_literals_valid": true,
+    "forbidden_profile_literals_absent": true,
+    "target_binding_valid": true,
+    "target_unmodified_and_clean": true,
+    "adapt_ledger_valid": true,
+    "predecessor_condition_valid": true,
+    "reference_method_preserved": true,
+    "workflow_uncovered_constraints_packaged": true,
+    "r02_business_handoff_gate_valid": true,
+    "hipprof_environment_and_preflight_contract_valid": true,
+    "raw_inventory_and_no_recapture_contract_valid": true,
+    "strict_native_launch_ownership_contract_valid": true,
+    "direct_and_projected_evidence_separation_valid": true,
+    "process_report_and_gpu_order_schema_valid": true,
+    "python_stdlib_validation_contract_valid": true,
+    "full_dp2_coverage_gate_valid": true,
+    "adapt_output_scope_valid": true,
+    "migration_validation_artifact_valid": true
+  }
+}

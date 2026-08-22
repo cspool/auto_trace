@@ -1,0 +1,377 @@
+{
+  "schema_version": 1,
+  "adapt_run_id": "batch8-dp2-adapt-20260822T000000Z",
+  "adapt_goal": "A06",
+  "status": "complete",
+  "mode": "synthesize_uncovered",
+  "workflow_execution_performed": false,
+  "project_skill_execution_performed": false,
+  "completed_at": "2026-08-22T04:52:43.415856Z",
+  "inputs": {
+    "trace_profile": {
+      "profile_id": "batch8-dual-dcu-dp2",
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/configs/trace_targets/batch8_dual_dcu_dp2.json",
+      "sha256": "3b4c952063f48ae662b48b5ce9d8fd76e0ac4d74e170bdb1839ae8b1aaa23cce"
+    },
+    "workflow_files": [
+      {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/05_workflow04_guided_selective_process_trace_and_resource_gap_analysis.md",
+        "sha256": "d4ed4a1a265c79b0579c7f695f9c66585ef9588f14ee3aea072707097eb77d39"
+      }
+    ],
+    "reference_skills": [],
+    "reference_skill_resolution": {
+      "required": false,
+      "reason": "The pinned A06 plan declares synthesize_uncovered with no requested or resolved reference skill inputs.",
+      "used_as_text_only": true,
+      "invoked_as_capability": false
+    },
+    "previous_adapt_handoff": {
+      "adapt_goal": "A05",
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-20260822T000000Z/handoffs/A05.json",
+      "sha256": "0dd3fac8d2cdce3a8013fbb12678c32fca5566278080cde3103cac3f4889fb74",
+      "status": "complete"
+    },
+    "cumulative_adapt_ledger": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-20260822T000000Z/adapt_handoff_ledger.json",
+      "sha256": "f7bd06dd3ce8bf5eb36afaf791eb142c55a81b1ef7a1f94e9d543294f34360da",
+      "validated_prefix": [
+        "A01",
+        "A02",
+        "A03",
+        "A04",
+        "A05"
+      ]
+    },
+    "adapt_goal_document": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/goals/A06.md",
+      "sha256": "6a7d1374a6f12c8a1b277c102d3c98f80441ca99d8b907e3d896e4bf8f6bdc63"
+    },
+    "adapt_common_goal": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/goals/A00.md",
+      "sha256": "7be4381fd55f52016b6d0bc3710dd1da03ed3df82f9e44415d51ec6eb16dc217"
+    },
+    "plan": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/manifests/adapt_goals.json",
+      "sha256": "bc58cc41846454acc4f6627fdd97a1cb922434e9f479e64aab102a3c8a2152e2"
+    },
+    "adapt_skill": {
+      "name": "adapt-workflows",
+      "path": "/public/home/tangyu408/.codex/skills/adapt-workflows/SKILL.md",
+      "sha256": "0f0bcb1ccce7a281915fc39455ecfa1da9bcd0878cb139209cb83829a9e59aaf"
+    },
+    "adapt_contracts": [
+      {
+        "path": "/public/home/tangyu408/.codex/skills/adapt-workflows/references/adapt-goal-contract.md",
+        "sha256": "040137eef9c3f7a6e6e6581b29926e34297f757b3816bb1577a4de764e9a81de"
+      },
+      {
+        "path": "/public/home/tangyu408/.codex/skills/adapt-workflows/references/project-skill-runtime-contract.md",
+        "sha256": "bc260e902a5a443a7e0e622a73eb0b665d69bbfffe3c3559e58e5c6d110ff197"
+      }
+    ]
+  },
+  "target_binding": {
+    "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/pra2026-bh408-gqa-page784-k5120-batch8",
+    "git_commit": "2b4b2119ae3cc2c4c626dc5690ef9593c1477f66",
+    "git_branch": "repro-gqa-page784-k5120-batch8-final",
+    "git_clean": true,
+    "inspection_only": true,
+    "target_modified": false,
+    "project": "Qwen3.5-27B on the pinned vLLM BF16 ROCm/DCU/HIP gfx936 checkout",
+    "runtime": "R06 CPU-only fresh-lineage validation, full target enumeration, offline capability probing, and bounded R08 hardware-family planning",
+    "target_evidence": [
+      {
+        "role": "qwen35_model_and_linear_attention",
+        "path": "vllm/model_executor/models/qwen3_5.py",
+        "sha256": "f3c0479dbc37a8794c4d6b1c4c01906ae341b3276ed43e588c17d92b1ddb94d6"
+      },
+      {
+        "role": "decoder_and_full_attention",
+        "path": "vllm/model_executor/models/qwen3_next.py",
+        "sha256": "5a14b14a40fcf6382f9a20be4ca0f850b2b19b2840a3c57488821f0952d96053"
+      },
+      {
+        "role": "model_execution_boundary",
+        "path": "vllm/v1/worker/gpu_model_runner.py",
+        "sha256": "d63424d3cbe81bfaa2c0967a5c81b8c980c2d76bc7eb3b2f8fe2a079af825bce"
+      },
+      {
+        "role": "compatibility_marker_hooks",
+        "path": "vllm/utils/nvtx_pytorch_hooks.py",
+        "sha256": "e9711444f33242ce1864d6a32d051bbf0ba0b37b5f17965de6e5dbba0c0c75ff"
+      },
+      {
+        "role": "compiled_module_marker_wrapper",
+        "path": "vllm/compilation/wrapper.py",
+        "sha256": "b4dca93456e945ce8231e9a954792c8f687d5d48b427ed38bfb96011015d4090"
+      },
+      {
+        "role": "service_launcher",
+        "path": "scripts/serve_cscc_dp2.sh",
+        "sha256": "233bb2ce6fee3654bc870e37e65b7ecf4de6874cb6c7fd1a6bd5687a40783699"
+      },
+      {
+        "role": "benchmark_launcher",
+        "path": "scripts/bench_cscc_multi_request.sh",
+        "sha256": "9b5e02116911729e901077866389e448c0e4a055e8bb901ed160dcdc7664a595"
+      },
+      {
+        "role": "accelerator_environment",
+        "path": "scripts/cscc_gfx936_env.sh",
+        "sha256": "58d483450c23e9c4fa87fb981b5e63cf4babf5e8d230fe93e400563596dfc18a"
+      },
+      {
+        "role": "dp2_design_contract",
+        "path": "docs/cscc/DP2_MULTI_REQUEST.md",
+        "sha256": "f83ebea84fd570908be0df58255eca371ad4c28c4dc9d70ec3db0401b1143569"
+      }
+    ]
+  },
+  "project_skill": {
+    "name": "qwen-dcu-workflow05-evidence-planning",
+    "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/skills/qwen-dcu-workflow05-evidence-planning/SKILL.md",
+    "sha256": "50ecf049df469a1e135adfd88d3ae53d8e18f788ff21f5aa473e7bfe43dfe0b0"
+  },
+  "text_migrations": [
+    {
+      "source": "a generic fresh Workflow 05 runtime stage with placeholder project identity",
+      "destination": "runtime Goal R06 for Qwen3.5-27B on the immutable vLLM checkout at commit 2b4b2119ae3cc2c4c626dc5690ef9593c1477f66",
+      "reason": "Bind project, model, branch, runtime stage, and source identity to the plan-authorized target."
+    },
+    {
+      "source": "placeholder execution topology inferred from serial workflow order",
+      "destination": "the hash-pinned batch8-dual-dcu-dp2 profile with physical devices 0 and 1, ranks 0 and 1, rank mapping 0-to-0 and 1-to-1, world size two, TP1, PP1, and DP2 mp",
+      "reason": "Serial stages constrain order only and must preserve the complete dual-card topology."
+    },
+    {
+      "source": "a generic or single-request target-planning description",
+      "destination": "eight ordered 16-32K measured requests at concurrency eight, infinite request rate, 1024 output tokens each, two excluded warmups, deterministic decoding, and ignored EOS",
+      "reason": "Bind R06 plans and coverage to the complete authoritative workload."
+    },
+    {
+      "source": "ambient, historical, backup, or externally supplied R01-R05 evidence",
+      "destination": "the exact same-run R01-R05 cumulative ledger prefix and direct handoffs with every transitive business hash validated",
+      "reason": "Continue one fresh R01-R10 lineage and prohibit external runtime evidence."
+    },
+    {
+      "source": "implicit source provenance for the future process trace",
+      "destination": "fresh_run_lineage_manifest.json sealing run, lineage, request, target, profile, handoff, artifact, rank, and physical-device hashes",
+      "reason": "Make lineage identity and all future R07-R10 source evidence explicit."
+    },
+    {
+      "source": "guided Top-N or capacity-first process selection",
+      "destination": "complete parent and fragment enumeration, exact schema deduplication, unresolved/no-kernel preservation, and independent counts before any capacity gate",
+      "reason": "Workflow 05 requires full R07 target coverage rather than a sampled or truncated target set."
+    },
+    {
+      "source": "an old static maximum of 25000 selected processes",
+      "destination": "a fail-closed maximum_selected_process_count comparison against the exact universe, with observed 9472 parent plus 15984 fragment and 25456 unique regression counts and an audited nondecreasing 32768 revision",
+      "reason": "Preserve the batch8 capacity failure lesson without silently shrinking the universe."
+    },
+    {
+      "source": "parameter recovery tied to the latest resume-history item or direct state editing",
+      "destination": "stable revision-ID lookup bound to failure and state/ledger snapshot hashes, scheduler-owned R06-only resume-artifact-root recovery, and no R01-R05 rerun",
+      "reason": "Keep recovery auditable across later continuation records and protect predecessor evidence."
+    },
+    {
+      "source": "generic process marker names or a broad prefix match",
+      "destination": "byte-exact R02 HIPTX target transport with forward_id retained only as a sidecar join field and an ordered multiset/hash audit",
+      "reason": "Prevent zero-overlap R07 captures caused by renamed visible markers."
+    },
+    {
+      "source": "unprotected dotted-module discovery and package-presence assumptions",
+      "destination": "safe parent-first or ModuleNotFoundError-aware Perfetto probing, plus validated no-network Plotly and lossless local-viewer fallback states",
+      "reason": "Treat optional dependency absence as an explicit capability state rather than a false R06 failure."
+    },
+    {
+      "source": "one opaque targeted PMC list",
+      "destination": "a complete hardware-family inventory and deterministic bounded R08 plan with visible exclusions, exact kernel literals, deferred collector tokens, DP2 applicability, and independent budget/coverage audit",
+      "reason": "Bound later replay cost without hiding unselected families or weakening full R07 target coverage."
+    },
+    {
+      "source": "CUDA/Nsight operational vocabulary and replay duration usable as latency",
+      "destination": "ROCm/DCU/HIP, HIPTX/ROCTX, hipprof/rocprofv2 future-stage vocabulary, replay_projected hardware properties, and R07 non-replay timing as the sole future latency axis",
+      "reason": "Bind tools and evidence classes to the target stack while retaining compatibility terms only when labeled."
+    },
+    {
+      "source": "fixed or ambient input, output, tool, and report paths",
+      "destination": "handoff-resolved R01-R05 inputs, artifact-local deterministic R06 tools and plans below runtime_artifact_root, plus one separate runtime_handoff_output",
+      "reason": "Keep business artifacts scoped to R06 and scheduler state separate."
+    },
+    {
+      "source": "a single completion flag used as proof of evidence sufficiency",
+      "destination": "separate status, execution_status, evidence_status, coverage_target_met, next_authorization_required, and fresh_e2e_evidence fields",
+      "reason": "Prevent a bounded offline stage completion from silently authorizing R07 when evidence or coverage is incomplete."
+    },
+    {
+      "source": "heartbeat-only liveness and broad process-group interruption",
+      "destination": "content/Goal/subprocess/artifact progress checks, two full stagnant windows for known large CPU file generation, and cmdline-verified scheduler-PID-only interruption",
+      "reason": "Avoid false stall classification and collateral control-plane termination."
+    }
+  ],
+  "uncovered_constraints_packaged": [
+    "R06 is CPU-only: no service, HIP-initializing import, model, DCU/GPU query or use, profiler, trace, PMC, report generator, predecessor skill, or successor skill is run.",
+    "The outer scheduler alone creates the formal R06 Goal; the project skill never creates a nested Goal.",
+    "Admission requires exactly same-run R01,R02,R03,R04,R05 handoffs in order, one branch/profile/run/lineage, all direct and transitive hashes, complete evidence, and no external runtime ledger.",
+    "The fixed dataset and row-zero SHA-256 values are consumed from the sealed selected-request contract; R06 does not search for or synthesize an input.",
+    "All eight requests, DP ranks 0 and 1, physical devices 0 and 1, and rank mapping 0-to-0 and 1-to-1 remain explicit in plans, validation, manifests, and handoff.",
+    "R01 owns observed denominators, R02 owns process/fragment identities and markers, R03 owns non-replay launch timing/order, R04 owns diagnostic replay attributes only, and R05 owns full-layer attribution/coverage.",
+    "All R02 parent and fragment ranges are enumerated and deduplicated before capacity is checked; unresolved, ambiguous, metadata, aliases, and no-kernel states remain visible.",
+    "The 9472 parent, 15984 fragment, and 25456 unique counts are regression expectations, never substitutes for current same-run enumeration.",
+    "Capacity insufficiency writes only an immutable failure diagnostic, writes no R06 handoff, does not start R07, and permits only audited nondecreasing revision with immutable state/ledger snapshots.",
+    "Parameter recovery is found by stable revision ID and diagnostic/before/after/snapshot hashes rather than resume_history[-1], and uses a new formal R06 Goal plus the canonical resume artifact root without rerunning R01-R05.",
+    "Visible R07 marker bytes equal R02 transport bytes; forward_id is sidecar-only and every name multiset/hash round-trips independently.",
+    "Perfetto, Plotly, and local-viewer probes are isolated, CPU-only, no-network, and preserve available/degraded/unavailable status; missing dotted modules are safely handled.",
+    "The R07 target manifest is complete while the R08 hardware plan is bounded; the full family inventory and every selected or excluded family remain visible with evidence consequences.",
+    "Hardware plan rows preserve exact kernel literals and defer collector tokens and filter-effectiveness claims until fresh R08 capability evidence.",
+    "Every future R08 evidence capture retains the full DP2 mapping even when device/counter passes are serial, and all PMC properties remain replay_projected rather than observed latency.",
+    "Artifact-local standard-library tools are frozen and hashed; formal validation has no jq or rg dependency; helper revisions and failed attempts are immutable.",
+    "Business artifacts stay below runtime_artifact_root, and exactly one scheduler handoff stays at runtime_handoff_output outside the business manifest.",
+    "Execution completion and evidence sufficiency are separate; R07 advances only for complete evidence, full coverage, false next authorization, valid hashes, and a nonempty same-run lineage.",
+    "Known large CPU builder/auditor generation requires two consecutive fully stagnant five-minute checks before a scoped scheduler-PID interrupt is considered.",
+    "The skill and this Adapt handoff are migration products and do not constitute R06 or performance workflow execution."
+  ],
+  "runtime_contract": {
+    "branch": "workflow01-10-fresh-e2e",
+    "runtime_goal": "R06",
+    "runtime_predecessors": [
+      "R01",
+      "R02",
+      "R03",
+      "R04",
+      "R05"
+    ],
+    "required_handoff_fields": [
+      "status",
+      "execution_status",
+      "evidence_status",
+      "coverage_target_met",
+      "next_authorization_required",
+      "runtime_branch",
+      "runtime_goal",
+      "runtime_run_id",
+      "trace_profile_sha256",
+      "cumulative_runtime_ledger_sha256",
+      "r01_handoff_sha256",
+      "r02_handoff_sha256",
+      "r03_handoff_sha256",
+      "r04_handoff_sha256",
+      "r05_handoff_sha256",
+      "fresh_run_lineage_manifest_sha256",
+      "full_request_target_manifest_sha256",
+      "bounded_hardware_family_plan_sha256",
+      "offline_capability_manifest_sha256",
+      "target_universe_counts_sha256",
+      "independent_audit_sha256",
+      "artifact_manifest_sha256"
+    ],
+    "runtime_artifact_root": "scheduler-assigned",
+    "runtime_handoff_output": "scheduler-assigned",
+    "advance_only_after": "complete",
+    "advance_evidence_gate": {
+      "execution_status": "complete",
+      "evidence_status": "complete",
+      "coverage_target_met": true,
+      "next_authorization_required": false,
+      "fresh_e2e_evidence_status": "complete"
+    }
+  },
+  "profile_binding": {
+    "workload": {
+      "mode": "batch8_concurrent_requests",
+      "dataset_path": "/home/testdata/16-32K_throughput.jsonl",
+      "request_count": 8,
+      "max_concurrency": 8,
+      "request_rate": "inf",
+      "output_tokens_per_request": 1024,
+      "warmup_requests": 2,
+      "temperature": 0,
+      "ignore_eos": true
+    },
+    "topology": {
+      "accelerator": "ROCm/DCU/HIP gfx936",
+      "physical_devices": [
+        0,
+        1
+      ],
+      "hip_visible_devices": "0,1",
+      "cuda_visible_devices": "0,1",
+      "world_size": 2,
+      "tensor_parallel_size": 1,
+      "pipeline_parallel_size": 1,
+      "data_parallel_size": 2,
+      "data_parallel_backend": "mp",
+      "rank_to_physical_device": {
+        "0": 0,
+        "1": 1
+      }
+    },
+    "coverage_gate": {
+      "required_physical_devices": [
+        0,
+        1
+      ],
+      "required_dp_ranks": [
+        0,
+        1
+      ],
+      "required_measured_request_count": 8,
+      "require_per_rank_and_per_device_artifacts": true,
+      "forbid_single_device_promotion": true
+    }
+  },
+  "adapt_artifacts": [
+    {
+      "kind": "migration_validation",
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-20260822T000000Z/artifacts/A06/migration_validation.json",
+      "sha256": "363dca9f89590c3d4de0cf3c253a4c8a41030c68af857e1e964f710659413914"
+    }
+  ],
+  "execution_audit": {
+    "model_execution_performed": false,
+    "gpu_dcu_execution_performed": false,
+    "profiler_execution_performed": false,
+    "trace_collection_performed": false,
+    "pmc_collection_performed": false,
+    "report_generation_performed": false,
+    "generated_project_skill_invoked": false
+  },
+  "validation": {
+    "skill_structure_valid": true,
+    "serial_runtime_contract_valid": true,
+    "source_hashes_valid": true,
+    "content_migration_valid": true,
+    "workflow_fully_read": true,
+    "reference_skill_inputs_empty_valid": true,
+    "reference_skill_text_only_valid": true,
+    "synthesize_uncovered_scope_valid": true,
+    "trace_profile_hash_valid": true,
+    "complete_workload_and_topology_valid": true,
+    "required_profile_literals_valid": true,
+    "forbidden_profile_literals_absent": true,
+    "target_binding_valid": true,
+    "target_source_anchor_hashes_valid": true,
+    "target_unmodified_and_clean": true,
+    "adapt_ledger_valid": true,
+    "predecessor_condition_valid": true,
+    "fresh_lineage_contract_valid": true,
+    "same_run_r01_r05_prefix_contract_valid": true,
+    "full_target_before_capacity_contract_valid": true,
+    "capacity_revision_contract_valid": true,
+    "safe_optional_capability_probe_contract_valid": true,
+    "bounded_hardware_family_plan_contract_valid": true,
+    "marker_transport_contract_valid": true,
+    "observed_and_replay_evidence_boundary_valid": true,
+    "execution_evidence_coverage_state_separation_valid": true,
+    "formal_turn_liveness_contract_valid": true,
+    "scoped_interruption_and_resume_contract_valid": true,
+    "attempt_isolation_and_revision_contract_valid": true,
+    "full_dp2_coverage_gate_valid": true,
+    "business_output_and_handoff_separation_valid": true,
+    "adapt_output_scope_valid": true,
+    "migration_validation_artifact_valid": true,
+    "workflow_execution_absent": true,
+    "project_skill_execution_absent": true
+  }
+}

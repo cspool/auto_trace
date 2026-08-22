@@ -1,0 +1,199 @@
+{
+  "schema_version": 1,
+  "adapt_run_id": "batch8-dp2-adapt-20260822T000000Z",
+  "status": "complete",
+  "current_goal": null,
+  "seeded_closing_goal_current_skill_revisions_allowed": false,
+  "plan_snapshot_sha256": "bc58cc41846454acc4f6627fdd97a1cb922434e9f479e64aab102a3c8a2152e2",
+  "goals": {
+    "A01": {
+      "status": "complete",
+      "thread_id": "01a02776-908a-78e2-8d77-b945cdf114cf",
+      "artifact_root": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-20260822T000000Z/artifacts/A01",
+      "handoff_output": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-20260822T000000Z/handoffs/A01.json",
+      "formal_goal": {
+        "threadId": "01a02776-908a-78e2-8d77-b945cdf114cf",
+        "objective": "Complete migration-only Adapt Goal A01: create or update $qwen-dcu-same-input-layer-wise-workflow from the pinned workflow/reference text, write its validated Adapt handoff, and do not execute any runtime workflow.",
+        "status": "complete",
+        "tokenBudget": null,
+        "tokensUsed": 172191,
+        "timeUsedSeconds": 809,
+        "createdAt": 1787368477,
+        "updatedAt": 1787369286
+      },
+      "handoff_sha256": "a04b7ea4dcd342944cc8c3bd1f1f6eac4ba26a05c56c8b48165c32e7741d69e8"
+    },
+    "A02": {
+      "status": "complete",
+      "thread_id": "01a02783-2e18-7650-8488-d21c3753f485",
+      "artifact_root": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-20260822T000000Z/artifacts/A02",
+      "handoff_output": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-20260822T000000Z/handoffs/A02.json",
+      "formal_goal": {
+        "threadId": "01a02783-2e18-7650-8488-d21c3753f485",
+        "objective": "Complete migration-only Adapt Goal A02: create or update $qwen-dcu-fx-process-nvtx-instrumentation from the pinned workflow/reference text, write its validated Adapt handoff, and do not execute any runtime workflow.",
+        "status": "complete",
+        "tokenBudget": null,
+        "tokensUsed": 235260,
+        "timeUsedSeconds": 1003,
+        "createdAt": 1787369303,
+        "updatedAt": 1787370307
+      },
+      "handoff_sha256": "ba981776a989e6c8cd2f1de0ca5d18690b36bcdccbea88ab82351e51b7b70ff3"
+    },
+    "A03": {
+      "status": "complete",
+      "thread_id": "01a02792-d771-7cf1-b28e-8b090a7c775e",
+      "artifact_root": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-20260822T000000Z/artifacts/A03",
+      "handoff_output": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-20260822T000000Z/handoffs/A03.json",
+      "formal_goal": {
+        "threadId": "01a02792-d771-7cf1-b28e-8b090a7c775e",
+        "objective": "Complete migration-only Adapt Goal A03: create or update $qwen-dcu-process-performance-breakdown from the pinned workflow/reference text, write its validated Adapt handoff, and do not execute any runtime workflow.",
+        "status": "complete",
+        "tokenBudget": null,
+        "tokensUsed": 193311,
+        "timeUsedSeconds": 956,
+        "createdAt": 1787370330,
+        "updatedAt": 1787371286
+      },
+      "handoff_sha256": "f9a275445c7b6f7320292b4e3180e1c89a2f19a7634e5f6dc9c1a2066c751704"
+    },
+    "A04": {
+      "status": "complete",
+      "thread_id": "01a027a1-b7b7-7a73-97fd-5a8557dc18b6",
+      "artifact_root": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-20260822T000000Z/artifacts/A04",
+      "handoff_output": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-20260822T000000Z/handoffs/A04.json",
+      "formal_goal": {
+        "threadId": "01a027a1-b7b7-7a73-97fd-5a8557dc18b6",
+        "objective": "Complete migration-only Adapt Goal A04: create or update $qwen-dcu-process-gpu-hardware-trace from the pinned workflow/reference text, write its validated Adapt handoff, and do not execute any runtime workflow.",
+        "status": "complete",
+        "tokenBudget": null,
+        "tokensUsed": 217960,
+        "timeUsedSeconds": 1028,
+        "createdAt": 1787371305,
+        "updatedAt": 1787372333
+      },
+      "handoff_sha256": "97758c74520d72adf144211cbc037308fa687c016bb7d321f345c73b614fd69e"
+    },
+    "A05": {
+      "status": "complete",
+      "thread_id": "01a027b1-b354-78a3-af0a-e15ed08fa02e",
+      "artifact_root": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-20260822T000000Z/artifacts/A05",
+      "handoff_output": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-20260822T000000Z/handoffs/A05.json",
+      "formal_goal": {
+        "threadId": "01a027b1-b354-78a3-af0a-e15ed08fa02e",
+        "objective": "Complete migration-only Adapt Goal A05: create or update $qwen-dcu-segmented-process-attribution from the pinned workflow/reference text, write its validated Adapt handoff, and do not execute any runtime workflow.",
+        "status": "complete",
+        "tokenBudget": null,
+        "tokensUsed": 243720,
+        "timeUsedSeconds": 1020,
+        "createdAt": 1787372352,
+        "updatedAt": 1787373373
+      },
+      "handoff_sha256": "0dd3fac8d2cdce3a8013fbb12678c32fca5566278080cde3103cac3f4889fb74"
+    },
+    "A06": {
+      "status": "complete",
+      "thread_id": "01a027c1-974e-73b3-bd31-4a8b0616e261",
+      "artifact_root": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-20260822T000000Z/artifacts/A06",
+      "handoff_output": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-20260822T000000Z/handoffs/A06.json",
+      "formal_goal": {
+        "threadId": "01a027c1-974e-73b3-bd31-4a8b0616e261",
+        "objective": "Complete migration-only Adapt Goal A06: create or update $qwen-dcu-workflow05-evidence-planning from the pinned workflow/reference text, write its validated Adapt handoff, and do not execute any runtime workflow.",
+        "status": "complete",
+        "tokenBudget": null,
+        "tokensUsed": 261408,
+        "timeUsedSeconds": 1173,
+        "createdAt": 1787373393,
+        "updatedAt": 1787374567
+      },
+      "handoff_sha256": "984475b54ec686978a9033d35b0563230001746ef3fc1b93139885a271c6a44a"
+    },
+    "A07": {
+      "status": "complete",
+      "thread_id": "01a027d3-d9c2-7491-9c6b-95e92631a0ed",
+      "artifact_root": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-20260822T000000Z/artifacts/A07",
+      "handoff_output": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-20260822T000000Z/handoffs/A07.json",
+      "formal_goal": {
+        "threadId": "01a027d3-d9c2-7491-9c6b-95e92631a0ed",
+        "objective": "Complete migration-only Adapt Goal A07: create or update $qwen-dcu-workflow05-full-request-process-trace from the pinned workflow/reference text, write its validated Adapt handoff, and do not execute any runtime workflow.",
+        "status": "complete",
+        "tokenBudget": null,
+        "tokensUsed": 214015,
+        "timeUsedSeconds": 1014,
+        "createdAt": 1787374590,
+        "updatedAt": 1787375605
+      },
+      "handoff_sha256": "8b2fcaba441b20a9727d6984902e89c4a16084e97ad89d2031e5a892065edb1e"
+    },
+    "A08": {
+      "status": "complete",
+      "thread_id": "01a027e3-9e95-7c61-9e7f-8fa4cdf780f2",
+      "artifact_root": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-20260822T000000Z/artifacts/A08",
+      "handoff_output": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-20260822T000000Z/handoffs/A08.json",
+      "formal_goal": {
+        "threadId": "01a027e3-9e95-7c61-9e7f-8fa4cdf780f2",
+        "objective": "Complete migration-only Adapt Goal A08: create or update $qwen-dcu-workflow05-targeted-hardware-gap-analysis from the pinned workflow/reference text, write its validated Adapt handoff, and do not execute any runtime workflow.",
+        "status": "complete",
+        "tokenBudget": null,
+        "tokensUsed": 195806,
+        "timeUsedSeconds": 1022,
+        "createdAt": 1787375624,
+        "updatedAt": 1787376646
+      },
+      "handoff_sha256": "a182a18a6e50b1c0b353229af1b8bb8e757b18b86408357c06b0dff1bb991b33"
+    },
+    "A09": {
+      "status": "complete",
+      "thread_id": "01a027f3-965e-72c0-a912-1471680edd2d",
+      "artifact_root": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-20260822T000000Z/artifacts/A09",
+      "handoff_output": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-20260822T000000Z/handoffs/A09.json",
+      "formal_goal": {
+        "threadId": "01a027f3-965e-72c0-a912-1471680edd2d",
+        "objective": "Complete migration-only Adapt Goal A09: create or update $qwen-dcu-workflow05-utilization-concurrency-analysis from the pinned workflow/reference text, write its validated Adapt handoff, and do not execute any runtime workflow.",
+        "status": "complete",
+        "tokenBudget": null,
+        "tokensUsed": 188878,
+        "timeUsedSeconds": 1170,
+        "createdAt": 1787376670,
+        "updatedAt": 1787377841
+      },
+      "handoff_sha256": "3f0da00944bbc7db3dbf2dd1682f6a92af08d4c2c6334b66d87bdc87d0268f41"
+    },
+    "A10": {
+      "status": "complete",
+      "thread_id": "01a02805-b9a1-7371-b2d8-cb509cfd8623",
+      "artifact_root": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-20260822T000000Z/artifacts/A10",
+      "handoff_output": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-20260822T000000Z/handoffs/A10.json",
+      "formal_goal": {
+        "threadId": "01a02805-b9a1-7371-b2d8-cb509cfd8623",
+        "objective": "Complete migration-only Adapt Goal A10: create or update $qwen-dcu-workflow05-trace-visualization-reporting from the pinned workflow/reference text, write its validated Adapt handoff, and do not execute any runtime workflow.",
+        "status": "complete",
+        "tokenBudget": null,
+        "tokensUsed": 259298,
+        "timeUsedSeconds": 1463,
+        "createdAt": 1787377859,
+        "updatedAt": 1787379323
+      },
+      "handoff_sha256": "ef814be74698392a8b4697b505fc9b1c77a36f80a4c7a0c9d6d586901eea547a"
+    },
+    "A11": {
+      "status": "complete",
+      "thread_id": "01a0281c-81ce-7913-aaa2-25889808b7ce",
+      "artifact_root": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-20260822T000000Z/artifacts/A11",
+      "handoff_output": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-20260822T000000Z/handoffs/A11.json",
+      "formal_goal": {
+        "threadId": "01a0281c-81ce-7913-aaa2-25889808b7ce",
+        "objective": "Complete closing migration-only Adapt Goal A11: synthesize the pinned project-local runtime scheduler bundle after validating the complete project-skill prefix, write its validated Adapt handoff, and run only the generated scheduler's no-execution dry run.",
+        "status": "complete",
+        "tokenBudget": null,
+        "tokensUsed": 295600,
+        "timeUsedSeconds": 1593,
+        "createdAt": 1787379352,
+        "updatedAt": 1787380946
+      },
+      "handoff_sha256": "8148dd6cce0046bf6dda598bce8ac3aa7dbda63fb0e6ea28f126dc4d399d6041"
+    }
+  },
+  "updated_at": "2026-08-22T06:42:52.515827Z",
+  "completed_at": "2026-08-22T06:42:52.515816Z"
+}

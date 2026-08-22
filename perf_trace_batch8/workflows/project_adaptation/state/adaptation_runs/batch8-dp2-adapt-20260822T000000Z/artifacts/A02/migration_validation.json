@@ -1,0 +1,209 @@
+{
+  "schema_version": 1,
+  "adapt_run_id": "batch8-dp2-adapt-20260822T000000Z",
+  "adapt_goal": "A02",
+  "status": "pass",
+  "validation_kind": "migration_only_static_validation",
+  "workflow_execution_performed": false,
+  "project_skill_execution_performed": false,
+  "inputs": {
+    "plan": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/manifests/adapt_goals.json",
+      "sha256": "bc58cc41846454acc4f6627fdd97a1cb922434e9f479e64aab102a3c8a2152e2"
+    },
+    "adapt_goal_document": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/goals/A02.md",
+      "sha256": "ececfb11e32159c48a9f3c140d79177c7ba8da3c54f1506d3c859a0a8bc32d6a"
+    },
+    "workflow": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/02_representative_fx_process_wise_trace.md",
+      "sha256": "88128f53d679b1e161a063b3659e3eeb2aba0d7eacbdf2ffad7e15726c8366a3"
+    },
+    "reference_skill_text": {
+      "requested_name": "visipruner-fx-process-nvtx-instrumentation",
+      "resolved_name": "trace-patch-target-discovery",
+      "resolution": "semantic_fallback",
+      "path": "/root/.codex/skills/trace-patch-target-discovery/SKILL.md",
+      "sha256": "ecef27420d4255d0206d7f298413d31526d19520b21833fb41d7331c275ae5d0"
+    },
+    "trace_profile": {
+      "profile_id": "batch8-dual-dcu-dp2",
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/configs/trace_targets/batch8_dual_dcu_dp2.json",
+      "sha256": "3b4c952063f48ae662b48b5ce9d8fd76e0ac4d74e170bdb1839ae8b1aaa23cce"
+    },
+    "cumulative_adapt_ledger": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-20260822T000000Z/adapt_handoff_ledger.json",
+      "sha256": "1be592e8a7aad2e81ac8b43a8b03e706f2fdb644848127b65c6ae94fd5a33c3c",
+      "validated_prefix": [
+        "A01"
+      ]
+    },
+    "immediate_predecessor_handoff": {
+      "adapt_goal": "A01",
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-20260822T000000Z/handoffs/A01.json",
+      "sha256": "a04b7ea4dcd342944cc8c3bd1f1f6eac4ba26a05c56c8b48165c32e7741d69e8",
+      "status": "complete"
+    },
+    "adapt_goal_contract": {
+      "path": "/public/home/tangyu408/.codex/skills/adapt-workflows/references/adapt-goal-contract.md",
+      "sha256": "040137eef9c3f7a6e6e6581b29926e34297f757b3816bb1577a4de764e9a81de"
+    },
+    "project_skill_runtime_contract": {
+      "path": "/public/home/tangyu408/.codex/skills/adapt-workflows/references/project-skill-runtime-contract.md",
+      "sha256": "bc260e902a5a443a7e0e622a73eb0b665d69bbfffe3c3559e58e5c6d110ff197"
+    }
+  },
+  "target_binding": {
+    "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/pra2026-bh408-gqa-page784-k5120-batch8",
+    "expected_git_commit": "2b4b2119ae3cc2c4c626dc5690ef9593c1477f66",
+    "observed_git_commit": "2b4b2119ae3cc2c4c626dc5690ef9593c1477f66",
+    "branch": "repro-gqa-page784-k5120-batch8-final",
+    "clean": true,
+    "read_only_inspection": true,
+    "evidence_files": [
+      {
+        "path": "vllm/model_executor/models/qwen3_5.py",
+        "sha256": "f3c0479dbc37a8794c4d6b1c4c01906ae341b3276ed43e588c17d92b1ddb94d6"
+      },
+      {
+        "path": "vllm/model_executor/models/qwen3_next.py",
+        "sha256": "5a14b14a40fcf6382f9a20be4ca0f850b2b19b2840a3c57488821f0952d96053"
+      },
+      {
+        "path": "vllm/v1/worker/gpu_model_runner.py",
+        "sha256": "d63424d3cbe81bfaa2c0967a5c81b8c980c2d76bc7eb3b2f8fe2a079af825bce"
+      },
+      {
+        "path": "vllm/utils/nvtx_pytorch_hooks.py",
+        "sha256": "e9711444f33242ce1864d6a32d051bbf0ba0b37b5f17965de6e5dbba0c0c75ff"
+      },
+      {
+        "path": "vllm/compilation/wrapper.py",
+        "sha256": "b4dca93456e945ce8231e9a954792c8f687d5d48b427ed38bfb96011015d4090"
+      },
+      {
+        "path": "scripts/serve_cscc_dp2.sh",
+        "sha256": "233bb2ce6fee3654bc870e37e65b7ecf4de6874cb6c7fd1a6bd5687a40783699"
+      },
+      {
+        "path": "scripts/bench_cscc_multi_request.sh",
+        "sha256": "9b5e02116911729e901077866389e448c0e4a055e8bb901ed160dcdc7664a595"
+      },
+      {
+        "path": "scripts/cscc_gfx936_env.sh",
+        "sha256": "58d483450c23e9c4fa87fb981b5e63cf4babf5e8d230fe93e400563596dfc18a"
+      },
+      {
+        "path": "docs/cscc/DP2_MULTI_REQUEST.md",
+        "sha256": "f83ebea84fd570908be0df58255eca371ad4c28c4dc9d70ec3db0401b1143569"
+      }
+    ]
+  },
+  "source_destination_inventory": {
+    "source": {
+      "project": "VisiPrune representative eager decoder-layer process trace",
+      "model_runtime": "generic local PyTorch model instrumentation",
+      "accelerator_and_markers": "one selected GPU with NVTX/CUDA compatibility terminology",
+      "paths": "fixed /workspace experiment, source-code, output and backup paths",
+      "tools": "project-specific profile shell, Nsight-oriented analyzer and report producer",
+      "artifacts": "FX process Markdown handoff plus Nsight report/database/table names",
+      "evidence": "generic wrapper preservation and later CUDA launch-ownership evidence"
+    },
+    "destination": {
+      "project": "the immutable Qwen3.5-27B vLLM checkout at commit 2b4b2119ae3cc2c4c626dc5690ef9593c1477f66",
+      "model_runtime": "GPUModelRunner._model_forward and Qwen3.5 linear/full decoder paths in the pinned BF16 runtime",
+      "accelerator_and_markers": "the complete ROCm/DCU/HIP gfx936 DP2 topology with HIPTX/ROCTX operational markers",
+      "paths": "read-only target source plus scheduler-assigned runtime_artifact_root and runtime_handoff_output",
+      "tools": "hash-recorded artifact-local FX, wrapper, HIPTX-sidecar and static-validation helpers",
+      "artifacts": "fresh shallow/deep FX, process/fragment inventory, exact-name sidecar, wrapper/equivalence evidence and compatibility-named business handoff",
+      "evidence": "R02 instrumentation/equivalence evidence only; profiling, performance attribution and launch order remain R03 responsibilities"
+    }
+  },
+  "semantic_fallback_delta": {
+    "fallback_method_preserved": [
+      "start from explicit process questions",
+      "choose the smallest semantic runtime boundaries",
+      "record joinable request/forward/layer/rank/device keys",
+      "record small state summaries rather than full tensors",
+      "validate deterministic output and event-count preservation",
+      "avoid broad patching and synchronization-heavy metadata"
+    ],
+    "workflow_specialization_added": [
+      "fresh shallow and deep FX evidence for both Qwen3.5 decoder layer families",
+      "source-preserving output-buffer setitem and dynamic shape Proxy semantics or audited leaf boundaries",
+      "signature-aware input_ids, inputs_embeds and validated positional-slot shape resolution",
+      "alias-safe wrappers deduplicated by module identity and semantic role while retaining all paths",
+      "exact HIPTX adapter name multiset and multiplicity sidecar",
+      "Workflow 02 process/fragment inventory, aggregation keys and compatibility-named business handoff",
+      "guard-off zero-event, output equivalence, count, nesting, cleanup, AST and clean-worktree gates",
+      "failed-attempt isolation and explicit separation from downstream profiling/performance attribution"
+    ]
+  },
+  "project_skill": {
+    "name": "qwen-dcu-fx-process-nvtx-instrumentation",
+    "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/skills/qwen-dcu-fx-process-nvtx-instrumentation/SKILL.md",
+    "sha256": "8434eaee5eceaa22c88d527c114f226f06b33862f27b7ae3e3abbd4145435463"
+  },
+  "profile_coverage": {
+    "workload_mode": "batch8_concurrent_requests",
+    "request_count": 8,
+    "max_concurrency": 8,
+    "physical_devices": [
+      0,
+      1
+    ],
+    "dp_ranks": [
+      0,
+      1
+    ],
+    "rank_to_physical_device": {
+      "0": 0,
+      "1": 1
+    },
+    "world_size": 2,
+    "tensor_parallel_size": 1,
+    "pipeline_parallel_size": 1,
+    "data_parallel_size": 2,
+    "data_parallel_backend": "mp",
+    "required_skill_literals_missing": [],
+    "forbidden_skill_literals_present": []
+  },
+  "output_scope": {
+    "project_skill_directory": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/skills/qwen-dcu-fx-process-nvtx-instrumentation",
+    "adapt_artifact_root": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-20260822T000000Z/artifacts/A02",
+    "adapt_handoff_output": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-20260822T000000Z/handoffs/A02.json",
+    "predecessor_skill_handoff_and_ledger_modified": false,
+    "trace_target_modified_or_executed": false
+  },
+  "checks": {
+    "skill_exists_nonempty": true,
+    "frontmatter_name_valid": true,
+    "skill_structure_valid": true,
+    "content_migration_valid": true,
+    "source_hashes_valid": true,
+    "plan_goal_binding_valid": true,
+    "ledger_valid": true,
+    "predecessor_condition_valid": true,
+    "target_commit_valid": true,
+    "target_clean": true,
+    "trace_profile_hash_valid": true,
+    "complete_workload_present": true,
+    "complete_topology_present": true,
+    "rank_mapping_present": true,
+    "per_rank_per_device_coverage_gate_present": true,
+    "serial_runtime_contract_valid": true,
+    "runtime_predecessor_gate_present": true,
+    "advance_gate_present": true,
+    "required_profile_literals_present": true,
+    "forbidden_profile_literals_absent": true,
+    "workflow_business_handoff_schema_present": true,
+    "hiptx_exact_multiset_contract_present": true,
+    "fx_proxy_and_alias_constraints_present": true,
+    "equivalence_and_cleanup_gates_present": true,
+    "python_stdlib_validation_fallback_present": true,
+    "profiler_and_performance_work_excluded_from_r02": true,
+    "workflow_only_constraints_packaged": true,
+    "adapt_execution_boundary_present": true
+  },
+  "all_checks_passed": true
+}

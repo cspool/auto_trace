@@ -1,0 +1,277 @@
+{
+  "schema_version": 1,
+  "branch": "workflow01-10-fresh-e2e",
+  "description": "Project-local fresh R01-R10 serial runtime control plane for the hash-pinned batch8 dual-DCU DP2 profile.",
+  "goals": [
+    "R01",
+    "R02",
+    "R03",
+    "R04",
+    "R05",
+    "R06",
+    "R07",
+    "R08",
+    "R09",
+    "R10"
+  ],
+  "bindings": {
+    "R01": {
+      "adapt_goal": "A01",
+      "skill": "qwen-dcu-same-input-layer-wise-workflow",
+      "skill_path": "perf_trace_batch8/skills/qwen-dcu-same-input-layer-wise-workflow/SKILL.md",
+      "skill_file_sha256": "07629a16022403d9bbef65ecf00466f731f0473c6dde9deb6f76d7b3af64f245",
+      "skill_tree_sha256": "bba04a6538b28c6719ed5ac71a444d8de5f0204742688548002bd0bb30ce9030",
+      "skill_tree_files": [
+        "SKILL.md"
+      ],
+      "predecessors": []
+    },
+    "R02": {
+      "adapt_goal": "A02",
+      "skill": "qwen-dcu-fx-process-nvtx-instrumentation",
+      "skill_path": "perf_trace_batch8/skills/qwen-dcu-fx-process-nvtx-instrumentation/SKILL.md",
+      "skill_file_sha256": "8434eaee5eceaa22c88d527c114f226f06b33862f27b7ae3e3abbd4145435463",
+      "skill_tree_sha256": "b4e2f5d301ccff13058ff7b7d7b50506c7dd93911fe21f1d12e0253f559f5d49",
+      "skill_tree_files": [
+        "SKILL.md"
+      ],
+      "predecessors": [
+        "R01"
+      ]
+    },
+    "R03": {
+      "adapt_goal": "A03",
+      "skill": "qwen-dcu-process-performance-breakdown",
+      "skill_path": "perf_trace_batch8/skills/qwen-dcu-process-performance-breakdown/SKILL.md",
+      "skill_file_sha256": "3c5aebe72a461d92e9ea49e4cd1e7f0b34114854fd068848a97a34106a6d75cf",
+      "skill_tree_sha256": "a52937be262e393bf77bf439cf78ac862ae0b8f9366535ef39ef51321fdd90cd",
+      "skill_tree_files": [
+        "SKILL.md"
+      ],
+      "predecessors": [
+        "R01",
+        "R02"
+      ]
+    },
+    "R04": {
+      "adapt_goal": "A04",
+      "skill": "qwen-dcu-process-gpu-hardware-trace",
+      "skill_path": "perf_trace_batch8/skills/qwen-dcu-process-gpu-hardware-trace/SKILL.md",
+      "skill_file_sha256": "500c7dd16ed5e938eb65de7b7ad0c468b97f2e6e37bf8706ea1defa141aade08",
+      "skill_tree_sha256": "a20e6629ea09b2510550bead3d520b6befc8212a26f7266c7cb5598382dbac9e",
+      "skill_tree_files": [
+        "SKILL.md"
+      ],
+      "predecessors": [
+        "R01",
+        "R02",
+        "R03"
+      ]
+    },
+    "R05": {
+      "adapt_goal": "A05",
+      "skill": "qwen-dcu-segmented-process-attribution",
+      "skill_path": "perf_trace_batch8/skills/qwen-dcu-segmented-process-attribution/SKILL.md",
+      "skill_file_sha256": "f96cdcde3d87b0000c775e984da040903acac811a4eb445f5714a073eeb90462",
+      "skill_tree_sha256": "62de308fea8c75f98384c941b6c14ad62000ef83d3349477f07a25e82e2802bc",
+      "skill_tree_files": [
+        "SKILL.md"
+      ],
+      "predecessors": [
+        "R01",
+        "R02",
+        "R03",
+        "R04"
+      ]
+    },
+    "R06": {
+      "adapt_goal": "A06",
+      "skill": "qwen-dcu-workflow05-evidence-planning",
+      "skill_path": "perf_trace_batch8/skills/qwen-dcu-workflow05-evidence-planning/SKILL.md",
+      "skill_file_sha256": "50ecf049df469a1e135adfd88d3ae53d8e18f788ff21f5aa473e7bfe43dfe0b0",
+      "skill_tree_sha256": "58ca11ec18de7e00344553f7d7901bcc325cd9c16535cb3a920db19b514ab0ab",
+      "skill_tree_files": [
+        "SKILL.md"
+      ],
+      "predecessors": [
+        "R01",
+        "R02",
+        "R03",
+        "R04",
+        "R05"
+      ]
+    },
+    "R07": {
+      "adapt_goal": "A07",
+      "skill": "qwen-dcu-workflow05-full-request-process-trace",
+      "skill_path": "perf_trace_batch8/skills/qwen-dcu-workflow05-full-request-process-trace/SKILL.md",
+      "skill_file_sha256": "ca4fb8878eb51e871af69262413a706073bf709d129e8a9f5d8f4632d5c77e03",
+      "skill_tree_sha256": "5e13fa8dbd03e630d89f524442e7b726e8e90a8b974686b5753ed920665b645c",
+      "skill_tree_files": [
+        "SKILL.md"
+      ],
+      "predecessors": [
+        "R01",
+        "R02",
+        "R03",
+        "R04",
+        "R05",
+        "R06"
+      ]
+    },
+    "R08": {
+      "adapt_goal": "A08",
+      "skill": "qwen-dcu-workflow05-targeted-hardware-gap-analysis",
+      "skill_path": "perf_trace_batch8/skills/qwen-dcu-workflow05-targeted-hardware-gap-analysis/SKILL.md",
+      "skill_file_sha256": "91a9d5bf6a0c9630c0ab75775f1426457e6e4f91d2c62a08fd6506a886e84da6",
+      "skill_tree_sha256": "8f1bd1f21d2599a8cee0518224f728ebd2bf1ac380fd7a8dc28cfe5c923cb2be",
+      "skill_tree_files": [
+        "SKILL.md"
+      ],
+      "predecessors": [
+        "R01",
+        "R02",
+        "R03",
+        "R04",
+        "R05",
+        "R06",
+        "R07"
+      ]
+    },
+    "R09": {
+      "adapt_goal": "A09",
+      "skill": "qwen-dcu-workflow05-utilization-concurrency-analysis",
+      "skill_path": "perf_trace_batch8/skills/qwen-dcu-workflow05-utilization-concurrency-analysis/SKILL.md",
+      "skill_file_sha256": "584c67c790a61216301c29f508911556de9b8a2e0d9f1e6d486a9e7c931898c7",
+      "skill_tree_sha256": "61100ebf768d24d4ab61f7957a54dd25b84e012825a7250db6ffbff68b59c705",
+      "skill_tree_files": [
+        "SKILL.md"
+      ],
+      "predecessors": [
+        "R01",
+        "R02",
+        "R03",
+        "R04",
+        "R05",
+        "R06",
+        "R07",
+        "R08"
+      ]
+    },
+    "R10": {
+      "adapt_goal": "A10",
+      "skill": "qwen-dcu-workflow05-trace-visualization-reporting",
+      "skill_path": "perf_trace_batch8/skills/qwen-dcu-workflow05-trace-visualization-reporting/SKILL.md",
+      "skill_file_sha256": "980f01b2f76bd5cdd900605f87c9b331b9132ce16fab2196123e0ef3933a72a0",
+      "skill_tree_sha256": "43a711b2d52946985849dea4d0f24930c614a0034174d94ef38dee35121f0466",
+      "skill_tree_files": [
+        "SKILL.md"
+      ],
+      "predecessors": [
+        "R01",
+        "R02",
+        "R03",
+        "R04",
+        "R05",
+        "R06",
+        "R07",
+        "R08",
+        "R09"
+      ]
+    }
+  },
+  "project_skill_root": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/skills",
+  "runtime_root": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e",
+  "runtime_config": {
+    "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/configs/workflow01_10_fresh_e2e_batch8_dual_dcu_dp2.json",
+    "sha256": "89d4455bd89c5f59aeea9f082353507565264ac30881faaad8f8ef966ba48ad7"
+  },
+  "r01_bootstrap_gate": {
+    "schema_version": 1,
+    "required_before_formal_goal_creation": true,
+    "request_selection": {
+      "dataset_path": "/home/testdata/16-32K_throughput.jsonl",
+      "dataset_file_sha256": "633ba4c8b4f500d2ab28094de42698c5494e5232f40eafcd119c0a314b44b936",
+      "selection_policy": "first_8_records_in_original_file_order_no_expansion",
+      "request_count": 8,
+      "selected_line_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "ordered_sequence_canonical_sha256": "a5432b3b03bf2550577fbd21d26641e4cb8780ee7036b55ba8640a4278529b91"
+    },
+    "target_evidence_sha256": {
+      "scripts/serve_cscc_dp2.sh": "233bb2ce6fee3654bc870e37e65b7ecf4de6874cb6c7fd1a6bd5687a40783699",
+      "scripts/bench_cscc_multi_request.sh": "9b5e02116911729e901077866389e448c0e4a055e8bb901ed160dcdc7664a595",
+      "docs/cscc/DP2_MULTI_REQUEST.md": "f83ebea84fd570908be0df58255eca371ad4c28c4dc9d70ec3db0401b1143569"
+    },
+    "model": {
+      "directory": "/home/Qwen3.5-27B",
+      "config_path": "/home/Qwen3.5-27B/config.json",
+      "config_sha256": "f8d190c5b89c1521220f935d2567a587d6e291ed69066a45a106560b05a2174c"
+    },
+    "runtime_executable": {
+      "path": "/usr/local/bin/vllm",
+      "sha256": "5f96b9324e1df36d2c93e62485ca3809d09cf01a77fad1c9bb26e83fb517920c",
+      "version": "0.18.1+das.dtk2604",
+      "version_metadata_sha256": "788197b94bcd282ee9d5c3c82a9cb931dd60bd6ab276362391abb5631115ea54"
+    },
+    "service_port": 8001,
+    "attempt_id_generated_by_scheduler": true,
+    "request_expansion_allowed": false,
+    "runtime_discovery_allowed": false
+  },
+  "trace_target": {
+    "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/pra2026-bh408-gqa-page784-k5120-batch8",
+    "git_commit": "2b4b2119ae3cc2c4c626dc5690ef9593c1477f66",
+    "adapt_checkout_clean": true,
+    "adapt_checkout_read_only": true
+  },
+  "trace_profile": {
+    "profile_id": "batch8-dual-dcu-dp2",
+    "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/configs/trace_targets/batch8_dual_dcu_dp2.json",
+    "sha256": "3b4c952063f48ae662b48b5ce9d8fd76e0ac4d74e170bdb1839ae8b1aaa23cce"
+  },
+  "runtime_scheduler_source_provenance": {
+    "role": "migration_source_only",
+    "runtime_dependency": false,
+    "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/scripts/run_perf_trace_01_05.py",
+    "sha256": "e4c827a1ef6e2962da6cfad5e9ee16149f3925d917c7d962d74905a38d12877f"
+  },
+  "handoff_policy": {
+    "schema_version": 1,
+    "cumulative_ledger_required": true,
+    "all_predecessor_handoffs_required": true,
+    "same_run_only": true,
+    "same_branch_only": true,
+    "external_runtime_ledger_allowed": false,
+    "full_trace_profile_attestation_required": true,
+    "advance_only_after": "validated_complete_handoff"
+  },
+  "execution_policy": {
+    "stage_order": "strict_serial",
+    "maximum_concurrent_stages": 1,
+    "persistent_threads": true,
+    "formal_goals": true,
+    "formal_goal_owner": "scheduler",
+    "nested_goal_creation_allowed": false,
+    "business_artifacts_separate_from_handoffs": true,
+    "runtime_state_written_only_in_non_dry_run": true
+  },
+  "requires": [
+    "one continuous fresh R01-R10 lineage; external runtime evidence is forbidden",
+    "the complete ordered first-eight request-selection manifest, stable request IDs, per-record and sequence hashes, fixed model/config, fixed vLLM executable/version, nonempty scheduler attempt ID, and service port 8001 are generated, validated, and injected before R01 Goal creation",
+    "no R01 request may be expanded, oversampled, shuffled, synthesized, or discovered at runtime",
+    "R01-R10 stages execute serially, but every measured workload preserves physical devices 0 and 1 and DP ranks 0 and 1",
+    "world size 2, tensor parallel size 1, pipeline parallel size 1, data parallel size 2, and data_parallel_backend=mp remain fixed",
+    "each Goal consumes and hash-validates the complete same-run predecessor handoff prefix and immutable cumulative ledger",
+    "the scheduler advances only after a complete handoff passes the profile, lineage, evidence, path, and hash gates",
+    "R07 is the sole observed request clock, R08 attributes are replay_projected, R09 owns twelve normalized tables, and R10 is lossless and offline"
+  ]
+}

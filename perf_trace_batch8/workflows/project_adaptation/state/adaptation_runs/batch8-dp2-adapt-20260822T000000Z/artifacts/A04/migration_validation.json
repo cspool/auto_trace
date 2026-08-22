@@ -1,0 +1,348 @@
+{
+  "schema_version": 1,
+  "adapt_run_id": "batch8-dp2-adapt-20260822T000000Z",
+  "adapt_goal": "A04",
+  "status": "pass",
+  "validation_kind": "migration_only_static_validation",
+  "workflow_execution_performed": false,
+  "project_skill_execution_performed": false,
+  "inputs": {
+    "plan": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/manifests/adapt_goals.json",
+      "sha256": "bc58cc41846454acc4f6627fdd97a1cb922434e9f479e64aab102a3c8a2152e2"
+    },
+    "adapt_goal_document": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/goals/A04.md",
+      "sha256": "ded6cbaa8968332aee302590b8d35766499b2d6acb3e12a2b5a57eca74455293"
+    },
+    "workflow": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/03_process_gpu_hardware_trace.md",
+      "sha256": "ab6b9e9d39ecaf73d5123fa5a73b5cf5b3ac7a9f8f171606e1769ad6049db0bf",
+      "fully_read_as_source_text": true
+    },
+    "reference_skill_texts": [],
+    "reference_skill_input_count": 0,
+    "reference_skill_absence_declared_by_plan": true,
+    "trace_profile": {
+      "profile_id": "batch8-dual-dcu-dp2",
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/configs/trace_targets/batch8_dual_dcu_dp2.json",
+      "sha256": "3b4c952063f48ae662b48b5ce9d8fd76e0ac4d74e170bdb1839ae8b1aaa23cce",
+      "fully_read": true
+    },
+    "cumulative_adapt_ledger": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-20260822T000000Z/adapt_handoff_ledger.json",
+      "sha256": "9c74ed7b5996f360ca0217da280774bbdb1addf673096eb2b51dc4fda43716a2",
+      "validated_prefix": [
+        "A01",
+        "A02",
+        "A03"
+      ],
+      "all_handoff_hashes_valid": true,
+      "all_project_skill_hashes_valid": true
+    },
+    "immediate_predecessor_handoff": {
+      "adapt_goal": "A03",
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-20260822T000000Z/handoffs/A03.json",
+      "sha256": "f9a275445c7b6f7320292b4e3180e1c89a2f19a7634e5f6dc9c1a2066c751704",
+      "status": "complete",
+      "fully_read": true
+    },
+    "adapt_goal_contract": {
+      "path": "/public/home/tangyu408/.codex/skills/adapt-workflows/references/adapt-goal-contract.md",
+      "sha256": "040137eef9c3f7a6e6e6581b29926e34297f757b3816bb1577a4de764e9a81de"
+    },
+    "project_skill_runtime_contract": {
+      "path": "/public/home/tangyu408/.codex/skills/adapt-workflows/references/project-skill-runtime-contract.md",
+      "sha256": "bc260e902a5a443a7e0e622a73eb0b665d69bbfffe3c3559e58e5c6d110ff197"
+    }
+  },
+  "target_binding": {
+    "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/pra2026-bh408-gqa-page784-k5120-batch8",
+    "expected_git_commit": "2b4b2119ae3cc2c4c626dc5690ef9593c1477f66",
+    "observed_git_commit": "2b4b2119ae3cc2c4c626dc5690ef9593c1477f66",
+    "branch": "repro-gqa-page784-k5120-batch8-final",
+    "clean": true,
+    "read_only_inspection": true,
+    "project": "Qwen3.5-27B on the pinned vLLM ROCm/DCU checkout",
+    "runtime": "vLLM BF16 with native R03 non-replay hipprof timing and separate R04 rocprofv2 PMC replay attributes on the complete dual-DCU DP2 topology",
+    "evidence_files": [
+      {
+        "path": "vllm/model_executor/models/qwen3_5.py",
+        "sha256": "f3c0479dbc37a8794c4d6b1c4c01906ae341b3276ed43e588c17d92b1ddb94d6"
+      },
+      {
+        "path": "vllm/model_executor/models/qwen3_next.py",
+        "sha256": "5a14b14a40fcf6382f9a20be4ca0f850b2b19b2840a3c57488821f0952d96053"
+      },
+      {
+        "path": "vllm/v1/worker/gpu_model_runner.py",
+        "sha256": "d63424d3cbe81bfaa2c0967a5c81b8c980c2d76bc7eb3b2f8fe2a079af825bce"
+      },
+      {
+        "path": "vllm/utils/nvtx_pytorch_hooks.py",
+        "sha256": "e9711444f33242ce1864d6a32d051bbf0ba0b37b5f17965de6e5dbba0c0c75ff"
+      },
+      {
+        "path": "vllm/compilation/wrapper.py",
+        "sha256": "b4dca93456e945ce8231e9a954792c8f687d5d48b427ed38bfb96011015d4090"
+      },
+      {
+        "path": "scripts/serve_cscc_dp2.sh",
+        "sha256": "233bb2ce6fee3654bc870e37e65b7ecf4de6874cb6c7fd1a6bd5687a40783699"
+      },
+      {
+        "path": "scripts/bench_cscc_multi_request.sh",
+        "sha256": "9b5e02116911729e901077866389e448c0e4a055e8bb901ed160dcdc7664a595"
+      },
+      {
+        "path": "scripts/cscc_gfx936_env.sh",
+        "sha256": "58d483450c23e9c4fa87fb981b5e63cf4babf5e8d230fe93e400563596dfc18a"
+      },
+      {
+        "path": "docs/cscc/DP2_MULTI_REQUEST.md",
+        "sha256": "f83ebea84fd570908be0df58255eca371ad4c28c4dc9d70ec3db0401b1143569"
+      }
+    ]
+  },
+  "source_destination_inventory": {
+    "source": {
+      "project": "VisiPrune representative-layer process hardware reporting",
+      "model_runtime": "single-request PyTorch execution using Workflow 02 rows",
+      "accelerator_and_markers": "one selected NVIDIA GPU with NVTX, CUDA, CUPTI, Nsight Systems and Nsight Compute vocabulary",
+      "paths": "fixed /workspace/VisiPrune experiment and output paths",
+      "tools": "ncu plus fixed process-plan and NCU-report scripts",
+      "artifacts": ".ncu-rep files, exported NCU metric CSVs and a VisiPrune hardware report",
+      "evidence": "Workflow 02 non-replay timing joined to separate NCU replay attributes"
+    },
+    "destination": {
+      "project": "the immutable Qwen3.5-27B vLLM checkout at commit 2b4b2119ae3cc2c4c626dc5690ef9593c1477f66",
+      "model_runtime": "the pinned BF16 Qwen3.5 service with eight concurrent 16-32K requests and the fresh same-run R01-R03 lineage",
+      "accelerator_and_markers": "both ROCm/DCU/HIP gfx936 devices under DP2, exact R02 HIPTX ranges, R03 native non-replay timing and R04 rocprofv2 PMC/HCC correlation",
+      "paths": "read-only target plus scheduler-assigned runtime_artifact_root and separate runtime_handoff_output",
+      "tools": "hash-recorded artifact-local admission, capability, plan, replay, normalization, independent-audit, report and validation helpers using the fixed DTK rocprofv2",
+      "artifacts": "sealed selection/capture plans, per-pass native raw data and manifests, dispatch mappings, normalized hardware attributes, report, audits and artifact manifest",
+      "evidence": "immutable R03 matched-kernel-family timing/order plus exact-literal/range/HIP-launch/HCC-PMC/subsequence hardware attribution; replay is never latency"
+    }
+  },
+  "workflow_requirement_coverage": [
+    {
+      "requirement": "separate R03 non-replay timing from R04 replay attributes",
+      "skill_sections": [
+        "Scope and Stage Boundary",
+        "Hardware Projection and Report Shape",
+        "Runtime Handoff"
+      ],
+      "status": "covered"
+    },
+    {
+      "requirement": "assert all five R02 no-execution fields independently before R04",
+      "skill_sections": [
+        "Admission Gate and Producer Responsibilities"
+      ],
+      "status": "covered"
+    },
+    {
+      "requirement": "interpret rocprof catalog success by parsed content while keeping strict replay exit and data gates",
+      "skill_sections": [
+        "Counter Catalog Capability Contract"
+      ],
+      "status": "covered"
+    },
+    {
+      "requirement": "discover supported read-only device queries and isolate every capability/smoke attempt",
+      "skill_sections": [
+        "Artifact-local Tools and Immutable Layout",
+        "Device Occupancy Preflight"
+      ],
+      "status": "covered"
+    },
+    {
+      "requirement": "reject broken legacy rocprof and gate rocprofv2 with a real small DCU smoke",
+      "skill_sections": [
+        "Legacy Rejection and rocprofv2 Smoke Gate"
+      ],
+      "status": "covered"
+    },
+    {
+      "requirement": "empirically test collector filtering and retain a bounded immutable superset when ineffective",
+      "skill_sections": [
+        "Empirical Collector-filter Probe",
+        "Exact Attribution Chain"
+      ],
+      "status": "covered"
+    },
+    {
+      "requirement": "retain hip-trace HCC operations and prove nonzero PMC dispatch correlation",
+      "skill_sections": [
+        "Required HIP/HCC/PMC Correlation"
+      ],
+      "status": "covered"
+    },
+    {
+      "requirement": "construct explicit Python and DTK library paths and prove source-tree plus ABI provenance",
+      "skill_sections": [
+        "Replay Environment and Python/ABI Provenance"
+      ],
+      "status": "covered"
+    },
+    {
+      "requirement": "preserve control-plane interruptions, quarantine incomplete passes and constrain suffix recovery",
+      "skill_sections": [
+        "Interruption, Quarantine, and Resume"
+      ],
+      "status": "covered"
+    },
+    {
+      "requirement": "derive mapping instances independently from the sealed plan and repair analysis offline without recapture",
+      "skill_sections": [
+        "Metric Normalization and Independent Audit"
+      ],
+      "status": "covered"
+    },
+    {
+      "requirement": "select every representative parent and preserve R03 process/family order without new marker ranges",
+      "skill_sections": [
+        "Required Fresh Predecessor Inputs",
+        "Representative Target Selection"
+      ],
+      "status": "covered"
+    },
+    {
+      "requirement": "emit one matched-kernel-family hardware row and exclude Workflow 02 timing evidence columns",
+      "skill_sections": [
+        "Hardware Projection and Report Shape"
+      ],
+      "status": "covered"
+    },
+    {
+      "requirement": "preserve the complete batch8 workload, both physical devices, both DP ranks and all parallel parameters",
+      "skill_sections": [
+        "Authoritative Workload and Complete DP2 Topology",
+        "Fixed Service Readiness",
+        "Full-DP2 Replay and Pass Manifests"
+      ],
+      "status": "covered"
+    },
+    {
+      "requirement": "consume immutable same-run R01-R03 handoffs and gate R05 on a validated R04 handoff",
+      "skill_sections": [
+        "Serial Runtime Contract",
+        "Runtime Handoff"
+      ],
+      "status": "covered"
+    }
+  ],
+  "project_skill": {
+    "name": "qwen-dcu-process-gpu-hardware-trace",
+    "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/skills/qwen-dcu-process-gpu-hardware-trace/SKILL.md",
+    "sha256": "500c7dd16ed5e938eb65de7b7ad0c468b97f2e6e37bf8706ea1defa141aade08",
+    "line_count": 834
+  },
+  "profile_coverage": {
+    "workload": {
+      "mode": "batch8_concurrent_requests",
+      "dataset_path": "/home/testdata/16-32K_throughput.jsonl",
+      "request_count": 8,
+      "max_concurrency": 8,
+      "request_rate": "inf",
+      "output_tokens_per_request": 1024,
+      "warmup_requests": 2,
+      "temperature": 0,
+      "ignore_eos": true
+    },
+    "topology": {
+      "accelerator": "ROCm/DCU/HIP gfx936",
+      "physical_devices": [
+        0,
+        1
+      ],
+      "hip_visible_devices": "0,1",
+      "cuda_visible_devices": "0,1",
+      "world_size": 2,
+      "tensor_parallel_size": 1,
+      "pipeline_parallel_size": 1,
+      "data_parallel_size": 2,
+      "data_parallel_backend": "mp",
+      "rank_to_physical_device": {
+        "0": 0,
+        "1": 1
+      }
+    },
+    "coverage_gate": {
+      "required_physical_devices": [
+        0,
+        1
+      ],
+      "required_dp_ranks": [
+        0,
+        1
+      ],
+      "required_measured_request_count": 8,
+      "require_per_rank_and_per_device_artifacts": true,
+      "forbid_single_device_promotion": true
+    },
+    "required_skill_literals_missing": [],
+    "forbidden_skill_literals_present": []
+  },
+  "serial_runtime_contract": {
+    "runtime_branch": "workflow01-10-fresh-e2e",
+    "runtime_goal": "R04",
+    "runtime_predecessors": [
+      "R01",
+      "R02",
+      "R03"
+    ],
+    "required_handoff_fields_present": true,
+    "runtime_artifact_root": "scheduler-assigned",
+    "runtime_handoff_output": "scheduler-assigned",
+    "advance_only_after": "complete"
+  },
+  "output_scope": {
+    "project_skill_directory": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/skills/qwen-dcu-process-gpu-hardware-trace",
+    "adapt_artifact_root": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-20260822T000000Z/artifacts/A04",
+    "adapt_handoff_output": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-20260822T000000Z/handoffs/A04.json",
+    "predecessor_skills_handoffs_and_ledger_modified": false,
+    "trace_target_modified_or_executed": false,
+    "runtime_commands_executed": []
+  },
+  "checks": {
+    "skill_exists_nonempty": true,
+    "frontmatter_name_valid": true,
+    "skill_structure_valid": true,
+    "content_migration_valid": true,
+    "source_hashes_valid": true,
+    "plan_goal_binding_valid": true,
+    "adapt_ledger_valid": true,
+    "predecessor_condition_valid": true,
+    "target_commit_valid": true,
+    "target_clean": true,
+    "trace_profile_hash_valid": true,
+    "complete_workload_present": true,
+    "complete_topology_present": true,
+    "rank_mapping_present": true,
+    "per_rank_per_device_coverage_gate_present": true,
+    "serial_runtime_contract_valid": true,
+    "runtime_predecessor_gate_present": true,
+    "advance_gate_present": true,
+    "required_profile_literals_present": true,
+    "forbidden_profile_literals_absent": true,
+    "reference_skill_inputs_match_empty_plan": true,
+    "r02_independent_false_assertions_present": true,
+    "catalog_content_gate_present": true,
+    "device_help_discovery_and_attempt_isolation_present": true,
+    "legacy_rejection_and_rocprofv2_smoke_gate_present": true,
+    "collector_filter_empirical_gate_present": true,
+    "hip_hcc_pmc_correlation_gate_present": true,
+    "explicit_replay_environment_and_provenance_present": true,
+    "full_dp2_replay_contract_present": true,
+    "exact_dispatch_attribution_chain_present": true,
+    "dynamic_mapping_count_and_independent_audit_present": true,
+    "capture_analysis_tool_revision_separation_present": true,
+    "report_family_shape_and_timing_boundary_present": true,
+    "interruption_quarantine_and_constrained_resume_present": true,
+    "adapt_execution_boundary_present": true,
+    "no_trailing_whitespace": true,
+    "adapt_output_scope_valid": true
+  },
+  "all_checks_passed": true
+}

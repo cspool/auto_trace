@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "profile_id": "batch8-dual-dcu-dp2",
+  "objective": "Trace the complete batch8 workload on both physical DCUs throughout R01-R10; runtime stages remain serial but every measured workload preserves DP2.",
+  "trace_target_root": "/public/home/tangyu408/Qwen_DCU_Worker_0/pra2026-bh408-gqa-page784-k5120-batch8",
+  "target_evidence": {
+    "service_launcher": "scripts/serve_cscc_dp2.sh",
+    "benchmark_launcher": "scripts/bench_cscc_multi_request.sh",
+    "design_document": "docs/cscc/DP2_MULTI_REQUEST.md"
+  },
+  "workload": {
+    "mode": "batch8_concurrent_requests",
+    "dataset_path": "/home/testdata/16-32K_throughput.jsonl",
+    "request_count": 8,
+    "max_concurrency": 8,
+    "request_rate": "inf",
+    "output_tokens_per_request": 1024,
+    "warmup_requests": 2,
+    "temperature": 0,
+    "ignore_eos": true
+  },
+  "topology": {
+    "accelerator": "ROCm/DCU/HIP gfx936",
+    "physical_devices": [0, 1],
+    "hip_visible_devices": "0,1",
+    "cuda_visible_devices": "0,1",
+    "world_size": 2,
+    "tensor_parallel_size": 1,
+    "pipeline_parallel_size": 1,
+    "data_parallel_size": 2,
+    "data_parallel_backend": "mp",
+    "rank_to_physical_device": {
+      "0": 0,
+      "1": 1
+    }
+  },
+  "serial_semantics": {
+    "adapt_goals": "A01-A11 execute serially and only migrate text/code.",
+    "runtime_goals": "R01-R10 execute serially in one fresh lineage.",
+    "within_runtime_goal": "Every model execution and capture uses the full DP2 topology on physical DCUs 0 and 1; serial runtime ordering must never be implemented by reducing the workload to one device.",
+    "profiler": "Preserve rank and native physical-device identity for both DP workers. If a profiler pass must be split per device or counter family, all pieces remain attributes of the same dual-card batch8 contract and both devices must reach the stage coverage gate."
+  },
+  "coverage_gate": {
+    "required_physical_devices": [0, 1],
+    "required_dp_ranks": [0, 1],
+    "required_measured_request_count": 8,
+    "require_per_rank_and_per_device_artifacts": true,
+    "forbid_single_device_promotion": true
+  },
+  "workload_profile_reuse": {
+    "root": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile",
+    "allowed": "Reuse process definitions, taxonomy, marker vocabulary, schemas, and reconstruction method as migration inputs.",
+    "forbidden": "Do not reuse prior single-card timings, traces, device mappings, runtime handoffs, or measurement evidence; regenerate all R01-R10 evidence for this profile."
+  },
+  "required_skill_literals": [
+    "trace_profile_id=batch8-dual-dcu-dp2",
+    "workload_mode=batch8_concurrent_requests",
+    "batch_size=8",
+    "max_concurrency=8",
+    "physical_devices=0,1",
+    "HIP_VISIBLE_DEVICES=0,1",
+    "CUDA_VISIBLE_DEVICES=0,1",
+    "tensor_parallel_size=1",
+    "pipeline_parallel_size=1",
+    "data_parallel_size=2",
+    "data_parallel_backend=mp"
+  ],
+  "forbidden_skill_literals": [
+    "physical_device=1",
+    "physical_dcu_device=1",
+    "HIP_VISIBLE_DEVICES=1",
+    "CUDA_VISIBLE_DEVICES=1",
+    "data_parallel_size=1",
+    "physical_dcu_1_only",
+    "physical DCU 1 only"
+  ]
+}

@@ -1,0 +1,225 @@
+{
+  "schema_version": 1,
+  "adapt_run_id": "batch8-dp2-adapt-20260822T000000Z",
+  "adapt_goal": "A01",
+  "status": "complete",
+  "mode": "reference_migration",
+  "workflow_execution_performed": false,
+  "project_skill_execution_performed": false,
+  "inputs": {
+    "trace_profile": {
+      "profile_id": "batch8-dual-dcu-dp2",
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/configs/trace_targets/batch8_dual_dcu_dp2.json",
+      "sha256": "3b4c952063f48ae662b48b5ce9d8fd76e0ac4d74e170bdb1839ae8b1aaa23cce"
+    },
+    "workflow_files": [
+      {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/01_layer_wise_end_to_end_trace.md",
+        "sha256": "78d7d54fdccb93de02b7ea3da42fbedd8002b1429d9836e5651e83cf9cc01fde"
+      }
+    ],
+    "reference_skills": [
+      {
+        "requested_name": "visipruner-same-input-layer-wise-workflow",
+        "resolved_name": "visipruner-same-input-workflow",
+        "path": "/root/.codex/skills/visipruner-same-input-workflow/SKILL.md",
+        "sha256": "13bc2e3fe256265aceb11085b8b6a2a5bdfa8b6a970ce3f996b1cb7e19080f6f",
+        "resolution": "semantic_fallback"
+      }
+    ],
+    "previous_adapt_handoff": null,
+    "cumulative_adapt_ledger": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-20260822T000000Z/adapt_handoff_ledger.json",
+      "sha256": "f9e54fdc20a9107b9fc581df16ea2a918dd467093a8bbbae9d368a9f9472f53c",
+      "validated_empty_prefix": true
+    },
+    "adapt_goal_document": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/goals/A01.md",
+      "sha256": "45acd76087086f5d984e32a78315286a66b567fa8185d85a8a4b33b03dedf47d"
+    }
+  },
+  "target_binding": {
+    "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/pra2026-bh408-gqa-page784-k5120-batch8",
+    "git_commit": "2b4b2119ae3cc2c4c626dc5690ef9593c1477f66",
+    "git_branch": "repro-gqa-page784-k5120-batch8-final",
+    "git_clean": true,
+    "inspection_only": true,
+    "project": "Qwen3.5-27B on the pinned vLLM ROCm/DCU checkout",
+    "runtime": "vLLM BF16 service and OpenAI-compatible batch benchmark",
+    "target_evidence": [
+      {
+        "role": "service_launcher",
+        "path": "scripts/serve_cscc_dp2.sh",
+        "sha256": "233bb2ce6fee3654bc870e37e65b7ecf4de6874cb6c7fd1a6bd5687a40783699"
+      },
+      {
+        "role": "benchmark_launcher",
+        "path": "scripts/bench_cscc_multi_request.sh",
+        "sha256": "9b5e02116911729e901077866389e448c0e4a055e8bb901ed160dcdc7664a595"
+      },
+      {
+        "role": "design_document",
+        "path": "docs/cscc/DP2_MULTI_REQUEST.md",
+        "sha256": "f83ebea84fd570908be0df58255eca371ad4c28c4dc9d70ec3db0401b1143569"
+      },
+      {
+        "role": "accelerator_environment",
+        "path": "scripts/cscc_gfx936_env.sh",
+        "sha256": "58d483450c23e9c4fa87fb981b5e63cf4babf5e8d230fe93e400563596dfc18a"
+      }
+    ]
+  },
+  "project_skill": {
+    "name": "qwen-dcu-same-input-layer-wise-workflow",
+    "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/skills/qwen-dcu-same-input-layer-wise-workflow/SKILL.md",
+    "sha256": "07629a16022403d9bbef65ecf00466f731f0473c6dde9deb6f76d7b3af64f245"
+  },
+  "text_migrations": [
+    {
+      "source": "VisiPrune workspace and full-eager experiment identity",
+      "destination": "the pinned pra2026-bh408-gqa-page784-k5120-batch8 checkout at commit 2b4b2119ae3cc2c4c626dc5690ef9593c1477f66",
+      "reason": "Bind repository identity to the only plan-authorized target."
+    },
+    {
+      "source": "VisiPruner variant registry and visipruner-full eager model path",
+      "destination": "a single qwen3.5-27b-cscc-dp2 variant serving Qwen3.5-27B through the pinned vLLM BF16 runtime",
+      "reason": "Match the concrete target model and supported service configuration without inventing comparison variants."
+    },
+    {
+      "source": "one fixed-input request with a short generated output and one warmup",
+      "destination": "eight selected 16-32K requests at concurrency eight, infinite request rate, 1024 output tokens each, and two excluded warmups",
+      "reason": "Apply the complete hash-pinned batch8 workload rather than inheriting the reference's single-request defaults."
+    },
+    {
+      "source": "a single selected accelerator and implicit single-process execution",
+      "destination": "ROCm/DCU/HIP gfx936 devices 0 and 1 with world size two, TP1, PP1, DP2 mp, rank 0 on device 0 and rank 1 on device 1",
+      "reason": "Preserve every physical device and rank declared by the trace profile."
+    },
+    {
+      "source": "generic clock and Nsight wrapper contracts",
+      "destination": "the checked-in serve_cscc_dp2.sh and bench_cscc_multi_request.sh launchers plus attempt-local clock and hipprof wrappers",
+      "reason": "Use proven project launchers while packaging missing layer-capture helpers outside the immutable target checkout."
+    },
+    {
+      "source": "CUDA profiler control with NVTX/CUPTI/Nsight as operational evidence",
+      "destination": "HIPTX/ROCTX markers, hipprof native database/pftrace capture, HIP runtime correlation, and physical DCU activity",
+      "reason": "Migrate the runtime binding to ROCm/DCU while keeping legacy names visible only as compatibility-schema vocabulary."
+    },
+    {
+      "source": "visprune request, forward, layer, attention, and MLP range names",
+      "destination": "the qwen_dcu batch/request/forward/layer/attention/MLP marker family with structured request, rank, and physical-device fields",
+      "reason": "Bind marker identity to the Qwen DCU project and make DP2 provenance explicit."
+    },
+    {
+      "source": "fixed /workspace/VisiPrune experiment and output directories",
+      "destination": "the immutable target checkout for source reads and scheduler-assigned runtime_artifact_root for every generated helper, cache, capture, table, log, and report",
+      "reason": "Remove obsolete paths and keep runtime business artifacts separate from source and scheduler handoffs."
+    },
+    {
+      "source": "Nsight report, nsys-rep, SQLite, layer-event, kernel-breakdown, all-input-layer, and stats artifacts",
+      "destination": "Qwen DP2 clock/range files, hipprof database/pftrace/logs, per-rank/per-device layer events and statistics, native kernel breakdown, complete all-input-layer CSV, report, validation, and checksum manifest",
+      "reason": "Preserve the evidence roles with native tool formats and full topology provenance."
+    },
+    {
+      "source": "CUPTI launch-owned and generic runtime-correlation report terminology",
+      "destination": "HIP launch-owned attribution and native HIP runtime_correlation_id terminology with compatibility fields explicitly labeled",
+      "reason": "Prevent NVIDIA compatibility vocabulary from being mistaken for native DCU evidence."
+    },
+    {
+      "source": "historical backup output as contextual input",
+      "destination": "fresh attempt-scoped evidence only, with prior single-card measurements and handoffs explicitly forbidden",
+      "reason": "Keep R01 in the new workflow01-10-fresh-e2e lineage and satisfy the trace-profile reuse boundary."
+    },
+    {
+      "source": "standalone workflow sequencing without a project scheduler handoff contract",
+      "destination": "R01 on workflow01-10-fresh-e2e with an immutable empty runtime-ledger prefix, scheduler-assigned artifact/handoff paths, and advance-only-after-complete gate",
+      "reason": "Bind the migrated runtime capability to the required serial scheduler semantics."
+    }
+  ],
+  "uncovered_constraints_packaged": [
+    "The scheduler must pin the exact request file or literals, eight selected lines, source-file SHA-256, and canonical selected-request SHA-256; R01 stops instead of searching for or generating substitute input.",
+    "The outer scheduler already creates the formal runtime Goal, so the skill forbids create_goal; a blocked R01 is repaired and restarted in a new thread at the first incomplete Goal without accepting partial artifacts.",
+    "KFD/process exclusivity for both physical DCUs must be checked before any PyTorch, vLLM, or HIP-initializing import, and every failed attempt is preserved separately.",
+    "When checkout metadata shadows the installed vLLM distribution, enumerate all matching distributions, validate the runtime version, locate both vllm/_C.abi3.so and vllm/_rocm_C.abi3.so, and record source and extension paths and hashes.",
+    "Strict launch-owned device-row validation covers only native database-proven kernel launch APIs such as hipLaunchKernel, hipModuleLaunchKernel, and hipExtModuleLaunchKernel, not memcpy or memset APIs selected by broad substrings.",
+    "A pure offline analyzer classification defect preserves its failed log and diagnostics and reuses byte-identical raw database and pftrace inputs after the analyzer fix; it never triggers a needless DCU recapture.",
+    "The layer denominator requires one complete observed-clock interval for the same ordered eight-request set across clock and hipprof passes, with both warmups excluded.",
+    "The complete all-input-layer CSV is the R04 target-layer denominator; R01 neither requires FX-process markers nor infers process attribution from layer totals.",
+    "Historical backup outputs and prior single-card timings, traces, device mappings, runtime handoffs, and evidence cannot satisfy this fresh R01; workload_profile contributes only allowed definitions, taxonomy, marker vocabulary, schemas, and reconstruction method.",
+    "The target's cold-compile behavior requires an unmeasured first start and same-contract warm restart with cache hits, symmetric KV-cache capacity, and ready initialization/pre-capture evidence for both DP ranks.",
+    "Every acquisition and split profiler pass retains the full dual-device DP2 contract, preserves rank/native-device identity, emits per-rank/per-device artifacts, and fails the coverage gate rather than promoting a one-device result.",
+    "Business artifacts remain below runtime_artifact_root, the scheduler handoff is written only to runtime_handoff_output after all checks pass, and R02 cannot start until the handoff and hashes validate.",
+    "Small internally consistent helper/schema/report refinements do not add human review gates, while host-versus-device attribution, fixed workload, denominator conservation, and complete topology coverage remain strict stop conditions."
+  ],
+  "runtime_contract": {
+    "branch": "workflow01-10-fresh-e2e",
+    "runtime_goal": "R01",
+    "runtime_predecessors": [],
+    "advance_only_after": "complete"
+  },
+  "profile_binding": {
+    "workload": {
+      "mode": "batch8_concurrent_requests",
+      "dataset_path": "/home/testdata/16-32K_throughput.jsonl",
+      "request_count": 8,
+      "max_concurrency": 8,
+      "request_rate": "inf",
+      "output_tokens_per_request": 1024,
+      "warmup_requests": 2,
+      "temperature": 0,
+      "ignore_eos": true
+    },
+    "topology": {
+      "accelerator": "ROCm/DCU/HIP gfx936",
+      "physical_devices": [
+        0,
+        1
+      ],
+      "hip_visible_devices": "0,1",
+      "cuda_visible_devices": "0,1",
+      "world_size": 2,
+      "tensor_parallel_size": 1,
+      "pipeline_parallel_size": 1,
+      "data_parallel_size": 2,
+      "data_parallel_backend": "mp",
+      "rank_to_physical_device": {
+        "0": 0,
+        "1": 1
+      }
+    },
+    "coverage_gate": {
+      "required_physical_devices": [
+        0,
+        1
+      ],
+      "required_dp_ranks": [
+        0,
+        1
+      ],
+      "required_measured_request_count": 8,
+      "require_per_rank_and_per_device_artifacts": true,
+      "forbid_single_device_promotion": true
+    }
+  },
+  "adapt_artifacts": [
+    {
+      "kind": "migration_validation",
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-20260822T000000Z/artifacts/A01/migration_validation.json",
+      "sha256": "164912cec3206becb04fb6f2fdc57ef53ab7156eadc0671595383d0517bd83e6"
+    }
+  ],
+  "validation": {
+    "skill_structure_valid": true,
+    "serial_runtime_contract_valid": true,
+    "source_hashes_valid": true,
+    "content_migration_valid": true,
+    "trace_profile_hash_valid": true,
+    "complete_workload_and_topology_valid": true,
+    "required_profile_literals_valid": true,
+    "forbidden_profile_literals_absent": true,
+    "target_binding_valid": true,
+    "adapt_ledger_valid": true,
+    "predecessor_condition_valid": true,
+    "migration_validation_artifact_valid": true
+  }
+}

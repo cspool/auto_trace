@@ -1,0 +1,315 @@
+{
+  "schema_version": 1,
+  "adapt_run_id": "batch8-dp2-adapt-20260822T000000Z",
+  "adapt_goal": "A02",
+  "status": "complete",
+  "mode": "reference_migration",
+  "workflow_execution_performed": false,
+  "project_skill_execution_performed": false,
+  "inputs": {
+    "trace_profile": {
+      "profile_id": "batch8-dual-dcu-dp2",
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/configs/trace_targets/batch8_dual_dcu_dp2.json",
+      "sha256": "3b4c952063f48ae662b48b5ce9d8fd76e0ac4d74e170bdb1839ae8b1aaa23cce"
+    },
+    "workflow_files": [
+      {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/02_representative_fx_process_wise_trace.md",
+        "sha256": "88128f53d679b1e161a063b3659e3eeb2aba0d7eacbdf2ffad7e15726c8366a3"
+      }
+    ],
+    "reference_skills": [
+      {
+        "requested_name": "visipruner-fx-process-nvtx-instrumentation",
+        "resolved_name": "trace-patch-target-discovery",
+        "path": "/root/.codex/skills/trace-patch-target-discovery/SKILL.md",
+        "sha256": "ecef27420d4255d0206d7f298413d31526d19520b21833fb41d7331c275ae5d0",
+        "resolution": "semantic_fallback"
+      }
+    ],
+    "previous_adapt_handoff": {
+      "adapt_goal": "A01",
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-20260822T000000Z/handoffs/A01.json",
+      "sha256": "a04b7ea4dcd342944cc8c3bd1f1f6eac4ba26a05c56c8b48165c32e7741d69e8",
+      "status": "complete"
+    },
+    "cumulative_adapt_ledger": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-20260822T000000Z/adapt_handoff_ledger.json",
+      "sha256": "1be592e8a7aad2e81ac8b43a8b03e706f2fdb644848127b65c6ae94fd5a33c3c",
+      "validated_prefix": [
+        "A01"
+      ]
+    },
+    "adapt_goal_document": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/goals/A02.md",
+      "sha256": "ececfb11e32159c48a9f3c140d79177c7ba8da3c54f1506d3c859a0a8bc32d6a"
+    },
+    "plan": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/manifests/adapt_goals.json",
+      "sha256": "bc58cc41846454acc4f6627fdd97a1cb922434e9f479e64aab102a3c8a2152e2"
+    }
+  },
+  "target_binding": {
+    "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/pra2026-bh408-gqa-page784-k5120-batch8",
+    "git_commit": "2b4b2119ae3cc2c4c626dc5690ef9593c1477f66",
+    "git_branch": "repro-gqa-page784-k5120-batch8-final",
+    "git_clean": true,
+    "inspection_only": true,
+    "project": "Qwen3.5-27B on the pinned vLLM ROCm/DCU checkout",
+    "runtime": "vLLM BF16 service with a Qwen3.5 process-instrumentation analysis path",
+    "target_evidence": [
+      {
+        "role": "qwen35_model_and_linear_attention",
+        "path": "vllm/model_executor/models/qwen3_5.py",
+        "sha256": "f3c0479dbc37a8794c4d6b1c4c01906ae341b3276ed43e588c17d92b1ddb94d6"
+      },
+      {
+        "role": "decoder_and_full_attention",
+        "path": "vllm/model_executor/models/qwen3_next.py",
+        "sha256": "5a14b14a40fcf6382f9a20be4ca0f850b2b19b2840a3c57488821f0952d96053"
+      },
+      {
+        "role": "model_execution_boundary",
+        "path": "vllm/v1/worker/gpu_model_runner.py",
+        "sha256": "d63424d3cbe81bfaa2c0967a5c81b8c980c2d76bc7eb3b2f8fe2a079af825bce"
+      },
+      {
+        "role": "compatibility_marker_hooks",
+        "path": "vllm/utils/nvtx_pytorch_hooks.py",
+        "sha256": "e9711444f33242ce1864d6a32d051bbf0ba0b37b5f17965de6e5dbba0c0c75ff"
+      },
+      {
+        "role": "compiled_module_marker_wrapper",
+        "path": "vllm/compilation/wrapper.py",
+        "sha256": "b4dca93456e945ce8231e9a954792c8f687d5d48b427ed38bfb96011015d4090"
+      },
+      {
+        "role": "service_launcher",
+        "path": "scripts/serve_cscc_dp2.sh",
+        "sha256": "233bb2ce6fee3654bc870e37e65b7ecf4de6874cb6c7fd1a6bd5687a40783699"
+      },
+      {
+        "role": "benchmark_launcher",
+        "path": "scripts/bench_cscc_multi_request.sh",
+        "sha256": "9b5e02116911729e901077866389e448c0e4a055e8bb901ed160dcdc7664a595"
+      },
+      {
+        "role": "accelerator_environment",
+        "path": "scripts/cscc_gfx936_env.sh",
+        "sha256": "58d483450c23e9c4fa87fb981b5e63cf4babf5e8d230fe93e400563596dfc18a"
+      },
+      {
+        "role": "dp2_design_contract",
+        "path": "docs/cscc/DP2_MULTI_REQUEST.md",
+        "sha256": "f83ebea84fd570908be0df58255eca371ad4c28c4dc9d70ec3db0401b1143569"
+      }
+    ]
+  },
+  "project_skill": {
+    "name": "qwen-dcu-fx-process-nvtx-instrumentation",
+    "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/skills/qwen-dcu-fx-process-nvtx-instrumentation/SKILL.md",
+    "sha256": "8434eaee5eceaa22c88d527c114f226f06b33862f27b7ae3e3abbd4145435463"
+  },
+  "text_migrations": [
+    {
+      "source": "the VisiPrune workspace and representative full-eager experiment identity",
+      "destination": "the immutable pra2026-bh408-gqa-page784-k5120-batch8 Qwen3.5-27B vLLM checkout at commit 2b4b2119ae3cc2c4c626dc5690ef9593c1477f66",
+      "reason": "Bind the instrumentation producer to the only plan-authorized project and source state."
+    },
+    {
+      "source": "generic PyTorch model and candidate functions discovered by source search",
+      "destination": "GPUModelRunner._model_forward, Qwen3_5DecoderLayer instances using Qwen3NextDecoderLayer.forward, Qwen3_5GatedDeltaNet.forward, Qwen3NextAttention.forward, and the reached norm/MLP semantic children",
+      "reason": "Preserve the fallback skill's process-question-first method while binding the smallest real Qwen3.5 runtime boundaries."
+    },
+    {
+      "source": "a fixed positional token-tensor assumption",
+      "destination": "current-signature inspection followed by fail-closed input_ids, inputs_embeds, or separately validated positional-slot resolution against the R01 phase/q_len/kv_len grid",
+      "reason": "Match the pinned GPUModelRunner/model call signatures without accepting an arbitrary tensor."
+    },
+    {
+      "source": "one short fixed-input request and one selected accelerator",
+      "destination": "the exact eight ordered 16-32K requests at concurrency eight, infinite rate, 1024 output tokens, two excluded warmups, deterministic sampling, and the complete dual-DCU DP2 topology",
+      "reason": "Apply the authoritative trace profile and forbid single-device promotion."
+    },
+    {
+      "source": "implicit single-process device identity",
+      "destination": "world size two with TP1, PP1, DP2 mp, rank 0 on physical DCU 0 and rank 1 on physical DCU 1, retained in every FX/instrumentation artifact",
+      "reason": "Make every rank and native device independently auditable."
+    },
+    {
+      "source": "fixed /workspace source, experiment, backup, output, and report paths",
+      "destination": "read-only target source plus scheduler-assigned runtime_artifact_root for helpers and business outputs and runtime_handoff_output for the scheduler record",
+      "reason": "Remove obsolete paths, keep attempts isolated, and preserve scheduler/business separation."
+    },
+    {
+      "source": "profile_visprune_single_request.py, run_nsys_layer_profile_single_request.sh, and report-generator paths",
+      "destination": "hash-recorded artifact-local batch8 FX, reversible wrapper, HIPTX adapter-sidecar, and static-validation helpers, with profiling/report production delegated to R03",
+      "reason": "Bind tools to R02's producer-only responsibility without executing or modifying the target checkout."
+    },
+    {
+      "source": "generic NVTX/CUDA operational marker wording",
+      "destination": "HIPTX/ROCTX as the native marker backend, with torch.cuda.nvtx and nvtx_range_name retained only as compatibility API/schema vocabulary",
+      "reason": "Use the correct ROCm/DCU runtime binding without erasing compatibility fields required by Workflow 02."
+    },
+    {
+      "source": "broad visprune.fx_process prefix discovery",
+      "destination": "a current-R02 sidecar containing the ordered exact qwen_dcu.fx_process name multiset and multiplicities keyed by request, forward, layer occurrence, process/fragment, rank, and physical device",
+      "reason": "Prevent unrelated request/forward/context markers from contaminating the adapter measurement set."
+    },
+    {
+      "source": "generic module hooks keyed by one qualified name",
+      "destination": "reversible wrappers deduplicated by (module object identity, wrapper semantic) while recording all alias paths and computing counts from declared layer occurrences",
+      "reason": "Prevent shared modules such as rotary embeddings from producing stacked duplicate events."
+    },
+    {
+      "source": "default FX tracing assumptions and a single process graph",
+      "destination": "separate shallow/deep linear-attention and full-attention evidence with source-preserving setitem and fixed-rank Proxy len/iteration semantics or audited leaf boundaries",
+      "reason": "Trace the real Qwen3.5 decoder source without fabricating a graph after Proxy failures."
+    },
+    {
+      "source": "generic boundary inventory",
+      "destination": "the Workflow 02 process/fragment schema with ordered rows, shared aggregation_key fragments, FX/source mapping, expected kernel families, native adapter names, and explicit unresolved/ambiguous status",
+      "reason": "Produce the exact business contract consumed by the later attribution stage."
+    },
+    {
+      "source": "current VisiPrune FX artifacts and a backup handoff as potential evidence",
+      "destination": "fresh R01-bound Qwen DP2 selections and R02 FX/instrumentation artifacts; workload_profile contributes only allowed taxonomy, schemas, vocabulary, and reconstruction method",
+      "reason": "Forbid reuse of historical single-card traces, timings, mappings, handoffs, or measurement evidence."
+    },
+    {
+      "source": "fixed output/visipruner_full_eager_process_wise/FX_PROCESS_NVTX_INSTRUMENTATION_HANDOFF.md",
+      "destination": "runtime_artifact_root/handoff/FX_PROCESS_NVTX_INSTRUMENTATION_HANDOFF.md with the exact inherited headings and compatibility columns but a prominent HIPTX/ROCTX native-backend declaration",
+      "reason": "Preserve the Workflow 02 handoff interface while rebinding location and operational vocabulary."
+    },
+    {
+      "source": "profiler capture, process timing, kernel attribution, and launch-order production in the same workflow text",
+      "destination": "a downstream R03 interface recorded in the R02 business handoff; R02 stops after FX/instrumentation/equivalence validation and runs no profiler",
+      "reason": "Honor the plan's instrumentation-producer-only stage boundary."
+    },
+    {
+      "source": "optional jq/rg checks as possible runtime dependencies",
+      "destination": "Python standard-library implementations for all formal ledger, JSON/schema, source, inventory, and SHA-256 validation, with jq/rg optional only",
+      "reason": "Make missing interactive tools non-fatal and prevent unnecessary model reruns."
+    },
+    {
+      "source": "standalone instrumentation with no serial scheduler contract",
+      "destination": "R02 on workflow01-10-fresh-e2e consuming the exact same-run R01 handoff and immutable ledger prefix, writing separate business/scheduler outputs, and advancing only after complete validation",
+      "reason": "Bind the migrated capability to the required serial runtime lineage and handoff gate."
+    }
+  ],
+  "uncovered_constraints_packaged": [
+    "R02 validates the same-run R01 handoff, its output hashes, and a cumulative runtime ledger containing exactly the R01 prefix before runtime work, then preserves those hashes without editing predecessor state.",
+    "The full batch8_concurrent_requests contract is explicit: eight ordered 16-32K requests, concurrency eight, infinite request rate, 1024 output tokens each, two excluded warmups, temperature zero, and ignored EOS.",
+    "Every R02 execution and artifact preserves physical DCUs 0 and 1, DP ranks 0 and 1, rank 0 to device 0, rank 1 to device 1, world size two, TP1, PP1, DP2 mp, and the no-single-device-promotion gate.",
+    "Formal runtime validation has Python standard-library implementations; missing jq or rg is not a failure and never authorizes a model rerun.",
+    "The model-forward wrapper inspects the current signature and validates input_ids, inputs_embeds, or an explicitly proven positional slot against the SAME_INPUT phase/q_len/kv_len grid.",
+    "Linear-attention and full-attention receive separate shallow and deep FX evidence; output-buffer slice assignment and dynamic view shape expansion require source-preserving Proxy semantics or audited leaf boundaries, never fabricated graphs.",
+    "The Workflow 02 Process Range Inventory retains every required leading field, uses fragment rows with shared aggregation keys for cross-function processes, and exposes unresolved or ambiguous mappings.",
+    "HIPTX/ROCTX is native while NVTX names remain only compatibility vocabulary; the adapter is guarded, balanced, non-synchronizing, and records small joinable metadata.",
+    "The current R02 sidecar defines an ordered exact adapter-name multiset and multiplicities; broad prefixes and context markers such as qwen_dcu.generate_total cannot enter the measurement set.",
+    "Wrappers are installed once per module identity and semantic role while every alias path and declared layer index is retained; expected counts follow layer occurrences, not unique bindings.",
+    "Every failed FX or equivalence attempt is isolated under attempts/fx_trace_failed_NNN with its logs, partial outputs, error, source hashes, and cleanup status; fixes remain artifact-local.",
+    "Output equivalence, guard-off zero events, exact guard-on counts, marker nesting, full rank/device coverage, wrapper cleanup, unchanged source AST/files, and a clean target worktree all gate the business handoff.",
+    "The compatibility-named Workflow 02 business handoff has all exact required headings, carries current FX/source/sidecar/equivalence hashes, and prominently identifies HIPTX/ROCTX as operational.",
+    "The downstream interface records the fixed hipprof environment setup, libLLVM launch-error interpretation, case-insensitive pftrace capability check, exact-name selection, and raw DB/PFTrace/auxiliary allowlist without performing any profiler work in R02.",
+    "A post-capture raw-inventory defect belongs to R03 offline repair with byte preservation and cannot cause R02 to run or rerun capture.",
+    "R02 produces no process timing, launch-owned kernel attribution, GPU launch order, or performance report; those remain gated R03 responsibilities.",
+    "Business artifacts stay below runtime_artifact_root; one scheduler handoff is written only to runtime_handoff_output after all checks pass; R03 cannot start before validation."
+  ],
+  "runtime_contract": {
+    "branch": "workflow01-10-fresh-e2e",
+    "runtime_goal": "R02",
+    "runtime_predecessors": [
+      "R01"
+    ],
+    "required_handoff_fields": [
+      "status",
+      "execution_status",
+      "evidence_status",
+      "coverage_target_met",
+      "runtime_branch",
+      "runtime_goal",
+      "runtime_run_id",
+      "trace_profile_sha256",
+      "cumulative_runtime_ledger_sha256",
+      "predecessor_handoff_sha256",
+      "business_handoff_sha256",
+      "adapter_sidecar_sha256",
+      "artifact_manifest_sha256"
+    ],
+    "runtime_artifact_root": "scheduler-assigned",
+    "runtime_handoff_output": "scheduler-assigned",
+    "advance_only_after": "complete"
+  },
+  "profile_binding": {
+    "workload": {
+      "mode": "batch8_concurrent_requests",
+      "dataset_path": "/home/testdata/16-32K_throughput.jsonl",
+      "request_count": 8,
+      "max_concurrency": 8,
+      "request_rate": "inf",
+      "output_tokens_per_request": 1024,
+      "warmup_requests": 2,
+      "temperature": 0,
+      "ignore_eos": true
+    },
+    "topology": {
+      "accelerator": "ROCm/DCU/HIP gfx936",
+      "physical_devices": [
+        0,
+        1
+      ],
+      "hip_visible_devices": "0,1",
+      "cuda_visible_devices": "0,1",
+      "world_size": 2,
+      "tensor_parallel_size": 1,
+      "pipeline_parallel_size": 1,
+      "data_parallel_size": 2,
+      "data_parallel_backend": "mp",
+      "rank_to_physical_device": {
+        "0": 0,
+        "1": 1
+      }
+    },
+    "coverage_gate": {
+      "required_physical_devices": [
+        0,
+        1
+      ],
+      "required_dp_ranks": [
+        0,
+        1
+      ],
+      "required_measured_request_count": 8,
+      "require_per_rank_and_per_device_artifacts": true,
+      "forbid_single_device_promotion": true
+    }
+  },
+  "adapt_artifacts": [
+    {
+      "kind": "migration_validation",
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-20260822T000000Z/artifacts/A02/migration_validation.json",
+      "sha256": "dee91cd83736920e3bbdcc350a88035520cf083b85069274d3027d2480f9a002"
+    }
+  ],
+  "validation": {
+    "skill_structure_valid": true,
+    "serial_runtime_contract_valid": true,
+    "source_hashes_valid": true,
+    "content_migration_valid": true,
+    "trace_profile_hash_valid": true,
+    "complete_workload_and_topology_valid": true,
+    "required_profile_literals_valid": true,
+    "forbidden_profile_literals_absent": true,
+    "target_binding_valid": true,
+    "target_unmodified_and_clean": true,
+    "adapt_ledger_valid": true,
+    "predecessor_condition_valid": true,
+    "semantic_fallback_delta_packaged": true,
+    "workflow_business_handoff_schema_valid": true,
+    "hiptx_and_equivalence_contract_valid": true,
+    "producer_only_stage_boundary_valid": true,
+    "adapt_output_scope_valid": true,
+    "migration_validation_artifact_valid": true
+  }
+}

@@ -1,0 +1,209 @@
+{
+  "schema_version": 1,
+  "adapt_run_id": "batch8-dp2-adapt-20260822T000000Z",
+  "adapt_goal": "A08",
+  "mode": "synthesize_uncovered",
+  "validated_at": "2026-08-22T05:26:18Z",
+  "status": "pass",
+  "migration_only": true,
+  "inputs": {
+    "workflow": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/05_workflow04_guided_selective_process_trace_and_resource_gap_analysis.md",
+      "sha256": "d4ed4a1a265c79b0579c7f695f9c66585ef9588f14ee3aea072707097eb77d39",
+      "fully_read": true
+    },
+    "reference_skills": [],
+    "reference_skill_resolution": {
+      "required": false,
+      "reason": "The pinned A08 plan declares synthesize_uncovered with no requested or resolved reference skill inputs.",
+      "all_assigned_text_fully_read": true,
+      "invoked_as_capability": false
+    },
+    "trace_profile": {
+      "profile_id": "batch8-dual-dcu-dp2",
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/configs/trace_targets/batch8_dual_dcu_dp2.json",
+      "sha256": "3b4c952063f48ae662b48b5ce9d8fd76e0ac4d74e170bdb1839ae8b1aaa23cce",
+      "fully_read": true
+    },
+    "adapt_goal_document": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/goals/A08.md",
+      "sha256": "9285480d9349b81e6cd2f5bcdf720cfc0f336854ee59f516a9ad526cece96cde",
+      "fully_read": true
+    },
+    "adapt_common_goal": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/goals/A00.md",
+      "sha256": "7be4381fd55f52016b6d0bc3710dd1da03ed3df82f9e44415d51ec6eb16dc217",
+      "fully_read": true
+    },
+    "plan": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/manifests/adapt_goals.json",
+      "sha256": "bc58cc41846454acc4f6627fdd97a1cb922434e9f479e64aab102a3c8a2152e2",
+      "a08_entry_valid": true
+    },
+    "adapt_skill": {
+      "name": "adapt-workflows",
+      "path": "/public/home/tangyu408/.codex/skills/adapt-workflows/SKILL.md",
+      "sha256": "0f0bcb1ccce7a281915fc39455ecfa1da9bcd0878cb139209cb83829a9e59aaf",
+      "fully_read": true
+    },
+    "adapt_contracts": [
+      {
+        "path": "/public/home/tangyu408/.codex/skills/adapt-workflows/references/adapt-goal-contract.md",
+        "sha256": "040137eef9c3f7a6e6e6581b29926e34297f757b3816bb1577a4de764e9a81de",
+        "fully_read": true
+      },
+      {
+        "path": "/public/home/tangyu408/.codex/skills/adapt-workflows/references/project-skill-runtime-contract.md",
+        "sha256": "bc260e902a5a443a7e0e622a73eb0b665d69bbfffe3c3559e58e5c6d110ff197",
+        "fully_read": true
+      }
+    ]
+  },
+  "adapt_prefix": {
+    "ledger": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-20260822T000000Z/adapt_handoff_ledger.json",
+      "sha256": "7958e17624b6dfde741b38a6db8c36ebb2f960675778e3cb5f401bc1b5b0910d",
+      "validated_order": [
+        "A01",
+        "A02",
+        "A03",
+        "A04",
+        "A05",
+        "A06",
+        "A07"
+      ],
+      "all_handoff_hashes_valid": true,
+      "all_project_skill_hashes_valid": true,
+      "all_status_complete": true,
+      "all_execution_flags_false": true,
+      "modified": false
+    },
+    "immediate_predecessor": {
+      "adapt_goal": "A07",
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-20260822T000000Z/handoffs/A07.json",
+      "sha256": "8b2fcaba441b20a9727d6984902e89c4a16084e97ad89d2031e5a892065edb1e",
+      "status": "complete",
+      "fully_read": true,
+      "modified": false
+    }
+  },
+  "target_binding": {
+    "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/pra2026-bh408-gqa-page784-k5120-batch8",
+    "git_commit": "2b4b2119ae3cc2c4c626dc5690ef9593c1477f66",
+    "git_branch": "repro-gqa-page784-k5120-batch8-final",
+    "git_clean": true,
+    "inspection_only": true,
+    "target_modified": false,
+    "project": "Qwen3.5-27B on the pinned vLLM BF16 ROCm/DCU/HIP gfx936 checkout",
+    "runtime_binding": "Prospective R08 same-lineage bounded targeted HIPProf PMC replay and FX-visible traffic/resource attachment; R07 remains the only observed latency clock.",
+    "source_anchor_hashes_valid": true
+  },
+  "profile_binding": {
+    "workload": {
+      "mode": "batch8_concurrent_requests",
+      "dataset_path": "/home/testdata/16-32K_throughput.jsonl",
+      "request_count": 8,
+      "max_concurrency": 8,
+      "request_rate": "inf",
+      "output_tokens_per_request": 1024,
+      "warmup_requests": 2,
+      "temperature": 0,
+      "ignore_eos": true
+    },
+    "topology": {
+      "accelerator": "ROCm/DCU/HIP gfx936",
+      "physical_devices": [
+        0,
+        1
+      ],
+      "world_size": 2,
+      "tensor_parallel_size": 1,
+      "pipeline_parallel_size": 1,
+      "data_parallel_size": 2,
+      "data_parallel_backend": "mp",
+      "rank_to_physical_device": {
+        "0": 0,
+        "1": 1
+      }
+    },
+    "required_profile_literals_present": true,
+    "forbidden_profile_literals_absent": true,
+    "complete_dp2_coverage_gate_present": true
+  },
+  "project_skill": {
+    "name": "qwen-dcu-workflow05-targeted-hardware-gap-analysis",
+    "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/skills/qwen-dcu-workflow05-targeted-hardware-gap-analysis/SKILL.md",
+    "sha256": "91a9d5bf6a0c9630c0ab75775f1426457e6e4f91d2c62a08fd6506a886e84da6",
+    "structure_valid": true,
+    "frontmatter_valid": true,
+    "focused_single_runtime_stage": true,
+    "serial_runtime_contract_valid": true,
+    "runtime_branch": "workflow01-10-fresh-e2e",
+    "runtime_goal": "R08",
+    "runtime_predecessors": [
+      "R01",
+      "R02",
+      "R03",
+      "R04",
+      "R05",
+      "R06",
+      "R07"
+    ],
+    "advance_only_after": "complete"
+  },
+  "content_validation": {
+    "project_model_runtime_device_bindings_valid": true,
+    "paths_tools_artifacts_and_evidence_migrated": true,
+    "same_run_r01_r07_prefix_contract_valid": true,
+    "r02_root_binding_predevice_regression_packaged": true,
+    "project_relative_path_resolution_regression_packaged": true,
+    "missing_parent_and_launcher_execution_regressions_packaged": true,
+    "r06_bounded_family_plan_contract_valid": true,
+    "hipprof_literal_to_token_transport_packaged": true,
+    "collector_filter_effectiveness_probe_packaged": true,
+    "complete_batch8_dp2_replay_contract_valid": true,
+    "per_rank_and_per_device_identity_valid": true,
+    "exact_replay_attribution_chain_valid": true,
+    "fx_visible_traffic_resource_model_valid": true,
+    "r07_observed_and_r08_replay_boundary_valid": true,
+    "device_capabilities_and_unavailable_state_valid": true,
+    "accepted_prefix_suffix_resume_contract_valid": true,
+    "immutable_attempt_and_normalizer_repair_contract_valid": true,
+    "execution_evidence_coverage_state_separation_valid": true,
+    "formal_turn_liveness_and_scoped_interruption_valid": true,
+    "business_output_and_scheduler_handoff_separation_valid": true,
+    "required_logical_outputs_valid": true,
+    "r09_advance_gate_valid": true
+  },
+  "output_scope": {
+    "declared_skill_directory_only": true,
+    "adapt_artifact_root_only": true,
+    "adapt_handoff_output_only": true,
+    "predecessor_skills_handoffs_and_ledger_unchanged": true,
+    "trace_target_unchanged": true,
+    "handoff_absent_before_goal": true
+  },
+  "execution_audit": {
+    "workflow_execution_performed": false,
+    "project_skill_execution_performed": false,
+    "model_execution_performed": false,
+    "gpu_dcu_execution_performed": false,
+    "profiler_execution_performed": false,
+    "trace_collection_performed": false,
+    "pmc_collection_performed": false,
+    "report_generation_performed": false,
+    "generated_project_skill_invoked": false
+  },
+  "validation": {
+    "skill_structure_valid": true,
+    "serial_runtime_contract_valid": true,
+    "source_hashes_valid": true,
+    "content_migration_valid": true,
+    "adapt_prefix_valid": true,
+    "immediate_predecessor_valid": true,
+    "target_binding_valid": true,
+    "adapt_output_scope_valid": true,
+    "workflow_execution_absent": true,
+    "project_skill_execution_absent": true
+  }
+}

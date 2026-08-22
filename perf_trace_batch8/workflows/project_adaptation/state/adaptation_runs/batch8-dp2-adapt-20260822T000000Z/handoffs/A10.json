@@ -1,0 +1,436 @@
+{
+  "schema_version": 1,
+  "adapt_run_id": "batch8-dp2-adapt-20260822T000000Z",
+  "adapt_goal": "A10",
+  "status": "complete",
+  "mode": "synthesize_uncovered",
+  "workflow_execution_performed": false,
+  "project_skill_execution_performed": false,
+  "completed_at": "2026-08-22T06:12:10Z",
+  "inputs": {
+    "trace_profile": {
+      "profile_id": "batch8-dual-dcu-dp2",
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/configs/trace_targets/batch8_dual_dcu_dp2.json",
+      "sha256": "3b4c952063f48ae662b48b5ce9d8fd76e0ac4d74e170bdb1839ae8b1aaa23cce"
+    },
+    "workflow_files": [
+      {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/05_workflow04_guided_selective_process_trace_and_resource_gap_analysis.md",
+        "sha256": "d4ed4a1a265c79b0579c7f695f9c66585ef9588f14ee3aea072707097eb77d39"
+      }
+    ],
+    "reference_skills": [],
+    "reference_skill_resolution": {
+      "required": false,
+      "reason": "The pinned A10 plan declares synthesize_uncovered and provides no requested or resolved reference skill inputs.",
+      "all_assigned_text_fully_read": true,
+      "invoked_as_capability": false
+    },
+    "previous_adapt_handoff": {
+      "adapt_goal": "A09",
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-20260822T000000Z/handoffs/A09.json",
+      "sha256": "3f0da00944bbc7db3dbf2dd1682f6a92af08d4c2c6334b66d87bdc87d0268f41",
+      "status": "complete"
+    },
+    "cumulative_adapt_ledger": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-20260822T000000Z/adapt_handoff_ledger.json",
+      "sha256": "cdcd6392aafb23e886544c36a615fb82b6fbc0ade4766ebfe084b97df30e22b2",
+      "validated_prefix": [
+        "A01",
+        "A02",
+        "A03",
+        "A04",
+        "A05",
+        "A06",
+        "A07",
+        "A08",
+        "A09"
+      ]
+    },
+    "adapt_goal_document": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/goals/A10.md",
+      "sha256": "50591bc12fbfa8431687ab564a3672d1fd7db527b4b215d5a5a18db36809519b"
+    },
+    "adapt_common_goal": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/goals/A00.md",
+      "sha256": "7be4381fd55f52016b6d0bc3710dd1da03ed3df82f9e44415d51ec6eb16dc217"
+    },
+    "plan": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/manifests/adapt_goals.json",
+      "sha256": "bc58cc41846454acc4f6627fdd97a1cb922434e9f479e64aab102a3c8a2152e2"
+    },
+    "adapt_skill": {
+      "name": "adapt-workflows",
+      "path": "/public/home/tangyu408/.codex/skills/adapt-workflows/SKILL.md",
+      "sha256": "0f0bcb1ccce7a281915fc39455ecfa1da9bcd0878cb139209cb83829a9e59aaf"
+    },
+    "adapt_contracts": [
+      {
+        "path": "/public/home/tangyu408/.codex/skills/adapt-workflows/references/adapt-goal-contract.md",
+        "sha256": "040137eef9c3f7a6e6e6581b29926e34297f757b3816bb1577a4de764e9a81de"
+      },
+      {
+        "path": "/public/home/tangyu408/.codex/skills/adapt-workflows/references/project-skill-runtime-contract.md",
+        "sha256": "bc260e902a5a443a7e0e622a73eb0b665d69bbfffe3c3559e58e5c6d110ff197"
+      }
+    ]
+  },
+  "target_binding": {
+    "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/pra2026-bh408-gqa-page784-k5120-batch8",
+    "git_commit": "2b4b2119ae3cc2c4c626dc5690ef9593c1477f66",
+    "git_branch": "repro-gqa-page784-k5120-batch8-final",
+    "git_clean": true,
+    "inspection_only": true,
+    "target_modified": false,
+    "project": "Qwen3.5-27B on the pinned source-only vLLM BF16 ROCm/DCU/HIP gfx936 checkout",
+    "runtime": "Prospective CPU-only R10 same-lineage lossless timeline rendering, self-contained offline acceptance, source-lineage sealing, and independent browser/content audit; R07 is the sole observed clock, R08 supplies replay-projected attributes only, and R09 owns the twelve normalized tables.",
+    "target_evidence": [
+      {
+        "role": "qwen35_model_and_linear_attention",
+        "path": "vllm/model_executor/models/qwen3_5.py",
+        "sha256": "f3c0479dbc37a8794c4d6b1c4c01906ae341b3276ed43e588c17d92b1ddb94d6"
+      },
+      {
+        "role": "decoder_and_full_attention",
+        "path": "vllm/model_executor/models/qwen3_next.py",
+        "sha256": "5a14b14a40fcf6382f9a20be4ca0f850b2b19b2840a3c57488821f0952d96053"
+      },
+      {
+        "role": "model_execution_boundary",
+        "path": "vllm/v1/worker/gpu_model_runner.py",
+        "sha256": "d63424d3cbe81bfaa2c0967a5c81b8c980c2d76bc7eb3b2f8fe2a079af825bce"
+      },
+      {
+        "role": "compatibility_marker_hooks",
+        "path": "vllm/utils/nvtx_pytorch_hooks.py",
+        "sha256": "e9711444f33242ce1864d6a32d051bbf0ba0b37b5f17965de6e5dbba0c0c75ff"
+      },
+      {
+        "role": "compiled_module_marker_wrapper",
+        "path": "vllm/compilation/wrapper.py",
+        "sha256": "b4dca93456e945ce8231e9a954792c8f687d5d48b427ed38bfb96011015d4090"
+      },
+      {
+        "role": "service_launcher",
+        "path": "scripts/serve_cscc_dp2.sh",
+        "sha256": "233bb2ce6fee3654bc870e37e65b7ecf4de6874cb6c7fd1a6bd5687a40783699"
+      },
+      {
+        "role": "benchmark_launcher",
+        "path": "scripts/bench_cscc_multi_request.sh",
+        "sha256": "9b5e02116911729e901077866389e448c0e4a055e8bb901ed160dcdc7664a595"
+      },
+      {
+        "role": "accelerator_environment",
+        "path": "scripts/cscc_gfx936_env.sh",
+        "sha256": "58d483450c23e9c4fa87fb981b5e63cf4babf5e8d230fe93e400563596dfc18a"
+      },
+      {
+        "role": "dp2_design_contract",
+        "path": "docs/cscc/DP2_MULTI_REQUEST.md",
+        "sha256": "f83ebea84fd570908be0df58255eca371ad4c28c4dc9d70ec3db0401b1143569"
+      }
+    ]
+  },
+  "project_skill": {
+    "name": "qwen-dcu-workflow05-trace-visualization-reporting",
+    "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/skills/qwen-dcu-workflow05-trace-visualization-reporting/SKILL.md",
+    "sha256": "980f01b2f76bd5cdd900605f87c9b331b9132ce16fab2196123e0ef3933a72a0"
+  },
+  "text_migrations": [
+    {
+      "source": "a generic Workflow 05 visualization/reporting stage with placeholder project identity",
+      "destination": "runtime Goal R10 for Qwen3.5-27B on the immutable source-only vLLM checkout at commit 2b4b2119ae3cc2c4c626dc5690ef9593c1477f66",
+      "reason": "Bind the project, model, branch, terminal runtime stage, and source identity to the plan-authorized target."
+    },
+    {
+      "source": "generic accelerator, marker, runtime, trace, and counter vocabulary",
+      "destination": "ROCm/DCU/HIP gfx936 with HIPTX/ROCTX, HIP runtime, HIPOPS, and HIPProf, while retaining CUDA or NVTX names only as labeled compatibility schema",
+      "reason": "Use the inspected project and native DCU evidence vocabulary without relabeling compatibility APIs as native evidence."
+    },
+    {
+      "source": "an unspecified request or batch inferred from a directory name",
+      "destination": "the hash-pinned row-zero 16-32K workload with two warmups, eight measured requests, concurrency eight, infinite request rate, 1024 output tokens, deterministic decoding, and ignored EOS",
+      "reason": "Make the exact workload profile and measured denominator authoritative."
+    },
+    {
+      "source": "serial stage order interpreted as reduced accelerator coverage",
+      "destination": "the full dual-card identity with devices 0 and 1, ranks 0 and 1, mapping 0-to-0 and 1-to-1, world size two, TP1, PP1, and DP2 mp preserved in every page, manifest, audit, and handoff",
+      "reason": "R10 is CPU-only but must preserve the complete upstream DP2 identity and forbid one-card promotion."
+    },
+    {
+      "source": "ambient, historical, backup, external-run, prior one-card, or separately generated visualization inputs",
+      "destination": "the exact hash-validated same-run R01-R09 ledger prefix and the R09 analysis plus its sealed R07/R08 evidence in one fresh lineage",
+      "reason": "Preserve fresh_no_prior_runtime_reuse and same_run_same_request semantics."
+    },
+    {
+      "source": "generic timing and replay timestamps used interchangeably",
+      "destination": "R07 non-replay request/process/runtime/queue/kernel time as the sole observed axis, with R08 PMC/traffic/resource fields shown only as replay_projected attributes",
+      "reason": "Prevent replay duration from contaminating timeline coordinates, latency, concurrency, launch-gap, or high-latency views."
+    },
+    {
+      "source": "loosely discovered analysis files or a partial table set",
+      "destination": "the exact R09 fresh_e2e_analysis manifest and all twelve hash-, size-, row-, schema-, lineage-, and coverage-validated normalized tables",
+      "reason": "Keep R09 as the deterministic analysis owner and reject an eleven-table or name-only input."
+    },
+    {
+      "source": "memory- or browser-limited timeline sampling, Top-N, fixed event budgets, or irreversible aggregation",
+      "destination": "a host budget of at least 128 GiB, all request/process events, two identity-paired display records per kernel, and the exact request plus process plus twice-kernel event formula",
+      "reason": "Preserve the complete full-resolution observed timeline without deleting source rows."
+    },
+    {
+      "source": "absolute nanoseconds converted through floating-point browser numbers",
+      "destination": "canonical decimal-string absolute time, integer-safe subtraction, exact request-relative nanoseconds, half-open intervals, and deterministic end-before-start ties",
+      "reason": "Prevent precision loss near 1.7e18 ns and preserve exact zoom/jump semantics."
+    },
+    {
+      "source": "a generic static timeline viewer",
+      "destination": "the lossless HTML with pointer-centered continuous zoom to 1 ns, pan, box/control zoom, reset, at least 100 view-history steps, six full-text filters, fit, exact jumps, full overlap inspection, and unbounded viewport listing",
+      "reason": "Package every workflow-required interaction without count caps or hidden events."
+    },
+    {
+      "source": "remotely hosted scripts, CDN assets, cloud viewers, network fetches, or upload-based inspection",
+      "destination": "one local index plus fully self-contained pages, standalone Perfetto JSON, static no-network inspection, and a network-denied local browser audit",
+      "reason": "Make offline acceptance reproducible from immutable local bytes."
+    },
+    {
+      "source": "colors or tracks that blur timing, utilization, hardware, derivation, and missing evidence",
+      "destination": "accessible textual and visual separation of observed R07 timing, observed live utilization, replay_projected R08 attributes, derived analysis, and unavailable/unknown evidence",
+      "reason": "Prevent replay-projected or unavailable evidence from being presented as observed timing."
+    },
+    {
+      "source": "optimization candidates shown as causality or achieved/predicted speedup",
+      "destination": "complete-denominator hypothesis views with thresholds, rule versions, joins, units, formulas, capability states, and explicit no-causality/no-speedup wording",
+      "reason": "Preserve the evidence boundary of the R09 opportunity classifications."
+    },
+    {
+      "source": "an informal set of report files",
+      "destination": "the ten exact Workflow 05 R10 deliverables, full_timeline_manifest, offline_acceptance_manifest, R10 source lineage, completion audit, and final artifact manifest under runtime_artifact_root",
+      "reason": "Give every artifact a stable path, hash, role, coverage, and validation owner."
+    },
+    {
+      "source": "cyclic or self-authenticating manifest claims",
+      "destination": "an acyclic sealing order from pages/trace to timeline manifest, browser result, offline manifest, source lineage, completion audit, final artifact manifest, and scheduler handoff",
+      "reason": "Make every recorded hash constructible and independently verifiable."
+    },
+    {
+      "source": "unsealed renderer changes and vague source provenance",
+      "destination": "R10_SOURCE_LINEAGE.json with every predecessor/input/tool/output hash, evidence class, display transform, invocation, attempt, and before/after stage-source delta",
+      "reason": "Preserve source lineage and stop the lineage on semantic changes."
+    },
+    {
+      "source": "builder self-declaration as acceptance",
+      "destination": "separate frozen builder, network-denied browser harness, and independent content auditor with immutable logs and recomputed denominators/hashes",
+      "reason": "Make offline interaction and content acceptance independently checkable."
+    },
+    {
+      "source": "partial output overwrite, in-place repair, or predecessor rerun after a CPU reporting defect",
+      "destination": "immutable attempt diagnostics, new report-repair roots, the same sealed R01-R09 bytes, and promotion only after a fresh independent audit",
+      "reason": "Preserve lineage and prevent partial reports or new measurements from entering a repair."
+    },
+    {
+      "source": "fixed, target-owned, predecessor-owned, or network-owned renderer/output paths",
+      "destination": "frozen artifact-local CPU tools and all business outputs under runtime_artifact_root plus one separate scheduler runtime_handoff_output",
+      "reason": "Protect the target, predecessor bytes, ledger, business artifacts, and handoff boundary."
+    },
+    {
+      "source": "a single completion flag treated as evidence sufficiency and final acceptance",
+      "destination": "separate status, execution_status, evidence_status, coverage_target_met, next_authorization_required, and fresh_e2e_evidence fields",
+      "reason": "Keep bounded stage termination distinct from complete offline acceptance."
+    }
+  ],
+  "uncovered_constraints_packaged": [
+    "R10 owns only the CPU-only self-contained visualization/reporting stage and consumes only the exact same-run R01-R09 prefix in workflow01-10-fresh-e2e.",
+    "The outer scheduler alone creates the formal R10 Goal; the project skill creates no nested Goal, invokes no Adapt or project skill, and creates no successor.",
+    "The pinned target is inspection-bound and immutable; target documentation and historical timings prove source bindings only and cannot populate R10.",
+    "The authoritative workload is row zero of the 16-32K dataset with two warmups and eight measured requests at concurrency eight, infinite request rate, and 1024 output tokens.",
+    "Every page, track, filter, tooltip, manifest, audit, lineage entry, and handoff retains devices 0 and 1, DP ranks 0 and 1, mapping 0-to-0 and 1-to-1, world size two, TP1, PP1, and DP2 mp.",
+    "The same-run cumulative ledger and all R01-R09 handoffs, transitive artifacts, run IDs, lineage IDs, request hashes, profile hashes, and topology fields are validated before rendering.",
+    "R10 consumes the exact twelve-table R09 manifest and sealed R07/R08 sources; it never rebuilds R09 tables or accepts name-only files.",
+    "R07 non-replay time is the sole observed request, process, runtime, queue, and kernel clock through R10; R08 replay timing is diagnostic only.",
+    "Observed R07 timing, observed live utilization, replay_projected R08 attributes, derived analysis, and unavailable/unknown evidence remain visibly and textually distinct.",
+    "Every R07 live-utilization sample, gap, anchor, uncertainty, availability state, and reason remains visible or queryable without interpolation, resampling, smoothing, imputation, zero fill, or unavailable-as-low claims.",
+    "The local viewing design assumes at least 128 GiB and forbids sampling, uniform selection, Top-N, fixed event budgets, hidden tails, lossy bins, or irreversible aggregation.",
+    "The full Perfetto count equals request rows plus process rows plus twice kernel rows; each kernel pair shares one exact observed interval and is never counted as two executions or additive duration.",
+    "Absolute nanoseconds remain canonical decimal strings, browser positions use integer-safe request-relative offsets, intervals are half-open, ties end before start, and the minimum viewport is no coarser than 1 ns.",
+    "The lossless page provides pointer-centered continuous zoom, pan, box/control zoom, reset, at least 100 history states, six full-text filters, fit, exact jumps, complete tracks and overlap lanes, uncapped overlap results, and uncapped viewport listings.",
+    "The required overview, lossless timeline, full Perfetto JSON, high-latency hardware view, concurrency/utilization view, index, two acceptance manifests, source-lineage record, and completion audit are all stable, hash-bound outputs.",
+    "The single local index and every page are self-contained with inline code/data and no CDN, remote asset, fetch, API, cloud upload, hosted viewer, dynamic install, or network service.",
+    "A separate network-denied local browser run proves all required interactions and records zero attempted network requests; missing browser capability yields insufficient evidence rather than a false acceptance.",
+    "R06 Perfetto, Plotly, and offline-display capability states are validated; unavailable optional packages require an artifact-local lossless fallback and never justify reduced events or remote dependencies.",
+    "High-latency and hardware pages preserve all ties, denominators, joins, units, formulas, capabilities, and unavailable reasons and never claim causality, measured speedup, or predicted speedup.",
+    "full_timeline_manifest.json seals R09 and all twelve table hashes, source/event counts, formula, flags, coordinate rules, page/trace hashes, evidence coverage, and lossless utilization accounting.",
+    "offline_acceptance_manifest.json seals the presentation payload, navigation, embedded data/code, interactions, network denial, evidence separation, tool provenance, and final evidence decision without self-hashing.",
+    "The manifest chain is acyclic: pages and trace precede timeline manifest, browser result precedes offline manifest, which precedes source lineage, completion audit, final artifact manifest, and scheduler handoff.",
+    "R10_SOURCE_LINEAGE.json seals every predecessor, input, source anchor, tool, invocation, display transform, stage-source delta, attempt/revision, evidence class, output, and no-device/no-external-execution declaration.",
+    "The frozen auditor independently recomputes paths, hashes, row/event conservation, time precision, evidence labels, interactions, self-containment, network denial, and absence of runtime/device/profiler/PMC execution.",
+    "Failed and partial builder/browser/auditor attempts are immutable and non-promotable; repairs use new report-repair roots and the same sealed R01-R09 bytes without any predecessor or device rerun.",
+    "Known large CPU builders/auditors require two consecutive fully stagnant five-minute observations before only a cmdline-verified scheduler-owned PID may be interrupted.",
+    "Business artifacts remain under runtime_artifact_root, the final artifact manifest excludes itself and the scheduler handoff, and the single scheduler handoff remains at runtime_handoff_output.",
+    "Execution completion, evidence sufficiency, coverage, explicit unavailability, and authorization remain separate; only complete evidence, full coverage, no remaining authorization, and fresh lineage support terminal acceptance.",
+    "The skill and this Adapt handoff are migration products and do not constitute R10, report generation, or performance-workflow execution."
+  ],
+  "runtime_contract": {
+    "branch": "workflow01-10-fresh-e2e",
+    "runtime_goal": "R10",
+    "runtime_predecessors": [
+      "R01",
+      "R02",
+      "R03",
+      "R04",
+      "R05",
+      "R06",
+      "R07",
+      "R08",
+      "R09"
+    ],
+    "required_handoff_fields": [
+      "status",
+      "execution_status",
+      "evidence_status",
+      "coverage_target_met",
+      "next_authorization_required",
+      "runtime_branch",
+      "runtime_goal",
+      "runtime_run_id",
+      "lineage_id",
+      "trace_profile_sha256",
+      "cumulative_runtime_ledger_sha256",
+      "r01_handoff_sha256",
+      "r02_handoff_sha256",
+      "r03_handoff_sha256",
+      "r04_handoff_sha256",
+      "r05_handoff_sha256",
+      "r06_handoff_sha256",
+      "r07_handoff_sha256",
+      "r08_handoff_sha256",
+      "r09_handoff_sha256",
+      "offline_acceptance_manifest_sha256",
+      "full_timeline_manifest_sha256",
+      "full_perfetto_trace_sha256",
+      "e2e_process_timeline_sha256",
+      "e2e_process_timeline_lossless_sha256",
+      "high_latency_process_hardware_timeline_sha256",
+      "concurrency_utilization_sha256",
+      "index_html_sha256",
+      "source_lineage_sha256",
+      "artifact_manifest_sha256",
+      "completion_audit_sha256"
+    ],
+    "runtime_artifact_root": "scheduler-assigned",
+    "runtime_handoff_output": "scheduler-assigned",
+    "advance_only_after": "complete",
+    "terminal_acceptance_gate": {
+      "execution_status": "complete",
+      "evidence_status": "complete",
+      "coverage_target_met": true,
+      "next_authorization_required": false,
+      "fresh_e2e_evidence_status": "complete",
+      "successor": null
+    }
+  },
+  "profile_binding": {
+    "workload": {
+      "mode": "batch8_concurrent_requests",
+      "dataset_path": "/home/testdata/16-32K_throughput.jsonl",
+      "request_count": 8,
+      "max_concurrency": 8,
+      "request_rate": "inf",
+      "output_tokens_per_request": 1024,
+      "warmup_requests": 2,
+      "temperature": 0,
+      "ignore_eos": true
+    },
+    "topology": {
+      "accelerator": "ROCm/DCU/HIP gfx936",
+      "physical_devices": [
+        0,
+        1
+      ],
+      "hip_visible_devices": "0,1",
+      "cuda_visible_devices": "0,1",
+      "world_size": 2,
+      "tensor_parallel_size": 1,
+      "pipeline_parallel_size": 1,
+      "data_parallel_size": 2,
+      "data_parallel_backend": "mp",
+      "rank_to_physical_device": {
+        "0": 0,
+        "1": 1
+      }
+    },
+    "coverage_gate": {
+      "required_physical_devices": [
+        0,
+        1
+      ],
+      "required_dp_ranks": [
+        0,
+        1
+      ],
+      "required_measured_request_count": 8,
+      "require_per_rank_and_per_device_artifacts": true,
+      "forbid_single_device_promotion": true
+    }
+  },
+  "adapt_artifacts": [
+    {
+      "kind": "migration_validation",
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-20260822T000000Z/artifacts/A10/migration_validation.json",
+      "sha256": "4ff90c21b5ccf51538d02406de515c3209a34e749c890352ba31774f032aaed7"
+    }
+  ],
+  "execution_audit": {
+    "model_execution_performed": false,
+    "gpu_dcu_execution_performed": false,
+    "profiler_execution_performed": false,
+    "trace_collection_performed": false,
+    "pmc_collection_performed": false,
+    "report_generation_performed": false,
+    "generated_project_skill_invoked": false
+  },
+  "validation": {
+    "skill_structure_valid": true,
+    "serial_runtime_contract_valid": true,
+    "source_hashes_valid": true,
+    "content_migration_valid": true,
+    "workflow_fully_read": true,
+    "reference_skill_inputs_empty_valid": true,
+    "reference_skill_text_only_valid": true,
+    "synthesize_uncovered_scope_valid": true,
+    "trace_profile_hash_valid": true,
+    "complete_workload_and_topology_valid": true,
+    "required_profile_literals_valid": true,
+    "forbidden_profile_literals_absent": true,
+    "target_binding_valid": true,
+    "target_source_anchor_hashes_valid": true,
+    "target_unmodified_and_clean": true,
+    "adapt_ledger_valid": true,
+    "predecessor_condition_valid": true,
+    "fresh_lineage_contract_valid": true,
+    "same_run_r01_r09_prefix_contract_valid": true,
+    "r07_unique_observed_clock_contract_valid": true,
+    "r08_replay_projected_attachment_boundary_valid": true,
+    "r09_twelve_table_input_contract_valid": true,
+    "lossless_full_resolution_timeline_contract_valid": true,
+    "integer_safe_timing_contract_valid": true,
+    "full_interaction_contract_valid": true,
+    "self_contained_offline_contract_valid": true,
+    "required_r10_deliverables_valid": true,
+    "full_timeline_manifest_contract_valid": true,
+    "offline_acceptance_manifest_contract_valid": true,
+    "acyclic_manifest_sealing_contract_valid": true,
+    "source_lineage_and_stage_delta_contract_valid": true,
+    "independent_browser_and_content_audit_contract_valid": true,
+    "immutable_attempt_and_cpu_repair_contract_valid": true,
+    "execution_evidence_coverage_state_separation_valid": true,
+    "formal_turn_liveness_contract_valid": true,
+    "business_output_and_handoff_separation_valid": true,
+    "terminal_acceptance_gate_valid": true,
+    "adapt_output_scope_valid": true,
+    "migration_validation_artifact_valid": true,
+    "handoff_absent_before_goal_valid": true,
+    "workflow_execution_absent": true,
+    "project_skill_execution_absent": true
+  }
+}

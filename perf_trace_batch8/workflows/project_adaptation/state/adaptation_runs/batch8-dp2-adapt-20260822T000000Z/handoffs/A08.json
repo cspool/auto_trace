@@ -1,0 +1,408 @@
+{
+  "schema_version": 1,
+  "adapt_run_id": "batch8-dp2-adapt-20260822T000000Z",
+  "adapt_goal": "A08",
+  "status": "complete",
+  "mode": "synthesize_uncovered",
+  "workflow_execution_performed": false,
+  "project_skill_execution_performed": false,
+  "completed_at": "2026-08-22T05:27:32Z",
+  "inputs": {
+    "trace_profile": {
+      "profile_id": "batch8-dual-dcu-dp2",
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/configs/trace_targets/batch8_dual_dcu_dp2.json",
+      "sha256": "3b4c952063f48ae662b48b5ce9d8fd76e0ac4d74e170bdb1839ae8b1aaa23cce"
+    },
+    "workflow_files": [
+      {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/05_workflow04_guided_selective_process_trace_and_resource_gap_analysis.md",
+        "sha256": "d4ed4a1a265c79b0579c7f695f9c66585ef9588f14ee3aea072707097eb77d39"
+      }
+    ],
+    "reference_skills": [],
+    "reference_skill_resolution": {
+      "required": false,
+      "reason": "The pinned A08 plan declares synthesize_uncovered and provides no requested or resolved reference skill inputs.",
+      "all_assigned_text_fully_read": true,
+      "invoked_as_capability": false
+    },
+    "previous_adapt_handoff": {
+      "adapt_goal": "A07",
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-20260822T000000Z/handoffs/A07.json",
+      "sha256": "8b2fcaba441b20a9727d6984902e89c4a16084e97ad89d2031e5a892065edb1e",
+      "status": "complete"
+    },
+    "cumulative_adapt_ledger": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-20260822T000000Z/adapt_handoff_ledger.json",
+      "sha256": "7958e17624b6dfde741b38a6db8c36ebb2f960675778e3cb5f401bc1b5b0910d",
+      "validated_prefix": [
+        "A01",
+        "A02",
+        "A03",
+        "A04",
+        "A05",
+        "A06",
+        "A07"
+      ]
+    },
+    "adapt_goal_document": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/goals/A08.md",
+      "sha256": "9285480d9349b81e6cd2f5bcdf720cfc0f336854ee59f516a9ad526cece96cde"
+    },
+    "adapt_common_goal": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/goals/A00.md",
+      "sha256": "7be4381fd55f52016b6d0bc3710dd1da03ed3df82f9e44415d51ec6eb16dc217"
+    },
+    "plan": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/manifests/adapt_goals.json",
+      "sha256": "bc58cc41846454acc4f6627fdd97a1cb922434e9f479e64aab102a3c8a2152e2"
+    },
+    "adapt_skill": {
+      "name": "adapt-workflows",
+      "path": "/public/home/tangyu408/.codex/skills/adapt-workflows/SKILL.md",
+      "sha256": "0f0bcb1ccce7a281915fc39455ecfa1da9bcd0878cb139209cb83829a9e59aaf"
+    },
+    "adapt_contracts": [
+      {
+        "path": "/public/home/tangyu408/.codex/skills/adapt-workflows/references/adapt-goal-contract.md",
+        "sha256": "040137eef9c3f7a6e6e6581b29926e34297f757b3816bb1577a4de764e9a81de"
+      },
+      {
+        "path": "/public/home/tangyu408/.codex/skills/adapt-workflows/references/project-skill-runtime-contract.md",
+        "sha256": "bc260e902a5a443a7e0e622a73eb0b665d69bbfffe3c3559e58e5c6d110ff197"
+      }
+    ]
+  },
+  "target_binding": {
+    "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/pra2026-bh408-gqa-page784-k5120-batch8",
+    "git_commit": "2b4b2119ae3cc2c4c626dc5690ef9593c1477f66",
+    "git_branch": "repro-gqa-page784-k5120-batch8-final",
+    "git_clean": true,
+    "inspection_only": true,
+    "target_modified": false,
+    "project": "Qwen3.5-27B on the pinned vLLM BF16 ROCm/DCU/HIP gfx936 checkout",
+    "runtime": "Prospective R08 same-lineage bounded HIPProf PMC replay and FX-visible traffic/resource attachment; R07 remains the only observed latency clock.",
+    "target_evidence": [
+      {
+        "role": "qwen35_model_and_linear_attention",
+        "path": "vllm/model_executor/models/qwen3_5.py",
+        "sha256": "f3c0479dbc37a8794c4d6b1c4c01906ae341b3276ed43e588c17d92b1ddb94d6"
+      },
+      {
+        "role": "decoder_and_full_attention",
+        "path": "vllm/model_executor/models/qwen3_next.py",
+        "sha256": "5a14b14a40fcf6382f9a20be4ca0f850b2b19b2840a3c57488821f0952d96053"
+      },
+      {
+        "role": "model_execution_boundary",
+        "path": "vllm/v1/worker/gpu_model_runner.py",
+        "sha256": "d63424d3cbe81bfaa2c0967a5c81b8c980c2d76bc7eb3b2f8fe2a079af825bce"
+      },
+      {
+        "role": "compatibility_marker_hooks",
+        "path": "vllm/utils/nvtx_pytorch_hooks.py",
+        "sha256": "e9711444f33242ce1864d6a32d051bbf0ba0b37b5f17965de6e5dbba0c0c75ff"
+      },
+      {
+        "role": "compiled_module_marker_wrapper",
+        "path": "vllm/compilation/wrapper.py",
+        "sha256": "b4dca93456e945ce8231e9a954792c8f687d5d48b427ed38bfb96011015d4090"
+      },
+      {
+        "role": "service_launcher",
+        "path": "scripts/serve_cscc_dp2.sh",
+        "sha256": "233bb2ce6fee3654bc870e37e65b7ecf4de6874cb6c7fd1a6bd5687a40783699"
+      },
+      {
+        "role": "benchmark_launcher",
+        "path": "scripts/bench_cscc_multi_request.sh",
+        "sha256": "9b5e02116911729e901077866389e448c0e4a055e8bb901ed160dcdc7664a595"
+      },
+      {
+        "role": "accelerator_environment",
+        "path": "scripts/cscc_gfx936_env.sh",
+        "sha256": "58d483450c23e9c4fa87fb981b5e63cf4babf5e8d230fe93e400563596dfc18a"
+      },
+      {
+        "role": "dp2_design_contract",
+        "path": "docs/cscc/DP2_MULTI_REQUEST.md",
+        "sha256": "f83ebea84fd570908be0df58255eca371ad4c28c4dc9d70ec3db0401b1143569"
+      }
+    ]
+  },
+  "project_skill": {
+    "name": "qwen-dcu-workflow05-targeted-hardware-gap-analysis",
+    "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/skills/qwen-dcu-workflow05-targeted-hardware-gap-analysis/SKILL.md",
+    "sha256": "91a9d5bf6a0c9630c0ab75775f1426457e6e4f91d2c62a08fd6506a886e84da6"
+  },
+  "text_migrations": [
+    {
+      "source": "a generic Workflow 05 targeted hardware stage with placeholder project identity",
+      "destination": "runtime Goal R08 for Qwen3.5-27B on the immutable vLLM checkout at commit 2b4b2119ae3cc2c4c626dc5690ef9593c1477f66",
+      "reason": "Bind the project, model, branch, runtime stage, and source identity to the plan-authorized target."
+    },
+    {
+      "source": "generic model, runtime, accelerator, and profiler vocabulary",
+      "destination": "Qwen3.5-27B BF16 under the pinned source-only vLLM tree and system ABI extension distribution on ROCm/DCU/HIP gfx936 with HIPTX/ROCTX, HIPOPS, and HIPProf",
+      "reason": "Use the inspected project and native DCU stack while retaining NVIDIA names only as labeled compatibility schema."
+    },
+    {
+      "source": "serial stage execution interpreted as a reduced accelerator topology",
+      "destination": "the hash-pinned batch8-dual-dcu-dp2 topology with native devices 0 and 1, ranks 0 and 1, mapping 0-to-0 and 1-to-1, world size two, TP1, PP1, and DP2 mp",
+      "reason": "Serial stages and serialized counter passes constrain ordering only; every evidence-acquiring replay preserves the full DP2 contract."
+    },
+    {
+      "source": "an ambiguous same-request replay",
+      "destination": "the fixed 16-32K row-zero contract with two warmups and eight measured requests at concurrency eight, infinite request rate, 1024 output tokens, deterministic decoding, and ignored EOS",
+      "reason": "Bind every replay pass to the complete authoritative workload without treating replay time as request latency."
+    },
+    {
+      "source": "ambient, historical, backup, external-run, or prior one-card evidence",
+      "destination": "the exact same-run R01-R07 ledger prefix, direct/transitive handoff hashes, R06 bounded family plan, and R07 observed clock in one fresh lineage",
+      "reason": "Preserve the fresh no-prior-runtime-reuse and same-run-same-request contracts."
+    },
+    {
+      "source": "predecessor paths resolved against the current R08 artifact directory",
+      "destination": "schema-owned resolution against the scheduler project root or owning predecessor root, including positive relative/absolute cases and a containment escape negative case",
+      "reason": "Prevent duplicated R08-relative prefixes and preserve predecessor ownership."
+    },
+    {
+      "source": "an R02 inventory paired with the current R08 business root",
+      "destination": "a hash-validated canonical R02 root plus contained inventory carried through mandatory R08_R02_ROOT, --r02-root, and --r02-inventory bindings, separate from --artifact-root",
+      "reason": "Package the canonical batch8 root-binding regression before every device, profiler, or model action."
+    },
+    {
+      "source": "strict canonicalization of an output parent before it exists and an unchecked launcher mode",
+      "destination": "lexical missing-parent containment followed by mkdir and canonical recheck, plus frozen launcher executable/interpreter/allowlist validation",
+      "reason": "Distinguish prelaunch path or permission defects from device replay failures."
+    },
+    {
+      "source": "full demangled kernel literals or regular expressions passed directly to HIPProf --kernel-name",
+      "destination": "a binary-equivalent balanced literal-to-collector-token transform, complete token-map regression, and full-literal analyzer/ownership identity",
+      "reason": "Bind HIPProf transport correctly without weakening byte-exact logical attribution."
+    },
+    {
+      "source": "an accepted filter option or environment variable treated as proof of collector filtering",
+      "destination": "a current model-free empirical filter-effectiveness probe and bounded-superset post-filtering when false",
+      "reason": "Make collector filtering an observed capability decision rather than an assumption."
+    },
+    {
+      "source": "generic or historically assumed hardware counters",
+      "destination": "a current gfx936/DCU capability manifest with native names, formulas, units, available/unavailable/unknown states, tool/environment hashes, and deterministic pass resolution",
+      "reason": "Prevent fabricated or silently substituted metrics."
+    },
+    {
+      "source": "replay order, duration, or name proximity used as hardware ownership",
+      "destination": "the exact R06 target to literal/token to R02 range to HIP launch to HIPOPS/PMC correlation to R03/R07 subsequence and rank/device attribution chain",
+      "reason": "Attach counters only to proven same-replay identities while retaining R07 as the observed clock."
+    },
+    {
+      "source": "a generic hardware summary detached from FX and evidence classes",
+      "destination": "an FX-visible traffic/resource model joining R02/R03/R05/R06/R07 identities with attributable R08 counters, formulas, units, availability, lineage, and per-rank/device provenance",
+      "reason": "Create the required traffic_resource_model without guessing or double counting nested/shared rows."
+    },
+    {
+      "source": "in-place retry, failed-attempt promotion, or full-stage rerun after an accepted capture prefix",
+      "destination": "immutable diagnostics, ordinary new-root recovery before any accepted capture, and same-root suffix-only recovery with new attempts after an accepted prefix",
+      "reason": "Preserve lineage, sealed plans, accepted bytes, cumulative cost, and exact retry authorization."
+    },
+    {
+      "source": "recapture of valid PMC raw bytes after a CPU normalizer timeout or defect",
+      "destination": "persistent pollable CPU normalization and immutable normalized-repair-NNN roots bound to capture-time manifests",
+      "reason": "Protect valid measurements and prevent partial CSV promotion."
+    },
+    {
+      "source": "replay attributes or replay duration presented as observed timing",
+      "destination": "explicit observed_r07, replay_projected, derived_static, and derived_from_observed_and_replay_projected evidence classes with false observed-timing collection/use fields",
+      "reason": "Keep the unique R07 latency axis separate from R08 hardware attributes."
+    },
+    {
+      "source": "fixed, ambient, or predecessor-owned tool, artifact, and handoff paths",
+      "destination": "artifact-local frozen R08 tools and business outputs under runtime_artifact_root plus one separate scheduler runtime_handoff_output",
+      "reason": "Protect the target, predecessors, ledger, business outputs, and scheduler handoff boundary."
+    },
+    {
+      "source": "a single completion flag treated as evidence sufficiency",
+      "destination": "separate status, execution_status, evidence_status, coverage_target_met, next_authorization_required, and nested fresh_e2e_evidence fields",
+      "reason": "Make R09 advancement depend on validated coverage and evidence rather than stage termination alone."
+    }
+  ],
+  "uncovered_constraints_packaged": [
+    "R08 owns only the targeted PMC and traffic/resource stage and consumes only the exact same-run R01-R07 prefix in workflow01-10-fresh-e2e.",
+    "The outer scheduler alone creates the formal R08 Goal; the project skill creates no nested Goal, invokes no Adapt or project skill, and starts no successor.",
+    "The pinned target is inspection-bound and immutable; Python source and system ABI extensions have separate provenance gates.",
+    "The authoritative workload is the row-zero 16-32K batch with two warmups and eight measured requests at concurrency eight, and every replay keeps that contract.",
+    "Every evidence-acquiring replay preserves physical devices 0 and 1, DP ranks 0 and 1, world size two, TP1, PP1, DP2 mp, native profiler identity, and per-rank/per-device artifacts.",
+    "R06's complete family inventory, selected bounded plan, literal bytes, selection/exclusion state, applicability, budgets, and counter prerequisites are independently revalidated before replay.",
+    "R07 non-replay request/process/runtime/kernel time is the only observed latency axis; all R08 replay counters and traffic/resource attributes remain replay_projected or explicitly derived.",
+    "A standalone CPU-only predevice gate validates source/profile/prefix hashes, project-relative path semantics, R02 root containment, launcher argv, legal missing parents, executable mode, frozen tools, and literal-to-token production behavior.",
+    "R02_R08 path separation is explicit: mandatory R08_R02_ROOT and byte-exact --r02-root/--r02-inventory never reuse the R08 artifact root.",
+    "The CPU gate, formal device/capability preflight, and replay are separate tool calls with sealed checkpoints.",
+    "HIPProf receives a binary-equivalent simplified collector token; plans, ownership, analysis, and the model retain the exact full demangled literal.",
+    "Token collisions or empirically ineffective filtering create bounded supersets whose non-target raw rows are preserved and whose logical rows require full range/launch/correlation/subsequence post-filtering.",
+    "Current gfx936 counter capability records native names, formulas, units, tool/environment provenance, and explicit available, unavailable, or blocking unknown states.",
+    "Every accepted physical capture has exit zero, required nonempty DB/PMC outputs, eight successful measured requests, both ranks/devices, exact lifecycle counts, a sealed manifest, and device-release proof.",
+    "The exact attribution chain rejects token equality, substring matching, replay time overlap, row proximity, and shared raw membership as ownership evidence.",
+    "The traffic/resource model is FX-visible, formula- and unit-pinned, lineage-bound, per-rank/per-device, availability-aware, and independently audited for nested/shared-row conservation.",
+    "The canonical wrong-R02-root attempt and the raw-literal, escaped-literal, and regex HIPProf attempts remain diagnostic-only and cannot contribute counters or timing.",
+    "Prelaunch failures preserve the same logical capture ordinal and attempt name through a new immutable driver revision while retaining zero lifecycle counts and old diagnostics.",
+    "Before any accepted capture, ordinary scheduler resume allocates a new empty R08 root; after an accepted prefix, same-root suffix-only resume validates and skips the prefix and uses new empty attempts.",
+    "A blocked formal Goal never uses --continue-current-goal, never reruns A01-A11 or R01-R07, and never degrades to an accepted-prefix or full-stage rerun when integrity cannot be proven.",
+    "Valid raw captures are not repeated for CPU normalization/audit defects; partial outputs remain isolated and repairs use persistent processes and new normalized-repair roots.",
+    "R08 produces device_capabilities, targeted_pmc_manifest, traffic_resource_model, and source_lineage with paths and hashes, and writes business outputs separately from the scheduler handoff.",
+    "Execution completion, evidence sufficiency, coverage, capability-proven unavailability, and next authorization remain separate; R09 advances only on the complete evidence gate.",
+    "Known large builder/normalizer/auditor generation requires two consecutive fully stagnant five-minute observations before only a cmdline-verified scheduler PID may be interrupted.",
+    "The skill and this Adapt handoff are migration products and do not constitute R08 or performance-workflow execution."
+  ],
+  "runtime_contract": {
+    "branch": "workflow01-10-fresh-e2e",
+    "runtime_goal": "R08",
+    "runtime_predecessors": [
+      "R01",
+      "R02",
+      "R03",
+      "R04",
+      "R05",
+      "R06",
+      "R07"
+    ],
+    "required_handoff_fields": [
+      "status",
+      "execution_status",
+      "evidence_status",
+      "coverage_target_met",
+      "next_authorization_required",
+      "runtime_branch",
+      "runtime_goal",
+      "runtime_run_id",
+      "lineage_id",
+      "trace_profile_sha256",
+      "cumulative_runtime_ledger_sha256",
+      "r01_handoff_sha256",
+      "r02_handoff_sha256",
+      "r03_handoff_sha256",
+      "r04_handoff_sha256",
+      "r05_handoff_sha256",
+      "r06_handoff_sha256",
+      "r07_handoff_sha256",
+      "device_capabilities_sha256",
+      "targeted_pmc_manifest_sha256",
+      "traffic_resource_model_sha256",
+      "source_lineage_sha256",
+      "artifact_manifest_sha256",
+      "completion_audit_sha256"
+    ],
+    "runtime_artifact_root": "scheduler-assigned",
+    "runtime_handoff_output": "scheduler-assigned",
+    "advance_only_after": "complete",
+    "advance_evidence_gate": {
+      "execution_status": "complete",
+      "evidence_status": "complete",
+      "coverage_target_met": true,
+      "next_authorization_required": false,
+      "fresh_e2e_evidence_status": "complete"
+    }
+  },
+  "profile_binding": {
+    "workload": {
+      "mode": "batch8_concurrent_requests",
+      "dataset_path": "/home/testdata/16-32K_throughput.jsonl",
+      "request_count": 8,
+      "max_concurrency": 8,
+      "request_rate": "inf",
+      "output_tokens_per_request": 1024,
+      "warmup_requests": 2,
+      "temperature": 0,
+      "ignore_eos": true
+    },
+    "topology": {
+      "accelerator": "ROCm/DCU/HIP gfx936",
+      "physical_devices": [
+        0,
+        1
+      ],
+      "hip_visible_devices": "0,1",
+      "cuda_visible_devices": "0,1",
+      "world_size": 2,
+      "tensor_parallel_size": 1,
+      "pipeline_parallel_size": 1,
+      "data_parallel_size": 2,
+      "data_parallel_backend": "mp",
+      "rank_to_physical_device": {
+        "0": 0,
+        "1": 1
+      }
+    },
+    "coverage_gate": {
+      "required_physical_devices": [
+        0,
+        1
+      ],
+      "required_dp_ranks": [
+        0,
+        1
+      ],
+      "required_measured_request_count": 8,
+      "require_per_rank_and_per_device_artifacts": true,
+      "forbid_single_device_promotion": true
+    }
+  },
+  "adapt_artifacts": [
+    {
+      "kind": "migration_validation",
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-20260822T000000Z/artifacts/A08/migration_validation.json",
+      "sha256": "217d25317daa349084149792c1fda4a76cfd6323462833caa8a91b1973363d44"
+    }
+  ],
+  "execution_audit": {
+    "model_execution_performed": false,
+    "gpu_dcu_execution_performed": false,
+    "profiler_execution_performed": false,
+    "trace_collection_performed": false,
+    "pmc_collection_performed": false,
+    "report_generation_performed": false,
+    "generated_project_skill_invoked": false
+  },
+  "validation": {
+    "skill_structure_valid": true,
+    "serial_runtime_contract_valid": true,
+    "source_hashes_valid": true,
+    "content_migration_valid": true,
+    "workflow_fully_read": true,
+    "reference_skill_inputs_empty_valid": true,
+    "reference_skill_text_only_valid": true,
+    "synthesize_uncovered_scope_valid": true,
+    "trace_profile_hash_valid": true,
+    "complete_workload_and_topology_valid": true,
+    "required_profile_literals_valid": true,
+    "forbidden_profile_literals_absent": true,
+    "target_binding_valid": true,
+    "target_source_anchor_hashes_valid": true,
+    "target_unmodified_and_clean": true,
+    "adapt_ledger_valid": true,
+    "predecessor_condition_valid": true,
+    "fresh_lineage_contract_valid": true,
+    "same_run_r01_r07_prefix_contract_valid": true,
+    "r02_root_binding_contract_valid": true,
+    "predevice_tool_call_separation_contract_valid": true,
+    "path_and_launcher_regression_contract_valid": true,
+    "bounded_hardware_family_plan_contract_valid": true,
+    "hipprof_kernel_token_contract_valid": true,
+    "collector_filter_probe_contract_valid": true,
+    "full_dp2_replay_coverage_gate_valid": true,
+    "exact_counter_attribution_contract_valid": true,
+    "traffic_resource_model_contract_valid": true,
+    "observed_and_replay_evidence_boundary_valid": true,
+    "device_capability_unavailable_state_valid": true,
+    "execution_evidence_coverage_state_separation_valid": true,
+    "scoped_resume_and_suffix_recovery_contract_valid": true,
+    "attempt_isolation_and_offline_revision_contract_valid": true,
+    "formal_turn_liveness_contract_valid": true,
+    "business_output_and_handoff_separation_valid": true,
+    "adapt_output_scope_valid": true,
+    "migration_validation_artifact_valid": true,
+    "handoff_absent_before_goal_valid": true,
+    "workflow_execution_absent": true,
+    "project_skill_execution_absent": true
+  }
+}

@@ -1,0 +1,337 @@
+{
+  "schema_version": 1,
+  "branch": "workflow01-10-fresh-e2e",
+  "evidence_acquisition_mode": "fresh_no_prior_runtime_reuse",
+  "analysis_strategy": "fresh_run_full_request_e2e_timeline",
+  "measurement_contract_policy": "same_run_same_request",
+  "trace_target_root": "/public/home/tangyu408/Qwen_DCU_Worker_0/pra2026-bh408-gqa-page784-k5120-batch8",
+  "trace_target_git_commit": "2b4b2119ae3cc2c4c626dc5690ef9593c1477f66",
+  "trace_profile_id": "batch8-dual-dcu-dp2",
+  "trace_profile_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/configs/trace_targets/batch8_dual_dcu_dp2.json",
+  "trace_profile_sha256": "3b4c952063f48ae662b48b5ce9d8fd76e0ac4d74e170bdb1839ae8b1aaa23cce",
+  "r01_bootstrap": {
+    "schema_version": 1,
+    "required_before_r01_goal_creation": true,
+    "request_selection": {
+      "schema_version": 1,
+      "dataset_path": "/home/testdata/16-32K_throughput.jsonl",
+      "dataset_file_sha256": "633ba4c8b4f500d2ab28094de42698c5494e5232f40eafcd119c0a314b44b936",
+      "selection_policy": "first_8_records_in_original_file_order_no_expansion",
+      "request_count": 8,
+      "selected_line_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "request_id_policy": "{trace_profile_id}-req-{ordinal:03d}-{canonical_json_sha256_prefix_16}",
+      "raw_line_hash_policy": "sha256_exact_raw_line_bytes_including_original_line_terminator",
+      "canonical_json_policy": "utf8_json_sort_keys_true_ensure_ascii_false_compact_separators",
+      "ordered_sequence_hash_policy": "sha256_canonical_utf8_json_array_of_the_eight_parsed_request_objects",
+      "records": [
+        {
+          "ordinal": 1,
+          "line_number": 1,
+          "row_index": 0,
+          "request_id": "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c",
+          "raw_line_byte_length": 60788,
+          "raw_line_terminator": "LF",
+          "raw_line_sha256": "06c7c1cc0e97951303631942dea7a2759fe7b693a79e06d495a164a2354146fd",
+          "canonical_json_byte_length": 60786,
+          "canonical_json_sha256": "9ff911f1de6b093cb95df573058279ffee17cb01aea4e0c62561459d29c3bf67"
+        },
+        {
+          "ordinal": 2,
+          "line_number": 2,
+          "row_index": 1,
+          "request_id": "batch8-dual-dcu-dp2-req-002-28a42990210e6f68",
+          "raw_line_byte_length": 43676,
+          "raw_line_terminator": "LF",
+          "raw_line_sha256": "ce1f898accd580cbca5e05c09c1150d6d932acad912c4225f3466f83bec074de",
+          "canonical_json_byte_length": 43674,
+          "canonical_json_sha256": "28a42990210e6f681987489c1c8fa3eacdf93f96aaf32d839cd680f3ea18b761"
+        },
+        {
+          "ordinal": 3,
+          "line_number": 3,
+          "row_index": 2,
+          "request_id": "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f",
+          "raw_line_byte_length": 32095,
+          "raw_line_terminator": "LF",
+          "raw_line_sha256": "89804035854b97f7fb7ea1cd9dd056c1b2b7a616135b9656e6c79dbd50553157",
+          "canonical_json_byte_length": 32093,
+          "canonical_json_sha256": "f69e92ff8427bd4f7d6e90a2a19a156f15eee833e5e5ef8db0cb3295a18f9b11"
+        },
+        {
+          "ordinal": 4,
+          "line_number": 4,
+          "row_index": 3,
+          "request_id": "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786",
+          "raw_line_byte_length": 43776,
+          "raw_line_terminator": "LF",
+          "raw_line_sha256": "3eb756052bdb3c04b7d1d6b705cd9727f3e6692d35d93f66bf24e3ce1ddbd995",
+          "canonical_json_byte_length": 43774,
+          "canonical_json_sha256": "71f4a612b67ff78679f5c15b5d782ee642def2d9456efecf5bf96f02183e9f16"
+        },
+        {
+          "ordinal": 5,
+          "line_number": 5,
+          "row_index": 4,
+          "request_id": "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5",
+          "raw_line_byte_length": 60821,
+          "raw_line_terminator": "LF",
+          "raw_line_sha256": "e24575d76410c1deaa79f0823772e596ea0b89f5abc3184c74529627e27cc210",
+          "canonical_json_byte_length": 60819,
+          "canonical_json_sha256": "9c4c6d4653893ac5a12f574d7a3a1f1cfe7dd395174887c51dc03f92aeb3dc55"
+        },
+        {
+          "ordinal": 6,
+          "line_number": 6,
+          "row_index": 5,
+          "request_id": "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41",
+          "raw_line_byte_length": 60738,
+          "raw_line_terminator": "LF",
+          "raw_line_sha256": "892a3749a22c024d90575cb59385a114b9e392d0335783a954e0327a32b18292",
+          "canonical_json_byte_length": 60736,
+          "canonical_json_sha256": "1075ae173cde2b414e62940f6474c7857be585187e6bba75b92280e7c084147b"
+        },
+        {
+          "ordinal": 7,
+          "line_number": 7,
+          "row_index": 6,
+          "request_id": "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3",
+          "raw_line_byte_length": 44175,
+          "raw_line_terminator": "LF",
+          "raw_line_sha256": "e0494d5c5ca2d1c01f951766e75c17965b00c46497e5fc3872577eea61bfc009",
+          "canonical_json_byte_length": 44173,
+          "canonical_json_sha256": "02dcf32f532b8ed3be0cb345cd4f013d422cc669d5c1d5ea139d0aefd3a77ec0"
+        },
+        {
+          "ordinal": 8,
+          "line_number": 8,
+          "row_index": 7,
+          "request_id": "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04",
+          "raw_line_byte_length": 60769,
+          "raw_line_terminator": "LF",
+          "raw_line_sha256": "478a638fe8054063b0f22d3860677807a864dbc823f3eba4bd03dd7148fe3325",
+          "canonical_json_byte_length": 60767,
+          "canonical_json_sha256": "d1b15af09df90d047106c62b6706eacbce5c17a23013e86f2deacf5bcdad97cb"
+        }
+      ],
+      "ordered_sequence_canonical_byte_length": 406831,
+      "ordered_sequence_canonical_sha256": "a5432b3b03bf2550577fbd21d26641e4cb8780ee7036b55ba8640a4278529b91",
+      "dataset_search_allowed": false,
+      "request_expansion_allowed": false,
+      "request_oversampling_allowed": false,
+      "request_shuffle_allowed": false,
+      "prompt_synthesis_allowed": false
+    },
+    "target_evidence": {
+      "service_launcher": {
+        "path": "scripts/serve_cscc_dp2.sh",
+        "sha256": "233bb2ce6fee3654bc870e37e65b7ecf4de6874cb6c7fd1a6bd5687a40783699"
+      },
+      "benchmark_launcher": {
+        "path": "scripts/bench_cscc_multi_request.sh",
+        "sha256": "9b5e02116911729e901077866389e448c0e4a055e8bb901ed160dcdc7664a595"
+      },
+      "design_document": {
+        "path": "docs/cscc/DP2_MULTI_REQUEST.md",
+        "sha256": "f83ebea84fd570908be0df58255eca371ad4c28c4dc9d70ec3db0401b1143569"
+      }
+    },
+    "model": {
+      "directory": "/home/Qwen3.5-27B",
+      "config_path": "/home/Qwen3.5-27B/config.json",
+      "config_sha256": "f8d190c5b89c1521220f935d2567a587d6e291ed69066a45a106560b05a2174c"
+    },
+    "runtime_executable": {
+      "path": "/usr/local/bin/vllm",
+      "sha256": "5f96b9324e1df36d2c93e62485ca3809d09cf01a77fad1c9bb26e83fb517920c",
+      "version": "0.18.1+das.dtk2604",
+      "version_evidence": {
+        "source": "installed_distribution_metadata_without_importing_or_executing_vllm",
+        "distribution_name": "vllm",
+        "metadata_path": "/usr/local/lib/python3.10/dist-packages/vllm-0.18.1+das.dtk2604.dist-info/METADATA",
+        "metadata_sha256": "788197b94bcd282ee9d5c3c82a9cb931dd60bd6ab276362391abb5631115ea54",
+        "entry_points_path": "/usr/local/lib/python3.10/dist-packages/vllm-0.18.1+das.dtk2604.dist-info/entry_points.txt",
+        "entry_points_sha256": "37761e1ffd913d6e1859b7450911af4e6275a92ccbb319657c28e951fe5ee140",
+        "console_script": "vllm = vllm.entrypoints.cli.main:main"
+      }
+    },
+    "service": {
+      "port": 8001,
+      "port_policy": "fixed_no_dynamic_selection"
+    },
+    "attempt_id_policy": {
+      "format": "{runtime_run_id}-R01-attempt-{attempt_ordinal:03d}",
+      "initial_attempt_ordinal": 1,
+      "resume_attempt_ordinal_policy": "resume_directory_index_plus_one",
+      "must_be_nonempty": true,
+      "reuse_allowed": false
+    },
+    "assignment_policy": {
+      "generated_and_validated_before_formal_r01_goal_creation": true,
+      "complete_bootstrap_injected_into_formal_r01_goal_objective": false,
+      "compact_hash_verifiable_identity_summary_injected_into_formal_r01_goal_objective": true,
+      "injected_into_r01_turn_assignment": true,
+      "clock_and_hipprof_use_identical_request_manifest": true,
+      "runtime_discovery_allowed": false
+    }
+  },
+  "workload": {
+    "mode": "batch8_concurrent_requests",
+    "dataset_path": "/home/testdata/16-32K_throughput.jsonl",
+    "request_count": 8,
+    "max_concurrency": 8,
+    "request_rate": "inf",
+    "output_tokens_per_request": 1024,
+    "warmup_requests": 2,
+    "temperature": 0,
+    "ignore_eos": true
+  },
+  "topology": {
+    "accelerator": "ROCm/DCU/HIP gfx936",
+    "physical_devices": [
+      0,
+      1
+    ],
+    "hip_visible_devices": "0,1",
+    "cuda_visible_devices": "0,1",
+    "world_size": 2,
+    "tensor_parallel_size": 1,
+    "pipeline_parallel_size": 1,
+    "data_parallel_size": 2,
+    "data_parallel_backend": "mp",
+    "rank_to_physical_device": {
+      "0": 0,
+      "1": 1
+    }
+  },
+  "coverage_gate": {
+    "required_physical_devices": [
+      0,
+      1
+    ],
+    "required_dp_ranks": [
+      0,
+      1
+    ],
+    "required_measured_request_count": 8,
+    "require_per_rank_and_per_device_artifacts": true,
+    "forbid_single_device_promotion": true
+  },
+  "serial_semantics": {
+    "adapt_goals": "A01-A11 execute serially and only migrate text/code.",
+    "runtime_goals": "R01-R10 execute serially in one fresh lineage.",
+    "within_runtime_goal": "Every model execution and capture uses the full DP2 topology on physical DCUs 0 and 1; serial runtime ordering must never be implemented by reducing the workload to one device.",
+    "profiler": "Preserve rank and native physical-device identity for both DP workers. If a profiler pass must be split per device or counter family, all pieces remain attributes of the same dual-card batch8 contract and both devices must reach the stage coverage gate."
+  },
+  "fresh_e2e_contract": {
+    "schema_version": 1,
+    "prior_runtime_evidence_policy": "forbidden_for_measurement_or_attribution",
+    "process_capture_scope": "one_fresh_run_complete_batch8_workload_all_process_ranges_full_dp2",
+    "process_target_transport": "newline_file",
+    "dependency_adapter_policy": "r07_generate_same_lineage_stage_fx",
+    "traffic_resource_model_policy": "r08_generate_same_lineage_pmc_and_fx",
+    "live_utilization_policy": "r07_lossless_gap_aware_per_rank_per_device",
+    "clock_alignment_policy": "same_run_request_realtime_and_monotonic_anchors",
+    "acceptance_policy": "r10_self_contained_offline_e2e_hardware_views",
+    "source_change_policy": "stage_trace_instrumentation_allowed_with_audited_delta",
+    "source_hash_equality_required": false,
+    "lineage_split_on_semantic_contract_change": true,
+    "full_profile_preserved_in_every_stage": true,
+    "external_runtime_ledger_allowed": false
+  },
+  "selection_batch_id": "batch8-dual-dcu-dp2-fresh-e2e",
+  "escalation_reason": "fresh_full_request_batch8_dp2_process_hardware_acceptance",
+  "target_cumulative_latency_coverage": 1.0,
+  "feature_diversity_budget_fraction": 0.0,
+  "maximum_selected_layer_input_count": 4096,
+  "maximum_selected_process_count": 32768,
+  "maximum_targeted_pmc_family_count": 32,
+  "maximum_profiling_wall_time_seconds": 28800,
+  "maximum_trace_export_interval_count": 256,
+  "maximum_trace_bundle_bytes": 8589934592,
+  "minimum_expected_evidence_value": {
+    "policy": "marginal_request_latency_fraction",
+    "value": 0.0
+  },
+  "utilization_classification_thresholds": {
+    "schema_version": 1,
+    "observed_se_active_cu_low_pct": 50.0,
+    "observed_hcu_utilization_low_pct": null,
+    "observed_cu_utilization_low_pct": null,
+    "observed_wave_utilization_low_pct": null,
+    "observed_memory_bandwidth_low_gbps": null,
+    "replay_projected_alu_activity_low_pct": 50.0,
+    "low_kernel_concurrency_max_active_kernels": 1,
+    "runtime_launch_gap_min_ns": 100000
+  },
+  "dependency_coverage_threshold": {
+    "policy": "verified_dependency_fraction",
+    "value": 0.0
+  },
+  "opportunity_gate_thresholds": {
+    "schema_version": 1,
+    "minimum_exposed_duration_ns": 100000,
+    "minimum_exposed_fraction": 0.01,
+    "slack_tolerance_ns": 1000,
+    "require_all_seven_gates": true
+  },
+  "live_hardware_sampling": {
+    "schema_version": 1,
+    "mode": "stage_local_lossless_gap_aware_rsmi_se_snapshot",
+    "collector_binding_policy": "R07 must freeze and hash an artifact-local collector after CPU-only predevice validation; no historical collector output is reusable.",
+    "sample_interval_ms_target": 0.5,
+    "metrics": [
+      "se_active_cu_pct"
+    ],
+    "minimum_timing_eligible_samples_per_process": 3,
+    "maximum_clock_alignment_error_ns": 1000000,
+    "preserve_every_raw_sample_and_gap": true,
+    "interpolation_resampling_imputation_allowed": false
+  },
+  "timeline_visualization": {
+    "required": true,
+    "layer1_output": "E2E_PROCESS_TIMELINE.html",
+    "layer1_timing_semantics": "observed_fresh_run_request_process_and_device_timeline",
+    "layer2_track_groups": [
+      "observed_process",
+      "hip_runtime",
+      "gpu_queue",
+      "hardware_attributes",
+      "evidence"
+    ],
+    "hardware_counter_semantics": "observed_se_active_cu_samples_plus_replay_projected_pmc",
+    "sampling_performed": false,
+    "minimum_viewport_ns": 1,
+    "offline_self_contained": true
+  },
+  "scheduler_contract": {
+    "project_skill_root": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/skills",
+    "runtime_root": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e",
+    "runtime_goal_order": [
+      "R01",
+      "R02",
+      "R03",
+      "R04",
+      "R05",
+      "R06",
+      "R07",
+      "R08",
+      "R09",
+      "R10"
+    ],
+    "formal_goal_owner": "outer_serial_runtime_scheduler",
+    "nested_goal_creation_allowed": false,
+    "maximum_concurrent_runtime_stages": 1,
+    "external_upstream_ledger_allowed": false,
+    "advance_only_after_validated_complete_handoff": true,
+    "full_dp2_profile_attestation_required_in_every_handoff": true
+  }
+}

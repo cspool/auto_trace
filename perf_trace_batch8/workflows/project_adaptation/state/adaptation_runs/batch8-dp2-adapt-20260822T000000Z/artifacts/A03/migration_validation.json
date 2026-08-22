@@ -1,0 +1,252 @@
+{
+  "schema_version": 1,
+  "adapt_run_id": "batch8-dp2-adapt-20260822T000000Z",
+  "adapt_goal": "A03",
+  "status": "pass",
+  "validation_kind": "migration_only_static_validation",
+  "workflow_execution_performed": false,
+  "project_skill_execution_performed": false,
+  "inputs": {
+    "plan": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/manifests/adapt_goals.json",
+      "sha256": "bc58cc41846454acc4f6627fdd97a1cb922434e9f479e64aab102a3c8a2152e2"
+    },
+    "adapt_goal_document": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/goals/A03.md",
+      "sha256": "72f115f638ce4e012b978c673985ed85d300b19f39a02e32e3875b415dc77388"
+    },
+    "workflow": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/02_representative_fx_process_wise_trace.md",
+      "sha256": "88128f53d679b1e161a063b3659e3eeb2aba0d7eacbdf2ffad7e15726c8366a3"
+    },
+    "reference_skill_text": {
+      "requested_name": "visipruner-process-performance-breakdown",
+      "resolved_name": "visipruner-process-performance-breakdown",
+      "resolution": "exact",
+      "path": "/root/.codex/skills/visipruner-process-performance-breakdown/SKILL.md",
+      "sha256": "4563e3358945612f4d454e91a0a4116e6b8533d93abe2dadce35119c7bc0f44a"
+    },
+    "trace_profile": {
+      "profile_id": "batch8-dual-dcu-dp2",
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/configs/trace_targets/batch8_dual_dcu_dp2.json",
+      "sha256": "3b4c952063f48ae662b48b5ce9d8fd76e0ac4d74e170bdb1839ae8b1aaa23cce"
+    },
+    "cumulative_adapt_ledger": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-20260822T000000Z/adapt_handoff_ledger.json",
+      "sha256": "5e0df4a39827df7fa78437b415ba18968d572839915268d9ed100d6af60cff65",
+      "validated_prefix": [
+        "A01",
+        "A02"
+      ]
+    },
+    "immediate_predecessor_handoff": {
+      "adapt_goal": "A02",
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-20260822T000000Z/handoffs/A02.json",
+      "sha256": "ba981776a989e6c8cd2f1de0ca5d18690b36bcdccbea88ab82351e51b7b70ff3",
+      "status": "complete"
+    },
+    "adapt_goal_contract": {
+      "path": "/public/home/tangyu408/.codex/skills/adapt-workflows/references/adapt-goal-contract.md",
+      "sha256": "040137eef9c3f7a6e6e6581b29926e34297f757b3816bb1577a4de764e9a81de"
+    },
+    "project_skill_runtime_contract": {
+      "path": "/public/home/tangyu408/.codex/skills/adapt-workflows/references/project-skill-runtime-contract.md",
+      "sha256": "bc260e902a5a443a7e0e622a73eb0b665d69bbfffe3c3559e58e5c6d110ff197"
+    }
+  },
+  "target_binding": {
+    "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/pra2026-bh408-gqa-page784-k5120-batch8",
+    "expected_git_commit": "2b4b2119ae3cc2c4c626dc5690ef9593c1477f66",
+    "observed_git_commit": "2b4b2119ae3cc2c4c626dc5690ef9593c1477f66",
+    "branch": "repro-gqa-page784-k5120-batch8-final",
+    "clean": true,
+    "read_only_inspection": true,
+    "evidence_files": [
+      {
+        "path": "vllm/model_executor/models/qwen3_5.py",
+        "sha256": "f3c0479dbc37a8794c4d6b1c4c01906ae341b3276ed43e588c17d92b1ddb94d6"
+      },
+      {
+        "path": "vllm/model_executor/models/qwen3_next.py",
+        "sha256": "5a14b14a40fcf6382f9a20be4ca0f850b2b19b2840a3c57488821f0952d96053"
+      },
+      {
+        "path": "vllm/v1/worker/gpu_model_runner.py",
+        "sha256": "d63424d3cbe81bfaa2c0967a5c81b8c980c2d76bc7eb3b2f8fe2a079af825bce"
+      },
+      {
+        "path": "vllm/utils/nvtx_pytorch_hooks.py",
+        "sha256": "e9711444f33242ce1864d6a32d051bbf0ba0b37b5f17965de6e5dbba0c0c75ff"
+      },
+      {
+        "path": "vllm/compilation/wrapper.py",
+        "sha256": "b4dca93456e945ce8231e9a954792c8f687d5d48b427ed38bfb96011015d4090"
+      },
+      {
+        "path": "scripts/serve_cscc_dp2.sh",
+        "sha256": "233bb2ce6fee3654bc870e37e65b7ecf4de6874cb6c7fd1a6bd5687a40783699"
+      },
+      {
+        "path": "scripts/bench_cscc_multi_request.sh",
+        "sha256": "9b5e02116911729e901077866389e448c0e4a055e8bb901ed160dcdc7664a595"
+      },
+      {
+        "path": "scripts/cscc_gfx936_env.sh",
+        "sha256": "58d483450c23e9c4fa87fb981b5e63cf4babf5e8d230fe93e400563596dfc18a"
+      },
+      {
+        "path": "docs/cscc/DP2_MULTI_REQUEST.md",
+        "sha256": "f83ebea84fd570908be0df58255eca371ad4c28c4dc9d70ec3db0401b1143569"
+      }
+    ]
+  },
+  "source_destination_inventory": {
+    "source": {
+      "project": "VisiPrune representative eager process-performance reporting",
+      "model_runtime": "VisiPrune single-request PyTorch eager execution and SAME_INPUT layer/FX inputs",
+      "accelerator_and_markers": "one selected GPU with NVTX, CUDA Runtime, CUPTI and Nsight vocabulary",
+      "paths": "fixed /workspace VisiPrune experiment, output and backup paths",
+      "tools": "Nsight capture/analyzer and generate_process_performance_breakdown.py",
+      "artifacts": "process sqlite, layer event/breakdown tables, projection CSVs, launch-order CSVs and Markdown reports",
+      "evidence": "reference layer-total projection plus Workflow 02 strict process-range launch ownership"
+    },
+    "destination": {
+      "project": "the immutable Qwen3.5-27B vLLM checkout at commit 2b4b2119ae3cc2c4c626dc5690ef9593c1477f66",
+      "model_runtime": "the pinned BF16 Qwen3.5 linear/full decoder paths executed by the vLLM DP2 service",
+      "accelerator_and_markers": "the complete ROCm/DCU/HIP gfx936 DP2 topology with HIPTX/ROCTX and native hipprof evidence",
+      "paths": "read-only target plus scheduler-assigned runtime_artifact_root and runtime_handoff_output",
+      "tools": "hash-recorded artifact-local hipprof preflight, capture, raw-inventory, analyzer, report and validator helpers",
+      "artifacts": "fresh DB/PFTrace and known auxiliaries, direct process/family tables, GPU timeline, launch order, validation and Qwen reports",
+      "evidence": "exact R02 HIPTX range to HIP kernel-launch API to native device-row correlation; projection is exploratory only"
+    }
+  },
+  "reference_method_preserved": [
+    "script-generated rather than manually edited process reports",
+    "layer/phase/q_len/kv_len exact and exact-or-nearest exploratory matching with separate FX/performance shapes",
+    "metadata, outer, attention and MLP source-bucket semantics rebound to current Qwen process rows",
+    "family-aware and component-total split modes plus semantic-cost and node-count weighting",
+    "per-variant report, detail/summary/coverage CSVs and floating-point conservation checks",
+    "nearest-shape evidence labeling, source/process timing distinction and optional aggregate output",
+    "patch-and-regenerate editing rule with static, report-shape and conservation validation"
+  ],
+  "workflow_strengthening_packaged": [
+    "R03 requires the same-run regenerated R02 business handoff, inventory, exact adapter-name multiset and all referenced hashes before profiling",
+    "R02 setitem/dynamic-view FX semantics, signature-aware shape validation, alias-safe wrapper counts, equivalence, nesting, cleanup and target-clean gates are validated as predecessor conditions",
+    "the fixed target environment is sourced and /opt/dtk/dcc/lib is added before hipprof probing or capture",
+    "libLLVM-17git.so launch failure is classified as an unloaded environment, not unavailable profiler capability",
+    "pftrace capability matching is case-insensitive and missing flags are diagnosed separately from missing output formats",
+    "raw sealing requires one DB and one PFTrace, hashes known hipkernel/hiptrace auxiliaries and rejects unknown raw files without assuming a total count of two",
+    "post-capture inventory/analyzer/report defects reuse byte-identical raw data after device release instead of rerunning requests",
+    "strict timing follows exact HIPTX range to proven HIP launch call to matching native device row, never layer-total projection or time overlap",
+    "GPU order, no-kernel fallback, one matched_kernel_family per row and per-parent launch order come from the same native database",
+    "all formal validation has a Python standard-library path and missing jq, rg or sqlite3 CLI cannot trigger a rerun",
+    "every capture and coverage gate preserves all eight requests, DP ranks 0 and 1 and physical DCUs 0 and 1 under TP1/PP1/DP2 mp",
+    "historical single-card traces, timings, mappings, handoffs and reports cannot satisfy the fresh runtime lineage"
+  ],
+  "project_skill": {
+    "name": "qwen-dcu-process-performance-breakdown",
+    "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/skills/qwen-dcu-process-performance-breakdown/SKILL.md",
+    "sha256": "3c5aebe72a461d92e9ea49e4cd1e7f0b34114854fd068848a97a34106a6d75cf",
+    "line_count": 722
+  },
+  "profile_coverage": {
+    "workload": {
+      "mode": "batch8_concurrent_requests",
+      "dataset_path": "/home/testdata/16-32K_throughput.jsonl",
+      "request_count": 8,
+      "max_concurrency": 8,
+      "request_rate": "inf",
+      "output_tokens_per_request": 1024,
+      "warmup_requests": 2,
+      "temperature": 0,
+      "ignore_eos": true
+    },
+    "topology": {
+      "accelerator": "ROCm/DCU/HIP gfx936",
+      "physical_devices": [
+        0,
+        1
+      ],
+      "hip_visible_devices": "0,1",
+      "cuda_visible_devices": "0,1",
+      "world_size": 2,
+      "tensor_parallel_size": 1,
+      "pipeline_parallel_size": 1,
+      "data_parallel_size": 2,
+      "data_parallel_backend": "mp",
+      "rank_to_physical_device": {
+        "0": 0,
+        "1": 1
+      }
+    },
+    "coverage_gate": {
+      "required_physical_devices": [
+        0,
+        1
+      ],
+      "required_dp_ranks": [
+        0,
+        1
+      ],
+      "required_measured_request_count": 8,
+      "require_per_rank_and_per_device_artifacts": true,
+      "forbid_single_device_promotion": true
+    },
+    "required_skill_literals_missing": [],
+    "forbidden_skill_literals_present": []
+  },
+  "serial_runtime_contract": {
+    "runtime_branch": "workflow01-10-fresh-e2e",
+    "runtime_goal": "R03",
+    "runtime_predecessors": [
+      "R01",
+      "R02"
+    ],
+    "required_handoff_fields_present": true,
+    "runtime_artifact_root": "scheduler-assigned",
+    "runtime_handoff_output": "scheduler-assigned",
+    "advance_only_after": "complete"
+  },
+  "output_scope": {
+    "project_skill_directory": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/skills/qwen-dcu-process-performance-breakdown",
+    "adapt_artifact_root": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-20260822T000000Z/artifacts/A03",
+    "adapt_handoff_output": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-20260822T000000Z/handoffs/A03.json",
+    "predecessor_skill_handoff_and_ledger_modified": false,
+    "trace_target_modified_or_executed": false
+  },
+  "checks": {
+    "skill_exists_nonempty": true,
+    "frontmatter_name_valid": true,
+    "skill_structure_valid": true,
+    "content_migration_valid": true,
+    "source_hashes_valid": true,
+    "plan_goal_binding_valid": true,
+    "adapt_ledger_valid": true,
+    "predecessor_condition_valid": true,
+    "target_commit_valid": true,
+    "target_clean": true,
+    "trace_profile_hash_valid": true,
+    "complete_workload_present": true,
+    "complete_topology_present": true,
+    "rank_mapping_present": true,
+    "per_rank_per_device_coverage_gate_present": true,
+    "serial_runtime_contract_valid": true,
+    "runtime_predecessor_gate_present": true,
+    "advance_gate_present": true,
+    "required_profile_literals_present": true,
+    "forbidden_profile_literals_absent": true,
+    "r02_business_handoff_schema_present": true,
+    "hiptx_exact_multiset_contract_present": true,
+    "hipprof_environment_and_preflight_contract_present": true,
+    "raw_inventory_and_no_recapture_rules_present": true,
+    "strict_native_launch_ownership_present": true,
+    "direct_and_projected_evidence_separated": true,
+    "report_family_and_gpu_order_schema_present": true,
+    "python_stdlib_validation_fallback_present": true,
+    "full_dp2_coverage_gate_present": true,
+    "adapt_execution_boundary_present": true,
+    "no_trailing_whitespace": true,
+    "adapt_output_scope_valid": true
+  },
+  "all_checks_passed": true
+}

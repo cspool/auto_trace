@@ -1,0 +1,426 @@
+{
+  "schema_version": 1,
+  "adapt_run_id": "batch8-dp2-adapt-20260822T000000Z",
+  "adapt_goal": "A09",
+  "status": "complete",
+  "mode": "synthesize_uncovered",
+  "workflow_execution_performed": false,
+  "project_skill_execution_performed": false,
+  "completed_at": "2026-08-22T05:47:17Z",
+  "inputs": {
+    "trace_profile": {
+      "profile_id": "batch8-dual-dcu-dp2",
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/configs/trace_targets/batch8_dual_dcu_dp2.json",
+      "sha256": "3b4c952063f48ae662b48b5ce9d8fd76e0ac4d74e170bdb1839ae8b1aaa23cce"
+    },
+    "workflow_files": [
+      {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/05_workflow04_guided_selective_process_trace_and_resource_gap_analysis.md",
+        "sha256": "d4ed4a1a265c79b0579c7f695f9c66585ef9588f14ee3aea072707097eb77d39"
+      }
+    ],
+    "reference_skills": [],
+    "reference_skill_resolution": {
+      "required": false,
+      "reason": "The pinned A09 plan declares synthesize_uncovered and provides no requested or resolved reference skill inputs.",
+      "all_assigned_text_fully_read": true,
+      "invoked_as_capability": false
+    },
+    "previous_adapt_handoff": {
+      "adapt_goal": "A08",
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-20260822T000000Z/handoffs/A08.json",
+      "sha256": "a182a18a6e50b1c0b353229af1b8bb8e757b18b86408357c06b0dff1bb991b33",
+      "status": "complete"
+    },
+    "cumulative_adapt_ledger": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-20260822T000000Z/adapt_handoff_ledger.json",
+      "sha256": "f1fc406be6fa7265d2c8f8a15a541a3d642bee2f4b0e60cc269e525147f3fb4b",
+      "validated_prefix": [
+        "A01",
+        "A02",
+        "A03",
+        "A04",
+        "A05",
+        "A06",
+        "A07",
+        "A08"
+      ]
+    },
+    "adapt_goal_document": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/goals/A09.md",
+      "sha256": "063f7b06485b4b7566573400fde97b56c3b598bda3b8b9f7aaea1bda104587ca"
+    },
+    "adapt_common_goal": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/goals/A00.md",
+      "sha256": "7be4381fd55f52016b6d0bc3710dd1da03ed3df82f9e44415d51ec6eb16dc217"
+    },
+    "plan": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/manifests/adapt_goals.json",
+      "sha256": "bc58cc41846454acc4f6627fdd97a1cb922434e9f479e64aab102a3c8a2152e2"
+    },
+    "adapt_skill": {
+      "name": "adapt-workflows",
+      "path": "/public/home/tangyu408/.codex/skills/adapt-workflows/SKILL.md",
+      "sha256": "0f0bcb1ccce7a281915fc39455ecfa1da9bcd0878cb139209cb83829a9e59aaf"
+    },
+    "adapt_contracts": [
+      {
+        "path": "/public/home/tangyu408/.codex/skills/adapt-workflows/references/adapt-goal-contract.md",
+        "sha256": "040137eef9c3f7a6e6e6581b29926e34297f757b3816bb1577a4de764e9a81de"
+      },
+      {
+        "path": "/public/home/tangyu408/.codex/skills/adapt-workflows/references/project-skill-runtime-contract.md",
+        "sha256": "bc260e902a5a443a7e0e622a73eb0b665d69bbfffe3c3559e58e5c6d110ff197"
+      }
+    ]
+  },
+  "target_binding": {
+    "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/pra2026-bh408-gqa-page784-k5120-batch8",
+    "git_commit": "2b4b2119ae3cc2c4c626dc5690ef9593c1477f66",
+    "git_branch": "repro-gqa-page784-k5120-batch8-final",
+    "git_clean": true,
+    "inspection_only": true,
+    "target_modified": false,
+    "project": "Qwen3.5-27B on the pinned source-only vLLM BF16 ROCm/DCU/HIP gfx936 checkout",
+    "runtime": "Prospective R09 CPU-only same-lineage twelve-table utilization, concurrency, launch-gap, dependency, traffic/resource attachment, and opportunity analysis; R07 is the sole observed clock and R08 supplies replay-projected attributes only.",
+    "target_evidence": [
+      {
+        "role": "qwen35_model_and_linear_attention",
+        "path": "vllm/model_executor/models/qwen3_5.py",
+        "sha256": "f3c0479dbc37a8794c4d6b1c4c01906ae341b3276ed43e588c17d92b1ddb94d6"
+      },
+      {
+        "role": "decoder_and_full_attention",
+        "path": "vllm/model_executor/models/qwen3_next.py",
+        "sha256": "5a14b14a40fcf6382f9a20be4ca0f850b2b19b2840a3c57488821f0952d96053"
+      },
+      {
+        "role": "model_execution_boundary",
+        "path": "vllm/v1/worker/gpu_model_runner.py",
+        "sha256": "d63424d3cbe81bfaa2c0967a5c81b8c980c2d76bc7eb3b2f8fe2a079af825bce"
+      },
+      {
+        "role": "compatibility_marker_hooks",
+        "path": "vllm/utils/nvtx_pytorch_hooks.py",
+        "sha256": "e9711444f33242ce1864d6a32d051bbf0ba0b37b5f17965de6e5dbba0c0c75ff"
+      },
+      {
+        "role": "compiled_module_marker_wrapper",
+        "path": "vllm/compilation/wrapper.py",
+        "sha256": "b4dca93456e945ce8231e9a954792c8f687d5d48b427ed38bfb96011015d4090"
+      },
+      {
+        "role": "service_launcher",
+        "path": "scripts/serve_cscc_dp2.sh",
+        "sha256": "233bb2ce6fee3654bc870e37e65b7ecf4de6874cb6c7fd1a6bd5687a40783699"
+      },
+      {
+        "role": "benchmark_launcher",
+        "path": "scripts/bench_cscc_multi_request.sh",
+        "sha256": "9b5e02116911729e901077866389e448c0e4a055e8bb901ed160dcdc7664a595"
+      },
+      {
+        "role": "accelerator_environment",
+        "path": "scripts/cscc_gfx936_env.sh",
+        "sha256": "58d483450c23e9c4fa87fb981b5e63cf4babf5e8d230fe93e400563596dfc18a"
+      },
+      {
+        "role": "dp2_design_contract",
+        "path": "docs/cscc/DP2_MULTI_REQUEST.md",
+        "sha256": "f83ebea84fd570908be0df58255eca371ad4c28c4dc9d70ec3db0401b1143569"
+      }
+    ]
+  },
+  "project_skill": {
+    "name": "qwen-dcu-workflow05-utilization-concurrency-analysis",
+    "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/skills/qwen-dcu-workflow05-utilization-concurrency-analysis/SKILL.md",
+    "sha256": "584c67c790a61216301c29f508911556de9b8a2e0d9f1e6d486a9e7c931898c7"
+  },
+  "text_migrations": [
+    {
+      "source": "a generic Workflow 05 post-capture analysis stage with placeholder project identity",
+      "destination": "runtime Goal R09 for Qwen3.5-27B on the immutable vLLM checkout at commit 2b4b2119ae3cc2c4c626dc5690ef9593c1477f66",
+      "reason": "Bind the project, model, branch, runtime stage, and source identity to the plan-authorized target."
+    },
+    {
+      "source": "generic runtime, accelerator, marker, trace, and counter vocabulary",
+      "destination": "vLLM BF16 on ROCm/DCU/HIP gfx936 with HIPTX/ROCTX, HIP runtime, HIPOPS, and HIPProf, while retaining CUDA or NVTX names only as labeled compatibility schema",
+      "reason": "Use the inspected project and native DCU evidence vocabulary without relabeling compatibility APIs as native evidence."
+    },
+    {
+      "source": "an unspecified request or batch inferred from a directory name",
+      "destination": "the hash-pinned row-zero 16-32K workload with two warmups, eight measured requests, concurrency eight, infinite request rate, 1024 output tokens, deterministic decoding, and ignored EOS",
+      "reason": "Make the exact workload profile, request identity, and measured denominator authoritative."
+    },
+    {
+      "source": "serial stage order interpreted as reduced accelerator coverage",
+      "destination": "the full dual-card identity with devices 0 and 1, ranks 0 and 1, mapping 0-to-0 and 1-to-1, world size two, TP1, PP1, and DP2 mp retained in every R09 table and audit",
+      "reason": "R09 is CPU-only but must preserve the complete upstream DP2 evidence identity and forbid one-card promotion."
+    },
+    {
+      "source": "ambient, historical, backup, external-run, prior one-card, or separately generated analysis inputs",
+      "destination": "the exact hash-validated same-run R01-R08 ledger prefix and its direct/transitive business artifacts in one fresh lineage",
+      "reason": "Preserve fresh_no_prior_runtime_reuse and same_run_same_request semantics."
+    },
+    {
+      "source": "generic timing or replay timestamps used interchangeably",
+      "destination": "R07 non-replay request/process/runtime/kernel intervals as the sole observed latency clock, with R08 device/PMC/traffic/resource values attached only as replay_projected or explicitly combined-derived fields",
+      "reason": "Prevent replay duration from contaminating latency, concurrency, gap, or high-latency analysis."
+    },
+    {
+      "source": "loosely resolved predecessor files and current-stage-relative paths",
+      "destination": "schema-owned path resolution against the scheduler project root or owning predecessor root, with positive relative/absolute cases and a containment-escape negative case",
+      "reason": "Keep path ownership, predecessor immutability, and exact source hashes auditable."
+    },
+    {
+      "source": "an unnamed collection of analysis summaries",
+      "destination": "exactly twelve canonical normalized CSV tables for request, process, kernel, live utilization, process utilization, kernel concurrency, queue concurrency, launch gaps, high latency, dependency state, traffic/resource attachment, and opportunity candidates",
+      "reason": "Package the complete workflow-defined R09 output surface with stable paths and schemas."
+    },
+    {
+      "source": "an informal analysis index",
+      "destination": "analysis/fresh_e2e_analysis.json sealing each table path, size, SHA-256, row count, ordered schema, schema hash, sort key, lineage, evidence classes, and request/rank/device coverage",
+      "reason": "Make every table deterministic, independently checkable, and consumable by R10."
+    },
+    {
+      "source": "floating-point or presentation-oriented timestamp arithmetic",
+      "destination": "integer-safe R07 nanoseconds, half-open intervals, exact request-relative offsets, and end-before-start sweep-line tie handling",
+      "reason": "Prevent precision loss, false overlap, and downstream corruption of the complete timeline."
+    },
+    {
+      "source": "smoothed, interpolated, resampled, or availability-blind live utilization",
+      "destination": "lossless sample/gap/anchor normalization and per-process values only with at least three eligible samples, no intersecting unobserved gap, and valid alignment uncertainty",
+      "reason": "Preserve every gap and unavailable reason without treating missing coverage as low utilization."
+    },
+    {
+      "source": "approximate concurrency and launch-gap inference from replay order, names, or row proximity",
+      "destination": "exact R07 half-open sweep-line kernel/queue segments and strictly correlated per-request/rank/device/queue launch gaps with separate overlap accounting",
+      "reason": "Keep concurrency and launch gaps on the observed clock with auditable membership conservation."
+    },
+    {
+      "source": "Top-N high-latency selection or opaque thresholding",
+      "destination": "complete-denominator nearest-rank p95 global and comparable-group classification with all ties and versioned thresholds",
+      "reason": "Avoid truncation and make high-latency selection deterministic."
+    },
+    {
+      "source": "dependencies, counters, traffic, or resource values guessed when absent",
+      "destination": "explicit known, unknown, unavailable, unresolved, unmatched, no-kernel, and host-only states with formulas, units, reasons, and source hashes",
+      "reason": "Preserve evidence boundaries and forbid fabricated zero-filled values."
+    },
+    {
+      "source": "hardware summaries joined by names, timing proximity, or shared raw membership",
+      "destination": "exact process/fragment/kernel-family/rank/native-device attachment with join cardinality, logical-to-physical multiplicity, shared-capture conservation, and field-level evidence classes",
+      "reason": "Attach R08 attributes without double counting or weakening exact ownership."
+    },
+    {
+      "source": "an optimization shortlist presented as measured or predicted speedup",
+      "destination": "complete versioned rule classifications including candidate, non-candidate, blocked-by-unavailable, and unknown states, explicitly limited to investigation hypotheses",
+      "reason": "Prevent unsupported root-cause or speedup claims."
+    },
+    {
+      "source": "fixed, ambient, target-owned, or predecessor-owned analyzer and output paths",
+      "destination": "frozen CPU-only builder/auditor commands and all business outputs under runtime_artifact_root plus one separate scheduler runtime_handoff_output",
+      "reason": "Protect the target, predecessor bytes, ledger, business artifacts, and scheduler handoff boundary."
+    },
+    {
+      "source": "partial output overwrite, in-place repair, or predecessor recapture after a CPU analysis defect",
+      "destination": "immutable attempt diagnostics, new analysis-repair roots, independent re-audit, and R09-only recovery using the same sealed predecessor bytes",
+      "reason": "Preserve lineage and prevent partial tables or new measurements from entering a repaired analysis."
+    },
+    {
+      "source": "a single completion flag treated as evidence sufficiency and successor authorization",
+      "destination": "separate status, execution_status, evidence_status, coverage_target_met, next_authorization_required, and fresh_e2e_evidence fields",
+      "reason": "Make R10 advancement depend on validated twelve-table coverage and evidence, not stage termination alone."
+    }
+  ],
+  "uncovered_constraints_packaged": [
+    "R09 owns only the CPU-only twelve-table analysis stage and consumes only the exact same-run R01-R08 prefix in workflow01-10-fresh-e2e.",
+    "The outer scheduler alone creates the formal R09 Goal; the project skill creates no nested Goal, invokes no Adapt or project skill, and starts no successor.",
+    "The pinned target is inspection-bound and immutable; target documentation and historical timings prove source bindings only and cannot populate R09 tables.",
+    "The authoritative workload is the row-zero 16-32K batch with two warmups and eight measured requests at concurrency eight, infinite request rate, and 1024 output tokens.",
+    "Every input, table, join, manifest, audit, and handoff retains devices 0 and 1, DP ranks 0 and 1, mapping 0-to-0 and 1-to-1, world size two, TP1, PP1, and DP2 mp.",
+    "The same-run cumulative ledger and all R01-R08 handoffs, transitive artifacts, run IDs, lineage IDs, request hashes, profile hashes, and topology fields are validated before analysis.",
+    "R07 non-replay time is the sole observed request, process, runtime, queue, and kernel clock through R10; R08 replay timing is diagnostic only.",
+    "R07 live samples, gap intervals, alignment anchors, collector latency, sequence, and uncertainty are normalized without deletion, interpolation, resampling, smearing, imputation, or zero fill.",
+    "Process live utilization is numeric only with at least three eligible true samples, no intersecting unobserved gap, and valid alignment uncertainty; unavailable is never interpreted as low utilization.",
+    "All timing uses integer-safe nanoseconds and half-open intervals, with exact request-relative offsets and deterministic end-before-start sweep-line ties.",
+    "The analysis contains exactly the twelve workflow-defined normalized tables and no hidden thirteenth table, Top-N truncation, sampling, or fixed event budget.",
+    "Kernel and queue concurrency are exact R07 sweep-line segmentations with active-membership hashes and union conservation, including per-rank and per-native-device identity.",
+    "Launch gaps use strict runtime/kernel correlation within exact request, rank, native device, queue/stream, and launch order; overlaps and unavailable states remain explicit.",
+    "High-latency processes use complete-denominator nearest-rank p95 global and comparable-group rules, retain all ties, and never use R08 replay duration.",
+    "Dependency nodes and edges preserve unresolved, cycle, host-only, no-kernel, missing-counter, unknown, and unavailable states rather than reconstructing from names or proximity.",
+    "Traffic/resource attachment uses exact logical identities, formulas, units, capability state, rank/device, physical capture IDs, and multiplicity conservation; shared raw capture is not multiplied.",
+    "Opportunity rows cover candidate, non-candidate, blocked-by-unavailable, and unknown states and never claim measured speedup, predicted speedup, root cause, or target-change authorization.",
+    "fresh_e2e_analysis.json seals path, byte size, hash, row count, ordered schema, schema hash, sort key, lineage, evidence class, and request/rank/device coverage for all twelve tables.",
+    "R09_SOURCE_LINEAGE.json seals every source, predecessor, tool, invocation, derivation, evidence class, repair revision, and no-execution declaration.",
+    "A separately invoked frozen CPU auditor independently checks row universes, joins, timing, utilization, concurrency, gaps, thresholds, dependencies, attachments, opportunity rules, manifests, and execution absence.",
+    "Failed and partial builder/auditor attempts are immutable and non-promotable; repairs use new roots and the same sealed R01-R08 bytes without any predecessor or device rerun.",
+    "Known large CPU builders/auditors require two consecutive fully stagnant five-minute observations before only a cmdline-verified scheduler-owned PID may be interrupted.",
+    "R09 produces full_request_analysis and source_lineage plus its twelve table hashes, artifact manifest, and completion audit, while the scheduler handoff remains separate.",
+    "Execution completion, evidence sufficiency, coverage, explicit unavailability, and next authorization remain separate; R10 advances only on the complete evidence gate.",
+    "The skill and this Adapt handoff are migration products and do not constitute R09 or performance-workflow execution."
+  ],
+  "runtime_contract": {
+    "branch": "workflow01-10-fresh-e2e",
+    "runtime_goal": "R09",
+    "runtime_predecessors": [
+      "R01",
+      "R02",
+      "R03",
+      "R04",
+      "R05",
+      "R06",
+      "R07",
+      "R08"
+    ],
+    "required_handoff_fields": [
+      "status",
+      "execution_status",
+      "evidence_status",
+      "coverage_target_met",
+      "next_authorization_required",
+      "runtime_branch",
+      "runtime_goal",
+      "runtime_run_id",
+      "lineage_id",
+      "trace_profile_sha256",
+      "cumulative_runtime_ledger_sha256",
+      "r01_handoff_sha256",
+      "r02_handoff_sha256",
+      "r03_handoff_sha256",
+      "r04_handoff_sha256",
+      "r05_handoff_sha256",
+      "r06_handoff_sha256",
+      "r07_handoff_sha256",
+      "r08_handoff_sha256",
+      "request_timeline_sha256",
+      "process_timeline_sha256",
+      "kernel_timeline_sha256",
+      "live_utilization_aligned_sha256",
+      "process_live_utilization_sha256",
+      "kernel_concurrency_sha256",
+      "queue_concurrency_sha256",
+      "launch_gaps_sha256",
+      "high_latency_processes_sha256",
+      "dependency_state_sha256",
+      "traffic_resource_attachment_sha256",
+      "opportunity_candidates_sha256",
+      "full_request_analysis_sha256",
+      "source_lineage_sha256",
+      "artifact_manifest_sha256",
+      "completion_audit_sha256"
+    ],
+    "runtime_artifact_root": "scheduler-assigned",
+    "runtime_handoff_output": "scheduler-assigned",
+    "advance_only_after": "complete",
+    "advance_evidence_gate": {
+      "execution_status": "complete",
+      "evidence_status": "complete",
+      "coverage_target_met": true,
+      "next_authorization_required": false,
+      "fresh_e2e_evidence_status": "complete"
+    }
+  },
+  "profile_binding": {
+    "workload": {
+      "mode": "batch8_concurrent_requests",
+      "dataset_path": "/home/testdata/16-32K_throughput.jsonl",
+      "request_count": 8,
+      "max_concurrency": 8,
+      "request_rate": "inf",
+      "output_tokens_per_request": 1024,
+      "warmup_requests": 2,
+      "temperature": 0,
+      "ignore_eos": true
+    },
+    "topology": {
+      "accelerator": "ROCm/DCU/HIP gfx936",
+      "physical_devices": [
+        0,
+        1
+      ],
+      "hip_visible_devices": "0,1",
+      "cuda_visible_devices": "0,1",
+      "world_size": 2,
+      "tensor_parallel_size": 1,
+      "pipeline_parallel_size": 1,
+      "data_parallel_size": 2,
+      "data_parallel_backend": "mp",
+      "rank_to_physical_device": {
+        "0": 0,
+        "1": 1
+      }
+    },
+    "coverage_gate": {
+      "required_physical_devices": [
+        0,
+        1
+      ],
+      "required_dp_ranks": [
+        0,
+        1
+      ],
+      "required_measured_request_count": 8,
+      "require_per_rank_and_per_device_artifacts": true,
+      "forbid_single_device_promotion": true
+    }
+  },
+  "adapt_artifacts": [
+    {
+      "kind": "migration_validation",
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-20260822T000000Z/artifacts/A09/migration_validation.json",
+      "sha256": "4742c62778ec7b0a2bb3dddbf3abd21f9fe966c98bef002a3b3201a561995de5"
+    }
+  ],
+  "execution_audit": {
+    "model_execution_performed": false,
+    "gpu_dcu_execution_performed": false,
+    "profiler_execution_performed": false,
+    "trace_collection_performed": false,
+    "pmc_collection_performed": false,
+    "report_generation_performed": false,
+    "generated_project_skill_invoked": false
+  },
+  "validation": {
+    "skill_structure_valid": true,
+    "serial_runtime_contract_valid": true,
+    "source_hashes_valid": true,
+    "content_migration_valid": true,
+    "workflow_fully_read": true,
+    "reference_skill_inputs_empty_valid": true,
+    "reference_skill_text_only_valid": true,
+    "synthesize_uncovered_scope_valid": true,
+    "trace_profile_hash_valid": true,
+    "complete_workload_and_topology_valid": true,
+    "required_profile_literals_valid": true,
+    "forbidden_profile_literals_absent": true,
+    "target_binding_valid": true,
+    "target_source_anchor_hashes_valid": true,
+    "target_unmodified_and_clean": true,
+    "adapt_ledger_valid": true,
+    "predecessor_condition_valid": true,
+    "fresh_lineage_contract_valid": true,
+    "same_run_r01_r08_prefix_contract_valid": true,
+    "r07_unique_observed_clock_contract_valid": true,
+    "r08_replay_projected_attachment_boundary_valid": true,
+    "twelve_table_contract_valid": true,
+    "fresh_e2e_analysis_manifest_contract_valid": true,
+    "lossless_gap_aware_utilization_contract_valid": true,
+    "integer_safe_timing_contract_valid": true,
+    "concurrency_and_launch_gap_contract_valid": true,
+    "dependency_and_unavailable_state_contract_valid": true,
+    "traffic_resource_attachment_contract_valid": true,
+    "opportunity_evidence_boundary_valid": true,
+    "source_lineage_and_independent_audit_contract_valid": true,
+    "immutable_attempt_and_cpu_repair_contract_valid": true,
+    "execution_evidence_coverage_state_separation_valid": true,
+    "formal_turn_liveness_contract_valid": true,
+    "business_output_and_handoff_separation_valid": true,
+    "r10_advance_gate_valid": true,
+    "adapt_output_scope_valid": true,
+    "migration_validation_artifact_valid": true,
+    "handoff_absent_before_goal_valid": true,
+    "workflow_execution_absent": true,
+    "project_skill_execution_absent": true
+  }
+}

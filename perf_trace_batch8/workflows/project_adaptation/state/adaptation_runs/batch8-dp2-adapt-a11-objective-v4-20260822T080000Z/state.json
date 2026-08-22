@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "adapt_run_id": "batch8-dp2-adapt-a11-objective-v4-20260822T080000Z",
+  "status": "complete",
+  "current_goal": null,
+  "seeded_closing_goal_current_skill_revisions_allowed": true,
+  "plan_snapshot_sha256": "b03fa230180807f4fdd467a1307c38a8f5d0dd514509e2b8a3eb7666ce1fa093",
+  "goals": {
+    "A01": {
+      "status": "complete",
+      "seeded": true
+    },
+    "A02": {
+      "status": "complete",
+      "seeded": true
+    },
+    "A03": {
+      "status": "complete",
+      "seeded": true
+    },
+    "A04": {
+      "status": "complete",
+      "seeded": true
+    },
+    "A05": {
+      "status": "complete",
+      "seeded": true
+    },
+    "A06": {
+      "status": "complete",
+      "seeded": true
+    },
+    "A07": {
+      "status": "complete",
+      "seeded": true
+    },
+    "A08": {
+      "status": "complete",
+      "seeded": true
+    },
+    "A09": {
+      "status": "complete",
+      "seeded": true
+    },
+    "A10": {
+      "status": "complete",
+      "seeded": true
+    },
+    "A11": {
+      "status": "complete",
+      "thread_id": "01a0287c-0626-7671-a8dd-90f08ae5b315",
+      "artifact_root": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-a11-objective-v4-20260822T080000Z/artifacts/A11",
+      "handoff_output": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-a11-objective-v4-20260822T080000Z/handoffs/A11.json",
+      "formal_goal": {
+        "threadId": "01a0287c-0626-7671-a8dd-90f08ae5b315",
+        "objective": "Complete closing migration-only Adapt Goal A11: synthesize the pinned project-local runtime scheduler bundle after validating the complete project-skill prefix, write its validated Adapt handoff, and run only the generated scheduler's no-execution dry run.",
+        "status": "complete",
+        "tokenBudget": null,
+        "tokensUsed": 251508,
+        "timeUsedSeconds": 898,
+        "createdAt": 1787385612,
+        "updatedAt": 1787386510
+      },
+      "handoff_sha256": "ca30236123925f26125c6af249007e03e981651cd1e3cf61d00b550ef778245f"
+    }
+  },
+  "updated_at": "2026-08-22T08:15:33.232092Z",
+  "completed_at": "2026-08-22T08:15:33.232082Z"
+}

@@ -1,0 +1,460 @@
+{
+  "schema_version": 1,
+  "status": "dry_run",
+  "dry_run": true,
+  "app_server_contacted": false,
+  "goal_created": false,
+  "workflow_execution_performed": false,
+  "project_skill_execution_performed": false,
+  "model_execution_performed": false,
+  "gpu_dcu_execution_performed": false,
+  "profiler_execution_performed": false,
+  "trace_collection_performed": false,
+  "pmc_collection_performed": false,
+  "report_generation_performed": false,
+  "runtime_state_written": false,
+  "branch": "workflow01-10-fresh-e2e",
+  "project_root": "/public/home/tangyu408/Qwen_DCU_Worker_0",
+  "manifest": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/manifests/workflow01_10_fresh_e2e_pipeline.json",
+  "manifest_sha256": "eb47466ff087ad9e8ee33154556d8ef1aa9b9b3ee269196f3f13d3dd3742ef37",
+  "config": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/configs/workflow01_10_fresh_e2e_batch8_dual_dcu_dp2.json",
+  "config_sha256": "9bd4cb7667aa78e0f6e7560162589119ff0a8072ebffe64896d0ec32c971b12e",
+  "trace_target_root": "/public/home/tangyu408/Qwen_DCU_Worker_0/pra2026-bh408-gqa-page784-k5120-batch8",
+  "trace_target_git_commit": "2b4b2119ae3cc2c4c626dc5690ef9593c1477f66",
+  "trace_profile_id": "batch8-dual-dcu-dp2",
+  "trace_profile_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/configs/trace_targets/batch8_dual_dcu_dp2.json",
+  "trace_profile_sha256": "3b4c952063f48ae662b48b5ce9d8fd76e0ac4d74e170bdb1839ae8b1aaa23cce",
+  "project_skill_root": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/skills",
+  "runtime_root": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e",
+  "run_id": "<generated-at-runtime>",
+  "workload": {
+    "mode": "batch8_concurrent_requests",
+    "dataset_path": "/home/testdata/16-32K_throughput.jsonl",
+    "request_count": 8,
+    "max_concurrency": 8,
+    "request_rate": "inf",
+    "output_tokens_per_request": 1024,
+    "warmup_requests": 2,
+    "temperature": 0,
+    "ignore_eos": true
+  },
+  "topology": {
+    "accelerator": "ROCm/DCU/HIP gfx936",
+    "physical_devices": [
+      0,
+      1
+    ],
+    "hip_visible_devices": "0,1",
+    "cuda_visible_devices": "0,1",
+    "world_size": 2,
+    "tensor_parallel_size": 1,
+    "pipeline_parallel_size": 1,
+    "data_parallel_size": 2,
+    "data_parallel_backend": "mp",
+    "rank_to_physical_device": {
+      "0": 0,
+      "1": 1
+    }
+  },
+  "coverage_gate": {
+    "required_physical_devices": [
+      0,
+      1
+    ],
+    "required_dp_ranks": [
+      0,
+      1
+    ],
+    "required_measured_request_count": 8,
+    "require_per_rank_and_per_device_artifacts": true,
+    "forbid_single_device_promotion": true
+  },
+  "profile_attestation": {
+    "schema_version": 1,
+    "trace_profile_id": "batch8-dual-dcu-dp2",
+    "trace_profile_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/configs/trace_targets/batch8_dual_dcu_dp2.json",
+    "trace_profile_sha256": "3b4c952063f48ae662b48b5ce9d8fd76e0ac4d74e170bdb1839ae8b1aaa23cce",
+    "workload": {
+      "mode": "batch8_concurrent_requests",
+      "dataset_path": "/home/testdata/16-32K_throughput.jsonl",
+      "request_count": 8,
+      "max_concurrency": 8,
+      "request_rate": "inf",
+      "output_tokens_per_request": 1024,
+      "warmup_requests": 2,
+      "temperature": 0,
+      "ignore_eos": true
+    },
+    "topology": {
+      "accelerator": "ROCm/DCU/HIP gfx936",
+      "physical_devices": [
+        0,
+        1
+      ],
+      "hip_visible_devices": "0,1",
+      "cuda_visible_devices": "0,1",
+      "world_size": 2,
+      "tensor_parallel_size": 1,
+      "pipeline_parallel_size": 1,
+      "data_parallel_size": 2,
+      "data_parallel_backend": "mp",
+      "rank_to_physical_device": {
+        "0": 0,
+        "1": 1
+      }
+    },
+    "coverage_gate": {
+      "required_physical_devices": [
+        0,
+        1
+      ],
+      "required_dp_ranks": [
+        0,
+        1
+      ],
+      "required_measured_request_count": 8,
+      "require_per_rank_and_per_device_artifacts": true,
+      "forbid_single_device_promotion": true
+    },
+    "serial_stage_reduces_device_topology": false
+  },
+  "skill_file_sha256": {
+    "qwen-dcu-same-input-layer-wise-workflow": "07629a16022403d9bbef65ecf00466f731f0473c6dde9deb6f76d7b3af64f245",
+    "qwen-dcu-fx-process-nvtx-instrumentation": "8434eaee5eceaa22c88d527c114f226f06b33862f27b7ae3e3abbd4145435463",
+    "qwen-dcu-process-performance-breakdown": "3c5aebe72a461d92e9ea49e4cd1e7f0b34114854fd068848a97a34106a6d75cf",
+    "qwen-dcu-process-gpu-hardware-trace": "500c7dd16ed5e938eb65de7b7ad0c468b97f2e6e37bf8706ea1defa141aade08",
+    "qwen-dcu-segmented-process-attribution": "f96cdcde3d87b0000c775e984da040903acac811a4eb445f5714a073eeb90462",
+    "qwen-dcu-workflow05-evidence-planning": "50ecf049df469a1e135adfd88d3ae53d8e18f788ff21f5aa473e7bfe43dfe0b0",
+    "qwen-dcu-workflow05-full-request-process-trace": "ca4fb8878eb51e871af69262413a706073bf709d129e8a9f5d8f4632d5c77e03",
+    "qwen-dcu-workflow05-targeted-hardware-gap-analysis": "91a9d5bf6a0c9630c0ab75775f1426457e6e4f91d2c62a08fd6506a886e84da6",
+    "qwen-dcu-workflow05-utilization-concurrency-analysis": "584c67c790a61216301c29f508911556de9b8a2e0d9f1e6d486a9e7c931898c7",
+    "qwen-dcu-workflow05-trace-visualization-reporting": "980f01b2f76bd5cdd900605f87c9b331b9132ce16fab2196123e0ef3933a72a0"
+  },
+  "skill_tree_sha256": {
+    "qwen-dcu-same-input-layer-wise-workflow": "bba04a6538b28c6719ed5ac71a444d8de5f0204742688548002bd0bb30ce9030",
+    "qwen-dcu-fx-process-nvtx-instrumentation": "b4e2f5d301ccff13058ff7b7d7b50506c7dd93911fe21f1d12e0253f559f5d49",
+    "qwen-dcu-process-performance-breakdown": "a52937be262e393bf77bf439cf78ac862ae0b8f9366535ef39ef51321fdd90cd",
+    "qwen-dcu-process-gpu-hardware-trace": "a20e6629ea09b2510550bead3d520b6befc8212a26f7266c7cb5598382dbac9e",
+    "qwen-dcu-segmented-process-attribution": "62de308fea8c75f98384c941b6c14ad62000ef83d3349477f07a25e82e2802bc",
+    "qwen-dcu-workflow05-evidence-planning": "58ca11ec18de7e00344553f7d7901bcc325cd9c16535cb3a920db19b514ab0ab",
+    "qwen-dcu-workflow05-full-request-process-trace": "5e13fa8dbd03e630d89f524442e7b726e8e90a8b974686b5753ed920665b645c",
+    "qwen-dcu-workflow05-targeted-hardware-gap-analysis": "8f1bd1f21d2599a8cee0518224f728ebd2bf1ac380fd7a8dc28cfe5c923cb2be",
+    "qwen-dcu-workflow05-utilization-concurrency-analysis": "61100ebf768d24d4ab61f7957a54dd25b84e012825a7250db6ffbff68b59c705",
+    "qwen-dcu-workflow05-trace-visualization-reporting": "43a711b2d52946985849dea4d0f24930c614a0034174d94ef38dee35121f0466"
+  },
+  "handoff_gate": {
+    "schema_version": 1,
+    "cumulative_ledger_required": true,
+    "all_predecessor_handoffs_required": true,
+    "same_run_only": true,
+    "same_branch_only": true,
+    "external_runtime_ledger_allowed": false,
+    "full_trace_profile_attestation_required": true,
+    "advance_only_after": "validated_complete_handoff"
+  },
+  "requires": [
+    "one continuous fresh R01-R10 lineage; external runtime evidence is forbidden",
+    "the fixed hash-pinned dataset row-zero SAME_INPUT request is supplied before R01 Goal creation",
+    "R01-R10 stages execute serially, but every measured workload preserves physical devices 0 and 1 and DP ranks 0 and 1",
+    "world size 2, tensor parallel size 1, pipeline parallel size 1, data parallel size 2, and data_parallel_backend=mp remain fixed",
+    "each Goal consumes and hash-validates the complete same-run predecessor handoff prefix and immutable cumulative ledger",
+    "the scheduler advances only after a complete handoff passes the profile, lineage, evidence, path, and hash gates",
+    "R07 is the sole observed request clock, R08 attributes are replay_projected, R09 owns twelve normalized tables, and R10 is lossless and offline"
+  ],
+  "goals": [
+    {
+      "id": "R01",
+      "adapt_goal": "A01",
+      "skill": "qwen-dcu-same-input-layer-wise-workflow",
+      "skill_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/skills/qwen-dcu-same-input-layer-wise-workflow/SKILL.md",
+      "predecessors": [],
+      "persistent_thread": true,
+      "ephemeral": false,
+      "formal_goal_created_by_scheduler": true,
+      "nested_goal_creation_allowed": false,
+      "runtime_artifact_root": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/<run-id>/artifacts/R01",
+      "runtime_handoff": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/<run-id>/handoffs/R01.json",
+      "advance_only_after": "validated_complete_handoff",
+      "full_profile_preserved": true,
+      "physical_devices": [
+        0,
+        1
+      ],
+      "dp_ranks": [
+        0,
+        1
+      ],
+      "data_parallel_size": 2
+    },
+    {
+      "id": "R02",
+      "adapt_goal": "A02",
+      "skill": "qwen-dcu-fx-process-nvtx-instrumentation",
+      "skill_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/skills/qwen-dcu-fx-process-nvtx-instrumentation/SKILL.md",
+      "predecessors": [
+        "R01"
+      ],
+      "persistent_thread": true,
+      "ephemeral": false,
+      "formal_goal_created_by_scheduler": true,
+      "nested_goal_creation_allowed": false,
+      "runtime_artifact_root": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/<run-id>/artifacts/R02",
+      "runtime_handoff": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/<run-id>/handoffs/R02.json",
+      "advance_only_after": "validated_complete_handoff",
+      "full_profile_preserved": true,
+      "physical_devices": [
+        0,
+        1
+      ],
+      "dp_ranks": [
+        0,
+        1
+      ],
+      "data_parallel_size": 2
+    },
+    {
+      "id": "R03",
+      "adapt_goal": "A03",
+      "skill": "qwen-dcu-process-performance-breakdown",
+      "skill_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/skills/qwen-dcu-process-performance-breakdown/SKILL.md",
+      "predecessors": [
+        "R01",
+        "R02"
+      ],
+      "persistent_thread": true,
+      "ephemeral": false,
+      "formal_goal_created_by_scheduler": true,
+      "nested_goal_creation_allowed": false,
+      "runtime_artifact_root": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/<run-id>/artifacts/R03",
+      "runtime_handoff": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/<run-id>/handoffs/R03.json",
+      "advance_only_after": "validated_complete_handoff",
+      "full_profile_preserved": true,
+      "physical_devices": [
+        0,
+        1
+      ],
+      "dp_ranks": [
+        0,
+        1
+      ],
+      "data_parallel_size": 2
+    },
+    {
+      "id": "R04",
+      "adapt_goal": "A04",
+      "skill": "qwen-dcu-process-gpu-hardware-trace",
+      "skill_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/skills/qwen-dcu-process-gpu-hardware-trace/SKILL.md",
+      "predecessors": [
+        "R01",
+        "R02",
+        "R03"
+      ],
+      "persistent_thread": true,
+      "ephemeral": false,
+      "formal_goal_created_by_scheduler": true,
+      "nested_goal_creation_allowed": false,
+      "runtime_artifact_root": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/<run-id>/artifacts/R04",
+      "runtime_handoff": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/<run-id>/handoffs/R04.json",
+      "advance_only_after": "validated_complete_handoff",
+      "full_profile_preserved": true,
+      "physical_devices": [
+        0,
+        1
+      ],
+      "dp_ranks": [
+        0,
+        1
+      ],
+      "data_parallel_size": 2
+    },
+    {
+      "id": "R05",
+      "adapt_goal": "A05",
+      "skill": "qwen-dcu-segmented-process-attribution",
+      "skill_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/skills/qwen-dcu-segmented-process-attribution/SKILL.md",
+      "predecessors": [
+        "R01",
+        "R02",
+        "R03",
+        "R04"
+      ],
+      "persistent_thread": true,
+      "ephemeral": false,
+      "formal_goal_created_by_scheduler": true,
+      "nested_goal_creation_allowed": false,
+      "runtime_artifact_root": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/<run-id>/artifacts/R05",
+      "runtime_handoff": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/<run-id>/handoffs/R05.json",
+      "advance_only_after": "validated_complete_handoff",
+      "full_profile_preserved": true,
+      "physical_devices": [
+        0,
+        1
+      ],
+      "dp_ranks": [
+        0,
+        1
+      ],
+      "data_parallel_size": 2
+    },
+    {
+      "id": "R06",
+      "adapt_goal": "A06",
+      "skill": "qwen-dcu-workflow05-evidence-planning",
+      "skill_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/skills/qwen-dcu-workflow05-evidence-planning/SKILL.md",
+      "predecessors": [
+        "R01",
+        "R02",
+        "R03",
+        "R04",
+        "R05"
+      ],
+      "persistent_thread": true,
+      "ephemeral": false,
+      "formal_goal_created_by_scheduler": true,
+      "nested_goal_creation_allowed": false,
+      "runtime_artifact_root": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/<run-id>/artifacts/R06",
+      "runtime_handoff": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/<run-id>/handoffs/R06.json",
+      "advance_only_after": "validated_complete_handoff",
+      "full_profile_preserved": true,
+      "physical_devices": [
+        0,
+        1
+      ],
+      "dp_ranks": [
+        0,
+        1
+      ],
+      "data_parallel_size": 2
+    },
+    {
+      "id": "R07",
+      "adapt_goal": "A07",
+      "skill": "qwen-dcu-workflow05-full-request-process-trace",
+      "skill_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/skills/qwen-dcu-workflow05-full-request-process-trace/SKILL.md",
+      "predecessors": [
+        "R01",
+        "R02",
+        "R03",
+        "R04",
+        "R05",
+        "R06"
+      ],
+      "persistent_thread": true,
+      "ephemeral": false,
+      "formal_goal_created_by_scheduler": true,
+      "nested_goal_creation_allowed": false,
+      "runtime_artifact_root": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/<run-id>/artifacts/R07",
+      "runtime_handoff": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/<run-id>/handoffs/R07.json",
+      "advance_only_after": "validated_complete_handoff",
+      "full_profile_preserved": true,
+      "physical_devices": [
+        0,
+        1
+      ],
+      "dp_ranks": [
+        0,
+        1
+      ],
+      "data_parallel_size": 2
+    },
+    {
+      "id": "R08",
+      "adapt_goal": "A08",
+      "skill": "qwen-dcu-workflow05-targeted-hardware-gap-analysis",
+      "skill_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/skills/qwen-dcu-workflow05-targeted-hardware-gap-analysis/SKILL.md",
+      "predecessors": [
+        "R01",
+        "R02",
+        "R03",
+        "R04",
+        "R05",
+        "R06",
+        "R07"
+      ],
+      "persistent_thread": true,
+      "ephemeral": false,
+      "formal_goal_created_by_scheduler": true,
+      "nested_goal_creation_allowed": false,
+      "runtime_artifact_root": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/<run-id>/artifacts/R08",
+      "runtime_handoff": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/<run-id>/handoffs/R08.json",
+      "advance_only_after": "validated_complete_handoff",
+      "full_profile_preserved": true,
+      "physical_devices": [
+        0,
+        1
+      ],
+      "dp_ranks": [
+        0,
+        1
+      ],
+      "data_parallel_size": 2
+    },
+    {
+      "id": "R09",
+      "adapt_goal": "A09",
+      "skill": "qwen-dcu-workflow05-utilization-concurrency-analysis",
+      "skill_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/skills/qwen-dcu-workflow05-utilization-concurrency-analysis/SKILL.md",
+      "predecessors": [
+        "R01",
+        "R02",
+        "R03",
+        "R04",
+        "R05",
+        "R06",
+        "R07",
+        "R08"
+      ],
+      "persistent_thread": true,
+      "ephemeral": false,
+      "formal_goal_created_by_scheduler": true,
+      "nested_goal_creation_allowed": false,
+      "runtime_artifact_root": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/<run-id>/artifacts/R09",
+      "runtime_handoff": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/<run-id>/handoffs/R09.json",
+      "advance_only_after": "validated_complete_handoff",
+      "full_profile_preserved": true,
+      "physical_devices": [
+        0,
+        1
+      ],
+      "dp_ranks": [
+        0,
+        1
+      ],
+      "data_parallel_size": 2
+    },
+    {
+      "id": "R10",
+      "adapt_goal": "A10",
+      "skill": "qwen-dcu-workflow05-trace-visualization-reporting",
+      "skill_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/skills/qwen-dcu-workflow05-trace-visualization-reporting/SKILL.md",
+      "predecessors": [
+        "R01",
+        "R02",
+        "R03",
+        "R04",
+        "R05",
+        "R06",
+        "R07",
+        "R08",
+        "R09"
+      ],
+      "persistent_thread": true,
+      "ephemeral": false,
+      "formal_goal_created_by_scheduler": true,
+      "nested_goal_creation_allowed": false,
+      "runtime_artifact_root": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/<run-id>/artifacts/R10",
+      "runtime_handoff": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/<run-id>/handoffs/R10.json",
+      "advance_only_after": "validated_complete_handoff",
+      "full_profile_preserved": true,
+      "physical_devices": [
+        0,
+        1
+      ],
+      "dp_ranks": [
+        0,
+        1
+      ],
+      "data_parallel_size": 2
+    }
+  ]
+}

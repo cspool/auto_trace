@@ -1,0 +1,402 @@
+{
+  "schema_version": 1,
+  "adapt_run_id": "batch8-dp2-adapt-20260822T000000Z",
+  "adapt_goal": "A07",
+  "status": "complete",
+  "mode": "synthesize_uncovered",
+  "workflow_execution_performed": false,
+  "project_skill_execution_performed": false,
+  "completed_at": "2026-08-22T05:10:25Z",
+  "inputs": {
+    "trace_profile": {
+      "profile_id": "batch8-dual-dcu-dp2",
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/configs/trace_targets/batch8_dual_dcu_dp2.json",
+      "sha256": "3b4c952063f48ae662b48b5ce9d8fd76e0ac4d74e170bdb1839ae8b1aaa23cce"
+    },
+    "workflow_files": [
+      {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/05_workflow04_guided_selective_process_trace_and_resource_gap_analysis.md",
+        "sha256": "d4ed4a1a265c79b0579c7f695f9c66585ef9588f14ee3aea072707097eb77d39"
+      }
+    ],
+    "reference_skills": [],
+    "reference_skill_resolution": {
+      "required": false,
+      "reason": "The pinned A07 plan declares synthesize_uncovered with no requested or resolved reference skill inputs.",
+      "all_assigned_text_fully_read": true,
+      "invoked_as_capability": false
+    },
+    "previous_adapt_handoff": {
+      "adapt_goal": "A06",
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-20260822T000000Z/handoffs/A06.json",
+      "sha256": "984475b54ec686978a9033d35b0563230001746ef3fc1b93139885a271c6a44a",
+      "status": "complete"
+    },
+    "cumulative_adapt_ledger": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-20260822T000000Z/adapt_handoff_ledger.json",
+      "sha256": "9e787f273c3438decf138cb1fa45edbcb8ca6477242cd35b52b18dbfa167969f",
+      "validated_prefix": [
+        "A01",
+        "A02",
+        "A03",
+        "A04",
+        "A05",
+        "A06"
+      ]
+    },
+    "adapt_goal_document": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/goals/A07.md",
+      "sha256": "33144b62ceb4e687d0361c874a1bdf3f3c047b3336db72396483b20a0549d45e"
+    },
+    "adapt_common_goal": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/goals/A00.md",
+      "sha256": "7be4381fd55f52016b6d0bc3710dd1da03ed3df82f9e44415d51ec6eb16dc217"
+    },
+    "plan": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/manifests/adapt_goals.json",
+      "sha256": "bc58cc41846454acc4f6627fdd97a1cb922434e9f479e64aab102a3c8a2152e2"
+    },
+    "adapt_skill": {
+      "name": "adapt-workflows",
+      "path": "/public/home/tangyu408/.codex/skills/adapt-workflows/SKILL.md",
+      "sha256": "0f0bcb1ccce7a281915fc39455ecfa1da9bcd0878cb139209cb83829a9e59aaf"
+    },
+    "adapt_contracts": [
+      {
+        "path": "/public/home/tangyu408/.codex/skills/adapt-workflows/references/adapt-goal-contract.md",
+        "sha256": "040137eef9c3f7a6e6e6581b29926e34297f757b3816bb1577a4de764e9a81de"
+      },
+      {
+        "path": "/public/home/tangyu408/.codex/skills/adapt-workflows/references/project-skill-runtime-contract.md",
+        "sha256": "bc260e902a5a443a7e0e622a73eb0b665d69bbfffe3c3559e58e5c6d110ff197"
+      }
+    ]
+  },
+  "target_binding": {
+    "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/pra2026-bh408-gqa-page784-k5120-batch8",
+    "git_commit": "2b4b2119ae3cc2c4c626dc5690ef9593c1477f66",
+    "git_branch": "repro-gqa-page784-k5120-batch8-final",
+    "git_clean": true,
+    "inspection_only": true,
+    "target_modified": false,
+    "project": "Qwen3.5-27B on the pinned vLLM BF16 ROCm/DCU/HIP gfx936 checkout",
+    "runtime": "Prospective R07 fresh non-replay full batch8 DP2 process/runtime/kernel trace, gap-aware live-utilization alignment, and same-capture dependency adaptation",
+    "target_evidence": [
+      {
+        "role": "qwen35_model_and_linear_attention",
+        "path": "vllm/model_executor/models/qwen3_5.py",
+        "sha256": "f3c0479dbc37a8794c4d6b1c4c01906ae341b3276ed43e588c17d92b1ddb94d6"
+      },
+      {
+        "role": "decoder_and_full_attention",
+        "path": "vllm/model_executor/models/qwen3_next.py",
+        "sha256": "5a14b14a40fcf6382f9a20be4ca0f850b2b19b2840a3c57488821f0952d96053"
+      },
+      {
+        "role": "model_execution_boundary",
+        "path": "vllm/v1/worker/gpu_model_runner.py",
+        "sha256": "d63424d3cbe81bfaa2c0967a5c81b8c980c2d76bc7eb3b2f8fe2a079af825bce"
+      },
+      {
+        "role": "compatibility_marker_hooks",
+        "path": "vllm/utils/nvtx_pytorch_hooks.py",
+        "sha256": "e9711444f33242ce1864d6a32d051bbf0ba0b37b5f17965de6e5dbba0c0c75ff"
+      },
+      {
+        "role": "compiled_module_marker_wrapper",
+        "path": "vllm/compilation/wrapper.py",
+        "sha256": "b4dca93456e945ce8231e9a954792c8f687d5d48b427ed38bfb96011015d4090"
+      },
+      {
+        "role": "service_launcher",
+        "path": "scripts/serve_cscc_dp2.sh",
+        "sha256": "233bb2ce6fee3654bc870e37e65b7ecf4de6874cb6c7fd1a6bd5687a40783699"
+      },
+      {
+        "role": "benchmark_launcher",
+        "path": "scripts/bench_cscc_multi_request.sh",
+        "sha256": "9b5e02116911729e901077866389e448c0e4a055e8bb901ed160dcdc7664a595"
+      },
+      {
+        "role": "accelerator_environment",
+        "path": "scripts/cscc_gfx936_env.sh",
+        "sha256": "58d483450c23e9c4fa87fb981b5e63cf4babf5e8d230fe93e400563596dfc18a"
+      },
+      {
+        "role": "dp2_design_contract",
+        "path": "docs/cscc/DP2_MULTI_REQUEST.md",
+        "sha256": "f83ebea84fd570908be0df58255eca371ad4c28c4dc9d70ec3db0401b1143569"
+      }
+    ]
+  },
+  "project_skill": {
+    "name": "qwen-dcu-workflow05-full-request-process-trace",
+    "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/skills/qwen-dcu-workflow05-full-request-process-trace/SKILL.md",
+    "sha256": "ca4fb8878eb51e871af69262413a706073bf709d129e8a9f5d8f4632d5c77e03"
+  },
+  "text_migrations": [
+    {
+      "source": "a generic Workflow 05 full-request trace stage with placeholder project identity",
+      "destination": "runtime Goal R07 for Qwen3.5-27B on the immutable vLLM checkout at commit 2b4b2119ae3cc2c4c626dc5690ef9593c1477f66",
+      "reason": "Bind project, model, branch, runtime stage, and source identity to the plan-authorized target."
+    },
+    {
+      "source": "serial runtime order interpreted as a single accelerator or pooled logical device",
+      "destination": "the hash-pinned batch8-dual-dcu-dp2 topology with native devices 0 and 1, ranks 0 and 1, mapping 0-to-0 and 1-to-1, world size two, TP1, PP1, and DP2 mp",
+      "reason": "Serial stages constrain ordering only; all R07 evidence must preserve the full dual-card topology and native identity."
+    },
+    {
+      "source": "an ambiguous single measured request description",
+      "destination": "one authorized profiled workload containing eight concurrent 16-32K measured requests, two warmups, infinite request rate, 1024 output tokens each, deterministic decoding, and ignored EOS",
+      "reason": "Reconcile the one-capture rule with the authoritative batch8 workload without reducing request coverage."
+    },
+    {
+      "source": "ambient, historical, backup, single-card, or externally supplied upstream evidence",
+      "destination": "the exact same-run R01-R06 cumulative ledger prefix and direct/transitive handoff hashes in one fresh R01-R10 lineage",
+      "reason": "Preserve the fresh no-prior-runtime-reuse evidence contract."
+    },
+    {
+      "source": "generic model launch and extension discovery",
+      "destination": "the pinned Qwen3.5-27B BF16 vLLM DP2 launchers, gfx936 environment, warm-stable AOT/KV/TunableOp gates, source-root cwd, and enumerated system ABI extension provenance",
+      "reason": "Bind runtime startup to inspected target sources and avoid checkout metadata shadowing or wrong-cwd model failures."
+    },
+    {
+      "source": "CUDA, NVTX, Nsight, or generic profiler operational vocabulary",
+      "destination": "ROCm/DCU/HIP gfx936, HIPTX/ROCTX native evidence, hipprof DB/PFTrace and known auxiliary CSV output, with NVTX and CUDA labels retained only as compatibility API names",
+      "reason": "Use the concrete DCU stack while preserving compatibility-schema meaning."
+    },
+    {
+      "source": "generic or prefix-selected process markers",
+      "destination": "the complete R06 byte-exact process/fragment target transport with forward_id confined to sidecar joins and ordered set/multiset/hash equality",
+      "reason": "Prevent renamed-marker captures with zero target overlap."
+    },
+    {
+      "source": "one combined preparation and capture command",
+      "destination": "a standalone CPU-only predevice gate, a checkpoint, a separate formal device preflight, another checkpoint, and a later single capture tool call",
+      "reason": "Make authorization, tool freeze, device access, and measurement boundaries independently auditable."
+    },
+    {
+      "source": "flat first-match or multi-owner runtime/kernel attribution",
+      "destination": "same-DB/PID/config/time/runtime-index containment, strict nesting-chain validation, unique deepest ownership, non-nested ambiguity, and explicit no-kernel rows",
+      "reason": "Conserve nested parent/fragment ownership without double counting."
+    },
+    {
+      "source": "uniform-period live utilization with a zero-gap completion assertion or percentile-only summary",
+      "destination": "a 500-us target, in-memory lossless raw sampling, explicit gap intervals, call latency, dual-clock anchors, alignment uncertainty, and per-process available/unavailable state",
+      "reason": "Represent non-realtime Linux and RSMI tail gaps honestly without hiding or imputing samples."
+    },
+    {
+      "source": "generic or discoverable alignment filenames",
+      "destination": "the exact canonical process and gap paths alignment/r07_process_live_utilization.csv and alignment/r07_live_utilization_gaps.csv in producers, consumers, and required-artifact inventory",
+      "reason": "Prevent the resume-012 producer/auditor filename mismatch and compatibility-alias promotion."
+    },
+    {
+      "source": "an inferred or historical process dependency graph",
+      "destination": "a fixed-input dependency adapter built only from current R07 observed rows and same-run R02/R03/R06 identities with explicit observed, derived, unavailable, and unknown states",
+      "reason": "Keep dependency evidence in the same capture and lineage without guessing."
+    },
+    {
+      "source": "in-place retry, failed-attempt reuse, or continuation of a blocked formal Goal",
+      "destination": "immutable failed attempts plus scheduler-owned --resume-run-id and --resume-from R07 recovery to a new formal Goal, new empty root, and exactly one newly authorized workload",
+      "reason": "Prevent timing/utilization/event concatenation and preserve retry evidence."
+    },
+    {
+      "source": "fixed, ambient, or predecessor-owned tool, artifact, trace, and handoff paths",
+      "destination": "artifact-local frozen R07 tools and business outputs below runtime_artifact_root plus exactly one separate runtime_handoff_output",
+      "reason": "Protect the target, predecessors, scheduler state, and business/handoff boundary."
+    },
+    {
+      "source": "a single completion flag treated as evidence sufficiency",
+      "destination": "separate status, execution_status, evidence_status, coverage_target_met, next_authorization_required, and nested fresh_e2e_evidence fields",
+      "reason": "Require complete evidence and coverage independently before R08 advances."
+    },
+    {
+      "source": "heartbeat-only liveness and broad process-group interruption",
+      "destination": "content/Goal/subprocess/artifact progress checks, two full stagnant windows for known large builder generation, and cmdline-verified scheduler-PID-only interruption",
+      "reason": "Avoid false stall classification and collateral control-plane termination."
+    }
+  ],
+  "uncovered_constraints_packaged": [
+    "R07 consumes only the exact same-run R01-R06 handoff prefix in workflow01-10-fresh-e2e; it rejects external runtime ledgers, historical traces, Adapt outputs, and single-card evidence.",
+    "The outer scheduler alone creates the formal R07 Goal; the project skill creates no nested Goal and never runs an Adapt or predecessor/successor skill.",
+    "The target checkout remains read-only, hash-pinned, clean, and inspection-bound; source-only vLLM Python and the fixed system ABI extension distribution are validated separately.",
+    "The authoritative workload is one measured workload containing eight measured requests at concurrency eight, plus two warmups, with the full rank/device mapping retained.",
+    "Every evidence-acquiring action preserves physical devices 0 and 1, DP ranks 0 and 1, world size two, TP1, PP1, DP2 mp, native profiler dev_id, and per-rank/per-device artifacts.",
+    "R06's complete parent/fragment target manifest, capacity gate, marker transport audit, counts, hashes, and R07 authorization must all validate before R07 preparation.",
+    "Every attempt reads a run retry authorization and monitor advisory before creating or freezing tools; they constrain the attempt but never count as evidence.",
+    "The mandatory CPU-only predevice report invokes production marker, ownership, TRACE_COUNTER, old-event schema, tokenizer, cwd, filename, path, compile, shell, hash, and executable regressions.",
+    "The CPU-only gate, formal device preflight, and capture are separate tool calls with sealed scheduler checkpoints between them.",
+    "No exploratory hy-smi query is permitted; each query is counted and sealed, and any prior unrecorded query requires a one-query supplement before retry.",
+    "Physical preflight extracts exactly one full PCI BDF token per device, compares it exactly, preserves native IDs, verifies idle KFD state before model-stack import, and creates capture/hipprof_tmp before hipprof.",
+    "The target gfx936 environment and matching DTK dcc/lib are reconstructed in the artifact-local launcher; bare hipprof library failures and pftrace capitalization mismatches are diagnosed before measurement.",
+    "The profiled runtime preserves Qwen3.5-27B BF16, both DP workers, sealed AOT/TunableOp/KV readiness, no speculative configuration, and the exact batch8 request semantics.",
+    "Visible HIPTX markers equal R06 transport bytes; forward_id is sidecar-only, broad prefixes are forbidden, and 100 percent current request/process target coverage is required.",
+    "Sidecars, DB, PFTrace, auxiliary CSVs, raw live samples, gaps, and both clock anchors are sealed before postchecks and never overwritten, repaired, sampled, or concatenated.",
+    "Exactly one valid DB and PFTrace are required while all known auxiliary .hipkernel.csv and .hiptrace.csv files are accepted and hashed by type; unknown raw types fail closed.",
+    "HIP runtime memcpy/memset rows are not automatically classified as launches, true launch correlation is audited separately, and TRACE_COUNTER name text cannot fabricate PMC evidence.",
+    "Strict ownership uses the unique deepest member of a valid parent/fragment nesting chain; non-nested candidates remain ambiguous, parent/fragment rows never double count, and no-kernel parents remain explicit.",
+    "Live utilization targets 500 microseconds but losslessly records every sample, call latency, gap, dual-clock anchor, and uncertainty with no interpolation, imputation, smearing, or zero fill.",
+    "A process gets a utilization value only with at least three eligible samples fully inside its interval and no intersecting unobserved gap; otherwise an explicit intrinsic-short-window, sampling-gap, or alignment-error state is retained.",
+    "Request/process target coverage and live-utilization availability are separate denominators; fully disclosed gaps do not erase observed trace coverage, while hidden gaps fail closed.",
+    "The canonical process and gap CSV paths are byte-identical across production argv, auditor requirements, and required-business-artifact inventory; aliases and implicit discovery are forbidden.",
+    "The dependency adapter uses only current observed R07 and same-run predecessor identities, preserves rank/device and parent/fragment joins, and retains unknown/unavailable edges rather than guessing.",
+    "Pinned resume-008, resume-009, resume-010, resume-011, and resume-012 failures remain diagnostic-only negative regressions and can never be promoted as current evidence.",
+    "A measured-workload failure ends the formal attempt; after stopped/zero-scoped-process proof, only a new scheduler-owned R07 Goal, new empty root, and exactly one new workload authorization may retry.",
+    "Blocked Goals never use --continue-current-goal; runtime retry never reruns A01-A11, R01-R06, or starts R08.",
+    "R07 produces the five required logical outputs full_request_profile_metadata, process_trace_summary, fresh_run_dependency_adapter, live_utilization_summary, and source_lineage with paths and hashes.",
+    "R07 performs no PMC replay, no replay timing, no report generation, no visualization, and no successor analysis; its non-replay clock is the sole observed latency axis for R08-R10.",
+    "Execution completion and evidence sufficiency are separate; R08 advances only for complete evidence, full coverage, false next authorization, valid hashes, and the same nonempty lineage.",
+    "Known large builder/auditor generation requires two consecutive fully stagnant five-minute observations before only the cmdline-verified scheduler PID may be interrupted.",
+    "The skill and this Adapt handoff are migration products and do not constitute R07 or performance-workflow execution."
+  ],
+  "runtime_contract": {
+    "branch": "workflow01-10-fresh-e2e",
+    "runtime_goal": "R07",
+    "runtime_predecessors": [
+      "R01",
+      "R02",
+      "R03",
+      "R04",
+      "R05",
+      "R06"
+    ],
+    "required_handoff_fields": [
+      "status",
+      "execution_status",
+      "evidence_status",
+      "coverage_target_met",
+      "next_authorization_required",
+      "runtime_branch",
+      "runtime_goal",
+      "runtime_run_id",
+      "lineage_id",
+      "trace_profile_sha256",
+      "cumulative_runtime_ledger_sha256",
+      "r01_handoff_sha256",
+      "r02_handoff_sha256",
+      "r03_handoff_sha256",
+      "r04_handoff_sha256",
+      "r05_handoff_sha256",
+      "r06_handoff_sha256",
+      "full_request_profile_metadata_sha256",
+      "process_trace_summary_sha256",
+      "fresh_run_dependency_adapter_sha256",
+      "live_utilization_summary_sha256",
+      "source_lineage_sha256",
+      "artifact_manifest_sha256",
+      "completion_audit_sha256"
+    ],
+    "runtime_artifact_root": "scheduler-assigned",
+    "runtime_handoff_output": "scheduler-assigned",
+    "advance_only_after": "complete",
+    "advance_evidence_gate": {
+      "execution_status": "complete",
+      "evidence_status": "complete",
+      "coverage_target_met": true,
+      "next_authorization_required": false,
+      "fresh_e2e_evidence_status": "complete"
+    }
+  },
+  "profile_binding": {
+    "workload": {
+      "mode": "batch8_concurrent_requests",
+      "dataset_path": "/home/testdata/16-32K_throughput.jsonl",
+      "request_count": 8,
+      "max_concurrency": 8,
+      "request_rate": "inf",
+      "output_tokens_per_request": 1024,
+      "warmup_requests": 2,
+      "temperature": 0,
+      "ignore_eos": true
+    },
+    "topology": {
+      "accelerator": "ROCm/DCU/HIP gfx936",
+      "physical_devices": [
+        0,
+        1
+      ],
+      "hip_visible_devices": "0,1",
+      "cuda_visible_devices": "0,1",
+      "world_size": 2,
+      "tensor_parallel_size": 1,
+      "pipeline_parallel_size": 1,
+      "data_parallel_size": 2,
+      "data_parallel_backend": "mp",
+      "rank_to_physical_device": {
+        "0": 0,
+        "1": 1
+      }
+    },
+    "coverage_gate": {
+      "required_physical_devices": [
+        0,
+        1
+      ],
+      "required_dp_ranks": [
+        0,
+        1
+      ],
+      "required_measured_request_count": 8,
+      "require_per_rank_and_per_device_artifacts": true,
+      "forbid_single_device_promotion": true
+    }
+  },
+  "adapt_artifacts": [
+    {
+      "kind": "migration_validation",
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/state/adaptation_runs/batch8-dp2-adapt-20260822T000000Z/artifacts/A07/migration_validation.json",
+      "sha256": "2e6486a2a31d88b070136e34b8dabe0f9675d981bce098bf7f22819b9797b121"
+    }
+  ],
+  "execution_audit": {
+    "model_execution_performed": false,
+    "gpu_dcu_execution_performed": false,
+    "profiler_execution_performed": false,
+    "trace_collection_performed": false,
+    "pmc_collection_performed": false,
+    "report_generation_performed": false,
+    "generated_project_skill_invoked": false
+  },
+  "validation": {
+    "skill_structure_valid": true,
+    "serial_runtime_contract_valid": true,
+    "source_hashes_valid": true,
+    "content_migration_valid": true,
+    "workflow_fully_read": true,
+    "reference_skill_inputs_empty_valid": true,
+    "reference_skill_text_only_valid": true,
+    "synthesize_uncovered_scope_valid": true,
+    "trace_profile_hash_valid": true,
+    "complete_workload_and_topology_valid": true,
+    "required_profile_literals_valid": true,
+    "forbidden_profile_literals_absent": true,
+    "target_binding_valid": true,
+    "target_source_anchor_hashes_valid": true,
+    "target_unmodified_and_clean": true,
+    "adapt_ledger_valid": true,
+    "predecessor_condition_valid": true,
+    "fresh_lineage_contract_valid": true,
+    "same_run_r01_r06_prefix_contract_valid": true,
+    "one_full_non_replay_batch8_capture_contract_valid": true,
+    "predevice_tool_call_separation_contract_valid": true,
+    "marker_transport_contract_valid": true,
+    "strict_ownership_contract_valid": true,
+    "raw_trace_inventory_contract_valid": true,
+    "gap_aware_live_utilization_contract_valid": true,
+    "canonical_alignment_filename_contract_valid": true,
+    "dependency_adapter_contract_valid": true,
+    "observed_and_replay_evidence_boundary_valid": true,
+    "execution_evidence_coverage_state_separation_valid": true,
+    "formal_turn_liveness_contract_valid": true,
+    "scoped_interruption_and_resume_contract_valid": true,
+    "attempt_isolation_and_revision_contract_valid": true,
+    "pinned_failure_regressions_packaged": true,
+    "full_dp2_coverage_gate_valid": true,
+    "business_output_and_handoff_separation_valid": true,
+    "adapt_output_scope_valid": true,
+    "migration_validation_artifact_valid": true,
+    "handoff_absent_before_goal_valid": true,
+    "workflow_execution_absent": true,
+    "project_skill_execution_absent": true
+  }
+}
