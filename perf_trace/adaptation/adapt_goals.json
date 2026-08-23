@@ -1,0 +1,385 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-20T04:11:30.252877Z",
+  "project_profile": "qwen-dcu-perf-trace",
+  "project_root": "/public/home/tangyu408/Qwen_DCU_Worker_0",
+  "workflow_glob": "perf_trace/workflows/0*.md",
+  "project_skill_root": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/skills",
+  "runtime_scheduler_source": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/scripts/run_perf_trace_01_05.py",
+  "runtime_scheduler_source_sha256": "e4c827a1ef6e2962da6cfad5e9ee16149f3925d917c7d962d74905a38d12877f",
+  "adapt_skill": {
+    "name": "adapt-workflows",
+    "path": "/public/home/tangyu408/.codex/skills/adapt-workflows/SKILL.md",
+    "sha256": "49587fcfaabb2829ebc7c4a40bd9dd1d899d43c7b82744fa8abae28366b400ff"
+  },
+  "adapt_contracts": [
+    {
+      "path": "/public/home/tangyu408/.codex/skills/adapt-workflows/references/adapt-goal-contract.md",
+      "sha256": "bd858020e00fdbc5d218c07816c3acfbb8ca9ca2f9cccb6a5dcd1fb0e29d936e"
+    },
+    {
+      "path": "/public/home/tangyu408/.codex/skills/adapt-workflows/references/project-skill-runtime-contract.md",
+      "sha256": "4e5f6c15768935e736e09f461c5eb5e4dec6db6cfac5e1eac012ab8d75be7c83"
+    }
+  ],
+  "source_goal_map": {
+    "path": "/public/home/tangyu408/.codex/skills/adapt-workflows/references/perf-trace-goal-map.json",
+    "sha256": "3871f79d5fd6dc774f875f9063004b12bf98dc6fb2799f56c8ec724b7416c323"
+  },
+  "scheduler_template": {
+    "path": "/public/home/tangyu408/.codex/skills/adapt-workflows/scripts/adapt_perf_trace.py",
+    "sha256": "cacfccc2f62d57596ecf92073d794662ec8e743410dd0fe36a9580b367741c6a"
+  },
+  "reference_skill_roots": [
+    "/root/.codex/skills",
+    "/public/home/tangyu408/.codex/skills"
+  ],
+  "execution_policy": {
+    "adaptation_order": "strict_serial",
+    "consume_immediate_predecessor_handoff": true,
+    "consume_cumulative_ledger": true,
+    "workflow_execution_allowed": false,
+    "project_skill_execution_allowed": false
+  },
+  "goals": [
+    {
+      "id": "A01",
+      "workflow": "perf_trace/workflows/01_layer_wise_end_to_end_trace.md",
+      "mode": "reference_migration",
+      "requested_reference_skills": [
+        {
+          "name": "visipruner-same-input-layer-wise-workflow",
+          "candidates": [
+            "visipruner-same-input-layer-wise-workflow",
+            "visipruner-same-input-workflow"
+          ]
+        }
+      ],
+      "output_skill": "qwen-dcu-same-input-layer-wise-workflow",
+      "runtime_branch": "workflow01-10-fresh-e2e",
+      "runtime_goal": "R01",
+      "runtime_predecessors": [],
+      "focus": "Migrate the complete SAME_INPUT layer denominator workflow to Qwen3.5-27B, vLLM/PRA, ROCm/DCU/HIP and physical DCU 1.",
+      "adapt_predecessor": null,
+      "workflow_input": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/workflows/01_layer_wise_end_to_end_trace.md",
+        "project_relative_path": "perf_trace/workflows/01_layer_wise_end_to_end_trace.md",
+        "sha256": "90004fed427fb66b913b84c25d53d36104354a5e839b42475074fd22e9a6d812"
+      },
+      "reference_skill_inputs": [
+        {
+          "requested_name": "visipruner-same-input-layer-wise-workflow",
+          "resolved_name": "visipruner-same-input-workflow",
+          "resolution": "semantic_fallback",
+          "path": "/root/.codex/skills/visipruner-same-input-workflow/SKILL.md",
+          "sha256": "13bc2e3fe256265aceb11085b8b6a2a5bdfa8b6a970ce3f996b1cb7e19080f6f",
+          "checked_paths": [
+            "/root/.codex/skills/visipruner-same-input-layer-wise-workflow/SKILL.md",
+            "/public/home/tangyu408/.codex/skills/visipruner-same-input-layer-wise-workflow/SKILL.md",
+            "/root/.codex/skills/visipruner-same-input-workflow/SKILL.md"
+          ]
+        }
+      ],
+      "output_skill_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/skills/qwen-dcu-same-input-layer-wise-workflow/SKILL.md",
+      "output_skill_project_relative_path": "perf_trace/skills/qwen-dcu-same-input-layer-wise-workflow/SKILL.md"
+    },
+    {
+      "id": "A02",
+      "workflow": "perf_trace/workflows/02_representative_fx_process_wise_trace.md",
+      "mode": "reference_migration",
+      "requested_reference_skills": [
+        {
+          "name": "visipruner-fx-process-nvtx-instrumentation",
+          "candidates": [
+            "visipruner-fx-process-nvtx-instrumentation",
+            "trace-patch-target-discovery",
+            "visipruner-fx-trace-workflow"
+          ]
+        }
+      ],
+      "output_skill": "qwen-dcu-fx-process-nvtx-instrumentation",
+      "runtime_branch": "workflow01-10-fresh-e2e",
+      "runtime_goal": "R02",
+      "runtime_predecessors": [
+        "R01"
+      ],
+      "focus": "Migrate the instrumentation producer only, including exact project paths, HIPTX bindings, equivalence checks, and the Workflow 02 business handoff.",
+      "adapt_predecessor": "A01",
+      "workflow_input": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/workflows/02_representative_fx_process_wise_trace.md",
+        "project_relative_path": "perf_trace/workflows/02_representative_fx_process_wise_trace.md",
+        "sha256": "b28cd69bb20322dc68646475f0be3abf3ef1c30365c4db772324ee6d92e610b6"
+      },
+      "reference_skill_inputs": [
+        {
+          "requested_name": "visipruner-fx-process-nvtx-instrumentation",
+          "resolved_name": "trace-patch-target-discovery",
+          "resolution": "semantic_fallback",
+          "path": "/root/.codex/skills/trace-patch-target-discovery/SKILL.md",
+          "sha256": "ecef27420d4255d0206d7f298413d31526d19520b21833fb41d7331c275ae5d0",
+          "checked_paths": [
+            "/root/.codex/skills/visipruner-fx-process-nvtx-instrumentation/SKILL.md",
+            "/public/home/tangyu408/.codex/skills/visipruner-fx-process-nvtx-instrumentation/SKILL.md",
+            "/root/.codex/skills/trace-patch-target-discovery/SKILL.md"
+          ]
+        }
+      ],
+      "output_skill_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/skills/qwen-dcu-fx-process-nvtx-instrumentation/SKILL.md",
+      "output_skill_project_relative_path": "perf_trace/skills/qwen-dcu-fx-process-nvtx-instrumentation/SKILL.md"
+    },
+    {
+      "id": "A03",
+      "workflow": "perf_trace/workflows/02_representative_fx_process_wise_trace.md",
+      "mode": "reference_migration",
+      "requested_reference_skills": [
+        {
+          "name": "visipruner-process-performance-breakdown",
+          "candidates": [
+            "visipruner-process-performance-breakdown"
+          ]
+        }
+      ],
+      "output_skill": "qwen-dcu-process-performance-breakdown",
+      "runtime_branch": "workflow01-10-fresh-e2e",
+      "runtime_goal": "R03",
+      "runtime_predecessors": [
+        "R01",
+        "R02"
+      ],
+      "focus": "Migrate the Workflow 02 attribution consumer and require the regenerated R02 business handoff before report generation.",
+      "adapt_predecessor": "A02",
+      "workflow_input": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/workflows/02_representative_fx_process_wise_trace.md",
+        "project_relative_path": "perf_trace/workflows/02_representative_fx_process_wise_trace.md",
+        "sha256": "b28cd69bb20322dc68646475f0be3abf3ef1c30365c4db772324ee6d92e610b6"
+      },
+      "reference_skill_inputs": [
+        {
+          "requested_name": "visipruner-process-performance-breakdown",
+          "resolved_name": "visipruner-process-performance-breakdown",
+          "resolution": "exact",
+          "path": "/root/.codex/skills/visipruner-process-performance-breakdown/SKILL.md",
+          "sha256": "4563e3358945612f4d454e91a0a4116e6b8533d93abe2dadce35119c7bc0f44a",
+          "checked_paths": [
+            "/root/.codex/skills/visipruner-process-performance-breakdown/SKILL.md"
+          ]
+        }
+      ],
+      "output_skill_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/skills/qwen-dcu-process-performance-breakdown/SKILL.md",
+      "output_skill_project_relative_path": "perf_trace/skills/qwen-dcu-process-performance-breakdown/SKILL.md"
+    },
+    {
+      "id": "A04",
+      "workflow": "perf_trace/workflows/03_process_gpu_hardware_trace.md",
+      "mode": "synthesize_uncovered",
+      "requested_reference_skills": [],
+      "output_skill": "qwen-dcu-process-gpu-hardware-trace",
+      "runtime_branch": "workflow01-10-fresh-e2e",
+      "runtime_goal": "R04",
+      "runtime_predecessors": [
+        "R01",
+        "R02",
+        "R03"
+      ],
+      "focus": "Package the reference-uncovered serial DCU non-replay timing plus PMC replay hardware-attribution stage; preserve replay as attributes, never latency.",
+      "adapt_predecessor": "A03",
+      "workflow_input": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/workflows/03_process_gpu_hardware_trace.md",
+        "project_relative_path": "perf_trace/workflows/03_process_gpu_hardware_trace.md",
+        "sha256": "4f1b3e594344b3561e13b6c8c2c63ad1ea0ab553e283fa7f8cc22c8830656f48"
+      },
+      "reference_skill_inputs": [],
+      "output_skill_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/skills/qwen-dcu-process-gpu-hardware-trace/SKILL.md",
+      "output_skill_project_relative_path": "perf_trace/skills/qwen-dcu-process-gpu-hardware-trace/SKILL.md"
+    },
+    {
+      "id": "A05",
+      "workflow": "perf_trace/workflows/04_full_layer_fx_process_wise_estimate.md",
+      "mode": "reference_migration",
+      "requested_reference_skills": [
+        {
+          "name": "visipruner-segmented-process-attribution",
+          "candidates": [
+            "visipruner-segmented-process-attribution",
+            "visipruner-process-performance-breakdown",
+            "visipruner-sampled-latency-attribution"
+          ]
+        }
+      ],
+      "output_skill": "qwen-dcu-segmented-process-attribution",
+      "runtime_branch": "workflow01-10-fresh-e2e",
+      "runtime_goal": "R05",
+      "runtime_predecessors": [
+        "R01",
+        "R02",
+        "R03",
+        "R04"
+      ],
+      "focus": "Migrate full-layer offline attribution with Workflow 01 denominators, Workflow 02/03 templates, conservation, evidence classes and risk.",
+      "adapt_predecessor": "A04",
+      "workflow_input": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/workflows/04_full_layer_fx_process_wise_estimate.md",
+        "project_relative_path": "perf_trace/workflows/04_full_layer_fx_process_wise_estimate.md",
+        "sha256": "942e382242724dc9c7fce59ec144b336f91c6214140ea3bea3550d1c67e8d395"
+      },
+      "reference_skill_inputs": [
+        {
+          "requested_name": "visipruner-segmented-process-attribution",
+          "resolved_name": "visipruner-process-performance-breakdown",
+          "resolution": "semantic_fallback",
+          "path": "/root/.codex/skills/visipruner-process-performance-breakdown/SKILL.md",
+          "sha256": "4563e3358945612f4d454e91a0a4116e6b8533d93abe2dadce35119c7bc0f44a",
+          "checked_paths": [
+            "/root/.codex/skills/visipruner-segmented-process-attribution/SKILL.md",
+            "/public/home/tangyu408/.codex/skills/visipruner-segmented-process-attribution/SKILL.md",
+            "/root/.codex/skills/visipruner-process-performance-breakdown/SKILL.md"
+          ]
+        }
+      ],
+      "output_skill_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/skills/qwen-dcu-segmented-process-attribution/SKILL.md",
+      "output_skill_project_relative_path": "perf_trace/skills/qwen-dcu-segmented-process-attribution/SKILL.md"
+    },
+    {
+      "id": "A06",
+      "workflow": "perf_trace/workflows/05_workflow04_guided_selective_process_trace_and_resource_gap_analysis.md",
+      "mode": "synthesize_uncovered",
+      "requested_reference_skills": [],
+      "output_skill": "qwen-dcu-workflow05-evidence-planning",
+      "runtime_branch": "workflow01-10-fresh-e2e",
+      "runtime_goal": "R06",
+      "runtime_predecessors": [
+        "R01",
+        "R02",
+        "R03",
+        "R04",
+        "R05"
+      ],
+      "focus": "Package same-lineage fresh capability probing, full target and bounded hardware-family planning, and explicit evidence/coverage state.",
+      "adapt_predecessor": "A05",
+      "workflow_input": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/workflows/05_workflow04_guided_selective_process_trace_and_resource_gap_analysis.md",
+        "project_relative_path": "perf_trace/workflows/05_workflow04_guided_selective_process_trace_and_resource_gap_analysis.md",
+        "sha256": "224beadf44c9773ff230627a2e7063ec702e3b1af5f7331d2144a624617b3ff7"
+      },
+      "reference_skill_inputs": [],
+      "output_skill_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/skills/qwen-dcu-workflow05-evidence-planning/SKILL.md",
+      "output_skill_project_relative_path": "perf_trace/skills/qwen-dcu-workflow05-evidence-planning/SKILL.md"
+    },
+    {
+      "id": "A07",
+      "workflow": "perf_trace/workflows/05_workflow04_guided_selective_process_trace_and_resource_gap_analysis.md",
+      "mode": "synthesize_uncovered",
+      "requested_reference_skills": [],
+      "output_skill": "qwen-dcu-workflow05-full-request-process-trace",
+      "runtime_branch": "workflow01-10-fresh-e2e",
+      "runtime_goal": "R07",
+      "runtime_predecessors": [
+        "R01",
+        "R02",
+        "R03",
+        "R04",
+        "R05",
+        "R06"
+      ],
+      "focus": "Package the fresh full-request non-replay process/runtime/kernel trace, live-utilization alignment and dependency-adapter stage.",
+      "adapt_predecessor": "A06",
+      "workflow_input": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/workflows/05_workflow04_guided_selective_process_trace_and_resource_gap_analysis.md",
+        "project_relative_path": "perf_trace/workflows/05_workflow04_guided_selective_process_trace_and_resource_gap_analysis.md",
+        "sha256": "224beadf44c9773ff230627a2e7063ec702e3b1af5f7331d2144a624617b3ff7"
+      },
+      "reference_skill_inputs": [],
+      "output_skill_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/skills/qwen-dcu-workflow05-full-request-process-trace/SKILL.md",
+      "output_skill_project_relative_path": "perf_trace/skills/qwen-dcu-workflow05-full-request-process-trace/SKILL.md"
+    },
+    {
+      "id": "A08",
+      "workflow": "perf_trace/workflows/05_workflow04_guided_selective_process_trace_and_resource_gap_analysis.md",
+      "mode": "synthesize_uncovered",
+      "requested_reference_skills": [],
+      "output_skill": "qwen-dcu-workflow05-targeted-hardware-gap-analysis",
+      "runtime_branch": "workflow01-10-fresh-e2e",
+      "runtime_goal": "R08",
+      "runtime_predecessors": [
+        "R01",
+        "R02",
+        "R03",
+        "R04",
+        "R05",
+        "R06",
+        "R07"
+      ],
+      "focus": "Package same-lineage targeted PMC replay and traffic/resource attachment while keeping replay attributes separate from observed timing.",
+      "adapt_predecessor": "A07",
+      "workflow_input": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/workflows/05_workflow04_guided_selective_process_trace_and_resource_gap_analysis.md",
+        "project_relative_path": "perf_trace/workflows/05_workflow04_guided_selective_process_trace_and_resource_gap_analysis.md",
+        "sha256": "224beadf44c9773ff230627a2e7063ec702e3b1af5f7331d2144a624617b3ff7"
+      },
+      "reference_skill_inputs": [],
+      "output_skill_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/skills/qwen-dcu-workflow05-targeted-hardware-gap-analysis/SKILL.md",
+      "output_skill_project_relative_path": "perf_trace/skills/qwen-dcu-workflow05-targeted-hardware-gap-analysis/SKILL.md"
+    },
+    {
+      "id": "A09",
+      "workflow": "perf_trace/workflows/05_workflow04_guided_selective_process_trace_and_resource_gap_analysis.md",
+      "mode": "synthesize_uncovered",
+      "requested_reference_skills": [],
+      "output_skill": "qwen-dcu-workflow05-utilization-concurrency-analysis",
+      "runtime_branch": "workflow01-10-fresh-e2e",
+      "runtime_goal": "R09",
+      "runtime_predecessors": [
+        "R01",
+        "R02",
+        "R03",
+        "R04",
+        "R05",
+        "R06",
+        "R07",
+        "R08"
+      ],
+      "focus": "Package the fresh full-request twelve-table utilization, concurrency, launch-gap, dependency and opportunity analysis.",
+      "adapt_predecessor": "A08",
+      "workflow_input": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/workflows/05_workflow04_guided_selective_process_trace_and_resource_gap_analysis.md",
+        "project_relative_path": "perf_trace/workflows/05_workflow04_guided_selective_process_trace_and_resource_gap_analysis.md",
+        "sha256": "224beadf44c9773ff230627a2e7063ec702e3b1af5f7331d2144a624617b3ff7"
+      },
+      "reference_skill_inputs": [],
+      "output_skill_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/skills/qwen-dcu-workflow05-utilization-concurrency-analysis/SKILL.md",
+      "output_skill_project_relative_path": "perf_trace/skills/qwen-dcu-workflow05-utilization-concurrency-analysis/SKILL.md"
+    },
+    {
+      "id": "A10",
+      "workflow": "perf_trace/workflows/05_workflow04_guided_selective_process_trace_and_resource_gap_analysis.md",
+      "mode": "synthesize_uncovered",
+      "requested_reference_skills": [],
+      "output_skill": "qwen-dcu-workflow05-trace-visualization-reporting",
+      "runtime_branch": "workflow01-10-fresh-e2e",
+      "runtime_goal": "R10",
+      "runtime_predecessors": [
+        "R01",
+        "R02",
+        "R03",
+        "R04",
+        "R05",
+        "R06",
+        "R07",
+        "R08",
+        "R09"
+      ],
+      "focus": "Package self-contained fresh R10 reporting, lossless full-resolution timeline, source-lineage audit and offline acceptance.",
+      "adapt_predecessor": "A09",
+      "workflow_input": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/workflows/05_workflow04_guided_selective_process_trace_and_resource_gap_analysis.md",
+        "project_relative_path": "perf_trace/workflows/05_workflow04_guided_selective_process_trace_and_resource_gap_analysis.md",
+        "sha256": "224beadf44c9773ff230627a2e7063ec702e3b1af5f7331d2144a624617b3ff7"
+      },
+      "reference_skill_inputs": [],
+      "output_skill_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/skills/qwen-dcu-workflow05-trace-visualization-reporting/SKILL.md",
+      "output_skill_project_relative_path": "perf_trace/skills/qwen-dcu-workflow05-trace-visualization-reporting/SKILL.md"
+    }
+  ],
+  "scheduler_output": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/scripts/adapt_perf_trace.py",
+  "scheduler_output_sha256": "cacfccc2f62d57596ecf92073d794662ec8e743410dd0fe36a9580b367741c6a"
+}

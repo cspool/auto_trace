@@ -52,7 +52,12 @@ Generate these files:
 
 ```text
 index.html
+WORKFLOW05_UNIFIED_TIMELINE.html
+workflow05_unified_timeline_manifest.json
 E2E_PROCESS_TIMELINE.html
+E2E_PROCESS_TIMELINE_LOSSLESS.html
+E2E_PROCESS_TIMELINE.full.perfetto.json
+full_timeline_manifest.json
 HIGH_LATENCY_PROCESS_HARDWARE_TIMELINE.html
 CONCURRENCY_UTILIZATION.html
 ```
@@ -68,6 +73,35 @@ The views must provide:
 - visibly separate tracks/styles for observed utilization, replay-projected
   PMC/resources, inferred FX-visible traffic and unavailable values;
 - explicit evidence tooltips, provenance, hashes and semantic caveats.
+
+When regenerating a retained Workflow05 replay bundle, preserve every source
+archive member and the original `workflow05_perfetto_chrome.json` bytes.  The
+unified timeline page must embed every source trace record, including `ph=M`
+metadata, and its manifest must bind source archive/trace hashes and exact
+phase/category counts.  `index.html` must recommend only this unified page;
+retained Plotly reports are evidence and JSON/manifests are machine data, not
+parallel visualization entry points.  Default navigation must focus one of the
+nine selective process windows without changing timestamps, with a separate
+continuous true-time mode.  Observed tracks are on by default and derived,
+evidence, and replay-projected/unavailable hardware tracks are opt-in layers.
+It must provide pointer-centered zoom to a 1 ns or smaller view, drag pan,
+exact-range jump, filter fit, view history, overlap sub-lanes, and uncapped
+pixel-overlap/current-view event lists.  A recovery from a
+retained tar is presentation-only and must declare
+`formal_r10_regeneration=false` and `original_acceptance_untouched=true`.
+
+The lossless page and complete Perfetto-compatible trace must retain exactly
+`request_timeline + process_timeline + 2 * kernel_timeline` intervals. Do not
+apply a fixed event budget, Top-N selection, evenly spaced sampling, or
+downsampling. Render with integer nanosecond offsets relative to request begin
+and retain absolute begin/end nanoseconds as decimal strings. The lossless page
+must support pointer-centered continuous zoom, drag pan, filter auto-fit, view
+history, and listing all events overlapping a selected pixel. The complete
+trace must declare `complete_timeline=true` and `sampling_performed=false`;
+official parse availability remains a separate presentation capability.
+`full_timeline_manifest.json` must independently bind the source-table hashes,
+exact total/per-category event counts, lossless-page hash and complete-trace
+hash, and must declare formal R09/R10 regeneration with no sampling.
 
 The maintained generator must consume all twelve entries in R09
 `normalized_tables`. It must fail if a table is absent or changed; it may not
@@ -89,13 +123,15 @@ pages with a raw native viewer.
 
 Independently verify:
 
-- all four pages exist, parse, and contain no external script/resource URL;
+- all required pages exist, parse, and contain no external script/resource URL;
 - embedded row counts and hashes equal the R09 manifest;
 - request bounds and high-latency selections reproduce R09;
 - every required observed/live/replay/inferred/unavailable legend is present;
 - no cross-clock or replay-latency arithmetic appears;
 - all links are relative and resolve inside the acceptance directory;
 - regeneration from the same inputs is deterministic.
+- the lossless/full-trace event count and per-category counts reproduce the
+  complete E2E payload without sampling.
 
 Write `offline_acceptance_manifest.json`:
 
@@ -124,8 +160,18 @@ Write `offline_acceptance_manifest.json`:
   "outputs": {
     "index.html": {"path": "...", "sha256": "..."},
     "E2E_PROCESS_TIMELINE.html": {"path": "...", "sha256": "..."},
+    "E2E_PROCESS_TIMELINE_LOSSLESS.html": {"path": "...", "sha256": "..."},
     "HIGH_LATENCY_PROCESS_HARDWARE_TIMELINE.html": {"path": "...", "sha256": "..."},
     "CONCURRENCY_UTILIZATION.html": {"path": "...", "sha256": "..."}
+  },
+  "companions": {
+    "E2E_PROCESS_TIMELINE.full.perfetto.json": {
+      "path": "...", "sha256": "...", "complete_timeline": true,
+      "sampling_performed": false, "event_count": 0
+    },
+    "full_timeline_manifest.json": {
+      "path": "...", "sha256": "...", "sampling_performed": false
+    }
   },
   "view_coverage": {
     "track_groups": ["request", "forward", "layer", "process", "hip_runtime", "gpu_queue", "strict_owned_kernel", "live_utilization", "hardware_attributes", "dependency", "opportunity"],
@@ -143,7 +189,12 @@ Write under `runtime_artifact_root`:
 ```text
 R10_SOURCE_LINEAGE.json
 acceptance/index.html
+acceptance/WORKFLOW05_UNIFIED_TIMELINE.html
+acceptance/workflow05_unified_timeline_manifest.json
 acceptance/E2E_PROCESS_TIMELINE.html
+acceptance/E2E_PROCESS_TIMELINE_LOSSLESS.html
+acceptance/E2E_PROCESS_TIMELINE.full.perfetto.json
+acceptance/full_timeline_manifest.json
 acceptance/HIGH_LATENCY_PROCESS_HARDWARE_TIMELINE.html
 acceptance/CONCURRENCY_UTILIZATION.html
 acceptance/offline_acceptance_manifest.json

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run the unified Qwen/DCU R01-R10 branches as serial Codex Goals."""
+"""Run the fresh Qwen/DCU R01-R10 workflow as serial Codex Goals."""
 
 from __future__ import annotations
 
@@ -23,10 +23,6 @@ from pathlib import Path
 from typing import Any
 
 
-# Retained only so stopped pre-fresh test/runtime metadata remains readable. It
-# is intentionally absent from BRANCHES and cannot be selected for new runs.
-FULL_BRANCH = "workflow01-05-full"
-EXISTING_EVIDENCE_BRANCH = "workflow05-existing-evidence"
 FRESH_E2E_BRANCH = "workflow01-10-fresh-e2e"
 UPSTREAM_GOAL_IDS = ("R01", "R02", "R03", "R04", "R05")
 UPSTREAM_SOURCE_ROOT_FIELDS = {
@@ -48,57 +44,8 @@ RUNTIME_BINDINGS = {
     "R09": {"skill": "qwen-dcu-workflow05-utilization-concurrency-analysis"},
     "R10": {"skill": "qwen-dcu-workflow05-trace-visualization-reporting"},
 }
-LEGACY_WORKFLOW05_BINDINGS = {
-    "R06": {"skill": "qwen-dcu-workflow05-legacy-evidence-planning"},
-    "R07": {"skill": "qwen-dcu-workflow05-legacy-selective-process-trace"},
-    "R08": {"skill": "qwen-dcu-workflow05-legacy-targeted-hardware-analysis"},
-    "R09": {"skill": "qwen-dcu-workflow05-legacy-utilization-analysis"},
-    "R10": {"skill": "qwen-dcu-workflow05-legacy-visualization-reporting"},
-}
-# Exact identifier migration for stopped runtimes created before the fresh R07
-# Skill was renamed to match its full-request behavior. This does not make the
-# retired identifier selectable for new execution.
-STOPPED_RUNTIME_SKILL_ALIASES = {
-    "qwen-dcu-workflow05-evidence-planning": (
-        "qwen-dcu-workflow05-legacy-evidence-planning",
-    ),
-    "qwen-dcu-workflow05-selective-process-trace": (
-        "qwen-dcu-workflow05-full-request-process-trace",
-        "qwen-dcu-workflow05-legacy-selective-process-trace",
-    ),
-    "qwen-dcu-workflow05-targeted-hardware-gap-analysis": (
-        "qwen-dcu-workflow05-legacy-targeted-hardware-analysis",
-    ),
-    "qwen-dcu-workflow05-utilization-concurrency-analysis": (
-        "qwen-dcu-workflow05-legacy-utilization-analysis",
-    ),
-    "qwen-dcu-workflow05-trace-visualization-reporting": (
-        "qwen-dcu-workflow05-legacy-visualization-reporting",
-    ),
-}
+STOPPED_RUNTIME_SKILL_ALIASES: dict[str, tuple[str, ...]] = {}
 BRANCHES = {
-    EXISTING_EVIDENCE_BRANCH: {
-        "manifest": (
-            "perf_trace/manifests/"
-            "workflow05_existing_evidence_pipeline.json"
-        ),
-        "payload": {
-            "schema_version": 1,
-            "branch": EXISTING_EVIDENCE_BRANCH,
-            "goals": [f"R{value:02d}" for value in range(6, 11)],
-            "bindings": LEGACY_WORKFLOW05_BINDINGS,
-            "requires": [
-                (
-                    "a compatible completed R01-R05 cumulative runtime "
-                    "handoff ledger supplied as a user parameter"
-                ),
-                (
-                    "no automatic rerun or modification of Workflow 01-04 "
-                    "products"
-                ),
-            ],
-        },
-    },
     FRESH_E2E_BRANCH: {
         "manifest": "perf_trace/manifests/workflow01_10_fresh_e2e_pipeline.json",
         "payload": {
@@ -134,7 +81,7 @@ EXPECTED_SKILL_TREE_SHA256 = {
         "05e3289dc27ec18482fc12d379e0615115b3a19345f9a8bce9723be18bd5038c"
     ),
     "qwen-dcu-workflow05-evidence-planning": (
-        "d8f0838c8ccce5e778ac97ec8af1172af57a32943294179d6891918263a28e9d"
+        "1db65a06d41ad790c030fd7c1e6bdc7642d5c5c13844f9830124f20612400e36"
     ),
     "qwen-dcu-workflow05-full-request-process-trace": (
         "acb8bee9364a72f7e12e3ae29a7102685aa5d367629b277cc1cb21ebfecdba67"
@@ -146,22 +93,7 @@ EXPECTED_SKILL_TREE_SHA256 = {
         "20b17096e0d4cf1f349cda98365ffb2caf8551d3d525be39a9a84663df6dbba3"
     ),
     "qwen-dcu-workflow05-trace-visualization-reporting": (
-        "4fafd3c36521b62c503c6ecf71c972b1aa3699f06bbf58b63618a14e3330540d"
-    ),
-    "qwen-dcu-workflow05-legacy-evidence-planning": (
-        "54305b0a32329a86f9be4319f2b378615f0f832d1f1cf0544a0ed1b1c4ff7ed0"
-    ),
-    "qwen-dcu-workflow05-legacy-selective-process-trace": (
-        "78f6f83b88220e17b24985582711ab73147775c1d1ba746419618fce251e849d"
-    ),
-    "qwen-dcu-workflow05-legacy-targeted-hardware-analysis": (
-        "39c808f19ddd0a06c81c11410349d92074ff58565833ae94790121c42715a714"
-    ),
-    "qwen-dcu-workflow05-legacy-utilization-analysis": (
-        "7f8e2b5cf2d421458c59207514afa07f95a72c07baa1a084ab498225f678327b"
-    ),
-    "qwen-dcu-workflow05-legacy-visualization-reporting": (
-        "14d4ced8ded335e3c3dd5fe0cb16b113a0565ba0ddfc58bd849ab60794000bf3"
+        "b9f202bb685a431f030f295fa42e1480437c9971b2c5de26f4712c3260b47798"
     ),
 }
 EXPECTED_SKILL_FILES = ("SKILL.md", "agents/openai.yaml")
@@ -205,33 +137,6 @@ REQUIRED_LAYER2_TRACK_GROUPS = (
     "gpu_queue",
     "hardware_attributes",
     "evidence",
-)
-FRESH_E2E_NORMALIZED_TABLES = (
-    "request_timeline",
-    "process_timeline",
-    "kernel_timeline",
-    "live_utilization_aligned",
-    "process_live_utilization",
-    "kernel_concurrency",
-    "queue_concurrency",
-    "launch_gaps",
-    "high_latency_processes",
-    "dependency_state",
-    "traffic_resource_attachment",
-    "opportunity_candidates",
-)
-FRESH_E2E_VIEW_TRACK_GROUPS = (
-    "request",
-    "forward",
-    "layer",
-    "process",
-    "hip_runtime",
-    "gpu_queue",
-    "strict_owned_kernel",
-    "live_utilization",
-    "hardware_attributes",
-    "dependency",
-    "opportunity",
 )
 REQUIRED_FEATURE_DIVERSITY_AXES = (
     "process_semantic_class",
@@ -293,54 +198,6 @@ LIVE_HARDWARE_SAMPLING_METRICS = {
     "memory_write_bandwidth_gbps",
     "se_active_cu_pct",
 }
-# Read-only compatibility payload accepted only while loading stopped runtimes
-# created before the continuous fresh-run contract was introduced.
-LEGACY_FRESH_E2E_CONTRACT_V0 = {
-    "schema_version": 1,
-    "prior_runtime_evidence_policy": "forbidden_for_measurement_or_attribution",
-    "process_capture_scope": "one_current_child_request_all_process_ranges",
-    "process_target_transport": "newline_file",
-    "dependency_adapter_policy": "r07_generate_current_source_revision",
-    "traffic_resource_model_policy": "r08_generate_current_pmc_and_fx",
-    "live_utilization_policy": "r07_rsmi_se_snapshot_empirical_cadence",
-    "clock_alignment_policy": "same_child_realtime_and_monotonic_anchors",
-    "acceptance_policy": "r10_self_contained_offline_e2e_hardware_views",
-}
-LEGACY_FRESH_SEMANTIC_VALUE_ALIASES = {
-    "fresh_current_child_full_request_e2e_timeline": (
-        "fresh_run_full_request_e2e_timeline"
-    ),
-    "current_child_same_request": "same_run_same_request",
-    "one_current_child_request_all_process_ranges": (
-        "one_fresh_run_request_all_process_ranges"
-    ),
-    "r07_generate_current_source_revision": (
-        "r07_generate_same_lineage_stage_fx"
-    ),
-    "r08_generate_current_pmc_and_fx": (
-        "r08_generate_same_lineage_pmc_and_fx"
-    ),
-    "same_child_realtime_and_monotonic_anchors": (
-        "same_run_request_realtime_and_monotonic_anchors"
-    ),
-    "observed_current_child_request_process_and_device_timeline": (
-        "observed_fresh_run_request_process_and_device_timeline"
-    ),
-}
-FRESH_E2E_CONTRACT = {
-    "schema_version": 1,
-    "prior_runtime_evidence_policy": "forbidden_for_measurement_or_attribution",
-    "process_capture_scope": "one_fresh_run_request_all_process_ranges",
-    "process_target_transport": "newline_file",
-    "dependency_adapter_policy": "r07_generate_same_lineage_stage_fx",
-    "traffic_resource_model_policy": "r08_generate_same_lineage_pmc_and_fx",
-    "live_utilization_policy": "r07_rsmi_se_snapshot_empirical_cadence",
-    "clock_alignment_policy": "same_run_request_realtime_and_monotonic_anchors",
-    "acceptance_policy": "r10_self_contained_offline_e2e_hardware_views",
-    "source_change_policy": "stage_trace_instrumentation_allowed",
-    "source_hash_equality_required": False,
-    "lineage_split_on_source_change": False,
-}
 EXTENSION_MUTABLE_PARAMETER_KEYS = {
     "selection_batch_id",
     "escalation_reason",
@@ -365,9 +222,9 @@ EXTENSION_MUTABLE_PARAMETER_KEYS = {
 }
 DEFAULT_WORKFLOW05_USER_PARAMETERS: dict[str, Any] = {
     "workflow05_policy_version": LOW_COST_TIMELINE_POLICY_VERSION,
-    "evidence_acquisition_mode": "historical_then_selective",
+    "evidence_acquisition_mode": "fresh_no_prior_runtime_reuse",
+    "analysis_strategy": "fresh_run_full_request_e2e_timeline",
     "fresh_e2e_contract": None,
-    "analysis_strategy": "two_level_historical_then_selective_timeline",
     "selected_ranking_metric": "hiptx_host_range_duration_ms",
     "secondary_ranking_metrics": [
         "hipprof_launch_owned_kernel_busy_union_ms",
@@ -385,8 +242,8 @@ DEFAULT_WORKFLOW05_USER_PARAMETERS: dict[str, Any] = {
     "maximum_selected_process_count": 64,
     "maximum_targeted_pmc_family_count": 16,
     "maximum_profiling_wall_time_seconds": 7200,
-    "selection_batch_id": "low-cost-timeline-default-v4",
-    "escalation_reason": "top_latency_low_utilization_resource_gap_analysis",
+    "selection_batch_id": "fresh-e2e-dcu1",
+    "escalation_reason": "fresh_full_request_e2e_process_hardware_acceptance",
     "maximum_trace_export_interval_count": 64,
     "maximum_trace_bundle_bytes": 2 * 1024 * 1024 * 1024,
     "trace_processor_mode": "auto",
@@ -411,9 +268,9 @@ DEFAULT_WORKFLOW05_USER_PARAMETERS: dict[str, Any] = {
     "perfetto_compatible_trace_required": True,
     "custom_timeline_fallback_must_be_labeled": True,
     "allow_open_source_tool_network_download": False,
-    "measurement_contract_policy": "compatible_request_separate_capture_axes",
+    "measurement_contract_policy": "same_run_same_request",
     "base_evidence_role_on_execution_path_change": (
-        "base_evidence_planning_only"
+        "preserve_semantically_valid_stage_evidence"
     ),
     "exact_process_range_filter_required": True,
     "pmc_collection_policy": (
@@ -468,12 +325,14 @@ DEFAULT_WORKFLOW05_USER_PARAMETERS: dict[str, Any] = {
     ),
     "timeline_visualization": {
         "required": True,
-        "layer1_output": "LAYER1_HISTORICAL_LATENCY_OVERVIEW.html",
+        "layer1_output": "E2E_PROCESS_TIMELINE.html",
         "layer1_timing_semantics": (
-            "observed_layer_kernel_plus_projected_process_composition"
+            "observed_fresh_run_request_process_and_device_timeline"
         ),
         "layer2_track_groups": list(REQUIRED_LAYER2_TRACK_GROUPS),
-        "hardware_counter_semantics": "replay_projected_step",
+        "hardware_counter_semantics": (
+            "observed_se_active_cu_samples_plus_replay_projected_pmc"
+        ),
     },
 }
 ALLOWED_RANKING_METRICS = {
@@ -495,6 +354,20 @@ THRESHOLD_PARAMETER_POLICIES = {
     "owner_ambiguity_threshold": "observed_duration_fraction",
     "hardware_evidence_gap_threshold": "request_latency_fraction",
     "minimum_expected_evidence_value": "marginal_request_latency_fraction",
+}
+FRESH_E2E_CONTRACT = {
+    "schema_version": 1,
+    "prior_runtime_evidence_policy": "forbidden_for_measurement_or_attribution",
+    "process_capture_scope": "one_fresh_run_request_all_process_ranges",
+    "process_target_transport": "newline_file",
+    "dependency_adapter_policy": "r07_generate_same_lineage_stage_fx",
+    "traffic_resource_model_policy": "r08_generate_same_lineage_pmc_and_fx",
+    "live_utilization_policy": "r07_rsmi_se_snapshot_empirical_cadence",
+    "clock_alignment_policy": "same_run_request_realtime_and_monotonic_anchors",
+    "acceptance_policy": "r10_self_contained_offline_e2e_hardware_views",
+    "source_change_policy": "stage_trace_instrumentation_allowed",
+    "source_hash_equality_required": False,
+    "lineage_split_on_source_change": False,
 }
 
 
@@ -729,7 +602,7 @@ def recover_stale_running_state(
     handoffs = ledger.get("handoffs")
     if not isinstance(handoffs, list):
         raise SchedulerError("stale recovery ledger handoffs must be a list")
-    inherited_count = len(UPSTREAM_GOAL_IDS) if branch == EXISTING_EVIDENCE_BRANCH else 0
+    inherited_count = 0
     if len(handoffs) != inherited_count + first_incomplete_index:
         raise SchedulerError(
             "stale recovery ledger length does not match the completed prefix"
@@ -1093,8 +966,17 @@ def resolve_user_parameters(
     project_root: Path,
     supplied: dict[str, Any],
 ) -> dict[str, Any]:
-    """Merge audited low-cost defaults with explicit user overrides."""
+    """Merge the audited fresh R01-R10 configuration with explicit overrides."""
     resolved = copy.deepcopy(DEFAULT_WORKFLOW05_USER_PARAMETERS)
+    fresh_config_path = (
+        project_root / "perf_trace/configs/workflow01_10_fresh_e2e_dcu1.json"
+    )
+    fresh_defaults = load_json(fresh_config_path)
+    if fresh_defaults.get("fresh_e2e_contract") != FRESH_E2E_CONTRACT:
+        raise SchedulerError(
+            f"fresh configuration contract mismatch: {fresh_config_path}"
+        )
+    resolved.update(fresh_defaults)
     resolved.update(supplied)
 
     trace_target = (project_root / "pra2026-bh408").resolve()
@@ -1120,37 +1002,17 @@ def resolve_user_parameters(
             f"{LOW_COST_TIMELINE_POLICY_VERSION}"
         )
     acquisition_mode = resolved.get("evidence_acquisition_mode")
-    if acquisition_mode not in {
-        "historical_then_selective",
-        "fresh_no_prior_runtime_reuse",
-    }:
-        raise SchedulerError("unsupported evidence_acquisition_mode")
+    if acquisition_mode != "fresh_no_prior_runtime_reuse":
+        raise SchedulerError(
+            "Workflow 05 only supports fresh_no_prior_runtime_reuse"
+        )
     analysis_strategy = resolved.get("analysis_strategy")
-    if analysis_strategy not in {
-        "two_level_historical_then_selective_timeline",
-        "fresh_run_full_request_e2e_timeline",
-    }:
-        raise SchedulerError("unsupported Workflow05 analysis_strategy")
-    fresh_contract = resolved.get("fresh_e2e_contract")
-    if acquisition_mode == "historical_then_selective":
-        if fresh_contract is not None:
-            raise SchedulerError(
-                "historical_then_selective requires fresh_e2e_contract=null"
-            )
-        if analysis_strategy != "two_level_historical_then_selective_timeline":
-            raise SchedulerError(
-                "historical evidence mode requires the two-level strategy"
-            )
-    else:
-        if fresh_contract != FRESH_E2E_CONTRACT:
-            raise SchedulerError(
-                "fresh_no_prior_runtime_reuse requires the exact audited "
-                "fresh_e2e_contract"
-            )
-        if analysis_strategy != "fresh_run_full_request_e2e_timeline":
-            raise SchedulerError(
-                "fresh evidence mode requires the full-request E2E strategy"
-            )
+    if analysis_strategy != "fresh_run_full_request_e2e_timeline":
+        raise SchedulerError(
+            "Workflow 05 requires the fresh full-request E2E strategy"
+        )
+    if resolved.get("fresh_e2e_contract") != FRESH_E2E_CONTRACT:
+        raise SchedulerError("fresh_e2e_contract must match the audited contract")
     if resolved.get("candidate_selection_policy") != (
         "latency_coverage_with_feature_diversity"
     ):
@@ -1280,23 +1142,12 @@ def resolve_user_parameters(
     for key, value in fixed_contract_controls.items():
         if resolved.get(key) != value:
             raise SchedulerError(f"{key} must equal {value!r}")
-    mode_contract_controls = (
-        {
-            "measurement_contract_policy": "same_run_same_request",
-            "base_evidence_role_on_execution_path_change": (
-                "preserve_semantically_valid_stage_evidence"
-            ),
-        }
-        if acquisition_mode == "fresh_no_prior_runtime_reuse"
-        else {
-            "measurement_contract_policy": (
-                "compatible_request_separate_capture_axes"
-            ),
-            "base_evidence_role_on_execution_path_change": (
-                "base_evidence_planning_only"
-            ),
-        }
-    )
+    mode_contract_controls = {
+        "measurement_contract_policy": "same_run_same_request",
+        "base_evidence_role_on_execution_path_change": (
+            "preserve_semantically_valid_stage_evidence"
+        ),
+    }
     for key, value in mode_contract_controls.items():
         if resolved.get(key) != value:
             raise SchedulerError(
@@ -1327,50 +1178,39 @@ def resolve_user_parameters(
         and timeline.get("layer2_track_groups")
         == list(REQUIRED_LAYER2_TRACK_GROUPS)
     )
-    if acquisition_mode == "fresh_no_prior_runtime_reuse":
-        timeline_valid = timeline_common_valid and (
-            timeline.get("layer1_output") == "E2E_PROCESS_TIMELINE.html"
-            and timeline.get("layer1_timing_semantics")
-            == "observed_fresh_run_request_process_and_device_timeline"
-            and timeline.get("hardware_counter_semantics")
-            == "observed_se_active_cu_samples_plus_replay_projected_pmc"
-        )
-    else:
-        timeline_valid = timeline_common_valid and (
-            timeline.get("layer1_timing_semantics")
-            == "observed_layer_kernel_plus_projected_process_composition"
-            and timeline.get("hardware_counter_semantics")
-            == "replay_projected_step"
-        )
+    timeline_valid = timeline_common_valid and (
+        timeline.get("layer1_output") == "E2E_PROCESS_TIMELINE.html"
+        and timeline.get("layer1_timing_semantics")
+        == "observed_fresh_run_request_process_and_device_timeline"
+        and timeline.get("hardware_counter_semantics")
+        == "observed_se_active_cu_samples_plus_replay_projected_pmc"
+    )
     if not timeline_valid:
         raise SchedulerError("timeline_visualization contract is invalid")
     _validate_workflow05_gap_controls(resolved, project_root=project_root)
-    if acquisition_mode == "fresh_no_prior_runtime_reuse":
-        if resolved.get("dependency_adapter") is not None:
-            raise SchedulerError(
-                "fresh mode does not accept a prebuilt dependency adapter; "
-                "R07 generates the same-lineage fresh-run adapter"
-            )
-        if resolved.get("traffic_resource_model") is not None:
-            raise SchedulerError(
-                "fresh mode generates traffic_resource_model in R08"
-            )
-        if float(resolved["target_cumulative_latency_coverage"]) != 1.0:
-            raise SchedulerError(
-                "fresh full-request mode requires target coverage 1.0"
-            )
-        sampling = resolved["live_hardware_sampling"]
-        if (
-            sampling.get("mode") != "rsmi_se_snapshot"
-            or sampling.get("metrics") != ["se_active_cu_pct"]
-            or not isinstance(sampling.get("sample_interval_ms"), (int, float))
-            or isinstance(sampling.get("sample_interval_ms"), bool)
-            or not 0 < float(sampling["sample_interval_ms"]) < 1.0
-        ):
-            raise SchedulerError(
-                "fresh mode requires sub-millisecond rsmi_se_snapshot "
-                "se_active_cu_pct sampling"
-            )
+    if resolved.get("dependency_adapter") is not None:
+        raise SchedulerError(
+            "fresh mode does not accept a prebuilt dependency adapter; "
+            "R07 generates the same-lineage adapter"
+        )
+    if resolved.get("traffic_resource_model") is not None:
+        raise SchedulerError(
+            "fresh mode generates traffic_resource_model in R08"
+        )
+    if float(resolved["target_cumulative_latency_coverage"]) != 1.0:
+        raise SchedulerError("fresh full-request mode requires target coverage 1.0")
+    sampling = resolved["live_hardware_sampling"]
+    if (
+        sampling.get("mode") != "rsmi_se_snapshot"
+        or sampling.get("metrics") != ["se_active_cu_pct"]
+        or not isinstance(sampling.get("sample_interval_ms"), (int, float))
+        or isinstance(sampling.get("sample_interval_ms"), bool)
+        or not 0 < float(sampling["sample_interval_ms"]) < 1.0
+    ):
+        raise SchedulerError(
+            "fresh mode requires sub-millisecond rsmi_se_snapshot "
+            "se_active_cu_pct sampling"
+        )
     return resolved
 
 
@@ -1378,96 +1218,9 @@ def canonicalize_stored_user_parameters(
     project_root: Path,
     stored: dict[str, Any],
 ) -> dict[str, Any]:
-    """Migrate exact legacy labels and inherit newly introduced controls.
-
-    The migration changes terminology only.  In particular, it does not
-    rewrite any completed handoff, evidence file, model/input contract, or
-    measurement.  It makes stopped fresh runs resume with the continuous
-    same-run lineage semantics introduced after their initial R01-R05 prefix.
-    """
-    migrated = copy.deepcopy(stored)
-
-    def rename_key(old: str, new: str, value_map: dict[Any, Any] | None = None) -> None:
-        if old not in migrated:
-            return
-        value = migrated.pop(old)
-        if value_map is not None:
-            value = value_map.get(value, value)
-        if new in migrated and migrated[new] != value:
-            raise SchedulerError(
-                f"resume parameters contain conflicting {old} and {new} values"
-            )
-        migrated[new] = value
-
-    rename_key(
-        "historical_evidence_role_on_execution_path_change",
-        "base_evidence_role_on_execution_path_change",
-        {
-            "planning_only": (
-                "preserve_semantically_valid_stage_evidence"
-                if migrated.get("evidence_acquisition_mode")
-                == "fresh_no_prior_runtime_reuse"
-                else "base_evidence_planning_only"
-            ),
-            "same_run_prefix_remains_current": (
-                "preserve_semantically_valid_stage_evidence"
-            ),
-        },
-    )
-    rename_key(
-        "cross_contract_timeline_policy",
-        "cross_capture_timeline_policy",
-        {"separate_axes_no_merge": "separate_clock_axes_no_merge"},
-    )
-    rename_key("current_child_dependency_adapter", "dependency_adapter")
-    for threshold_key in ("high_risk_threshold", "template_shape_distance_threshold"):
-        threshold = migrated.get(threshold_key)
-        if isinstance(threshold, dict) and threshold.get("policy") == "historical_quantile":
-            threshold["policy"] = "evidence_quantile"
-    sampling = migrated.get("live_hardware_sampling")
-    if isinstance(sampling, dict):
-        collector = sampling.get("collector")
-        canonical_collector = (
-            project_root
-            / "pra2026-bh408"
-            / "scripts"
-            / "perf_trace"
-            / "collect_dcu_live_utilization.py"
-        ).resolve()
-        if isinstance(collector, dict) and canonical_collector.is_file():
-            collector_path = Path(str(collector.get("path", ""))).expanduser()
-            if not collector_path.is_absolute():
-                collector_path = project_root / collector_path
-            if collector_path.resolve() == canonical_collector:
-                collector["sha256"] = sha256_file(canonical_collector)
-    if migrated.get("evidence_acquisition_mode") == "fresh_no_prior_runtime_reuse":
-        for key in ("analysis_strategy", "measurement_contract_policy"):
-            value = migrated.get(key)
-            if value in LEGACY_FRESH_SEMANTIC_VALUE_ALIASES:
-                migrated[key] = LEGACY_FRESH_SEMANTIC_VALUE_ALIASES[value]
-        if migrated.get("fresh_e2e_contract") == LEGACY_FRESH_E2E_CONTRACT_V0:
-            migrated["fresh_e2e_contract"] = copy.deepcopy(FRESH_E2E_CONTRACT)
-        timeline = migrated.get("timeline_visualization")
-        if isinstance(timeline, dict):
-            timing_semantics = timeline.get("layer1_timing_semantics")
-            if timing_semantics in LEGACY_FRESH_SEMANTIC_VALUE_ALIASES:
-                timeline["layer1_timing_semantics"] = (
-                    LEGACY_FRESH_SEMANTIC_VALUE_ALIASES[timing_semantics]
-                )
-    elif (
-        migrated.get("analysis_strategy")
-        == "two_level_historical_then_selective_timeline"
-        and migrated.get("measurement_contract_policy")
-        == "current_child_same_request"
-    ):
-        # The old label described the supplemental capture relative to its
-        # historical planning input. Its actual timing policy was already
-        # separate capture axes, which is the explicit legacy-branch name.
-        migrated["measurement_contract_policy"] = (
-            "compatible_request_separate_capture_axes"
-        )
-    canonical = resolve_user_parameters(project_root, migrated)
-    for key, value in migrated.items():
+    """Revalidate stored fresh parameters without semantic migration."""
+    canonical = resolve_user_parameters(project_root, stored)
+    for key, value in stored.items():
         if canonical.get(key) != value:
             raise SchedulerError(
                 f"resume user parameter {key} is not canonical"
@@ -1475,44 +1228,15 @@ def canonicalize_stored_user_parameters(
     return canonical
 
 
-def canonicalize_prompt_ledger_semantics(ledger: dict[str, Any]) -> dict[str, Any]:
-    """Return a prompt-only view with exact obsolete semantic labels mapped.
-
-    Completed handoffs and their referenced paths/hashes remain immutable.  The
-    recursive rewrite applies only to exact scalar values, so an old maintained
-    implementation filename is not disguised as a newly generated artifact.
-    """
-
-    def canonicalize(value: Any) -> Any:
-        if isinstance(value, dict):
-            return {key: canonicalize(item) for key, item in value.items()}
-        if isinstance(value, list):
-            return [canonicalize(item) for item in value]
-        if isinstance(value, str):
-            return LEGACY_FRESH_SEMANTIC_VALUE_ALIASES.get(value, value)
-        return copy.deepcopy(value)
-
-    result = canonicalize(ledger)
-    if not isinstance(result, dict):
-        raise SchedulerError("cumulative ledger must remain a JSON object")
-    return result
-
-
 def validate_branch_user_parameters(
     branch: str,
     parameters: dict[str, Any],
 ) -> None:
-    """Bind the no-reuse contract to its dedicated R01-R10 branch."""
+    """Bind the no-reuse contract to the fresh R01-R10 branch."""
     mode = parameters.get("evidence_acquisition_mode")
-    if branch == FRESH_E2E_BRANCH:
-        if mode != "fresh_no_prior_runtime_reuse":
-            raise SchedulerError(
-                f"{FRESH_E2E_BRANCH} requires fresh_no_prior_runtime_reuse"
-            )
-    elif mode != "historical_then_selective":
+    if branch != FRESH_E2E_BRANCH or mode != "fresh_no_prior_runtime_reuse":
         raise SchedulerError(
-            "fresh_no_prior_runtime_reuse is accepted only on "
-            f"{FRESH_E2E_BRANCH}"
+            f"{FRESH_E2E_BRANCH} requires fresh_no_prior_runtime_reuse"
         )
 
 
@@ -2169,46 +1893,18 @@ def load_resume_context(
                 promotable_handoff
             )
 
-    upstream_entries: list[dict[str, Any]] = []
     upstream_provenance = state.get("upstream_ledger")
-    if branch == EXISTING_EVIDENCE_BRANCH:
-        if not isinstance(upstream_provenance, dict):
-            raise SchedulerError(
-                "existing-evidence resume state lacks upstream provenance"
-            )
-        upstream_path = upstream_provenance.get("path")
-        if not isinstance(upstream_path, str):
-            raise SchedulerError(
-                "existing-evidence resume state lacks upstream ledger path"
-            )
-        upstream_payload, observed_provenance = validate_upstream_ledger(
-            project_root,
-            upstream_path,
-        )
-        for key, recorded_value in upstream_provenance.items():
-            if observed_provenance.get(key) != recorded_value:
-                raise SchedulerError(
-                    f"resume upstream provenance changed for {key}"
-                )
-        if ledger.get("upstream_ledger") != upstream_provenance:
-            raise SchedulerError("resume state/ledger upstream provenance mismatch")
-        upstream_entries = upstream_payload["handoffs"]
-    elif state.get("upstream_ledger") is not None or ledger.get(
-        "upstream_ledger"
-    ) is not None:
+    if upstream_provenance is not None or ledger.get("upstream_ledger") is not None:
         raise SchedulerError(
-            "non-existing-evidence resume unexpectedly has upstream ledger"
+            "fresh R01-R10 resume refuses an external upstream ledger"
         )
+    upstream_provenance = None
 
     handoffs = ledger.get("handoffs")
     if not isinstance(handoffs, list):
         raise SchedulerError("resume cumulative ledger handoffs must be a list")
     completed_manifest_goals = goals[:first_incomplete_index]
-    expected_goal_order = (
-        list(UPSTREAM_GOAL_IDS) + completed_manifest_goals
-        if branch == EXISTING_EVIDENCE_BRANCH
-        else completed_manifest_goals
-    )
+    expected_goal_order = completed_manifest_goals
     if len(handoffs) != len(expected_goal_order):
         raise SchedulerError(
             "resume cumulative ledger length does not match the completed prefix"
@@ -2234,10 +1930,7 @@ def load_resume_context(
             goal_id=goal_id,
             expected_skill=expected_skill,
             expected_path=expected_path,
-            require_recorded_hash=not (
-                branch == EXISTING_EVIDENCE_BRANCH
-                and goal_id in UPSTREAM_GOAL_IDS
-            ),
+            require_recorded_hash=True,
         )
         observed_skill = entry.get("skill") if isinstance(entry, dict) else None
         if observed_skill != expected_skill:
@@ -2249,20 +1942,7 @@ def load_resume_context(
                     "current": str(expected_skill),
                 }
             )
-        if (
-            branch == EXISTING_EVIDENCE_BRANCH
-            and goal_id in UPSTREAM_GOAL_IDS
-            and handoffs[index] != upstream_entries[index]
-        ):
-            raise SchedulerError(
-                f"resume ledger changed inherited upstream entry {goal_id}"
-            )
-
-    inherited_count = (
-        len(UPSTREAM_GOAL_IDS)
-        if branch == EXISTING_EVIDENCE_BRANCH
-        else 0
-    )
+    inherited_count = 0
     return {
         "run_dir": run_dir,
         "state_path": state_path,
@@ -2444,149 +2124,19 @@ def validate_workflow05_handoff_state(
         )
 
 
-def _resolve_handoff_file_reference(
-    container: dict[str, Any],
-    key: str,
-    *,
-    goal_id: str,
-    project_root: Path,
-    required_root: Path | None = None,
-) -> Path:
-    reference = container.get(key)
-    if not isinstance(reference, dict):
-        raise SchedulerError(f"{goal_id}: missing fresh evidence reference {key}")
-    path_value = reference.get("path")
-    digest = reference.get("sha256")
-    if not isinstance(path_value, str) or not path_value:
-        raise SchedulerError(f"{goal_id}: {key}.path is invalid")
-    if not isinstance(digest, str) or re.fullmatch(r"[0-9a-f]{64}", digest) is None:
-        raise SchedulerError(f"{goal_id}: {key}.sha256 is invalid")
-    candidate = Path(path_value).expanduser()
-    if not candidate.is_absolute():
-        candidate = project_root / candidate
-    path = require_under(candidate.resolve(), project_root)
-    if required_root is not None:
-        required_root = required_root.resolve()
-        if path != required_root and not path.is_relative_to(required_root):
-            raise SchedulerError(
-                f"{goal_id}: {key} must remain under the current run: {path}"
-            )
-    if not path.is_file() or sha256_file(path) != digest:
-        raise SchedulerError(f"{goal_id}: {key} is missing or changed: {path}")
-    return path
-
-
-def _csv_row_count(path: Path, *, goal_id: str, table_name: str) -> int:
-    try:
-        with path.open(newline="", encoding="utf-8") as handle:
-            reader = csv.DictReader(handle)
-            if reader.fieldnames is None:
-                raise SchedulerError(f"{goal_id}: {table_name} lacks a CSV header")
-            return sum(1 for _ in reader)
-    except (OSError, csv.Error) as exc:
-        raise SchedulerError(
-            f"{goal_id}: cannot parse normalized table {table_name}: {path}"
-        ) from exc
-
-
-def _load_handoff_json_reference(
-    container: dict[str, Any],
-    key: str,
-    *,
-    goal_id: str,
-    project_root: Path,
-    required_root: Path | None = None,
-) -> tuple[Path, dict[str, Any]]:
-    path = _resolve_handoff_file_reference(
-        container,
-        key,
-        goal_id=goal_id,
-        project_root=project_root,
-        required_root=required_root,
-    )
-    value = load_json(path)
-    if not isinstance(value, dict):
-        raise SchedulerError(f"{goal_id}: {key} JSON is not an object")
-    return path, value
-
-
-def _fresh_lineage_id_from_ledger(
-    ledger: dict[str, Any],
-    *,
-    project_root: Path,
-    run_dir: Path,
-) -> str | None:
-    """Return the R06 lineage identity without imposing source-byte equality."""
-    handoffs = ledger.get("handoffs")
-    if not isinstance(handoffs, list):
-        return None
-    for entry in reversed(handoffs):
-        if not isinstance(entry, dict) or entry.get("source_goal") != "R06":
-            continue
-        payload = entry.get("payload")
-        evidence = payload.get("fresh_e2e_evidence") if isinstance(payload, dict) else None
-        if not isinstance(evidence, dict):
-            return None
-        lineage_id = evidence.get("lineage_id")
-        if isinstance(lineage_id, str) and lineage_id:
-            return lineage_id
-        _, lineage = _load_handoff_json_reference(
-            evidence,
-            "fresh_run_lineage_manifest",
-            goal_id="R06",
-            project_root=project_root,
-            required_root=run_dir,
-        )
-        lineage_id = lineage.get("lineage_id")
-        return lineage_id if isinstance(lineage_id, str) and lineage_id else None
-    return None
-
-
-def _validate_fresh_source_lineage(
-    evidence: dict[str, Any],
-    *,
-    goal_id: str,
-    lineage_id: str,
-    project_root: Path,
-    run_dir: Path,
-) -> None:
-    """Validate a small stage-delta record, never an inter-stage hash gate."""
-    _, source_lineage = _load_handoff_json_reference(
-        evidence,
+FRESH_HANDOFF_ARTIFACT_KEYS = {
+    "R06": ("fresh_run_lineage_manifest", "full_request_target_manifest"),
+    "R07": (
+        "full_request_profile_metadata",
+        "process_trace_summary",
+        "fresh_run_dependency_adapter",
+        "live_utilization_summary",
         "source_lineage",
-        goal_id=goal_id,
-        project_root=project_root,
-        required_root=run_dir,
-    )
-    source_status = source_lineage.get("status")
-    if (
-        source_status not in {"PASS", "pass", "complete", "frozen"}
-        or source_lineage.get("lineage_id") != lineage_id
-    ):
-        raise SchedulerError(f"{goal_id}: source-lineage delta is invalid")
-    if source_lineage.get("source_hash_equality_required") is True:
-        raise SchedulerError(
-            f"{goal_id}: source-lineage delta incorrectly requires hash equality"
-        )
-    if source_status == "frozen" and (
-        source_lineage.get("schema_version") != 1
-        or source_lineage.get("runtime_goal") != goal_id
-        or source_lineage.get("source_change_policy")
-        != "stage_trace_instrumentation_allowed"
-        or source_lineage.get("source_hash_equality_required") is not False
-        or source_lineage.get(
-            "model_input_sampling_device_semantics_changed"
-        )
-        is not False
-        or (
-            goal_id == "R08"
-            and source_lineage.get("r07_process_family_identity_changed")
-            is not False
-        )
-    ):
-        raise SchedulerError(
-            f"{goal_id}: frozen source-lineage delta is semantically invalid"
-        )
+    ),
+    "R08": ("device_capabilities", "traffic_resource_model", "source_lineage"),
+    "R09": ("full_request_analysis", "source_lineage"),
+    "R10": ("offline_acceptance_manifest", "source_lineage"),
+}
 
 
 def validate_fresh_e2e_handoff(
@@ -2596,468 +2146,66 @@ def validate_fresh_e2e_handoff(
     project_root: Path,
     run_dir: Path,
     branch: str,
-    run_id: str,
-    expected_lineage_id: str | None,
-    user_parameters: dict[str, Any] | None = None,
+    ledger: dict[str, Any],
+    user_parameters: dict[str, Any],
 ) -> None:
-    """Validate one continuous fresh-run lineage and same-run evidence paths."""
-    if goal_id not in WORKFLOW05_GOALS:
-        return
+    """Validate same-lineage fresh Workflow05 evidence and pinned artifacts."""
+    if branch != FRESH_E2E_BRANCH:
+        raise SchedulerError(f"{goal_id}: fresh handoff has the wrong branch")
+    if user_parameters.get("evidence_acquisition_mode") != (
+        "fresh_no_prior_runtime_reuse"
+    ):
+        raise SchedulerError(f"{goal_id}: fresh no-reuse mode is missing")
     evidence = payload.get("fresh_e2e_evidence")
     if (
         not isinstance(evidence, dict)
         or evidence.get("schema_version") != 1
         or evidence.get("status") != "complete"
     ):
-        raise SchedulerError(
-            f"{goal_id}: fresh_e2e_evidence must be complete schema version 1"
-        )
+        raise SchedulerError(f"{goal_id}: fresh_e2e_evidence is incomplete")
+    lineage_id = evidence.get("lineage_id")
+    if not isinstance(lineage_id, str) or not lineage_id.strip():
+        raise SchedulerError(f"{goal_id}: fresh lineage_id is missing")
 
-    lineage_id: str
-    if goal_id == "R06":
-        _, lineage = _load_handoff_json_reference(
-            evidence,
-            "fresh_run_lineage_manifest",
-            goal_id=goal_id,
-            project_root=project_root,
-            required_root=run_dir,
-        )
-        invariants = lineage.get("semantic_invariants")
-        runtime_references = lineage.get("runtime_references")
-        if (
-            lineage.get("schema_version") != 1
-            or lineage.get("status") != "PASS"
-            or lineage.get("branch") != branch
-            or lineage.get("run_id") != run_id
-            or lineage.get("evidence_source_policy") != "current_run_only"
-            or lineage.get("source_change_policy")
-            != "stage_trace_instrumentation_allowed"
-            or lineage.get("source_hash_equality_required") is not False
-            or lineage.get("external_runtime_reference_count") != 0
-            or lineage.get("upstream_goals") != list(UPSTREAM_GOAL_IDS)
-            or not isinstance(invariants, dict)
-            or invariants.get("status") != "PASS"
-            or not isinstance(runtime_references, list)
-            or not runtime_references
-        ):
-            raise SchedulerError("R06: fresh-run lineage manifest is invalid")
-        lineage_id_value = lineage.get("lineage_id")
-        if not isinstance(lineage_id_value, str) or not lineage_id_value:
-            raise SchedulerError("R06: fresh-run lineage_id is missing")
-        lineage_id = lineage_id_value
-        if evidence.get("lineage_id") not in {None, lineage_id}:
-            raise SchedulerError("R06: handoff and manifest lineage_id differ")
-        for index, reference in enumerate(runtime_references):
-            if not isinstance(reference, dict):
-                raise SchedulerError(
-                    f"R06: runtime_references[{index}] is not an object"
-                )
-            _resolve_handoff_file_reference(
-                {"runtime_reference": reference},
-                "runtime_reference",
-                goal_id=goal_id,
-                project_root=project_root,
-                required_root=run_dir,
-            )
-        _resolve_handoff_file_reference(
-            lineage,
-            "ledger",
-            goal_id=goal_id,
-            project_root=project_root,
-            required_root=run_dir,
-        )
-        _resolve_handoff_file_reference(
-            lineage,
-            "semantic_contract",
-            goal_id=goal_id,
-            project_root=project_root,
-            required_root=run_dir,
-        )
+    prior_lineages: list[str] = []
+    handoffs = ledger.get("handoffs")
+    if not isinstance(handoffs, list):
+        raise SchedulerError(f"{goal_id}: cumulative ledger is invalid")
+    for entry in handoffs:
+        if not isinstance(entry, dict):
+            continue
+        prior_payload = entry.get("payload")
+        if not isinstance(prior_payload, dict):
+            continue
+        prior_evidence = prior_payload.get("fresh_e2e_evidence")
+        if isinstance(prior_evidence, dict):
+            prior_lineage = prior_evidence.get("lineage_id")
+            if isinstance(prior_lineage, str) and prior_lineage:
+                prior_lineages.append(prior_lineage)
+    if prior_lineages and any(value != lineage_id for value in prior_lineages):
+        raise SchedulerError(f"{goal_id}: fresh lineage_id changed")
 
-        target_path, targets = _load_handoff_json_reference(
-            evidence,
-            "full_request_target_manifest",
-            goal_id=goal_id,
-            project_root=project_root,
-            required_root=run_dir,
-        )
+    for key in FRESH_HANDOFF_ARTIFACT_KEYS[goal_id]:
+        reference = evidence.get(key)
+        if not isinstance(reference, dict) or set(reference) != {"path", "sha256"}:
+            raise SchedulerError(f"{goal_id}: invalid fresh artifact reference {key}")
+        path_value = reference.get("path")
+        digest = reference.get("sha256")
         if (
-            targets.get("schema_version") != 1
-            or targets.get("status") != "PASS"
-            or targets.get("branch") != branch
-            or targets.get("run_id") != run_id
-            or targets.get("lineage_id") != lineage_id
-            or targets.get("capture_scope")
-            != "one_fresh_run_request_all_process_ranges"
+            not isinstance(path_value, str)
+            or not isinstance(digest, str)
+            or re.fullmatch(r"[0-9a-f]{64}", digest) is None
         ):
-            raise SchedulerError("R06: full-request target manifest is invalid")
-        lineage_target = lineage.get("target_manifest")
-        if (
-            not isinstance(lineage_target, dict)
-            or lineage_target.get("path") != str(target_path)
-            or lineage_target.get("sha256") != sha256_file(target_path)
-        ):
-            raise SchedulerError("R06: lineage target-manifest reference differs")
-        event_path = _resolve_handoff_file_reference(
-            targets,
-            "event_target_file",
-            goal_id=goal_id,
-            project_root=project_root,
-            required_root=run_dir,
-        )
-        range_path = _resolve_handoff_file_reference(
-            targets,
-            "range_target_file",
-            goal_id=goal_id,
-            project_root=project_root,
-            required_root=run_dir,
-        )
-        hardware_path = _resolve_handoff_file_reference(
-            targets,
-            "r08_hardware_subset",
-            goal_id=goal_id,
-            project_root=project_root,
-            required_root=run_dir,
-        )
-        event_lines = event_path.read_text(encoding="utf-8").splitlines()
-        range_lines = range_path.read_text(encoding="utf-8").splitlines()
-        if (
-            not event_lines
-            or not range_lines
-            or len(event_lines) != len(set(event_lines))
-            or len(range_lines) != len(set(range_lines))
-            or any(not value or value != value.strip() for value in event_lines)
-            or any(not value or value != value.strip() for value in range_lines)
-            or targets["event_target_file"].get("line_count") != len(event_lines)
-            or targets["range_target_file"].get("line_count") != len(range_lines)
-            or targets["r08_hardware_subset"].get("row_count", 0) <= 0
-            or hardware_path.stat().st_size <= 0
-        ):
-            raise SchedulerError("R06: fresh full-request targets are incomplete")
-    else:
-        lineage_id_value = evidence.get("lineage_id")
-        if (
-            not isinstance(expected_lineage_id, str)
-            or not expected_lineage_id
-            or lineage_id_value != expected_lineage_id
-        ):
+            raise SchedulerError(f"{goal_id}: invalid fresh artifact record {key}")
+        path = project_path(path_value, project_root)
+        try:
+            path.relative_to(run_dir.resolve())
+        except ValueError as exc:
             raise SchedulerError(
-                f"{goal_id}: evidence does not match the current run's R06 lineage"
-            )
-        lineage_id = expected_lineage_id
-        _validate_fresh_source_lineage(
-            evidence,
-            goal_id=goal_id,
-            lineage_id=lineage_id,
-            project_root=project_root,
-            run_dir=run_dir,
-        )
-
-    if goal_id == "R07":
-        _, metadata = _load_handoff_json_reference(
-            evidence,
-            "full_request_profile_metadata",
-            goal_id=goal_id,
-            project_root=project_root,
-            required_root=run_dir,
-        )
-        expected = metadata.get("expected_process_ranges")
-        emitted = metadata.get("emitted_process_ranges")
-        event_transport = metadata.get("process_target_transport")
-        range_transport = metadata.get("exact_process_range_target_transport")
-        if (
-            metadata.get("status") != "profile_complete_analysis_pending"
-            or metadata.get("process_profile") != "on"
-            or metadata.get("lineage_id") != lineage_id
-            or not isinstance(expected, list)
-            or not expected
-            or expected != emitted
-            or metadata.get("expected_process_range_count") != len(expected)
-            or not isinstance(event_transport, dict)
-            or not isinstance(range_transport, dict)
-            or event_transport.get("file_count", 0) <= 0
-            or range_transport.get("file_count") != len(expected)
-            or metadata.get("request_start_realtime_ns", 0)
-            >= metadata.get("request_end_realtime_ns", 0)
-        ):
-            raise SchedulerError(
-                "R07: full-request profile metadata does not prove complete "
-                "same-lineage newline-file process coverage"
-            )
-        _resolve_handoff_file_reference(
-            metadata,
-            "fresh_run_lineage_manifest",
-            goal_id=goal_id,
-            project_root=project_root,
-            required_root=run_dir,
-        )
-        _, trace = _load_handoff_json_reference(
-            evidence,
-            "process_trace_summary",
-            goal_id=goal_id,
-            project_root=project_root,
-            required_root=run_dir,
-        )
-        if trace.get("status") != "PASS" or trace.get("contract_id") != metadata.get(
-            "contract_id"
-        ):
-            raise SchedulerError("R07: same-run process trace analysis did not pass")
-        _, adapter = _load_handoff_json_reference(
-            evidence,
-            "fresh_run_dependency_adapter",
-            goal_id=goal_id,
-            project_root=project_root,
-            required_root=run_dir,
-        )
-        if (
-            adapter.get("status") != "complete"
-            or adapter.get("adapter_type")
-            != "fresh_run_fixed_input_fx_process_dependency"
-            or adapter.get("lineage_id") != lineage_id
-            or adapter.get("contract_id") != metadata.get("contract_id")
-        ):
-            raise SchedulerError("R07: fresh-run dependency adapter is invalid")
-        _, live = _load_handoff_json_reference(
-            evidence,
-            "live_utilization_summary",
-            goal_id=goal_id,
-            project_root=project_root,
-            required_root=run_dir,
-        )
-        empirical = live.get("empirical_sub_millisecond_cadence", {})
-        if (
-            live.get("status") != "complete"
-            or live.get("physical_device_index") != 1
-            or live.get("metric") != "se_active_cu_pct"
-            or live.get("successful_sample_count", 0) < 3
-            or not isinstance(empirical, dict)
-            or empirical.get("p50") is not True
-            or empirical.get("p95") is not True
-        ):
-            raise SchedulerError(
-                "R07: live SE utilization lacks successful empirical sub-ms evidence"
-            )
-    elif goal_id == "R08":
-        _, capabilities = _load_handoff_json_reference(
-            evidence,
-            "device_capabilities",
-            goal_id=goal_id,
-            project_root=project_root,
-            required_root=run_dir,
-        )
-        if (
-            capabilities.get("status") != "verified"
-            or capabilities.get("physical_device_id") != 1
-            or capabilities.get("architecture") != "gfx936"
-        ):
-            raise SchedulerError("R08: device capabilities are not verified")
-        _, model = _load_handoff_json_reference(
-            evidence,
-            "traffic_resource_model",
-            goal_id=goal_id,
-            project_root=project_root,
-            required_root=run_dir,
-        )
-        if (
-            model.get("status") != "complete"
-            or model.get("model_type")
-            != "fresh_run_fx_visible_traffic_and_dcu_family_resource"
-            or model.get("lineage_id") != lineage_id
-            or model.get("traffic_boundary", {}).get("hbm_or_dram_traffic_claimed")
-            is not False
-            or model.get("resource_boundary", {}).get("achieved_occupancy_claimed")
-            is not False
-        ):
-            raise SchedulerError("R08: traffic/resource model boundary is invalid")
-    elif goal_id == "R09":
-        _, analysis = _load_handoff_json_reference(
-            evidence,
-            "full_request_analysis",
-            goal_id=goal_id,
-            project_root=project_root,
-            required_root=run_dir,
-        )
-        normalized_tables = analysis.get("normalized_tables")
-        track_counts = analysis.get("track_type_counts")
-        configured_gates = analysis.get("configured_gates")
-        parameters = user_parameters or {}
-        utilization = parameters.get("utilization_classification_thresholds", {})
-        dependency = parameters.get("dependency_coverage_threshold", {})
-        opportunity = parameters.get("opportunity_gate_thresholds", {})
-        expected_gates = {
-            "low_se_utilization_pct": utilization.get(
-                "observed_se_active_cu_low_pct"
-            ),
-            "low_kernel_concurrency_max": utilization.get(
-                "low_kernel_concurrency_max_active_kernels"
-            ),
-            "minimum_launch_gap_ns": utilization.get(
-                "runtime_launch_gap_min_ns"
-            ),
-            "minimum_dependency_coverage": dependency.get("value"),
-            "minimum_exposed_duration_ns": opportunity.get(
-                "minimum_exposed_duration_ns"
-            ),
-            "minimum_exposed_fraction": opportunity.get(
-                "minimum_exposed_fraction"
-            ),
-            "slack_tolerance_ns": opportunity.get("slack_tolerance_ns"),
-            "require_all_seven_gates": True,
-        }
-        if (
-            analysis.get("status") != "PASS"
-            or analysis.get("analysis_type") != "fresh_run_full_request_e2e"
-            or analysis.get("lineage_id") != lineage_id
-            or analysis.get("full_request_observed_timeline") is not True
-            or analysis.get("high_latency_process_count", 0) <= 0
-            or analysis.get("high_latency_processes_with_live_samples", 0) <= 0
-            or analysis.get("fresh_run_dependency_adapter_consumed") is not True
-            or analysis.get("traffic_resource_model_consumed") is not True
-            or not isinstance(normalized_tables, dict)
-            or set(normalized_tables) != set(FRESH_E2E_NORMALIZED_TABLES)
-            or not isinstance(track_counts, dict)
-            or any(track_counts.get(key, 0) <= 0 for key in (
-                "request", "forward", "layer", "hip_runtime"
-            ))
-            or None in expected_gates.values()
-            or configured_gates != expected_gates
-        ):
-            raise SchedulerError("R09: fresh full-request analysis is incomplete")
-        for table_name in FRESH_E2E_NORMALIZED_TABLES:
-            record = normalized_tables.get(table_name)
-            if not isinstance(record, dict) or not isinstance(
-                record.get("row_count"), int
-            ):
-                raise SchedulerError(
-                    f"R09: normalized table record is invalid: {table_name}"
-                )
-            path = _resolve_handoff_file_reference(
-                normalized_tables,
-                table_name,
-                goal_id=goal_id,
-                project_root=project_root,
-                required_root=run_dir,
-            )
-            observed_count = _csv_row_count(
-                path, goal_id=goal_id, table_name=table_name
-            )
-            if observed_count != record["row_count"] or observed_count <= 0:
-                raise SchedulerError(
-                    f"R09: normalized table is empty or count-mismatched: "
-                    f"{table_name}"
-                )
-    elif goal_id == "R10":
-        _, acceptance = _load_handoff_json_reference(
-            evidence,
-            "offline_acceptance_manifest",
-            goal_id=goal_id,
-            project_root=project_root,
-            required_root=run_dir,
-        )
-        required = {
-            "index.html",
-            "E2E_PROCESS_TIMELINE.html",
-            "HIGH_LATENCY_PROCESS_HARDWARE_TIMELINE.html",
-            "CONCURRENCY_UTILIZATION.html",
-        }
-        outputs = acceptance.get("outputs")
-        view_coverage = acceptance.get("view_coverage")
-        if (
-            acceptance.get("status") != "PASS"
-            or acceptance.get("lineage_id") != lineage_id
-            or acceptance.get("self_contained_offline") is not True
-            or not isinstance(outputs, dict)
-            or set(outputs) != required
-            or not isinstance(view_coverage, dict)
-            or view_coverage.get("track_groups")
-            != list(FRESH_E2E_VIEW_TRACK_GROUPS)
-            or view_coverage.get("filters_search_zoom") is not True
-            or view_coverage.get("source_table_hashes_verified") is not True
-            or view_coverage.get("evidence_legends_complete") is not True
-        ):
-            raise SchedulerError("R10: offline fresh-E2E acceptance bundle is incomplete")
-        source_analysis_path = _resolve_handoff_file_reference(
-            acceptance,
-            "source_analysis",
-            goal_id=goal_id,
-            project_root=project_root,
-            required_root=run_dir,
-        )
-        source_analysis = load_json(source_analysis_path)
-        source_tables = source_analysis.get("normalized_tables")
-        expected_source_hashes = (
-            {
-                key: source_tables[key]["sha256"]
-                for key in FRESH_E2E_NORMALIZED_TABLES
-            }
-            if isinstance(source_tables, dict)
-            and set(source_tables) == set(FRESH_E2E_NORMALIZED_TABLES)
-            else None
-        )
-        if (
-            source_analysis.get("lineage_id") != lineage_id
-            or acceptance.get("source_table_hashes") != expected_source_hashes
-        ):
-            raise SchedulerError("R10: source analysis lineage differs")
-        generator_path = _resolve_handoff_file_reference(
-            acceptance,
-            "generator",
-            goal_id=goal_id,
-            project_root=project_root,
-        )
-        expected_generator = (
-            project_root
-            / "pra2026-bh408"
-            / "scripts"
-            / "perf_trace"
-            / "generate_fresh_e2e_visualization.py"
-        ).resolve()
-        if generator_path != expected_generator:
-            raise SchedulerError("R10: acceptance was not built by the maintained generator")
-        required_page_markers = {
-            "index.html": ("Fresh-run E2E performance acceptance",),
-            "E2E_PROCESS_TIMELINE.html": (
-                "data-track-groups=",
-                "hip_runtime",
-                "gpu_queue",
-                "strict_owned_kernel",
-            ),
-            "HIGH_LATENCY_PROCESS_HARDWARE_TIMELINE.html": (
-                "replay-projected resource",
-                "inferred traffic",
-                "unavailable",
-            ),
-            "CONCURRENCY_UTILIZATION.html": (
-                "Opportunity gates",
-                "Dependency / ready / slack",
-                "material launch gaps",
-            ),
-        }
-        for name in sorted(required):
-            page_path = _resolve_handoff_file_reference(
-                outputs,
-                name,
-                goal_id=goal_id,
-                project_root=project_root,
-                required_root=run_dir,
-            )
-            page_text = page_path.read_text(encoding="utf-8")
-            if any(marker not in page_text for marker in required_page_markers[name]):
-                raise SchedulerError(
-                    f"R10: {name} lacks required acceptance tracks or legends"
-                )
-            if any(token in page_text for token in (
-                "<script src=", "http://", "https://", "fetch("
-            )):
-                raise SchedulerError(f"R10: {name} is not self-contained")
-    if (
-        payload.get("evidence_status") != "complete"
-        or payload.get("coverage_target_met") is not True
-        or payload.get("next_authorization_required") is not False
-    ):
-        raise SchedulerError(
-            f"{goal_id}: fresh-run stage must meet its declared evidence target"
-        )
+                f"{goal_id}: fresh artifact escapes the active run: {key}"
+            ) from exc
+        if not path.is_file() or sha256_file(path) != digest:
+            raise SchedulerError(f"{goal_id}: fresh artifact hash mismatch: {key}")
 
 
 def validate_scheduler_handoff_payload(
@@ -3085,29 +2233,15 @@ def validate_scheduler_handoff_payload(
         raise SchedulerError(f"{goal_id}: runtime handoff Skill mismatch")
     if goal_id in WORKFLOW05_GOALS:
         validate_workflow05_handoff_state(goal_id, payload)
-        if (
-            user_parameters.get("evidence_acquisition_mode")
-            == "fresh_no_prior_runtime_reuse"
-        ):
-            expected_lineage_id = (
-                None
-                if goal_id == "R06"
-                else _fresh_lineage_id_from_ledger(
-                    ledger,
-                    project_root=project_root,
-                    run_dir=run_dir,
-                )
-            )
-            validate_fresh_e2e_handoff(
-                goal_id,
-                payload,
-                project_root=project_root,
-                run_dir=run_dir,
-                branch=branch,
-                run_id=run_id,
-                expected_lineage_id=expected_lineage_id,
-                user_parameters=user_parameters,
-            )
+        validate_fresh_e2e_handoff(
+            goal_id,
+            payload,
+            project_root=project_root,
+            run_dir=run_dir,
+            branch=branch,
+            ledger=ledger,
+            user_parameters=user_parameters,
+        )
     return payload
 
 
@@ -3307,7 +2441,7 @@ class AppServerClient:
             {
                 "clientInfo": {
                     "name": "qwen_dcu_perf_trace_01_05_runtime",
-                    "title": "Qwen DCU Perf Trace R01-R10 Runtime",
+                    "title": "Qwen DCU Fresh R01-R10 Runtime",
                     "version": "1.0.0",
                 },
                 "capabilities": {"experimentalApi": True},
@@ -3458,15 +2592,6 @@ class RuntimeScheduler:
         }
         prompt_ledger = self.ledger
         ledger_semantic_view = "source_exact"
-        if self.branch == FRESH_E2E_BRANCH:
-            prompt_ledger = canonicalize_prompt_ledger_semantics(self.ledger)
-            ledger_semantic_view = "canonical_exact_aliases"
-            stage_parameters["ledger_semantic_compatibility"] = {
-                "policy": "prompt_view_only_exact_value_aliases",
-                "completed_handoffs_immutable": True,
-                "source_paths_and_hashes_unchanged": True,
-                "exact_value_aliases": LEGACY_FRESH_SEMANTIC_VALUE_ALIASES,
-            }
         active_extension = getattr(self, "state", {}).get("active_extension")
         if isinstance(active_extension, dict):
             stage_parameters["evidence_extension"] = copy.deepcopy(
@@ -3716,7 +2841,7 @@ class RuntimeScheduler:
             if key in record
         }
 
-    def _fresh_goal_record(
+    def _new_goal_record(
         self,
         goal_id: str,
         *,
@@ -3970,7 +3095,7 @@ class RuntimeScheduler:
                 snapshot = self._previous_attempt_snapshot(previous)
                 snapshot["superseded_at"] = resumed_at
                 attempt_history.append(snapshot)
-            self.state["goals"][goal_id] = self._fresh_goal_record(
+            self.state["goals"][goal_id] = self._new_goal_record(
                 goal_id,
                 attempt_history=attempt_history,
             )
@@ -4777,7 +3902,7 @@ def dry_run_payload(
     resume_context: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     goals: list[dict[str, Any]] = []
-    inherited = list(UPSTREAM_GOAL_IDS) if branch == EXISTING_EVIDENCE_BRANCH else []
+    inherited: list[str] = []
     execution_goals = (
         list(resume_context["goal_ids"])
         if resume_context is not None
@@ -4846,17 +3971,12 @@ def dry_run_payload(
             goal_plan["work_repeated"] = False
         goals.append(goal_plan)
     ledger_state: dict[str, Any] = {
-        "required_for_execution": branch == EXISTING_EVIDENCE_BRANCH,
+        "required_for_execution": False,
         "provided": upstream_was_supplied,
         "validated": upstream_provenance is not None,
     }
     if upstream_provenance is not None:
         ledger_state["provenance"] = upstream_provenance
-    elif branch == EXISTING_EVIDENCE_BRANCH:
-        ledger_state["dry_run_note"] = (
-            "Supply --upstream-ledger for a real run; dry-run does not create "
-            "or select a completed R01-R05 evidence ledger."
-        )
     payload = {
         "schema_version": 1,
         "status": "dry_run",
@@ -4930,8 +4050,8 @@ def dry_run_payload(
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description=(
-            "Run a declared Qwen3.5-27B vLLM/PRA ROCm/DCU/HIP Workflow "
-            "R01-R10 branch as serial persistent Goals."
+            "Run the Qwen3.5-27B vLLM/PRA ROCm/DCU/HIP fresh R01-R10 "
+            "Goals serially in one lineage."
         )
     )
     default_root = Path(__file__).resolve().parents[2]
@@ -4960,7 +4080,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         default=None,
         help=(
             "Runtime user-parameter overrides as one JSON object. The audited "
-            "Workflow 05 low-cost timeline defaults are applied first."
+            "fresh R01-R10 configuration is applied first."
         ),
     )
     parameter_group.add_argument(
@@ -4970,19 +4090,10 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
             "overrides; omitted keys retain the audited defaults."
         ),
     )
-    parser.add_argument(
-        "--upstream-ledger",
-        help=(
-            "User-supplied compatible completed R01-R05 cumulative runtime "
-            "handoff ledger. Required for a non-dry-run "
-            "workflow05-existing-evidence branch and forbidden for "
-            "workflow01-10-fresh-e2e."
-        ),
-    )
     run_group = parser.add_mutually_exclusive_group()
     run_group.add_argument(
         "--run-id",
-        help="Fresh run directory name under perf_trace/runtime/<branch>.",
+        help="New run directory name under perf_trace/runtime/<branch>.",
     )
     run_group.add_argument(
         "--resume-run-id",
@@ -5173,21 +4284,12 @@ def main(argv: list[str] | None = None) -> int:
             raise SchedulerError(
                 "extension parameters are accepted only with --extend-from"
             )
-        if args.resume_run_id and args.upstream_ledger:
-            raise SchedulerError(
-                "--upstream-ledger is not accepted during resume; the stopped "
-                "run's hashed upstream ledger is revalidated automatically"
-            )
         if args.resume_run_id and (
             args.user_parameters is not None or args.user_parameters_file
         ):
             raise SchedulerError(
                 "user-parameter overrides are not accepted during resume; "
                 "the existing run's canonical parameters are reused"
-            )
-        if args.branch != EXISTING_EVIDENCE_BRANCH and args.upstream_ledger:
-            raise SchedulerError(
-                "--upstream-ledger is valid only for workflow05-existing-evidence"
             )
         project_root = Path(args.project_root).expanduser().resolve()
         manifest_path, manifest, skill_hashes = validate_runtime_inputs(
@@ -5241,21 +4343,6 @@ def main(argv: list[str] | None = None) -> int:
                 project_root,
                 supplied_user_parameters,
             )
-            if args.upstream_ledger:
-                upstream_ledger, upstream_provenance = validate_upstream_ledger(
-                    project_root,
-                    args.upstream_ledger,
-                )
-            if (
-                args.branch == EXISTING_EVIDENCE_BRANCH
-                and not args.dry_run
-                and upstream_ledger is None
-            ):
-                raise SchedulerError(
-                    "workflow05-existing-evidence requires --upstream-ledger "
-                    "with a compatible completed R01-R05 cumulative runtime "
-                    "handoff ledger"
-                )
             run_id = args.run_id or default_run_id()
         validate_branch_user_parameters(args.branch, user_parameters)
         if args.dry_run:
@@ -5269,7 +4356,7 @@ def main(argv: list[str] | None = None) -> int:
                         skill_hashes=skill_hashes,
                         user_parameters=user_parameters,
                         upstream_provenance=upstream_provenance,
-                        upstream_was_supplied=bool(args.upstream_ledger),
+                        upstream_was_supplied=False,
                         run_id=(run_id if args.resume_run_id else args.run_id),
                         model=args.model,
                         resume_context=resume_context,

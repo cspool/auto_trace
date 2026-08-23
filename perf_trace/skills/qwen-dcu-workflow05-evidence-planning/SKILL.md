@@ -30,7 +30,7 @@ completed ledger prefix=R01,R02,R03,R04,R05
 ```
 
 Reject any other branch or evidence mode. Legacy existing-evidence planning is
-owned by `qwen-dcu-workflow05-legacy-evidence-planning`; never mix its evidence
+owned by the removed result-reuse planning path; never mix its evidence
 or completion schema into this Skill.
 
 ## Fresh-Run Lineage Contract

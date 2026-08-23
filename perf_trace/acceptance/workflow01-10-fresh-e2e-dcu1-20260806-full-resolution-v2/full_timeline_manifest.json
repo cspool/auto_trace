@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "artifact_class": "derived_full_resolution_viewer_bundle",
+  "formal_r09_r10_regeneration": false,
+  "original_acceptance_untouched": true,
+  "lineage_id": "fresh-run:workflow01-10-fresh-e2e-dcu1-20260806:pra2026-bh408@0abe1e1d-dirty8194458c-qwen35-row0-greedy32-warmup1-eager-aiterua-dcu1-fresh-e2e-20260806",
+  "sampling_performed": false,
+  "event_count": 507005,
+  "event_count_formula": "request_timeline + process_timeline + 2 * kernel_timeline",
+  "event_count_by_category": {
+    "forward": 29,
+    "gpu_queue": 29964,
+    "hip_runtime": 428023,
+    "layer": 1856,
+    "process": 17168,
+    "request": 1,
+    "strict_owned_kernel": 29964
+  },
+  "timestamp_encoding": {
+    "rendering": "integer nanoseconds relative to request begin",
+    "absolute": "decimal strings per event",
+    "perfetto": "relative microseconds with three decimal nanosecond precision"
+  },
+  "source": {
+    "archive": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/acceptance/workflow01-10-fresh-e2e-dcu1-20260806-r10-offline-acceptance.tar.gz",
+      "sha256": "51150efff340cbf28d27db1066ba125873802dd7535e788ad0b2fe66a0bd04fa"
+    },
+    "accepted_e2e_member": {
+      "path": "acceptance/E2E_PROCESS_TIMELINE.html",
+      "sha256": "68eb4217ec75bf5ca8f092e454a9ee0300511ade07eeafc4c807148348f8f4e0"
+    },
+    "accepted_manifest_member": {
+      "path": "acceptance/offline_acceptance_manifest.json",
+      "sha256": "f4627a3319db2eb6636b8e041c3c01555b6c3f06871b15711b3b2e838916a744"
+    },
+    "source_table_hashes": {
+      "request_timeline": "0a1c4d81082f0870f0de6d95867146892b5a79a1c6df59226de750c360ba0285",
+      "process_timeline": "1ef10d37b0bc20af473ea9d07b7c02228a3633b10d69c208b3ffc6b5636f954a",
+      "kernel_timeline": "18583a588d345ab84b8330887582b1828be828dc5b6999ca2b99d17afd9fb419",
+      "live_utilization_aligned": "48d051a8c8bd9f185a97bdf960c47726be53d2b7aab101f68f463020208dd23c",
+      "process_live_utilization": "e7b6615b9fd67cf3714c56a0784b99b8b1b1b60deb7f5bba7b676f093226bdba",
+      "kernel_concurrency": "d075940b942c1b5048b81b2b84a503b2ab65aba1c14f09daebe99af9eedcbe45",
+      "queue_concurrency": "715e2e463ea3fdbfac0bacef475cb1c51179e502546694436abdc1b024a46e46",
+      "launch_gaps": "c7d756a7392d96de95c35c2d84927d8a432145612beb10158b1d45a78c671ce0",
+      "high_latency_processes": "d4849824918f6ede862d804cb9400ee4c2eb48d1622fd45c1f1c6b6e2909514c",
+      "dependency_state": "82982d590278532a2fdc2721c2cd2723f491df3765505098251ac5f833f6a1c0",
+      "traffic_resource_attachment": "71f0b1f8b69f1d93b30294704a1e9c382d2b2d46e5ff7106571a03f8168b82ef",
+      "opportunity_candidates": "58cfdfdc5c3f7b70c2d985c9833cb298334ed9f73ffcf2271c48f4a676a757fe"
+    },
+    "source_table_row_counts": {
+      "request_timeline": 429909,
+      "process_timeline": 17168,
+      "kernel_timeline": 29964,
+      "live_utilization_aligned": 34782,
+      "process_live_utilization": 17168,
+      "kernel_concurrency": 51798,
+      "queue_concurrency": 51798,
+      "launch_gaps": 47132,
+      "high_latency_processes": 128,
+      "dependency_state": 34800,
+      "traffic_resource_attachment": 17174,
+      "opportunity_candidates": 17168
+    }
+  },
+  "generators": {
+    "derived_bundle_generator": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/pra2026-bh408/scripts/perf_trace/regenerate_full_resolution_timeline.py",
+      "sha256": "00d6b56c58b4df42b901e05ac4175c8cbb95ff303a9932e907416832a522fa06"
+    },
+    "maintained_r10_generator": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/pra2026-bh408/scripts/perf_trace/generate_fresh_e2e_visualization.py",
+      "sha256": "c570a1fc64c875542fa147a6a8a13c319e6fddca73076f7d2a18ca113c0de1d4"
+    }
+  },
+  "outputs": {
+    "index.html": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/acceptance/workflow01-10-fresh-e2e-dcu1-20260806-full-resolution-v2/index.html",
+      "sha256": "6a1bd71e7fc5538c81fb4ba578cf015afd702ee989bc40334ac4242692cf8e27",
+      "size_bytes": 2967
+    },
+    "E2E_PROCESS_TIMELINE_LOSSLESS.html": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/acceptance/workflow01-10-fresh-e2e-dcu1-20260806-full-resolution-v2/E2E_PROCESS_TIMELINE_LOSSLESS.html",
+      "sha256": "2aea0cccb2bd7962c6f6d360fb7646ce4ae30b5024227f8e2ffc246cde1a3a33",
+      "size_bytes": 187358866
+    },
+    "E2E_PROCESS_TIMELINE.full.perfetto.json": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/acceptance/workflow01-10-fresh-e2e-dcu1-20260806-full-resolution-v2/E2E_PROCESS_TIMELINE.full.perfetto.json",
+      "sha256": "5329d71a8831e2523cfa59c98e6805fd9d1299ec1893b90d8710b9d5e42756c8",
+      "size_bytes": 250617302
+    }
+  },
+  "validation": {
+    "source_acceptance_status": "PASS",
+    "source_lineage_matches": true,
+    "source_request_bounds_match": true,
+    "source_event_count_matches_formula": true,
+    "full_trace_event_count_matches_source": true,
+    "category_counts_match_source": true,
+    "relative_nanosecond_payload_exact": true,
+    "model_run_count": 0,
+    "gpu_activity_count": 0,
+    "profiler_run_count": 0,
+    "pmc_replay_count": 0
+  }
+}
