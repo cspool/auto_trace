@@ -1,0 +1,55 @@
+{
+  "bijective_for_this_single_request": true,
+  "internal_random_suffix": "9c959c99",
+  "logical_pipeline_run_id": "20260729T050800Z-fx-89687ae2",
+  "mapping_type": "r02_source_event_to_r032_fresh_runtime_event",
+  "mechanism": "vLLM V1 InputProcessor.assign_request_id preserves the external ID in external_req_id and randomizes the internal scheduler ID",
+  "mechanism_source": {
+    "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/pra2026-bh408/vllm/v1/engine/input_processor.py",
+    "role": "vllm_v1_request_id_randomization_source",
+    "sha256": "951cc1a8809ad296e8a61ddfd5d4759d4b2f6ecbd19de6667a03ad8cee7193fe",
+    "size_bytes": 18094
+  },
+  "observed_internal_request_id": "chatcmpl-bench-7f1746b7-0-9eeec82b-9c959c99",
+  "observed_r032_trace_run_id": "20260729T050800Z-fx-89687ae2-R032",
+  "ordered_fx_event_ids": [
+    "input1_layer0",
+    "input1_layer3",
+    "input2_layer31",
+    "input6_layer62",
+    "input6_layer63",
+    "input7_layer0",
+    "input7_layer3",
+    "input29_layer62",
+    "input29_layer63"
+  ],
+  "ordered_selection_ids": [
+    "selected:01",
+    "selected:02",
+    "selected:03",
+    "selected:04",
+    "selected:05",
+    "selected:06",
+    "selected:07",
+    "selected:08",
+    "selected:09"
+  ],
+  "ordered_source_event_ids": [
+    "chatcmpl-bench-7f1746b7-0-9eeec82b|s1|f1|l0|o0",
+    "chatcmpl-bench-7f1746b7-0-9eeec82b|s1|f1|l3|o0",
+    "chatcmpl-bench-7f1746b7-0-9eeec82b|s2|f2|l31|o0",
+    "chatcmpl-bench-7f1746b7-0-9eeec82b|s6|f6|l62|o0",
+    "chatcmpl-bench-7f1746b7-0-9eeec82b|s6|f6|l63|o0",
+    "chatcmpl-bench-7f1746b7-0-9eeec82b|s7|f7|l0|o0",
+    "chatcmpl-bench-7f1746b7-0-9eeec82b|s7|f7|l3|o0",
+    "chatcmpl-bench-7f1746b7-0-9eeec82b|s29|f29|l62|o0",
+    "chatcmpl-bench-7f1746b7-0-9eeec82b|s29|f29|l63|o0"
+  ],
+  "relation": "observed_internal_request_id = source_external_request_id + '-' + 8 lowercase hex characters",
+  "runtime_goal": "R032",
+  "schema_version": 1,
+  "scope_guard": "Join R032 to R02 through source_event_id, source_run_id, and this explicit single-request identity mapping; never rewrite the R032 stage trace-run ID or observed internal scheduler request ID as if either were the R02 source identity.",
+  "selected_event_count": 9,
+  "source_external_request_id": "chatcmpl-bench-7f1746b7-0-9eeec82b",
+  "source_r02_trace_run_id": "20260729T050800Z-fx-89687ae2-R02"
+}

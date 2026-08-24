@@ -1,0 +1,1843 @@
+{
+  "completion_conditions": {
+    "all_1079_fx_nodes_partitioned_exactly_once": true,
+    "all_86_processes_dependency_ordered": true,
+    "all_real_outputs_indexed_for_serial_consumption": true,
+    "all_rectangle_and_internal_region_borders_align": true,
+    "every_diagram_has_axes_endpoints_and_explicit_pointers": true,
+    "every_diagram_uses_observed_tensor_shapes": true,
+    "every_process_explains_all_grouped_fx_nodes": true,
+    "every_process_has_english_tensor_or_region_diagram": true,
+    "every_process_has_three_required_chinese_explanations": true,
+    "exact_nine_event_order_and_identities_preserved": true,
+    "generated_reconstruction_separate_from_manual_companions": true,
+    "manual_visualizations_not_bulk_generated": true,
+    "meta_storage_graph_modules_not_loaded_or_executed": true,
+    "no_chinese_or_raw_fx_targets_inside_diagrams": true,
+    "no_concurrent_distributed_pruning_or_early_exit_claim": true,
+    "no_measured_latency_or_theoretical_flops_claim": true,
+    "opaque_custom_op_boundaries_and_claim_guards_explicit": true,
+    "original_r032_source_artifact_hashes_unchanged": true,
+    "process_labels_not_claimed_as_module_ownership": true,
+    "r032_handoff_complete_and_consumed_as_is": true,
+    "r032_revalidated_before_reconstruction": true,
+    "runtime_handoff_written_to_requested_absolute_path": true
+  },
+  "created_at": "2026-07-29T07:48:08.371016+00:00",
+  "downstream_contract": {
+    "completion_report": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/runtime/20260729T050800Z-fx-89687ae2/artifacts/R042/completion_report.md",
+    "consume_as_is": true,
+    "event_outputs_by_source_event_id": {
+      "chatcmpl-bench-7f1746b7-0-9eeec82b|s1|f1|l0|o0": {
+        "event_id": "input1_layer0",
+        "manual_visualization": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input1_layer0/fx_process_visualization.md",
+        "process_node_csv": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input1_layer0/fx_process_nodes.csv",
+        "reconstruction_json": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input1_layer0/fx_process_reconstruction.json",
+        "reconstruction_markdown": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input1_layer0/fx_process_reconstruction.md",
+        "selection_id": "selected:01"
+      },
+      "chatcmpl-bench-7f1746b7-0-9eeec82b|s1|f1|l3|o0": {
+        "event_id": "input1_layer3",
+        "manual_visualization": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input1_layer3/fx_process_visualization.md",
+        "process_node_csv": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input1_layer3/fx_process_nodes.csv",
+        "reconstruction_json": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input1_layer3/fx_process_reconstruction.json",
+        "reconstruction_markdown": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input1_layer3/fx_process_reconstruction.md",
+        "selection_id": "selected:02"
+      },
+      "chatcmpl-bench-7f1746b7-0-9eeec82b|s29|f29|l62|o0": {
+        "event_id": "input29_layer62",
+        "manual_visualization": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input29_layer62/fx_process_visualization.md",
+        "process_node_csv": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input29_layer62/fx_process_nodes.csv",
+        "reconstruction_json": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input29_layer62/fx_process_reconstruction.json",
+        "reconstruction_markdown": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input29_layer62/fx_process_reconstruction.md",
+        "selection_id": "selected:08"
+      },
+      "chatcmpl-bench-7f1746b7-0-9eeec82b|s29|f29|l63|o0": {
+        "event_id": "input29_layer63",
+        "manual_visualization": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input29_layer63/fx_process_visualization.md",
+        "process_node_csv": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input29_layer63/fx_process_nodes.csv",
+        "reconstruction_json": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input29_layer63/fx_process_reconstruction.json",
+        "reconstruction_markdown": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input29_layer63/fx_process_reconstruction.md",
+        "selection_id": "selected:09"
+      },
+      "chatcmpl-bench-7f1746b7-0-9eeec82b|s2|f2|l31|o0": {
+        "event_id": "input2_layer31",
+        "manual_visualization": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input2_layer31/fx_process_visualization.md",
+        "process_node_csv": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input2_layer31/fx_process_nodes.csv",
+        "reconstruction_json": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input2_layer31/fx_process_reconstruction.json",
+        "reconstruction_markdown": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input2_layer31/fx_process_reconstruction.md",
+        "selection_id": "selected:03"
+      },
+      "chatcmpl-bench-7f1746b7-0-9eeec82b|s6|f6|l62|o0": {
+        "event_id": "input6_layer62",
+        "manual_visualization": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input6_layer62/fx_process_visualization.md",
+        "process_node_csv": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input6_layer62/fx_process_nodes.csv",
+        "reconstruction_json": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input6_layer62/fx_process_reconstruction.json",
+        "reconstruction_markdown": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input6_layer62/fx_process_reconstruction.md",
+        "selection_id": "selected:04"
+      },
+      "chatcmpl-bench-7f1746b7-0-9eeec82b|s6|f6|l63|o0": {
+        "event_id": "input6_layer63",
+        "manual_visualization": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input6_layer63/fx_process_visualization.md",
+        "process_node_csv": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input6_layer63/fx_process_nodes.csv",
+        "reconstruction_json": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input6_layer63/fx_process_reconstruction.json",
+        "reconstruction_markdown": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input6_layer63/fx_process_reconstruction.md",
+        "selection_id": "selected:05"
+      },
+      "chatcmpl-bench-7f1746b7-0-9eeec82b|s7|f7|l0|o0": {
+        "event_id": "input7_layer0",
+        "manual_visualization": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input7_layer0/fx_process_visualization.md",
+        "process_node_csv": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input7_layer0/fx_process_nodes.csv",
+        "reconstruction_json": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input7_layer0/fx_process_reconstruction.json",
+        "reconstruction_markdown": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input7_layer0/fx_process_reconstruction.md",
+        "selection_id": "selected:06"
+      },
+      "chatcmpl-bench-7f1746b7-0-9eeec82b|s7|f7|l3|o0": {
+        "event_id": "input7_layer3",
+        "manual_visualization": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input7_layer3/fx_process_visualization.md",
+        "process_node_csv": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input7_layer3/fx_process_nodes.csv",
+        "reconstruction_json": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input7_layer3/fx_process_reconstruction.json",
+        "reconstruction_markdown": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input7_layer3/fx_process_reconstruction.md",
+        "selection_id": "selected:07"
+      }
+    },
+    "evidence_manifest": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/runtime/20260729T050800Z-fx-89687ae2/artifacts/R042/evidence_manifest.json",
+    "fx_root": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0",
+    "join_key": [
+      "run_id",
+      "contract_id",
+      "rank",
+      "worker_id",
+      "request_id",
+      "engine_step_id",
+      "forward_id",
+      "layer_idx",
+      "layer_occurrence"
+    ],
+    "logical_pipeline_run_id": "20260729T050800Z-fx-89687ae2",
+    "must_preserve": [
+      "Consume all nine events in exact manifest order.",
+      "Preserve selection_id, source_event_id, R032 stage run ID, and the upstream request-instance identity mapping.",
+      "Treat every reconstruction as one fixed-input FX path and every process label as a rule-derived DAG region.",
+      "Keep generated reconstruction artifacts separate from the manual fx_process_visualization.md companions.",
+      "Keep GDN core, KV-cache mutation, and unified-attention custom-op internals opaque.",
+      "Do not load meta-storage GraphModules as executable model checkpoints.",
+      "Do not reinterpret process regions, FX nodes, or upstream theoretical FLOPs as measured latency.",
+      "Do not claim module ownership, unobserved branches, concurrent/distributed execution, pruning, or early exit."
+    ],
+    "ordered_event_ids": [
+      "input1_layer0",
+      "input1_layer3",
+      "input2_layer31",
+      "input6_layer62",
+      "input6_layer63",
+      "input7_layer0",
+      "input7_layer3",
+      "input29_layer62",
+      "input29_layer63"
+    ],
+    "ordered_selection_ids": [
+      "selected:01",
+      "selected:02",
+      "selected:03",
+      "selected:04",
+      "selected:05",
+      "selected:06",
+      "selected:07",
+      "selected:08",
+      "selected:09"
+    ],
+    "ordered_source_event_ids": [
+      "chatcmpl-bench-7f1746b7-0-9eeec82b|s1|f1|l0|o0",
+      "chatcmpl-bench-7f1746b7-0-9eeec82b|s1|f1|l3|o0",
+      "chatcmpl-bench-7f1746b7-0-9eeec82b|s2|f2|l31|o0",
+      "chatcmpl-bench-7f1746b7-0-9eeec82b|s6|f6|l62|o0",
+      "chatcmpl-bench-7f1746b7-0-9eeec82b|s6|f6|l63|o0",
+      "chatcmpl-bench-7f1746b7-0-9eeec82b|s7|f7|l0|o0",
+      "chatcmpl-bench-7f1746b7-0-9eeec82b|s7|f7|l3|o0",
+      "chatcmpl-bench-7f1746b7-0-9eeec82b|s29|f29|l62|o0",
+      "chatcmpl-bench-7f1746b7-0-9eeec82b|s29|f29|l63|o0"
+    ],
+    "reconstruction_manifest": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/fx_process_reconstruction_manifest.json",
+    "reconstruction_manifest_csv": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/fx_process_reconstruction_manifest.csv",
+    "source_r032_trace_run_id": "20260729T050800Z-fx-89687ae2-R032",
+    "validation_report": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/runtime/20260729T050800Z-fx-89687ae2/artifacts/R042/validation_report.json"
+  },
+  "handoff_id": "20260729T050800Z-fx-89687ae2:R042",
+  "input_contract": {
+    "consume_as_is": true,
+    "contract_id": "pra2026-bh408@3d036144-16-32K-row0-greedy1024",
+    "fx_root": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0",
+    "join_key": [
+      "run_id",
+      "contract_id",
+      "rank",
+      "worker_id",
+      "request_id",
+      "engine_step_id",
+      "forward_id",
+      "layer_idx",
+      "layer_occurrence"
+    ],
+    "ordered_event_ids": [
+      "input1_layer0",
+      "input1_layer3",
+      "input2_layer31",
+      "input6_layer62",
+      "input6_layer63",
+      "input7_layer0",
+      "input7_layer3",
+      "input29_layer62",
+      "input29_layer63"
+    ],
+    "ordered_selection_ids": [
+      "selected:01",
+      "selected:02",
+      "selected:03",
+      "selected:04",
+      "selected:05",
+      "selected:06",
+      "selected:07",
+      "selected:08",
+      "selected:09"
+    ],
+    "ordered_source_event_ids": [
+      "chatcmpl-bench-7f1746b7-0-9eeec82b|s1|f1|l0|o0",
+      "chatcmpl-bench-7f1746b7-0-9eeec82b|s1|f1|l3|o0",
+      "chatcmpl-bench-7f1746b7-0-9eeec82b|s2|f2|l31|o0",
+      "chatcmpl-bench-7f1746b7-0-9eeec82b|s6|f6|l62|o0",
+      "chatcmpl-bench-7f1746b7-0-9eeec82b|s6|f6|l63|o0",
+      "chatcmpl-bench-7f1746b7-0-9eeec82b|s7|f7|l0|o0",
+      "chatcmpl-bench-7f1746b7-0-9eeec82b|s7|f7|l3|o0",
+      "chatcmpl-bench-7f1746b7-0-9eeec82b|s29|f29|l62|o0",
+      "chatcmpl-bench-7f1746b7-0-9eeec82b|s29|f29|l63|o0"
+    ],
+    "source_goal": "R032",
+    "source_handoff": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/runtime/20260729T050800Z-fx-89687ae2/handoffs/R032.json",
+      "role": "complete_upstream_r032_runtime_handoff",
+      "sha256": "ac5ef976676d4631e612c0b12f8962ff53b1ea2d50cf61438d8ca983abd9ca24",
+      "size_bytes": 53466
+    },
+    "source_trace_run_id": "20260729T050800Z-fx-89687ae2-R032"
+  },
+  "known_nonblocking_limits": [
+    {
+      "fact": "Every reconstruction is one observed cloned fixed-input FX path from R032.",
+      "id": "L01_fixed_input_path_only",
+      "scope_guard": "Do not infer unobserved Python branches or whole-model path coverage."
+    },
+    {
+      "fact": "Process boundaries and labels are derived from ordered DAG dependencies and current Qwen3.5 landmarks.",
+      "id": "L02_rule_derived_process_labels",
+      "scope_guard": "Do not reinterpret them as recovered nn.Module ownership."
+    },
+    {
+      "fact": "GDN core, KV-cache mutation, and unified attention remain opaque custom-op boundaries.",
+      "id": "L03_opaque_custom_ops",
+      "scope_guard": "Do not claim internal kernels, arithmetic, ownership, or latency from R042."
+    },
+    {
+      "fact": "R042 reconstructed structure and drew tensor layouts only.",
+      "id": "L04_no_measured_latency",
+      "scope_guard": "Do not report FX nodes or upstream theoretical FLOPs as measured ROCm/DCU latency."
+    },
+    {
+      "fact": "The source evidence is the R032 max_concurrency=1, TP/PP/DP=1 HCU0 request.",
+      "id": "L05_single_request_single_rank",
+      "scope_guard": "Do not claim concurrent or distributed coverage."
+    },
+    {
+      "fact": "The R032 GraphModule artifacts use meta storage and were not loaded or executed by R042.",
+      "id": "L06_meta_storage_structural_only",
+      "scope_guard": "Treat them as structural evidence, not executable layer checkpoints."
+    },
+    {
+      "fact": "No pruning or early-exit path was observed.",
+      "id": "L07_no_pruning_or_early_exit",
+      "scope_guard": "Do not fabricate such decisions from R042."
+    },
+    {
+      "fact": "R042 preserves the R032 stage run ID, internal request ID, source event IDs, selection IDs, and manifest order.",
+      "id": "L08_stage_and_request_identity",
+      "scope_guard": "Use the upstream R032 identity mapping; do not rewrite stage or request-instance identity."
+    }
+  ],
+  "outputs": {
+    "completion_report": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/runtime/20260729T050800Z-fx-89687ae2/artifacts/R042/completion_report.md",
+      "role": "human_readable_r042_completion_report",
+      "sha256": "bd04e27180a5a1b169e6a9fb80440c5cf04ff69237214716c9c4516f8b470189",
+      "size_bytes": 2359
+    },
+    "event_artifacts": [
+      {
+        "event_id": "input1_layer0",
+        "kv_len": 4096,
+        "layer_type": "linear_attention",
+        "node_count": 77,
+        "opaque_custom_ops": [
+          "vllm.gdn_attention_core.default"
+        ],
+        "ordinal": 1,
+        "outputs": {
+          "manual_visualization": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input1_layer0/fx_process_visualization.md",
+            "role": "manual_chinese_process_explanation_and_english_tensor_diagrams",
+            "sha256": "7ba63a81d3ccdc6e0c13c4d6e5246223147ec0c61a9d528e08af00ee678172de",
+            "size_bytes": 32599
+          },
+          "process_node_csv": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input1_layer0/fx_process_nodes.csv",
+            "role": "fx_process_node_table",
+            "sha256": "91bf39245d7a5b405409774bb5d372b7902870f6ac0fe55add78dfa0ff25af2f",
+            "size_bytes": 10122
+          },
+          "reconstruction_json": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input1_layer0/fx_process_reconstruction.json",
+            "role": "machine_readable_fx_process_reconstruction",
+            "sha256": "633f34a58ab54684d05205f69abddb22b57e8979b0e85452ef0bacb60f0081b1",
+            "size_bytes": 47556
+          },
+          "reconstruction_markdown": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input1_layer0/fx_process_reconstruction.md",
+            "role": "generated_fx_process_reconstruction_report",
+            "sha256": "dd63943460b16a82442f4880b743bbaaec6f3f74771b3b54bcd0e5ba646a7c0d",
+            "size_bytes": 17424
+          }
+        },
+        "past_len": 0,
+        "phase": "prefill_chunk",
+        "process_count": 9,
+        "processes": [
+          {
+            "end_index": 2,
+            "node_count": 3,
+            "reconstruction_rule": "contiguous placeholder prefix",
+            "stage": "inputs",
+            "start_index": 0,
+            "title": "Runtime FX inputs"
+          },
+          {
+            "end_index": 15,
+            "node_count": 13,
+            "reconstruction_rule": "nodes after placeholders through the node before the first mixer projection weight",
+            "stage": "input_rmsnorm",
+            "start_index": 3,
+            "title": "Input RMSNorm"
+          },
+          {
+            "end_index": 31,
+            "node_count": 16,
+            "reconstruction_rule": "first mixer projection weight through the node before the family landmark (RoPE table or GDN custom op)",
+            "stage": "qkv_projection",
+            "start_index": 16,
+            "title": "Attention/GDN input projections and head reshape"
+          },
+          {
+            "end_index": 32,
+            "node_count": 1,
+            "reconstruction_rule": "single opaque vllm.gdn_attention_core call",
+            "stage": "gdn_recurrent_core",
+            "start_index": 32,
+            "title": "Gated DeltaNet recurrent core"
+          },
+          {
+            "end_index": 50,
+            "node_count": 18,
+            "reconstruction_rule": "observed core-output reshape, RMS normalization, SiLU Z gate, and head merge before the mixer output projection",
+            "stage": "gdn_gated_rmsnorm",
+            "start_index": 33,
+            "title": "Gated DeltaNet output RMSNorm and SiLU gate"
+          },
+          {
+            "end_index": 57,
+            "node_count": 7,
+            "reconstruction_rule": "mixer output projection weight through output-buffer copy and observed residual add",
+            "stage": "output_projection",
+            "start_index": 51,
+            "title": "Mixer output projection and residual"
+          },
+          {
+            "end_index": 67,
+            "node_count": 10,
+            "reconstruction_rule": "nodes after mixer residual add through the normalized MLP input",
+            "stage": "post_attention_rmsnorm",
+            "start_index": 58,
+            "title": "Post-attention RMSNorm"
+          },
+          {
+            "end_index": 75,
+            "node_count": 8,
+            "reconstruction_rule": "gate/up projection weight, fused SiLU-product boundary, and down projection through the node before graph output",
+            "stage": "mlp",
+            "start_index": 68,
+            "title": "Gated MLP projections"
+          },
+          {
+            "end_index": 76,
+            "node_count": 1,
+            "reconstruction_rule": "single FX output node",
+            "stage": "layer_output",
+            "start_index": 76,
+            "title": "Layer output"
+          }
+        ],
+        "q_len": 4096,
+        "reconstruction_rule": "qwen35_linear_gdn_landmarks_v1",
+        "selection_id": "selected:01",
+        "source_event_id": "chatcmpl-bench-7f1746b7-0-9eeec82b|s1|f1|l0|o0",
+        "source_fx_artifacts": {
+          "fx_graph_module_pt": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input1_layer0/fx_graph_module.pt",
+            "role": "serialized_meta_storage_graph_module",
+            "sha256": "d9bbef1c5d8b04389196de5063613e2e774b81cc411384ad9d45b733cde0880e",
+            "size_bytes": 9117
+          },
+          "fx_graph_py": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input1_layer0/fx_graph.py",
+            "role": "generated_fx_python",
+            "sha256": "9fc0a5d33edd945f0419aed83dba5ad19268e354a20aef863abae154bcae504a",
+            "size_bytes": 5796
+          },
+          "fx_graph_txt": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input1_layer0/fx_graph.txt",
+            "role": "generated_fx_graph_text",
+            "sha256": "89fc85c563c9611a7759ae542656b6252bb4900b9cbd51694da1da11b39f0a51",
+            "size_bytes": 9057
+          },
+          "fx_nodes_json": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input1_layer0/fx_nodes.json",
+            "role": "capture_time_normalized_fx_node_manifest",
+            "sha256": "5d788945fa0ad14ecdeee628e0853865c0e2b1cd7b34b8b1b74770a110424c21",
+            "size_bytes": 45134
+          },
+          "fx_trace_metadata": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input1_layer0/fx_trace_metadata.json",
+            "role": "per_event_capture_replay_and_boundary_metadata",
+            "sha256": "fa9535e66fa7315f095e780823a21832780bbe44b89d782fda49950ea77c37e9",
+            "size_bytes": 7898
+          }
+        }
+      },
+      {
+        "event_id": "input1_layer3",
+        "kv_len": 4096,
+        "layer_type": "full_attention",
+        "node_count": 155,
+        "opaque_custom_ops": [
+          "vllm.unified_kv_cache_update.default",
+          "vllm.unified_attention_with_output.default"
+        ],
+        "ordinal": 2,
+        "outputs": {
+          "manual_visualization": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input1_layer3/fx_process_visualization.md",
+            "role": "manual_chinese_process_explanation_and_english_tensor_diagrams",
+            "sha256": "da3fb14fd7d0692c35a326c469c240b7595b0949619b0f9b17bc876ffce0f78b",
+            "size_bytes": 33647
+          },
+          "process_node_csv": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input1_layer3/fx_process_nodes.csv",
+            "role": "fx_process_node_table",
+            "sha256": "5db8959d1bdae3d90e473747e543c25a98151808963c765c46a7ce7cb1ccc118",
+            "size_bytes": 20421
+          },
+          "reconstruction_json": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input1_layer3/fx_process_reconstruction.json",
+            "role": "machine_readable_fx_process_reconstruction",
+            "sha256": "bca4e417e1e44891df152227b88846972aa50b7ddb7b82537b1b240f8de184ae",
+            "size_bytes": 85087
+          },
+          "reconstruction_markdown": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input1_layer3/fx_process_reconstruction.md",
+            "role": "generated_fx_process_reconstruction_report",
+            "sha256": "5dcb8f453bbd0a1cddd7aef50e5af360c54b7dcbd731dab07da0799440ea002f",
+            "size_bytes": 32276
+          }
+        },
+        "past_len": 0,
+        "phase": "prefill_chunk",
+        "process_count": 10,
+        "processes": [
+          {
+            "end_index": 2,
+            "node_count": 3,
+            "reconstruction_rule": "contiguous placeholder prefix",
+            "stage": "inputs",
+            "start_index": 0,
+            "title": "Runtime FX inputs"
+          },
+          {
+            "end_index": 16,
+            "node_count": 14,
+            "reconstruction_rule": "nodes after placeholders through the node before the first mixer projection weight",
+            "stage": "input_rmsnorm",
+            "start_index": 3,
+            "title": "Input RMSNorm"
+          },
+          {
+            "end_index": 59,
+            "node_count": 43,
+            "reconstruction_rule": "first mixer projection weight through the node before the family landmark (RoPE table or GDN custom op)",
+            "stage": "qkv_projection",
+            "start_index": 17,
+            "title": "Attention/GDN input projections and head reshape"
+          },
+          {
+            "end_index": 118,
+            "node_count": 59,
+            "reconstruction_rule": "position-indexed rotary table lookup and observed Q/K rotary arithmetic through the node before attention output allocation",
+            "stage": "rope",
+            "start_index": 60,
+            "title": "RoPE position embedding"
+          },
+          {
+            "end_index": 125,
+            "node_count": 7,
+            "reconstruction_rule": "attention output allocation/views, opaque KV-cache update, and opaque unified attention call",
+            "stage": "kv_cache_attention",
+            "start_index": 119,
+            "title": "KV-cache update and unified full attention"
+          },
+          {
+            "end_index": 128,
+            "node_count": 3,
+            "reconstruction_rule": "opaque attention output view followed by observed sigmoid output gate multiplication",
+            "stage": "attention_output",
+            "start_index": 126,
+            "title": "Attention output gate and hidden reshape"
+          },
+          {
+            "end_index": 135,
+            "node_count": 7,
+            "reconstruction_rule": "mixer output projection weight through output-buffer copy and observed residual add",
+            "stage": "output_projection",
+            "start_index": 129,
+            "title": "Mixer output projection and residual"
+          },
+          {
+            "end_index": 145,
+            "node_count": 10,
+            "reconstruction_rule": "nodes after mixer residual add through the normalized MLP input",
+            "stage": "post_attention_rmsnorm",
+            "start_index": 136,
+            "title": "Post-attention RMSNorm"
+          },
+          {
+            "end_index": 153,
+            "node_count": 8,
+            "reconstruction_rule": "gate/up projection weight, fused SiLU-product boundary, and down projection through the node before graph output",
+            "stage": "mlp",
+            "start_index": 146,
+            "title": "Gated MLP projections"
+          },
+          {
+            "end_index": 154,
+            "node_count": 1,
+            "reconstruction_rule": "single FX output node",
+            "stage": "layer_output",
+            "start_index": 154,
+            "title": "Layer output"
+          }
+        ],
+        "q_len": 4096,
+        "reconstruction_rule": "qwen35_full_unified_attention_landmarks_v1",
+        "selection_id": "selected:02",
+        "source_event_id": "chatcmpl-bench-7f1746b7-0-9eeec82b|s1|f1|l3|o0",
+        "source_fx_artifacts": {
+          "fx_graph_module_pt": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input1_layer3/fx_graph_module.pt",
+            "role": "serialized_meta_storage_graph_module",
+            "sha256": "26803be1e5155cef6e994a283db9eccc5b285bbc9168c06ed906f3f95d1c1c65",
+            "size_bytes": 15453
+          },
+          "fx_graph_py": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input1_layer3/fx_graph.py",
+            "role": "generated_fx_python",
+            "sha256": "f030c65b6506cae62495acfa08e749e92ccbd534de2a2f2cdc6f60630749ecfa",
+            "size_bytes": 11751
+          },
+          "fx_graph_txt": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input1_layer3/fx_graph.txt",
+            "role": "generated_fx_graph_text",
+            "sha256": "1a1f96e2b4794beb8086b7701b82b031bf9f44666d1d53141349e1d74e6ac93f",
+            "size_bytes": 18731
+          },
+          "fx_nodes_json": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input1_layer3/fx_nodes.json",
+            "role": "capture_time_normalized_fx_node_manifest",
+            "sha256": "2912c5f4e46f4a9a7625c48bcab94eb29fd41ab5a25f419f86b9f7187bddab52",
+            "size_bytes": 97100
+          },
+          "fx_trace_metadata": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input1_layer3/fx_trace_metadata.json",
+            "role": "per_event_capture_replay_and_boundary_metadata",
+            "sha256": "7bfece9b4e4490399bd85b112ca2212f201c8dfd66e8c01cfd0a003c5cbc50dd",
+            "size_bytes": 7953
+          }
+        }
+      },
+      {
+        "event_id": "input2_layer31",
+        "kv_len": 8192,
+        "layer_type": "full_attention",
+        "node_count": 155,
+        "opaque_custom_ops": [
+          "vllm.unified_kv_cache_update.default",
+          "vllm.unified_attention_with_output.default"
+        ],
+        "ordinal": 3,
+        "outputs": {
+          "manual_visualization": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input2_layer31/fx_process_visualization.md",
+            "role": "manual_chinese_process_explanation_and_english_tensor_diagrams",
+            "sha256": "9f48b67f95022a49fe556dea0519f2c3ad1ea7e2b860719476f67d37af9a3d6f",
+            "size_bytes": 29732
+          },
+          "process_node_csv": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input2_layer31/fx_process_nodes.csv",
+            "role": "fx_process_node_table",
+            "sha256": "97cf8a5ede420b77f604f2fb349da4f1014adeeb569a8ef6a7bd27b7276679b9",
+            "size_bytes": 20423
+          },
+          "reconstruction_json": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input2_layer31/fx_process_reconstruction.json",
+            "role": "machine_readable_fx_process_reconstruction",
+            "sha256": "d2927f8db7b4a4cf9859e83f46e12e6999241bdeaa7b9ff48d1c9f1b95743061",
+            "size_bytes": 85242
+          },
+          "reconstruction_markdown": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input2_layer31/fx_process_reconstruction.md",
+            "role": "generated_fx_process_reconstruction_report",
+            "sha256": "cecacd48993e31207cea83a07327c3ae758528de319f3ef51ec8490c6b704bcc",
+            "size_bytes": 32284
+          }
+        },
+        "past_len": 4096,
+        "phase": "prefill_chunk",
+        "process_count": 10,
+        "processes": [
+          {
+            "end_index": 2,
+            "node_count": 3,
+            "reconstruction_rule": "contiguous placeholder prefix",
+            "stage": "inputs",
+            "start_index": 0,
+            "title": "Runtime FX inputs"
+          },
+          {
+            "end_index": 16,
+            "node_count": 14,
+            "reconstruction_rule": "nodes after placeholders through the node before the first mixer projection weight",
+            "stage": "input_rmsnorm",
+            "start_index": 3,
+            "title": "Input RMSNorm"
+          },
+          {
+            "end_index": 59,
+            "node_count": 43,
+            "reconstruction_rule": "first mixer projection weight through the node before the family landmark (RoPE table or GDN custom op)",
+            "stage": "qkv_projection",
+            "start_index": 17,
+            "title": "Attention/GDN input projections and head reshape"
+          },
+          {
+            "end_index": 118,
+            "node_count": 59,
+            "reconstruction_rule": "position-indexed rotary table lookup and observed Q/K rotary arithmetic through the node before attention output allocation",
+            "stage": "rope",
+            "start_index": 60,
+            "title": "RoPE position embedding"
+          },
+          {
+            "end_index": 125,
+            "node_count": 7,
+            "reconstruction_rule": "attention output allocation/views, opaque KV-cache update, and opaque unified attention call",
+            "stage": "kv_cache_attention",
+            "start_index": 119,
+            "title": "KV-cache update and unified full attention"
+          },
+          {
+            "end_index": 128,
+            "node_count": 3,
+            "reconstruction_rule": "opaque attention output view followed by observed sigmoid output gate multiplication",
+            "stage": "attention_output",
+            "start_index": 126,
+            "title": "Attention output gate and hidden reshape"
+          },
+          {
+            "end_index": 135,
+            "node_count": 7,
+            "reconstruction_rule": "mixer output projection weight through output-buffer copy and observed residual add",
+            "stage": "output_projection",
+            "start_index": 129,
+            "title": "Mixer output projection and residual"
+          },
+          {
+            "end_index": 145,
+            "node_count": 10,
+            "reconstruction_rule": "nodes after mixer residual add through the normalized MLP input",
+            "stage": "post_attention_rmsnorm",
+            "start_index": 136,
+            "title": "Post-attention RMSNorm"
+          },
+          {
+            "end_index": 153,
+            "node_count": 8,
+            "reconstruction_rule": "gate/up projection weight, fused SiLU-product boundary, and down projection through the node before graph output",
+            "stage": "mlp",
+            "start_index": 146,
+            "title": "Gated MLP projections"
+          },
+          {
+            "end_index": 154,
+            "node_count": 1,
+            "reconstruction_rule": "single FX output node",
+            "stage": "layer_output",
+            "start_index": 154,
+            "title": "Layer output"
+          }
+        ],
+        "q_len": 4096,
+        "reconstruction_rule": "qwen35_full_unified_attention_landmarks_v1",
+        "selection_id": "selected:03",
+        "source_event_id": "chatcmpl-bench-7f1746b7-0-9eeec82b|s2|f2|l31|o0",
+        "source_fx_artifacts": {
+          "fx_graph_module_pt": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input2_layer31/fx_graph_module.pt",
+            "role": "serialized_meta_storage_graph_module",
+            "sha256": "275da1589c5188374bee9a84baf02ae42c131cd1ece0019f55cc0b957f56b0a5",
+            "size_bytes": 15453
+          },
+          "fx_graph_py": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input2_layer31/fx_graph.py",
+            "role": "generated_fx_python",
+            "sha256": "f03cfe942d8b7807feeda6de499b6aca0b04903bc1b51b864e7b905f8da9e952",
+            "size_bytes": 11753
+          },
+          "fx_graph_txt": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input2_layer31/fx_graph.txt",
+            "role": "generated_fx_graph_text",
+            "sha256": "d492607cf40fd4e18f021b53b0d9c9eb22bbd219ff4b2d1ee2ca9efd1362e4b5",
+            "size_bytes": 18733
+          },
+          "fx_nodes_json": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input2_layer31/fx_nodes.json",
+            "role": "capture_time_normalized_fx_node_manifest",
+            "sha256": "7fc479b00e28eb7057d0f18776822e7c2f73e8e0085138e6553b993eba6f9955",
+            "size_bytes": 97102
+          },
+          "fx_trace_metadata": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input2_layer31/fx_trace_metadata.json",
+            "role": "per_event_capture_replay_and_boundary_metadata",
+            "sha256": "87f8c90b6544a5e0f82cb80a61baeafdaedb50193a5e587bec444bab16e01a25",
+            "size_bytes": 8115
+          }
+        }
+      },
+      {
+        "event_id": "input6_layer62",
+        "kv_len": 20585,
+        "layer_type": "linear_attention",
+        "node_count": 78,
+        "opaque_custom_ops": [
+          "vllm.gdn_attention_core.default"
+        ],
+        "ordinal": 4,
+        "outputs": {
+          "manual_visualization": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input6_layer62/fx_process_visualization.md",
+            "role": "manual_chinese_process_explanation_and_english_tensor_diagrams",
+            "sha256": "fbdf2c98f630fef4bec05b4bac272dcf4be97cd67e4af6a36e23350fb05f5198",
+            "size_bytes": 27689
+          },
+          "process_node_csv": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input6_layer62/fx_process_nodes.csv",
+            "role": "fx_process_node_table",
+            "sha256": "25864518f475aecfd7507d3c97fe507aaa440ad0236397fbbae83534b5a4cfe7",
+            "size_bytes": 10199
+          },
+          "reconstruction_json": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input6_layer62/fx_process_reconstruction.json",
+            "role": "machine_readable_fx_process_reconstruction",
+            "sha256": "583ea19bbb6307ae082857886c8114c3322f2a05b4318b735a0d734684f3eec1",
+            "size_bytes": 48206
+          },
+          "reconstruction_markdown": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input6_layer62/fx_process_reconstruction.md",
+            "role": "generated_fx_process_reconstruction_report",
+            "sha256": "d34d73f2a7206b1e2841a82007c91425bebb41d30de1f84ad79721c1f6531eec",
+            "size_bytes": 17571
+          }
+        },
+        "past_len": 20480,
+        "phase": "prefill_chunk",
+        "process_count": 9,
+        "processes": [
+          {
+            "end_index": 2,
+            "node_count": 3,
+            "reconstruction_rule": "contiguous placeholder prefix",
+            "stage": "inputs",
+            "start_index": 0,
+            "title": "Runtime FX inputs"
+          },
+          {
+            "end_index": 16,
+            "node_count": 14,
+            "reconstruction_rule": "nodes after placeholders through the node before the first mixer projection weight",
+            "stage": "input_rmsnorm",
+            "start_index": 3,
+            "title": "Input RMSNorm"
+          },
+          {
+            "end_index": 32,
+            "node_count": 16,
+            "reconstruction_rule": "first mixer projection weight through the node before the family landmark (RoPE table or GDN custom op)",
+            "stage": "qkv_projection",
+            "start_index": 17,
+            "title": "Attention/GDN input projections and head reshape"
+          },
+          {
+            "end_index": 33,
+            "node_count": 1,
+            "reconstruction_rule": "single opaque vllm.gdn_attention_core call",
+            "stage": "gdn_recurrent_core",
+            "start_index": 33,
+            "title": "Gated DeltaNet recurrent core"
+          },
+          {
+            "end_index": 51,
+            "node_count": 18,
+            "reconstruction_rule": "observed core-output reshape, RMS normalization, SiLU Z gate, and head merge before the mixer output projection",
+            "stage": "gdn_gated_rmsnorm",
+            "start_index": 34,
+            "title": "Gated DeltaNet output RMSNorm and SiLU gate"
+          },
+          {
+            "end_index": 58,
+            "node_count": 7,
+            "reconstruction_rule": "mixer output projection weight through output-buffer copy and observed residual add",
+            "stage": "output_projection",
+            "start_index": 52,
+            "title": "Mixer output projection and residual"
+          },
+          {
+            "end_index": 68,
+            "node_count": 10,
+            "reconstruction_rule": "nodes after mixer residual add through the normalized MLP input",
+            "stage": "post_attention_rmsnorm",
+            "start_index": 59,
+            "title": "Post-attention RMSNorm"
+          },
+          {
+            "end_index": 76,
+            "node_count": 8,
+            "reconstruction_rule": "gate/up projection weight, fused SiLU-product boundary, and down projection through the node before graph output",
+            "stage": "mlp",
+            "start_index": 69,
+            "title": "Gated MLP projections"
+          },
+          {
+            "end_index": 77,
+            "node_count": 1,
+            "reconstruction_rule": "single FX output node",
+            "stage": "layer_output",
+            "start_index": 77,
+            "title": "Layer output"
+          }
+        ],
+        "q_len": 105,
+        "reconstruction_rule": "qwen35_linear_gdn_landmarks_v1",
+        "selection_id": "selected:04",
+        "source_event_id": "chatcmpl-bench-7f1746b7-0-9eeec82b|s6|f6|l62|o0",
+        "source_fx_artifacts": {
+          "fx_graph_module_pt": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input6_layer62/fx_graph_module.pt",
+            "role": "serialized_meta_storage_graph_module",
+            "sha256": "1dc9bde35dc2145dd890b8de6c0b7e703b74d0c2543bf372fe659523941244a4",
+            "size_bytes": 9181
+          },
+          "fx_graph_py": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input6_layer62/fx_graph.py",
+            "role": "generated_fx_python",
+            "sha256": "576e1bc1efc8187b6e21d9185883273a9100f85b18238815be5a1f84837aeaf1",
+            "size_bytes": 5864
+          },
+          "fx_graph_txt": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input6_layer62/fx_graph.txt",
+            "role": "generated_fx_graph_text",
+            "sha256": "aaf9152b1baf7890bd5ef1f4fe0932026449143c3571c63ed13aab4910dd19ff",
+            "size_bytes": 9164
+          },
+          "fx_nodes_json": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input6_layer62/fx_nodes.json",
+            "role": "capture_time_normalized_fx_node_manifest",
+            "sha256": "ba8a057664eb663550d2a615a36eb021b0ef957d6878dffc861e8b0f497a4bb2",
+            "size_bytes": 46050
+          },
+          "fx_trace_metadata": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input6_layer62/fx_trace_metadata.json",
+            "role": "per_event_capture_replay_and_boundary_metadata",
+            "sha256": "617569b554ba65fe761dd96f3c8029d624b1b9df81ce2af2b16d625b68c025a7",
+            "size_bytes": 8093
+          }
+        }
+      },
+      {
+        "event_id": "input6_layer63",
+        "kv_len": 20585,
+        "layer_type": "full_attention",
+        "node_count": 155,
+        "opaque_custom_ops": [
+          "vllm.unified_kv_cache_update.default",
+          "vllm.unified_attention_with_output.default"
+        ],
+        "ordinal": 5,
+        "outputs": {
+          "manual_visualization": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input6_layer63/fx_process_visualization.md",
+            "role": "manual_chinese_process_explanation_and_english_tensor_diagrams",
+            "sha256": "d2bbfa93828957a7006d2c438325c9edc469edc754b7ee518e67940b35b8f4e7",
+            "size_bytes": 28799
+          },
+          "process_node_csv": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input6_layer63/fx_process_nodes.csv",
+            "role": "fx_process_node_table",
+            "sha256": "21deaa946b0528e3240cc509c3033d14947e295154607a99c8be27bdfa35d639",
+            "size_bytes": 20293
+          },
+          "reconstruction_json": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input6_layer63/fx_process_reconstruction.json",
+            "role": "machine_readable_fx_process_reconstruction",
+            "sha256": "392a380650b946d6016ab6230df9c34ffb034575fb4a041c8c2ad7398ee4a884",
+            "size_bytes": 85558
+          },
+          "reconstruction_markdown": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input6_layer63/fx_process_reconstruction.md",
+            "role": "generated_fx_process_reconstruction_report",
+            "sha256": "cf46e55e1748b974e9adb07ceea10d40232ae353a8af0688f118caa110d59285",
+            "size_bytes": 32155
+          }
+        },
+        "past_len": 20480,
+        "phase": "prefill_chunk",
+        "process_count": 10,
+        "processes": [
+          {
+            "end_index": 2,
+            "node_count": 3,
+            "reconstruction_rule": "contiguous placeholder prefix",
+            "stage": "inputs",
+            "start_index": 0,
+            "title": "Runtime FX inputs"
+          },
+          {
+            "end_index": 16,
+            "node_count": 14,
+            "reconstruction_rule": "nodes after placeholders through the node before the first mixer projection weight",
+            "stage": "input_rmsnorm",
+            "start_index": 3,
+            "title": "Input RMSNorm"
+          },
+          {
+            "end_index": 59,
+            "node_count": 43,
+            "reconstruction_rule": "first mixer projection weight through the node before the family landmark (RoPE table or GDN custom op)",
+            "stage": "qkv_projection",
+            "start_index": 17,
+            "title": "Attention/GDN input projections and head reshape"
+          },
+          {
+            "end_index": 118,
+            "node_count": 59,
+            "reconstruction_rule": "position-indexed rotary table lookup and observed Q/K rotary arithmetic through the node before attention output allocation",
+            "stage": "rope",
+            "start_index": 60,
+            "title": "RoPE position embedding"
+          },
+          {
+            "end_index": 125,
+            "node_count": 7,
+            "reconstruction_rule": "attention output allocation/views, opaque KV-cache update, and opaque unified attention call",
+            "stage": "kv_cache_attention",
+            "start_index": 119,
+            "title": "KV-cache update and unified full attention"
+          },
+          {
+            "end_index": 128,
+            "node_count": 3,
+            "reconstruction_rule": "opaque attention output view followed by observed sigmoid output gate multiplication",
+            "stage": "attention_output",
+            "start_index": 126,
+            "title": "Attention output gate and hidden reshape"
+          },
+          {
+            "end_index": 135,
+            "node_count": 7,
+            "reconstruction_rule": "mixer output projection weight through output-buffer copy and observed residual add",
+            "stage": "output_projection",
+            "start_index": 129,
+            "title": "Mixer output projection and residual"
+          },
+          {
+            "end_index": 145,
+            "node_count": 10,
+            "reconstruction_rule": "nodes after mixer residual add through the normalized MLP input",
+            "stage": "post_attention_rmsnorm",
+            "start_index": 136,
+            "title": "Post-attention RMSNorm"
+          },
+          {
+            "end_index": 153,
+            "node_count": 8,
+            "reconstruction_rule": "gate/up projection weight, fused SiLU-product boundary, and down projection through the node before graph output",
+            "stage": "mlp",
+            "start_index": 146,
+            "title": "Gated MLP projections"
+          },
+          {
+            "end_index": 154,
+            "node_count": 1,
+            "reconstruction_rule": "single FX output node",
+            "stage": "layer_output",
+            "start_index": 154,
+            "title": "Layer output"
+          }
+        ],
+        "q_len": 105,
+        "reconstruction_rule": "qwen35_full_unified_attention_landmarks_v1",
+        "selection_id": "selected:05",
+        "source_event_id": "chatcmpl-bench-7f1746b7-0-9eeec82b|s6|f6|l63|o0",
+        "source_fx_artifacts": {
+          "fx_graph_module_pt": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input6_layer63/fx_graph_module.pt",
+            "role": "serialized_meta_storage_graph_module",
+            "sha256": "d5aeef639084dc2c9b9504f65e19527530e611f4232d0824f1cb4b38e4013542",
+            "size_bytes": 15453
+          },
+          "fx_graph_py": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input6_layer63/fx_graph.py",
+            "role": "generated_fx_python",
+            "sha256": "9909e61aaa86a39298a8b89ebf9d630eb0204003f31b921e81b17cda3421668b",
+            "size_bytes": 11744
+          },
+          "fx_graph_txt": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input6_layer63/fx_graph.txt",
+            "role": "generated_fx_graph_text",
+            "sha256": "598907523963300e571fedf7863ba0cf8be060c9ea707b814a3dfc9e59584f80",
+            "size_bytes": 18724
+          },
+          "fx_nodes_json": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input6_layer63/fx_nodes.json",
+            "role": "capture_time_normalized_fx_node_manifest",
+            "sha256": "d86c3ecd166a88af29bd6f657421902be363f4260f4d89bcb2ee3c0dc304c2f6",
+            "size_bytes": 96833
+          },
+          "fx_trace_metadata": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input6_layer63/fx_trace_metadata.json",
+            "role": "per_event_capture_replay_and_boundary_metadata",
+            "sha256": "34cad881abbdd2b77fcf9bee8fa9619271ca9e12e87a47048047b2dbef11a573",
+            "size_bytes": 8561
+          }
+        }
+      },
+      {
+        "event_id": "input7_layer0",
+        "kv_len": 20586,
+        "layer_type": "linear_attention",
+        "node_count": 74,
+        "opaque_custom_ops": [
+          "vllm.gdn_attention_core.default"
+        ],
+        "ordinal": 6,
+        "outputs": {
+          "manual_visualization": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input7_layer0/fx_process_visualization.md",
+            "role": "manual_chinese_process_explanation_and_english_tensor_diagrams",
+            "sha256": "1cf7dc2723ea9b52f2da106fb3b289c7491569b4f29ee6433455a5ceae08bedd",
+            "size_bytes": 25881
+          },
+          "process_node_csv": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input7_layer0/fx_process_nodes.csv",
+            "role": "fx_process_node_table",
+            "sha256": "b59d586b4a5322ac12b64675972171e9f793c427acb43d877e7eebd92b95f132",
+            "size_bytes": 9434
+          },
+          "reconstruction_json": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input7_layer0/fx_process_reconstruction.json",
+            "role": "machine_readable_fx_process_reconstruction",
+            "sha256": "396dc097c8aa31fdb70e2d007f4c068713dba92c5fd4c33257d5710531c51d75",
+            "size_bytes": 45712
+          },
+          "reconstruction_markdown": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input7_layer0/fx_process_reconstruction.md",
+            "role": "generated_fx_process_reconstruction_report",
+            "sha256": "c074212f69a49689f7843844aed14f5a39e5872bc7e17bd6a6c6e9819dd2c2f3",
+            "size_bytes": 16542
+          }
+        },
+        "past_len": 20585,
+        "phase": "decode",
+        "process_count": 9,
+        "processes": [
+          {
+            "end_index": 2,
+            "node_count": 3,
+            "reconstruction_rule": "contiguous placeholder prefix",
+            "stage": "inputs",
+            "start_index": 0,
+            "title": "Runtime FX inputs"
+          },
+          {
+            "end_index": 15,
+            "node_count": 13,
+            "reconstruction_rule": "nodes after placeholders through the node before the first mixer projection weight",
+            "stage": "input_rmsnorm",
+            "start_index": 3,
+            "title": "Input RMSNorm"
+          },
+          {
+            "end_index": 29,
+            "node_count": 14,
+            "reconstruction_rule": "first mixer projection weight through the node before the family landmark (RoPE table or GDN custom op)",
+            "stage": "qkv_projection",
+            "start_index": 16,
+            "title": "Attention/GDN input projections and head reshape"
+          },
+          {
+            "end_index": 30,
+            "node_count": 1,
+            "reconstruction_rule": "single opaque vllm.gdn_attention_core call",
+            "stage": "gdn_recurrent_core",
+            "start_index": 30,
+            "title": "Gated DeltaNet recurrent core"
+          },
+          {
+            "end_index": 47,
+            "node_count": 17,
+            "reconstruction_rule": "observed core-output reshape, RMS normalization, SiLU Z gate, and head merge before the mixer output projection",
+            "stage": "gdn_gated_rmsnorm",
+            "start_index": 31,
+            "title": "Gated DeltaNet output RMSNorm and SiLU gate"
+          },
+          {
+            "end_index": 54,
+            "node_count": 7,
+            "reconstruction_rule": "mixer output projection weight through output-buffer copy and observed residual add",
+            "stage": "output_projection",
+            "start_index": 48,
+            "title": "Mixer output projection and residual"
+          },
+          {
+            "end_index": 64,
+            "node_count": 10,
+            "reconstruction_rule": "nodes after mixer residual add through the normalized MLP input",
+            "stage": "post_attention_rmsnorm",
+            "start_index": 55,
+            "title": "Post-attention RMSNorm"
+          },
+          {
+            "end_index": 72,
+            "node_count": 8,
+            "reconstruction_rule": "gate/up projection weight, fused SiLU-product boundary, and down projection through the node before graph output",
+            "stage": "mlp",
+            "start_index": 65,
+            "title": "Gated MLP projections"
+          },
+          {
+            "end_index": 73,
+            "node_count": 1,
+            "reconstruction_rule": "single FX output node",
+            "stage": "layer_output",
+            "start_index": 73,
+            "title": "Layer output"
+          }
+        ],
+        "q_len": 1,
+        "reconstruction_rule": "qwen35_linear_gdn_landmarks_v1",
+        "selection_id": "selected:06",
+        "source_event_id": "chatcmpl-bench-7f1746b7-0-9eeec82b|s7|f7|l0|o0",
+        "source_fx_artifacts": {
+          "fx_graph_module_pt": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input7_layer0/fx_graph_module.pt",
+            "role": "serialized_meta_storage_graph_module",
+            "sha256": "aca9b2ed1db8d50fcd1c81b7839d5f275f7bbccc1db57629768751303ad64add",
+            "size_bytes": 8733
+          },
+          "fx_graph_py": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input7_layer0/fx_graph.py",
+            "role": "generated_fx_python",
+            "sha256": "ea759a92477b222f255c4fc62d9e9edd879783c99cce13ad0b6e04a674d90cbe",
+            "size_bytes": 5427
+          },
+          "fx_graph_txt": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input7_layer0/fx_graph.txt",
+            "role": "generated_fx_graph_text",
+            "sha256": "830dc87dc7ad038307d7a15db9584d06ceda37b65a6bdeff08ae03af20167dff",
+            "size_bytes": 8563
+          },
+          "fx_nodes_json": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input7_layer0/fx_nodes.json",
+            "role": "capture_time_normalized_fx_node_manifest",
+            "sha256": "45d62630342fcbc660c79b76cd33686b297c7ad0ff91ed76f34db05e6afddd3a",
+            "size_bytes": 42835
+          },
+          "fx_trace_metadata": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input7_layer0/fx_trace_metadata.json",
+            "role": "per_event_capture_replay_and_boundary_metadata",
+            "sha256": "8a18c7bdb3ff2510a74e79be1af203b1bc00c1f1f336e5f8393ddd2719cb7d48",
+            "size_bytes": 7878
+          }
+        }
+      },
+      {
+        "event_id": "input7_layer3",
+        "kv_len": 20586,
+        "layer_type": "full_attention",
+        "node_count": 155,
+        "opaque_custom_ops": [
+          "vllm.unified_kv_cache_update.default",
+          "vllm.unified_attention_with_output.default"
+        ],
+        "ordinal": 7,
+        "outputs": {
+          "manual_visualization": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input7_layer3/fx_process_visualization.md",
+            "role": "manual_chinese_process_explanation_and_english_tensor_diagrams",
+            "sha256": "1f194f637c7a956030b1b64ff3fd9f7a97372b24ab2e57fba926a37371bb0eff",
+            "size_bytes": 28119
+          },
+          "process_node_csv": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input7_layer3/fx_process_nodes.csv",
+            "role": "fx_process_node_table",
+            "sha256": "5ec30d6937b7ff0fabd4a185d52a9eb2895b7b2a705f98c4539f4075d6cdb4f3",
+            "size_bytes": 20031
+          },
+          "reconstruction_json": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input7_layer3/fx_process_reconstruction.json",
+            "role": "machine_readable_fx_process_reconstruction",
+            "sha256": "6479d04f510e77c020396b2f2dc6d036591a326dfd95fecf3ae17a4011c40bde",
+            "size_bytes": 85272
+          },
+          "reconstruction_markdown": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input7_layer3/fx_process_reconstruction.md",
+            "role": "generated_fx_process_reconstruction_report",
+            "sha256": "35773e85fc1ccdc050a7bcc2fc7499c84384a9b02afaed6331e295682459418f",
+            "size_bytes": 31881
+          }
+        },
+        "past_len": 20585,
+        "phase": "decode",
+        "process_count": 10,
+        "processes": [
+          {
+            "end_index": 2,
+            "node_count": 3,
+            "reconstruction_rule": "contiguous placeholder prefix",
+            "stage": "inputs",
+            "start_index": 0,
+            "title": "Runtime FX inputs"
+          },
+          {
+            "end_index": 16,
+            "node_count": 14,
+            "reconstruction_rule": "nodes after placeholders through the node before the first mixer projection weight",
+            "stage": "input_rmsnorm",
+            "start_index": 3,
+            "title": "Input RMSNorm"
+          },
+          {
+            "end_index": 59,
+            "node_count": 43,
+            "reconstruction_rule": "first mixer projection weight through the node before the family landmark (RoPE table or GDN custom op)",
+            "stage": "qkv_projection",
+            "start_index": 17,
+            "title": "Attention/GDN input projections and head reshape"
+          },
+          {
+            "end_index": 118,
+            "node_count": 59,
+            "reconstruction_rule": "position-indexed rotary table lookup and observed Q/K rotary arithmetic through the node before attention output allocation",
+            "stage": "rope",
+            "start_index": 60,
+            "title": "RoPE position embedding"
+          },
+          {
+            "end_index": 125,
+            "node_count": 7,
+            "reconstruction_rule": "attention output allocation/views, opaque KV-cache update, and opaque unified attention call",
+            "stage": "kv_cache_attention",
+            "start_index": 119,
+            "title": "KV-cache update and unified full attention"
+          },
+          {
+            "end_index": 128,
+            "node_count": 3,
+            "reconstruction_rule": "opaque attention output view followed by observed sigmoid output gate multiplication",
+            "stage": "attention_output",
+            "start_index": 126,
+            "title": "Attention output gate and hidden reshape"
+          },
+          {
+            "end_index": 135,
+            "node_count": 7,
+            "reconstruction_rule": "mixer output projection weight through output-buffer copy and observed residual add",
+            "stage": "output_projection",
+            "start_index": 129,
+            "title": "Mixer output projection and residual"
+          },
+          {
+            "end_index": 145,
+            "node_count": 10,
+            "reconstruction_rule": "nodes after mixer residual add through the normalized MLP input",
+            "stage": "post_attention_rmsnorm",
+            "start_index": 136,
+            "title": "Post-attention RMSNorm"
+          },
+          {
+            "end_index": 153,
+            "node_count": 8,
+            "reconstruction_rule": "gate/up projection weight, fused SiLU-product boundary, and down projection through the node before graph output",
+            "stage": "mlp",
+            "start_index": 146,
+            "title": "Gated MLP projections"
+          },
+          {
+            "end_index": 154,
+            "node_count": 1,
+            "reconstruction_rule": "single FX output node",
+            "stage": "layer_output",
+            "start_index": 154,
+            "title": "Layer output"
+          }
+        ],
+        "q_len": 1,
+        "reconstruction_rule": "qwen35_full_unified_attention_landmarks_v1",
+        "selection_id": "selected:07",
+        "source_event_id": "chatcmpl-bench-7f1746b7-0-9eeec82b|s7|f7|l3|o0",
+        "source_fx_artifacts": {
+          "fx_graph_module_pt": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input7_layer3/fx_graph_module.pt",
+            "role": "serialized_meta_storage_graph_module",
+            "sha256": "959965bcf907d6dc011886afaf2d33ba36658bf337cc25b92cd8f57a4c0b1365",
+            "size_bytes": 15389
+          },
+          "fx_graph_py": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input7_layer3/fx_graph.py",
+            "role": "generated_fx_python",
+            "sha256": "977c15cd209d31eb97ec4c449ce7f8e367adaf9e61992c44a5f3039db637f9cc",
+            "size_bytes": 11724
+          },
+          "fx_graph_txt": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input7_layer3/fx_graph.txt",
+            "role": "generated_fx_graph_text",
+            "sha256": "b60c50621ce6cf03f4bacd8e3d007b1650e9a2b135d12f839ebdaedb2ea57118",
+            "size_bytes": 18704
+          },
+          "fx_nodes_json": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input7_layer3/fx_nodes.json",
+            "role": "capture_time_normalized_fx_node_manifest",
+            "sha256": "2b6df7cfb808a18c70f6201912f5e3171cc1cce7df446752ff112a393d7dab0f",
+            "size_bytes": 96552
+          },
+          "fx_trace_metadata": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input7_layer3/fx_trace_metadata.json",
+            "role": "per_event_capture_replay_and_boundary_metadata",
+            "sha256": "fa47928b7f41ae66f5c5e61a16fd42253c33bac235a1bcec62d01b8c6b1d3874",
+            "size_bytes": 8520
+          }
+        }
+      },
+      {
+        "event_id": "input29_layer62",
+        "kv_len": 20608,
+        "layer_type": "linear_attention",
+        "node_count": 75,
+        "opaque_custom_ops": [
+          "vllm.gdn_attention_core.default"
+        ],
+        "ordinal": 8,
+        "outputs": {
+          "manual_visualization": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input29_layer62/fx_process_visualization.md",
+            "role": "manual_chinese_process_explanation_and_english_tensor_diagrams",
+            "sha256": "a50be4da5518f8d1adfefaecb748ff2aef52152ccd30a8283556aa7ed84d07ef",
+            "size_bytes": 25436
+          },
+          "process_node_csv": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input29_layer62/fx_process_nodes.csv",
+            "role": "fx_process_node_table",
+            "sha256": "01ad0f91d30751da41d180630ac997b9b3d2a3d4bb5d46a8523ad3c7435ff69d",
+            "size_bytes": 9578
+          },
+          "reconstruction_json": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input29_layer62/fx_process_reconstruction.json",
+            "role": "machine_readable_fx_process_reconstruction",
+            "sha256": "214c8f10ed69f75550c2f63e253ac1ac2e7204dbad566cd0e84f7d7fb4f3d4f6",
+            "size_bytes": 46436
+          },
+          "reconstruction_markdown": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input29_layer62/fx_process_reconstruction.md",
+            "role": "generated_fx_process_reconstruction_report",
+            "sha256": "4e3b854eaa85cdcaaeb17718bdb6ada655f34679ce0f86098ae705daea6b84d9",
+            "size_bytes": 16756
+          }
+        },
+        "past_len": 20607,
+        "phase": "decode",
+        "process_count": 9,
+        "processes": [
+          {
+            "end_index": 2,
+            "node_count": 3,
+            "reconstruction_rule": "contiguous placeholder prefix",
+            "stage": "inputs",
+            "start_index": 0,
+            "title": "Runtime FX inputs"
+          },
+          {
+            "end_index": 16,
+            "node_count": 14,
+            "reconstruction_rule": "nodes after placeholders through the node before the first mixer projection weight",
+            "stage": "input_rmsnorm",
+            "start_index": 3,
+            "title": "Input RMSNorm"
+          },
+          {
+            "end_index": 30,
+            "node_count": 14,
+            "reconstruction_rule": "first mixer projection weight through the node before the family landmark (RoPE table or GDN custom op)",
+            "stage": "qkv_projection",
+            "start_index": 17,
+            "title": "Attention/GDN input projections and head reshape"
+          },
+          {
+            "end_index": 31,
+            "node_count": 1,
+            "reconstruction_rule": "single opaque vllm.gdn_attention_core call",
+            "stage": "gdn_recurrent_core",
+            "start_index": 31,
+            "title": "Gated DeltaNet recurrent core"
+          },
+          {
+            "end_index": 48,
+            "node_count": 17,
+            "reconstruction_rule": "observed core-output reshape, RMS normalization, SiLU Z gate, and head merge before the mixer output projection",
+            "stage": "gdn_gated_rmsnorm",
+            "start_index": 32,
+            "title": "Gated DeltaNet output RMSNorm and SiLU gate"
+          },
+          {
+            "end_index": 55,
+            "node_count": 7,
+            "reconstruction_rule": "mixer output projection weight through output-buffer copy and observed residual add",
+            "stage": "output_projection",
+            "start_index": 49,
+            "title": "Mixer output projection and residual"
+          },
+          {
+            "end_index": 65,
+            "node_count": 10,
+            "reconstruction_rule": "nodes after mixer residual add through the normalized MLP input",
+            "stage": "post_attention_rmsnorm",
+            "start_index": 56,
+            "title": "Post-attention RMSNorm"
+          },
+          {
+            "end_index": 73,
+            "node_count": 8,
+            "reconstruction_rule": "gate/up projection weight, fused SiLU-product boundary, and down projection through the node before graph output",
+            "stage": "mlp",
+            "start_index": 66,
+            "title": "Gated MLP projections"
+          },
+          {
+            "end_index": 74,
+            "node_count": 1,
+            "reconstruction_rule": "single FX output node",
+            "stage": "layer_output",
+            "start_index": 74,
+            "title": "Layer output"
+          }
+        ],
+        "q_len": 1,
+        "reconstruction_rule": "qwen35_linear_gdn_landmarks_v1",
+        "selection_id": "selected:08",
+        "source_event_id": "chatcmpl-bench-7f1746b7-0-9eeec82b|s29|f29|l62|o0",
+        "source_fx_artifacts": {
+          "fx_graph_module_pt": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input29_layer62/fx_graph_module.pt",
+            "role": "serialized_meta_storage_graph_module",
+            "sha256": "65dd59808857c33463ba9ea9d982233c77887e63105eb265067ce5d1ae7f6b21",
+            "size_bytes": 8797
+          },
+          "fx_graph_py": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input29_layer62/fx_graph.py",
+            "role": "generated_fx_python",
+            "sha256": "f868888c5c1288ab69fa50244b55041afe321a2cb909dd7a4d90ceffcbf3bb7d",
+            "size_bytes": 5502
+          },
+          "fx_graph_txt": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input29_layer62/fx_graph.txt",
+            "role": "generated_fx_graph_text",
+            "sha256": "453c5c024295ae92df44cd86269de4058ef53cdcbc151c53af813f1c5bfd7c4d",
+            "size_bytes": 8677
+          },
+          "fx_nodes_json": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input29_layer62/fx_nodes.json",
+            "role": "capture_time_normalized_fx_node_manifest",
+            "sha256": "219a704f963dc2afb2223eef170b1f53b33f618bea67672b563b1b5dc87ded51",
+            "size_bytes": 43883
+          },
+          "fx_trace_metadata": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input29_layer62/fx_trace_metadata.json",
+            "role": "per_event_capture_replay_and_boundary_metadata",
+            "sha256": "10ea1991e743d4f97006657c96840dad41e2bed6b27feb1092902314889ba618",
+            "size_bytes": 8083
+          }
+        }
+      },
+      {
+        "event_id": "input29_layer63",
+        "kv_len": 20608,
+        "layer_type": "full_attention",
+        "node_count": 155,
+        "opaque_custom_ops": [
+          "vllm.unified_kv_cache_update.default",
+          "vllm.unified_attention_with_output.default"
+        ],
+        "ordinal": 9,
+        "outputs": {
+          "manual_visualization": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input29_layer63/fx_process_visualization.md",
+            "role": "manual_chinese_process_explanation_and_english_tensor_diagrams",
+            "sha256": "53b088ee0b9537a1d317c32f9119779c3df0888bbbebe7d87e4c5f1ac3f2fce9",
+            "size_bytes": 28116
+          },
+          "process_node_csv": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input29_layer63/fx_process_nodes.csv",
+            "role": "fx_process_node_table",
+            "sha256": "56228c11c1e3f72aebfde9399ecc58906245a035f1b2a551d1784cd4eaf82b67",
+            "size_bytes": 20033
+          },
+          "reconstruction_json": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input29_layer63/fx_process_reconstruction.json",
+            "role": "machine_readable_fx_process_reconstruction",
+            "sha256": "071e483df0654bc445a9fcfc5397e89af8b60cc922e32bd4ae31df026f8e8d87",
+            "size_bytes": 85294
+          },
+          "reconstruction_markdown": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input29_layer63/fx_process_reconstruction.md",
+            "role": "generated_fx_process_reconstruction_report",
+            "sha256": "1dba093b004ddd4aee4aec0d9cecac26a7741f1bf1c7468dc97345fd2dc99ebe",
+            "size_bytes": 31890
+          }
+        },
+        "past_len": 20607,
+        "phase": "decode",
+        "process_count": 10,
+        "processes": [
+          {
+            "end_index": 2,
+            "node_count": 3,
+            "reconstruction_rule": "contiguous placeholder prefix",
+            "stage": "inputs",
+            "start_index": 0,
+            "title": "Runtime FX inputs"
+          },
+          {
+            "end_index": 16,
+            "node_count": 14,
+            "reconstruction_rule": "nodes after placeholders through the node before the first mixer projection weight",
+            "stage": "input_rmsnorm",
+            "start_index": 3,
+            "title": "Input RMSNorm"
+          },
+          {
+            "end_index": 59,
+            "node_count": 43,
+            "reconstruction_rule": "first mixer projection weight through the node before the family landmark (RoPE table or GDN custom op)",
+            "stage": "qkv_projection",
+            "start_index": 17,
+            "title": "Attention/GDN input projections and head reshape"
+          },
+          {
+            "end_index": 118,
+            "node_count": 59,
+            "reconstruction_rule": "position-indexed rotary table lookup and observed Q/K rotary arithmetic through the node before attention output allocation",
+            "stage": "rope",
+            "start_index": 60,
+            "title": "RoPE position embedding"
+          },
+          {
+            "end_index": 125,
+            "node_count": 7,
+            "reconstruction_rule": "attention output allocation/views, opaque KV-cache update, and opaque unified attention call",
+            "stage": "kv_cache_attention",
+            "start_index": 119,
+            "title": "KV-cache update and unified full attention"
+          },
+          {
+            "end_index": 128,
+            "node_count": 3,
+            "reconstruction_rule": "opaque attention output view followed by observed sigmoid output gate multiplication",
+            "stage": "attention_output",
+            "start_index": 126,
+            "title": "Attention output gate and hidden reshape"
+          },
+          {
+            "end_index": 135,
+            "node_count": 7,
+            "reconstruction_rule": "mixer output projection weight through output-buffer copy and observed residual add",
+            "stage": "output_projection",
+            "start_index": 129,
+            "title": "Mixer output projection and residual"
+          },
+          {
+            "end_index": 145,
+            "node_count": 10,
+            "reconstruction_rule": "nodes after mixer residual add through the normalized MLP input",
+            "stage": "post_attention_rmsnorm",
+            "start_index": 136,
+            "title": "Post-attention RMSNorm"
+          },
+          {
+            "end_index": 153,
+            "node_count": 8,
+            "reconstruction_rule": "gate/up projection weight, fused SiLU-product boundary, and down projection through the node before graph output",
+            "stage": "mlp",
+            "start_index": 146,
+            "title": "Gated MLP projections"
+          },
+          {
+            "end_index": 154,
+            "node_count": 1,
+            "reconstruction_rule": "single FX output node",
+            "stage": "layer_output",
+            "start_index": 154,
+            "title": "Layer output"
+          }
+        ],
+        "q_len": 1,
+        "reconstruction_rule": "qwen35_full_unified_attention_landmarks_v1",
+        "selection_id": "selected:09",
+        "source_event_id": "chatcmpl-bench-7f1746b7-0-9eeec82b|s29|f29|l63|o0",
+        "source_fx_artifacts": {
+          "fx_graph_module_pt": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input29_layer63/fx_graph_module.pt",
+            "role": "serialized_meta_storage_graph_module",
+            "sha256": "836cae4622a28f4a4946caf7e960dad0b55b86cffa2bec7fd639e13acb85bd57",
+            "size_bytes": 15389
+          },
+          "fx_graph_py": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input29_layer63/fx_graph.py",
+            "role": "generated_fx_python",
+            "sha256": "a0ea2155df4629a45c5451ad519778d8925d8474bfc96aec1e61baae19520741",
+            "size_bytes": 11726
+          },
+          "fx_graph_txt": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input29_layer63/fx_graph.txt",
+            "role": "generated_fx_graph_text",
+            "sha256": "5dcfe20d7349ae9a0c198f3bf3289c63fecbc9b0d85129dc37e1dc3dfc12453d",
+            "size_bytes": 18706
+          },
+          "fx_nodes_json": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input29_layer63/fx_nodes.json",
+            "role": "capture_time_normalized_fx_node_manifest",
+            "sha256": "0ea7a8f4e75e2eabc771b634d8b92f22600eab35c6508654ce201a5686498f8b",
+            "size_bytes": 96554
+          },
+          "fx_trace_metadata": {
+            "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input29_layer63/fx_trace_metadata.json",
+            "role": "per_event_capture_replay_and_boundary_metadata",
+            "sha256": "303150d6df42a9565e7625f0a8a9579c3026c169a9b12679d9edb87083ade708",
+            "size_bytes": 8552
+          }
+        }
+      }
+    ],
+    "evidence_manifest": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/runtime/20260729T050800Z-fx-89687ae2/artifacts/R042/evidence_manifest.json",
+      "role": "complete_r042_evidence_index",
+      "sha256": "5833e7130aee8ac096300743e9814d271ff4a53b6a9d9ef2fae4145dbff6ccd1",
+      "size_bytes": 71202
+    },
+    "fx_root": {
+      "file_count": 124,
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0",
+      "role": "r032_fx_evidence_with_complete_r042_process_companions",
+      "tree_sha256": "2f7e21562af73160e21c74bbbb2f741666ecdc6fd5a01647f45986c44f7aa60e"
+    },
+    "instrumentation": {
+      "reconstructor": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/tools/reconstruct_r042_fx_process.py",
+        "role": "deterministic_fixed_input_fx_process_reconstructor",
+        "sha256": "4ad278d96538183acaec710d74b4889715439d9d5f0c60a7548e4f8fee8a9014",
+        "size_bytes": 33827
+      },
+      "validator": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/tools/validate_r042_fx_process.py",
+        "role": "independent_r042_reconstruction_and_manual_visualization_validator",
+        "sha256": "faf6c15ebc31872433bc616ad94fc93f2305aa300ee23dfaccb9b221fd29b49f",
+        "size_bytes": 21759
+      }
+    },
+    "reconstruction_manifests": {
+      "csv": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/fx_process_reconstruction_manifest.csv",
+        "role": "ordered_r042_fx_process_reconstruction_manifest_table",
+        "sha256": "23143c7edc5a9b580116c72970d2bbb3a9e2473af5ee2d7adb2d4de3122c70d2",
+        "size_bytes": 7373
+      },
+      "json": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/fx_process_reconstruction_manifest.json",
+        "role": "ordered_r042_fx_process_reconstruction_manifest",
+        "sha256": "c709d81e55dfc88562a511541cc47012fdc483bb58eb6e9cfa67681688e8a85c",
+        "size_bytes": 17339
+      }
+    },
+    "source_evidence": {
+      "canonical_selected_manifest": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/algorithmic_trace/traces/20260729T050800Z-fx-89687ae2-R02-qwen35-27b-eager-row0-hcu0/selected_layer_events.csv",
+        "role": "canonical_selected_event_order",
+        "sha256": "da6be41fbaa53062c8b335e1ec7e269fb5e1e7f25fc1b941b682ac4d9b71e07e",
+        "size_bytes": 6098
+      },
+      "pre_reconstruction_r032_revalidation": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/runtime/20260729T050800Z-fx-89687ae2/artifacts/R042/pre_reconstruction_r032_revalidation.json",
+        "role": "fresh_pass_recorded_before_r042_reconstruction",
+        "sha256": "207530492604148082d857e99571f5fd2c532e329065c6c964e1708e4c0f0af5",
+        "size_bytes": 24467
+      },
+      "r032_evidence_manifest": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/runtime/20260729T050800Z-fx-89687ae2/artifacts/R032/evidence_manifest.json",
+        "role": "upstream_r032_complete_evidence_index",
+        "sha256": "89910dee65119b31a76a4263b3bc502376ce1a5d7f2330fa38719dee0260dbdd",
+        "size_bytes": 35571
+      },
+      "r032_handoff": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/runtime/20260729T050800Z-fx-89687ae2/handoffs/R032.json",
+        "role": "complete_upstream_r032_runtime_handoff",
+        "sha256": "ac5ef976676d4631e612c0b12f8962ff53b1ea2d50cf61438d8ca983abd9ca24",
+        "size_bytes": 53466
+      },
+      "r032_validation_report": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/runtime/20260729T050800Z-fx-89687ae2/artifacts/R032/validation_report.json",
+        "role": "upstream_r032_completion_validation",
+        "sha256": "207530492604148082d857e99571f5fd2c532e329065c6c964e1708e4c0f0af5",
+        "size_bytes": 24467
+      }
+    },
+    "validation_report": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/runtime/20260729T050800Z-fx-89687ae2/artifacts/R042/validation_report.json",
+      "role": "independent_r042_completion_validation",
+      "sha256": "2b4f1d11e64083982a38bc524a7fcd4d0a16a2a8ad483eb3f0e12ec9503de2ae",
+      "size_bytes": 9143
+    }
+  },
+  "process_contract": {
+    "analysis_type": "qwen35_fixed_input_fx_process_reconstruction_and_manual_tensor_visualization",
+    "counts": {
+      "decode_events": 4,
+      "events": 9,
+      "full_attention_events": 5,
+      "fx_nodes": 1079,
+      "linear_attention_events": 4,
+      "manual_visualizations": 9,
+      "prefill_events": 5,
+      "processes": 86
+    },
+    "fixed_input_path_only": true,
+    "generated_and_manual_artifacts_separate": true,
+    "opaque_custom_op_internals_reconstructed": false,
+    "ordered_event_ids": [
+      "input1_layer0",
+      "input1_layer3",
+      "input2_layer31",
+      "input6_layer62",
+      "input6_layer63",
+      "input7_layer0",
+      "input7_layer3",
+      "input29_layer62",
+      "input29_layer63"
+    ],
+    "ordered_selection_ids": [
+      "selected:01",
+      "selected:02",
+      "selected:03",
+      "selected:04",
+      "selected:05",
+      "selected:06",
+      "selected:07",
+      "selected:08",
+      "selected:09"
+    ],
+    "ordered_source_event_ids": [
+      "chatcmpl-bench-7f1746b7-0-9eeec82b|s1|f1|l0|o0",
+      "chatcmpl-bench-7f1746b7-0-9eeec82b|s1|f1|l3|o0",
+      "chatcmpl-bench-7f1746b7-0-9eeec82b|s2|f2|l31|o0",
+      "chatcmpl-bench-7f1746b7-0-9eeec82b|s6|f6|l62|o0",
+      "chatcmpl-bench-7f1746b7-0-9eeec82b|s6|f6|l63|o0",
+      "chatcmpl-bench-7f1746b7-0-9eeec82b|s7|f7|l0|o0",
+      "chatcmpl-bench-7f1746b7-0-9eeec82b|s7|f7|l3|o0",
+      "chatcmpl-bench-7f1746b7-0-9eeec82b|s29|f29|l62|o0",
+      "chatcmpl-bench-7f1746b7-0-9eeec82b|s29|f29|l63|o0"
+    ],
+    "process_labels_are_rule_derived": true
+  },
+  "runtime": {
+    "branch": "fx",
+    "previous_handoff": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/runtime/20260729T050800Z-fx-89687ae2/handoffs/R032.json",
+    "project_root": "/public/home/tangyu408/Qwen_DCU_Worker_0",
+    "run_id": "20260729T050800Z-fx-89687ae2",
+    "runtime_goal": "R042",
+    "user_parameters": {}
+  },
+  "schema_version": 1,
+  "skill": "qwen-dcu-fx-reconstruct-visualize",
+  "source_goal": "R042",
+  "source_identity": {
+    "installed_sources": {
+      "ForwardContext": {
+        "path": "/usr/local/lib/python3.10/dist-packages/vllm/forward_context.py",
+        "sha256": "0768279ecc745f053134276f931a4f1ecd86b6b9dad3f403fb7612328504f542"
+      },
+      "GPUModelRunner": {
+        "path": "/usr/local/lib/python3.10/dist-packages/vllm/v1/worker/gpu_model_runner.py",
+        "sha256": "b3d9b43dd219c07576454041a3cd6eec0d7e250ba1df50f476963824f9e147a6"
+      },
+      "Qwen3_5DecoderLayer": {
+        "path": "/usr/local/lib/python3.10/dist-packages/vllm/model_executor/models/qwen3_5.py",
+        "sha256": "76eeda13ad5d104b74ce8352e4a9766a0a93f29230ba359e9f7727aef4173f1d"
+      }
+    },
+    "installed_vllm_version": "0.18.1+das.dtk2604",
+    "model_config_sha256": "f8d190c5b89c1521220f935d2567a587d6e291ed69066a45a106560b05a2174c",
+    "model_path": "/home/Qwen3.5-27B",
+    "repository": "/public/home/tangyu408/Qwen_DCU_Worker_0/pra2026-bh408",
+    "revision": "3d03614452cd0a925abc82a7686560ff80252dfa"
+  },
+  "status": "complete",
+  "validation": {
+    "completion_checks": {
+      "all_csv_tables_match": true,
+      "all_event_identities_match": true,
+      "all_node_partitions_match": true,
+      "event_directory_set_exact": true,
+      "manifest_order_and_count": true,
+      "manual_visualization_coverage": true,
+      "manual_visualization_requirements": true,
+      "r032_handoff_complete": true
+    },
+    "counts": {
+      "events": 9,
+      "nodes": 1079,
+      "processes": 86,
+      "visualizations": 9
+    },
+    "errors": [],
+    "result": "PASS_FOR_R042_RECONSTRUCTION_AND_VISUALIZATION"
+  }
+}

@@ -1,0 +1,2125 @@
+{
+  "analysis_type": "qwen35_fixed_input_fx_process_reconstruction",
+  "created_at": "2026-07-29T07:04:49.745860+00:00",
+  "event_identity": {
+    "contract_id": "pra2026-bh408@3d036144-16-32K-row0-greedy1024",
+    "engine_step_id": 1,
+    "event_id": "input1_layer0",
+    "forward_id": 1,
+    "kv_len": 4096,
+    "layer_idx": 0,
+    "layer_occurrence": 0,
+    "layer_type": "linear_attention",
+    "past_len": 0,
+    "phase": "prefill_chunk",
+    "q_len": 4096,
+    "r032_run_id": "20260729T050800Z-fx-89687ae2-R032",
+    "rank": 0,
+    "request_id": "chatcmpl-bench-7f1746b7-0-9eeec82b-9c959c99",
+    "selection_id": "selected:01",
+    "source_event_id": "chatcmpl-bench-7f1746b7-0-9eeec82b|s1|f1|l0|o0",
+    "worker_id": "rank0"
+  },
+  "evidence_guards": {
+    "concurrent_or_distributed_coverage_claimed": false,
+    "fixed_input_path_only": true,
+    "graph_module_not_executed": true,
+    "measured_latency_reported": false,
+    "meta_storage_is_structural_evidence": true,
+    "opaque_custom_op_internals_reconstructed": false,
+    "opaque_custom_ops": [
+      "vllm.gdn_attention_core.default"
+    ],
+    "process_labels_are_rule_derived": true,
+    "pruning_or_early_exit_claimed": false
+  },
+  "fixed_input_context": {
+    "external_state_snapshot": {
+      "active_state_indices": [
+        1
+      ],
+      "boundary": "torch.ops.vllm.gdn_attention_core remains opaque",
+      "family": "linear_attention",
+      "replay_use": "entry state retained as external mutation-boundary evidence; opaque fake implementation does not consume it",
+      "representation": "Qwen3_5GatedDeltaNet.kv_cache[virtual_engine]",
+      "snapshot_tensor_count": 2,
+      "snapshot_tensors": [
+        {
+          "cache_tensor_index": 0,
+          "snapshot_sha256": "0693f6bfa2117a9b14f9ceca13d3a5611de5dca226bf999f20a7f615fbd08dff",
+          "snapshot_shape": [
+            1,
+            3,
+            10240
+          ],
+          "source_device": "cuda:0",
+          "source_dtype": "torch.bfloat16",
+          "source_shape": [
+            139,
+            3,
+            10240
+          ],
+          "state_indices": [
+            1
+          ]
+        },
+        {
+          "cache_tensor_index": 1,
+          "snapshot_sha256": "bbd05cf6097ac9b1f89ea29d2542c1b7b67ee46848393895f5a9e43fa1f621e5",
+          "snapshot_shape": [
+            1,
+            48,
+            128,
+            128
+          ],
+          "source_device": "cuda:0",
+          "source_dtype": "torch.float32",
+          "source_shape": [
+            139,
+            48,
+            128,
+            128
+          ],
+          "state_indices": [
+            1
+          ]
+        }
+      ],
+      "virtual_engine": 0
+    },
+    "graph_module_tensor_storage": {
+      "buffers": 0,
+      "bytes_avoided_estimate": 766464256,
+      "enabled": true,
+      "parameters": 8,
+      "tensor_attributes": 0
+    },
+    "no_multimodal_pruning_specialization": true,
+    "runtime_inputs": {
+      "hidden_states": {
+        "device": "cuda:0",
+        "dtype": "torch.bfloat16",
+        "requires_grad": false,
+        "shape": [
+          4096,
+          5120
+        ]
+      },
+      "positions": {
+        "device": "cuda:0",
+        "dtype": "torch.int64",
+        "requires_grad": false,
+        "shape": [
+          3,
+          4096
+        ]
+      },
+      "residual": null
+    },
+    "trace_strategy": "runtime_sample_then_post_request_offline_make_fx"
+  },
+  "logical_pipeline_run_id": "20260729T050800Z-fx-89687ae2",
+  "node_count": 77,
+  "nodes": [
+    {
+      "args": [],
+      "args_repr": "()",
+      "device": "cuda:0",
+      "dtype": "int64",
+      "index": 0,
+      "kwargs_repr": "{}",
+      "name": "arg0_1",
+      "op": "placeholder",
+      "process_stage": "inputs",
+      "shape": [
+        3,
+        4096
+      ],
+      "target": "arg0_1",
+      "users": []
+    },
+    {
+      "args": [],
+      "args_repr": "()",
+      "device": "cuda:0",
+      "dtype": "bfloat16",
+      "index": 1,
+      "kwargs_repr": "{}",
+      "name": "arg1_1",
+      "op": "placeholder",
+      "process_stage": "inputs",
+      "shape": [
+        4096,
+        5120
+      ],
+      "target": "arg1_1",
+      "users": [
+        "_to_copy",
+        "add_3"
+      ]
+    },
+    {
+      "args": [],
+      "args_repr": "()",
+      "device": null,
+      "dtype": null,
+      "index": 2,
+      "kwargs_repr": "{}",
+      "name": "arg2_1",
+      "op": "placeholder",
+      "process_stage": "inputs",
+      "shape": null,
+      "target": "arg2_1",
+      "users": []
+    },
+    {
+      "args": [],
+      "args_repr": "()",
+      "device": "cuda:0",
+      "dtype": "bfloat16",
+      "index": 3,
+      "kwargs_repr": "{}",
+      "name": "_param_constant0",
+      "op": "get_attr",
+      "process_stage": "input_rmsnorm",
+      "shape": [
+        5120
+      ],
+      "target": "_param_constant0",
+      "users": [
+        "detach"
+      ]
+    },
+    {
+      "args": [
+        "_param_constant0"
+      ],
+      "args_repr": "(_param_constant0,)",
+      "device": "cuda:0",
+      "dtype": "bfloat16",
+      "index": 4,
+      "kwargs_repr": "{}",
+      "name": "detach",
+      "op": "call_function",
+      "process_stage": "input_rmsnorm",
+      "shape": [
+        5120
+      ],
+      "target": "aten.detach.default",
+      "users": [
+        "_to_copy_1"
+      ]
+    },
+    {
+      "args": [
+        "arg1_1"
+      ],
+      "args_repr": "(arg1_1,)",
+      "device": "cuda:0",
+      "dtype": "float32",
+      "index": 5,
+      "kwargs_repr": "{'dtype': torch.float32}",
+      "name": "_to_copy",
+      "op": "call_function",
+      "process_stage": "input_rmsnorm",
+      "shape": [
+        4096,
+        5120
+      ],
+      "target": "aten._to_copy.default",
+      "users": [
+        "mul",
+        "pow_1"
+      ]
+    },
+    {
+      "args": [
+        "_to_copy"
+      ],
+      "args_repr": "(_to_copy, 2)",
+      "device": "cuda:0",
+      "dtype": "float32",
+      "index": 6,
+      "kwargs_repr": "{}",
+      "name": "pow_1",
+      "op": "call_function",
+      "process_stage": "input_rmsnorm",
+      "shape": [
+        4096,
+        5120
+      ],
+      "target": "aten.pow.Tensor_Scalar",
+      "users": [
+        "mean"
+      ]
+    },
+    {
+      "args": [
+        "pow_1"
+      ],
+      "args_repr": "(pow_1, [-1], True)",
+      "device": "cuda:0",
+      "dtype": "float32",
+      "index": 7,
+      "kwargs_repr": "{}",
+      "name": "mean",
+      "op": "call_function",
+      "process_stage": "input_rmsnorm",
+      "shape": [
+        4096,
+        1
+      ],
+      "target": "aten.mean.dim",
+      "users": [
+        "add"
+      ]
+    },
+    {
+      "args": [
+        "mean"
+      ],
+      "args_repr": "(mean, 1e-06)",
+      "device": "cuda:0",
+      "dtype": "float32",
+      "index": 8,
+      "kwargs_repr": "{}",
+      "name": "add",
+      "op": "call_function",
+      "process_stage": "input_rmsnorm",
+      "shape": [
+        4096,
+        1
+      ],
+      "target": "aten.add.Tensor",
+      "users": [
+        "rsqrt"
+      ]
+    },
+    {
+      "args": [
+        "add"
+      ],
+      "args_repr": "(add,)",
+      "device": "cuda:0",
+      "dtype": "float32",
+      "index": 9,
+      "kwargs_repr": "{}",
+      "name": "rsqrt",
+      "op": "call_function",
+      "process_stage": "input_rmsnorm",
+      "shape": [
+        4096,
+        1
+      ],
+      "target": "aten.rsqrt.default",
+      "users": [
+        "mul"
+      ]
+    },
+    {
+      "args": [
+        "_to_copy",
+        "rsqrt"
+      ],
+      "args_repr": "(_to_copy, rsqrt)",
+      "device": "cuda:0",
+      "dtype": "float32",
+      "index": 10,
+      "kwargs_repr": "{}",
+      "name": "mul",
+      "op": "call_function",
+      "process_stage": "input_rmsnorm",
+      "shape": [
+        4096,
+        5120
+      ],
+      "target": "aten.mul.Tensor",
+      "users": [
+        "mul_1"
+      ]
+    },
+    {
+      "args": [
+        "detach"
+      ],
+      "args_repr": "(detach,)",
+      "device": "cuda:0",
+      "dtype": "float32",
+      "index": 11,
+      "kwargs_repr": "{'dtype': torch.float32}",
+      "name": "_to_copy_1",
+      "op": "call_function",
+      "process_stage": "input_rmsnorm",
+      "shape": [
+        5120
+      ],
+      "target": "aten._to_copy.default",
+      "users": [
+        "add_1"
+      ]
+    },
+    {
+      "args": [
+        "_to_copy_1"
+      ],
+      "args_repr": "(_to_copy_1, 1.0)",
+      "device": "cuda:0",
+      "dtype": "float32",
+      "index": 12,
+      "kwargs_repr": "{}",
+      "name": "add_1",
+      "op": "call_function",
+      "process_stage": "input_rmsnorm",
+      "shape": [
+        5120
+      ],
+      "target": "aten.add.Tensor",
+      "users": [
+        "mul_1"
+      ]
+    },
+    {
+      "args": [
+        "mul",
+        "add_1"
+      ],
+      "args_repr": "(mul, add_1)",
+      "device": "cuda:0",
+      "dtype": "float32",
+      "index": 13,
+      "kwargs_repr": "{}",
+      "name": "mul_1",
+      "op": "call_function",
+      "process_stage": "input_rmsnorm",
+      "shape": [
+        4096,
+        5120
+      ],
+      "target": "aten.mul.Tensor",
+      "users": [
+        "_to_copy_2"
+      ]
+    },
+    {
+      "args": [
+        "mul_1"
+      ],
+      "args_repr": "(mul_1,)",
+      "device": "cuda:0",
+      "dtype": "bfloat16",
+      "index": 14,
+      "kwargs_repr": "{'dtype': torch.bfloat16}",
+      "name": "_to_copy_2",
+      "op": "call_function",
+      "process_stage": "input_rmsnorm",
+      "shape": [
+        4096,
+        5120
+      ],
+      "target": "aten._to_copy.default",
+      "users": [
+        "empty_like",
+        "mm",
+        "mm_1"
+      ]
+    },
+    {
+      "args": [
+        "_to_copy_2"
+      ],
+      "args_repr": "(_to_copy_2,)",
+      "device": "cuda:0",
+      "dtype": "bfloat16",
+      "index": 15,
+      "kwargs_repr": "{'pin_memory': False}",
+      "name": "empty_like",
+      "op": "call_function",
+      "process_stage": "input_rmsnorm",
+      "shape": [
+        4096,
+        5120
+      ],
+      "target": "aten.empty_like.default",
+      "users": [
+        "copy_"
+      ]
+    },
+    {
+      "args": [],
+      "args_repr": "()",
+      "device": "cuda:0",
+      "dtype": "bfloat16",
+      "index": 16,
+      "kwargs_repr": "{}",
+      "name": "_param_constant1",
+      "op": "get_attr",
+      "process_stage": "qkv_projection",
+      "shape": [
+        16384,
+        5120
+      ],
+      "target": "_param_constant1",
+      "users": [
+        "t"
+      ]
+    },
+    {
+      "args": [
+        "_param_constant1"
+      ],
+      "args_repr": "(_param_constant1,)",
+      "device": "cuda:0",
+      "dtype": "bfloat16",
+      "index": 17,
+      "kwargs_repr": "{}",
+      "name": "t",
+      "op": "call_function",
+      "process_stage": "qkv_projection",
+      "shape": [
+        5120,
+        16384
+      ],
+      "target": "aten.t.default",
+      "users": [
+        "mm"
+      ]
+    },
+    {
+      "args": [
+        "_to_copy_2",
+        "t"
+      ],
+      "args_repr": "(_to_copy_2, t)",
+      "device": "cuda:0",
+      "dtype": "bfloat16",
+      "index": 18,
+      "kwargs_repr": "{}",
+      "name": "mm",
+      "op": "call_function",
+      "process_stage": "qkv_projection",
+      "shape": [
+        4096,
+        16384
+      ],
+      "target": "aten.mm.default",
+      "users": [
+        "split_with_sizes"
+      ]
+    },
+    {
+      "args": [
+        "mm"
+      ],
+      "args_repr": "(mm, [10240, 6144], -1)",
+      "device": null,
+      "dtype": null,
+      "index": 19,
+      "kwargs_repr": "{}",
+      "name": "split_with_sizes",
+      "op": "call_function",
+      "process_stage": "qkv_projection",
+      "shape": null,
+      "target": "aten.split_with_sizes.default",
+      "users": [
+        "getitem",
+        "getitem_1"
+      ]
+    },
+    {
+      "args": [
+        "split_with_sizes"
+      ],
+      "args_repr": "(split_with_sizes, 0)",
+      "device": "cuda:0",
+      "dtype": "bfloat16",
+      "index": 20,
+      "kwargs_repr": "{}",
+      "name": "getitem",
+      "op": "call_function",
+      "process_stage": "qkv_projection",
+      "shape": [
+        4096,
+        10240
+      ],
+      "target": "<built-in function getitem>",
+      "users": [
+        "gdn_attention_core"
+      ]
+    },
+    {
+      "args": [
+        "split_with_sizes"
+      ],
+      "args_repr": "(split_with_sizes, 1)",
+      "device": "cuda:0",
+      "dtype": "bfloat16",
+      "index": 21,
+      "kwargs_repr": "{}",
+      "name": "getitem_1",
+      "op": "call_function",
+      "process_stage": "qkv_projection",
+      "shape": [
+        4096,
+        6144
+      ],
+      "target": "<built-in function getitem>",
+      "users": [
+        "view"
+      ]
+    },
+    {
+      "args": [
+        "getitem_1"
+      ],
+      "args_repr": "(getitem_1, [4096, 48, 128])",
+      "device": "cuda:0",
+      "dtype": "bfloat16",
+      "index": 22,
+      "kwargs_repr": "{}",
+      "name": "view",
+      "op": "call_function",
+      "process_stage": "qkv_projection",
+      "shape": [
+        4096,
+        48,
+        128
+      ],
+      "target": "aten.view.default",
+      "users": [
+        "clone_2"
+      ]
+    },
+    {
+      "args": [],
+      "args_repr": "()",
+      "device": "cuda:0",
+      "dtype": "bfloat16",
+      "index": 23,
+      "kwargs_repr": "{}",
+      "name": "_param_constant2",
+      "op": "get_attr",
+      "process_stage": "qkv_projection",
+      "shape": [
+        96,
+        5120
+      ],
+      "target": "_param_constant2",
+      "users": [
+        "t_1"
+      ]
+    },
+    {
+      "args": [
+        "_param_constant2"
+      ],
+      "args_repr": "(_param_constant2,)",
+      "device": "cuda:0",
+      "dtype": "bfloat16",
+      "index": 24,
+      "kwargs_repr": "{}",
+      "name": "t_1",
+      "op": "call_function",
+      "process_stage": "qkv_projection",
+      "shape": [
+        5120,
+        96
+      ],
+      "target": "aten.t.default",
+      "users": [
+        "mm_1"
+      ]
+    },
+    {
+      "args": [
+        "_to_copy_2",
+        "t_1"
+      ],
+      "args_repr": "(_to_copy_2, t_1)",
+      "device": "cuda:0",
+      "dtype": "bfloat16",
+      "index": 25,
+      "kwargs_repr": "{}",
+      "name": "mm_1",
+      "op": "call_function",
+      "process_stage": "qkv_projection",
+      "shape": [
+        4096,
+        96
+      ],
+      "target": "aten.mm.default",
+      "users": [
+        "split"
+      ]
+    },
+    {
+      "args": [
+        "mm_1"
+      ],
+      "args_repr": "(mm_1, 48, -1)",
+      "device": null,
+      "dtype": null,
+      "index": 26,
+      "kwargs_repr": "{}",
+      "name": "split",
+      "op": "call_function",
+      "process_stage": "qkv_projection",
+      "shape": null,
+      "target": "aten.split.Tensor",
+      "users": [
+        "getitem_2",
+        "getitem_3"
+      ]
+    },
+    {
+      "args": [
+        "split"
+      ],
+      "args_repr": "(split, 0)",
+      "device": "cuda:0",
+      "dtype": "bfloat16",
+      "index": 27,
+      "kwargs_repr": "{}",
+      "name": "getitem_2",
+      "op": "call_function",
+      "process_stage": "qkv_projection",
+      "shape": [
+        4096,
+        48
+      ],
+      "target": "<built-in function getitem>",
+      "users": [
+        "clone"
+      ]
+    },
+    {
+      "args": [
+        "split"
+      ],
+      "args_repr": "(split, 1)",
+      "device": "cuda:0",
+      "dtype": "bfloat16",
+      "index": 28,
+      "kwargs_repr": "{}",
+      "name": "getitem_3",
+      "op": "call_function",
+      "process_stage": "qkv_projection",
+      "shape": [
+        4096,
+        48
+      ],
+      "target": "<built-in function getitem>",
+      "users": [
+        "clone_1"
+      ]
+    },
+    {
+      "args": [
+        "getitem_2"
+      ],
+      "args_repr": "(getitem_2,)",
+      "device": "cuda:0",
+      "dtype": "bfloat16",
+      "index": 29,
+      "kwargs_repr": "{'memory_format': torch.contiguous_format}",
+      "name": "clone",
+      "op": "call_function",
+      "process_stage": "qkv_projection",
+      "shape": [
+        4096,
+        48
+      ],
+      "target": "aten.clone.default",
+      "users": [
+        "gdn_attention_core"
+      ]
+    },
+    {
+      "args": [
+        "getitem_3"
+      ],
+      "args_repr": "(getitem_3,)",
+      "device": "cuda:0",
+      "dtype": "bfloat16",
+      "index": 30,
+      "kwargs_repr": "{'memory_format': torch.contiguous_format}",
+      "name": "clone_1",
+      "op": "call_function",
+      "process_stage": "qkv_projection",
+      "shape": [
+        4096,
+        48
+      ],
+      "target": "aten.clone.default",
+      "users": [
+        "gdn_attention_core"
+      ]
+    },
+    {
+      "args": [],
+      "args_repr": "([4096, 48, 128],)",
+      "device": "cuda:0",
+      "dtype": "bfloat16",
+      "index": 31,
+      "kwargs_repr": "{'dtype': torch.bfloat16, 'device': device(type='cuda', index=0), 'pin_memory': False}",
+      "name": "zeros",
+      "op": "call_function",
+      "process_stage": "qkv_projection",
+      "shape": [
+        4096,
+        48,
+        128
+      ],
+      "target": "aten.zeros.default",
+      "users": [
+        "gdn_attention_core",
+        "view_1"
+      ]
+    },
+    {
+      "args": [
+        "getitem",
+        "clone",
+        "clone_1",
+        "zeros"
+      ],
+      "args_repr": "(getitem, clone, clone_1, zeros, 'language_model.model.layers.0.linear_attn')",
+      "device": null,
+      "dtype": null,
+      "index": 32,
+      "kwargs_repr": "{}",
+      "name": "gdn_attention_core",
+      "op": "call_function",
+      "process_stage": "gdn_recurrent_core",
+      "shape": null,
+      "target": "vllm.gdn_attention_core.default",
+      "users": []
+    },
+    {
+      "args": [
+        "zeros"
+      ],
+      "args_repr": "(zeros, [-1, 128])",
+      "device": "cuda:0",
+      "dtype": "bfloat16",
+      "index": 33,
+      "kwargs_repr": "{}",
+      "name": "view_1",
+      "op": "call_function",
+      "process_stage": "gdn_gated_rmsnorm",
+      "shape": [
+        196608,
+        128
+      ],
+      "target": "aten.view.default",
+      "users": [
+        "_to_copy_3"
+      ]
+    },
+    {
+      "args": [
+        "view"
+      ],
+      "args_repr": "(view,)",
+      "device": "cuda:0",
+      "dtype": "bfloat16",
+      "index": 34,
+      "kwargs_repr": "{'memory_format': torch.contiguous_format}",
+      "name": "clone_2",
+      "op": "call_function",
+      "process_stage": "gdn_gated_rmsnorm",
+      "shape": [
+        4096,
+        48,
+        128
+      ],
+      "target": "aten.clone.default",
+      "users": [
+        "_unsafe_view"
+      ]
+    },
+    {
+      "args": [
+        "clone_2"
+      ],
+      "args_repr": "(clone_2, [196608, 128])",
+      "device": "cuda:0",
+      "dtype": "bfloat16",
+      "index": 35,
+      "kwargs_repr": "{}",
+      "name": "_unsafe_view",
+      "op": "call_function",
+      "process_stage": "gdn_gated_rmsnorm",
+      "shape": [
+        196608,
+        128
+      ],
+      "target": "aten._unsafe_view.default",
+      "users": [
+        "_to_copy_5"
+      ]
+    },
+    {
+      "args": [
+        "view_1"
+      ],
+      "args_repr": "(view_1,)",
+      "device": "cuda:0",
+      "dtype": "float32",
+      "index": 36,
+      "kwargs_repr": "{'dtype': torch.float32}",
+      "name": "_to_copy_3",
+      "op": "call_function",
+      "process_stage": "gdn_gated_rmsnorm",
+      "shape": [
+        196608,
+        128
+      ],
+      "target": "aten._to_copy.default",
+      "users": [
+        "mul_2",
+        "pow_2"
+      ]
+    },
+    {
+      "args": [],
+      "args_repr": "()",
+      "device": "cuda:0",
+      "dtype": "bfloat16",
+      "index": 37,
+      "kwargs_repr": "{}",
+      "name": "_param_constant3",
+      "op": "get_attr",
+      "process_stage": "gdn_gated_rmsnorm",
+      "shape": [
+        128
+      ],
+      "target": "_param_constant3",
+      "users": [
+        "_to_copy_4"
+      ]
+    },
+    {
+      "args": [
+        "_param_constant3"
+      ],
+      "args_repr": "(_param_constant3,)",
+      "device": "cuda:0",
+      "dtype": "float32",
+      "index": 38,
+      "kwargs_repr": "{'dtype': torch.float32}",
+      "name": "_to_copy_4",
+      "op": "call_function",
+      "process_stage": "gdn_gated_rmsnorm",
+      "shape": [
+        128
+      ],
+      "target": "aten._to_copy.default",
+      "users": [
+        "mul_3"
+      ]
+    },
+    {
+      "args": [
+        "_unsafe_view"
+      ],
+      "args_repr": "(_unsafe_view,)",
+      "device": "cuda:0",
+      "dtype": "float32",
+      "index": 39,
+      "kwargs_repr": "{'dtype': torch.float32}",
+      "name": "_to_copy_5",
+      "op": "call_function",
+      "process_stage": "gdn_gated_rmsnorm",
+      "shape": [
+        196608,
+        128
+      ],
+      "target": "aten._to_copy.default",
+      "users": [
+        "silu"
+      ]
+    },
+    {
+      "args": [
+        "_to_copy_3"
+      ],
+      "args_repr": "(_to_copy_3, 2)",
+      "device": "cuda:0",
+      "dtype": "float32",
+      "index": 40,
+      "kwargs_repr": "{}",
+      "name": "pow_2",
+      "op": "call_function",
+      "process_stage": "gdn_gated_rmsnorm",
+      "shape": [
+        196608,
+        128
+      ],
+      "target": "aten.pow.Tensor_Scalar",
+      "users": [
+        "mean_1"
+      ]
+    },
+    {
+      "args": [
+        "pow_2"
+      ],
+      "args_repr": "(pow_2, [-1], True)",
+      "device": "cuda:0",
+      "dtype": "float32",
+      "index": 41,
+      "kwargs_repr": "{}",
+      "name": "mean_1",
+      "op": "call_function",
+      "process_stage": "gdn_gated_rmsnorm",
+      "shape": [
+        196608,
+        1
+      ],
+      "target": "aten.mean.dim",
+      "users": [
+        "add_2"
+      ]
+    },
+    {
+      "args": [
+        "mean_1"
+      ],
+      "args_repr": "(mean_1, 1e-06)",
+      "device": "cuda:0",
+      "dtype": "float32",
+      "index": 42,
+      "kwargs_repr": "{}",
+      "name": "add_2",
+      "op": "call_function",
+      "process_stage": "gdn_gated_rmsnorm",
+      "shape": [
+        196608,
+        1
+      ],
+      "target": "aten.add.Tensor",
+      "users": [
+        "rsqrt_1"
+      ]
+    },
+    {
+      "args": [
+        "add_2"
+      ],
+      "args_repr": "(add_2,)",
+      "device": "cuda:0",
+      "dtype": "float32",
+      "index": 43,
+      "kwargs_repr": "{}",
+      "name": "rsqrt_1",
+      "op": "call_function",
+      "process_stage": "gdn_gated_rmsnorm",
+      "shape": [
+        196608,
+        1
+      ],
+      "target": "aten.rsqrt.default",
+      "users": [
+        "mul_2"
+      ]
+    },
+    {
+      "args": [
+        "_to_copy_3",
+        "rsqrt_1"
+      ],
+      "args_repr": "(_to_copy_3, rsqrt_1)",
+      "device": "cuda:0",
+      "dtype": "float32",
+      "index": 44,
+      "kwargs_repr": "{}",
+      "name": "mul_2",
+      "op": "call_function",
+      "process_stage": "gdn_gated_rmsnorm",
+      "shape": [
+        196608,
+        128
+      ],
+      "target": "aten.mul.Tensor",
+      "users": [
+        "mul_3"
+      ]
+    },
+    {
+      "args": [
+        "_to_copy_4",
+        "mul_2"
+      ],
+      "args_repr": "(mul_2, _to_copy_4)",
+      "device": "cuda:0",
+      "dtype": "float32",
+      "index": 45,
+      "kwargs_repr": "{}",
+      "name": "mul_3",
+      "op": "call_function",
+      "process_stage": "gdn_gated_rmsnorm",
+      "shape": [
+        196608,
+        128
+      ],
+      "target": "aten.mul.Tensor",
+      "users": [
+        "mul_4"
+      ]
+    },
+    {
+      "args": [
+        "_to_copy_5"
+      ],
+      "args_repr": "(_to_copy_5,)",
+      "device": "cuda:0",
+      "dtype": "float32",
+      "index": 46,
+      "kwargs_repr": "{}",
+      "name": "silu",
+      "op": "call_function",
+      "process_stage": "gdn_gated_rmsnorm",
+      "shape": [
+        196608,
+        128
+      ],
+      "target": "aten.silu.default",
+      "users": [
+        "mul_4"
+      ]
+    },
+    {
+      "args": [
+        "mul_3",
+        "silu"
+      ],
+      "args_repr": "(mul_3, silu)",
+      "device": "cuda:0",
+      "dtype": "float32",
+      "index": 47,
+      "kwargs_repr": "{}",
+      "name": "mul_4",
+      "op": "call_function",
+      "process_stage": "gdn_gated_rmsnorm",
+      "shape": [
+        196608,
+        128
+      ],
+      "target": "aten.mul.Tensor",
+      "users": [
+        "_to_copy_6"
+      ]
+    },
+    {
+      "args": [
+        "mul_4"
+      ],
+      "args_repr": "(mul_4,)",
+      "device": "cuda:0",
+      "dtype": "bfloat16",
+      "index": 48,
+      "kwargs_repr": "{'dtype': torch.bfloat16}",
+      "name": "_to_copy_6",
+      "op": "call_function",
+      "process_stage": "gdn_gated_rmsnorm",
+      "shape": [
+        196608,
+        128
+      ],
+      "target": "aten._to_copy.default",
+      "users": [
+        "view_2"
+      ]
+    },
+    {
+      "args": [
+        "_to_copy_6"
+      ],
+      "args_repr": "(_to_copy_6, [4096, 48, 128])",
+      "device": "cuda:0",
+      "dtype": "bfloat16",
+      "index": 49,
+      "kwargs_repr": "{}",
+      "name": "view_2",
+      "op": "call_function",
+      "process_stage": "gdn_gated_rmsnorm",
+      "shape": [
+        4096,
+        48,
+        128
+      ],
+      "target": "aten.view.default",
+      "users": [
+        "view_3"
+      ]
+    },
+    {
+      "args": [
+        "view_2"
+      ],
+      "args_repr": "(view_2, [4096, 6144])",
+      "device": "cuda:0",
+      "dtype": "bfloat16",
+      "index": 50,
+      "kwargs_repr": "{}",
+      "name": "view_3",
+      "op": "call_function",
+      "process_stage": "gdn_gated_rmsnorm",
+      "shape": [
+        4096,
+        6144
+      ],
+      "target": "aten.view.default",
+      "users": [
+        "mm_2"
+      ]
+    },
+    {
+      "args": [],
+      "args_repr": "()",
+      "device": "cuda:0",
+      "dtype": "bfloat16",
+      "index": 51,
+      "kwargs_repr": "{}",
+      "name": "_param_constant4",
+      "op": "get_attr",
+      "process_stage": "output_projection",
+      "shape": [
+        5120,
+        6144
+      ],
+      "target": "_param_constant4",
+      "users": [
+        "t_2"
+      ]
+    },
+    {
+      "args": [
+        "_param_constant4"
+      ],
+      "args_repr": "(_param_constant4,)",
+      "device": "cuda:0",
+      "dtype": "bfloat16",
+      "index": 52,
+      "kwargs_repr": "{}",
+      "name": "t_2",
+      "op": "call_function",
+      "process_stage": "output_projection",
+      "shape": [
+        6144,
+        5120
+      ],
+      "target": "aten.t.default",
+      "users": [
+        "mm_2"
+      ]
+    },
+    {
+      "args": [
+        "view_3",
+        "t_2"
+      ],
+      "args_repr": "(view_3, t_2)",
+      "device": "cuda:0",
+      "dtype": "bfloat16",
+      "index": 53,
+      "kwargs_repr": "{}",
+      "name": "mm_2",
+      "op": "call_function",
+      "process_stage": "output_projection",
+      "shape": [
+        4096,
+        5120
+      ],
+      "target": "aten.mm.default",
+      "users": [
+        "copy_"
+      ]
+    },
+    {
+      "args": [
+        "empty_like",
+        "mm_2"
+      ],
+      "args_repr": "(empty_like, mm_2)",
+      "device": "cuda:0",
+      "dtype": "bfloat16",
+      "index": 54,
+      "kwargs_repr": "{}",
+      "name": "copy_",
+      "op": "call_function",
+      "process_stage": "output_projection",
+      "shape": [
+        4096,
+        5120
+      ],
+      "target": "aten.copy_.default",
+      "users": [
+        "add_3"
+      ]
+    },
+    {
+      "args": [],
+      "args_repr": "()",
+      "device": "cuda:0",
+      "dtype": "bfloat16",
+      "index": 55,
+      "kwargs_repr": "{}",
+      "name": "_param_constant5",
+      "op": "get_attr",
+      "process_stage": "output_projection",
+      "shape": [
+        5120
+      ],
+      "target": "_param_constant5",
+      "users": [
+        "detach_1"
+      ]
+    },
+    {
+      "args": [
+        "_param_constant5"
+      ],
+      "args_repr": "(_param_constant5,)",
+      "device": "cuda:0",
+      "dtype": "bfloat16",
+      "index": 56,
+      "kwargs_repr": "{}",
+      "name": "detach_1",
+      "op": "call_function",
+      "process_stage": "output_projection",
+      "shape": [
+        5120
+      ],
+      "target": "aten.detach.default",
+      "users": [
+        "_to_copy_8"
+      ]
+    },
+    {
+      "args": [
+        "arg1_1",
+        "copy_"
+      ],
+      "args_repr": "(copy_, arg1_1)",
+      "device": "cuda:0",
+      "dtype": "bfloat16",
+      "index": 57,
+      "kwargs_repr": "{}",
+      "name": "add_3",
+      "op": "call_function",
+      "process_stage": "output_projection",
+      "shape": [
+        4096,
+        5120
+      ],
+      "target": "aten.add.Tensor",
+      "users": [
+        "_to_copy_7",
+        "output"
+      ]
+    },
+    {
+      "args": [
+        "add_3"
+      ],
+      "args_repr": "(add_3,)",
+      "device": "cuda:0",
+      "dtype": "float32",
+      "index": 58,
+      "kwargs_repr": "{'dtype': torch.float32}",
+      "name": "_to_copy_7",
+      "op": "call_function",
+      "process_stage": "post_attention_rmsnorm",
+      "shape": [
+        4096,
+        5120
+      ],
+      "target": "aten._to_copy.default",
+      "users": [
+        "mul_5",
+        "pow_3"
+      ]
+    },
+    {
+      "args": [
+        "_to_copy_7"
+      ],
+      "args_repr": "(_to_copy_7, 2)",
+      "device": "cuda:0",
+      "dtype": "float32",
+      "index": 59,
+      "kwargs_repr": "{}",
+      "name": "pow_3",
+      "op": "call_function",
+      "process_stage": "post_attention_rmsnorm",
+      "shape": [
+        4096,
+        5120
+      ],
+      "target": "aten.pow.Tensor_Scalar",
+      "users": [
+        "mean_2"
+      ]
+    },
+    {
+      "args": [
+        "pow_3"
+      ],
+      "args_repr": "(pow_3, [-1], True)",
+      "device": "cuda:0",
+      "dtype": "float32",
+      "index": 60,
+      "kwargs_repr": "{}",
+      "name": "mean_2",
+      "op": "call_function",
+      "process_stage": "post_attention_rmsnorm",
+      "shape": [
+        4096,
+        1
+      ],
+      "target": "aten.mean.dim",
+      "users": [
+        "add_4"
+      ]
+    },
+    {
+      "args": [
+        "mean_2"
+      ],
+      "args_repr": "(mean_2, 1e-06)",
+      "device": "cuda:0",
+      "dtype": "float32",
+      "index": 61,
+      "kwargs_repr": "{}",
+      "name": "add_4",
+      "op": "call_function",
+      "process_stage": "post_attention_rmsnorm",
+      "shape": [
+        4096,
+        1
+      ],
+      "target": "aten.add.Tensor",
+      "users": [
+        "rsqrt_2"
+      ]
+    },
+    {
+      "args": [
+        "add_4"
+      ],
+      "args_repr": "(add_4,)",
+      "device": "cuda:0",
+      "dtype": "float32",
+      "index": 62,
+      "kwargs_repr": "{}",
+      "name": "rsqrt_2",
+      "op": "call_function",
+      "process_stage": "post_attention_rmsnorm",
+      "shape": [
+        4096,
+        1
+      ],
+      "target": "aten.rsqrt.default",
+      "users": [
+        "mul_5"
+      ]
+    },
+    {
+      "args": [
+        "_to_copy_7",
+        "rsqrt_2"
+      ],
+      "args_repr": "(_to_copy_7, rsqrt_2)",
+      "device": "cuda:0",
+      "dtype": "float32",
+      "index": 63,
+      "kwargs_repr": "{}",
+      "name": "mul_5",
+      "op": "call_function",
+      "process_stage": "post_attention_rmsnorm",
+      "shape": [
+        4096,
+        5120
+      ],
+      "target": "aten.mul.Tensor",
+      "users": [
+        "mul_6"
+      ]
+    },
+    {
+      "args": [
+        "detach_1"
+      ],
+      "args_repr": "(detach_1,)",
+      "device": "cuda:0",
+      "dtype": "float32",
+      "index": 64,
+      "kwargs_repr": "{'dtype': torch.float32}",
+      "name": "_to_copy_8",
+      "op": "call_function",
+      "process_stage": "post_attention_rmsnorm",
+      "shape": [
+        5120
+      ],
+      "target": "aten._to_copy.default",
+      "users": [
+        "add_5"
+      ]
+    },
+    {
+      "args": [
+        "_to_copy_8"
+      ],
+      "args_repr": "(_to_copy_8, 1.0)",
+      "device": "cuda:0",
+      "dtype": "float32",
+      "index": 65,
+      "kwargs_repr": "{}",
+      "name": "add_5",
+      "op": "call_function",
+      "process_stage": "post_attention_rmsnorm",
+      "shape": [
+        5120
+      ],
+      "target": "aten.add.Tensor",
+      "users": [
+        "mul_6"
+      ]
+    },
+    {
+      "args": [
+        "mul_5",
+        "add_5"
+      ],
+      "args_repr": "(mul_5, add_5)",
+      "device": "cuda:0",
+      "dtype": "float32",
+      "index": 66,
+      "kwargs_repr": "{}",
+      "name": "mul_6",
+      "op": "call_function",
+      "process_stage": "post_attention_rmsnorm",
+      "shape": [
+        4096,
+        5120
+      ],
+      "target": "aten.mul.Tensor",
+      "users": [
+        "_to_copy_9"
+      ]
+    },
+    {
+      "args": [
+        "mul_6"
+      ],
+      "args_repr": "(mul_6,)",
+      "device": "cuda:0",
+      "dtype": "bfloat16",
+      "index": 67,
+      "kwargs_repr": "{'dtype': torch.bfloat16}",
+      "name": "_to_copy_9",
+      "op": "call_function",
+      "process_stage": "post_attention_rmsnorm",
+      "shape": [
+        4096,
+        5120
+      ],
+      "target": "aten._to_copy.default",
+      "users": [
+        "mm_3"
+      ]
+    },
+    {
+      "args": [],
+      "args_repr": "()",
+      "device": "cuda:0",
+      "dtype": "bfloat16",
+      "index": 68,
+      "kwargs_repr": "{}",
+      "name": "_param_constant6",
+      "op": "get_attr",
+      "process_stage": "mlp",
+      "shape": [
+        34816,
+        5120
+      ],
+      "target": "_param_constant6",
+      "users": [
+        "t_3"
+      ]
+    },
+    {
+      "args": [
+        "_param_constant6"
+      ],
+      "args_repr": "(_param_constant6,)",
+      "device": "cuda:0",
+      "dtype": "bfloat16",
+      "index": 69,
+      "kwargs_repr": "{}",
+      "name": "t_3",
+      "op": "call_function",
+      "process_stage": "mlp",
+      "shape": [
+        5120,
+        34816
+      ],
+      "target": "aten.t.default",
+      "users": [
+        "mm_3"
+      ]
+    },
+    {
+      "args": [
+        "_to_copy_9",
+        "t_3"
+      ],
+      "args_repr": "(_to_copy_9, t_3)",
+      "device": "cuda:0",
+      "dtype": "bfloat16",
+      "index": 70,
+      "kwargs_repr": "{}",
+      "name": "mm_3",
+      "op": "call_function",
+      "process_stage": "mlp",
+      "shape": [
+        4096,
+        34816
+      ],
+      "target": "aten.mm.default",
+      "users": [
+        "silu_and_mul"
+      ]
+    },
+    {
+      "args": [],
+      "args_repr": "([4096, 17408],)",
+      "device": "cuda:0",
+      "dtype": "bfloat16",
+      "index": 71,
+      "kwargs_repr": "{'dtype': torch.bfloat16, 'device': device(type='cuda', index=0), 'pin_memory': False}",
+      "name": "empty",
+      "op": "call_function",
+      "process_stage": "mlp",
+      "shape": [
+        4096,
+        17408
+      ],
+      "target": "aten.empty.memory_format",
+      "users": [
+        "mm_4",
+        "silu_and_mul"
+      ]
+    },
+    {
+      "args": [
+        "mm_3",
+        "empty"
+      ],
+      "args_repr": "(empty, mm_3)",
+      "device": null,
+      "dtype": null,
+      "index": 72,
+      "kwargs_repr": "{}",
+      "name": "silu_and_mul",
+      "op": "call_function",
+      "process_stage": "mlp",
+      "shape": null,
+      "target": "_C.silu_and_mul.default",
+      "users": []
+    },
+    {
+      "args": [],
+      "args_repr": "()",
+      "device": "cuda:0",
+      "dtype": "bfloat16",
+      "index": 73,
+      "kwargs_repr": "{}",
+      "name": "_param_constant7",
+      "op": "get_attr",
+      "process_stage": "mlp",
+      "shape": [
+        5120,
+        17408
+      ],
+      "target": "_param_constant7",
+      "users": [
+        "t_4"
+      ]
+    },
+    {
+      "args": [
+        "_param_constant7"
+      ],
+      "args_repr": "(_param_constant7,)",
+      "device": "cuda:0",
+      "dtype": "bfloat16",
+      "index": 74,
+      "kwargs_repr": "{}",
+      "name": "t_4",
+      "op": "call_function",
+      "process_stage": "mlp",
+      "shape": [
+        17408,
+        5120
+      ],
+      "target": "aten.t.default",
+      "users": [
+        "mm_4"
+      ]
+    },
+    {
+      "args": [
+        "empty",
+        "t_4"
+      ],
+      "args_repr": "(empty, t_4)",
+      "device": "cuda:0",
+      "dtype": "bfloat16",
+      "index": 75,
+      "kwargs_repr": "{}",
+      "name": "mm_4",
+      "op": "call_function",
+      "process_stage": "mlp",
+      "shape": [
+        4096,
+        5120
+      ],
+      "target": "aten.mm.default",
+      "users": [
+        "output"
+      ]
+    },
+    {
+      "args": [
+        "add_3",
+        "mm_4"
+      ],
+      "args_repr": "((mm_4, add_3),)",
+      "device": null,
+      "dtype": null,
+      "index": 76,
+      "kwargs_repr": "{}",
+      "name": "output",
+      "op": "output",
+      "process_stage": "layer_output",
+      "shape": null,
+      "target": "output",
+      "users": []
+    }
+  ],
+  "reconstruction_rule": "qwen35_linear_gdn_landmarks_v1",
+  "runtime_goal": "R042",
+  "schema_version": 1,
+  "source": "capture-time GraphModule.graph node serialization",
+  "source_artifacts": {
+    "fx_graph_module_pt": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input1_layer0/fx_graph_module.pt",
+      "role": "serialized_meta_storage_graph_module",
+      "sha256": "d9bbef1c5d8b04389196de5063613e2e774b81cc411384ad9d45b733cde0880e",
+      "size_bytes": 9117
+    },
+    "fx_graph_py": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input1_layer0/fx_graph.py",
+      "role": "generated_fx_python",
+      "sha256": "9fc0a5d33edd945f0419aed83dba5ad19268e354a20aef863abae154bcae504a",
+      "size_bytes": 5796
+    },
+    "fx_graph_txt": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input1_layer0/fx_graph.txt",
+      "role": "generated_fx_graph_text",
+      "sha256": "89fc85c563c9611a7759ae542656b6252bb4900b9cbd51694da1da11b39f0a51",
+      "size_bytes": 9057
+    },
+    "fx_nodes_json": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input1_layer0/fx_nodes.json",
+      "role": "capture_time_normalized_fx_node_manifest",
+      "sha256": "5d788945fa0ad14ecdeee628e0853865c0e2b1cd7b34b8b1b74770a110424c21",
+      "size_bytes": 45134
+    },
+    "fx_trace_metadata": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input1_layer0/fx_trace_metadata.json",
+      "role": "per_event_capture_replay_and_boundary_metadata",
+      "sha256": "fa9535e66fa7315f095e780823a21832780bbe44b89d782fda49950ea77c37e9",
+      "size_bytes": 7898
+    }
+  },
+  "stage_count": 9,
+  "stages": [
+    {
+      "end_index": 2,
+      "external_inputs": [],
+      "external_outputs": [
+        "arg1_1"
+      ],
+      "node_count": 3,
+      "nodes": [
+        "arg0_1",
+        "arg1_1",
+        "arg2_1"
+      ],
+      "reconstruction_rule": "contiguous placeholder prefix",
+      "stage": "inputs",
+      "start_index": 0,
+      "target_counts": {
+        "arg0_1": 1,
+        "arg1_1": 1,
+        "arg2_1": 1
+      },
+      "targets": [
+        "arg0_1",
+        "arg1_1",
+        "arg2_1"
+      ],
+      "title": "Runtime FX inputs"
+    },
+    {
+      "end_index": 15,
+      "external_inputs": [
+        "arg1_1"
+      ],
+      "external_outputs": [
+        "_to_copy_2",
+        "empty_like"
+      ],
+      "node_count": 13,
+      "nodes": [
+        "_param_constant0",
+        "detach",
+        "_to_copy",
+        "pow_1",
+        "mean",
+        "add",
+        "rsqrt",
+        "mul",
+        "_to_copy_1",
+        "add_1",
+        "mul_1",
+        "_to_copy_2",
+        "empty_like"
+      ],
+      "reconstruction_rule": "nodes after placeholders through the node before the first mixer projection weight",
+      "stage": "input_rmsnorm",
+      "start_index": 3,
+      "target_counts": {
+        "_param_constant0": 1,
+        "aten._to_copy.default": 3,
+        "aten.add.Tensor": 2,
+        "aten.detach.default": 1,
+        "aten.empty_like.default": 1,
+        "aten.mean.dim": 1,
+        "aten.mul.Tensor": 2,
+        "aten.pow.Tensor_Scalar": 1,
+        "aten.rsqrt.default": 1
+      },
+      "targets": [
+        "_param_constant0",
+        "aten.detach.default",
+        "aten._to_copy.default",
+        "aten.pow.Tensor_Scalar",
+        "aten.mean.dim",
+        "aten.add.Tensor",
+        "aten.rsqrt.default",
+        "aten.mul.Tensor",
+        "aten.empty_like.default"
+      ],
+      "title": "Input RMSNorm"
+    },
+    {
+      "end_index": 31,
+      "external_inputs": [
+        "_to_copy_2"
+      ],
+      "external_outputs": [
+        "getitem",
+        "view",
+        "clone",
+        "clone_1",
+        "zeros"
+      ],
+      "node_count": 16,
+      "nodes": [
+        "_param_constant1",
+        "t",
+        "mm",
+        "split_with_sizes",
+        "getitem",
+        "getitem_1",
+        "view",
+        "_param_constant2",
+        "t_1",
+        "mm_1",
+        "split",
+        "getitem_2",
+        "getitem_3",
+        "clone",
+        "clone_1",
+        "zeros"
+      ],
+      "reconstruction_rule": "first mixer projection weight through the node before the family landmark (RoPE table or GDN custom op)",
+      "stage": "qkv_projection",
+      "start_index": 16,
+      "target_counts": {
+        "<built-in function getitem>": 4,
+        "_param_constant1": 1,
+        "_param_constant2": 1,
+        "aten.clone.default": 2,
+        "aten.mm.default": 2,
+        "aten.split.Tensor": 1,
+        "aten.split_with_sizes.default": 1,
+        "aten.t.default": 2,
+        "aten.view.default": 1,
+        "aten.zeros.default": 1
+      },
+      "targets": [
+        "_param_constant1",
+        "aten.t.default",
+        "aten.mm.default",
+        "aten.split_with_sizes.default",
+        "<built-in function getitem>",
+        "aten.view.default",
+        "_param_constant2",
+        "aten.split.Tensor",
+        "aten.clone.default",
+        "aten.zeros.default"
+      ],
+      "title": "Attention/GDN input projections and head reshape"
+    },
+    {
+      "end_index": 32,
+      "external_inputs": [
+        "getitem",
+        "clone",
+        "clone_1",
+        "zeros"
+      ],
+      "external_outputs": [],
+      "node_count": 1,
+      "nodes": [
+        "gdn_attention_core"
+      ],
+      "reconstruction_rule": "single opaque vllm.gdn_attention_core call",
+      "stage": "gdn_recurrent_core",
+      "start_index": 32,
+      "target_counts": {
+        "vllm.gdn_attention_core.default": 1
+      },
+      "targets": [
+        "vllm.gdn_attention_core.default"
+      ],
+      "title": "Gated DeltaNet recurrent core"
+    },
+    {
+      "end_index": 50,
+      "external_inputs": [
+        "view",
+        "zeros"
+      ],
+      "external_outputs": [
+        "view_3"
+      ],
+      "node_count": 18,
+      "nodes": [
+        "view_1",
+        "clone_2",
+        "_unsafe_view",
+        "_to_copy_3",
+        "_param_constant3",
+        "_to_copy_4",
+        "_to_copy_5",
+        "pow_2",
+        "mean_1",
+        "add_2",
+        "rsqrt_1",
+        "mul_2",
+        "mul_3",
+        "silu",
+        "mul_4",
+        "_to_copy_6",
+        "view_2",
+        "view_3"
+      ],
+      "reconstruction_rule": "observed core-output reshape, RMS normalization, SiLU Z gate, and head merge before the mixer output projection",
+      "stage": "gdn_gated_rmsnorm",
+      "start_index": 33,
+      "target_counts": {
+        "_param_constant3": 1,
+        "aten._to_copy.default": 4,
+        "aten._unsafe_view.default": 1,
+        "aten.add.Tensor": 1,
+        "aten.clone.default": 1,
+        "aten.mean.dim": 1,
+        "aten.mul.Tensor": 3,
+        "aten.pow.Tensor_Scalar": 1,
+        "aten.rsqrt.default": 1,
+        "aten.silu.default": 1,
+        "aten.view.default": 3
+      },
+      "targets": [
+        "aten.view.default",
+        "aten.clone.default",
+        "aten._unsafe_view.default",
+        "aten._to_copy.default",
+        "_param_constant3",
+        "aten.pow.Tensor_Scalar",
+        "aten.mean.dim",
+        "aten.add.Tensor",
+        "aten.rsqrt.default",
+        "aten.mul.Tensor",
+        "aten.silu.default"
+      ],
+      "title": "Gated DeltaNet output RMSNorm and SiLU gate"
+    },
+    {
+      "end_index": 57,
+      "external_inputs": [
+        "arg1_1",
+        "empty_like",
+        "view_3"
+      ],
+      "external_outputs": [
+        "detach_1",
+        "add_3"
+      ],
+      "node_count": 7,
+      "nodes": [
+        "_param_constant4",
+        "t_2",
+        "mm_2",
+        "copy_",
+        "_param_constant5",
+        "detach_1",
+        "add_3"
+      ],
+      "reconstruction_rule": "mixer output projection weight through output-buffer copy and observed residual add",
+      "stage": "output_projection",
+      "start_index": 51,
+      "target_counts": {
+        "_param_constant4": 1,
+        "_param_constant5": 1,
+        "aten.add.Tensor": 1,
+        "aten.copy_.default": 1,
+        "aten.detach.default": 1,
+        "aten.mm.default": 1,
+        "aten.t.default": 1
+      },
+      "targets": [
+        "_param_constant4",
+        "aten.t.default",
+        "aten.mm.default",
+        "aten.copy_.default",
+        "_param_constant5",
+        "aten.detach.default",
+        "aten.add.Tensor"
+      ],
+      "title": "Mixer output projection and residual"
+    },
+    {
+      "end_index": 67,
+      "external_inputs": [
+        "detach_1",
+        "add_3"
+      ],
+      "external_outputs": [
+        "_to_copy_9"
+      ],
+      "node_count": 10,
+      "nodes": [
+        "_to_copy_7",
+        "pow_3",
+        "mean_2",
+        "add_4",
+        "rsqrt_2",
+        "mul_5",
+        "_to_copy_8",
+        "add_5",
+        "mul_6",
+        "_to_copy_9"
+      ],
+      "reconstruction_rule": "nodes after mixer residual add through the normalized MLP input",
+      "stage": "post_attention_rmsnorm",
+      "start_index": 58,
+      "target_counts": {
+        "aten._to_copy.default": 3,
+        "aten.add.Tensor": 2,
+        "aten.mean.dim": 1,
+        "aten.mul.Tensor": 2,
+        "aten.pow.Tensor_Scalar": 1,
+        "aten.rsqrt.default": 1
+      },
+      "targets": [
+        "aten._to_copy.default",
+        "aten.pow.Tensor_Scalar",
+        "aten.mean.dim",
+        "aten.add.Tensor",
+        "aten.rsqrt.default",
+        "aten.mul.Tensor"
+      ],
+      "title": "Post-attention RMSNorm"
+    },
+    {
+      "end_index": 75,
+      "external_inputs": [
+        "_to_copy_9"
+      ],
+      "external_outputs": [
+        "mm_4"
+      ],
+      "node_count": 8,
+      "nodes": [
+        "_param_constant6",
+        "t_3",
+        "mm_3",
+        "empty",
+        "silu_and_mul",
+        "_param_constant7",
+        "t_4",
+        "mm_4"
+      ],
+      "reconstruction_rule": "gate/up projection weight, fused SiLU-product boundary, and down projection through the node before graph output",
+      "stage": "mlp",
+      "start_index": 68,
+      "target_counts": {
+        "_C.silu_and_mul.default": 1,
+        "_param_constant6": 1,
+        "_param_constant7": 1,
+        "aten.empty.memory_format": 1,
+        "aten.mm.default": 2,
+        "aten.t.default": 2
+      },
+      "targets": [
+        "_param_constant6",
+        "aten.t.default",
+        "aten.mm.default",
+        "aten.empty.memory_format",
+        "_C.silu_and_mul.default",
+        "_param_constant7"
+      ],
+      "title": "Gated MLP projections"
+    },
+    {
+      "end_index": 76,
+      "external_inputs": [
+        "add_3",
+        "mm_4"
+      ],
+      "external_outputs": [],
+      "node_count": 1,
+      "nodes": [
+        "output"
+      ],
+      "reconstruction_rule": "single FX output node",
+      "stage": "layer_output",
+      "start_index": 76,
+      "target_counts": {
+        "output": 1
+      },
+      "targets": [
+        "output"
+      ],
+      "title": "Layer output"
+    }
+  ],
+  "trace_dir": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input1_layer0"
+}

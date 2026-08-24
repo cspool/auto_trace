@@ -1,0 +1,615 @@
+{
+  "event_artifacts": [
+    {
+      "event_id": "input1_layer0",
+      "fx_graph_module_dir": {
+        "file_count": 3,
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input1_layer0/fx_graph_module",
+        "role": "exported_fx_graph_module_folder",
+        "tree_sha256": "58a61622b13dfd9d4ddee81255e284927009fde429cc563a366937b9d6bddd5e"
+      },
+      "fx_graph_module_pt": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input1_layer0/fx_graph_module.pt",
+        "role": "serialized_meta_storage_graph_module",
+        "sha256": "d9bbef1c5d8b04389196de5063613e2e774b81cc411384ad9d45b733cde0880e",
+        "size_bytes": 9117
+      },
+      "fx_graph_py": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input1_layer0/fx_graph.py",
+        "role": "generated_fx_python",
+        "sha256": "9fc0a5d33edd945f0419aed83dba5ad19268e354a20aef863abae154bcae504a",
+        "size_bytes": 5796
+      },
+      "fx_graph_txt": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input1_layer0/fx_graph.txt",
+        "role": "generated_fx_graph_text",
+        "sha256": "89fc85c563c9611a7759ae542656b6252bb4900b9cbd51694da1da11b39f0a51",
+        "size_bytes": 9057
+      },
+      "fx_nodes": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input1_layer0/fx_nodes.json",
+        "role": "normalized_fx_node_manifest",
+        "sha256": "5d788945fa0ad14ecdeee628e0853865c0e2b1cd7b34b8b1b74770a110424c21",
+        "size_bytes": 45134
+      },
+      "fx_trace_metadata": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input1_layer0/fx_trace_metadata.json",
+        "role": "per_event_capture_replay_and_boundary_metadata",
+        "sha256": "fa9535e66fa7315f095e780823a21832780bbe44b89d782fda49950ea77c37e9",
+        "size_bytes": 7898
+      },
+      "layer_type": "linear_attention",
+      "node_count": 77,
+      "selection_id": "selected:01",
+      "source_event_id": "chatcmpl-bench-7f1746b7-0-9eeec82b|s1|f1|l0|o0",
+      "trace_dir": {
+        "file_count": 8,
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input1_layer0",
+        "role": "fixed_input_fx_event_artifact_directory",
+        "tree_sha256": "1b7340949933009e291c3bc0a1f367eec6c95f41a529f3191c2c3e3680894fc2"
+      }
+    },
+    {
+      "event_id": "input1_layer3",
+      "fx_graph_module_dir": {
+        "file_count": 3,
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input1_layer3/fx_graph_module",
+        "role": "exported_fx_graph_module_folder",
+        "tree_sha256": "6f394bfca6f3e822dfdf19a06e5c89095d5f16bb25bce76656e7089193b26504"
+      },
+      "fx_graph_module_pt": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input1_layer3/fx_graph_module.pt",
+        "role": "serialized_meta_storage_graph_module",
+        "sha256": "26803be1e5155cef6e994a283db9eccc5b285bbc9168c06ed906f3f95d1c1c65",
+        "size_bytes": 15453
+      },
+      "fx_graph_py": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input1_layer3/fx_graph.py",
+        "role": "generated_fx_python",
+        "sha256": "f030c65b6506cae62495acfa08e749e92ccbd534de2a2f2cdc6f60630749ecfa",
+        "size_bytes": 11751
+      },
+      "fx_graph_txt": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input1_layer3/fx_graph.txt",
+        "role": "generated_fx_graph_text",
+        "sha256": "1a1f96e2b4794beb8086b7701b82b031bf9f44666d1d53141349e1d74e6ac93f",
+        "size_bytes": 18731
+      },
+      "fx_nodes": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input1_layer3/fx_nodes.json",
+        "role": "normalized_fx_node_manifest",
+        "sha256": "2912c5f4e46f4a9a7625c48bcab94eb29fd41ab5a25f419f86b9f7187bddab52",
+        "size_bytes": 97100
+      },
+      "fx_trace_metadata": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input1_layer3/fx_trace_metadata.json",
+        "role": "per_event_capture_replay_and_boundary_metadata",
+        "sha256": "7bfece9b4e4490399bd85b112ca2212f201c8dfd66e8c01cfd0a003c5cbc50dd",
+        "size_bytes": 7953
+      },
+      "layer_type": "full_attention",
+      "node_count": 155,
+      "selection_id": "selected:02",
+      "source_event_id": "chatcmpl-bench-7f1746b7-0-9eeec82b|s1|f1|l3|o0",
+      "trace_dir": {
+        "file_count": 8,
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input1_layer3",
+        "role": "fixed_input_fx_event_artifact_directory",
+        "tree_sha256": "1f1869011a43c54d66519baead923db83d918aeee25e8e170f8d89dd505b5854"
+      }
+    },
+    {
+      "event_id": "input2_layer31",
+      "fx_graph_module_dir": {
+        "file_count": 3,
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input2_layer31/fx_graph_module",
+        "role": "exported_fx_graph_module_folder",
+        "tree_sha256": "10fb1ecd3596088b05508a6189bc5f3957cd4fad512679147386b1c6807c47a5"
+      },
+      "fx_graph_module_pt": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input2_layer31/fx_graph_module.pt",
+        "role": "serialized_meta_storage_graph_module",
+        "sha256": "275da1589c5188374bee9a84baf02ae42c131cd1ece0019f55cc0b957f56b0a5",
+        "size_bytes": 15453
+      },
+      "fx_graph_py": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input2_layer31/fx_graph.py",
+        "role": "generated_fx_python",
+        "sha256": "f03cfe942d8b7807feeda6de499b6aca0b04903bc1b51b864e7b905f8da9e952",
+        "size_bytes": 11753
+      },
+      "fx_graph_txt": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input2_layer31/fx_graph.txt",
+        "role": "generated_fx_graph_text",
+        "sha256": "d492607cf40fd4e18f021b53b0d9c9eb22bbd219ff4b2d1ee2ca9efd1362e4b5",
+        "size_bytes": 18733
+      },
+      "fx_nodes": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input2_layer31/fx_nodes.json",
+        "role": "normalized_fx_node_manifest",
+        "sha256": "7fc479b00e28eb7057d0f18776822e7c2f73e8e0085138e6553b993eba6f9955",
+        "size_bytes": 97102
+      },
+      "fx_trace_metadata": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input2_layer31/fx_trace_metadata.json",
+        "role": "per_event_capture_replay_and_boundary_metadata",
+        "sha256": "87f8c90b6544a5e0f82cb80a61baeafdaedb50193a5e587bec444bab16e01a25",
+        "size_bytes": 8115
+      },
+      "layer_type": "full_attention",
+      "node_count": 155,
+      "selection_id": "selected:03",
+      "source_event_id": "chatcmpl-bench-7f1746b7-0-9eeec82b|s2|f2|l31|o0",
+      "trace_dir": {
+        "file_count": 8,
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input2_layer31",
+        "role": "fixed_input_fx_event_artifact_directory",
+        "tree_sha256": "d7799e3121c48f5796224f8d5cfbb2af069838e5f264dd0968f32028fb42d7ae"
+      }
+    },
+    {
+      "event_id": "input6_layer62",
+      "fx_graph_module_dir": {
+        "file_count": 3,
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input6_layer62/fx_graph_module",
+        "role": "exported_fx_graph_module_folder",
+        "tree_sha256": "7de3fea83e7881b13825298d417d364e1b0bba167bfb52aae622eb17e5d16462"
+      },
+      "fx_graph_module_pt": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input6_layer62/fx_graph_module.pt",
+        "role": "serialized_meta_storage_graph_module",
+        "sha256": "1dc9bde35dc2145dd890b8de6c0b7e703b74d0c2543bf372fe659523941244a4",
+        "size_bytes": 9181
+      },
+      "fx_graph_py": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input6_layer62/fx_graph.py",
+        "role": "generated_fx_python",
+        "sha256": "576e1bc1efc8187b6e21d9185883273a9100f85b18238815be5a1f84837aeaf1",
+        "size_bytes": 5864
+      },
+      "fx_graph_txt": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input6_layer62/fx_graph.txt",
+        "role": "generated_fx_graph_text",
+        "sha256": "aaf9152b1baf7890bd5ef1f4fe0932026449143c3571c63ed13aab4910dd19ff",
+        "size_bytes": 9164
+      },
+      "fx_nodes": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input6_layer62/fx_nodes.json",
+        "role": "normalized_fx_node_manifest",
+        "sha256": "ba8a057664eb663550d2a615a36eb021b0ef957d6878dffc861e8b0f497a4bb2",
+        "size_bytes": 46050
+      },
+      "fx_trace_metadata": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input6_layer62/fx_trace_metadata.json",
+        "role": "per_event_capture_replay_and_boundary_metadata",
+        "sha256": "617569b554ba65fe761dd96f3c8029d624b1b9df81ce2af2b16d625b68c025a7",
+        "size_bytes": 8093
+      },
+      "layer_type": "linear_attention",
+      "node_count": 78,
+      "selection_id": "selected:04",
+      "source_event_id": "chatcmpl-bench-7f1746b7-0-9eeec82b|s6|f6|l62|o0",
+      "trace_dir": {
+        "file_count": 8,
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input6_layer62",
+        "role": "fixed_input_fx_event_artifact_directory",
+        "tree_sha256": "b3de57c1fcf406e4cbd36f1f4127e05c67bdc7b78abc9ae697e9b9e1717d5b89"
+      }
+    },
+    {
+      "event_id": "input6_layer63",
+      "fx_graph_module_dir": {
+        "file_count": 3,
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input6_layer63/fx_graph_module",
+        "role": "exported_fx_graph_module_folder",
+        "tree_sha256": "c2282a487bd4abac5082b230de927de2c1b64d77a29fbe2bd6e03b2b523ee761"
+      },
+      "fx_graph_module_pt": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input6_layer63/fx_graph_module.pt",
+        "role": "serialized_meta_storage_graph_module",
+        "sha256": "d5aeef639084dc2c9b9504f65e19527530e611f4232d0824f1cb4b38e4013542",
+        "size_bytes": 15453
+      },
+      "fx_graph_py": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input6_layer63/fx_graph.py",
+        "role": "generated_fx_python",
+        "sha256": "9909e61aaa86a39298a8b89ebf9d630eb0204003f31b921e81b17cda3421668b",
+        "size_bytes": 11744
+      },
+      "fx_graph_txt": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input6_layer63/fx_graph.txt",
+        "role": "generated_fx_graph_text",
+        "sha256": "598907523963300e571fedf7863ba0cf8be060c9ea707b814a3dfc9e59584f80",
+        "size_bytes": 18724
+      },
+      "fx_nodes": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input6_layer63/fx_nodes.json",
+        "role": "normalized_fx_node_manifest",
+        "sha256": "d86c3ecd166a88af29bd6f657421902be363f4260f4d89bcb2ee3c0dc304c2f6",
+        "size_bytes": 96833
+      },
+      "fx_trace_metadata": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input6_layer63/fx_trace_metadata.json",
+        "role": "per_event_capture_replay_and_boundary_metadata",
+        "sha256": "34cad881abbdd2b77fcf9bee8fa9619271ca9e12e87a47048047b2dbef11a573",
+        "size_bytes": 8561
+      },
+      "layer_type": "full_attention",
+      "node_count": 155,
+      "selection_id": "selected:05",
+      "source_event_id": "chatcmpl-bench-7f1746b7-0-9eeec82b|s6|f6|l63|o0",
+      "trace_dir": {
+        "file_count": 8,
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input6_layer63",
+        "role": "fixed_input_fx_event_artifact_directory",
+        "tree_sha256": "9e5977b073daeed288a4f8aefc7c05cead287b74f143f8e47c3e2636bc16687b"
+      }
+    },
+    {
+      "event_id": "input7_layer0",
+      "fx_graph_module_dir": {
+        "file_count": 3,
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input7_layer0/fx_graph_module",
+        "role": "exported_fx_graph_module_folder",
+        "tree_sha256": "d8d40e623a757b21bbd5da58c48e3c72212062978775616e9baa07367202cd76"
+      },
+      "fx_graph_module_pt": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input7_layer0/fx_graph_module.pt",
+        "role": "serialized_meta_storage_graph_module",
+        "sha256": "aca9b2ed1db8d50fcd1c81b7839d5f275f7bbccc1db57629768751303ad64add",
+        "size_bytes": 8733
+      },
+      "fx_graph_py": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input7_layer0/fx_graph.py",
+        "role": "generated_fx_python",
+        "sha256": "ea759a92477b222f255c4fc62d9e9edd879783c99cce13ad0b6e04a674d90cbe",
+        "size_bytes": 5427
+      },
+      "fx_graph_txt": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input7_layer0/fx_graph.txt",
+        "role": "generated_fx_graph_text",
+        "sha256": "830dc87dc7ad038307d7a15db9584d06ceda37b65a6bdeff08ae03af20167dff",
+        "size_bytes": 8563
+      },
+      "fx_nodes": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input7_layer0/fx_nodes.json",
+        "role": "normalized_fx_node_manifest",
+        "sha256": "45d62630342fcbc660c79b76cd33686b297c7ad0ff91ed76f34db05e6afddd3a",
+        "size_bytes": 42835
+      },
+      "fx_trace_metadata": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input7_layer0/fx_trace_metadata.json",
+        "role": "per_event_capture_replay_and_boundary_metadata",
+        "sha256": "8a18c7bdb3ff2510a74e79be1af203b1bc00c1f1f336e5f8393ddd2719cb7d48",
+        "size_bytes": 7878
+      },
+      "layer_type": "linear_attention",
+      "node_count": 74,
+      "selection_id": "selected:06",
+      "source_event_id": "chatcmpl-bench-7f1746b7-0-9eeec82b|s7|f7|l0|o0",
+      "trace_dir": {
+        "file_count": 8,
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input7_layer0",
+        "role": "fixed_input_fx_event_artifact_directory",
+        "tree_sha256": "b02a5b0f606725459892178ebbd938495b6712b785083571b8fcf2cd4d150439"
+      }
+    },
+    {
+      "event_id": "input7_layer3",
+      "fx_graph_module_dir": {
+        "file_count": 3,
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input7_layer3/fx_graph_module",
+        "role": "exported_fx_graph_module_folder",
+        "tree_sha256": "5da2bc52bb4faf5a4a52f4cc4abbddf8ebeab81367b9aba4f31b96afcb410fc5"
+      },
+      "fx_graph_module_pt": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input7_layer3/fx_graph_module.pt",
+        "role": "serialized_meta_storage_graph_module",
+        "sha256": "959965bcf907d6dc011886afaf2d33ba36658bf337cc25b92cd8f57a4c0b1365",
+        "size_bytes": 15389
+      },
+      "fx_graph_py": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input7_layer3/fx_graph.py",
+        "role": "generated_fx_python",
+        "sha256": "977c15cd209d31eb97ec4c449ce7f8e367adaf9e61992c44a5f3039db637f9cc",
+        "size_bytes": 11724
+      },
+      "fx_graph_txt": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input7_layer3/fx_graph.txt",
+        "role": "generated_fx_graph_text",
+        "sha256": "b60c50621ce6cf03f4bacd8e3d007b1650e9a2b135d12f839ebdaedb2ea57118",
+        "size_bytes": 18704
+      },
+      "fx_nodes": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input7_layer3/fx_nodes.json",
+        "role": "normalized_fx_node_manifest",
+        "sha256": "2b6df7cfb808a18c70f6201912f5e3171cc1cce7df446752ff112a393d7dab0f",
+        "size_bytes": 96552
+      },
+      "fx_trace_metadata": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input7_layer3/fx_trace_metadata.json",
+        "role": "per_event_capture_replay_and_boundary_metadata",
+        "sha256": "fa47928b7f41ae66f5c5e61a16fd42253c33bac235a1bcec62d01b8c6b1d3874",
+        "size_bytes": 8520
+      },
+      "layer_type": "full_attention",
+      "node_count": 155,
+      "selection_id": "selected:07",
+      "source_event_id": "chatcmpl-bench-7f1746b7-0-9eeec82b|s7|f7|l3|o0",
+      "trace_dir": {
+        "file_count": 8,
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input7_layer3",
+        "role": "fixed_input_fx_event_artifact_directory",
+        "tree_sha256": "3264459d9ce8898e5bd04bb16ecab60bf8bd99e485818c2098d32038092c5b41"
+      }
+    },
+    {
+      "event_id": "input29_layer62",
+      "fx_graph_module_dir": {
+        "file_count": 3,
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input29_layer62/fx_graph_module",
+        "role": "exported_fx_graph_module_folder",
+        "tree_sha256": "dbb9d6dd70a97e929c9336f997a8c703c03f4185e38e714525254ee164ee2d61"
+      },
+      "fx_graph_module_pt": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input29_layer62/fx_graph_module.pt",
+        "role": "serialized_meta_storage_graph_module",
+        "sha256": "65dd59808857c33463ba9ea9d982233c77887e63105eb265067ce5d1ae7f6b21",
+        "size_bytes": 8797
+      },
+      "fx_graph_py": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input29_layer62/fx_graph.py",
+        "role": "generated_fx_python",
+        "sha256": "f868888c5c1288ab69fa50244b55041afe321a2cb909dd7a4d90ceffcbf3bb7d",
+        "size_bytes": 5502
+      },
+      "fx_graph_txt": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input29_layer62/fx_graph.txt",
+        "role": "generated_fx_graph_text",
+        "sha256": "453c5c024295ae92df44cd86269de4058ef53cdcbc151c53af813f1c5bfd7c4d",
+        "size_bytes": 8677
+      },
+      "fx_nodes": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input29_layer62/fx_nodes.json",
+        "role": "normalized_fx_node_manifest",
+        "sha256": "219a704f963dc2afb2223eef170b1f53b33f618bea67672b563b1b5dc87ded51",
+        "size_bytes": 43883
+      },
+      "fx_trace_metadata": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input29_layer62/fx_trace_metadata.json",
+        "role": "per_event_capture_replay_and_boundary_metadata",
+        "sha256": "10ea1991e743d4f97006657c96840dad41e2bed6b27feb1092902314889ba618",
+        "size_bytes": 8083
+      },
+      "layer_type": "linear_attention",
+      "node_count": 75,
+      "selection_id": "selected:08",
+      "source_event_id": "chatcmpl-bench-7f1746b7-0-9eeec82b|s29|f29|l62|o0",
+      "trace_dir": {
+        "file_count": 8,
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input29_layer62",
+        "role": "fixed_input_fx_event_artifact_directory",
+        "tree_sha256": "3a44361e621486acd03242dd381b043211c5a2b8c5d588247b09a8eeb908777e"
+      }
+    },
+    {
+      "event_id": "input29_layer63",
+      "fx_graph_module_dir": {
+        "file_count": 3,
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input29_layer63/fx_graph_module",
+        "role": "exported_fx_graph_module_folder",
+        "tree_sha256": "8f331980e6b3a411ab1cd0f6571b855e63e66d5a4fd001491021e4384892df4d"
+      },
+      "fx_graph_module_pt": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input29_layer63/fx_graph_module.pt",
+        "role": "serialized_meta_storage_graph_module",
+        "sha256": "836cae4622a28f4a4946caf7e960dad0b55b86cffa2bec7fd639e13acb85bd57",
+        "size_bytes": 15389
+      },
+      "fx_graph_py": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input29_layer63/fx_graph.py",
+        "role": "generated_fx_python",
+        "sha256": "a0ea2155df4629a45c5451ad519778d8925d8474bfc96aec1e61baae19520741",
+        "size_bytes": 11726
+      },
+      "fx_graph_txt": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input29_layer63/fx_graph.txt",
+        "role": "generated_fx_graph_text",
+        "sha256": "5dcfe20d7349ae9a0c198f3bf3289c63fecbc9b0d85129dc37e1dc3dfc12453d",
+        "size_bytes": 18706
+      },
+      "fx_nodes": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input29_layer63/fx_nodes.json",
+        "role": "normalized_fx_node_manifest",
+        "sha256": "0ea7a8f4e75e2eabc771b634d8b92f22600eab35c6508654ce201a5686498f8b",
+        "size_bytes": 96554
+      },
+      "fx_trace_metadata": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input29_layer63/fx_trace_metadata.json",
+        "role": "per_event_capture_replay_and_boundary_metadata",
+        "sha256": "303150d6df42a9565e7625f0a8a9579c3026c169a9b12679d9edb87083ade708",
+        "size_bytes": 8552
+      },
+      "layer_type": "full_attention",
+      "node_count": 155,
+      "selection_id": "selected:09",
+      "source_event_id": "chatcmpl-bench-7f1746b7-0-9eeec82b|s29|f29|l63|o0",
+      "trace_dir": {
+        "file_count": 8,
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input29_layer63",
+        "role": "fixed_input_fx_event_artifact_directory",
+        "tree_sha256": "6c378dc384e992812649ab8c755b20697b922cebf3e269e49e8502e8b09136fb"
+      }
+    }
+  ],
+  "evidence_boundary": {
+    "custom_ops": "ROCm/DCU attention and GDN core operations remain opaque nodes; their internal kernels and unobserved branches are out of scope.",
+    "offline_fx_dag": "After the request client returned, the finalize marker was observed, active model execution reached zero, all R032 wrappers were restored, and fixed samples were replayed with make_fx.",
+    "runtime_sampling": "A real eager Qwen3.5-27B vLLM V1 request returned only original decoder-layer outputs; selected fixed inputs, context metadata, and active external state slices were cloned at layer entry."
+  },
+  "fx_root": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0",
+  "generated_at": "2026-07-29T06:52:21.066025+00:00",
+  "instrumentation": {
+    "request_runner": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/tools/run_r032_request.py",
+      "role": "source_external_request_id_client",
+      "sha256": "cc9b3b9dbb1909a1cb6a378cbe5562aeade0f7a40f8d17fb2ef04b72822e50d7",
+      "size_bytes": 7338
+    },
+    "runtime_patch": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/tools/runtime_patch/r032_selected_layer_fx_patch.py",
+      "role": "r032_current_runtime_sample_then_replay_tracer",
+      "sha256": "729aa5ecde085e4c966cf52e72ee79df077cc42c07d15991b9e56fc6b16ec119",
+      "size_bytes": 60533
+    },
+    "service_entry": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/tools/start_r032_service.sh",
+      "role": "resolved_reproducible_eager_service_entry",
+      "sha256": "ed85fb9289d0696d07b9ab2a56429e374d2f06fdd2647611d01f62334554b761",
+      "size_bytes": 3230
+    },
+    "sitecustomize": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/tools/runtime_patch/sitecustomize.py",
+      "role": "opt_in_runtime_patch_bootstrap",
+      "sha256": "91ab50ffc28c90e1b282cbe965115bc47cdcdc942412acff35733924a4f5c2ff",
+      "size_bytes": 559
+    },
+    "validator": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/tools/validate_r032_fx_trace.py",
+      "role": "independent_r032_validator",
+      "sha256": "0d864212b16695f309752a14d8e177076090b1722f9851003db93577639083c7",
+      "size_bytes": 33090
+    }
+  },
+  "pipeline_run_id": "20260729T050800Z-fx-89687ae2",
+  "raw_event_streams": [
+    {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/events.974546.jsonl",
+      "role": "raw_r032_runtime_or_finalize_event_stream",
+      "sha256": "1b0b7633ceb85af4c657fd7aa149923f6c73ce9ad96ad235400eeec8a36342dd",
+      "size_bytes": 865
+    },
+    {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/events.974657.jsonl",
+      "role": "raw_r032_runtime_or_finalize_event_stream",
+      "sha256": "8d585b66e14d88d9285b8f527e9195963c7c0190b8b7625a7339eb9669ea2db2",
+      "size_bytes": 865
+    },
+    {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/events.974658.jsonl",
+      "role": "raw_r032_runtime_or_finalize_event_stream",
+      "sha256": "80c3daef5ebb48db338582519719f2c16d67298a8dcc70959b309fd4b5186359",
+      "size_bytes": 11651
+    },
+    {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/events.974914.jsonl",
+      "role": "raw_r032_runtime_or_finalize_event_stream",
+      "sha256": "2b9b41fad734e75b18a6b49a89d8a3a481d1f960faa25dedd3f1e0f8ca388387",
+      "size_bytes": 557
+    }
+  ],
+  "run_level": {
+    "finalize_done": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/FINALIZE_DONE.json",
+      "role": "worker_post_request_finalize_completion",
+      "sha256": "55b45d747cab20c3de449cbfcd5488ebb8e7e6ace0d40dea369f273fb0388af9",
+      "size_bytes": 363
+    },
+    "fx_layer_events": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/fx_layer_events.csv",
+      "role": "full_observed_decoder_layer_event_log",
+      "sha256": "f63f502bb509693f5b9166bd928b9ea40c051773b4f7f92a9af4fae47b4d5a0c",
+      "size_bytes": 711709
+    },
+    "fx_layer_trace_manifest": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/fx_layer_trace_manifest.csv",
+      "role": "canonical_selected_event_fx_status_manifest",
+      "sha256": "19e41edd8542f76310da57c00f6fe6eea5678cebe9bb69f46e354f149d0e7aa0",
+      "size_bytes": 47367
+    },
+    "request_contract": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/request/request_contract.json",
+      "role": "resolved_external_request_contract",
+      "sha256": "36c80712906655c8c99341b10384a4efb9679f9d720192e4531cf6d9f0f2189e",
+      "size_bytes": 1436
+    },
+    "request_result": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/request/result.json",
+      "role": "fresh_eager_request_result_and_output_equivalence",
+      "sha256": "be49df3c7aebe3519bf820b0c7cbc00fe97d25a5ffc8d2d59f9796aa82428350",
+      "size_bytes": 1520
+    },
+    "run_metadata": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/run_metadata.json",
+      "role": "resolved_runtime_and_fx_metadata",
+      "sha256": "8058f937263e8dc599b4e0f21d06729246725ee0bbfe077e181460bee72de2a2",
+      "size_bytes": 28089
+    },
+    "service_log": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/runtime/20260729T050800Z-fx-89687ae2/artifacts/R032/service.log",
+      "role": "current_runtime_service_and_offline_replay_log",
+      "sha256": "10f2cfac8c0c0d4da01c690ce5f50c9e88fb9d63a4b9c0d4a26d2ff12a34cd97",
+      "size_bytes": 21706
+    },
+    "source_event_identity_mapping": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/runtime/20260729T050800Z-fx-89687ae2/artifacts/R032/source_event_identity_mapping.json",
+      "role": "r02_source_to_r032_stage_event_identity_mapping",
+      "sha256": "21fef8f80fa1d8eb095a6481c8ac15be372499d966817f119377518f84387816",
+      "size_bytes": 2345
+    },
+    "validation": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/runtime/20260729T050800Z-fx-89687ae2/artifacts/R032/validation_report.json",
+      "role": "independent_r032_completion_validation",
+      "sha256": "207530492604148082d857e99571f5fd2c532e329065c6c964e1708e4c0f0af5",
+      "size_bytes": 24467
+    }
+  },
+  "runtime_goal": "R032",
+  "schema_version": 1,
+  "scope_guards": [
+    "FX is a fixed-input DAG and does not prove unobserved Python branches.",
+    "Opaque custom-op internals and ROCm/DCU kernel timelines are not FX evidence.",
+    "This max_concurrency=1 TP=PP=DP=1 run does not prove concurrent or distributed behavior.",
+    "No multimodal pruning or early-exit decision is claimed.",
+    "R02 theoretical FLOPs are not measured latency."
+  ],
+  "source_evidence": {
+    "algorithmic_trace": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/algorithmic_trace/traces/20260729T050800Z-fx-89687ae2-R02-qwen35-27b-eager-row0-hcu0/algorithmic_trace.json",
+      "role": "upstream_algorithmic_trace",
+      "sha256": "68861924e9000e6d5e6b3c05b621b4556c7114e26a4bb7302296c5a2a1ef35e4",
+      "size_bytes": 3136903
+    },
+    "canonical_selected_manifest": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/algorithmic_trace/traces/20260729T050800Z-fx-89687ae2-R02-qwen35-27b-eager-row0-hcu0/selected_layer_events.csv",
+      "role": "upstream_canonical_selected_events",
+      "sha256": "da6be41fbaa53062c8b335e1ec7e269fb5e1e7f25fc1b941b682ac4d9b71e07e",
+      "size_bytes": 6098
+    },
+    "layer_trace": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/algorithmic_trace/traces/20260729T050800Z-fx-89687ae2-R02-qwen35-27b-eager-row0-hcu0/layer_trace.csv",
+      "role": "upstream_layer_trace",
+      "sha256": "ffb56e2207293a7129ada6d6a9a824b5b8e8371209bd782bdeb5030d315763de",
+      "size_bytes": 1141790
+    },
+    "operator_flops": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/algorithmic_trace/traces/20260729T050800Z-fx-89687ae2-R02-qwen35-27b-eager-row0-hcu0/operator_flops.csv",
+      "role": "upstream_theoretical_flops_not_latency",
+      "sha256": "f7229d0f1f4cc820b7b7406ffe19fc2080400cff76bee124949bf8e74395a8e9",
+      "size_bytes": 3836433
+    },
+    "r02_handoff": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/runtime/20260729T050800Z-fx-89687ae2/handoffs/R02.json",
+      "role": "upstream_runtime_handoff",
+      "sha256": "7fc0713550f5aa6ca8f39d256f63afd73e522e33b5eec2c42982ef2aae5db888",
+      "size_bytes": 24808
+    },
+    "selection_handoff": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/algorithmic_trace/traces/20260729T050800Z-fx-89687ae2-R02-qwen35-27b-eager-row0-hcu0/selection_handoff.json",
+      "role": "upstream_selection_only_handoff",
+      "sha256": "cebb72efd8abc53af64c20ba1b09848bc1db31f640aa34b4ae31cfcf3fd84a7c",
+      "size_bytes": 3971
+    }
+  },
+  "status": "complete"
+}

@@ -1,0 +1,304 @@
+{
+  "schema_version": 1,
+  "runtime_goal": "R01",
+  "runtime_run_id": "20260729T050800Z-fx-89687ae2",
+  "skill": "qwen-dcu-profile-patch-targets",
+  "generated_at": "2026-07-29T05:20:24Z",
+  "result": "PASS_FOR_R01_PATCH_TARGET_DISCOVERY",
+  "goal_completion_blockers": [],
+  "evidence_mode": "Read-only audit of completed real serving runs whose source revision exactly matches the current repository HEAD.",
+  "source_identity": {
+    "current_repository": "/public/home/tangyu408/Qwen_DCU_Worker_0/pra2026-bh408",
+    "current_revision": "3d03614452cd0a925abc82a7686560ff80252dfa",
+    "current_git_branch": "pra",
+    "current_worktree_clean": true,
+    "evidence_contract_revision": "3d03614452cd0a925abc82a7686560ff80252dfa",
+    "revision_match": true,
+    "contract_id": "pra2026-bh408@3d036144-16-32K-row0-greedy1024",
+    "evidence_run_id": "pra2026_single_request_16_32k_20260716_162341",
+    "runtime": {
+      "vllm": "0.18.1+das.dtk2604",
+      "dtype": "bfloat16",
+      "logical_gpu": 0,
+      "tensor_parallel_size": 1,
+      "pipeline_parallel_size": 1,
+      "data_parallel_size": 1,
+      "max_num_batched_tokens": 4096,
+      "max_num_seqs": 128
+    },
+    "request": {
+      "temperature": 0.0,
+      "do_sample": false,
+      "seed": 0,
+      "max_new_tokens": 1024,
+      "max_concurrency": 1,
+      "benchmark_input_tokens": 20574,
+      "scheduler_prompt_tokens": 20585,
+      "output_tokens": 23,
+      "note": "Benchmark and scheduler token counts are retained as separate namespaces because the serving template/tokenizer path can change the count."
+    }
+  },
+  "behavior_equivalence": {
+    "result": "PASS",
+    "comparisons": [
+      {
+        "name": "production_baseline_vs_compiled_instrumented",
+        "baseline_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile_bk/runs/pra2026_single_request_16_32k_20260716_162341/unit1_profiler/baseline/request/result.json",
+        "instrumented_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile_bk/runs/pra2026_single_request_16_32k_20260716_162341/unit1_profiler/instrumented/request/result.json",
+        "equal_fields": {
+          "completed": true,
+          "failed": true,
+          "generated_texts": true,
+          "input_lens": true,
+          "output_lens": true,
+          "total_input_tokens": true,
+          "total_output_tokens": true
+        },
+        "baseline_completed": 1,
+        "baseline_failed": 0,
+        "generated_text_sha256": "63e7492ae34a21fc0e39f33a52d5f370d721eed712f0a3181bb24441934e87c1",
+        "result": "PASS"
+      },
+      {
+        "name": "production_baseline_vs_enforce_eager_algorithmic_trace",
+        "baseline_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile_bk/runs/pra2026_single_request_16_32k_20260716_162341/unit1_profiler/baseline/request/result.json",
+        "instrumented_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile_bk/runs/pra2026_single_request_16_32k_20260716_162341/unit2_algorithmic_trace/eager_trace/request/result.json",
+        "equal_fields": {
+          "completed": true,
+          "failed": true,
+          "generated_texts": true,
+          "input_lens": true,
+          "output_lens": true,
+          "total_input_tokens": true,
+          "total_output_tokens": true
+        },
+        "baseline_completed": 1,
+        "baseline_failed": 0,
+        "generated_text_sha256": "63e7492ae34a21fc0e39f33a52d5f370d721eed712f0a3181bb24441934e87c1",
+        "result": "PASS"
+      }
+    ],
+    "timing_is_an_equivalence_criterion": false,
+    "reason": "The profiler and enforce_eager mode intentionally change timing; output/state equivalence, not timing equivalence, is required."
+  },
+  "compiled_trace_audit": {
+    "trace_mode": "compiled",
+    "event_file_count": 4,
+    "event_count": 712,
+    "patch_error_count": 0,
+    "all_events_have_run_id_contract_id_and_event_index": true,
+    "event_counts": {
+      "attention_batch_metadata": 29,
+      "attention_forward_begin": 96,
+      "attention_forward_end": 96,
+      "batch_constructed": 29,
+      "engine_step_begin": 32,
+      "engine_step_end": 32,
+      "kv_allocate_slots": 29,
+      "kv_get_computed_blocks": 1,
+      "kv_take_new_block_ids": 30,
+      "model_execute_begin": 30,
+      "model_execute_end": 30,
+      "patch_loaded": 4,
+      "sample_tokens": 29,
+      "sampler_call": 29,
+      "scheduler_step": 30,
+      "scheduler_update_output": 30
+    },
+    "pair_invariants": {
+      "engine_begin_end_keysets_equal": true,
+      "scheduler_schedule_update_keysets_equal": true,
+      "model_begin_end_keysets_equal": true,
+      "attention_begin_end_keysets_equal": true
+    },
+    "target_join_key_missing_counts": {},
+    "compiled_layer_event_count": 0,
+    "compiled_gdn_event_count": 0,
+    "compiled_visibility_disposition": "Production torch.compile bypasses the Python Qwen3_5DecoderLayer.forward and Qwen3_5GatedDeltaNet.forward wrappers. Zero rows are a wrapper-visibility gap, not evidence that layers did not run. The separately declared enforce_eager trace supplies the layer/helper evidence."
+  },
+  "eager_trace_audit": {
+    "trace_mode": "enforce_eager",
+    "event_file_count": 4,
+    "event_count": 8744,
+    "patch_error_count": 0,
+    "all_events_have_run_id_contract_id_and_event_index": true,
+    "event_counts": {
+      "attention_batch_metadata": 29,
+      "attention_forward_begin": 464,
+      "attention_forward_end": 464,
+      "batch_constructed": 29,
+      "engine_step_begin": 32,
+      "engine_step_end": 32,
+      "kv_allocate_slots": 29,
+      "kv_get_computed_blocks": 1,
+      "kv_take_new_block_ids": 30,
+      "layer_event": 1856,
+      "model_execute_begin": 30,
+      "model_execute_end": 30,
+      "patch_loaded": 4,
+      "qwen35_gdn_forward": 1392,
+      "sample_tokens": 29,
+      "sampler_call": 29,
+      "scheduler_step": 30,
+      "scheduler_update_output": 30
+    },
+    "pair_invariants": {
+      "engine_begin_end_keysets_equal": true,
+      "scheduler_schedule_update_keysets_equal": true,
+      "model_begin_end_keysets_equal": true,
+      "attention_begin_end_keysets_equal": true
+    },
+    "target_join_key_missing_counts": {},
+    "forward_structure": {
+      "model_forward_count_including_empty": 30,
+      "effective_forward_count": 29,
+      "empty_forward_count": 1,
+      "prefill_forward_count": 6,
+      "decode_forward_count": 23,
+      "prefill_q_lengths": [
+        4096,
+        4096,
+        4096,
+        4096,
+        4096,
+        105
+      ],
+      "decode_q_length": 1,
+      "every_effective_forward_has_64_layers": true,
+      "every_effective_forward_has_layer_indices_0_through_63": true,
+      "layer_occurrence_zero_for_this_model": true,
+      "layer_event_ids_unique": true,
+      "past_plus_q_equals_kv_for_every_layer_event": true
+    },
+    "hybrid_layer_structure": {
+      "total_layer_events": 1856,
+      "linear_attention_layer_events": 1392,
+      "full_attention_layer_events": 464,
+      "linear_attention_events_per_effective_forward": 48,
+      "full_attention_events_per_effective_forward": 16,
+      "qwen35_gdn_events": 1392,
+      "qwen35_gdn_events_per_effective_forward": 48,
+      "unique_gdn_module_prefixes_per_effective_forward": 48,
+      "full_attention_begin_events_per_effective_forward": 16,
+      "full_attention_end_events_per_effective_forward": 16,
+      "layer_types_match_model_config": true,
+      "result": "PASS"
+    }
+  },
+  "state_transition_audit": {
+    "result": "PASS_WITH_DECLARED_FREE_EVENT_GAP",
+    "scheduler_phase_counts": {
+      "prefill_chunk": 6,
+      "decode": 23,
+      "empty": 1
+    },
+    "sequence_identity": {
+      "checked_transition_count": 29,
+      "past_len_plus_q_len_equals_kv_len": true
+    },
+    "cache": {
+      "initial_lookup_count": 1,
+      "initial_computed_tokens": 0,
+      "initial_cache_usage": 0.0,
+      "allocation_event_count": 29,
+      "allocation_succeeded_for_all_events": true,
+      "free_blocks_after_never_exceeds_free_blocks_before_during_allocation": true,
+      "first_allocation": {
+        "num_new_tokens": 4096,
+        "free_blocks_before": 137,
+        "free_blocks_after": 128,
+        "block_counts": [
+          1,
+          1,
+          1,
+          6
+        ],
+        "cache_usage": 0.06569343065693434
+      },
+      "last_allocation": {
+        "num_new_tokens": 1,
+        "free_blocks_before": 107,
+        "free_blocks_after": 107,
+        "block_counts": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "cache_usage": 0.21897810218978098
+      },
+      "new_block_event_count": 30,
+      "new_block_count_sum": 27,
+      "free_event_observed": false,
+      "free_event_disposition": "The audited wrapper did not instrument KVCacheManager.free and the fixed successful request did not exercise abort/preemption. T08 explicitly adds free; validate it with normal completion and, if in scope, abort/preemption."
+    },
+    "output": {
+      "host_output_row_count": 23,
+      "emitted_token_count_sum": 23,
+      "finished_output_count": 1,
+      "final_finish_reason": "stop",
+      "generated_text_sha256": "63e7492ae34a21fc0e39f33a52d5f370d721eed712f0a3181bb24441934e87c1"
+    }
+  },
+  "instrumentation_safety_audit": {
+    "result": "PASS_FOR_AUDITED_WRAPPER",
+    "wrapper_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile_bk/tools/runtime_patch/vllm_trace_patch.py",
+    "wrapper_sha256": "289fa3ffe80870389c60c6513bd457224da8aeabdf4fbc92bd961900b332af76",
+    "tensor_summary_behavior": "Records shape, dtype, and device strings only.",
+    "source_pattern_counts": {
+      "explicit_cpu_calls": 0,
+      "explicit_item_calls": 0,
+      "explicit_numpy_calls": 0,
+      "tolist_calls": 1
+    },
+    "tolist_review": "The only tolist call is inside _small_list. Its audited call sites receive Python lists, NumPy arrays, or explicitly CPU-resident metadata such as num_computed_tokens_cpu, query_start_loc_np, and cu_num_logits_np; device tensors are summarized by _tensor_summary instead.",
+    "large_tensor_contents_recorded": false,
+    "explicit_device_synchronization_introduced": false,
+    "future_guard": "Any implementation derived from this plan must reject or summarize a device tensor before _small_list; device-tensor tolist remains prohibited."
+  },
+  "serving_case_coverage": {
+    "single_request": {
+      "status": "PASS",
+      "reason": "The fixed source contract is a real deterministic serving request with max_concurrency=1, and both compiled and enforce_eager instrumented outputs match the production baseline."
+    },
+    "batched_or_concurrent": {
+      "status": "NOT_APPLICABLE_TO_FIXED_CONTRACT",
+      "reason": "The accepted contract explicitly fixes max_concurrency=1 and the available runner is a single-request runner. Changing that contract would create a different workload rather than validate this fixed R01 instance.",
+      "scope_guard": "If downstream work claims general batched/concurrent serving support, it must add a separately declared two-request case and validate mixed per-request phase, batch_id uniqueness, and asynchronous schedule/update joins."
+    }
+  },
+  "coverage_by_patch_target": {
+    "T01_engine_iteration": "PASS in compiled and enforce_eager evidence",
+    "T02_scheduler_decision_and_update": "PASS for the current single-request/async-queue path; the plan strengthens the identifier contract with schedule_id and batch_id",
+    "T03_batch_construction": "PASS for current single-request batch metadata",
+    "T04_model_execution": "PASS in compiled and enforce_eager evidence",
+    "T05_decoder_layer": "PASS in enforce_eager evidence; intentionally invisible through the production compiled Python wrapper",
+    "T06_linear_attention_helper": "PASS in enforce_eager evidence",
+    "T07_full_attention_helper": "PASS in enforce_eager evidence",
+    "T08_kv_cache_lifecycle": "Allocation/hit transition PASS; free is an explicit target and declared evidence gap",
+    "T09_sampling_and_output": "PASS for sampler shape and host-side output/finish state"
+  },
+  "known_nonblocking_gaps": [
+    {
+      "gap": "The archived event schema has no explicit cross-process batch_id.",
+      "impact": "The present TP=PP=DP=1 run remains joinable through engine_step_id and forward_id, but that must not be generalized to distributed or concurrent serving.",
+      "plan_resolution": "The R01 join contract defines schedule_id, a deterministic batch_id, and rank/worker/device identity."
+    },
+    {
+      "gap": "Compiled mode has zero Python decoder-layer and GDN wrapper rows and only prefill-visible backend attention rows.",
+      "impact": "Compiled timing cannot be attributed at the Python layer boundary.",
+      "plan_resolution": "Use the separately declared enforce_eager trace for algorithm structure and keep compiled mode for production behavior/profiler evidence."
+    },
+    {
+      "gap": "KVCacheManager.free was not instrumented in the audited wrapper.",
+      "impact": "Terminal release cannot be reconstructed from existing events.",
+      "plan_resolution": "T08 adds the free boundary and a free-block reconciliation acceptance check."
+    },
+    {
+      "gap": "No concurrent request was run under the fixed max_concurrency=1 contract.",
+      "impact": "No batched/concurrent claim is made.",
+      "plan_resolution": "A separately declared two-request validation is mandatory if scope expands."
+    }
+  ],
+  "conclusion": "The real-run evidence confirms the selected semantic boundaries expose the engine, scheduler, batch, model, hybrid layer, cache-allocation, and output process without changing deterministic output. The plan explicitly closes the identifier, compiled-visibility, cache-free, and future concurrency boundaries without inventing evidence."
+}

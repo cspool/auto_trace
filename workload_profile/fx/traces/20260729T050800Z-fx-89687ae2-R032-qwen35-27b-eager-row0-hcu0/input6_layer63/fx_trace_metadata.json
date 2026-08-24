@@ -1,0 +1,287 @@
+{
+  "contract_id": "pra2026-bh408@3d036144-16-32K-row0-greedy1024",
+  "device_id": "HCU0:TCA23906041001",
+  "engine_step_id": 6,
+  "event_id": "input6_layer63",
+  "forward_id": 6,
+  "graph_module_tensor_storage": {
+    "buffers": 1,
+    "bytes_avoided_estimate": 878728192,
+    "enabled": true,
+    "parameters": 8,
+    "tensor_attributes": 0
+  },
+  "input_binding": {
+    "flat_inputs": [
+      {
+        "flat_index": 0,
+        "source": "kwarg",
+        "source_name": "positions"
+      },
+      {
+        "flat_index": 1,
+        "source": "kwarg",
+        "source_name": "hidden_states"
+      },
+      {
+        "flat_index": 2,
+        "source": "kwarg",
+        "source_name": "residual"
+      }
+    ],
+    "keyword_names": [
+      "positions",
+      "hidden_states",
+      "residual"
+    ],
+    "positional_arg_count": 0
+  },
+  "kv_len": 20585,
+  "layer_idx": 63,
+  "layer_occurrence": 0,
+  "layer_type": "full_attention",
+  "node_count": 155,
+  "opaque_custom_ops": [
+    "vllm.unified_kv_cache_update.default",
+    "vllm.unified_attention_with_output.default"
+  ],
+  "outputs": {
+    "fx_graph_module_dir": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input6_layer63/fx_graph_module",
+    "fx_graph_module_pt": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input6_layer63/fx_graph_module.pt",
+    "fx_graph_py": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input6_layer63/fx_graph.py",
+    "fx_graph_txt": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input6_layer63/fx_graph.txt",
+    "fx_nodes_json": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input6_layer63/fx_nodes.json"
+  },
+  "past_len": 20480,
+  "phase": "prefill_chunk",
+  "q_len": 105,
+  "rank": 0,
+  "request_id": "chatcmpl-bench-7f1746b7-0-9eeec82b-9c959c99",
+  "run_id": "20260729T050800Z-fx-89687ae2-R032",
+  "save_errors": [],
+  "selection_id": "selected:05",
+  "source_contract_match": false,
+  "source_event_id": "chatcmpl-bench-7f1746b7-0-9eeec82b|s6|f6|l63|o0",
+  "source_revision": "3d03614452cd0a925abc82a7686560ff80252dfa",
+  "specialization": {
+    "analysis_only": true,
+    "capture_join_key": {
+      "contract_id": "pra2026-bh408@3d036144-16-32K-row0-greedy1024",
+      "engine_step_id": 6,
+      "forward_id": 6,
+      "layer_idx": 63,
+      "layer_occurrence": 0,
+      "rank": 0,
+      "request_id": "chatcmpl-bench-7f1746b7-0-9eeec82b-9c959c99",
+      "run_id": "20260729T050800Z-fx-89687ae2-R032",
+      "worker_id": "rank0"
+    },
+    "contract_id": "pra2026-bh408@3d036144-16-32K-row0-greedy1024",
+    "external_state_snapshot": {
+      "active_block_ids": [
+        0,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "boundary": "torch.ops.vllm.unified_kv_cache_update and torch.ops.vllm.unified_attention_with_output remain opaque",
+      "family": "full_attention",
+      "replay_use": "active entry blocks retained as external mutation-boundary evidence; opaque fake implementations do not consume them",
+      "representation": "Attention.kv_cache[virtual_engine]",
+      "snapshot_tensor_count": 1,
+      "snapshot_tensors": [
+        {
+          "active_block_ids": [
+            0,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30
+          ],
+          "block_dimension": 1,
+          "snapshot_sha256": "a8b9dd6291104683a3d68806bb4557de1c771434b9cd27dc96a1b04b24a1949b",
+          "snapshot_shape": [
+            2,
+            28,
+            784,
+            4,
+            256
+          ],
+          "source_device": "cuda:0",
+          "source_dtype": "torch.bfloat16",
+          "source_shape": [
+            2,
+            139,
+            784,
+            4,
+            256
+          ]
+        }
+      ],
+      "virtual_engine": 0
+    },
+    "forward_context_snapshot": {
+      "attn_metadata": {
+        "language_model.model.layers.63.self_attn.attn": "RocmAttentionMetadata"
+      },
+      "class": "vllm.forward_context.ForwardContext",
+      "clone_stage": "selected_decoder_layer_entry_before_original_forward",
+      "cudagraph_runtime_mode": "NONE",
+      "metadata_tensor_count": 4,
+      "selected_context_keys": [
+        "language_model.model.layers.63.self_attn.attn"
+      ],
+      "skip_compiled": false,
+      "slot_mapping": {
+        "language_model.model.layers.63.self_attn.attn": {
+          "device": "cuda:0",
+          "dtype": "torch.int64",
+          "requires_grad": false,
+          "shape": [
+            105
+          ]
+        }
+      },
+      "slot_mapping_tensor_count": 1,
+      "virtual_engine": 0
+    },
+    "kind": "qwen35_vllm_v1_fixed_runtime_input_post_request_replay",
+    "lifecycle": {
+      "finalize_marker_observed_ns": 4308963935857020,
+      "fx_graph_used_for_runtime_response": false,
+      "offline_trace_start_ns": 4308964778580598,
+      "runtime_response_source": "original eager decoder layer forward",
+      "sample_capture_begin_ns": 4308576976222642,
+      "sample_capture_end_ns": 4308577095198008,
+      "wrappers_restored_ns": 4308963935873610
+    },
+    "no_multimodal_pruning_specialization": true,
+    "opaque_custom_op_boundary": {
+      "claim_guard": "FX records the fixed input path up to opaque ROCm/DCU custom ops; it does not expose their internal kernels or branches.",
+      "expected_nodes": [
+        "vllm.unified_kv_cache_update.default",
+        "vllm.unified_attention_with_output.default"
+      ]
+    },
+    "reversible_analysis_specializations": [
+      "temporarily unwrap instance-compiled RMSNorm helpers",
+      "temporarily replace vLLM parameter subclasses with plain Parameters",
+      "temporarily route rotary embedding through its native path",
+      "temporarily route RMSNormGated through its native path",
+      "temporarily route unquantized GEMM through torch.nn.functional.linear"
+    ],
+    "run_id": "20260729T050800Z-fx-89687ae2-R032",
+    "runtime_inputs": {
+      "args": {
+        "tuple": []
+      },
+      "kwargs": {
+        "hidden_states": {
+          "device": "cuda:0",
+          "dtype": "torch.bfloat16",
+          "requires_grad": false,
+          "shape": [
+            105,
+            5120
+          ]
+        },
+        "positions": {
+          "device": "cuda:0",
+          "dtype": "torch.int64",
+          "requires_grad": false,
+          "shape": [
+            3,
+            105
+          ]
+        },
+        "residual": {
+          "device": "cuda:0",
+          "dtype": "torch.bfloat16",
+          "requires_grad": false,
+          "shape": [
+            105,
+            5120
+          ]
+        }
+      }
+    },
+    "selection_id": "selected:05",
+    "source_event_id": "chatcmpl-bench-7f1746b7-0-9eeec82b|s6|f6|l63|o0",
+    "source_join_key": {
+      "contract_id": "pra2026-bh408@3d036144-16-32K-row0-greedy1024",
+      "engine_step_id": "6",
+      "forward_id": "6",
+      "layer_idx": "63",
+      "layer_occurrence": "0",
+      "rank": "0",
+      "request_id": "chatcmpl-bench-7f1746b7-0-9eeec82b",
+      "run_id": "20260729T050800Z-fx-89687ae2-R02",
+      "worker_id": "rank0"
+    },
+    "source_sequence_contract": {
+      "kv_len": 20585,
+      "layer_type": "full_attention",
+      "matched": false,
+      "past_len": 20480,
+      "phase": "prefill_chunk",
+      "q_len": 105
+    }
+  },
+  "target": "input6_layer63:Qwen3_5DecoderLayer.forward",
+  "trace_strategy": "runtime_sample_then_post_request_offline_make_fx",
+  "tracing_options": {
+    "_allow_non_fake_inputs": true,
+    "pre_dispatch": false,
+    "record_module_stack": true,
+    "record_stack_traces": false,
+    "tracing_mode": "fake"
+  },
+  "worker_id": "rank0"
+}

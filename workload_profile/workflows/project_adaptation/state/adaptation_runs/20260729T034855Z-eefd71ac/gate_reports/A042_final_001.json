@@ -1,0 +1,22 @@
+{
+  "command": [
+    "python3",
+    "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/workflows/project_adaptation/scripts/verify_adaptation_output.py",
+    "--project-root",
+    "/public/home/tangyu408/Qwen_DCU_Worker_0",
+    "--plan",
+    "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/workflows/project_adaptation/manifests/adaptation_plan.json",
+    "--stage",
+    "A042",
+    "--source-skill-root",
+    "/root/.codex/skills/visipruner-fx-process-visualization"
+  ],
+  "completed_at": "2026-07-29T04:47:36.964523+00:00",
+  "phase": "final",
+  "returncode": 0,
+  "stage_id": "A042",
+  "started_at": "2026-07-29T04:47:36.897359+00:00",
+  "status": "pass",
+  "stderr": "",
+  "stdout": "{\n  \"schema_version\": 5,\n  \"stage_id\": \"A042\",\n  \"phase\": \"final\",\n  \"gate\": \"source-skill-mirror-alignment\",\n  \"status\": \"pass\",\n  \"errors\": []\n}\n"
+}

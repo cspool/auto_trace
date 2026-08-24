@@ -1,0 +1,533 @@
+{
+  "schema_version": 1,
+  "runtime_goal": "R01",
+  "runtime_run_id": "20260729T050800Z-fx-89687ae2",
+  "pipeline_branch": "fx",
+  "skill": "qwen-dcu-profile-patch-targets",
+  "generated_at": "2026-07-29T05:20:24Z",
+  "project_root": "/public/home/tangyu408/Qwen_DCU_Worker_0",
+  "source": {
+    "repository": "/public/home/tangyu408/Qwen_DCU_Worker_0/pra2026-bh408",
+    "git_branch": "pra",
+    "revision": "3d03614452cd0a925abc82a7686560ff80252dfa",
+    "worktree_clean_at_discovery": true,
+    "model_config": "/public/home/tangyu408/Qwen_DCU_Worker_0/Qwen3.5-27B/config.json",
+    "model_config_sha256": "f8d190c5b89c1521220f935d2567a587d6e291ed69066a45a106560b05a2174c",
+    "model_shape": {
+      "architecture": "Qwen3_5ForConditionalGeneration",
+      "num_hidden_layers": 64,
+      "hidden_size": 5120,
+      "num_attention_heads": 24,
+      "num_key_value_heads": 4,
+      "head_dim": 256,
+      "layer_types": {
+        "linear_attention": 48,
+        "full_attention": 16
+      },
+      "dtype": "bfloat16",
+      "use_cache": true
+    }
+  },
+  "question": "For a real Qwen3.5-27B vLLM V1 serving request on ROCm/DCU, which engine iteration and per-request phase are active; how does the scheduler's token/cache decision become a concrete worker batch and model forward; which of the 64 hybrid decoder layers takes the linear-attention or full-attention path; how does cache state evolve; and which small output decision finishes the request, without copying tensor contents or synchronizing the device?",
+  "process_questions": [
+    "Which request and engine call produced each scheduled batch, including asynchronous batch-queue drain calls?",
+    "For every request in a batch, is the work prefill, decode, or another state, and is the aggregate batch prefill, decode, mixed, or empty?",
+    "What scheduler state changed: scheduled token count, computed-token count, waiting/running state, preemption/finish state, and cache allocation state?",
+    "How does the scheduler output map to one worker batch and model forward, including per-request token counts and q/past/kv lengths?",
+    "For each effective forward, which layer index and layer type executed, and did layer_type select Qwen3_5GatedDeltaNet or RocmAiterUnifiedAttentionImpl?",
+    "What cache hit/allocation/reuse/free transition is attributable to each request and scheduled batch?",
+    "What sampled/emitted token count and finish reason came back to each request?",
+    "What is the minimum metadata that proves these transitions while preserving deterministic output?"
+  ],
+  "boundary_selection_rule": {
+    "order_followed": [
+      "engine iteration",
+      "scheduler decision",
+      "batch construction",
+      "model execution",
+      "layer",
+      "attention or algorithm helper",
+      "cache update",
+      "sampling or output"
+    ],
+    "request_ingress_disposition": "Not selected. The present algorithm-process question begins at EngineCore and request_id is already available at the scheduler; API ingress would add lifecycle timing but would not explain the model path.",
+    "lower_boundary_rule": "Move below the preceding boundary only when it cannot expose the hybrid layer choice, cache transition, or output decision."
+  },
+  "join_contract": {
+    "common_event_envelope": [
+      "schema_version",
+      "run_id",
+      "contract_id",
+      "source_revision",
+      "trace_mode",
+      "event_type",
+      "event_index",
+      "ts_monotonic_ns",
+      "pid",
+      "rank",
+      "worker_id",
+      "device_id"
+    ],
+    "ids": {
+      "request_id": "The serving request identifier. Batch records contain an ordered request list and an explicit batch_position per request.",
+      "engine_call_id": "A monotonic local counter on both EngineCore.step and EngineCore.step_with_batch_queue. It identifies the invocation, including queue-fill and queue-drain calls, but is not assumed to equal a model-forward ordinal.",
+      "schedule_id": "A monotonic Scheduler.schedule counter retained in a wrapper-owned mapping keyed by the SchedulerOutput object so asynchronous update_from_output can recover the original schedule.",
+      "batch_id": "A deterministic digest of contract_id and the sorted per-request tuples (request_id, num_computed_before, num_scheduled_tokens). The scheduler and worker independently compute it from CPU metadata. Empty batches additionally use schedule_id.",
+      "forward_id": "A monotonic counter local to each worker/rank. It joins model begin/end, batch metadata, layers, attention helpers, and sampler shape events.",
+      "layer_key": "The tuple (run_id, contract_id, rank, worker_id, forward_id, layer_idx, layer_occurrence).",
+      "cache_event_id": "A monotonic cache-manager counter joined by request_id and schedule_id/batch_id.",
+      "output_key": "The tuple (schedule_id, batch_id, request_id, output_ordinal)."
+    },
+    "rules": [
+      "Do not use wall-clock timestamp as the sole join key.",
+      "Do not infer a batch phase from total_num_scheduled_tokens alone; derive per-request phase first and summarize the batch as prefill, decode, mixed, or empty.",
+      "Do not equate benchmark-reported input tokens with scheduler prompt tokens; retain both namespaces and the tokenizer/template context.",
+      "Carry rank, worker_id, and device_id even when the current contract is rank 0 on device 0.",
+      "Every begin/end pair must repeat the same semantic identifier rather than relying on adjacency.",
+      "Record trace_mode as compiled or enforce_eager so Python-wrapper visibility gaps cannot be mistaken for missing model execution."
+    ]
+  },
+  "patch_targets": [
+    {
+      "id": "T01_engine_iteration",
+      "semantic_level": "engine iteration",
+      "boundary": [
+        {
+          "symbol": "vllm.v1.engine.core.EngineCore.step",
+          "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/pra2026-bh408/vllm/v1/engine/core.py",
+          "line": 378
+        },
+        {
+          "symbol": "vllm.v1.engine.core.EngineCore.step_with_batch_queue",
+          "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/pra2026-bh408/vllm/v1/engine/core.py",
+          "line": 419
+        }
+      ],
+      "why": "These are the highest boundaries that own schedule, non-blocking execute/sample, asynchronous queue fill/drain, scheduler update, and returned client outputs.",
+      "join_keys": [
+        "run_id",
+        "contract_id",
+        "engine_call_id",
+        "event_index",
+        "rank"
+      ],
+      "fields": [
+        "entrypoint",
+        "batch_queue_depth_before",
+        "batch_queue_depth_after",
+        "scheduler_has_requests_before",
+        "model_executed",
+        "returned_output_count",
+        "finished_output_count",
+        "duration_ns"
+      ]
+    },
+    {
+      "id": "T02_scheduler_decision_and_update",
+      "semantic_level": "scheduler decision",
+      "boundary": [
+        {
+          "symbol": "vllm.v1.core.sched.scheduler.Scheduler.schedule",
+          "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/pra2026-bh408/vllm/v1/core/sched/scheduler.py",
+          "line": 338
+        },
+        {
+          "symbol": "vllm.v1.core.sched.scheduler.Scheduler.update_from_output",
+          "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/pra2026-bh408/vllm/v1/core/sched/scheduler.py",
+          "line": 1275
+        }
+      ],
+      "why": "schedule is the semantic decision that selects requests and token work and advances computed-token state; update_from_output reconciles sampled tokens, rejection/finish state, and client-visible outputs for the same SchedulerOutput.",
+      "join_keys": [
+        "run_id",
+        "contract_id",
+        "engine_call_id",
+        "schedule_id",
+        "batch_id",
+        "request_id",
+        "event_index"
+      ],
+      "fields": [
+        "ordered_request_ids",
+        "batch_position",
+        "per_request_phase",
+        "batch_phase",
+        "prompt_len_scheduler",
+        "generated_len_before",
+        "num_computed_before",
+        "num_scheduled_tokens",
+        "num_computed_after_schedule",
+        "total_num_scheduled_tokens",
+        "waiting_count_before_after",
+        "running_count_before_after",
+        "preempted_request_ids_when_small",
+        "finished_request_ids_when_small",
+        "sampled_or_emitted_token_count",
+        "sampled_token_id_from_host_output",
+        "finish_reason",
+        "stop_reason"
+      ]
+    },
+    {
+      "id": "T03_batch_construction",
+      "semantic_level": "batch construction",
+      "boundary": [
+        {
+          "symbol": "vllm.v1.worker.gpu_model_runner.GPUModelRunner._prepare_inputs",
+          "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/pra2026-bh408/vllm/v1/worker/gpu_model_runner.py",
+          "line": 1667
+        },
+        {
+          "symbol": "vllm.v1.worker.gpu_model_runner.GPUModelRunner._build_attention_metadata",
+          "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/pra2026-bh408/vllm/v1/worker/gpu_model_runner.py",
+          "line": 1888
+        }
+      ],
+      "why": "These nested worker boundaries are the first point where scheduler token counts become concrete request positions, q/past/kv lengths, and attention metadata. They are needed because model_execute alone cannot prove batch formation.",
+      "join_keys": [
+        "run_id",
+        "contract_id",
+        "batch_id",
+        "forward_id",
+        "request_id",
+        "batch_position",
+        "rank",
+        "worker_id",
+        "device_id"
+      ],
+      "fields": [
+        "ordered_request_ids",
+        "num_requests",
+        "per_request_phase",
+        "prefill_request_count",
+        "decode_request_count",
+        "num_scheduled_tokens_per_request",
+        "total_tokens_unpadded",
+        "total_tokens_after_padding",
+        "q_len_per_request",
+        "past_len_per_request",
+        "kv_len_per_request",
+        "max_q_len",
+        "max_kv_len",
+        "attention_metadata_types",
+        "block_table_shape",
+        "slot_mapping_shape"
+      ]
+    },
+    {
+      "id": "T04_model_execution",
+      "semantic_level": "model execution",
+      "boundary": [
+        {
+          "symbol": "vllm.v1.worker.gpu_model_runner.GPUModelRunner.execute_model",
+          "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/pra2026-bh408/vllm/v1/worker/gpu_model_runner.py",
+          "line": 3539
+        }
+      ],
+      "why": "This is the model-wide begin/end boundary that connects one scheduler batch to one worker forward and encloses all layer/helper activity.",
+      "join_keys": [
+        "run_id",
+        "contract_id",
+        "batch_id",
+        "forward_id",
+        "rank",
+        "worker_id",
+        "device_id"
+      ],
+      "fields": [
+        "batch_phase",
+        "num_requests",
+        "total_num_scheduled_tokens",
+        "input_shape_summary",
+        "result_type",
+        "model_executed",
+        "duration_ns"
+      ]
+    },
+    {
+      "id": "T05_decoder_layer",
+      "semantic_level": "layer",
+      "boundary": [
+        {
+          "symbol": "vllm.model_executor.models.qwen3_5.Qwen3_5DecoderLayer.forward inherited from Qwen3NextDecoderLayer.forward",
+          "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/pra2026-bh408/vllm/model_executor/models/qwen3_next.py",
+          "line": 1276,
+          "construction_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/pra2026-bh408/vllm/model_executor/models/qwen3_5.py",
+          "construction_line": 226
+        }
+      ],
+      "why": "It is the smallest common boundary that proves all 64 layer invocations and the layer_type decision before descending into either linear attention or full attention.",
+      "join_keys": [
+        "run_id",
+        "contract_id",
+        "batch_id",
+        "forward_id",
+        "layer_idx",
+        "layer_occurrence",
+        "rank",
+        "worker_id"
+      ],
+      "fields": [
+        "layer_type",
+        "phase",
+        "q_len",
+        "past_len",
+        "kv_len",
+        "hidden_shape_in",
+        "hidden_shape_out",
+        "residual_shape_in",
+        "residual_shape_out",
+        "positions_shape",
+        "duration_ns"
+      ],
+      "trace_mode_note": "Python layer wrappers are bypassed by the production torch.compile graph. Capture layer events only in a separately declared enforce_eager run with the identical deterministic request; never fabricate compiled-layer rows."
+    },
+    {
+      "id": "T06_linear_attention_helper",
+      "semantic_level": "attention or algorithm helper",
+      "boundary": [
+        {
+          "symbol": "vllm.model_executor.models.qwen3_5.Qwen3_5GatedDeltaNet.forward",
+          "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/pra2026-bh408/vllm/model_executor/models/qwen3_5.py",
+          "line": 167
+        }
+      ],
+      "why": "The layer boundary says linear_attention was selected but cannot prove that the Qwen3.5 gated-delta helper and its recurrent/cache path actually ran.",
+      "join_keys": [
+        "run_id",
+        "contract_id",
+        "batch_id",
+        "forward_id",
+        "layer_idx",
+        "layer_occurrence",
+        "gdn_call_id",
+        "rank",
+        "worker_id"
+      ],
+      "fields": [
+        "module_prefix",
+        "phase",
+        "q_len",
+        "past_len",
+        "kv_len",
+        "hidden_shape",
+        "output_shape",
+        "cache_or_state_present",
+        "cache_or_state_shape_summary",
+        "duration_ns"
+      ]
+    },
+    {
+      "id": "T07_full_attention_helper",
+      "semantic_level": "attention or algorithm helper",
+      "boundary": [
+        {
+          "symbol": "vllm.v1.attention.backends.rocm_aiter_unified_attn.RocmAiterUnifiedAttentionImpl.forward",
+          "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/pra2026-bh408/vllm/v1/attention/backends/rocm_aiter_unified_attn.py",
+          "line": 167
+        }
+      ],
+      "why": "The layer boundary cannot expose the actual ROCm attention backend, grouped-query head layout, or KV-cache metadata used by each full-attention layer.",
+      "join_keys": [
+        "run_id",
+        "contract_id",
+        "batch_id",
+        "forward_id",
+        "layer_idx",
+        "layer_occurrence",
+        "attention_call_id",
+        "rank",
+        "worker_id",
+        "device_id"
+      ],
+      "fields": [
+        "layer_name",
+        "backend",
+        "metadata_type",
+        "phase",
+        "q_len",
+        "past_len",
+        "kv_len",
+        "num_query_heads",
+        "num_kv_heads",
+        "head_dim",
+        "query_shape",
+        "key_shape",
+        "value_shape",
+        "output_shape",
+        "kv_cache_shape",
+        "block_table_shape",
+        "slot_mapping_shape",
+        "common_prefix_len",
+        "use_cascade",
+        "duration_ns"
+      ]
+    },
+    {
+      "id": "T08_kv_cache_lifecycle",
+      "semantic_level": "cache state update",
+      "boundary": [
+        {
+          "symbol": "vllm.v1.core.kv_cache_manager.KVCacheManager.get_computed_blocks",
+          "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/pra2026-bh408/vllm/v1/core/kv_cache_manager.py",
+          "line": 176
+        },
+        {
+          "symbol": "vllm.v1.core.kv_cache_manager.KVCacheManager.allocate_slots",
+          "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/pra2026-bh408/vllm/v1/core/kv_cache_manager.py",
+          "line": 218
+        },
+        {
+          "symbol": "vllm.v1.core.kv_cache_manager.KVCacheManager.free",
+          "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/pra2026-bh408/vllm/v1/core/kv_cache_manager.py",
+          "line": 390
+        },
+        {
+          "symbol": "vllm.v1.core.kv_cache_manager.KVCacheManager.take_new_block_ids",
+          "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/pra2026-bh408/vllm/v1/core/kv_cache_manager.py",
+          "line": 504
+        }
+      ],
+      "why": "These four operations expose hit/reuse, allocation, release, and newly materialized blocks at the cache manager's semantic lifecycle boundary.",
+      "join_keys": [
+        "run_id",
+        "contract_id",
+        "schedule_id",
+        "batch_id",
+        "request_id",
+        "cache_event_id",
+        "event_index"
+      ],
+      "fields": [
+        "operation",
+        "hit",
+        "computed_token_count",
+        "requested_new_token_count",
+        "allocated_block_count",
+        "reused_block_count",
+        "freed_block_count",
+        "block_table_length_per_cache_group",
+        "free_blocks_before",
+        "free_blocks_after",
+        "cache_usage_before",
+        "cache_usage_after",
+        "allocation_succeeded"
+      ]
+    },
+    {
+      "id": "T09_sampling_and_output",
+      "semantic_level": "sampling or output",
+      "boundary": [
+        {
+          "symbol": "vllm.v1.worker.gpu_model_runner.GPUModelRunner.sample_tokens",
+          "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/pra2026-bh408/vllm/v1/worker/gpu_model_runner.py",
+          "line": 3872
+        },
+        {
+          "symbol": "vllm.v1.sample.sampler.Sampler.forward",
+          "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/pra2026-bh408/vllm/v1/sample/sampler.py",
+          "line": 67
+        },
+        {
+          "symbol": "vllm.v1.core.sched.scheduler.Scheduler.update_from_output",
+          "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/pra2026-bh408/vllm/v1/core/sched/scheduler.py",
+          "line": 1275
+        }
+      ],
+      "why": "Worker and sampler boundaries prove the sampling call and tensor shapes; update_from_output is the first safe host-side boundary for exact small token IDs, emitted counts, and finish reasons.",
+      "join_keys": [
+        "run_id",
+        "contract_id",
+        "schedule_id",
+        "batch_id",
+        "forward_id",
+        "request_id",
+        "output_ordinal"
+      ],
+      "fields": [
+        "num_requests",
+        "logits_shape",
+        "sampled_ids_shape",
+        "sampling_disabled_or_temperature",
+        "sampled_token_id_from_host_output",
+        "emitted_token_count",
+        "cumulative_output_token_count",
+        "finish_reason",
+        "stop_reason",
+        "result_type",
+        "duration_ns"
+      ]
+    }
+  ],
+  "do_not_patch": [
+    {
+      "boundary": "HTTP/OpenAI API ingress and streaming transport",
+      "reason": "The current question starts at EngineCore and scheduler request_id is sufficient. Add ingress only if client-to-engine latency or routing becomes the question."
+    },
+    {
+      "boundary": "Every scheduler helper or every method found by search",
+      "reason": "schedule and update_from_output already own the decision and state reconciliation; patch-all would duplicate events without adding algorithm meaning."
+    },
+    {
+      "boundary": "Generic MLP, normalization, linear, embedding, and LM-head modules",
+      "reason": "They do not decide the hybrid attention path asked by this goal."
+    },
+    {
+      "boundary": "All ATen, Triton, AITER, HIP, or DCU kernels",
+      "reason": "Kernel timing is below the algorithm boundary and cannot replace scheduler/layer/cache evidence."
+    },
+    {
+      "boundary": "README- or optimization-specific GQA6, page784, LLMM1, TunableOp, and M-RoPE branches",
+      "reason": "No optimization-specific process question was supplied for R01. Existing events with these names are explicitly out of scope and must not be interpreted as generic layer-selection proof."
+    },
+    {
+      "boundary": "Tensor contents, full logits, hidden states, KV-cache contents, block tables, or long selected-index arrays",
+      "reason": "Shapes, counts, identifiers, and small host-side outputs prove the process without large copies."
+    },
+    {
+      "boundary": "Any hot-loop .cpu(), .numpy(), .item(), or device-tensor .tolist() call",
+      "reason": "These can force device-to-host transfer or synchronization. Exact sampled IDs are collected only after they already exist in host-side Scheduler.update_from_output output."
+    },
+    {
+      "boundary": "Python layer wrappers as evidence for compiled-mode absence",
+      "reason": "torch.compile can bypass the wrapper. A zero row count must be reported as a visibility gap, not as a skipped model layer."
+    }
+  ],
+  "validation": {
+    "behavior_equivalence": [
+      "Run the fixed request with sampling disabled once without wrappers and once with compiled-safe wrappers; completed, failed, generated text, input lengths, and output lengths must match exactly.",
+      "Run a separately declared enforce_eager trace with the identical deterministic request for T05-T07; its output must match the production baseline. Timing is not an equivalence criterion across trace modes."
+    ],
+    "event_count_invariants": [
+      "engine begin and end key sets are equal for each entrypoint.",
+      "Each SchedulerOutput has one schedule event and one update event with the same schedule_id and batch_id, even if asynchronous queueing separates them.",
+      "model begin and end key sets are equal for each (rank, worker_id, forward_id).",
+      "Each non-empty enforce_eager forward has exactly 64 layer events: 48 linear_attention and 16 full_attention, with layer indices 0 through 63 and a validated occurrence count.",
+      "Each linear_attention layer has one joined Qwen3_5GatedDeltaNet event and each full_attention layer has one joined attention begin/end pair.",
+      "Sampling/output rows join to every request that receives host-side output."
+    ],
+    "join_key_checks": [
+      "All events have run_id, contract_id, source_revision, trace_mode, event_index, and process/rank identity.",
+      "Every non-empty scheduler, batch, model, layer, helper, cache, and output event has its target-specific keys.",
+      "No join depends only on timestamps, source order across processes, or parsing a human-readable scope name."
+    ],
+    "state_transition_checks": [
+      "For every request/forward with defined lengths, past_len + q_len equals kv_len.",
+      "Chunked prefill advances num_computed_tokens and cache allocation before decode begins.",
+      "layer_type maps to the configured 48 linear-attention and 16 full-attention indices.",
+      "Cache allocation/reuse/free counts reconcile with free-block counters; completion, abort, or preemption must expose a free transition.",
+      "Host-side sampled/emitted token counts advance generated length and expose the finish reason."
+    ],
+    "instrumentation_safety": [
+      "Only scalar CPU metadata, short identifiers, counts, shapes, dtype, and device strings are serialized.",
+      "No tensor contents, implicit device iteration, device-to-host copy, or explicit synchronization is introduced.",
+      "Static review rejects .cpu(), .numpy(), .item(), and device-tensor .tolist() in wrappers.",
+      "Patch exceptions produce explicit patch_error events and never alter model return values."
+    ],
+    "serving_cases": {
+      "single_request": "Required and covered by the evidence indexed in validation_report.json.",
+      "batched_or_concurrent": "Not part of the fixed accepted source contract, which sets max_concurrency=1. If the runtime scope is expanded, a two-request mixed/concurrent case becomes mandatory before claiming batched-serving coverage; single-request evidence must not be generalized."
+    }
+  },
+  "completion_statement": "This plan selects only the semantic boundaries needed to reconstruct the highest-level algorithm process and provides join keys, bounded fields, exclusions, and falsifiable validation for every selected target."
+}

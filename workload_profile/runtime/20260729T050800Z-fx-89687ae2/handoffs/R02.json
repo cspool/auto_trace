@@ -1,0 +1,539 @@
+{
+  "completion_conditions": {
+    "actual_algorithm_decision_evidence_status_explicit": true,
+    "current_runtime_vs_comparison_baseline_status_explicit": true,
+    "every_complete_forward_covers_all_loaded_layers": true,
+    "every_exception_or_repetition_explained_by_observed_control_flow": true,
+    "every_selected_event_joins_uniquely_to_source_layer_event": true,
+    "fresh_trace_directory_exists_with_four_artifact_roles": true,
+    "important_layer_events_selected_with_explicit_trace_tied_reasons": true,
+    "no_disallowed_downstream_work_executed": true,
+    "request_step_forward_phase_occurrence_lengths_and_layer_types_consistent": true,
+    "runtime_handoff_written_to_requested_absolute_path": true,
+    "theoretical_flops_present_and_not_reported_as_measured_latency": true
+  },
+  "created_at": "2026-07-29T05:55:14Z",
+  "downstream_contract": {
+    "algorithmic_trace": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/algorithmic_trace/traces/20260729T050800Z-fx-89687ae2-R02-qwen35-27b-eager-row0-hcu0/algorithmic_trace.json",
+    "canonical_selected_manifest": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/algorithmic_trace/traces/20260729T050800Z-fx-89687ae2-R02-qwen35-27b-eager-row0-hcu0/selected_layer_events.csv",
+    "consume_as_is": true,
+    "evidence_manifest": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/runtime/20260729T050800Z-fx-89687ae2/artifacts/R02/evidence_manifest.json",
+    "join_key": [
+      "run_id",
+      "contract_id",
+      "rank",
+      "worker_id",
+      "request_id",
+      "engine_step_id",
+      "forward_id",
+      "layer_idx",
+      "layer_occurrence"
+    ],
+    "layer_trace": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/algorithmic_trace/traces/20260729T050800Z-fx-89687ae2-R02-qwen35-27b-eager-row0-hcu0/layer_trace.csv",
+    "must_preserve": [
+      "Use the exact selected manifest order and source event IDs.",
+      "Keep enforce_eager algorithm structure separate from production compiled timing evidence.",
+      "Treat operator_flops.csv as theoretical FLOPs, never measured ROCm/DCU latency.",
+      "Do not claim concurrent or distributed coverage from this max_concurrency=1 run.",
+      "Do not fabricate pruning or early-exit decisions for Qwen3.5."
+    ],
+    "operator_flops": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/algorithmic_trace/traces/20260729T050800Z-fx-89687ae2-R02-qwen35-27b-eager-row0-hcu0/operator_flops.csv",
+    "selection_handoff": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/algorithmic_trace/traces/20260729T050800Z-fx-89687ae2-R02-qwen35-27b-eager-row0-hcu0/selection_handoff.json",
+    "selection_trace": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/algorithmic_trace/traces/20260729T050800Z-fx-89687ae2-R02-qwen35-27b-eager-row0-hcu0/selection_trace.csv",
+    "validation_report": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/runtime/20260729T050800Z-fx-89687ae2/artifacts/R02/validation_report.json"
+  },
+  "handoff_id": "20260729T050800Z-fx-89687ae2:R02",
+  "known_nonblocking_limits": [
+    {
+      "fact": "The fresh algorithmic trace uses enforce_eager so all Python decoder layers and GDN helpers are visible.",
+      "id": "L01_enforce_eager_visibility",
+      "scope_guard": "Do not treat its boundary durations as production compiled latency; keep R01 compiled evidence separate."
+    },
+    {
+      "fact": "The fixed request uses max_concurrency=1 and TP/PP/DP=1.",
+      "id": "L02_single_request",
+      "scope_guard": "Do not claim concurrent or distributed coverage."
+    },
+    {
+      "fact": "Loaded Qwen3.5 source disables multimodal pruning and no early-exit path is observed.",
+      "id": "L03_no_pruning_family",
+      "scope_guard": "Do not fabricate pruning or early-exit decisions."
+    },
+    {
+      "fact": "operator_flops.csv contains analytic projection and causal-attention FLOPs.",
+      "id": "L04_theoretical_flops",
+      "scope_guard": "Never report these values as measured ROCm/DCU kernel or wall-clock latency."
+    },
+    {
+      "fact": "One q_len=0 model_execute call is an observed asynchronous drain with no batch or decoder-layer calls.",
+      "id": "L05_async_drain",
+      "scope_guard": "It is retained in forward metadata and no layer rows are fabricated."
+    }
+  ],
+  "outputs": {
+    "canonical_selected_manifest": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/algorithmic_trace/traces/20260729T050800Z-fx-89687ae2-R02-qwen35-27b-eager-row0-hcu0/selected_layer_events.csv",
+      "role": "canonical_selected_layer_event_manifest",
+      "sha256": "da6be41fbaa53062c8b335e1ec7e269fb5e1e7f25fc1b941b682ac4d9b71e07e",
+      "size_bytes": 6098
+    },
+    "completion_report": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/runtime/20260729T050800Z-fx-89687ae2/artifacts/R02/completion_report.md",
+      "role": "human_readable_completion_report",
+      "sha256": "66004ae58214bacc634b49ccf599de025b6cecea383eff70ed38e9b8d8222834",
+      "size_bytes": 2457
+    },
+    "evidence_manifest": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/runtime/20260729T050800Z-fx-89687ae2/artifacts/R02/evidence_manifest.json",
+      "role": "complete_evidence_index",
+      "sha256": "9d2a97aa40adc8b8b125bfffdee3fcb18547ef6a65b83a300a3f3cf4f3b02f0c",
+      "size_bytes": 9125
+    },
+    "final_validation": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/runtime/20260729T050800Z-fx-89687ae2/artifacts/R02/validation_report.json",
+      "role": "independent_final_validation",
+      "sha256": "aa99e1b644f363f6bc9a9f8173491d5e9f371004b6d7eeb5740f4b6e621c1954",
+      "size_bytes": 10635
+    },
+    "raw_event_streams": [
+      {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/algorithmic_trace/traces/20260729T050800Z-fx-89687ae2-R02-qwen35-27b-eager-row0-hcu0/events/events.970863.jsonl",
+        "role": "raw_small_metadata_event_stream",
+        "sha256": "0320fc00cab45908f1a5ea05c23e94d2b21269daf961836d165943aae2d1b47f",
+        "size_bytes": 1116
+      },
+      {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/algorithmic_trace/traces/20260729T050800Z-fx-89687ae2-R02-qwen35-27b-eager-row0-hcu0/events/events.970966.jsonl",
+        "role": "raw_small_metadata_event_stream",
+        "sha256": "6fdd0a2809a4f56412843d89d0526e78472b7f0a8cde5f49fd936b9feecd8cf7",
+        "size_bytes": 1112
+      },
+      {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/algorithmic_trace/traces/20260729T050800Z-fx-89687ae2-R02-qwen35-27b-eager-row0-hcu0/events/events.970967.jsonl",
+        "role": "raw_small_metadata_event_stream",
+        "sha256": "c47adf40a4dd5ac320c28a9b9a0f548d8a000ae67de6d84e109d75c781724f36",
+        "size_bytes": 6804534
+      },
+      {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/algorithmic_trace/traces/20260729T050800Z-fx-89687ae2-R02-qwen35-27b-eager-row0-hcu0/events/events.971197.jsonl",
+        "role": "raw_small_metadata_event_stream",
+        "sha256": "ae9ad43108c59710d6c5a7e78d6473f4f7c640d0834452b06a74c9a77a19fb1b",
+        "size_bytes": 1128
+      }
+    ],
+    "request_result": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/algorithmic_trace/traces/20260729T050800Z-fx-89687ae2-R02-qwen35-27b-eager-row0-hcu0/request/result.json",
+      "role": "fresh_request_result",
+      "sha256": "2b04c076b8f89575401b1cdde8e85490c32b677ad2241778a79de6ea0fd80211",
+      "size_bytes": 2095
+    },
+    "required_semantic_artifacts": {
+      "algorithmic_trace": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/algorithmic_trace/traces/20260729T050800Z-fx-89687ae2-R02-qwen35-27b-eager-row0-hcu0/algorithmic_trace.json",
+        "role": "algorithmic_trace",
+        "sha256": "68861924e9000e6d5e6b3c05b621b4556c7114e26a4bb7302296c5a2a1ef35e4",
+        "size_bytes": 3136903
+      },
+      "layer_trace": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/algorithmic_trace/traces/20260729T050800Z-fx-89687ae2-R02-qwen35-27b-eager-row0-hcu0/layer_trace.csv",
+        "role": "layer_trace",
+        "sha256": "ffb56e2207293a7129ada6d6a9a824b5b8e8371209bd782bdeb5030d315763de",
+        "size_bytes": 1141790
+      },
+      "operator_flops": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/algorithmic_trace/traces/20260729T050800Z-fx-89687ae2-R02-qwen35-27b-eager-row0-hcu0/operator_flops.csv",
+        "role": "operator_flops",
+        "sha256": "f7229d0f1f4cc820b7b7406ffe19fc2080400cff76bee124949bf8e74395a8e9",
+        "size_bytes": 3836433
+      },
+      "selection_trace": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/algorithmic_trace/traces/20260729T050800Z-fx-89687ae2-R02-qwen35-27b-eager-row0-hcu0/selection_trace.csv",
+        "role": "selection_trace",
+        "sha256": "76ed88839bba9fb7ffe9c7b654e6308e17e0f79b7463e4b9cce718d364010c33",
+        "size_bytes": 158479
+      }
+    },
+    "run_contract": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/algorithmic_trace/traces/20260729T050800Z-fx-89687ae2-R02-qwen35-27b-eager-row0-hcu0/run_contract.json",
+      "role": "resolved_run_contract",
+      "sha256": "360d656cbb5f53938858537011bd36dd40d544b973868d053ab95b7b2b8b3ffd",
+      "size_bytes": 5244
+    },
+    "selection_handoff": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/algorithmic_trace/traces/20260729T050800Z-fx-89687ae2-R02-qwen35-27b-eager-row0-hcu0/selection_handoff.json",
+      "role": "selection_only_downstream_handoff",
+      "sha256": "cebb72efd8abc53af64c20ba1b09848bc1db31f640aa34b4ae31cfcf3fd84a7c",
+      "size_bytes": 3971
+    },
+    "selection_report": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/algorithmic_trace/traces/20260729T050800Z-fx-89687ae2-R02-qwen35-27b-eager-row0-hcu0/selection_report.json",
+      "role": "selection_audit",
+      "sha256": "de7df5d09f9da36b67cbd5dc54a8b038e3e3c87373053cba7a9ef6fd574e280e",
+      "size_bytes": 14357
+    },
+    "service_log": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/algorithmic_trace/traces/20260729T050800Z-fx-89687ae2-R02-qwen35-27b-eager-row0-hcu0/service.log",
+      "role": "resolved_runtime_and_request_log",
+      "sha256": "d83a9991bcfdc89b3730f5dfa8b2fab4331e355424b9fa009d46c452ad5f6c11",
+      "size_bytes": 20850
+    },
+    "trace_validation": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/algorithmic_trace/traces/20260729T050800Z-fx-89687ae2-R02-qwen35-27b-eager-row0-hcu0/trace_validation.json",
+      "role": "trace_stage_validation",
+      "sha256": "bf922d127d481a07d3bc119a727484c4fe5b9ff0050a15633858f3c6bacfec9f",
+      "size_bytes": 3656
+    }
+  },
+  "runtime": {
+    "branch": "fx",
+    "previous_handoff": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/runtime/20260729T050800Z-fx-89687ae2/handoffs/R01.json",
+    "project_root": "/public/home/tangyu408/Qwen_DCU_Worker_0",
+    "run_id": "20260729T050800Z-fx-89687ae2",
+    "runtime_goal": "R02",
+    "user_parameters": {}
+  },
+  "schema_version": 1,
+  "selection": {
+    "events": [
+      {
+        "engine_step_id": 1,
+        "forward_id": 1,
+        "kv_len": 4096,
+        "layer_idx": 0,
+        "layer_occurrence": 0,
+        "layer_type": "linear_attention",
+        "past_len": 0,
+        "phase": "prefill_chunk",
+        "priority": "P0",
+        "q_len": 4096,
+        "reason": "First loaded linear-attention layer in the initial scheduler chunk, immediately after the observed prefix-cache lookup and first successful hybrid-cache allocation.",
+        "request_id": "chatcmpl-bench-7f1746b7-0-9eeec82b",
+        "role": "initial_prefill_early_linear",
+        "selection_id": "selected:01",
+        "source_event_id": "chatcmpl-bench-7f1746b7-0-9eeec82b|s1|f1|l0|o0"
+      },
+      {
+        "engine_step_id": 1,
+        "forward_id": 1,
+        "kv_len": 4096,
+        "layer_idx": 3,
+        "layer_occurrence": 0,
+        "layer_type": "full_attention",
+        "past_len": 0,
+        "phase": "prefill_chunk",
+        "priority": "P0",
+        "q_len": 4096,
+        "reason": "First loaded full-attention layer in the initial q_len=4096, past_len=0 chunk; pairs the first full-attention KV regime with its observed backend-route decision.",
+        "request_id": "chatcmpl-bench-7f1746b7-0-9eeec82b",
+        "role": "initial_prefill_early_full_attention",
+        "selection_id": "selected:02",
+        "source_event_id": "chatcmpl-bench-7f1746b7-0-9eeec82b|s1|f1|l3|o0"
+      },
+      {
+        "engine_step_id": 2,
+        "forward_id": 2,
+        "kv_len": 8192,
+        "layer_idx": 31,
+        "layer_occurrence": 0,
+        "layer_type": "full_attention",
+        "past_len": 4096,
+        "phase": "prefill_chunk",
+        "priority": "P1",
+        "q_len": 4096,
+        "reason": "Middle-depth full-attention representative in the first prefill forward with nonzero past_len, immediately after the initial cache-state growth boundary.",
+        "request_id": "chatcmpl-bench-7f1746b7-0-9eeec82b",
+        "role": "post_initial_cache_growth_boundary",
+        "selection_id": "selected:03",
+        "source_event_id": "chatcmpl-bench-7f1746b7-0-9eeec82b|s2|f2|l31|o0"
+      },
+      {
+        "engine_step_id": 6,
+        "forward_id": 6,
+        "kv_len": 20585,
+        "layer_idx": 62,
+        "layer_occurrence": 0,
+        "layer_type": "linear_attention",
+        "past_len": 20480,
+        "phase": "prefill_chunk",
+        "priority": "P1",
+        "q_len": 105,
+        "reason": "Last loaded linear-attention layer in the observed short tail prefill, where q_len changes from the full 4096-token chunks.",
+        "request_id": "chatcmpl-bench-7f1746b7-0-9eeec82b",
+        "role": "tail_prefill_late_linear",
+        "selection_id": "selected:04",
+        "source_event_id": "chatcmpl-bench-7f1746b7-0-9eeec82b|s6|f6|l62|o0"
+      },
+      {
+        "engine_step_id": 6,
+        "forward_id": 6,
+        "kv_len": 20585,
+        "layer_idx": 63,
+        "layer_occurrence": 0,
+        "layer_type": "full_attention",
+        "past_len": 20480,
+        "phase": "prefill_chunk",
+        "priority": "P1",
+        "q_len": 105,
+        "reason": "Last loaded full-attention layer at the prefill tail and prefill-to-decode boundary, with the largest observed prefill past_len.",
+        "request_id": "chatcmpl-bench-7f1746b7-0-9eeec82b",
+        "role": "tail_prefill_late_full_attention",
+        "selection_id": "selected:05",
+        "source_event_id": "chatcmpl-bench-7f1746b7-0-9eeec82b|s6|f6|l63|o0"
+      },
+      {
+        "engine_step_id": 7,
+        "forward_id": 7,
+        "kv_len": 20586,
+        "layer_idx": 0,
+        "layer_occurrence": 0,
+        "layer_type": "linear_attention",
+        "past_len": 20585,
+        "phase": "decode",
+        "priority": "P3",
+        "q_len": 1,
+        "reason": "First decode-step linear-attention layer after the observed phase and token-count transition from tail prefill to q_len=1.",
+        "request_id": "chatcmpl-bench-7f1746b7-0-9eeec82b",
+        "role": "first_decode_early_linear",
+        "selection_id": "selected:06",
+        "source_event_id": "chatcmpl-bench-7f1746b7-0-9eeec82b|s7|f7|l0|o0"
+      },
+      {
+        "engine_step_id": 7,
+        "forward_id": 7,
+        "kv_len": 20586,
+        "layer_idx": 3,
+        "layer_occurrence": 0,
+        "layer_type": "full_attention",
+        "past_len": 20585,
+        "phase": "decode",
+        "priority": "P3",
+        "q_len": 1,
+        "reason": "First decode-step full-attention layer, representing the earliest observed single-token KV-cache attention regime.",
+        "request_id": "chatcmpl-bench-7f1746b7-0-9eeec82b",
+        "role": "first_decode_early_full_attention",
+        "selection_id": "selected:07",
+        "source_event_id": "chatcmpl-bench-7f1746b7-0-9eeec82b|s7|f7|l3|o0"
+      },
+      {
+        "engine_step_id": 29,
+        "forward_id": 29,
+        "kv_len": 20608,
+        "layer_idx": 62,
+        "layer_occurrence": 0,
+        "layer_type": "linear_attention",
+        "past_len": 20607,
+        "phase": "decode",
+        "priority": "P3",
+        "q_len": 1,
+        "reason": "Last loaded linear-attention layer in the final observed decode forward, after the full generated-prefix state has accumulated.",
+        "request_id": "chatcmpl-bench-7f1746b7-0-9eeec82b",
+        "role": "late_decode_late_linear",
+        "selection_id": "selected:08",
+        "source_event_id": "chatcmpl-bench-7f1746b7-0-9eeec82b|s29|f29|l62|o0"
+      },
+      {
+        "engine_step_id": 29,
+        "forward_id": 29,
+        "kv_len": 20608,
+        "layer_idx": 63,
+        "layer_occurrence": 0,
+        "layer_type": "full_attention",
+        "past_len": 20607,
+        "phase": "decode",
+        "priority": "P0",
+        "q_len": 1,
+        "reason": "Final loaded full-attention layer in the last decode forward; this forward is directly joined to the observed terminal KV-cache free transition.",
+        "request_id": "chatcmpl-bench-7f1746b7-0-9eeec82b",
+        "role": "late_decode_terminal_full_attention",
+        "selection_id": "selected:09",
+        "source_event_id": "chatcmpl-bench-7f1746b7-0-9eeec82b|s29|f29|l63|o0"
+      }
+    ],
+    "join_key": [
+      "run_id",
+      "contract_id",
+      "rank",
+      "worker_id",
+      "request_id",
+      "engine_step_id",
+      "forward_id",
+      "layer_idx",
+      "layer_occurrence"
+    ],
+    "policy": "P0 actual scheduler/cache/state decisions; P1 observed phase, token-count, and cache boundaries; P2 early/late hybrid-family representatives; P3 first/late decode state regimes.",
+    "selected_event_count": 9
+  },
+  "skill": "qwen-dcu-algorithmic-trace-selection",
+  "source_goal": "R02",
+  "source_identity": {
+    "git_branch": "pra",
+    "installed_sources_byte_identical_to_repository": true,
+    "installed_vllm_version": "0.18.1+das.dtk2604",
+    "model": {
+      "full_attention_layer_count": 16,
+      "head_dim": 256,
+      "hidden_size": 5120,
+      "intermediate_size": 17408,
+      "layer_types": [
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "full_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "full_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "full_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "full_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "full_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "full_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "full_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "full_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "full_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "full_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "full_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "full_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "full_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "full_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "full_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "full_attention"
+      ],
+      "linear_attention_layer_count": 48,
+      "num_attention_heads": 24,
+      "num_hidden_layers": 64,
+      "num_key_value_heads": 4
+    },
+    "model_config": "/home/Qwen3.5-27B/config.json",
+    "model_config_sha256": "f8d190c5b89c1521220f935d2567a587d6e291ed69066a45a106560b05a2174c",
+    "repository": "/public/home/tangyu408/Qwen_DCU_Worker_0/pra2026-bh408",
+    "revision": "3d03614452cd0a925abc82a7686560ff80252dfa",
+    "worktree_clean_at_completion": true
+  },
+  "status": "complete",
+  "trace_contract": {
+    "comparison_baseline_run": false,
+    "contract_id": "pra2026-bh408@3d036144-16-32K-row0-greedy1024",
+    "device": "HCU0:TCA23906041001",
+    "intentional_runtime_difference": "torch.compile and CUDAGraphs are disabled so Python decoder-layer and GDN calls remain observable",
+    "request": {
+      "conversation_mode": "OpenAI chat; server default Qwen3 template with enable_thinking=false",
+      "custom_output_len": 1024,
+      "dataset_path": "/home/testdata/16-32K_throughput.jsonl",
+      "dataset_sha256": "633ba4c8b4f500d2ab28094de42698c5494e5232f40eafcd119c0a314b44b936",
+      "disable_shuffle": true,
+      "max_concurrency": 1,
+      "no_warmups": true,
+      "num_prompts": 1,
+      "prompt_sha256": "3ced34eb878305fd769368f8aadb7931a6cec068e77f721003a710534c798d67",
+      "request_line_sha256": "06c7c1cc0e97951303631942dea7a2759fe7b693a79e06d495a164a2354146fd",
+      "row_index": 0,
+      "temperature": 0.0
+    },
+    "resolved_attention_backend": [
+      "RocmAiterUnifiedAttentionImpl"
+    ],
+    "resolved_commands": {
+      "request": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile_bk/tools/run_single_request.sh <trace_dir>/request no-profile",
+      "service": "source pra2026-bh408/scripts/cscc_gfx936_env.sh; HIP_VISIBLE_DEVICES=0 CUDA_VISIBLE_DEVICES=0 PYTHONPATH=workload_profile/algorithmic_trace/tools/runtime_patch:workload_profile_bk/tools/runtime_patch VLLM_TRACE_PATCH_ENABLE=1 VLLM_TRACE_PATCH_DIR=<trace_dir>/events VLLM_TRACE_PATCH_ARM_FILE=<trace_dir>/TRACE_ARMED VLLM_TRACE_RUN_ID=20260729T050800Z-fx-89687ae2-R02 VLLM_TRACE_CONTRACT_ID=pra2026-bh408@3d036144-16-32K-row0-greedy1024 VLLM_TRACE_SOURCE_REVISION=3d03614452cd0a925abc82a7686560ff80252dfa VLLM_TRACE_MODE=enforce_eager VLLM_TRACE_DEVICE_ID=HCU0:TCA23906041001 vllm serve /home/Qwen3.5-27B --served-model-name Qwen3.5-27B --port 8001 --trust-remote-code --dtype bfloat16 --tensor-parallel-size 1 --max-num-seqs 128 --max-num-batched-tokens 4096 --gpu-memory-utilization 0.95 --default-chat-template-kwargs '{\"enable_thinking\": false}' --reasoning-parser qwen3 --enable-auto-tool-choice --tool-call-parser qwen3_coder --enforce-eager"
+    },
+    "resolved_linear_attention_route": "Qwen3_5GatedDeltaNet",
+    "run_mode": "FRESH_RUN",
+    "runtime_role": "current_optimized_runtime",
+    "trace_mode": "enforce_eager",
+    "trace_run_id": "20260729T050800Z-fx-89687ae2-R02",
+    "trace_tag": "20260729T050800Z-fx-89687ae2-R02-qwen35-27b-eager-row0-hcu0"
+  },
+  "validation": {
+    "actual_algorithm_decision_evidence_available": true,
+    "cache_free_directly_observed": true,
+    "concurrent_or_distributed_claim": false,
+    "counts": {
+      "cache_allocation_count": 29,
+      "cache_free_count": 1,
+      "decision_row_count": 171,
+      "decode_forward_count": 23,
+      "effective_forward_count": 29,
+      "engine_begin_end_pairs": 32,
+      "full_attention_begin_end_pair_count": 464,
+      "host_output_count": 23,
+      "layer_event_count": 1856,
+      "linear_attention_and_gdn_event_count": 1392,
+      "model_begin_end_pairs": 30,
+      "operator_flop_row_count": 9280,
+      "prefill_forward_count": 6,
+      "raw_event_count": 8749,
+      "scheduler_rows": 30,
+      "selected_event_count": 9
+    },
+    "downstream_dispatch_fx_onnx_or_visualization_executed": false,
+    "every_complete_forward_has_48_linear_and_16_full_layers": true,
+    "every_complete_forward_has_64_loaded_layers": true,
+    "fresh_request": {
+      "completed": 1,
+      "failed": 0,
+      "field_checks": {
+        "completed": true,
+        "failed": true,
+        "generated_texts": true,
+        "input_lens": true,
+        "output_lens": true
+      },
+      "generated_text_sha256": "63e7492ae34a21fc0e39f33a52d5f370d721eed712f0a3181bb24441934e87c1",
+      "input_lens": [
+        20574
+      ],
+      "output_lens": [
+        23
+      ],
+      "result": "PASS"
+    },
+    "json_csv_consistency": "PASS",
+    "large_or_device_tensor_contents_recorded": false,
+    "result": "PASS_FOR_R02_ALGORITHMIC_TRACE_AND_LAYER_SELECTION",
+    "selected_event_unique_join": "PASS",
+    "single_request_scope_only": true,
+    "theoretical_flops_present_not_measured_latency": true
+  }
+}

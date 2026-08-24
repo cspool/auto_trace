@@ -1,0 +1,75 @@
+index,process_stage,name,op,target,args,users,shape,dtype,device,args_repr,kwargs_repr
+0,inputs,arg0_1,placeholder,arg0_1,,,"[3, 1]",int64,cuda:0,(),{}
+1,inputs,arg1_1,placeholder,arg1_1,,_to_copy add_3,"[1, 5120]",bfloat16,cuda:0,(),{}
+2,inputs,arg2_1,placeholder,arg2_1,,,,,,(),{}
+3,input_rmsnorm,_param_constant0,get_attr,_param_constant0,,detach,[5120],bfloat16,cuda:0,(),{}
+4,input_rmsnorm,detach,call_function,aten.detach.default,_param_constant0,_to_copy_1,[5120],bfloat16,cuda:0,"(_param_constant0,)",{}
+5,input_rmsnorm,_to_copy,call_function,aten._to_copy.default,arg1_1,mul pow_1,"[1, 5120]",float32,cuda:0,"(arg1_1,)",{'dtype': torch.float32}
+6,input_rmsnorm,pow_1,call_function,aten.pow.Tensor_Scalar,_to_copy,mean,"[1, 5120]",float32,cuda:0,"(_to_copy, 2)",{}
+7,input_rmsnorm,mean,call_function,aten.mean.dim,pow_1,add,"[1, 1]",float32,cuda:0,"(pow_1, [-1], True)",{}
+8,input_rmsnorm,add,call_function,aten.add.Tensor,mean,rsqrt,"[1, 1]",float32,cuda:0,"(mean, 1e-06)",{}
+9,input_rmsnorm,rsqrt,call_function,aten.rsqrt.default,add,mul,"[1, 1]",float32,cuda:0,"(add,)",{}
+10,input_rmsnorm,mul,call_function,aten.mul.Tensor,_to_copy rsqrt,mul_1,"[1, 5120]",float32,cuda:0,"(_to_copy, rsqrt)",{}
+11,input_rmsnorm,_to_copy_1,call_function,aten._to_copy.default,detach,add_1,[5120],float32,cuda:0,"(detach,)",{'dtype': torch.float32}
+12,input_rmsnorm,add_1,call_function,aten.add.Tensor,_to_copy_1,mul_1,[5120],float32,cuda:0,"(_to_copy_1, 1.0)",{}
+13,input_rmsnorm,mul_1,call_function,aten.mul.Tensor,mul add_1,_to_copy_2,"[1, 5120]",float32,cuda:0,"(mul, add_1)",{}
+14,input_rmsnorm,_to_copy_2,call_function,aten._to_copy.default,mul_1,empty_like mm mm_1,"[1, 5120]",bfloat16,cuda:0,"(mul_1,)",{'dtype': torch.bfloat16}
+15,input_rmsnorm,empty_like,call_function,aten.empty_like.default,_to_copy_2,copy_,"[1, 5120]",bfloat16,cuda:0,"(_to_copy_2,)",{'pin_memory': False}
+16,qkv_projection,_param_constant1,get_attr,_param_constant1,,t,"[16384, 5120]",bfloat16,cuda:0,(),{}
+17,qkv_projection,t,call_function,aten.t.default,_param_constant1,mm,"[5120, 16384]",bfloat16,cuda:0,"(_param_constant1,)",{}
+18,qkv_projection,mm,call_function,aten.mm.default,_to_copy_2 t,split_with_sizes,"[1, 16384]",bfloat16,cuda:0,"(_to_copy_2, t)",{}
+19,qkv_projection,split_with_sizes,call_function,aten.split_with_sizes.default,mm,getitem getitem_1,,,,"(mm, [10240, 6144], -1)",{}
+20,qkv_projection,getitem,call_function,<built-in function getitem>,split_with_sizes,gdn_attention_core,"[1, 10240]",bfloat16,cuda:0,"(split_with_sizes, 0)",{}
+21,qkv_projection,getitem_1,call_function,<built-in function getitem>,split_with_sizes,view,"[1, 6144]",bfloat16,cuda:0,"(split_with_sizes, 1)",{}
+22,qkv_projection,view,call_function,aten.view.default,getitem_1,view_2,"[1, 48, 128]",bfloat16,cuda:0,"(getitem_1, [1, -1, 128])",{}
+23,qkv_projection,_param_constant2,get_attr,_param_constant2,,t_1,"[96, 5120]",bfloat16,cuda:0,(),{}
+24,qkv_projection,t_1,call_function,aten.t.default,_param_constant2,mm_1,"[5120, 96]",bfloat16,cuda:0,"(_param_constant2,)",{}
+25,qkv_projection,mm_1,call_function,aten.mm.default,_to_copy_2 t_1,split,"[1, 96]",bfloat16,cuda:0,"(_to_copy_2, t_1)",{}
+26,qkv_projection,split,call_function,aten.split.Tensor,mm_1,getitem_2 getitem_3,,,,"(mm_1, 48, -1)",{}
+27,qkv_projection,getitem_2,call_function,<built-in function getitem>,split,gdn_attention_core,"[1, 48]",bfloat16,cuda:0,"(split, 0)",{}
+28,qkv_projection,getitem_3,call_function,<built-in function getitem>,split,gdn_attention_core,"[1, 48]",bfloat16,cuda:0,"(split, 1)",{}
+29,qkv_projection,zeros,call_function,aten.zeros.default,,gdn_attention_core view_1,"[1, 48, 128]",bfloat16,cuda:0,"([1, 48, 128],)","{'dtype': torch.bfloat16, 'device': device(type='cuda', index=0), 'pin_memory': False}"
+30,gdn_recurrent_core,gdn_attention_core,call_function,vllm.gdn_attention_core.default,getitem getitem_2 getitem_3 zeros,,,,,"(getitem, getitem_2, getitem_3, zeros, 'language_model.model.layers.0.linear_attn')",{}
+31,gdn_gated_rmsnorm,view_1,call_function,aten.view.default,zeros,_to_copy_3,"[48, 128]",bfloat16,cuda:0,"(zeros, [-1, 128])",{}
+32,gdn_gated_rmsnorm,view_2,call_function,aten.view.default,view,_to_copy_5,"[48, 128]",bfloat16,cuda:0,"(view, [-1, 128])",{}
+33,gdn_gated_rmsnorm,_to_copy_3,call_function,aten._to_copy.default,view_1,mul_2 pow_2,"[48, 128]",float32,cuda:0,"(view_1,)",{'dtype': torch.float32}
+34,gdn_gated_rmsnorm,_param_constant3,get_attr,_param_constant3,,_to_copy_4,[128],bfloat16,cuda:0,(),{}
+35,gdn_gated_rmsnorm,_to_copy_4,call_function,aten._to_copy.default,_param_constant3,mul_3,[128],float32,cuda:0,"(_param_constant3,)",{'dtype': torch.float32}
+36,gdn_gated_rmsnorm,_to_copy_5,call_function,aten._to_copy.default,view_2,silu,"[48, 128]",float32,cuda:0,"(view_2,)",{'dtype': torch.float32}
+37,gdn_gated_rmsnorm,pow_2,call_function,aten.pow.Tensor_Scalar,_to_copy_3,mean_1,"[48, 128]",float32,cuda:0,"(_to_copy_3, 2)",{}
+38,gdn_gated_rmsnorm,mean_1,call_function,aten.mean.dim,pow_2,add_2,"[48, 1]",float32,cuda:0,"(pow_2, [-1], True)",{}
+39,gdn_gated_rmsnorm,add_2,call_function,aten.add.Tensor,mean_1,rsqrt_1,"[48, 1]",float32,cuda:0,"(mean_1, 1e-06)",{}
+40,gdn_gated_rmsnorm,rsqrt_1,call_function,aten.rsqrt.default,add_2,mul_2,"[48, 1]",float32,cuda:0,"(add_2,)",{}
+41,gdn_gated_rmsnorm,mul_2,call_function,aten.mul.Tensor,_to_copy_3 rsqrt_1,mul_3,"[48, 128]",float32,cuda:0,"(_to_copy_3, rsqrt_1)",{}
+42,gdn_gated_rmsnorm,mul_3,call_function,aten.mul.Tensor,_to_copy_4 mul_2,mul_4,"[48, 128]",float32,cuda:0,"(mul_2, _to_copy_4)",{}
+43,gdn_gated_rmsnorm,silu,call_function,aten.silu.default,_to_copy_5,mul_4,"[48, 128]",float32,cuda:0,"(_to_copy_5,)",{}
+44,gdn_gated_rmsnorm,mul_4,call_function,aten.mul.Tensor,mul_3 silu,_to_copy_6,"[48, 128]",float32,cuda:0,"(mul_3, silu)",{}
+45,gdn_gated_rmsnorm,_to_copy_6,call_function,aten._to_copy.default,mul_4,view_3,"[48, 128]",bfloat16,cuda:0,"(mul_4,)",{'dtype': torch.bfloat16}
+46,gdn_gated_rmsnorm,view_3,call_function,aten.view.default,_to_copy_6,view_4,"[1, 48, 128]",bfloat16,cuda:0,"(_to_copy_6, [1, 48, 128])",{}
+47,gdn_gated_rmsnorm,view_4,call_function,aten.view.default,view_3,mm_2,"[1, 6144]",bfloat16,cuda:0,"(view_3, [1, 6144])",{}
+48,output_projection,_param_constant4,get_attr,_param_constant4,,t_2,"[5120, 6144]",bfloat16,cuda:0,(),{}
+49,output_projection,t_2,call_function,aten.t.default,_param_constant4,mm_2,"[6144, 5120]",bfloat16,cuda:0,"(_param_constant4,)",{}
+50,output_projection,mm_2,call_function,aten.mm.default,view_4 t_2,copy_,"[1, 5120]",bfloat16,cuda:0,"(view_4, t_2)",{}
+51,output_projection,copy_,call_function,aten.copy_.default,empty_like mm_2,add_3,"[1, 5120]",bfloat16,cuda:0,"(empty_like, mm_2)",{}
+52,output_projection,_param_constant5,get_attr,_param_constant5,,detach_1,[5120],bfloat16,cuda:0,(),{}
+53,output_projection,detach_1,call_function,aten.detach.default,_param_constant5,_to_copy_8,[5120],bfloat16,cuda:0,"(_param_constant5,)",{}
+54,output_projection,add_3,call_function,aten.add.Tensor,arg1_1 copy_,_to_copy_7 output,"[1, 5120]",bfloat16,cuda:0,"(copy_, arg1_1)",{}
+55,post_attention_rmsnorm,_to_copy_7,call_function,aten._to_copy.default,add_3,mul_5 pow_3,"[1, 5120]",float32,cuda:0,"(add_3,)",{'dtype': torch.float32}
+56,post_attention_rmsnorm,pow_3,call_function,aten.pow.Tensor_Scalar,_to_copy_7,mean_2,"[1, 5120]",float32,cuda:0,"(_to_copy_7, 2)",{}
+57,post_attention_rmsnorm,mean_2,call_function,aten.mean.dim,pow_3,add_4,"[1, 1]",float32,cuda:0,"(pow_3, [-1], True)",{}
+58,post_attention_rmsnorm,add_4,call_function,aten.add.Tensor,mean_2,rsqrt_2,"[1, 1]",float32,cuda:0,"(mean_2, 1e-06)",{}
+59,post_attention_rmsnorm,rsqrt_2,call_function,aten.rsqrt.default,add_4,mul_5,"[1, 1]",float32,cuda:0,"(add_4,)",{}
+60,post_attention_rmsnorm,mul_5,call_function,aten.mul.Tensor,_to_copy_7 rsqrt_2,mul_6,"[1, 5120]",float32,cuda:0,"(_to_copy_7, rsqrt_2)",{}
+61,post_attention_rmsnorm,_to_copy_8,call_function,aten._to_copy.default,detach_1,add_5,[5120],float32,cuda:0,"(detach_1,)",{'dtype': torch.float32}
+62,post_attention_rmsnorm,add_5,call_function,aten.add.Tensor,_to_copy_8,mul_6,[5120],float32,cuda:0,"(_to_copy_8, 1.0)",{}
+63,post_attention_rmsnorm,mul_6,call_function,aten.mul.Tensor,mul_5 add_5,_to_copy_9,"[1, 5120]",float32,cuda:0,"(mul_5, add_5)",{}
+64,post_attention_rmsnorm,_to_copy_9,call_function,aten._to_copy.default,mul_6,mm_3,"[1, 5120]",bfloat16,cuda:0,"(mul_6,)",{'dtype': torch.bfloat16}
+65,mlp,_param_constant6,get_attr,_param_constant6,,t_3,"[34816, 5120]",bfloat16,cuda:0,(),{}
+66,mlp,t_3,call_function,aten.t.default,_param_constant6,mm_3,"[5120, 34816]",bfloat16,cuda:0,"(_param_constant6,)",{}
+67,mlp,mm_3,call_function,aten.mm.default,_to_copy_9 t_3,silu_and_mul,"[1, 34816]",bfloat16,cuda:0,"(_to_copy_9, t_3)",{}
+68,mlp,empty,call_function,aten.empty.memory_format,,mm_4 silu_and_mul,"[1, 17408]",bfloat16,cuda:0,"([1, 17408],)","{'dtype': torch.bfloat16, 'device': device(type='cuda', index=0), 'pin_memory': False}"
+69,mlp,silu_and_mul,call_function,_C.silu_and_mul.default,mm_3 empty,,,,,"(empty, mm_3)",{}
+70,mlp,_param_constant7,get_attr,_param_constant7,,t_4,"[5120, 17408]",bfloat16,cuda:0,(),{}
+71,mlp,t_4,call_function,aten.t.default,_param_constant7,mm_4,"[17408, 5120]",bfloat16,cuda:0,"(_param_constant7,)",{}
+72,mlp,mm_4,call_function,aten.mm.default,empty t_4,output,"[1, 5120]",bfloat16,cuda:0,"(empty, t_4)",{}
+73,layer_output,output,output,output,add_3 mm_4,,,,,"((mm_4, add_3),)",{}

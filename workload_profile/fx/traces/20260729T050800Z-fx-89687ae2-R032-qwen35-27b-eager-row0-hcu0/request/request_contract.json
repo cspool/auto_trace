@@ -1,0 +1,22 @@
+{
+  "benchmark_prompt_sha256": "585b7614be58630cd643faa7eed6df6798217507a7a1512754e935654bdb11b7",
+  "conversation_mode": "OpenAI chat request containing the same tokenizer-templated custom dataset prompt used by vllm bench serve",
+  "created_at": "2026-07-29T06:32:36.147340+00:00",
+  "dataset": "/home/testdata/16-32K_throughput.jsonl",
+  "dataset_sha256": "633ba4c8b4f500d2ab28094de42698c5494e5232f40eafcd119c0a314b44b936",
+  "endpoint": "http://127.0.0.1:8001/v1/chat/completions",
+  "max_completion_tokens": 1024,
+  "model": "Qwen3.5-27B",
+  "model_path": "/home/Qwen3.5-27B",
+  "prompt_len": 20574,
+  "prompt_sha256": "3ced34eb878305fd769368f8aadb7931a6cec068e77f721003a710534c798d67",
+  "schema_version": 1,
+  "selected_manifest": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/algorithmic_trace/traces/20260729T050800Z-fx-89687ae2-R02-qwen35-27b-eager-row0-hcu0/selected_layer_events.csv",
+  "selected_manifest_sha256": "da6be41fbaa53062c8b335e1ec7e269fb5e1e7f25fc1b941b682ac4d9b71e07e",
+  "source_request_id": "chatcmpl-bench-7f1746b7-0-9eeec82b",
+  "source_result": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/algorithmic_trace/traces/20260729T050800Z-fx-89687ae2-R02-qwen35-27b-eager-row0-hcu0/request/result.json",
+  "source_result_sha256": "2b04c076b8f89575401b1cdde8e85490c32b677ad2241778a79de6ea0fd80211",
+  "stream": true,
+  "temperature": 0.0,
+  "x_request_id": "bench-7f1746b7-0-9eeec82b"
+}

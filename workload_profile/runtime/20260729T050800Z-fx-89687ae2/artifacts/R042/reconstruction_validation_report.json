@@ -1,0 +1,175 @@
+{
+  "checks": {
+    "all_csv_tables_match": true,
+    "all_event_identities_match": true,
+    "all_node_partitions_match": true,
+    "event_directory_set_exact": true,
+    "manifest_order_and_count": true,
+    "manual_visualization_coverage": true,
+    "r032_handoff_complete": true
+  },
+  "counts": {
+    "events": 9,
+    "nodes": 1079,
+    "processes": 86,
+    "visualizations": 0
+  },
+  "created_at": "2026-07-29T07:08:28.852476+00:00",
+  "errors": [],
+  "events": [
+    {
+      "csv_ok": true,
+      "event_id": "input1_layer0",
+      "identity_ok": true,
+      "layer_type": "linear_attention",
+      "node_count": 77,
+      "partition_ok": true,
+      "phase": "prefill_chunk",
+      "selection_id": "selected:01",
+      "source_event_id": "chatcmpl-bench-7f1746b7-0-9eeec82b|s1|f1|l0|o0",
+      "stage_count": 9,
+      "visualization": null
+    },
+    {
+      "csv_ok": true,
+      "event_id": "input1_layer3",
+      "identity_ok": true,
+      "layer_type": "full_attention",
+      "node_count": 155,
+      "partition_ok": true,
+      "phase": "prefill_chunk",
+      "selection_id": "selected:02",
+      "source_event_id": "chatcmpl-bench-7f1746b7-0-9eeec82b|s1|f1|l3|o0",
+      "stage_count": 10,
+      "visualization": null
+    },
+    {
+      "csv_ok": true,
+      "event_id": "input2_layer31",
+      "identity_ok": true,
+      "layer_type": "full_attention",
+      "node_count": 155,
+      "partition_ok": true,
+      "phase": "prefill_chunk",
+      "selection_id": "selected:03",
+      "source_event_id": "chatcmpl-bench-7f1746b7-0-9eeec82b|s2|f2|l31|o0",
+      "stage_count": 10,
+      "visualization": null
+    },
+    {
+      "csv_ok": true,
+      "event_id": "input6_layer62",
+      "identity_ok": true,
+      "layer_type": "linear_attention",
+      "node_count": 78,
+      "partition_ok": true,
+      "phase": "prefill_chunk",
+      "selection_id": "selected:04",
+      "source_event_id": "chatcmpl-bench-7f1746b7-0-9eeec82b|s6|f6|l62|o0",
+      "stage_count": 9,
+      "visualization": null
+    },
+    {
+      "csv_ok": true,
+      "event_id": "input6_layer63",
+      "identity_ok": true,
+      "layer_type": "full_attention",
+      "node_count": 155,
+      "partition_ok": true,
+      "phase": "prefill_chunk",
+      "selection_id": "selected:05",
+      "source_event_id": "chatcmpl-bench-7f1746b7-0-9eeec82b|s6|f6|l63|o0",
+      "stage_count": 10,
+      "visualization": null
+    },
+    {
+      "csv_ok": true,
+      "event_id": "input7_layer0",
+      "identity_ok": true,
+      "layer_type": "linear_attention",
+      "node_count": 74,
+      "partition_ok": true,
+      "phase": "decode",
+      "selection_id": "selected:06",
+      "source_event_id": "chatcmpl-bench-7f1746b7-0-9eeec82b|s7|f7|l0|o0",
+      "stage_count": 9,
+      "visualization": null
+    },
+    {
+      "csv_ok": true,
+      "event_id": "input7_layer3",
+      "identity_ok": true,
+      "layer_type": "full_attention",
+      "node_count": 155,
+      "partition_ok": true,
+      "phase": "decode",
+      "selection_id": "selected:07",
+      "source_event_id": "chatcmpl-bench-7f1746b7-0-9eeec82b|s7|f7|l3|o0",
+      "stage_count": 10,
+      "visualization": null
+    },
+    {
+      "csv_ok": true,
+      "event_id": "input29_layer62",
+      "identity_ok": true,
+      "layer_type": "linear_attention",
+      "node_count": 75,
+      "partition_ok": true,
+      "phase": "decode",
+      "selection_id": "selected:08",
+      "source_event_id": "chatcmpl-bench-7f1746b7-0-9eeec82b|s29|f29|l62|o0",
+      "stage_count": 9,
+      "visualization": null
+    },
+    {
+      "csv_ok": true,
+      "event_id": "input29_layer63",
+      "identity_ok": true,
+      "layer_type": "full_attention",
+      "node_count": 155,
+      "partition_ok": true,
+      "phase": "decode",
+      "selection_id": "selected:09",
+      "source_event_id": "chatcmpl-bench-7f1746b7-0-9eeec82b|s29|f29|l63|o0",
+      "stage_count": 10,
+      "visualization": null
+    }
+  ],
+  "fx_root": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0",
+  "logical_pipeline_run_id": "20260729T050800Z-fx-89687ae2",
+  "ordered_event_ids": [
+    "input1_layer0",
+    "input1_layer3",
+    "input2_layer31",
+    "input6_layer62",
+    "input6_layer63",
+    "input7_layer0",
+    "input7_layer3",
+    "input29_layer62",
+    "input29_layer63"
+  ],
+  "reconstruction_manifests": {
+    "csv": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/fx_process_reconstruction_manifest.csv",
+      "role": "fx_process_reconstruction_manifest_table",
+      "sha256": "23143c7edc5a9b580116c72970d2bbb3a9e2473af5ee2d7adb2d4de3122c70d2",
+      "size_bytes": 7373
+    },
+    "json": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/fx_process_reconstruction_manifest.json",
+      "role": "fx_process_reconstruction_manifest",
+      "sha256": "c709d81e55dfc88562a511541cc47012fdc483bb58eb6e9cfa67681688e8a85c",
+      "size_bytes": 17339
+    }
+  },
+  "require_visualizations": false,
+  "result": "PASS_FOR_R042_RECONSTRUCTION",
+  "runtime_goal": "R042",
+  "schema_version": 1,
+  "source_handoff": {
+    "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/workload_profile/runtime/20260729T050800Z-fx-89687ae2/handoffs/R032.json",
+    "role": "complete_r032_runtime_handoff",
+    "sha256": "ac5ef976676d4631e612c0b12f8962ff53b1ea2d50cf61438d8ca983abd9ca24",
+    "size_bytes": 53466
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "backend": "openai-chat",
+  "completed": 1,
+  "custom_output_len": 1024,
+  "date": "20260729-063300",
+  "duration": 24.389155977405608,
+  "endpoint_type": "openai-chat",
+  "errors": [
+    ""
+  ],
+  "failed": 0,
+  "generated_texts": [
+    "The special magic number for hollow-head mentioned in the provided text is **9727451**."
+  ],
+  "input_lens": [
+    20574
+  ],
+  "itls": [
+    [
+      1.2890435755252838e-05,
+      0.22334206569939852,
+      0.22148203942924738,
+      0.21843920089304447,
+      0.22664965689182281,
+      0.22413562424480915,
+      0.22559707704931498,
+      0.22869621589779854,
+      0.22602721210569143,
+      0.2212410168722272,
+      0.22086268290877342,
+      0.23029447067528963,
+      0.22288810182362795,
+      0.21737639140337706,
+      0.22256834898144007,
+      0.22025083750486374,
+      0.22188506368547678,
+      0.21887024492025375,
+      0.21706125792115927,
+      0.22016194555908442,
+      0.21606081910431385,
+      0.21739221084862947,
+      0.34853225015103817
+    ]
+  ],
+  "max_concurrency": 1,
+  "model_id": "Qwen3.5-27B",
+  "num_prompts": 1,
+  "output_lens": [
+    23
+  ],
+  "request_header_id": "bench-7f1746b7-0-9eeec82b",
+  "request_id": "chatcmpl-bench-7f1746b7-0-9eeec82b",
+  "response_equivalence_to_source": {
+    "completed": true,
+    "failed": true,
+    "generated_texts": true,
+    "input_lens": true,
+    "output_lens": true
+  },
+  "schema_version": 1,
+  "temperature": 0.0,
+  "tokenizer_id": "/home/Qwen3.5-27B",
+  "ttfts": [
+    19.378311291337013
+  ]
+}
