@@ -49,6 +49,80 @@ duration 的累加值。数字之间的关系如下：
 - **`MMAC GEMM`（紫色）**：`M=4096` 是完整 prefill chunk 的 token 行数，
   不是模型 hidden size；固定这一维后可直接复用已选好的 TunableOp solution。
 
+### B 中优化所在的 full-attention process
+
+**是什么**：GQA6 direct 和 page784 都位于 full-attention layer 的
+`vllm.unified_attention_with_output` 调用内。固定输入 FX 样本
+[`input1_layer3`](../../../workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input1_layer3/fx_process_reconstruction.md)
+观测到 `q=4096`、`past=0`，用于确定该调用在完整算子链中的位置。
+
+**为什么需要**：这个 process 先把每个 token 的 5120 维 hidden state 投影成
+Q、K、V 和输出 gate；再给 Q/K 加入位置信息、更新 KV cache 并聚合上下文，最后
+用 gate 调制 attention 结果并投影回 5120 维，才能接回 residual 主链。
+
+**怎么做**：FX 中可见的依赖顺序是
+`aten.add → FP32 RMSNorm(_to_copy/pow/mean/add/rsqrt/mul) → aten.mm →
+split_with_sizes/view/split → Q/K RMSNorm → RoPE(index/slice/mul/sub/add/cat) →
+vllm.unified_kv_cache_update → vllm.unified_attention_with_output →
+view/sigmoid/mul → aten.mm/copy_/aten.add`。其中第一个 `aten.mm` 完成
+`[4096,5120]×[5120,14336]→[4096,14336]`，最后一个完成
+`[4096,6144]×[6144,5120]→[4096,5120]`。
+
+下面按观测 shape 画张量轴；宽度做了压缩，数字端点是精确值：
+
+```text
+Tensor: HN, shape=[4096, 5120]
+Formula: HN = RMSNorm(HIDDEN + RESIDUAL)
+feature      0                                      5120
+             +-----------------------------------------+
+token 0      |            NORM_HIDDEN_ROWS             |
+token 4095   +-----------------------------------------+
+                              |
+                              | P = HN @ W_QKVZ.T
+                              v
+
+Tensor: P, shape=[4096, 14336]
+Formula: split(P) = [QZ, K, V]
+channel      0                         12288     13312    14336
+             +---------------------------+---------+---------+
+token 0      | QZ: 24 x (256 + 256)     | K:4x256 | V:4x256 |
+token 4095   +---------------------------+---------+---------+
+                              |
+                              | Q,K: RMSNorm -> RoPE(first 64/256)
+                              | K,V: KV cache update; 24/4 = GQA6
+                              v
+
+Tensor: G, shape=[4096, 6144]
+Formula: G = reshape(ATTN(Q, K, V)) * sigmoid(reshape(Z))
+head-feature  0                                      6144
+              +-----------------------------------------+
+token 0       |       GATED_ATTENTION_CONTEXT           |
+token 4095    +-----------------------------------------+
+                              |
+                              | Y = G @ W_O.T + RESIDUAL
+                              v
+
+Tensor: Y, shape=[4096, 5120]
+Formula: Y = ATTENTION_OUTPUT + RESIDUAL
+feature      0                                      5120
+             +-----------------------------------------+
+token 0      |          ATTENTION_RESIDUAL             |
+token 4095   +-----------------------------------------+
+```
+
+`unified_attention_with_output` 是 FX 中的 opaque custom-op 边界，内部 kernel
+没有被 FX 展开；B 图的 runtime trace 才进一步表明该边界内命中了 GQA6 direct
+或 page784。page784 的切分关系是：
+
+```text
+Tensor: KV_PAGE, shape=[784, 4, 256]
+Formula: KV_PAGE = MAIN[0:768] || TAIL[768:784]
+token-in-page  0                                  768   784
+               +------------------------------------+-----+
+               |          MAIN: 12 x 64             | 16  |
+               +------------------------------------+-----+
+```
+
 GQA6 direct 仅用于 gfx936/BF16、`head_dim=256`、`page=784`、单序列且
 `q≥128` 的长 prefill；这里 `256` 是每个 head 的特征宽度，`128` 是启用长
 query 路径的最小 query-token 数。其他情况回退原 attention 路径。
@@ -81,19 +155,70 @@ query 路径的最小 query-token 数。其他情况回退原 attention 路径�
   1 个输出行。`M=5120`，因此共启动 5120 CTAs，完成
   `[1,17408]→[1,5120]`。
 
-单 token 的具体 MLP 算子链是：
+### C 中优化所在的 gated-MLP process
+
+**是什么**：两条专用 GEMV 是单 token gated MLP 的首尾投影。固定输入 FX 样本
+[`input7_layer3`](../../../workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input7_layer3/fx_process_reconstruction.md)
+观测到 `q=1`；FX 记为两个 `aten.mm`，runtime backend 分别把它们 dispatch 到
+K5120 和 K17408 GEMV。
+
+**为什么需要**：首投影把 5120 维 hidden row 同时扩成 17408 维 gate 和 17408
+维 up 两半；激活后两半逐元素相乘，再由尾投影压回 5120 维。两条 GEMV 因而覆盖
+MLP 中读取大权重的两次主计算。
+
+**怎么做**：具体依赖顺序是
+`post-attention FP32 RMSNorm → BF16 _to_copy → get_attr/aten.t → aten.mm
+(K5120) → aten.empty → _C.silu_and_mul → get_attr/aten.t → aten.mm
+(K17408) → output`。`_C.silu_and_mul` 只在 FX 中暴露调用和输出 buffer 边界；
+这里的 `SiLU(gate)⊙up` 是该算子的功能关系，不把其内部实现伪装成已重建的 ATen
+节点。
+
+下面的矩形表示一个 decode token 的通道轴；宽度做了压缩，数字端点是精确值：
 
 ```text
-hidden [1,5120]
-  → gate_up_proj: W[34816,5120]，K5120 GEMV
-  → split: gate/up 各 [1,17408]
-  → act_and_mul: SiLU(gate) ⊙ up → [1,17408]
-  → down_proj: W[5120,17408]，K17408 GEMV
-  → hidden [1,5120]
+Tensor: H, shape=[1, 5120]
+Formula: H = BF16(RMSNorm(ATTENTION_RESIDUAL))
+channel  0                         5120
+         +----------------------------+
+token 0  |      NORM_HIDDEN_ROW       |
+         +----------------------------+
+                       |
+                       | GU = H @ W_GATE_UP.T
+                       | W_GATE_UP = [34816, 5120]
+                       v
+
+Tensor: GU, shape=[1, 34816]
+Formula: GU = concat(GATE, UP), width(GATE) = width(UP) = 17408
+channel  0                           17408                          34816
+         +------------------------------+------------------------------+
+token 0  |          GATE_HALF           |           UP_HALF            |
+         +------------------------------+------------------------------+
+                         \                         /
+                          \ A = SiLU(GATE) * UP   /
+                           v                     v
+
+Tensor: A, shape=[1, 17408]
+Formula: A = SiLU(GATE) * UP
+channel  0                                           17408
+         +-----------------------------------------------+
+token 0  |             ACTIVATED_MLP_ROW                 |
+         +-----------------------------------------------+
+                               |
+                               | D = A @ W_DOWN.T
+                               | W_DOWN = [5120, 17408]
+                               v
+
+Tensor: D, shape=[1, 5120]
+Formula: D = MLP_DELTA
+channel  0                         5120
+         +----------------------------+
+token 0  |         MLP_DELTA          |
+         +----------------------------+
 ```
 
-两条 GEMV 组合后覆盖 MLP 两端的大投影；中间的 `split + act_and_mul` 仍是独立
-算子，文档不把它计作 GEMV 融合收益。
+该 layer 的 FX output 是 `(D, ATTENTION_RESIDUAL)`，没有在这张固定输入图中再做
+最终 residual add。两条 GEMV 组合后覆盖 MLP 两端的大投影；中间的
+`silu_and_mul` 仍是独立算子，文档不把它计作 GEMV 融合收益。
 
 两者仅在 gfx936、BF16、单 token、无 bias、连续且 16-byte 对齐时启用；其余
 shape 回退原 GEMM。本次 trace 中两条 GEMV 占 decode kernel 累加时间的
