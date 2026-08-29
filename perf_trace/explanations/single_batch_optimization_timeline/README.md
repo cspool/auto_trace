@@ -12,9 +12,10 @@ prefill 路由、decode 主成本，最后放大到一个 decode layer。
 > 的起点和所有文字数字仍是真实观测值；B/C 的矩形长度是显示尺度，不能越过
 > 折线按坐标反推真实时长或占比。
 >
-> 每图真实数值最大的 3 个矩形在块内标出排名、真实时长和占比。A 的占比分母
-> 是 request span，B/C 分别是该 prefill 行/decode step 的 kernel sum，D 是该
-> layer 的 kernel sum；这些比例均由原始时长计算，不由放大后的矩形面积计算。
+> “前 3”在每条线/每根柱内独立计算：A 的每条 forward 子时间线、B 的每条
+> prefill 横柱、C 的每根 decode 竖柱、D 的每条 kernel 类别时间线分别标出
+> duration 最大的 3 个矩形（不足 3 个则全部标）。块内百分比的分母是该线或
+> 该柱的真实 duration 总和，不由放大后的矩形面积计算。
 
 <details>
 <summary>展开完整 A–D 总览图</summary>

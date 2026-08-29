@@ -355,86 +355,110 @@ L 1128.76 203.72516
 " style="fill: none; stroke: #485260; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
    </g>
    <g id="text_14">
-    <text style="font-weight: 700; font-size: 5.6px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="278.605076" y="60.587764" transform="rotate(-0 278.605076 60.587764)">#3 19.3%</text>
+    <text style="font-weight: 700; font-size: 4.3px; font-family: 'DejaVu Sans'; fill: #17202a" transform="translate(178.278574 172.977557) rotate(-90)">#1 49.6%</text>
+   </g>
+   <g id="text_15">
+    <text style="font-weight: 700; font-size: 5.4px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="278.605076" y="60.532577" transform="rotate(-0 278.605076 60.532577)">#2 31.9%</text>
    </g>
    <g id="patch_19">
     <path d="M 298.645337 48.962497
 Q 298.645337 49.031515 298.645337 49.100534
 " style="fill: none; stroke: #64748b; stroke-width: 0.5; stroke-linecap: round"/>
    </g>
-   <g id="text_15">
+   <g id="text_16">
     <text style="font-size: 7.2px; font-family: 'DejaVu Sans'; fill: #263238" transform="translate(275.345462 35.398563)">K5120 GEMV</text>
     <text style="font-size: 7.2px; font-family: 'DejaVu Sans'; fill: #263238" transform="translate(284.182337 43.460988)">115.8us</text>
+   </g>
+   <g id="text_17">
+    <text style="font-weight: 700; font-size: 4.3px; font-family: 'DejaVu Sans'; fill: #ffffff" transform="translate(323.475328 69.051436) rotate(-90)">#3 1.3%</text>
+   </g>
+   <g id="text_18">
+    <text style="font-weight: 700; font-size: 4.3px; font-family: 'DejaVu Sans'; fill: #17202a" transform="translate(462.000093 198.585105) rotate(-90)">#2 26.8%</text>
+   </g>
+   <g id="text_19">
+    <text style="font-weight: 700; font-size: 4.3px; font-family: 'DejaVu Sans'; fill: #ffffff" transform="translate(556.44438 148.865939) rotate(-90)">#1 100.0%</text>
    </g>
    <g id="patch_20">
     <path d="M 555.257848 125.78514
 Q 555.257848 125.854159 555.257848 125.923178
 " style="fill: none; stroke: #64748b; stroke-width: 0.5; stroke-linecap: round"/>
    </g>
-   <g id="text_16">
+   <g id="text_20">
     <text style="font-size: 7.2px; font-family: 'DejaVu Sans'; fill: #263238" transform="translate(529.260223 112.221207)">GDN recurrent</text>
     <text style="font-size: 7.2px; font-family: 'DejaVu Sans'; fill: #263238" transform="translate(543.085348 120.283632)">14.6us</text>
+   </g>
+   <g id="text_21">
+    <text style="font-weight: 700; font-size: 4.3px; font-family: 'DejaVu Sans'; fill: #17202a" transform="translate(668.34596 172.977557) rotate(-90)">#3 14.6%</text>
+   </g>
+   <g id="text_22">
+    <text style="font-weight: 700; font-size: 5.4px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="782.49417" y="111.747673" transform="rotate(-0 782.49417 111.747673)">#1 100.0%</text>
    </g>
    <g id="patch_21">
     <path d="M 782.49417 100.177592
 Q 782.49417 100.246611 782.49417 100.31563
 " style="fill: none; stroke: #64748b; stroke-width: 0.5; stroke-linecap: round"/>
    </g>
-   <g id="text_17">
+   <g id="text_23">
     <text style="font-size: 7.2px; font-family: 'DejaVu Sans'; fill: #263238" transform="translate(758.94792 86.613659)">MMAC GEMM</text>
     <text style="font-size: 7.2px; font-family: 'DejaVu Sans'; fill: #263238" transform="translate(770.32167 94.676084)">52.2us</text>
    </g>
-   <g id="text_18">
-    <text style="font-weight: 700; font-size: 5.6px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="952.735179" y="60.587764" transform="rotate(-0 952.735179 60.587764)">#1 40.3%</text>
+   <g id="text_24">
+    <text style="font-weight: 700; font-size: 4.3px; font-family: 'DejaVu Sans'; fill: #17202a" transform="translate(875.954972 172.977557) rotate(-90)">#2 35.8%</text>
+   </g>
+   <g id="text_25">
+    <text style="font-weight: 700; font-size: 5.4px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="952.735179" y="60.532577" transform="rotate(-0 952.735179 60.532577)">#1 66.8%</text>
    </g>
    <g id="patch_22">
     <path d="M 972.77544 69.127274
 Q 972.77544 61.116763 972.77544 53.106252
 " style="fill: none; stroke: #64748b; stroke-width: 0.5; stroke-linecap: round"/>
    </g>
-   <g id="text_19">
+   <g id="text_26">
     <text style="font-size: 7.2px; font-family: 'DejaVu Sans'; fill: #263238" transform="translate(949.475565 78.59754)">K5120 GEMV</text>
     <text style="font-size: 7.2px; font-family: 'DejaVu Sans'; fill: #263238" transform="translate(958.31244 86.659965)">242.4us</text>
+   </g>
+   <g id="text_27">
+    <text style="font-weight: 700; font-size: 4.3px; font-family: 'DejaVu Sans'; fill: #17202a" transform="translate(999.257235 198.585105) rotate(-90)">#1 73.2%</text>
    </g>
    <g id="patch_23">
     <path d="M 998.070703 197.167487
 Q 998.070703 189.155877 998.070703 181.144266
 " style="fill: none; stroke: #64748b; stroke-width: 0.5; stroke-linecap: round"/>
    </g>
-   <g id="text_20">
+   <g id="text_28">
     <text style="font-size: 7.2px; font-family: 'DejaVu Sans'; fill: #263238" transform="translate(975.312516 206.63528)">act_and_mul</text>
     <text style="font-size: 7.2px; font-family: 'DejaVu Sans'; fill: #263238" transform="translate(985.898203 214.897955)">13.1us</text>
    </g>
-   <g id="text_21">
-    <text style="font-weight: 700; font-size: 5.6px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #17202a" x="1056.960732" y="86.195312" transform="rotate(-0 1056.960732 86.195312)">#2 22.3%</text>
+   <g id="text_29">
+    <text style="font-weight: 700; font-size: 5.4px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #17202a" x="1056.960732" y="86.140125" transform="rotate(-0 1056.960732 86.140125)">#1 100.0%</text>
    </g>
    <g id="patch_24">
     <path d="M 1077.000994 94.734822
 Q 1077.000994 86.724311 1077.000994 78.7138
 " style="fill: none; stroke: #64748b; stroke-width: 0.5; stroke-linecap: round"/>
    </g>
-   <g id="text_22">
+   <g id="text_30">
     <text style="font-size: 7.2px; font-family: 'DejaVu Sans'; fill: #263238" transform="translate(1051.410619 104.205088)">K17408 GEMV</text>
     <text style="font-size: 7.2px; font-family: 'DejaVu Sans'; fill: #263238" transform="translate(1062.537994 112.267513)">134.2us</text>
    </g>
-   <g id="text_23">
+   <g id="text_31">
     <g id="patch_25">
-     <path d="M 639.563734 32.28
+     <path d="M 596.637391 32.28
 L 1123.576 32.28
 Q 1127.056 32.28 1127.056 28.8
 L 1127.056 10.637934
 Q 1127.056 7.157934 1123.576 7.157934
-L 639.563734 7.157934
-Q 636.083734 7.157934 636.083734 10.637934
-L 636.083734 28.8
-Q 636.083734 32.28 639.563734 32.28
+L 596.637391 7.157934
+Q 593.157391 7.157934 593.157391 10.637934
+L 593.157391 28.8
+Q 593.157391 32.28 596.637391 32.28
 z
 " style="fill: #ffffff; stroke: #cbd5e1; stroke-linejoin: miter"/>
     </g>
     <text style="font-size: 8.7px; font-family: 'DejaVu Sans'; fill: #17202a" transform="translate(873.029594 17.248575)">11 kernels; kernel sum 0.601ms; layer envelope 4.794ms</text>
-    <text style="font-size: 8.7px; font-family: 'DejaVu Sans'; fill: #17202a" transform="translate(639.563734 26.990672)">Starts exact; widths 6x; zigzag = 0.36ms cap; top3 = % kernel sum. Gaps are not a production idle-time claim.</text>
+    <text style="font-size: 8.7px; font-family: 'DejaVu Sans'; fill: #17202a" transform="translate(596.637391 26.990672)">Starts exact; widths 6x; zigzag = 0.36ms cap; top3 per row = % row duration. Gaps are not a production idle-time claim.</text>
    </g>
-   <g id="text_24">
+   <g id="text_32">
     <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17202a" x="91.96" y="28.715344" transform="rotate(-0 91.96 28.715344)">D  Exact zoom — one observed decode layer (forward 10, layer 0)</text>
    </g>
   </g>
