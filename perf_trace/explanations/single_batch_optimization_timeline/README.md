@@ -51,16 +51,9 @@ duration 的累加值。数字之间的关系如下：
 
 ### B 中优化所在的 full-attention process
 
-**是什么**：GQA6 direct 和 page784 都位于 full-attention layer 的
-`vllm.unified_attention_with_output` 调用内。固定输入 FX 样本
+**算子链**：固定输入 FX 样本
 [`input1_layer3`](../../../workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input1_layer3/fx_process_reconstruction.md)
-观测到 `q=4096`、`past=0`，用于确定该调用在完整算子链中的位置。
-
-**为什么需要**：这个 process 先把每个 token 的 5120 维 hidden state 投影成
-Q、K、V 和输出 gate；再给 Q/K 加入位置信息、更新 KV cache 并聚合上下文，最后
-用 gate 调制 attention 结果并投影回 5120 维，才能接回 residual 主链。
-
-**怎么做**：FX 中可见的依赖顺序是
+观测到 `q=4096`、`past=0`。FX 中可见的依赖顺序是
 `aten.add → FP32 RMSNorm(_to_copy/pow/mean/add/rsqrt/mul) → aten.mm →
 split_with_sizes/view/split → Q/K RMSNorm → RoPE(index/slice/mul/sub/add/cat) →
 vllm.unified_kv_cache_update → vllm.unified_attention_with_output →
@@ -157,19 +150,13 @@ query 路径的最小 query-token 数。其他情况回退原 attention 路径�
 
 ### C 中优化所在的 gated-MLP process
 
-**是什么**：两条专用 GEMV 是单 token gated MLP 的首尾投影。固定输入 FX 样本
+**算子链**：固定输入 FX 样本
 [`input7_layer3`](../../../workload_profile/fx/traces/20260729T050800Z-fx-89687ae2-R032-qwen35-27b-eager-row0-hcu0/input7_layer3/fx_process_reconstruction.md)
-观测到 `q=1`；FX 记为两个 `aten.mm`，runtime backend 分别把它们 dispatch 到
-K5120 和 K17408 GEMV。
-
-**为什么需要**：首投影把 5120 维 hidden row 同时扩成 17408 维 gate 和 17408
-维 up 两半；激活后两半逐元素相乘，再由尾投影压回 5120 维。两条 GEMV 因而覆盖
-MLP 中读取大权重的两次主计算。
-
-**怎么做**：具体依赖顺序是
+观测到 `q=1`。具体依赖顺序是
 `post-attention FP32 RMSNorm → BF16 _to_copy → get_attr/aten.t → aten.mm
 (K5120) → aten.empty → _C.silu_and_mul → get_attr/aten.t → aten.mm
-(K17408) → output`。`_C.silu_and_mul` 只在 FX 中暴露调用和输出 buffer 边界；
+(K17408) → output`。FX 中的两个 `aten.mm` 在 runtime backend 分别 dispatch
+到 K5120 和 K17408 GEMV。`_C.silu_and_mul` 只暴露调用和输出 buffer 边界；
 这里的 `SiLU(gate)⊙up` 是该算子的功能关系，不把其内部实现伪装成已重建的 ATen
 节点。
 
