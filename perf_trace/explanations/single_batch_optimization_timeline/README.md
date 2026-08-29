@@ -6,6 +6,10 @@ prefill 路由、decode 主成本，最后放大到一个 decode layer。
 
 > A–D 展示的是同一次**优化后 trace**，不是 before/after 曲线。图旁的历史
 > 收益来自独立的固定 benchmark；不能用图中柱长直接计算优化幅度。
+>
+> 为让最短矩形可辨，A–D 沿时长方向统一放大 `3×`；超过各图显示上限的长块
+> 用折线断口拼接两个矩形表示。A/D 的起点和所有文字数字仍是真实观测值；
+> B/C 的矩形长度是显示尺度，不能越过折线按坐标反推真实时长或占比。
 
 <details>
 <summary>展开完整 A–D 总览图</summary>
@@ -35,8 +39,9 @@ prefill 路由、decode 主成本，最后放大到一个 decode layer。
 
 [![子图 B：Prefill 路由组成](./panel_b_prefill_routes.png)](./panel_b_prefill_routes.svg)
 
-每根横柱对应一个 prefill forward，长度是该 forward 内 strict-owned kernel
-duration 的累加值。数字之间的关系如下：
+每根横柱对应一个 prefill forward，各颜色来自该 forward 内 strict-owned kernel
+duration 的累加；矩形按上述 `3×` 显示规则绘制，右侧 `kernel sum` 是真实总时长。
+数字之间的关系如下：
 
 - **`GQA6 direct`（P1、P6）**：对同一个 `KV head × 32-query block`，grid
   第三维启动 3 个 CTA，分别处理 3 组 `2 Q heads`，合计覆盖该 KV head 的

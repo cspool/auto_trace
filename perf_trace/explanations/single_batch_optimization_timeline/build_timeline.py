@@ -14,7 +14,7 @@ from pathlib import Path
 import ijson
 import matplotlib.pyplot as plt
 from matplotlib.collections import LineCollection
-from matplotlib.patches import Patch
+from matplotlib.patches import Patch, Rectangle
 
 
 TRACE = Path(
@@ -48,6 +48,92 @@ COLORS = {
     "RMS/copy": "#66C2A5",
     "Other": "#A7ADB7",
 }
+
+RECTANGLE_SCALE = 3.0
+A_RECTANGLE_LIMIT_S = 1.80
+B_RECTANGLE_LIMIT_MS = 260.0
+C_RECTANGLE_LIMIT_MS = 10.0
+D_RECTANGLE_LIMIT_MS = 0.36
+
+
+def draw_scaled_rectangle(
+    axis: plt.Axes,
+    *,
+    start: float,
+    cross_start: float,
+    duration: float,
+    thickness: float,
+    limit: float,
+    color: str,
+    orientation: str = "horizontal",
+    edgecolor: str = "white",
+    linewidth: float = 0.35,
+    zorder: float = 2.0,
+) -> tuple[float, bool]:
+    """Draw a 3x duration rectangle, folding capped spans into two blocks."""
+    scaled = duration * RECTANGLE_SCALE
+    visible = min(scaled, limit)
+    folded = scaled > limit
+
+    if not folded:
+        if orientation == "horizontal":
+            patch = Rectangle(
+                (start, cross_start), visible, thickness,
+                facecolor=color, edgecolor=edgecolor, linewidth=linewidth, zorder=zorder,
+            )
+        else:
+            patch = Rectangle(
+                (cross_start, start), thickness, visible,
+                facecolor=color, edgecolor=edgecolor, linewidth=linewidth, zorder=zorder,
+            )
+        axis.add_patch(patch)
+        return visible, False
+
+    gap = visible * 0.10
+    block = (visible - gap) / 2.0
+    if orientation == "horizontal":
+        axis.add_patch(
+            Rectangle(
+                (start, cross_start), block, thickness,
+                facecolor=color, edgecolor=edgecolor, linewidth=linewidth, zorder=zorder,
+            )
+        )
+        axis.add_patch(
+            Rectangle(
+                (start + block + gap, cross_start), block, thickness,
+                facecolor=color, edgecolor=edgecolor, linewidth=linewidth, zorder=zorder,
+            )
+        )
+        x0 = start + block
+        y0 = cross_start + thickness / 2.0
+        axis.plot(
+            [x0, x0 + gap * 0.25, x0 + gap * 0.50, x0 + gap * 0.75, x0 + gap],
+            [y0, y0 + thickness * 0.22, y0 - thickness * 0.22, y0 + thickness * 0.22, y0],
+            color="#263238", linewidth=max(0.7, linewidth), zorder=zorder + 0.2,
+            solid_capstyle="round", clip_on=True,
+        )
+    else:
+        axis.add_patch(
+            Rectangle(
+                (cross_start, start), thickness, block,
+                facecolor=color, edgecolor=edgecolor, linewidth=linewidth, zorder=zorder,
+            )
+        )
+        axis.add_patch(
+            Rectangle(
+                (cross_start, start + block + gap), thickness, block,
+                facecolor=color, edgecolor=edgecolor, linewidth=linewidth, zorder=zorder,
+            )
+        )
+        x0 = cross_start + thickness / 2.0
+        y0 = start + block
+        axis.plot(
+            [x0, x0 + thickness * 0.22, x0 - thickness * 0.22, x0 + thickness * 0.22, x0],
+            [y0, y0 + gap * 0.25, y0 + gap * 0.50, y0 + gap * 0.75, y0 + gap],
+            color="#263238", linewidth=max(0.7, linewidth), zorder=zorder + 0.2,
+            solid_capstyle="round", clip_on=True,
+        )
+    return visible, True
 
 
 def input_id(process: str) -> int | None:
@@ -264,12 +350,12 @@ def main() -> None:
         }
     )
 
-    figure = plt.figure(figsize=(16, 14), constrained_layout=False)
+    figure = plt.figure(figsize=(16, 15.5), constrained_layout=False)
     grid = figure.add_gridspec(
         4,
         1,
         height_ratios=[1.25, 2.4, 2.5, 2.35],
-        hspace=0.55,
+        hspace=0.76,
         top=0.925,
         bottom=0.065,
         left=0.075,
@@ -304,25 +390,42 @@ def main() -> None:
     decode_end = (forwards[29]["ts_us"] + forwards[29]["dur_us"]) / 1_000_000.0
     axis.axvspan(prefill_begin, prefill_end, color=COLORS["prefill"], alpha=0.08, linewidth=0)
     axis.axvspan(decode_begin, decode_end, color=COLORS["decode"], alpha=0.07, linewidth=0)
+    forward_display_end = request_seconds
+    forward_lane_y = [0.74, 0.97, 1.20]
     for forward_id in range(1, 30):
         forward = forwards[forward_id]
         begin = forward["ts_us"] / 1_000_000.0
         duration = forward["dur_us"] / 1_000_000.0
         phase = "prefill" if forward["phase"] == "prefill_chunk" else forward["phase"]
-        axis.broken_barh(
-            [(begin, duration)],
-            (0.76, 0.48),
-            facecolors=COLORS[phase],
-            edgecolors="white",
+        lane_y = forward_lane_y[(forward_id - 1) % len(forward_lane_y)]
+        visible_duration, _ = draw_scaled_rectangle(
+            axis,
+            start=begin,
+            cross_start=lane_y,
+            duration=duration,
+            thickness=0.19,
+            limit=A_RECTANGLE_LIMIT_S,
+            color=COLORS[phase],
+            edgecolor="white",
             linewidth=0.7,
         )
+        forward_display_end = max(forward_display_end, begin + visible_duration)
         if forward_id <= 6:
             label = f"P{forward_id}"
         else:
             decode_step = forward_id - 6
             label = f"D{decode_step}" if decode_step in {1, 5, 10, 15, 20, 23} else ""
         if label:
-            axis.text(begin + duration / 2, 1.0, label, ha="center", va="center", fontsize=8, color="white")
+            axis.text(
+                begin + visible_duration / 2,
+                lane_y + 0.095,
+                label,
+                ha="center",
+                va="center",
+                fontsize=8,
+                color="white",
+                zorder=3,
+            )
 
     prefill_segments = []
     decode_segments = []
@@ -340,14 +443,14 @@ def main() -> None:
     axis.add_collection(
         LineCollection(decode_segments, colors=COLORS["decode"], linewidths=3.6, rasterized=True)
     )
-    axis.set_xlim(0, request_seconds)
-    axis.set_ylim(-0.02, 1.47)
-    axis.set_yticks([0.27, 1.0], ["Strict GPU kernels", "Forward envelopes"])
+    axis.set_xlim(0, forward_display_end * 1.01)
+    axis.set_ylim(-0.02, 1.70)
+    axis.set_yticks([0.27, 1.07], ["Strict GPU kernels", "Forward envelopes"])
     axis.set_xlabel("Time from request begin (s)")
     axis.set_title("A  Observed end-to-end wall-clock positions", loc="left", fontweight="bold")
     axis.text(
         (prefill_begin + prefill_end) / 2,
-        1.38,
+        1.58,
         f"Prefill span {prefill_end - prefill_begin:.3f}s",
         ha="center",
         color="#9A6700",
@@ -355,20 +458,30 @@ def main() -> None:
     )
     axis.text(
         (decode_begin + decode_end) / 2,
-        1.38,
+        1.58,
         f"Decode span {decode_end - decode_begin:.3f}s",
         ha="center",
         color="#1E5AA8",
         fontweight="bold",
     )
     axis.text(
-        request_seconds,
+        forward_display_end,
         0.02,
         f"request span {request_seconds:.3f}s (instrumented; not production E2E)",
         ha="right",
         va="bottom",
         fontsize=9,
         color="#6B7280",
+    )
+    axis.text(
+        0.995,
+        0.36,
+        "starts exact; rectangle widths 3x; zigzag = 1.80s display cap",
+        transform=axis.transAxes,
+        ha="right",
+        va="center",
+        fontsize=8.2,
+        color="#566573",
     )
     axis.grid(axis="x", color="#E5E7EB", linewidth=0.7)
     axis.spines[["top", "right"]].set_visible(False)
@@ -377,42 +490,53 @@ def main() -> None:
     axis = figure.add_subplot(grid[1])
     panels["B"] = axis
     y = list(range(len(prefill_ids)))
-    left = [0.0] * len(prefill_ids)
+    display_left = [0.0] * len(prefill_ids)
     for category in prefill_categories:
         values = prefill_values[category]
-        axis.barh(
-            y,
-            values,
-            left=left,
-            height=0.68,
-            label=category,
-            color=COLORS[category],
-            edgecolor="white",
-            linewidth=0.35,
-        )
-        left = [a + b for a, b in zip(left, values)]
-    max_prefill = max(prefill_totals)
+        for index, value in enumerate(values):
+            if value <= 0:
+                continue
+            visible_width, _ = draw_scaled_rectangle(
+                axis,
+                start=display_left[index],
+                cross_start=y[index] - 0.34,
+                duration=value,
+                thickness=0.68,
+                limit=B_RECTANGLE_LIMIT_MS,
+                color=COLORS[category],
+            )
+            display_left[index] += visible_width
+    max_prefill_display = max(display_left)
     for index, forward_id in enumerate(prefill_ids):
         route = "direct GQA6" if forward_id in {1, 6} else "page784 main + tail + merge"
         axis.text(
-            prefill_totals[index] + max_prefill * 0.015,
+            display_left[index] + max_prefill_display * 0.015,
             index,
             f"kernel sum {prefill_totals[index]:.1f}ms  |  {route}",
             va="center",
             fontsize=8.8,
             color="#374151",
         )
-    axis.set_xlim(0, max_prefill * 1.47)
+    axis.set_xlim(0, max_prefill_display * 1.47)
     axis.set_yticks(y, [f"P{forward_id}" for forward_id in prefill_ids])
     axis.invert_yaxis()
-    axis.set_xlabel("Accumulated strict GPU-kernel time (ms)")
+    axis.set_xlabel(
+        "Display-scaled segment width (3x actual ms; zigzag = 260ms display cap)"
+    )
     axis.set_title(
         "B  Prefill chunks — kernel-time composition exposes the GQA6/page784 routing",
         loc="left",
         fontweight="bold",
         pad=48,
     )
-    axis.legend(ncol=4, loc="lower left", bbox_to_anchor=(0.0, 1.005), frameon=False, fontsize=8.8)
+    axis.legend(
+        handles=[Patch(facecolor=COLORS[category], label=category) for category in prefill_categories],
+        ncol=4,
+        loc="lower left",
+        bbox_to_anchor=(0.0, 1.005),
+        frameon=False,
+        fontsize=8.8,
+    )
     axis.grid(axis="x", color="#E5E7EB", linewidth=0.7)
     axis.spines[["top", "right"]].set_visible(False)
 
@@ -420,36 +544,30 @@ def main() -> None:
     axis = figure.add_subplot(grid[2])
     panels["C"] = axis
     x = list(range(1, len(decode_ids) + 1))
-    bottom = [0.0] * len(decode_ids)
+    display_bottom = [0.0] * len(decode_ids)
     for category in decode_categories:
         values = decode_values[category]
-        axis.bar(
-            x,
-            values,
-            bottom=bottom,
-            width=0.82,
-            label=category,
-            color=COLORS[category],
-            edgecolor="white",
-            linewidth=0.25,
-        )
-        bottom = [a + b for a, b in zip(bottom, values)]
+        for index, value in enumerate(values):
+            if value <= 0:
+                continue
+            visible_height, _ = draw_scaled_rectangle(
+                axis,
+                start=display_bottom[index],
+                cross_start=x[index] - 0.41,
+                duration=value,
+                thickness=0.82,
+                limit=C_RECTANGLE_LIMIT_MS,
+                color=COLORS[category],
+                orientation="vertical",
+                linewidth=0.25,
+            )
+            display_bottom[index] += visible_height
     decode_mean = sum(decode_totals) / len(decode_totals)
-    axis.axhline(decode_mean, color="#111827", linestyle="--", linewidth=1.2)
-    axis.text(
-        23.45,
-        decode_mean,
-        f" mean {decode_mean:.2f}ms",
-        ha="left",
-        va="center",
-        fontsize=9,
-        color="#111827",
-    )
-    axis.axhspan(40.80, 42.64, color="#111827", alpha=0.055, linewidth=0)
     axis.text(
         0.55,
-        41.72,
-        "modular production mean TPOT range (separate benchmark)",
+        max(display_bottom) * 1.055,
+        f"actual trace mean {decode_mean:.2f}ms | modular production mean TPOT "
+        "40.80-42.64ms (separate benchmark)",
         ha="left",
         va="center",
         fontsize=8.2,
@@ -470,16 +588,24 @@ def main() -> None:
         fontsize=9.2,
     )
     axis.set_xlim(0.3, 24.4)
+    axis.set_ylim(0, max(display_bottom) * 1.11)
     axis.set_xticks([1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23])
     axis.set_xlabel("Decode step")
-    axis.set_ylabel("Accumulated strict GPU-kernel time (ms)")
+    axis.set_ylabel("Display-scaled height\n(3x actual ms; zigzag = 10ms cap)")
     axis.set_title(
         "C  Decode — the two custom GEMV paths dominate every step",
         loc="left",
         fontweight="bold",
         pad=48,
     )
-    axis.legend(ncol=6, loc="lower left", bbox_to_anchor=(0.0, 1.005), frameon=False, fontsize=8.8)
+    axis.legend(
+        handles=[Patch(facecolor=COLORS[category], label=category) for category in decode_categories],
+        ncol=6,
+        loc="lower left",
+        bbox_to_anchor=(0.0, 1.005),
+        frameon=False,
+        fontsize=8.8,
+    )
     axis.grid(axis="y", color="#E5E7EB", linewidth=0.7)
     axis.spines[["top", "right"]].set_visible(False)
 
@@ -498,17 +624,23 @@ def main() -> None:
         "Other",
     ]
     y_positions = {category: len(zoom_categories) - index - 1 for index, category in enumerate(zoom_categories)}
+    zoom_display_tail_ms = 0.0
     for kernel in zoom_kernels:
         category = classify_zoom(kernel)
         begin_ms = (kernel["ts_us"] - zoom_layer["ts_us"]) / 1000.0
         duration_ms = kernel["dur_us"] / 1000.0
-        axis.broken_barh(
-            [(begin_ms, duration_ms)],
-            (y_positions[category] - 0.30, 0.60),
-            facecolors=COLORS[category],
-            edgecolors="#263238",
+        visible_duration, _ = draw_scaled_rectangle(
+            axis,
+            start=begin_ms,
+            cross_start=y_positions[category] - 0.30,
+            duration=duration_ms,
+            thickness=0.60,
+            limit=D_RECTANGLE_LIMIT_MS,
+            color=COLORS[category],
+            edgecolor="#263238",
             linewidth=0.35,
         )
+        zoom_display_tail_ms = max(zoom_display_tail_ms, begin_ms + visible_duration)
         if duration_ms >= 0.012:
             short_name = category
             if category == "Other" and "act_and_mul_kernel" in kernel["name"]:
@@ -517,8 +649,8 @@ def main() -> None:
             label_y = y_positions[category] + (0.55 if above else -0.55)
             axis.annotate(
                 f"{short_name}\n{duration_ms * 1000:.1f}us",
-                xy=(begin_ms + duration_ms / 2, y_positions[category] + 0.31),
-                xytext=(begin_ms + duration_ms / 2, label_y),
+                xy=(begin_ms + visible_duration / 2, y_positions[category] + 0.31),
+                xytext=(begin_ms + visible_duration / 2, label_y),
                 ha="center",
                 va="bottom" if above else "top",
                 fontsize=7.2,
@@ -532,7 +664,7 @@ def main() -> None:
         for kernel in zoom_kernels
     )
     axis.axvline(zoom_envelope_ms, color="#64748B", linestyle=":", linewidth=1.0)
-    axis.set_xlim(0, max(zoom_envelope_ms, zoom_tail_ms) * 1.015)
+    axis.set_xlim(0, max(zoom_envelope_ms, zoom_tail_ms, zoom_display_tail_ms) * 1.015)
     axis.set_ylim(-0.65, len(zoom_categories) - 0.05)
     axis.set_yticks(
         [y_positions[category] for category in zoom_categories],
@@ -548,7 +680,7 @@ def main() -> None:
         0.995,
         1.035,
         f"11 kernels; kernel sum {zoom_sum_ms:.3f}ms; layer envelope {zoom_envelope_ms:.3f}ms\n"
-        "Gaps include eager/runtime/tracing effects; they are not a production idle-time claim.",
+        "Starts exact; widths 3x; zigzag = 0.36ms cap. Gaps are not a production idle-time claim.",
         transform=axis.transAxes,
         ha="right",
         va="bottom",
