@@ -58,12 +58,14 @@ TTFT 降幅，在 4–8K、8–16K、16–32K 三档分别为 `15.89%`、`20.47%
 每根柱代表一个 decode step。23 根柱的组成基本稳定，说明优化不是只偶然命中
 某一个 token：
 
-- 红色 `K5120 GEMV` 最大：为单 token 投影提供 640-thread pair-reduction
-  kernel，并按输出行数选择 row2/row4。
-- 橙色 `K17408 GEMV` 第二：为 `K=17408` 输出投影提供专用 BF16 kernel，
-  使用局部 FP32 FMA 累加和固定归约。
-- 两条路径都只在冻结的 dtype、shape、连续性和对齐条件满足时命中；否则回退
-  原 GEMM 路径。
+- 红色 `K5120 GEMV`：640 threads 各处理 8 个 K 元素，先合并两组
+  320-thread partials，再做 5-wave FP32 归约；`M=96` 每 CTA 算 4 行，其余
+  `M∈{14336,16384,34816,248320}` 每 CTA 算 2 行。
+- 橙色 `K17408 GEMV`：专用于 `[1,17408]→[1,5120]` MLP down projection；
+  每个输出行由一个 1024-thread CTA 完成 BF16 向量加载、双路 FP32 FMA 和
+  16-wave 归约。
+- 两者仅在 gfx936、BF16、单 token、无 bias、连续且 16-byte 对齐时启用；
+  其余 shape 回退原 GEMM。
 - 两条专用 GEMV 合计占本次 decode strict-owned GPU kernel 时间的 `76.0%`；
   连同紫色 `MMAC GEMM` 后为 `84.0%`。单步 kernel 累加均值约 `41.574 ms`。
 
