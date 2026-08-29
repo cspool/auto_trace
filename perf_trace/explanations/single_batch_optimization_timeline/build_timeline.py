@@ -343,7 +343,7 @@ def main() -> None:
                 if prefill_values[category][index] > 0
             ),
             reverse=True,
-        )[:3]
+        )[:5]
         for rank, (_, category) in enumerate(ranked, start=1):
             top_prefill_ranks[(category, index)] = rank
 
@@ -356,7 +356,7 @@ def main() -> None:
                 if decode_values[category][index] > 0
             ),
             reverse=True,
-        )[:3]
+        )[:5]
         for rank, (_, category) in enumerate(ranked, start=1):
             top_decode_ranks[(category, index)] = rank
 
@@ -435,7 +435,7 @@ def main() -> None:
     top_forward_ids: dict[int, int] = {}
     for forward_ids in forward_lane_ids.values():
         for rank, forward_id in enumerate(
-            sorted(forward_ids, key=lambda item: forwards[item]["dur_us"], reverse=True)[:3],
+            sorted(forward_ids, key=lambda item: forwards[item]["dur_us"], reverse=True)[:5],
             start=1,
         ):
             top_forward_ids[forward_id] = rank
@@ -533,7 +533,7 @@ def main() -> None:
     axis.text(
         0.995,
         0.36,
-        "starts exact; widths 3x; zigzag = 1.80s cap; top3 per lane = % lane duration",
+        "starts exact; widths 3x; zigzag = 1.80s cap; top5 per lane = % lane duration",
         transform=axis.transAxes,
         ha="right",
         va="center",
@@ -566,15 +566,21 @@ def main() -> None:
             rank = top_prefill_ranks.get((category, index))
             if rank is not None:
                 label_x = segment_start + visible_width * (0.225 if folded else 0.5)
+                label_color = (
+                    "#17202A" if category in {"page784 tail", "page784 pack/merge", "Other"}
+                    else "white"
+                )
+                rotate_label = visible_width < 55.0
                 axis.text(
                     label_x,
                     y[index],
                     f"#{rank} {value / prefill_totals[index] * 100:.1f}%",
                     ha="center",
                     va="center",
-                    fontsize=6.8,
-                    color="white",
+                    fontsize=4.4 if rotate_label else 6.8,
+                    color=label_color,
                     fontweight="bold",
+                    rotation=90 if rotate_label else 0,
                     zorder=3,
                 )
             display_left[index] += visible_width
@@ -612,7 +618,7 @@ def main() -> None:
     axis.text(
         0.995,
         1.035,
-        "top3 per row = % of that row's kernel sum",
+        "top5 per row = % of that row's kernel sum",
         transform=axis.transAxes,
         ha="right",
         va="bottom",
@@ -648,6 +654,7 @@ def main() -> None:
             rank = top_decode_ranks.get((category, index))
             if rank is not None:
                 label_y = segment_start + visible_height * (0.225 if folded else 0.5)
+                label_color = "#17202A" if category in {"K17408 GEMV", "Other"} else "white"
                 axis.text(
                     x[index],
                     label_y,
@@ -655,7 +662,7 @@ def main() -> None:
                     ha="center",
                     va="center",
                     fontsize=5.0,
-                    color="white",
+                    color=label_color,
                     fontweight="bold",
                     zorder=3,
                 )
@@ -665,7 +672,7 @@ def main() -> None:
         0.55,
         max(display_bottom) * 1.055,
         f"actual trace mean {decode_mean:.2f}ms | modular production mean TPOT "
-        "40.80-42.64ms (separate benchmark) | top3 per column = % step sum",
+        "40.80-42.64ms (separate benchmark) | top5 per column = % step sum",
         ha="left",
         va="center",
         fontsize=8.2,
@@ -733,7 +740,7 @@ def main() -> None:
     top_zoom_ranks: dict[tuple[float, str], int] = {}
     for category_kernels in zoom_kernels_by_category.values():
         for rank, kernel in enumerate(
-            sorted(category_kernels, key=lambda item: item["dur_us"], reverse=True)[:3],
+            sorted(category_kernels, key=lambda item: item["dur_us"], reverse=True)[:5],
             start=1,
         ):
             top_zoom_ranks[(kernel["ts_us"], kernel["name"])] = rank
@@ -815,7 +822,7 @@ def main() -> None:
         0.995,
         1.035,
         f"11 kernels; kernel sum {zoom_sum_ms:.3f}ms; layer envelope {zoom_envelope_ms:.3f}ms\n"
-        "Starts exact; widths 6x; zigzag = 0.36ms cap; top3 per row = % row duration. "
+        "Starts exact; widths 6x; zigzag = 0.36ms cap; top5 per row = % row duration. "
         "Gaps are not a production idle-time claim.",
         transform=axis.transAxes,
         ha="right",

@@ -456,7 +456,7 @@ z
 " style="fill: #ffffff; stroke: #cbd5e1; stroke-linejoin: miter"/>
     </g>
     <text style="font-size: 8.7px; font-family: 'DejaVu Sans'; fill: #17202a" transform="translate(873.029594 17.248575)">11 kernels; kernel sum 0.601ms; layer envelope 4.794ms</text>
-    <text style="font-size: 8.7px; font-family: 'DejaVu Sans'; fill: #17202a" transform="translate(596.637391 26.990672)">Starts exact; widths 6x; zigzag = 0.36ms cap; top3 per row = % row duration. Gaps are not a production idle-time claim.</text>
+    <text style="font-size: 8.7px; font-family: 'DejaVu Sans'; fill: #17202a" transform="translate(596.637391 26.990672)">Starts exact; widths 6x; zigzag = 0.36ms cap; top5 per row = % row duration. Gaps are not a production idle-time claim.</text>
    </g>
    <g id="text_32">
     <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17202a" x="91.96" y="28.715344" transform="rotate(-0 91.96 28.715344)">D  Exact zoom — one observed decode layer (forward 10, layer 0)</text>
