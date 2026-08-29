@@ -63,7 +63,7 @@ view/sigmoid/mul → aten.mm/copy_/aten.add`。其中第一个 `aten.mm` 完成
 
 下面按观测 shape 画张量轴；宽度做了压缩，数字端点是精确值：
 
-```text
+<pre>
 Tensor: HN, shape=[4096, 5120]
 Formula: HN = RMSNorm(HIDDEN + RESIDUAL)
 feature      0                                      5120
@@ -82,11 +82,11 @@ token 0      | QZ: 24 x (256 + 256)     | K:4x256 | V:4x256 |
 token 4095   +---------------------------+---------+---------+
                               |
                               | Q,K: RMSNorm -> RoPE(first 64/256)
-                              | K,V: KV cache update; 24/4 = GQA6
+                              | K,V: KV cache update; <strong>24/4 = GQA6</strong>
                               v
 
 Tensor: G, shape=[4096, 6144]
-Formula: G = reshape(ATTN(Q, K, V)) * sigmoid(reshape(Z))
+Formula: G = reshape(<strong>UNIFIED_ATTN(Q, K, V)</strong>) * sigmoid(reshape(Z))
 head-feature  0                                      6144
               +-----------------------------------------+
 token 0       |       GATED_ATTENTION_CONTEXT           |
@@ -101,20 +101,20 @@ feature      0                                      5120
              +-----------------------------------------+
 token 0      |          ATTENTION_RESIDUAL             |
 token 4095   +-----------------------------------------+
-```
+</pre>
 
 `unified_attention_with_output` 是 FX 中的 opaque custom-op 边界，内部 kernel
 没有被 FX 展开；B 图的 runtime trace 才进一步表明该边界内命中了 GQA6 direct
 或 page784。page784 的切分关系是：
 
-```text
+<pre>
 Tensor: KV_PAGE, shape=[784, 4, 256]
 Formula: KV_PAGE = MAIN[0:768] || TAIL[768:784]
-token-in-page  0                                  768   784
-               +------------------------------------+-----+
-               |          MAIN: 12 x 64             | 16  |
-               +------------------------------------+-----+
-```
+token-in-page  0                                  768     784
+               +------------------------------------+-------+
+               |          <strong>MAIN: 12 x 64</strong>             |<strong>TAIL:16</strong>|
+               +------------------------------------+-------+
+</pre>
 
 GQA6 direct 仅用于 gfx936/BF16、`head_dim=256`、`page=784`、单序列且
 `q≥128` 的长 prefill；这里 `256` 是每个 head 的特征宽度，`128` 是启用长
@@ -162,7 +162,7 @@ query 路径的最小 query-token 数。其他情况回退原 attention 路径�
 
 下面的矩形表示一个 decode token 的通道轴；宽度做了压缩，数字端点是精确值：
 
-```text
+<pre>
 Tensor: H, shape=[1, 5120]
 Formula: H = BF16(RMSNorm(ATTENTION_RESIDUAL))
 channel  0                         5120
@@ -170,7 +170,7 @@ channel  0                         5120
 token 0  |      NORM_HIDDEN_ROW       |
          +----------------------------+
                        |
-                       | GU = H @ W_GATE_UP.T
+                       | <strong>K5120 GEMV: GU = H @ W_GATE_UP.T</strong>
                        | W_GATE_UP = [34816, 5120]
                        v
 
@@ -191,7 +191,7 @@ channel  0                                           17408
 token 0  |             ACTIVATED_MLP_ROW                 |
          +-----------------------------------------------+
                                |
-                               | D = A @ W_DOWN.T
+                               | <strong>K17408 GEMV: D = A @ W_DOWN.T</strong>
                                | W_DOWN = [5120, 17408]
                                v
 
@@ -201,7 +201,7 @@ channel  0                         5120
          +----------------------------+
 token 0  |         MLP_DELTA          |
          +----------------------------+
-```
+</pre>
 
 该 layer 的 FX output 是 `(D, ATTENTION_RESIDUAL)`，没有在这张固定输入图中再做
 最终 residual add。两条 GEMV 组合后覆盖 MLP 两端的大投影；中间的
