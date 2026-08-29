@@ -11,6 +11,10 @@ prefill 路由、decode 主成本，最后放大到一个 decode layer。
 > 横向放大 `6×`；超过各图显示上限的长块用折线断口拼接两个矩形表示。A/D
 > 的起点和所有文字数字仍是真实观测值；B/C 的矩形长度是显示尺度，不能越过
 > 折线按坐标反推真实时长或占比。
+>
+> 每图真实数值最大的 3 个矩形在块内标出排名、真实时长和占比。A 的占比分母
+> 是 request span，B/C 分别是该 prefill 行/decode step 的 kernel sum，D 是该
+> layer 的 kernel sum；这些比例均由原始时长计算，不由放大后的矩形面积计算。
 
 <details>
 <summary>展开完整 A–D 总览图</summary>

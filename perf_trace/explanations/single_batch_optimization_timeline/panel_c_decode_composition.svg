@@ -278,8 +278,8 @@ L 1093.268 72.951431
      </g>
     </g>
     <g id="text_21">
-     <text style="font-size: 10.5px; font-family: 'DejaVu Sans'" transform="translate(18.165375 213.036651) rotate(-90)">Display-scaled height</text>
-     <text style="font-size: 10.5px; font-family: 'DejaVu Sans'" transform="translate(29.923078 248.174737) rotate(-90)">(9x actual ms; zigzag = 10ms cap)</text>
+     <text style="font-size: 10.5px; font-family: 'DejaVu Sans'" transform="translate(18.165375 205.641534) rotate(-90)">Display coordinate</text>
+     <text style="font-size: 10.5px; font-family: 'DejaVu Sans'" transform="translate(29.923078 248.800635) rotate(-90)">(9x duration; zigzag = 10-unit cap)</text>
     </g>
    </g>
    <g id="patch_3">
@@ -3237,9 +3237,21 @@ L 1093.268 246.517677
 " style="fill: none; stroke: #485260; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
    </g>
    <g id="text_22">
-    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #4b5563" x="67.223187" y="77.795488" transform="rotate(-0 67.223187 77.795488)">actual trace mean 41.57ms | modular production mean TPOT 40.80-42.64ms (separate benchmark)</text>
+    <text style="font-weight: 700; font-size: 5.2px; font-family: 'DejaVu Sans'; fill: #ffffff" transform="translate(411.566185 239.223844)">#2 23.015ms</text>
+    <text style="font-weight: 700; font-size: 5.2px; font-family: 'DejaVu Sans'; fill: #ffffff" transform="translate(421.728529 243.663791)">55.3%</text>
    </g>
    <g id="text_23">
+    <text style="font-weight: 700; font-size: 5.2px; font-family: 'DejaVu Sans'; fill: #ffffff" transform="translate(540.628426 239.223844)">#1 23.015ms</text>
+    <text style="font-weight: 700; font-size: 5.2px; font-family: 'DejaVu Sans'; fill: #ffffff" transform="translate(550.79077 243.663791)">55.4%</text>
+   </g>
+   <g id="text_24">
+    <text style="font-weight: 700; font-size: 5.2px; font-family: 'DejaVu Sans'; fill: #ffffff" transform="translate(755.732161 239.223844)">#3 23.014ms</text>
+    <text style="font-weight: 700; font-size: 5.2px; font-family: 'DejaVu Sans'; fill: #ffffff" transform="translate(765.894504 243.663791)">55.3%</text>
+   </g>
+   <g id="text_25">
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #4b5563" x="67.223187" y="77.795488" transform="rotate(-0 67.223187 77.795488)">actual trace mean 41.57ms | modular production mean TPOT 40.80-42.64ms (separate benchmark) | top3 = actual ms / % step sum</text>
+   </g>
+   <g id="text_26">
     <g id="patch_258">
      <path d="M 862.180125 100.393723
 L 1077.716 100.393723
@@ -3256,7 +3268,7 @@ z
     <text style="font-size: 9.2px; font-family: 'DejaVu Sans'; fill: #17202a" transform="translate(862.180125 84.498423)">K5120 + K17408 = 76.0% of decode GPU time</text>
     <text style="font-size: 9.2px; font-family: 'DejaVu Sans'; fill: #17202a" transform="translate(964.126187 94.800411)">+ MMAC GEMM = 84.0%</text>
    </g>
-   <g id="text_24">
+   <g id="text_27">
     <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17202a" x="56.468" y="18.72" transform="rotate(-0 56.468 18.72)">C  Decode — the two custom GEMV paths dominate every step</text>
    </g>
    <g id="legend_1">
@@ -3268,7 +3280,7 @@ L 64.388 49.910887
 z
 " style="fill: #e64b35"/>
     </g>
-    <g id="text_25">
+    <g id="text_28">
      <text style="font-size: 8.8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17202a" x="89.028" y="56.070887" transform="rotate(-0 89.028 56.070887)">K5120 GEMV</text>
     </g>
     <g id="patch_260">
@@ -3279,7 +3291,7 @@ L 163.58325 49.910887
 z
 " style="fill: #f39c34"/>
     </g>
-    <g id="text_26">
+    <g id="text_29">
      <text style="font-size: 8.8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17202a" x="188.22325" y="56.070887" transform="rotate(-0 188.22325 56.070887)">K17408 GEMV</text>
     </g>
     <g id="patch_261">
@@ -3290,7 +3302,7 @@ L 268.3775 49.910887
 z
 " style="fill: #7e57c2"/>
     </g>
-    <g id="text_27">
+    <g id="text_30">
      <text style="font-size: 8.8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17202a" x="293.0175" y="56.070887" transform="rotate(-0 293.0175 56.070887)">MMAC GEMM</text>
     </g>
     <g id="patch_262">
@@ -3301,7 +3313,7 @@ L 368.175 49.910887
 z
 " style="fill: #4c78a8"/>
     </g>
-    <g id="text_28">
+    <g id="text_31">
      <text style="font-size: 8.8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17202a" x="392.815" y="56.070887" transform="rotate(-0 392.815 56.070887)">Decode attention</text>
     </g>
     <g id="patch_263">
@@ -3312,7 +3324,7 @@ L 486.767375 49.910887
 z
 " style="fill: #009e73"/>
     </g>
-    <g id="text_29">
+    <g id="text_32">
      <text style="font-size: 8.8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17202a" x="511.407375" y="56.070887" transform="rotate(-0 511.407375 56.070887)">GDN recurrent</text>
     </g>
     <g id="patch_264">
@@ -3323,7 +3335,7 @@ L 592.557125 49.910887
 z
 " style="fill: #a7adb7"/>
     </g>
-    <g id="text_30">
+    <g id="text_33">
      <text style="font-size: 8.8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17202a" x="617.197125" y="56.070887" transform="rotate(-0 617.197125 56.070887)">Other</text>
     </g>
    </g>

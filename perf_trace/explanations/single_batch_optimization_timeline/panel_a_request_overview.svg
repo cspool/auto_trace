@@ -179,7 +179,7 @@ L 1090.964532 24.72
      </g>
     </g>
     <g id="text_9">
-     <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: middle" x="633.76" y="143.759229" transform="rotate(-0 633.76 143.759229)">Time from request begin (s)</text>
+     <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: middle" x="633.76" y="143.759229" transform="rotate(-0 633.76 143.759229)">Observed wall-clock coordinate from request begin (s); forward widths are display-scaled</text>
     </g>
    </g>
    <g id="matplotlib.axis_2">
@@ -569,13 +569,16 @@ L 1152.16 114.618839
     <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="169.501289" y="72.138253" transform="rotate(-0 169.501289 72.138253)">P1</text>
    </g>
    <g id="text_13">
-    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="222.254775" y="60.116897" transform="rotate(-0 222.254775 60.116897)">P2</text>
+    <text style="font-weight: 700; font-size: 5.8px; font-family: 'DejaVu Sans'; fill: #ffffff" transform="translate(173.150166 57.03371)">#2 P2 0.878s</text>
+    <text style="font-weight: 700; font-size: 5.8px; font-family: 'DejaVu Sans'; fill: #ffffff" transform="translate(186.616135 61.985958)">5.0%</text>
    </g>
    <g id="text_14">
-    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="273.49549" y="48.09554" transform="rotate(-0 273.49549 48.09554)">P3</text>
+    <text style="font-weight: 700; font-size: 5.8px; font-family: 'DejaVu Sans'; fill: #ffffff" transform="translate(224.390882 45.012354)">#3 P3 0.847s</text>
+    <text style="font-weight: 700; font-size: 5.8px; font-family: 'DejaVu Sans'; fill: #ffffff" transform="translate(237.856851 49.964602)">4.8%</text>
    </g>
    <g id="text_15">
-    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="327.065734" y="72.138253" transform="rotate(-0 327.065734 72.138253)">P4</text>
+    <text style="font-weight: 700; font-size: 5.8px; font-family: 'DejaVu Sans'; fill: #ffffff" transform="translate(277.961126 69.055066)">#1 P4 0.885s</text>
+    <text style="font-weight: 700; font-size: 5.8px; font-family: 'DejaVu Sans'; fill: #ffffff" transform="translate(291.427095 74.007315)">5.1%</text>
    </g>
    <g id="text_16">
     <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="383.191169" y="60.116897" transform="rotate(-0 383.191169 60.116897)">P5</text>
@@ -611,7 +614,7 @@ L 1152.16 114.618839
     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6b7280" x="1141.894653" y="110.656449" transform="rotate(-0 1141.894653 110.656449)">request span 17.463s (instrumented; not production E2E)</text>
    </g>
    <g id="text_27">
-    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #566573" x="1146.976" y="84.517944" transform="rotate(-0 1146.976 84.517944)">starts exact; rectangle widths 3x; zigzag = 1.80s display cap</text>
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #566573" x="1146.976" y="84.517944" transform="rotate(-0 1146.976 84.517944)">starts exact; widths 3x; zigzag = 1.80s cap; top3 = actual duration / % request</text>
    </g>
    <g id="text_28">
     <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17202a" x="115.36" y="18.72" transform="rotate(-0 115.36 18.72)">A  Observed end-to-end wall-clock positions</text>

@@ -163,7 +163,7 @@ L 972.653989 66.72
      </g>
     </g>
     <g id="text_9">
-     <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: middle" x="547.09" y="268.466161" transform="rotate(-0 547.09 268.466161)">Display-scaled segment width (3x actual ms; zigzag = 260ms display cap)</text>
+     <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: middle" x="547.09" y="268.466161" transform="rotate(-0 547.09 268.466161)">Display coordinate (3x duration before per-segment cap; zigzag = 260-unit cap)</text>
     </g>
    </g>
    <g id="matplotlib.axis_2">
@@ -724,24 +724,39 @@ L 1065.49 239.32577
 " style="fill: none; stroke: #485260; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
    </g>
    <g id="text_16">
-    <text style="font-size: 8.8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #374151" x="710.455158" y="86.283601" transform="rotate(-0 710.455158 86.283601)">kernel sum 914.8ms  |  direct GQA6</text>
+    <text style="font-weight: 700; font-size: 6.4px; font-family: 'DejaVu Sans'; fill: #ffffff" transform="translate(46.75171 82.141176)">#1 578.7ms</text>
+    <text style="font-weight: 700; font-size: 6.4px; font-family: 'DejaVu Sans'; fill: #ffffff" transform="translate(57.03271 89.307776)">63.3%</text>
    </g>
    <g id="text_17">
-    <text style="font-size: 8.8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #374151" x="687.566105" y="113.909365" transform="rotate(-0 687.566105 113.909365)">kernel sum 876.1ms  |  page784 main + tail + merge</text>
+    <text style="font-weight: 700; font-size: 6.4px; font-family: 'DejaVu Sans'; fill: #ffffff" transform="translate(46.75171 109.76694)">#3 578.3ms</text>
+    <text style="font-weight: 700; font-size: 6.4px; font-family: 'DejaVu Sans'; fill: #ffffff" transform="translate(57.03271 116.93354)">66.0%</text>
    </g>
    <g id="text_18">
-    <text style="font-size: 8.8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #374151" x="744.575714" y="141.535128" transform="rotate(-0 744.575714 141.535128)">kernel sum 927.1ms  |  page784 main + tail + merge</text>
+    <text style="font-weight: 700; font-size: 6.4px; font-family: 'DejaVu Sans'; fill: #ffffff" transform="translate(46.75171 137.392703)">#2 578.7ms</text>
+    <text style="font-weight: 700; font-size: 6.4px; font-family: 'DejaVu Sans'; fill: #ffffff" transform="translate(57.03271 144.559303)">62.4%</text>
    </g>
    <g id="text_19">
-    <text style="font-size: 8.8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #374151" x="744.134267" y="169.160892" transform="rotate(-0 744.134267 169.160892)">kernel sum 974.7ms  |  page784 main + tail + merge</text>
+    <text style="font-size: 8.8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #374151" x="710.455158" y="86.283601" transform="rotate(-0 710.455158 86.283601)">kernel sum 914.8ms  |  direct GQA6</text>
    </g>
    <g id="text_20">
-    <text style="font-size: 8.8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #374151" x="744.48834" y="196.786655" transform="rotate(-0 744.48834 196.786655)">kernel sum 1024.8ms  |  page784 main + tail + merge</text>
+    <text style="font-size: 8.8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #374151" x="687.566105" y="113.909365" transform="rotate(-0 687.566105 113.909365)">kernel sum 876.1ms  |  page784 main + tail + merge</text>
    </g>
    <g id="text_21">
-    <text style="font-size: 8.8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #374151" x="360.571807" y="224.412419" transform="rotate(-0 360.571807 224.412419)">kernel sum 158.8ms  |  direct GQA6</text>
+    <text style="font-size: 8.8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #374151" x="744.575714" y="141.535128" transform="rotate(-0 744.575714 141.535128)">kernel sum 927.1ms  |  page784 main + tail + merge</text>
    </g>
    <g id="text_22">
+    <text style="font-size: 8.8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #374151" x="744.134267" y="169.160892" transform="rotate(-0 744.134267 169.160892)">kernel sum 974.7ms  |  page784 main + tail + merge</text>
+   </g>
+   <g id="text_23">
+    <text style="font-size: 8.8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #374151" x="744.48834" y="196.786655" transform="rotate(-0 744.48834 196.786655)">kernel sum 1024.8ms  |  page784 main + tail + merge</text>
+   </g>
+   <g id="text_24">
+    <text style="font-size: 8.8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #374151" x="360.571807" y="224.412419" transform="rotate(-0 360.571807 224.412419)">kernel sum 158.8ms  |  direct GQA6</text>
+   </g>
+   <g id="text_25">
+    <text style="font-size: 7.8px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #566573" x="1060.306" y="58.839704" transform="rotate(-0 1060.306 58.839704)">top3 labels = actual ms | % of that row's kernel sum</text>
+   </g>
+   <g id="text_26">
     <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17202a" x="28.69" y="18.72" transform="rotate(-0 28.69 18.72)">B  Prefill chunks — kernel-time composition exposes the GQA6/page784 routing</text>
    </g>
    <g id="legend_1">
@@ -753,7 +768,7 @@ L 36.61 37.030096
 z
 " style="fill: #7e57c2"/>
     </g>
-    <g id="text_23">
+    <g id="text_27">
      <text style="font-size: 8.8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17202a" x="61.25" y="43.190096" transform="rotate(-0 61.25 43.190096)">MMAC GEMM</text>
     </g>
     <g id="patch_52">
@@ -764,7 +779,7 @@ L 36.61 49.946846
 z
 " style="fill: #009e73"/>
     </g>
-    <g id="text_24">
+    <g id="text_28">
      <text style="font-size: 8.8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17202a" x="61.25" y="56.106846" transform="rotate(-0 61.25 56.106846)">GDN recurrent</text>
     </g>
     <g id="patch_53">
@@ -775,7 +790,7 @@ L 142.39975 37.030096
 z
 " style="fill: #0072b2"/>
     </g>
-    <g id="text_25">
+    <g id="text_29">
      <text style="font-size: 8.8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17202a" x="167.03975" y="43.190096" transform="rotate(-0 167.03975 43.190096)">GQA6 direct</text>
     </g>
     <g id="patch_54">
@@ -786,7 +801,7 @@ L 142.39975 49.946846
 z
 " style="fill: #d55e00"/>
     </g>
-    <g id="text_26">
+    <g id="text_30">
      <text style="font-size: 8.8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17202a" x="167.03975" y="56.106846" transform="rotate(-0 167.03975 56.106846)">page784 main</text>
     </g>
     <g id="patch_55">
@@ -797,7 +812,7 @@ L 248.2005 37.030096
 z
 " style="fill: #f0c84b"/>
     </g>
-    <g id="text_27">
+    <g id="text_31">
      <text style="font-size: 8.8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17202a" x="272.8405" y="43.190096" transform="rotate(-0 272.8405 43.190096)">page784 tail</text>
     </g>
     <g id="patch_56">
@@ -808,7 +823,7 @@ L 248.2005 49.946846
 z
 " style="fill: #cc79a7"/>
     </g>
-    <g id="text_28">
+    <g id="text_32">
      <text style="font-size: 8.8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17202a" x="272.8405" y="56.106846" transform="rotate(-0 272.8405 56.106846)">page784 pack/merge</text>
     </g>
     <g id="patch_57">
@@ -819,7 +834,7 @@ L 384.34475 37.030096
 z
 " style="fill: #a7adb7"/>
     </g>
-    <g id="text_29">
+    <g id="text_33">
      <text style="font-size: 8.8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17202a" x="408.98475" y="43.190096" transform="rotate(-0 408.98475 43.190096)">Other</text>
     </g>
    </g>

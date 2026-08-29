@@ -334,6 +334,32 @@ def main() -> None:
     decode_values, decode_totals = stacked_values(
         decode_ids, kernels_by_forward, classify_decode, decode_categories
     )
+    top_prefill_rectangles = sorted(
+        (
+            (prefill_values[category][index], category, index)
+            for category in prefill_categories
+            for index in range(len(prefill_ids))
+            if prefill_values[category][index] > 0
+        ),
+        reverse=True,
+    )[:3]
+    top_prefill_ranks = {
+        (category, index): rank
+        for rank, (_, category, index) in enumerate(top_prefill_rectangles, start=1)
+    }
+    top_decode_rectangles = sorted(
+        (
+            (decode_values[category][index], category, index)
+            for category in decode_categories
+            for index in range(len(decode_ids))
+            if decode_values[category][index] > 0
+        ),
+        reverse=True,
+    )[:3]
+    top_decode_ranks = {
+        (category, index): rank
+        for rank, (_, category, index) in enumerate(top_decode_rectangles, start=1)
+    }
 
     plt.rcParams.update(
         {
@@ -395,13 +421,20 @@ def main() -> None:
     axis.axvspan(decode_begin, decode_end, color=COLORS["decode"], alpha=0.07, linewidth=0)
     forward_display_end = request_seconds
     forward_lane_y = [0.74, 0.97, 1.20]
+    top_forward_ids = {
+        forward_id: rank
+        for rank, forward_id in enumerate(
+            sorted(forwards, key=lambda item: forwards[item]["dur_us"], reverse=True)[:3],
+            start=1,
+        )
+    }
     for forward_id in range(1, 30):
         forward = forwards[forward_id]
         begin = forward["ts_us"] / 1_000_000.0
         duration = forward["dur_us"] / 1_000_000.0
         phase = "prefill" if forward["phase"] == "prefill_chunk" else forward["phase"]
         lane_y = forward_lane_y[(forward_id - 1) % len(forward_lane_y)]
-        visible_duration, _ = draw_scaled_rectangle(
+        visible_duration, folded = draw_scaled_rectangle(
             axis,
             start=begin,
             cross_start=lane_y,
@@ -413,20 +446,31 @@ def main() -> None:
             linewidth=0.7,
         )
         forward_display_end = max(forward_display_end, begin + visible_duration)
-        if forward_id <= 6:
+        if forward_id in top_forward_ids:
+            rank = top_forward_ids[forward_id]
+            label = (
+                f"#{rank} P{forward_id} {duration:.3f}s\n"
+                f"{forward['dur_us'] / request['dur_us'] * 100:.1f}%"
+            )
+        elif forward_id <= 6:
             label = f"P{forward_id}"
         else:
             decode_step = forward_id - 6
             label = f"D{decode_step}" if decode_step in {1, 5, 10, 15, 20, 23} else ""
         if label:
+            label_x = begin + visible_duration / 2
+            if forward_id in top_forward_ids and folded:
+                label_x = begin + visible_duration * 0.225
             axis.text(
-                begin + visible_duration / 2,
+                label_x,
                 lane_y + 0.095,
                 label,
                 ha="center",
                 va="center",
-                fontsize=8,
+                fontsize=5.8 if forward_id in top_forward_ids else 8,
                 color="white",
+                fontweight="bold" if forward_id in top_forward_ids else "normal",
+                linespacing=0.85,
                 zorder=3,
             )
 
@@ -449,7 +493,9 @@ def main() -> None:
     axis.set_xlim(0, forward_display_end * 1.01)
     axis.set_ylim(-0.02, 1.70)
     axis.set_yticks([0.27, 1.07], ["Strict GPU kernels", "Forward envelopes"])
-    axis.set_xlabel("Time from request begin (s)")
+    axis.set_xlabel(
+        "Observed wall-clock coordinate from request begin (s); forward widths are display-scaled"
+    )
     axis.set_title("A  Observed end-to-end wall-clock positions", loc="left", fontweight="bold")
     axis.text(
         (prefill_begin + prefill_end) / 2,
@@ -479,7 +525,7 @@ def main() -> None:
     axis.text(
         0.995,
         0.36,
-        "starts exact; rectangle widths 3x; zigzag = 1.80s display cap",
+        "starts exact; widths 3x; zigzag = 1.80s cap; top3 = actual duration / % request",
         transform=axis.transAxes,
         ha="right",
         va="center",
@@ -499,15 +545,30 @@ def main() -> None:
         for index, value in enumerate(values):
             if value <= 0:
                 continue
-            visible_width, _ = draw_scaled_rectangle(
+            segment_start = display_left[index]
+            visible_width, folded = draw_scaled_rectangle(
                 axis,
-                start=display_left[index],
+                start=segment_start,
                 cross_start=y[index] - 0.34,
                 duration=value,
                 thickness=0.68,
                 limit=B_RECTANGLE_LIMIT_MS,
                 color=COLORS[category],
             )
+            rank = top_prefill_ranks.get((category, index))
+            if rank is not None:
+                label_x = segment_start + visible_width * (0.225 if folded else 0.5)
+                axis.text(
+                    label_x,
+                    y[index],
+                    f"#{rank} {value:.1f}ms\n{value / prefill_totals[index] * 100:.1f}%",
+                    ha="center",
+                    va="center",
+                    fontsize=6.4,
+                    color="white",
+                    fontweight="bold",
+                    zorder=3,
+                )
             display_left[index] += visible_width
     max_prefill_display = max(display_left)
     for index, forward_id in enumerate(prefill_ids):
@@ -524,7 +585,7 @@ def main() -> None:
     axis.set_yticks(y, [f"P{forward_id}" for forward_id in prefill_ids])
     axis.invert_yaxis()
     axis.set_xlabel(
-        "Display-scaled segment width (3x actual ms; zigzag = 260ms display cap)"
+        "Display coordinate (3x duration before per-segment cap; zigzag = 260-unit cap)"
     )
     axis.set_title(
         "B  Prefill chunks — kernel-time composition exposes the GQA6/page784 routing",
@@ -540,6 +601,16 @@ def main() -> None:
         frameon=False,
         fontsize=8.8,
     )
+    axis.text(
+        0.995,
+        1.035,
+        "top3 labels = actual ms | % of that row's kernel sum",
+        transform=axis.transAxes,
+        ha="right",
+        va="bottom",
+        fontsize=7.8,
+        color="#566573",
+    )
     axis.grid(axis="x", color="#E5E7EB", linewidth=0.7)
     axis.spines[["top", "right"]].set_visible(False)
 
@@ -553,9 +624,10 @@ def main() -> None:
         for index, value in enumerate(values):
             if value <= 0:
                 continue
-            visible_height, _ = draw_scaled_rectangle(
+            segment_start = display_bottom[index]
+            visible_height, folded = draw_scaled_rectangle(
                 axis,
-                start=display_bottom[index],
+                start=segment_start,
                 cross_start=x[index] - 0.41,
                 duration=value,
                 thickness=0.82,
@@ -565,13 +637,28 @@ def main() -> None:
                 orientation="vertical",
                 linewidth=0.25,
             )
+            rank = top_decode_ranks.get((category, index))
+            if rank is not None:
+                label_y = segment_start + visible_height * (0.225 if folded else 0.5)
+                axis.text(
+                    x[index],
+                    label_y,
+                    f"#{rank} {value:.3f}ms\n{value / decode_totals[index] * 100:.1f}%",
+                    ha="center",
+                    va="center",
+                    fontsize=5.2,
+                    color="white",
+                    fontweight="bold",
+                    linespacing=0.85,
+                    zorder=3,
+                )
             display_bottom[index] += visible_height
     decode_mean = sum(decode_totals) / len(decode_totals)
     axis.text(
         0.55,
         max(display_bottom) * 1.055,
         f"actual trace mean {decode_mean:.2f}ms | modular production mean TPOT "
-        "40.80-42.64ms (separate benchmark)",
+        "40.80-42.64ms (separate benchmark) | top3 = actual ms / % step sum",
         ha="left",
         va="center",
         fontsize=8.2,
@@ -595,7 +682,7 @@ def main() -> None:
     axis.set_ylim(0, max(display_bottom) * 1.11)
     axis.set_xticks([1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23])
     axis.set_xlabel("Decode step")
-    axis.set_ylabel("Display-scaled height\n(9x actual ms; zigzag = 10ms cap)")
+    axis.set_ylabel("Display coordinate\n(9x duration; zigzag = 10-unit cap)")
     axis.set_title(
         "C  Decode — the two custom GEMV paths dominate every step",
         loc="left",
@@ -628,12 +715,20 @@ def main() -> None:
         "Other",
     ]
     y_positions = {category: len(zoom_categories) - index - 1 for index, category in enumerate(zoom_categories)}
+    top_zoom_ranks = {
+        (kernel["ts_us"], kernel["name"]): rank
+        for rank, kernel in enumerate(
+            sorted(zoom_kernels, key=lambda item: item["dur_us"], reverse=True)[:3],
+            start=1,
+        )
+    }
+    zoom_sum_us = sum(kernel["dur_us"] for kernel in zoom_kernels)
     zoom_display_tail_ms = 0.0
     for kernel in zoom_kernels:
         category = classify_zoom(kernel)
         begin_ms = (kernel["ts_us"] - zoom_layer["ts_us"]) / 1000.0
         duration_ms = kernel["dur_us"] / 1000.0
-        visible_duration, _ = draw_scaled_rectangle(
+        visible_duration, folded = draw_scaled_rectangle(
             axis,
             start=begin_ms,
             cross_start=y_positions[category] - 0.30,
@@ -645,6 +740,21 @@ def main() -> None:
             edgecolor="#263238",
             linewidth=0.35,
         )
+        rank = top_zoom_ranks.get((kernel["ts_us"], kernel["name"]))
+        if rank is not None:
+            label_x = begin_ms + visible_duration * (0.225 if folded else 0.5)
+            label_color = "#17202A" if category == "K17408 GEMV" else "white"
+            axis.text(
+                label_x,
+                y_positions[category],
+                f"#{rank} {kernel['dur_us'] / zoom_sum_us * 100:.1f}%",
+                ha="center",
+                va="center",
+                fontsize=5.6,
+                color=label_color,
+                fontweight="bold",
+                zorder=3,
+            )
         zoom_display_tail_ms = max(zoom_display_tail_ms, begin_ms + visible_duration)
         if duration_ms >= 0.012:
             short_name = category
@@ -675,7 +785,9 @@ def main() -> None:
         [y_positions[category] for category in zoom_categories],
         zoom_categories,
     )
-    axis.set_xlabel("Time from forward 10 / layer 0 begin (ms)")
+    axis.set_xlabel(
+        "Observed kernel-start coordinate from forward 10 / layer 0 begin (ms); widths display-scaled"
+    )
     axis.set_title(
         "D  Exact zoom — one observed decode layer (forward 10, layer 0)",
         loc="left",
@@ -685,7 +797,8 @@ def main() -> None:
         0.995,
         1.035,
         f"11 kernels; kernel sum {zoom_sum_ms:.3f}ms; layer envelope {zoom_envelope_ms:.3f}ms\n"
-        "Starts exact; widths 6x; zigzag = 0.36ms cap. Gaps are not a production idle-time claim.",
+        "Starts exact; widths 6x; zigzag = 0.36ms cap; top3 = % kernel sum. "
+        "Gaps are not a production idle-time claim.",
         transform=axis.transAxes,
         ha="right",
         va="bottom",
