@@ -94,6 +94,16 @@
       "#9C755F",
       "#BAB0AC"
     ],
-    "show_process_name_when_zoomed": true
+    "show_process_name_when_zoomed": true,
+    "rectangle_label_groups": [
+      "request",
+      "forward",
+      "layer",
+      "process",
+      "hip_runtime",
+      "gpu_queue",
+      "strict_owned_kernel"
+    ],
+    "show_all_timeline_labels_when_zoomed": true
   }
 }

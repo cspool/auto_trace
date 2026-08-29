@@ -93,7 +93,7 @@ EXPECTED_SKILL_TREE_SHA256 = {
         "20b17096e0d4cf1f349cda98365ffb2caf8551d3d525be39a9a84663df6dbba3"
     ),
     "qwen-dcu-workflow05-trace-visualization-reporting": (
-        "845742956f97d565693b60b9815a682caffbd5e8e264735e9b34d37c50d28e6b"
+        "39a09415144e2565f4488a7c3494f4e4f864a300a697ec0d0770190660359fe3"
     ),
 }
 EXPECTED_SKILL_FILES = ("SKILL.md", "agents/openai.yaml")
@@ -150,6 +150,15 @@ TOP_LATENCY_PROCESS_PALETTE = (
     "#FF9DA7",
     "#9C755F",
     "#BAB0AC",
+)
+TIMELINE_RECTANGLE_LABEL_GROUPS = (
+    "request",
+    "forward",
+    "layer",
+    "process",
+    "hip_runtime",
+    "gpu_queue",
+    "strict_owned_kernel",
 )
 REQUIRED_FEATURE_DIVERSITY_AXES = (
     "process_semantic_class",
@@ -349,6 +358,8 @@ DEFAULT_WORKFLOW05_USER_PARAMETERS: dict[str, Any] = {
         "top_latency_process_color_count": TOP_LATENCY_PROCESS_COLOR_COUNT,
         "top_latency_process_palette": list(TOP_LATENCY_PROCESS_PALETTE),
         "show_process_name_when_zoomed": True,
+        "rectangle_label_groups": list(TIMELINE_RECTANGLE_LABEL_GROUPS),
+        "show_all_timeline_labels_when_zoomed": True,
     },
 }
 ALLOWED_RANKING_METRICS = {
@@ -995,6 +1006,9 @@ def validate_timeline_visualization_contract(timeline: Any) -> None:
         and timeline.get("top_latency_process_palette")
         == list(TOP_LATENCY_PROCESS_PALETTE)
         and timeline.get("show_process_name_when_zoomed") is True
+        and timeline.get("rectangle_label_groups")
+        == list(TIMELINE_RECTANGLE_LABEL_GROUPS)
+        and timeline.get("show_all_timeline_labels_when_zoomed") is True
     )
     if not valid:
         raise SchedulerError("timeline_visualization contract is invalid")

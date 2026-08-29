@@ -80,13 +80,13 @@ class FreshBranchContractTests(unittest.TestCase):
         for index, goal in enumerate(payload["goals"]):
             self.assertEqual(goal["predecessors"], manifest["goals"][:index])
 
-    def test_r10_requires_top_latency_process_colors_and_zoom_labels(self) -> None:
+    def test_r10_requires_top_latency_process_colors_and_all_rectangle_labels(self) -> None:
         skill = (
             PROJECT_ROOT
             / "perf_trace/skills/qwen-dcu-workflow05-trace-visualization-reporting/SKILL.md"
         ).read_text(encoding="utf-8")
         required_contract = (
-            "## Top-Latency Process Colors and Labels",
+            "## Top-Latency Process Colors and All Rectangle Labels",
             "hiptx_end_ns - hiptx_begin_ns",
             "min(10, valid_process_count)",
             "#4E79A7 #F28E2B #E15759 #76B7B2 #59A14F",
@@ -94,6 +94,7 @@ class FreshBranchContractTests(unittest.TestCase):
             "top_latency_processes",
             "top_latency_process_colors_verified",
             "zoomed_process_labels_verified",
+            "all_timeline_rectangle_labels_verified",
         )
         for requirement in required_contract:
             with self.subTest(requirement=requirement):
@@ -116,11 +117,18 @@ class FreshBranchContractTests(unittest.TestCase):
             list(runner.TOP_LATENCY_PROCESS_PALETTE),
         )
         self.assertIs(timeline["show_process_name_when_zoomed"], True)
+        self.assertEqual(
+            timeline["rectangle_label_groups"],
+            list(runner.TIMELINE_RECTANGLE_LABEL_GROUPS),
+        )
+        self.assertIs(timeline["show_all_timeline_labels_when_zoomed"], True)
 
         for key, invalid in (
             ("top_latency_process_color_count", 9),
             ("top_latency_process_palette", ["#000000"] * 10),
             ("show_process_name_when_zoomed", False),
+            ("rectangle_label_groups", ["process"]),
+            ("show_all_timeline_labels_when_zoomed", False),
         ):
             changed = dict(timeline)
             changed[key] = invalid

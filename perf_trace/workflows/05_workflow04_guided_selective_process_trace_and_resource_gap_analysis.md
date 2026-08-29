@@ -225,7 +225,7 @@ JavaScript `Number` 后相减。
 - 总览可使用密度覆盖，但底层事件不得删除、合并或改写；
 - 放大后每条原始事件都可独立定位并显示精确字段。
 
-### Top 10 process 配色与矩形内名称
+### Top 10 process 配色与所有时间线矩形内名称
 
 生成器必须从完整 R09 `process_timeline` 按 observed HIPTX duration 降序确定前
 10 个 `process_range`，不能按当前视窗、筛选结果或 replay duration 排名。同长
@@ -238,11 +238,12 @@ kernel 保留原轨道底色并增加同色描边。页面必须提供常驻图�
 process 名、observed duration、process-duration share 和 request-span ratio；后者
 不能宣称为可相加的端到端归因。
 
-缩放、平移或改变窗口后，只要 process 矩形具备足够空间，就在矩形内部绘制可读
-的 process 名称。文字必须裁剪在矩形内；完整名称能放下时完整显示，否则显示可
-容纳的前缀和省略号，矩形过窄时不显示。无论是否显示内嵌文字，悬停或点击详情
-始终提供可复制的完整名称。R10 auditor 必须独立验证排名、十色映射、两个页面的
-一致性以及放大后的矩形内名称。
+缩放、平移或改变窗口后，request、forward、layer、process、HIP runtime、queue
+和 kernel 的每个矩形都必须在空间足够时绘制可读标签。process 使用完整
+`process_range`，其余轨道使用规范化事件标签。文字必须裁剪在矩形内；完整标签
+能放下时完整显示，否则显示可容纳的前缀和省略号，矩形过窄时不显示。无论是否
+显示内嵌文字，点击详情始终提供可复制的完整标签。R10 auditor 必须独立验证排名、
+十色映射、七类矩形标签、两个页面的一致性以及放大后的完整标签。
 
 ### 离线入口与证据语义
 

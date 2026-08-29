@@ -107,7 +107,7 @@ The maintained generator must consume all twelve entries in R09
 `normalized_tables`. It must fail if a table is absent or changed; it may not
 fall back to the former five-table summary contract.
 
-## Top-Latency Process Colors and Labels
+## Top-Latency Process Colors and All Rectangle Labels
 
 Make the ten largest observed process-latency contributors immediately
 distinguishable in both `E2E_PROCESS_TIMELINE.html` and
@@ -133,8 +133,11 @@ pages:
 
 Treat the scheduler-supplied `timeline_visualization` fields
 `top_latency_process_color_count`, `top_latency_process_palette`, and
-`show_process_name_when_zoomed` as immutable presentation requirements and
-fail if they disagree with this contract.
+`show_process_name_when_zoomed` as immutable presentation requirements. Also
+require `rectangle_label_groups` to equal request, forward, layer, process,
+HIP runtime, GPU queue and strict-owned kernel in that order, and require
+`show_all_timeline_labels_when_zoomed=true`. Fail if any field disagrees with
+this contract.
 
 Use the rank color as the fill for each selected process HIPTX interval. Keep
 the existing track/evidence fill semantics for its exact-owned HIP runtime,
@@ -143,14 +146,15 @@ in the same rank color. Match ownership only by exact `process_range`; never by
 substring, event proximity or time overlap. Non-top-ten processes retain the
 ordinary process color.
 
-Render the exact process name inside every process HIPTX rectangle whenever
-the current zoom makes enough horizontal and vertical space available. Measure
-text at draw time after every zoom, pan, filter and resize; clip all text to the
-rectangle. Show the full name when it fits, otherwise show the longest fitting
-prefix plus an ellipsis once the rectangle is wide enough for a useful label,
-and omit inline text when it is too narrow. Choose black or white label text
-from the rectangle-color luminance for readable contrast. The unshortened exact
-name must always remain available in hover/click details and be copyable.
+Render a semantic label inside every request, forward, layer, process HIPTX,
+HIP runtime, GPU queue and strict-owned kernel rectangle whenever the current
+zoom provides enough space. Use the exact process name for process rectangles
+and the exact normalized event label for every other group. Measure text after
+every zoom, pan, filter and resize; clip it to the rectangle. Show the full
+label when it fits, otherwise show the longest fitting prefix plus an ellipsis
+once the rectangle is wide enough for a useful label, and omit inline text when
+it is too narrow. Choose black or white text from the actual fill-color
+luminance. Keep the unshortened label in click details.
 
 Embed a `top_latency_processes` payload in both pages. Each entry must include
 the rank, exact process range, observed duration in integer nanoseconds, its
@@ -201,9 +205,12 @@ Independently verify:
   exact-owned runtime/queue/kernel rectangle exposes the matching outline or
   stripe, the color legend is visible, and non-selected processes retain the
   default process styling;
-- zooming each process rectangle until its exact name fits causes that name to
-  be rendered inside the clipped rectangle with contrast-safe text in both
-  timeline pages, while narrow rectangles do not leak labels into neighbors.
+- every request/forward/layer/process/runtime/queue/kernel group is declared as
+  a rectangle-label group in both pages and both manifests;
+- zooming any rectangle until its exact label fits renders that label inside
+  the clipped rectangle with contrast-safe text in both timeline pages, while
+  narrower rectangles show a fitting ellipsis label or no inline text without
+  leaking into neighbors.
 
 Write `offline_acceptance_manifest.json`:
 
@@ -252,7 +259,9 @@ Write `offline_acceptance_manifest.json`:
     "evidence_legends_complete": true,
     "top_latency_process_color_count": 10,
     "top_latency_process_colors_verified": true,
-    "zoomed_process_labels_verified": true
+    "zoomed_process_labels_verified": true,
+    "rectangle_label_groups": ["request", "forward", "layer", "process", "hip_runtime", "gpu_queue", "strict_owned_kernel"],
+    "all_timeline_rectangle_labels_verified": true
   }
 }
 ```
