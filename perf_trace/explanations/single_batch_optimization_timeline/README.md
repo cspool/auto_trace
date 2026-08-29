@@ -36,51 +36,77 @@ prefill 路由、decode 主成本，最后放大到一个 decode layer。
 [![子图 B：Prefill 路由组成](./panel_b_prefill_routes.png)](./panel_b_prefill_routes.svg)
 
 每根横柱对应一个 prefill forward，长度是该 forward 内 strict-owned kernel
-duration 的累加值。这里主要看两条 attention 路由：
+duration 的累加值。数字之间的关系如下：
 
-| 图中位置 | 实际路由 | 主要优化 |
-| --- | --- | --- |
-| `P1`、`P6` 的蓝色 `GQA6 direct` | Wide-causal GQA6 | 每个 CTA 处理 2 个 Q head，按 32-token Q block 只扫描可见的 56-token K/V tiles；仅用于 gfx936/BF16、head_dim=256、page=784、单序列且 q≥128 的 GQA6 prefill |
-| `P2–P5` 的橙/黄/粉色 | page784 `main / tail / pack+merge` | 将不能按 64 对齐的 784-token page 拆为 `768 main + 16 tail`，分别计算后用 FP32 log-sum-exp 合并，无需展开完整 KV cache |
-| 各柱中的紫色 | `MMAC GEMM` | M=4096 prefill linear 使用冻结的 TunableOp solution，作为 attention 之外的配套优化 |
+- **`GQA6 direct`（P1、P6）**：`GQA6` 表示 1 个 KV head 服务 6 个 Q heads；
+  `6=3 组×2 heads/CTA`。一个 CTA（GPU thread block）同时处理
+  `32 个 query 位置×2 heads=64 行`，
+  每个 64-token K/V tile 再分成 `2×32` 做数值更新。这组参数让 direct kernel
+  覆盖完整 GQA6，并在当前 Q block 的 causal 边界停止扫描未来 K/V。
+- **`page784`（P2–P5）**：`784=12×64+16`。前 `768` tokens 走 64 对齐的
+  paged attention，剩余 `16` tokens 打包后走 contiguous attention，最后用
+  FP32 log-sum-exp 合并。组合后可复用 64-token kernel，而不必展开完整 KV cache。
+- **`MMAC GEMM`（紫色）**：`M=4096` 是完整 prefill chunk 的 token 行数，
+  不是模型 hidden size；固定这一维后可直接复用已选好的 TunableOp solution。
+
+GQA6 direct 仅用于 gfx936/BF16、`head_dim=256`、`page=784`、单序列且
+`q≥128` 的长 prefill；这里 `256` 是每个 head 的特征宽度，`128` 是启用长
+query 路径的最小 query-token 数。其他情况回退原 attention 路径。
 
 `P6` 是较短的末尾 chunk，所以它明显更短；不能拿它与完整 chunk 的柱长相除，
 当作 GQA6 的加速倍数。
 
-对应的历史闭环结果（独立 benchmark）：H11.5 GQA6 prefill 相对 R24 的小样本
-TTFT 降幅，在 4–8K、8–16K、16–32K 三档分别为 `15.89%`、`20.47%`、
-`24.65%`。
+对应方向的历史闭环结果（独立 benchmark）：H11.5 GQA6 prefill 相对 R24 的
+小样本 TTFT 降幅，在 4–8K、8–16K、16–32K 三档分别为 `15.89%`、
+`20.47%`、`24.65%`。三档表示输入 token 长度；TTFT 是“请求到首 token”的
+时间，因此这些数字表示 prefill 后首 token 更早返回，不表示 decode 单 token
+快了同样比例。
 
 ## C. Decode：两条专用 GEMV 是主要优化落点
 
 [![子图 C：逐 token Decode 组成](./panel_c_decode_composition.png)](./panel_c_decode_composition.svg)
 
-每根柱代表一个 decode step。23 根柱的组成基本稳定，说明优化不是只偶然命中
-某一个 token：
+每根柱代表一个 decode step。这里 `K` 是每个输出值需要点积的输入长度，`M`
+是输出通道数，`n=1` 表示一次只计算 1 个 decode token；gfx936 的 1 个 wave
+包含 64 个并行 lanes：
 
-- 红色 `K5120 GEMV`：640 threads 各处理 8 个 K 元素，先合并两组
-  320-thread partials，再做 5-wave FP32 归约；`M=96` 每 CTA 算 4 行，其余
-  `M∈{14336,16384,34816,248320}` 每 CTA 算 2 行。
-- 橙色 `K17408 GEMV`：专用于 `[1,17408]→[1,5120]` MLP down projection；
-  每个输出行由一个 1024-thread CTA 完成 BF16 向量加载、双路 FP32 FMA 和
-  16-wave 归约。
-- 两者仅在 gfx936、BF16、单 token、无 bias、连续且 16-byte 对齐时启用；
-  其余 shape 回退原 GEMM。
-- 两条专用 GEMV 合计占本次 decode strict-owned GPU kernel 时间的 `76.0%`；
-  连同紫色 `MMAC GEMM` 后为 `84.0%`。单步 kernel 累加均值约 `41.574 ms`。
+- **`K5120 GEMV`（红色）**：`5120` 是模型 hidden width，且
+  `5120=640 threads×8 个 BF16 元素`，所以每个 thread 可一次覆盖一个 8 元素
+  chunk。`640=2×320`，两半的点积部分和配对后剩 `320=5 waves×64 lanes`
+  做 FP32 归约。`M=96` 是小 gate，CTA 一次算 4 行；较大的目标 M 一次算 2 行，其中
+  `34816=2×17408` 是 MLP gate/up，`248320` 是 LM-head 词表宽度。
+- **`K17408 GEMV`（橙色）**：`17408` 是 SwiGLU 后的 MLP intermediate
+  width；它完成 `[1,17408]→[1,5120]` down projection。每个输出行使用 1 个
+  1024-thread CTA，`1024=16 waves×64 lanes`，先做双路 FP32 FMA，再归约成
+  一个 BF16 输出。
+- **两条路径的组合**：MLP 的主链变为
+  `[1,5120] → [1,2×17408] →(SwiGLU) [1,17408] → [1,5120]`。第一步由
+  K5120/M34816 kernel 扩展 gate/up，最后一步由 K17408/M5120 kernel 收回
+  hidden width；组合后可覆盖单 token MLP 的两次大投影，而不是分别回退通用 GEMM。
+
+两者仅在 gfx936、BF16、单 token、无 bias、连续且 16-byte 对齐时启用；其余
+shape 回退原 GEMM。本次 trace 中两条 GEMV 占 decode kernel 累加时间的
+`76.0%`，加上 MMAC GEMM 为 `84.0%`；这是**时间组成占比**，不是加速比。
+`41.574 ms` 是 23 个 decode steps 的平均 kernel 累加值，也不是单步 wall-clock。
 
 因此，降低单 Batch TPOT 的首要目标很清楚：优先缩短反复出现在每个 token
 中的 K5120 和 K17408 投影，而不是只优化一次性的初始化工作。
 
-对应的历史闭环结果（独立 benchmark）：
+对应的历史闭环结果（独立 benchmark）如下。TPOT 是生成一个输出 token 的平均
+时间；吞吐是完整请求每秒生成的 token 数：
 
 | 对比 | 4–8K | 8–16K | 16–32K |
 | --- | ---: | ---: | ---: |
 | H10.8 K5120 GEMV 相对 H11.5：小样本 TPOT 降幅 | `5.23%` | `5.03%` | `4.91%` |
 | H11.5 + H10.8 相对 R24 full 均值：吞吐提升 | `6.744%` | `9.540%` | `13.724%` |
 
-组合版本完成 full×3，共 `450/450` 请求成功，TTFT/TPOT SLA 通过，固定
-accuracy 为 `K=1.0`。这些是本地闭环结果，不是平台官方分数。
+这里的 **H11.5 + H10.8** 特指在同一 build 中同时启用 GQA6 prefill 与
+K5120 decode 快路径：它能同时缩短首 token 等待和后续逐 token 生成。组合收益
+不能用两个降幅直接相加；表中的 full 吞吐提升是重新运行完整请求得到的联合结果。
+
+`full×3` 表示连续 3 轮完整测试，每轮 150 个请求；`450/450` 表示全部成功。
+TTFT/TPOT SLA 通过表示延迟未越过规定上限，accuracy `K=1.0` 表示固定精度
+评测没有扣分。这些是本地闭环结果，不是平台官方分数。
 
 ## D. 单层放大：确认优化 kernel 确实落在执行序列中
 
