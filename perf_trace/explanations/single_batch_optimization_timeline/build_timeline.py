@@ -49,7 +49,9 @@ COLORS = {
     "Other": "#A7ADB7",
 }
 
-RECTANGLE_SCALE = 3.0
+DEFAULT_RECTANGLE_SCALE = 3.0
+C_RECTANGLE_SCALE = 9.0
+D_RECTANGLE_SCALE = 6.0
 A_RECTANGLE_LIMIT_S = 1.80
 B_RECTANGLE_LIMIT_MS = 260.0
 C_RECTANGLE_LIMIT_MS = 10.0
@@ -65,13 +67,14 @@ def draw_scaled_rectangle(
     thickness: float,
     limit: float,
     color: str,
+    scale: float = DEFAULT_RECTANGLE_SCALE,
     orientation: str = "horizontal",
     edgecolor: str = "white",
     linewidth: float = 0.35,
     zorder: float = 2.0,
 ) -> tuple[float, bool]:
-    """Draw a 3x duration rectangle, folding capped spans into two blocks."""
-    scaled = duration * RECTANGLE_SCALE
+    """Scale a duration rectangle, folding capped spans into two blocks."""
+    scaled = duration * scale
     visible = min(scaled, limit)
     folded = scaled > limit
 
@@ -558,6 +561,7 @@ def main() -> None:
                 thickness=0.82,
                 limit=C_RECTANGLE_LIMIT_MS,
                 color=COLORS[category],
+                scale=C_RECTANGLE_SCALE,
                 orientation="vertical",
                 linewidth=0.25,
             )
@@ -591,7 +595,7 @@ def main() -> None:
     axis.set_ylim(0, max(display_bottom) * 1.11)
     axis.set_xticks([1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23])
     axis.set_xlabel("Decode step")
-    axis.set_ylabel("Display-scaled height\n(3x actual ms; zigzag = 10ms cap)")
+    axis.set_ylabel("Display-scaled height\n(9x actual ms; zigzag = 10ms cap)")
     axis.set_title(
         "C  Decode — the two custom GEMV paths dominate every step",
         loc="left",
@@ -637,6 +641,7 @@ def main() -> None:
             thickness=0.60,
             limit=D_RECTANGLE_LIMIT_MS,
             color=COLORS[category],
+            scale=D_RECTANGLE_SCALE,
             edgecolor="#263238",
             linewidth=0.35,
         )
@@ -680,7 +685,7 @@ def main() -> None:
         0.995,
         1.035,
         f"11 kernels; kernel sum {zoom_sum_ms:.3f}ms; layer envelope {zoom_envelope_ms:.3f}ms\n"
-        "Starts exact; widths 3x; zigzag = 0.36ms cap. Gaps are not a production idle-time claim.",
+        "Starts exact; widths 6x; zigzag = 0.36ms cap. Gaps are not a production idle-time claim.",
         transform=axis.transAxes,
         ha="right",
         va="bottom",
