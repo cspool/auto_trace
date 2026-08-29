@@ -107,6 +107,67 @@ The maintained generator must consume all twelve entries in R09
 `normalized_tables`. It must fail if a table is absent or changed; it may not
 fall back to the former five-table summary contract.
 
+## Top-Latency Process Colors and Labels
+
+Make the ten largest observed process-latency contributors immediately
+distinguishable in both `E2E_PROCESS_TIMELINE.html` and
+`E2E_PROCESS_TIMELINE_LOSSLESS.html`.
+
+Derive the ranking once, before rendering, from the complete immutable R09
+`process_timeline` table. For each valid row, use the exact non-replay HIPTX
+duration `hiptx_end_ns - hiptx_begin_ns`; sort by duration descending, then
+`hiptx_begin_ns` ascending and exact `process_range` ascending. Select
+`min(10, valid_process_count)` rows. Never rank from the current viewport,
+filtered rows, sampled events, kernel busy time, replay duration, or inferred
+traffic. If duplicate `process_range` rows exist, fail instead of silently
+merging them.
+
+Assign ranks 1 through 10 this fixed, color-blind-conscious palette in order so
+the mapping is deterministic across regeneration, filtering, zoom and both
+pages:
+
+```text
+#4E79A7 #F28E2B #E15759 #76B7B2 #59A14F
+#EDC948 #B07AA1 #FF9DA7 #9C755F #BAB0AC
+```
+
+Treat the scheduler-supplied `timeline_visualization` fields
+`top_latency_process_color_count`, `top_latency_process_palette`, and
+`show_process_name_when_zoomed` as immutable presentation requirements and
+fail if they disagree with this contract.
+
+Use the rank color as the fill for each selected process HIPTX interval. Keep
+the existing track/evidence fill semantics for its exact-owned HIP runtime,
+GPU queue and kernel intervals, but add a clearly visible outline or top stripe
+in the same rank color. Match ownership only by exact `process_range`; never by
+substring, event proximity or time overlap. Non-top-ten processes retain the
+ordinary process color.
+
+Render the exact process name inside every process HIPTX rectangle whenever
+the current zoom makes enough horizontal and vertical space available. Measure
+text at draw time after every zoom, pan, filter and resize; clip all text to the
+rectangle. Show the full name when it fits, otherwise show the longest fitting
+prefix plus an ellipsis once the rectangle is wide enough for a useful label,
+and omit inline text when it is too narrow. Choose black or white label text
+from the rectangle-color luminance for readable contrast. The unshortened exact
+name must always remain available in hover/click details and be copyable.
+
+Embed a `top_latency_processes` payload in both pages. Each entry must include
+the rank, exact process range, observed duration in integer nanoseconds, its
+share of the sum of all valid observed process durations, its ratio to the
+observed request span, and the assigned hex color. The two ratios must be
+separately named and the request-span ratio must carry the caveat that
+overlapping process intervals are not additive end-to-end attribution. Show
+the same information in a persistent ten-item color legend and in interval
+tooltips/details; long process names may be visually shortened only when the
+full exact name remains available via tooltip and copyable detail.
+
+The complete Perfetto-compatible trace must carry the rank, color and both
+ratios in event arguments for selected process-owned events without changing
+timestamps, categories, track IDs or event counts. Record the ranking policy,
+palette, selected mappings and denominator totals in
+`full_timeline_manifest.json` and `offline_acceptance_manifest.json`.
+
 Never call a structural Chrome JSON check an official Perfetto parse. If the
 official Python/CLI interfaces are unavailable, retain the compatible trace
 candidate and visibly label the self-contained Plotly/custom viewer. This is a
@@ -132,6 +193,17 @@ Independently verify:
 - regeneration from the same inputs is deterministic.
 - the lossless/full-trace event count and per-category counts reproduce the
   complete E2E payload without sampling.
+- the top-latency ranking independently reproduces the complete process table,
+  contains exactly `min(10, valid_process_count)` exact process ranges, uses ten
+  unique fixed palette colors in rank order, and agrees byte-for-byte across
+  both HTML payloads, the complete trace arguments and both manifests;
+- every selected process rectangle uses its assigned fill, every selected
+  exact-owned runtime/queue/kernel rectangle exposes the matching outline or
+  stripe, the color legend is visible, and non-selected processes retain the
+  default process styling;
+- zooming each process rectangle until its exact name fits causes that name to
+  be rendered inside the clipped rectangle with contrast-safe text in both
+  timeline pages, while narrow rectangles do not leak labels into neighbors.
 
 Write `offline_acceptance_manifest.json`:
 
@@ -177,7 +249,10 @@ Write `offline_acceptance_manifest.json`:
     "track_groups": ["request", "forward", "layer", "process", "hip_runtime", "gpu_queue", "strict_owned_kernel", "live_utilization", "hardware_attributes", "dependency", "opportunity"],
     "filters_search_zoom": true,
     "source_table_hashes_verified": true,
-    "evidence_legends_complete": true
+    "evidence_legends_complete": true,
+    "top_latency_process_color_count": 10,
+    "top_latency_process_colors_verified": true,
+    "zoomed_process_labels_verified": true
   }
 }
 ```

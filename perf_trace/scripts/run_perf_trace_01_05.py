@@ -93,7 +93,7 @@ EXPECTED_SKILL_TREE_SHA256 = {
         "20b17096e0d4cf1f349cda98365ffb2caf8551d3d525be39a9a84663df6dbba3"
     ),
     "qwen-dcu-workflow05-trace-visualization-reporting": (
-        "b9f202bb685a431f030f295fa42e1480437c9971b2c5de26f4712c3260b47798"
+        "845742956f97d565693b60b9815a682caffbd5e8e264735e9b34d37c50d28e6b"
     ),
 }
 EXPECTED_SKILL_FILES = ("SKILL.md", "agents/openai.yaml")
@@ -137,6 +137,19 @@ REQUIRED_LAYER2_TRACK_GROUPS = (
     "gpu_queue",
     "hardware_attributes",
     "evidence",
+)
+TOP_LATENCY_PROCESS_COLOR_COUNT = 10
+TOP_LATENCY_PROCESS_PALETTE = (
+    "#4E79A7",
+    "#F28E2B",
+    "#E15759",
+    "#76B7B2",
+    "#59A14F",
+    "#EDC948",
+    "#B07AA1",
+    "#FF9DA7",
+    "#9C755F",
+    "#BAB0AC",
 )
 REQUIRED_FEATURE_DIVERSITY_AXES = (
     "process_semantic_class",
@@ -333,6 +346,9 @@ DEFAULT_WORKFLOW05_USER_PARAMETERS: dict[str, Any] = {
         "hardware_counter_semantics": (
             "observed_se_active_cu_samples_plus_replay_projected_pmc"
         ),
+        "top_latency_process_color_count": TOP_LATENCY_PROCESS_COLOR_COUNT,
+        "top_latency_process_palette": list(TOP_LATENCY_PROCESS_PALETTE),
+        "show_process_name_when_zoomed": True,
     },
 }
 ALLOWED_RANKING_METRICS = {
@@ -962,6 +978,28 @@ def _validate_workflow05_gap_controls(
             )
 
 
+def validate_timeline_visualization_contract(timeline: Any) -> None:
+    """Fail closed when the single-batch timeline presentation policy drifts."""
+    valid = (
+        isinstance(timeline, dict)
+        and timeline.get("required") is True
+        and timeline.get("layer1_output") == "E2E_PROCESS_TIMELINE.html"
+        and timeline.get("layer1_timing_semantics")
+        == "observed_fresh_run_request_process_and_device_timeline"
+        and timeline.get("layer2_track_groups")
+        == list(REQUIRED_LAYER2_TRACK_GROUPS)
+        and timeline.get("hardware_counter_semantics")
+        == "observed_se_active_cu_samples_plus_replay_projected_pmc"
+        and timeline.get("top_latency_process_color_count")
+        == TOP_LATENCY_PROCESS_COLOR_COUNT
+        and timeline.get("top_latency_process_palette")
+        == list(TOP_LATENCY_PROCESS_PALETTE)
+        and timeline.get("show_process_name_when_zoomed") is True
+    )
+    if not valid:
+        raise SchedulerError("timeline_visualization contract is invalid")
+
+
 def resolve_user_parameters(
     project_root: Path,
     supplied: dict[str, Any],
@@ -1169,24 +1207,9 @@ def resolve_user_parameters(
             raise SchedulerError(
                 f"{key} must use policy={expected_policy} with value in [0, 1]"
             )
-    timeline = resolved.get("timeline_visualization")
-    timeline_common_valid = (
-        isinstance(timeline, dict)
-        and timeline.get("required") is True
-        and isinstance(timeline.get("layer1_output"), str)
-        and bool(timeline.get("layer1_output"))
-        and timeline.get("layer2_track_groups")
-        == list(REQUIRED_LAYER2_TRACK_GROUPS)
+    validate_timeline_visualization_contract(
+        resolved.get("timeline_visualization")
     )
-    timeline_valid = timeline_common_valid and (
-        timeline.get("layer1_output") == "E2E_PROCESS_TIMELINE.html"
-        and timeline.get("layer1_timing_semantics")
-        == "observed_fresh_run_request_process_and_device_timeline"
-        and timeline.get("hardware_counter_semantics")
-        == "observed_se_active_cu_samples_plus_replay_projected_pmc"
-    )
-    if not timeline_valid:
-        raise SchedulerError("timeline_visualization contract is invalid")
     _validate_workflow05_gap_controls(resolved, project_root=project_root)
     if resolved.get("dependency_adapter") is not None:
         raise SchedulerError(

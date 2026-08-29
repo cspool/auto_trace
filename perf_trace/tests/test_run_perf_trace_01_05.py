@@ -80,6 +80,56 @@ class FreshBranchContractTests(unittest.TestCase):
         for index, goal in enumerate(payload["goals"]):
             self.assertEqual(goal["predecessors"], manifest["goals"][:index])
 
+    def test_r10_requires_top_latency_process_colors_and_zoom_labels(self) -> None:
+        skill = (
+            PROJECT_ROOT
+            / "perf_trace/skills/qwen-dcu-workflow05-trace-visualization-reporting/SKILL.md"
+        ).read_text(encoding="utf-8")
+        required_contract = (
+            "## Top-Latency Process Colors and Labels",
+            "hiptx_end_ns - hiptx_begin_ns",
+            "min(10, valid_process_count)",
+            "#4E79A7 #F28E2B #E15759 #76B7B2 #59A14F",
+            "#EDC948 #B07AA1 #FF9DA7 #9C755F #BAB0AC",
+            "top_latency_processes",
+            "top_latency_process_colors_verified",
+            "zoomed_process_labels_verified",
+        )
+        for requirement in required_contract:
+            with self.subTest(requirement=requirement):
+                self.assertIn(requirement, skill)
+
+        config = json.loads(
+            (
+                PROJECT_ROOT
+                / "perf_trace/configs/workflow01_10_fresh_e2e_dcu1.json"
+            ).read_text(encoding="utf-8")
+        )
+        timeline = config["timeline_visualization"]
+        runner.validate_timeline_visualization_contract(timeline)
+        self.assertEqual(
+            timeline["top_latency_process_color_count"],
+            runner.TOP_LATENCY_PROCESS_COLOR_COUNT,
+        )
+        self.assertEqual(
+            timeline["top_latency_process_palette"],
+            list(runner.TOP_LATENCY_PROCESS_PALETTE),
+        )
+        self.assertIs(timeline["show_process_name_when_zoomed"], True)
+
+        for key, invalid in (
+            ("top_latency_process_color_count", 9),
+            ("top_latency_process_palette", ["#000000"] * 10),
+            ("show_process_name_when_zoomed", False),
+        ):
+            changed = dict(timeline)
+            changed[key] = invalid
+            with self.subTest(rejected_key=key):
+                with self.assertRaisesRegex(
+                    runner.SchedulerError, "timeline_visualization contract"
+                ):
+                    runner.validate_timeline_visualization_contract(changed)
+
 
 class FreshHandoffValidationTests(unittest.TestCase):
     def setUp(self) -> None:
