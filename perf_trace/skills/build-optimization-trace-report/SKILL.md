@@ -16,7 +16,11 @@ Read [references/report-contract.md](references/report-contract.md) before
 writing the report. Read
 [references/visualization-and-cta.md](references/visualization-and-cta.md) when
 the report contains timeline rectangles, folded shapes, numeric labels,
-process character art, or CTA arithmetic.
+process character art, or CTA arithmetic. Read
+[references/current-figure-reference.md](references/current-figure-reference.md)
+before creating or revising A–D-style figures; use it as the default visual
+size, typography, axis and content baseline unless the user requests a
+different presentation.
 
 ## Evidence Inputs
 
@@ -90,6 +94,15 @@ durations as data. If short rectangles are enlarged, treat that geometry as a
 display transform and label it. Use a broken two-block rectangle for capped
 long events. Label the top `K=5` rectangles independently within every
 timeline or vertical column unless the user specifies another `K`.
+
+Match the physical readability baseline in
+[references/current-figure-reference.md](references/current-figure-reference.md),
+not merely its data-coordinate constants. Keep axes, titles, legends,
+annotations and rectangle labels at their declared hierarchy. Every axis must
+name its quantity, unit and coordinate transform; every complete rectangle,
+including both blocks of a folded rectangle, must remain inside the displayed
+axis interval. After rendering, inspect both each panel and the combined image
+at normal reading size.
 
 The existing example
 `perf_trace/explanations/single_batch_optimization_timeline/build_timeline.py`

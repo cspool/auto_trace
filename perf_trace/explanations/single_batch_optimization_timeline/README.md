@@ -11,9 +11,27 @@ prefill 路由、decode 主成本，最后放大到一个 decode layer。
 > 横向放大 `6×`；超过各图显示上限的长块用折线断口拼接两个矩形表示。A/D
 > 的起点和所有文字数字仍是真实观测值；B/C 的矩形长度是显示尺度，不能越过
 > 折线按坐标反推真实时长或占比。
+> 导出画布、坐标轴和块内文字已同步放大；A/B/D 的矩形通过各自纵轴范围和面板
+> 高度动态换算为完全相同的物理高度，并在统一后整体增高 `25%`；A 的 strict
+> 时间带为新高度的 `1/2`；C 的
+> 柱宽单独放大。上述时长显示倍率不变，轴域由放大后的矩形边界重新计算，因此物理尺寸
+> 变大不会改变数字、比例或折线断口的含义。
+> A/D 的轴刻度定位真实起点，右边界为
+> `起点 + min(倍率×真实时长, cap)`；B/C 是累计显示坐标，后一块边界等于前一
+> 边界加 `min(倍率×该块真实时长, cap)`。因此折线后的边界是显示边界，不是
+> 可直接读取的真实结束时间。
+> 左下角坐标值只标每条时间线或每根柱内按真实 duration 排名最大的 3 个矩形：
+> A/D 标混合轴上的真实 start，B/C 标累计显示轴上的左/下边界。D 的数字从块内
+> 移到对应边界外侧；折叠矩形不再标锯齿两侧或右/上边界。
+> 矩形内主标签保持单行水平显示，固定字号在上一版基础上扩大 `2×`；边界坐标
+> 数字为前一版字号的 `2/3`。生成时按最终像素检查，无法在对应可见块内水平容纳的主
+> 标签不显示，不换行、不旋转，也不允许文字越过矩形边界。Top‑3 左下角坐标
+> 数字保持放大显示。
+> 相邻时间线/柱之间保留更大的空白间距，并同步扩大画布，避免间距增加后压缩
+> 矩形。矩形边界坐标值也使用放大字号。
 >
-> “前 5”在每条线/每根柱内独立计算：A 的每条 forward 子时间线、B 的每条
-> prefill 横柱、C 的每根 decode 竖柱、D 的每条 kernel 类别时间线分别标出
+> “前 5”块内主标签在每条线/每根柱内独立计算：A 的每条 forward 子时间线、B 的每条
+> prefill 横柱、C 的每根三步均值竖柱、D 的每条 kernel 类别时间线分别标出
 > duration 最大的 5 个矩形（不足 5 个则全部标）。块内百分比的分母是该线或
 > 该柱的真实 duration 总和，不由放大后的矩形面积计算。
 
@@ -28,12 +46,28 @@ prefill 路由、decode 主成本，最后放大到一个 decode layer。
 
 [![子图 A：请求级时间线](./panel_a_request_overview.png)](./panel_a_request_overview.svg)
 
+**坐标轴含义**：横轴是混合显示坐标，矩形左边界取真实 request-relative
+forward 起点，右边界为 `起点 + min(3×真实时长, 1.80 s)`；因此刻度可读取
+真实起点，但放大后的右边界不是 forward 的真实结束时间。纵轴是分类轨道：
+上方三条子时间线放 forward envelope（一次 forward 从观测开始到结束的
+wall-clock 包络），下方时间带放 strict-owned GPU
+kernel 的真实起止位置；strict 时间线高度是上方每条 forward 矩形的 `1/2`。
+三条 envelope 轨道仅按 forward 编号轮流排布以避免矩形遮挡，不表示三路并发；
+并发关系不能由这三条显示轨道推断。图内显示规则和 request span 统一放在图的
+最下方，字号与坐标轴标签一致；A 的纵轴轨道名按短行纵向堆叠，以减少左侧占宽。
+
 怎么看：
 
 - 上排矩形是 29 次 forward：橙色 `P1–P6` 是 6 个分块 prefill，蓝色
-  `D1–D23` 是 23 个逐 token decode。
-- 下排短线是这些 forward 归属到的 strict-owned GPU kernels，用来确认 GPU
-  工作实际落在什么位置。
+  `D1–D23` 是 23 个逐 token decode forward envelope，不是单个 kernel。
+  每个矩形右上角统一标注 forward ID：`P1–P6` 是 prefill chunk ID，`D1–D23`
+  是 decode step ID；字号与左下角坐标数字相同。这些 ID 不是时长、排名或
+  kernel 数量。
+  `D*` 看起来较宽，是因为图中宽度使用 `3×真实 forward 时长`，并在 `1.80 s`
+  达到显示上限后折叠：本 trace 的真实时长为 `0.460–0.601 s`，显示宽度为
+  `1.381–1.800 s`。实际起点仍由横轴读取，显示右边界不是实际结束时间。
+- 下排 strict 时间带由这些 forward 归属的 strict-owned GPU kernels 组成，用来
+  确认 GPU 工作实际落在什么位置；其横向起止仍使用真实 trace 坐标。
 - 本次观测中，prefill span 约 `5.692 s`，decode span 约 `11.678 s`，请求
   span 约 `17.463 s`。
 
@@ -44,6 +78,11 @@ prefill 路由、decode 主成本，最后放大到一个 decode layer。
 ## B. Prefill：GQA6 与 page784 分别处理不同 chunk
 
 [![子图 B：Prefill 路由组成](./panel_b_prefill_routes.png)](./panel_b_prefill_routes.svg)
+
+**坐标轴含义**：横轴是每个 prefill 行内部的累计显示坐标，每个块满足
+`右边界 = 左边界 + min(3×真实 kernel duration(ms), 260)`；横轴刻度、块边界
+旁数字和折叠断口均使用同一显示单位。纵轴是 6 个 prefill forward/chunk 的
+分类编号 `P1–P6`，不是连续时间。
 
 每根横柱对应一个 prefill forward，各颜色来自该 forward 内 strict-owned kernel
 duration 的累加；矩形按上述 `3×` 显示规则绘制，右侧 `kernel sum` 是真实总时长。
@@ -145,7 +184,16 @@ query 路径的最小 query-token 数。其他情况回退原 attention 路径�
 
 [![子图 C：逐 token Decode 组成](./panel_c_decode_composition.png)](./panel_c_decode_composition.svg)
 
-每根柱代表一个 decode step。这里 `K` 是每个输出值需要点积的输入长度，`M`
+**坐标轴含义**：横轴把连续 3 个 decode step 合为一组，显示 `1–3`、`4–6`
+等 8 组（最后一组为 `22–23`）；纵轴是每根组均值柱内部的累计显示坐标，每段满足
+`上边界 = 下边界 + min(9×真实 kernel duration(ms), 10)`。纵轴刻度和矩形
+边界数字均为显示坐标。每段的真实 duration 是该组 2–3 个 step 的算术平均；
+每根组均值柱按平均 duration 独立选 Top‑5，块内写 `#排名 + 平均时长(ms)`，
+平均时长保留小数点后 3 位，排名不使用放大后的矩形高度。C 面板物理高度增加
+`25%`，折叠锯齿同时加粗并扩大横向振幅，断口只表示超过显示 cap。
+
+每根柱代表一组相邻且组成基本相同的 decode step，而不是将某一个 step 重复
+三次。这里 `K` 是每个输出值需要点积的输入长度，`M`
 是输出通道数，`n=1` 表示一次只计算 1 个 decode token；gfx936 的 1 个 wave
 包含 64 个并行 lanes：
 
@@ -254,12 +302,21 @@ TTFT/TPOT SLA 通过表示延迟未越过规定上限，accuracy `K=1.0` 表示�
 
 [![子图 D：一个 Decode layer 的 kernel 精确位置](./panel_d_decode_layer_zoom.png)](./panel_d_decode_layer_zoom.svg)
 
-D 只放大 `forward 10 / layer 0`。横轴是相对该 layer 开始的时间，纵轴按
-kernel 类别分行，因此能直接看到 K5120、K17408、MMAC GEMM、GDN recurrent
-以及 RMS/copy 在一次真实 layer 中的启动位置。
+**坐标轴含义**：D 中所有时间统一使用 `us`。横轴是混合显示坐标，矩形左边界
+为相对该 layer 起点的真实 kernel start，右边界为
+`start + min(6×真实 duration, 360 us)`；所以刻度
+定位真实启动位置，不能把放大后的右边界当成真实完成时间。纵轴是 strict-owned
+kernel 类别，不表示连续数值。
+
+D 只放大 `forward 10 / layer 0`。横轴用相对该 layer 开始的真实启动坐标定位
+每个矩形左边界，再用显示倍率画宽度；纵轴按 kernel 类别分行，因此能直接看到
+K5120、K17408、MMAC GEMM、GDN recurrent 以及 RMS/copy 在一次真实 layer
+中的启动位置。图名统一声明所有时间单位均为 `us`；kernel 类别、行内
+排名和真实 duration 全部放在矩形上方或下方，启动坐标数字放到矩形另一侧，
+矩形内部不显示文本。
 
 这个样本包含 11 个 strict-owned kernels：kernel duration 累加约
-`0.601 ms`，layer annotation envelope 约 `4.794 ms`。D 的用途是验证“专用
+`601 us`，layer annotation envelope 约 `4794 us`。D 的用途是验证“专用
 kernel 已进入目标执行路径”，不是把矩形之间的空隙解释成性能损失。空隙还可能
 包含 eager、runtime、异步执行与 tracing 影响，不能称为生产 GPU idle。
 
@@ -284,4 +341,7 @@ python perf_trace/explanations/single_batch_optimization_timeline/build_timeline
 ```
 
 脚本会同时生成完整总览图和 A–D 四组独立的 PNG/SVG，文档默认显示 PNG，点击
-后可打开 SVG 无损放大。
+后可打开 SVG 无损放大。当前图的矩形物理尺寸、字体层级、坐标轴语义和面板必备
+内容已固化为
+[`build-optimization-trace-report` 视觉参考规范](../../skills/build-optimization-trace-report/references/current-figure-reference.md)，
+用于生成其他 trace 报告时复用；其中当前 trace 的倍率和 cap 仅作为示例参数。

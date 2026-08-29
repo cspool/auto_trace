@@ -55,7 +55,19 @@ D_RECTANGLE_SCALE = 6.0
 A_RECTANGLE_LIMIT_S = 1.80
 B_RECTANGLE_LIMIT_MS = 260.0
 C_RECTANGLE_LIMIT_MS = 10.0
-D_RECTANGLE_LIMIT_MS = 0.36
+D_RECTANGLE_LIMIT_US = 360.0
+
+# Physical readability scale. Duration transforms above remain unchanged so
+# the displayed geometry keeps the documented coordinate meaning.
+FIGURE_SIZE_IN = (32.0, 67.5)
+A_FORWARD_THICKNESS = 0.425
+A_LANE_SPACING = 0.50
+B_ROW_SPACING = 1.35
+C_BAR_WIDTH = 1.20
+C_COLUMN_SPACING = 1.65
+D_ROW_SPACING = 1.35
+LOWER_LEFT_COORDINATE_FONT_SCALE = 2.0 / 3.0
+STRICT_LANE_HEIGHT_SCALE = 0.5
 
 
 def draw_scaled_rectangle(
@@ -71,6 +83,8 @@ def draw_scaled_rectangle(
     orientation: str = "horizontal",
     edgecolor: str = "white",
     linewidth: float = 0.35,
+    fold_linewidth: float | None = None,
+    fold_amplitude_fraction: float = 0.22,
     zorder: float = 2.0,
 ) -> tuple[float, bool]:
     """Scale a duration rectangle, folding capped spans into two blocks."""
@@ -111,8 +125,16 @@ def draw_scaled_rectangle(
         y0 = cross_start + thickness / 2.0
         axis.plot(
             [x0, x0 + gap * 0.25, x0 + gap * 0.50, x0 + gap * 0.75, x0 + gap],
-            [y0, y0 + thickness * 0.22, y0 - thickness * 0.22, y0 + thickness * 0.22, y0],
-            color="#263238", linewidth=max(0.7, linewidth), zorder=zorder + 0.2,
+            [
+                y0,
+                y0 + thickness * fold_amplitude_fraction,
+                y0 - thickness * fold_amplitude_fraction,
+                y0 + thickness * fold_amplitude_fraction,
+                y0,
+            ],
+            color="#263238",
+            linewidth=fold_linewidth if fold_linewidth is not None else max(0.7, linewidth),
+            zorder=zorder + 0.2,
             solid_capstyle="round", clip_on=True,
         )
     else:
@@ -131,12 +153,106 @@ def draw_scaled_rectangle(
         x0 = cross_start + thickness / 2.0
         y0 = start + block
         axis.plot(
-            [x0, x0 + thickness * 0.22, x0 - thickness * 0.22, x0 + thickness * 0.22, x0],
+            [
+                x0,
+                x0 + thickness * fold_amplitude_fraction,
+                x0 - thickness * fold_amplitude_fraction,
+                x0 + thickness * fold_amplitude_fraction,
+                x0,
+            ],
             [y0, y0 + gap * 0.25, y0 + gap * 0.50, y0 + gap * 0.75, y0 + gap],
-            color="#263238", linewidth=max(0.7, linewidth), zorder=zorder + 0.2,
+            color="#263238",
+            linewidth=fold_linewidth if fold_linewidth is not None else max(0.7, linewidth),
+            zorder=zorder + 0.2,
             solid_capstyle="round", clip_on=True,
         )
     return visible, True
+
+
+def assert_axis_contains_rectangles(
+    axis: plt.Axes,
+    *,
+    panel: str,
+    x_bounds: tuple[float, float],
+    y_bounds: tuple[float, float],
+) -> None:
+    """Fail if the declared rectangle envelope falls outside the data axes."""
+    x_min, x_max = sorted(axis.get_xlim())
+    y_min, y_max = sorted(axis.get_ylim())
+    rect_x_min, rect_x_max = sorted(x_bounds)
+    rect_y_min, rect_y_max = sorted(y_bounds)
+    tolerance = 1e-9
+    if rect_x_min < x_min - tolerance or rect_x_max > x_max + tolerance:
+        raise RuntimeError(
+            f"Panel {panel} rectangle x bounds {x_bounds} exceed axis bounds {axis.get_xlim()}"
+        )
+    if rect_y_min < y_min - tolerance or rect_y_max > y_max + tolerance:
+        raise RuntimeError(
+            f"Panel {panel} rectangle y bounds {y_bounds} exceed axis bounds {axis.get_ylim()}"
+        )
+
+
+def data_height_points(axis: plt.Axes, figure: plt.Figure, data_height: float) -> float:
+    """Convert a vertical data-axis height to physical points."""
+    y_span = abs(axis.get_ylim()[1] - axis.get_ylim()[0])
+    return (
+        data_height
+        / y_span
+        * axis.get_position().height
+        * figure.get_figheight()
+        * 72.0
+    )
+
+
+def data_height_for_points(axis: plt.Axes, figure: plt.Figure, points: float) -> float:
+    """Return the data-axis height needed for an exact physical point height."""
+    y_span = abs(axis.get_ylim()[1] - axis.get_ylim()[0])
+    return points / 72.0 / figure.get_figheight() / axis.get_position().height * y_span
+
+
+def label_lower_left_coordinate(
+    axis: plt.Axes,
+    *,
+    x: float,
+    y: float,
+    text: str,
+    fontsize: float,
+) -> None:
+    """Place one enlarged display-coordinate value at a rectangle's lower-left."""
+    axis.annotate(
+        text,
+        xy=(x, y),
+        xytext=(3.0, 3.0),
+        textcoords="offset points",
+        ha="left",
+        va="bottom",
+        fontsize=fontsize * LOWER_LEFT_COORDINATE_FONT_SCALE,
+        color="#263238",
+        bbox={"boxstyle": "square,pad=0.06", "facecolor": "white", "edgecolor": "none", "alpha": 0.82},
+        clip_on=True,
+        zorder=3.3,
+    )
+
+
+def hide_overflowing_rectangle_texts(
+    figure: plt.Figure,
+    entries: list[tuple[plt.Axes, object, float, float]],
+) -> int:
+    """Hide one-line labels that do not fit their visible rectangle block."""
+    figure.canvas.draw()
+    renderer = figure.canvas.get_renderer()
+    hidden = 0
+    for axis, artist, rectangle_width, rectangle_height in entries:
+        origin = axis.transData.transform((0.0, 0.0))
+        width_point = axis.transData.transform((rectangle_width, 0.0))
+        height_point = axis.transData.transform((0.0, rectangle_height))
+        width_pixels = abs(width_point[0] - origin[0])
+        height_pixels = abs(height_point[1] - origin[1])
+        bbox = artist.get_window_extent(renderer=renderer)
+        if bbox.width > width_pixels * 0.92 or bbox.height > height_pixels * 0.88:
+            artist.set_visible(False)
+            hidden += 1
+    return hidden
 
 
 def input_id(process: str) -> int | None:
@@ -282,7 +398,7 @@ def save_individual_panels(figure, panels: dict[str, plt.Axes]) -> None:
             bbox_inches = panel_axis.get_tightbbox(renderer).transformed(
                 figure.dpi_scale_trans.inverted()
             )
-            bbox_inches = bbox_inches.padded(0.12)
+            bbox_inches = bbox_inches.padded(0.20)
             output_base = PANEL_OUTPUTS[panel_id]
             figure.savefig(
                 output_base.with_suffix(".png"),
@@ -334,6 +450,21 @@ def main() -> None:
     decode_values, decode_totals = stacked_values(
         decode_ids, kernels_by_forward, classify_decode, decode_categories
     )
+    decode_group_indices = [
+        list(range(start, min(start + 3, len(decode_ids))))
+        for start in range(0, len(decode_ids), 3)
+    ]
+    decode_group_labels = [
+        f"{indices[0] + 1}-{indices[-1] + 1}"
+        for indices in decode_group_indices
+    ]
+    decode_group_values = {
+        category: [
+            sum(decode_values[category][index] for index in indices) / len(indices)
+            for indices in decode_group_indices
+        ]
+        for category in decode_categories
+    }
     top_prefill_ranks: dict[tuple[str, int], int] = {}
     for index in range(len(prefill_ids)):
         ranked = sorted(
@@ -348,12 +479,12 @@ def main() -> None:
             top_prefill_ranks[(category, index)] = rank
 
     top_decode_ranks: dict[tuple[str, int], int] = {}
-    for index in range(len(decode_ids)):
+    for index in range(len(decode_group_indices)):
         ranked = sorted(
             (
-                (decode_values[category][index], category)
+                (decode_group_values[category][index], category)
                 for category in decode_categories
-                if decode_values[category][index] > 0
+                if decode_group_values[category][index] > 0
             ),
             reverse=True,
         )[:5]
@@ -363,11 +494,18 @@ def main() -> None:
     plt.rcParams.update(
         {
             "font.family": "DejaVu Sans",
-            "font.size": 10.5,
-            "axes.titlesize": 13,
-            "axes.labelsize": 10.5,
+            "font.size": 16.5,
+            "axes.titlesize": 22,
+            "axes.labelsize": 20,
+            "axes.labelweight": "semibold",
             "axes.edgecolor": "#485260",
-            "axes.linewidth": 0.8,
+            "axes.linewidth": 2.2,
+            "xtick.labelsize": 18,
+            "ytick.labelsize": 18,
+            "xtick.major.width": 2.0,
+            "ytick.major.width": 2.0,
+            "xtick.major.size": 8.0,
+            "ytick.major.size": 8.0,
             "xtick.color": "#374151",
             "ytick.color": "#374151",
             "text.color": "#17202A",
@@ -378,12 +516,12 @@ def main() -> None:
         }
     )
 
-    figure = plt.figure(figsize=(16, 15.5), constrained_layout=False)
+    figure = plt.figure(figsize=FIGURE_SIZE_IN, constrained_layout=False)
     grid = figure.add_gridspec(
         4,
         1,
-        height_ratios=[1.25, 2.4, 2.5, 2.35],
-        hspace=0.76,
+        height_ratios=[1.65, 2.75, 4.75, 2.85],
+        hspace=0.86,
         top=0.925,
         bottom=0.065,
         left=0.075,
@@ -391,7 +529,7 @@ def main() -> None:
     )
     figure.suptitle(
         "Single-request optimization timeline — bh408 observed trace",
-        fontsize=19,
+        fontsize=25,
         fontweight="bold",
         x=0.075,
         ha="left",
@@ -401,12 +539,13 @@ def main() -> None:
         0.075,
         0.947,
         "Existing trace only; 6 chunked-prefill forwards + 23 decode forwards, BF16 / TP=1 / eager instrumentation",
-        fontsize=11,
+        fontsize=14.5,
         color="#566573",
         ha="left",
     )
 
     panels: dict[str, plt.Axes] = {}
+    rectangle_texts: list[tuple[plt.Axes, object, float, float]] = []
 
     # A. Exact request-level wall-clock positions.
     axis = figure.add_subplot(grid[0])
@@ -419,7 +558,7 @@ def main() -> None:
     axis.axvspan(prefill_begin, prefill_end, color=COLORS["prefill"], alpha=0.08, linewidth=0)
     axis.axvspan(decode_begin, decode_end, color=COLORS["decode"], alpha=0.07, linewidth=0)
     forward_display_end = request_seconds
-    forward_lane_y = [0.74, 0.97, 1.20]
+    forward_lane_y = [0.92 + lane * A_LANE_SPACING for lane in range(3)]
     forward_lane_ids = {
         lane: [
             forward_id
@@ -448,38 +587,64 @@ def main() -> None:
         visible_duration, folded = draw_scaled_rectangle(
             axis,
             start=begin,
-            cross_start=lane_y,
+            cross_start=lane_y - A_FORWARD_THICKNESS / 2.0,
             duration=duration,
-            thickness=0.19,
+            thickness=A_FORWARD_THICKNESS,
             limit=A_RECTANGLE_LIMIT_S,
             color=COLORS[phase],
             edgecolor="white",
             linewidth=0.7,
         )
+        lane = (forward_id - 1) % len(forward_lane_y)
+        if top_forward_ids.get(forward_id, 99) <= 3:
+            label_lower_left_coordinate(
+                axis,
+                x=begin,
+                y=lane_y - A_FORWARD_THICKNESS / 2.0,
+                text=f"{begin:.2f}",
+                fontsize=23.0,
+            )
+        forward_id_label = f"P{forward_id}" if forward_id <= 6 else f"D{forward_id - 6}"
+        axis.annotate(
+            forward_id_label,
+            xy=(
+                begin + visible_duration,
+                lane_y + A_FORWARD_THICKNESS / 2.0,
+            ),
+            xytext=(-3.0, -3.0),
+            textcoords="offset points",
+            ha="right",
+            va="top",
+            fontsize=23.0 * LOWER_LEFT_COORDINATE_FONT_SCALE,
+            color="#17202A" if phase == "prefill" else "white",
+            fontweight="normal",
+            clip_on=True,
+            zorder=3.2,
+        )
         forward_display_end = max(forward_display_end, begin + visible_duration)
         if forward_id in top_forward_ids:
             rank = top_forward_ids[forward_id]
-            lane = (forward_id - 1) % len(forward_lane_y)
             label = f"#{rank} {forward['dur_us'] / forward_lane_totals[lane] * 100:.1f}%"
-        elif forward_id <= 6:
-            label = f"P{forward_id}"
         else:
-            decode_step = forward_id - 6
-            label = f"D{decode_step}" if decode_step in {1, 5, 10, 15, 20, 23} else ""
+            label = ""
         if label:
             label_x = begin + visible_duration / 2
             if forward_id in top_forward_ids and folded:
                 label_x = begin + visible_duration * 0.225
-            axis.text(
+            text_artist = axis.text(
                 label_x,
-                lane_y + 0.095,
+                lane_y,
                 label,
                 ha="center",
                 va="center",
-                fontsize=5.8 if forward_id in top_forward_ids else 8,
+                fontsize=26.0,
                 color="white",
-                fontweight="bold" if forward_id in top_forward_ids else "normal",
+                fontweight="normal",
                 zorder=3,
+            )
+            text_block_width = visible_duration * (0.45 if folded else 1.0)
+            rectangle_texts.append(
+                (axis, text_artist, text_block_width, A_FORWARD_THICKNESS)
             )
 
     prefill_segments = []
@@ -487,27 +652,48 @@ def main() -> None:
     for kernel in kernels:
         start = kernel["ts_us"] / 1_000_000.0
         end = (kernel["ts_us"] + kernel["dur_us"]) / 1_000_000.0
-        segment = [(start, 0.27), (end, 0.27)]
+        segment = [(start, 0.30), (end, 0.30)]
         if kernel["forward"] <= 6:
             prefill_segments.append(segment)
         else:
             decode_segments.append(segment)
-    axis.add_collection(
-        LineCollection(prefill_segments, colors=COLORS["prefill"], linewidths=3.6, rasterized=True)
+    prefill_kernel_collection = LineCollection(
+        prefill_segments,
+        colors=COLORS["prefill"],
+        linewidths=1.0,
+        capstyle="butt",
+        rasterized=True,
     )
-    axis.add_collection(
-        LineCollection(decode_segments, colors=COLORS["decode"], linewidths=3.6, rasterized=True)
+    decode_kernel_collection = LineCollection(
+        decode_segments,
+        colors=COLORS["decode"],
+        linewidths=1.0,
+        capstyle="butt",
+        rasterized=True,
     )
+    axis.add_collection(prefill_kernel_collection)
+    axis.add_collection(decode_kernel_collection)
     axis.set_xlim(0, forward_display_end * 1.01)
-    axis.set_ylim(-0.02, 1.70)
-    axis.set_yticks([0.27, 1.07], ["Strict GPU kernels", "Forward envelopes"])
-    axis.set_xlabel(
-        "Observed wall-clock coordinate from request begin (s); forward widths are display-scaled"
+    axis.set_ylim(-0.06, 2.58)
+    shared_rectangle_height_points = data_height_points(
+        axis, figure, A_FORWARD_THICKNESS
     )
+    axis.set_yticks(
+        [0.30, forward_lane_y[1]],
+        [
+            "Strict\nGPU\nkernels",
+            "Forward\nenvelopes\n3 display lanes\nnot concurrent",
+        ],
+    )
+    axis.set_xlabel(
+        "X-axis — hybrid display time (seconds, s)\n"
+        "left edge = observed start; visible width = min(3 x actual duration, 1.80 s)"
+    )
+    axis.set_ylabel("Y-axis — execution track\n(categorical; no physical unit)")
     axis.set_title("A  Observed end-to-end wall-clock positions", loc="left", fontweight="bold")
     axis.text(
         (prefill_begin + prefill_end) / 2,
-        1.58,
+        2.43,
         f"Prefill span {prefill_end - prefill_begin:.3f}s",
         ha="center",
         color="#9A6700",
@@ -515,38 +701,51 @@ def main() -> None:
     )
     axis.text(
         (decode_begin + decode_end) / 2,
-        1.58,
+        2.43,
         f"Decode span {decode_end - decode_begin:.3f}s",
         ha="center",
         color="#1E5AA8",
         fontweight="bold",
     )
     axis.text(
-        forward_display_end,
-        0.02,
-        f"request span {request_seconds:.3f}s (instrumented; not production E2E)",
-        ha="right",
-        va="bottom",
-        fontsize=9,
-        color="#6B7280",
-    )
-    axis.text(
-        0.995,
-        0.36,
-        "starts exact; widths 3x; zigzag = 1.80s cap; top5 per lane = % lane duration",
+        0.0,
+        -0.43,
+        "Explanation — envelope = observed forward start-to-end span; the 3 lanes are round-robin display lanes, "
+        "not concurrency; zigzag = display cap.\n"
+        "P1-P6/D1-D23 at upper right = forward IDs, not durations; decode actual 0.460-0.601 s is shown as "
+        "1.381-1.800 s.\n"
+        "Top-5 percentages rank raw duration within each lane; #1/#2 labels may be omitted when they do not fit "
+        "inside a folded block.\n"
+        f"Observed request span = {request_seconds:.3f} s (instrumented; not production E2E).",
         transform=axis.transAxes,
-        ha="right",
-        va="center",
-        fontsize=8.2,
+        ha="left",
+        va="top",
+        fontsize=plt.rcParams["axes.labelsize"],
         color="#566573",
     )
-    axis.grid(axis="x", color="#E5E7EB", linewidth=0.7)
+    strict_lane_height_points = (
+        shared_rectangle_height_points * STRICT_LANE_HEIGHT_SCALE
+    )
+    prefill_kernel_collection.set_linewidth(strict_lane_height_points)
+    decode_kernel_collection.set_linewidth(strict_lane_height_points)
+    axis.grid(axis="x", color="#D7DCE2", linewidth=1.15)
     axis.spines[["top", "right"]].set_visible(False)
+    assert_axis_contains_rectangles(
+        axis,
+        panel="A",
+        x_bounds=(0.0, forward_display_end),
+        y_bounds=(forward_lane_y[0] - A_FORWARD_THICKNESS / 2.0,
+                  forward_lane_y[-1] + A_FORWARD_THICKNESS / 2.0),
+    )
 
     # B. Prefill composition, preserving one row per observed chunk.
     axis = figure.add_subplot(grid[1])
     panels["B"] = axis
-    y = list(range(len(prefill_ids)))
+    y = [index * B_ROW_SPACING for index in range(len(prefill_ids))]
+    axis.set_ylim(y[-1] + 0.80, -0.75)
+    b_bar_thickness = data_height_for_points(
+        axis, figure, shared_rectangle_height_points
+    )
     display_left = [0.0] * len(prefill_ids)
     for category in prefill_categories:
         values = prefill_values[category]
@@ -557,9 +756,9 @@ def main() -> None:
             visible_width, folded = draw_scaled_rectangle(
                 axis,
                 start=segment_start,
-                cross_start=y[index] - 0.34,
+                cross_start=y[index] - b_bar_thickness / 2.0,
                 duration=value,
-                thickness=0.68,
+                thickness=b_bar_thickness,
                 limit=B_RECTANGLE_LIMIT_MS,
                 color=COLORS[category],
             )
@@ -571,41 +770,58 @@ def main() -> None:
                     else "white"
                 )
                 rotate_label = visible_width < 55.0
-                axis.text(
+                text_artist = axis.text(
                     label_x,
                     y[index],
                     f"#{rank} {value / prefill_totals[index] * 100:.1f}%",
                     ha="center",
                     va="center",
-                    fontsize=4.4 if rotate_label else 6.8,
+                    fontsize=18.0 if rotate_label else 26.0,
                     color=label_color,
-                    fontweight="bold",
-                    rotation=90 if rotate_label else 0,
+                    fontweight="normal",
+                    rotation=0,
                     zorder=3,
                 )
+                text_block_width = visible_width * (0.45 if folded else 1.0)
+                rectangle_texts.append(
+                    (axis, text_artist, text_block_width, b_bar_thickness)
+                )
+                if rank <= 3:
+                    label_lower_left_coordinate(
+                        axis,
+                        x=segment_start,
+                        y=y[index] + b_bar_thickness / 2.0,
+                        text=f"{segment_start:.1f}",
+                        fontsize=23.0,
+                    )
             display_left[index] += visible_width
     max_prefill_display = max(display_left)
     for index, forward_id in enumerate(prefill_ids):
         route = "direct GQA6" if forward_id in {1, 6} else "page784 main + tail + merge"
         axis.text(
             display_left[index] + max_prefill_display * 0.015,
-            index,
+            y[index],
             f"kernel sum {prefill_totals[index]:.1f}ms  |  {route}",
             va="center",
-            fontsize=8.8,
+            fontsize=18.0,
             color="#374151",
         )
     axis.set_xlim(0, max_prefill_display * 1.47)
     axis.set_yticks(y, [f"P{forward_id}" for forward_id in prefill_ids])
-    axis.invert_yaxis()
+    axis.tick_params(axis="both", labelsize=24)
     axis.set_xlabel(
-        "Display coordinate (3x duration before per-segment cap; zigzag = 260-unit cap)"
+        "X-axis — cumulative display duration (milliseconds, ms)\n"
+        "right edge = left edge + min(3 x actual kernel duration, 260 ms)"
+    )
+    axis.set_ylabel(
+        "Y-axis — prefill forward/chunk ID\n"
+        "(categorical; P1-P6, no physical unit)"
     )
     axis.set_title(
         "B  Prefill chunks — kernel-time composition exposes the GQA6/page784 routing",
         loc="left",
         fontweight="bold",
-        pad=48,
+        pad=118,
     )
     axis.legend(
         handles=[Patch(facecolor=COLORS[category], label=category) for category in prefill_categories],
@@ -613,7 +829,7 @@ def main() -> None:
         loc="lower left",
         bbox_to_anchor=(0.0, 1.005),
         frameon=False,
-        fontsize=8.8,
+        fontsize=20.0,
     )
     axis.text(
         0.995,
@@ -622,19 +838,26 @@ def main() -> None:
         transform=axis.transAxes,
         ha="right",
         va="bottom",
-        fontsize=7.8,
+        fontsize=18.0,
         color="#566573",
     )
-    axis.grid(axis="x", color="#E5E7EB", linewidth=0.7)
+    axis.grid(axis="x", color="#D7DCE2", linewidth=1.15)
     axis.spines[["top", "right"]].set_visible(False)
+    assert_axis_contains_rectangles(
+        axis,
+        panel="B",
+        x_bounds=(0.0, max(display_left)),
+        y_bounds=(-b_bar_thickness / 2.0,
+                  y[-1] + b_bar_thickness / 2.0),
+    )
 
-    # C. Decode composition per token/forward.
+    # C. Decode composition, averaging each three adjacent, near-identical steps.
     axis = figure.add_subplot(grid[2])
     panels["C"] = axis
-    x = list(range(1, len(decode_ids) + 1))
-    display_bottom = [0.0] * len(decode_ids)
+    x = [1.0 + index * C_COLUMN_SPACING for index in range(len(decode_group_indices))]
+    display_bottom = [0.0] * len(decode_group_indices)
     for category in decode_categories:
-        values = decode_values[category]
+        values = decode_group_values[category]
         for index, value in enumerate(values):
             if value <= 0:
                 continue
@@ -642,14 +865,16 @@ def main() -> None:
             visible_height, folded = draw_scaled_rectangle(
                 axis,
                 start=segment_start,
-                cross_start=x[index] - 0.41,
+                cross_start=x[index] - C_BAR_WIDTH / 2.0,
                 duration=value,
-                thickness=0.82,
+                thickness=C_BAR_WIDTH,
                 limit=C_RECTANGLE_LIMIT_MS,
                 color=COLORS[category],
                 scale=C_RECTANGLE_SCALE,
                 orientation="vertical",
                 linewidth=0.25,
+                fold_linewidth=2.6,
+                fold_amplitude_fraction=0.36,
             )
             rank = top_decode_ranks.get((category, index))
             if rank is not None:
@@ -658,24 +883,34 @@ def main() -> None:
                 axis.text(
                     x[index],
                     label_y,
-                    f"#{rank} {value / decode_totals[index] * 100:.1f}%",
+                    f"#{rank} {value:.3f}",
                     ha="center",
                     va="center",
-                    fontsize=5.0,
+                    fontsize=24.0,
                     color=label_color,
                     fontweight="bold",
+                    rotation=0,
                     zorder=3,
                 )
+                if rank <= 3:
+                    label_lower_left_coordinate(
+                        axis,
+                        x=x[index] - C_BAR_WIDTH / 2.0,
+                        y=segment_start,
+                        text=f"{segment_start:.1f}",
+                        fontsize=31.5,
+                    )
             display_bottom[index] += visible_height
     decode_mean = sum(decode_totals) / len(decode_totals)
     axis.text(
         0.55,
         max(display_bottom) * 1.055,
         f"actual trace mean {decode_mean:.2f}ms | modular production mean TPOT "
-        "40.80-42.64ms (separate benchmark) | top5 per column = % step sum",
+        "40.80-42.64ms (separate benchmark) | one column = mean of 3 adjacent steps; "
+        "top5 labels use mean actual durations",
         ha="left",
         va="center",
-        fontsize=8.2,
+        fontsize=18.0,
         color="#4B5563",
     )
     total_decode = sum(decode_totals)
@@ -690,18 +925,25 @@ def main() -> None:
         ha="right",
         va="top",
         bbox={"boxstyle": "round,pad=0.4", "facecolor": "white", "edgecolor": "#CBD5E1"},
-        fontsize=9.2,
+        fontsize=18.0,
     )
-    axis.set_xlim(0.3, 24.4)
+    axis.set_xlim(x[0] - 0.70, x[-1] + 1.00)
     axis.set_ylim(0, max(display_bottom) * 1.11)
-    axis.set_xticks([1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23])
-    axis.set_xlabel("Decode step")
-    axis.set_ylabel("Display coordinate\n(9x duration; zigzag = 10-unit cap)")
+    axis.set_xticks(x, decode_group_labels)
+    axis.tick_params(axis="both", labelsize=24)
+    axis.set_xlabel(
+        "X-axis — decode-step group (step ID; categorical)\n"
+        "each column = mean of 3 adjacent steps; final column = mean of steps 22-23"
+    )
+    axis.set_ylabel(
+        "Y-axis — cumulative display duration (milliseconds, ms)\n"
+        "top edge = bottom edge + min(9 x actual kernel duration, 10 ms)"
+    )
     axis.set_title(
-        "C  Decode — the two custom GEMV paths dominate every step",
+        "C  Decode — 3-step grouped means preserve the repeated GEMV composition",
         loc="left",
         fontweight="bold",
-        pad=48,
+        pad=64,
     )
     axis.legend(
         handles=[Patch(facecolor=COLORS[category], label=category) for category in decode_categories],
@@ -709,10 +951,16 @@ def main() -> None:
         loc="lower left",
         bbox_to_anchor=(0.0, 1.005),
         frameon=False,
-        fontsize=8.8,
+        fontsize=20.0,
     )
-    axis.grid(axis="y", color="#E5E7EB", linewidth=0.7)
+    axis.grid(axis="y", color="#D7DCE2", linewidth=1.15)
     axis.spines[["top", "right"]].set_visible(False)
+    assert_axis_contains_rectangles(
+        axis,
+        panel="C",
+        x_bounds=(x[0] - C_BAR_WIDTH / 2.0, x[-1] + C_BAR_WIDTH / 2.0),
+        y_bounds=(0.0, max(display_bottom)),
+    )
 
     # D. Exact launch positions for a representative decode layer.
     axis = figure.add_subplot(grid[3])
@@ -728,14 +976,17 @@ def main() -> None:
         "RMS/copy",
         "Other",
     ]
-    y_positions = {category: len(zoom_categories) - index - 1 for index, category in enumerate(zoom_categories)}
+    y_positions = {
+        category: (len(zoom_categories) - index - 1) * D_ROW_SPACING
+        for index, category in enumerate(zoom_categories)
+    }
+    axis.set_ylim(-0.95, max(y_positions.values()) + 1.50)
+    d_bar_thickness = data_height_for_points(
+        axis, figure, shared_rectangle_height_points
+    )
     zoom_kernels_by_category = {
         category: [kernel for kernel in zoom_kernels if classify_zoom(kernel) == category]
         for category in zoom_categories
-    }
-    zoom_category_totals = {
-        category: sum(kernel["dur_us"] for kernel in category_kernels)
-        for category, category_kernels in zoom_kernels_by_category.items()
     }
     top_zoom_ranks: dict[tuple[float, str], int] = {}
     for category_kernels in zoom_kernels_by_category.values():
@@ -744,94 +995,130 @@ def main() -> None:
             start=1,
         ):
             top_zoom_ranks[(kernel["ts_us"], kernel["name"])] = rank
-    zoom_display_tail_ms = 0.0
+    zoom_display_tail_us = 0.0
     for kernel in zoom_kernels:
         category = classify_zoom(kernel)
-        begin_ms = (kernel["ts_us"] - zoom_layer["ts_us"]) / 1000.0
-        duration_ms = kernel["dur_us"] / 1000.0
-        visible_duration, folded = draw_scaled_rectangle(
+        begin_us = kernel["ts_us"] - zoom_layer["ts_us"]
+        duration_us = kernel["dur_us"]
+        visible_duration, _ = draw_scaled_rectangle(
             axis,
-            start=begin_ms,
-            cross_start=y_positions[category] - 0.30,
-            duration=duration_ms,
-            thickness=0.60,
-            limit=D_RECTANGLE_LIMIT_MS,
+            start=begin_us,
+            cross_start=y_positions[category] - d_bar_thickness / 2.0,
+            duration=duration_us,
+            thickness=d_bar_thickness,
+            limit=D_RECTANGLE_LIMIT_US,
             color=COLORS[category],
             scale=D_RECTANGLE_SCALE,
             edgecolor="#263238",
             linewidth=0.35,
         )
         rank = top_zoom_ranks.get((kernel["ts_us"], kernel["name"]))
-        if rank is not None:
-            label_x = begin_ms + visible_duration * (0.225 if folded else 0.5)
-            label_color = (
-                "#17202A" if category in {"K17408 GEMV", "RMS/copy", "Other"} else "white"
+        above = begin_us < 3800.0
+        if rank is not None and rank <= 3:
+            coordinate_above = not above
+            coordinate_y = y_positions[category] + (
+                d_bar_thickness / 2.0 if coordinate_above else -d_bar_thickness / 2.0
             )
-            rotate_label = visible_duration < 0.10
-            axis.text(
-                label_x,
-                y_positions[category],
-                f"#{rank} {kernel['dur_us'] / zoom_category_totals[category] * 100:.1f}%",
-                ha="center",
-                va="center",
-                fontsize=4.3 if rotate_label else 5.4,
-                color=label_color,
-                fontweight="bold",
-                rotation=90 if rotate_label else 0,
-                zorder=3,
+            axis.annotate(
+                f"{begin_us:.0f}",
+                xy=(begin_us, coordinate_y),
+                xytext=(3.0, 4.0 if coordinate_above else -4.0),
+                textcoords="offset points",
+                ha="left",
+                va="bottom" if coordinate_above else "top",
+                fontsize=23.0 * LOWER_LEFT_COORDINATE_FONT_SCALE,
+                color="#263238",
+                bbox={
+                    "boxstyle": "square,pad=0.06",
+                    "facecolor": "white",
+                    "edgecolor": "none",
+                    "alpha": 0.82,
+                },
+                clip_on=True,
+                zorder=3.3,
             )
-        zoom_display_tail_ms = max(zoom_display_tail_ms, begin_ms + visible_duration)
-        if duration_ms >= 0.012:
+        zoom_display_tail_us = max(zoom_display_tail_us, begin_us + visible_duration)
+        if duration_us >= 12.0:
             short_name = category
             if category == "Other" and "act_and_mul_kernel" in kernel["name"]:
                 short_name = "act_and_mul"
-            above = begin_ms < 3.8
-            label_y = y_positions[category] + (0.55 if above else -0.55)
+            label_y = y_positions[category] + (0.70 if above else -0.70)
+            rank_prefix = f"#{rank} " if rank is not None else ""
             axis.annotate(
-                f"{short_name}\n{duration_ms * 1000:.1f}us",
-                xy=(begin_ms + visible_duration / 2, y_positions[category] + 0.31),
-                xytext=(begin_ms + visible_duration / 2, label_y),
+                f"{rank_prefix}{short_name}\n{duration_us:.1f}",
+                xy=(
+                    begin_us + visible_duration / 2,
+                    y_positions[category]
+                    + (d_bar_thickness / 2.0 if above else -d_bar_thickness / 2.0),
+                ),
+                xytext=(begin_us + visible_duration / 2, label_y),
                 ha="center",
                 va="bottom" if above else "top",
-                fontsize=7.2,
+                fontsize=18.0,
                 color="#263238",
                 arrowprops={"arrowstyle": "-", "color": "#64748B", "linewidth": 0.5},
             )
-    zoom_sum_ms = sum(kernel["dur_us"] for kernel in zoom_kernels) / 1000.0
-    zoom_envelope_ms = zoom_layer["dur_us"] / 1000.0
-    zoom_tail_ms = max(
-        (kernel["ts_us"] - zoom_layer["ts_us"] + kernel["dur_us"]) / 1000.0
+    zoom_sum_us = sum(kernel["dur_us"] for kernel in zoom_kernels)
+    zoom_envelope_us = zoom_layer["dur_us"]
+    zoom_tail_us = max(
+        kernel["ts_us"] - zoom_layer["ts_us"] + kernel["dur_us"]
         for kernel in zoom_kernels
     )
-    axis.axvline(zoom_envelope_ms, color="#64748B", linestyle=":", linewidth=1.0)
-    axis.set_xlim(0, max(zoom_envelope_ms, zoom_tail_ms, zoom_display_tail_ms) * 1.015)
-    axis.set_ylim(-0.65, len(zoom_categories) - 0.05)
+    axis.axvline(zoom_envelope_us, color="#64748B", linestyle=":", linewidth=1.0)
+    axis.set_xlim(0, max(zoom_envelope_us, zoom_tail_us, zoom_display_tail_us) * 1.015)
     axis.set_yticks(
         [y_positions[category] for category in zoom_categories],
         zoom_categories,
     )
+    axis.tick_params(axis="both", labelsize=24)
     axis.set_xlabel(
-        "Observed kernel-start coordinate from forward 10 / layer 0 begin (ms); widths display-scaled"
+        "X-axis — hybrid layer-relative time (microseconds, us)\n"
+        "left edge = observed kernel start; visible width = min(6 x actual duration, 360 us)"
+    )
+    axis.set_ylabel(
+        "Y-axis — strict-owned kernel category\n"
+        "(categorical; no physical unit)"
     )
     axis.set_title(
-        "D  Exact zoom — one observed decode layer (forward 10, layer 0)",
+        "D  Exact zoom — one observed decode layer (forward 10, layer 0)  "
+        "[all time units: us]",
         loc="left",
         fontweight="bold",
+        pad=106,
     )
     axis.text(
         0.995,
-        1.035,
-        f"11 kernels; kernel sum {zoom_sum_ms:.3f}ms; layer envelope {zoom_envelope_ms:.3f}ms\n"
-        "Starts exact; widths 6x; zigzag = 0.36ms cap; top5 per row = % row duration. "
+        1.025,
+        f"11 kernels; kernel sum {zoom_sum_us:.1f}us; layer envelope {zoom_envelope_us:.1f}us\n"
+        "Ticks locate observed starts; right edges are display-scaled; zigzag = cap; "
+        "all labels are outside rectangles; title declares start/duration units. "
         "Gaps are not a production idle-time claim.",
         transform=axis.transAxes,
         ha="right",
         va="bottom",
-        fontsize=8.7,
+        fontsize=18.0,
         bbox={"boxstyle": "round,pad=0.4", "facecolor": "white", "edgecolor": "#CBD5E1"},
     )
-    axis.grid(axis="x", color="#E5E7EB", linewidth=0.7)
+    axis.grid(axis="x", color="#D7DCE2", linewidth=1.15)
     axis.spines[["top", "right"]].set_visible(False)
+    assert_axis_contains_rectangles(
+        axis,
+        panel="D",
+        x_bounds=(0.0, zoom_display_tail_us),
+        y_bounds=(-d_bar_thickness / 2.0,
+                  max(y_positions.values()) + d_bar_thickness / 2.0),
+    )
+    b_rectangle_height_points = data_height_points(
+        panels["B"], figure, b_bar_thickness
+    )
+    d_rectangle_height_points = data_height_points(
+        panels["D"], figure, d_bar_thickness
+    )
+    if max(
+        abs(b_rectangle_height_points - shared_rectangle_height_points),
+        abs(d_rectangle_height_points - shared_rectangle_height_points),
+    ) > 1e-6:
+        raise RuntimeError("Panels A, B, and D do not share one physical rectangle height")
 
     figure.text(
         0.075,
@@ -839,9 +1126,13 @@ def main() -> None:
         "Evidence boundary: observed bh408@0abe1e1-dirty trace; no pre-optimization trace was rerun. "
         "Panels B/C sum strict-owned kernels by process attribution; async tails may extend beyond annotation envelopes. "
         "Nested process spans are not added.",
-        fontsize=9.2,
+        fontsize=11.5,
         color="#566573",
         ha="left",
+    )
+
+    hidden_rectangle_texts = hide_overflowing_rectangle_texts(
+        figure, rectangle_texts
     )
 
     figure.savefig(OUT_PNG, dpi=210, bbox_inches="tight")
@@ -862,8 +1153,10 @@ def main() -> None:
     print(f"decode_kernel_ms_per_step={decode_mean:.3f}")
     print(f"decode_custom_gemv_share={gemv_decode / total_decode:.6f}")
     print(f"decode_custom_gemv_plus_mmac_share={gemm_decode / total_decode:.6f}")
-    print(f"zoom_layer_kernel_ms={zoom_sum_ms:.3f}")
-    print(f"zoom_layer_envelope_ms={zoom_envelope_ms:.3f}")
+    print(f"zoom_layer_kernel_ms={zoom_sum_us / 1000.0:.3f}")
+    print(f"zoom_layer_envelope_ms={zoom_envelope_us / 1000.0:.3f}")
+    print(f"abd_rectangle_height_points={shared_rectangle_height_points:.3f}")
+    print(f"hidden_overflowing_rectangle_texts={hidden_rectangle_texts}")
 
 
 if __name__ == "__main__":
