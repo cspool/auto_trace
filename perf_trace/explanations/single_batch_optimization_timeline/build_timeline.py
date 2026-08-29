@@ -25,6 +25,12 @@ TRACE = Path(
 OUT_DIR = Path(__file__).resolve().parent
 OUT_PNG = OUT_DIR / "single_batch_optimization_timeline.png"
 OUT_SVG = OUT_DIR / "single_batch_optimization_timeline.svg"
+PANEL_OUTPUTS = {
+    "A": OUT_DIR / "panel_a_request_overview",
+    "B": OUT_DIR / "panel_b_prefill_routes",
+    "C": OUT_DIR / "panel_c_decode_composition",
+    "D": OUT_DIR / "panel_d_decode_layer_zoom",
+}
 
 
 COLORS = {
@@ -159,6 +165,55 @@ def stacked_values(
     return values, totals
 
 
+def save_clean_svg(figure, output_path: Path, **savefig_kwargs) -> None:
+    """Save a deterministic, editable SVG without diff-noisy trailing spaces."""
+    figure.savefig(output_path, metadata={"Date": None}, **savefig_kwargs)
+    svg = output_path.read_text(encoding="utf-8")
+    output_path.write_text(
+        "\n".join(line.rstrip() for line in svg.splitlines()) + "\n",
+        encoding="utf-8",
+    )
+
+
+def save_individual_panels(figure, panels: dict[str, plt.Axes]) -> None:
+    """Export each panel with its own title, labels, legend, and annotations."""
+    figure.canvas.draw()
+    axes_visibility = {axis: axis.get_visible() for axis in figure.axes}
+    text_visibility = {artist: artist.get_visible() for artist in figure.texts}
+
+    try:
+        for panel_id, panel_axis in panels.items():
+            for axis in figure.axes:
+                axis.set_visible(axis is panel_axis)
+            for artist in figure.texts:
+                artist.set_visible(False)
+
+            figure.canvas.draw()
+            renderer = figure.canvas.get_renderer()
+            bbox_inches = panel_axis.get_tightbbox(renderer).transformed(
+                figure.dpi_scale_trans.inverted()
+            )
+            bbox_inches = bbox_inches.padded(0.12)
+            output_base = PANEL_OUTPUTS[panel_id]
+            figure.savefig(
+                output_base.with_suffix(".png"),
+                dpi=210,
+                bbox_inches=bbox_inches,
+                facecolor="white",
+            )
+            save_clean_svg(
+                figure,
+                output_base.with_suffix(".svg"),
+                bbox_inches=bbox_inches,
+                facecolor="white",
+            )
+    finally:
+        for axis, visible in axes_visibility.items():
+            axis.set_visible(visible)
+        for artist, visible in text_visibility.items():
+            artist.set_visible(visible)
+
+
 def main() -> None:
     request, forwards, kernels, zoom_layer = read_trace()
     kernels_by_forward: dict[int, list[dict]] = defaultdict(list)
@@ -204,6 +259,8 @@ def main() -> None:
             "text.color": "#17202A",
             "figure.facecolor": "white",
             "axes.facecolor": "white",
+            "svg.fonttype": "none",
+            "svg.hashsalt": "single-batch-optimization-timeline",
         }
     )
 
@@ -235,8 +292,11 @@ def main() -> None:
         ha="left",
     )
 
+    panels: dict[str, plt.Axes] = {}
+
     # A. Exact request-level wall-clock positions.
     axis = figure.add_subplot(grid[0])
+    panels["A"] = axis
     request_seconds = request["dur_us"] / 1_000_000.0
     prefill_begin = forwards[1]["ts_us"] / 1_000_000.0
     prefill_end = (forwards[6]["ts_us"] + forwards[6]["dur_us"]) / 1_000_000.0
@@ -315,6 +375,7 @@ def main() -> None:
 
     # B. Prefill composition, preserving one row per observed chunk.
     axis = figure.add_subplot(grid[1])
+    panels["B"] = axis
     y = list(range(len(prefill_ids)))
     left = [0.0] * len(prefill_ids)
     for category in prefill_categories:
@@ -357,6 +418,7 @@ def main() -> None:
 
     # C. Decode composition per token/forward.
     axis = figure.add_subplot(grid[2])
+    panels["C"] = axis
     x = list(range(1, len(decode_ids) + 1))
     bottom = [0.0] * len(decode_ids)
     for category in decode_categories:
@@ -423,6 +485,7 @@ def main() -> None:
 
     # D. Exact launch positions for a representative decode layer.
     axis = figure.add_subplot(grid[3])
+    panels["D"] = axis
     zoom_kernels = [
         kernel for kernel in kernels_by_forward[10] if "input10_layer0." in kernel["process"]
     ]
@@ -507,13 +570,16 @@ def main() -> None:
     )
 
     figure.savefig(OUT_PNG, dpi=210, bbox_inches="tight")
-    figure.savefig(OUT_SVG, bbox_inches="tight")
+    save_clean_svg(figure, OUT_SVG, bbox_inches="tight")
+    save_individual_panels(figure, panels)
     plt.close(figure)
 
     prefill_kernel_ms = sum(prefill_totals)
     prefill_envelope_ms = sum(forwards[index]["dur_us"] for index in prefill_ids) / 1000.0
     print(f"wrote {OUT_PNG}")
     print(f"wrote {OUT_SVG}")
+    for panel_id, output_base in PANEL_OUTPUTS.items():
+        print(f"wrote panel {panel_id}: {output_base}.png / {output_base}.svg")
     print(f"request_span_ms={request['dur_us'] / 1000.0:.3f}")
     print(f"prefill_kernel_ms={prefill_kernel_ms:.3f}")
     print(f"prefill_envelope_ms={prefill_envelope_ms:.3f}")
