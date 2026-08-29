@@ -38,11 +38,12 @@ prefill 路由、decode 主成本，最后放大到一个 decode layer。
 每根横柱对应一个 prefill forward，长度是该 forward 内 strict-owned kernel
 duration 的累加值。数字之间的关系如下：
 
-- **`GQA6 direct`（P1、P6）**：`GQA6` 表示 1 个 KV head 服务 6 个 Q heads；
-  `6=3 组×2 heads/CTA`。一个 CTA（GPU thread block）同时处理
-  `32 个 query 位置×2 heads=64 行`，
-  每个 64-token K/V tile 再分成 `2×32` 做数值更新。这组参数让 direct kernel
-  覆盖完整 GQA6，并在当前 Q block 的 causal 边界停止扫描未来 K/V。
+- **`GQA6 direct`（P1、P6）**：对同一个 `KV head × 32-query block`，grid
+  第三维启动 3 个 CTA，分别处理 3 组 `2 Q heads`，合计覆盖该 KV head 的
+  6 个 Q heads。每个 CTA 的 `2 heads×32 queries=64` 是 64 个
+  **query/head 行**，不是 64 个 token；该 CTA 逐个扫描 64-token K/V tile，
+  再把每个 tile 沿 K/V-token 轴拆成 `2×32 tokens` 更新 softmax 和 `P@V`。
+  两个“64”分别位于 Q 行轴与 K/V token 轴，并在当前 Q block 的 causal 上界停下。
 - **`page784`（P2–P5）**：`784=12×64+16`。前 `768` tokens 走 64 对齐的
   paged attention，剩余 `16` tokens 打包后走 contiguous attention，最后用
   FP32 log-sum-exp 合并。组合后可复用 64-token kernel，而不必展开完整 KV cache。
@@ -137,16 +138,19 @@ query 路径的最小 query-token 数。其他情况回退原 attention 路径�
 是输出通道数，`n=1` 表示一次只计算 1 个 decode token；gfx936 的 1 个 wave
 包含 64 个并行 lanes：
 
-- **`K5120 GEMV`（红色）**：在 shape gate 中，`M` 是权重矩阵的输出行数，
-  `CTA 数=M/每 CTA 行数`。`M=96` 时每 CTA 算 4 行，共 24 CTAs；其余 shape
-  gate 值 `M∈{14336,16384,34816,248320}` 每 CTA 算 2 行，例如 `gate_up_proj` 的
-  `M=34816` 启动 17408 CTAs。
-  `K=5120=640 threads×8 个 BF16 元素`，所以每个 thread 恰好负责一个 8 元素块。
-- **`K17408 GEMV`（橙色）**：`17408` 个 BF16 元素分成 2176 个 8 元素块。
-  一个 1024-thread CTA 中，threads `0–127` 各处理 3 块，其余 896 threads 各
-  处理 2 块，即 `128×3+896×2=2176`；随后 `1024=16 waves×64 lanes` 归约出
-  1 个输出行。`M=5120`，因此共启动 5120 CTAs，完成
-  `[1,17408]→[1,5120]`。
+- **`K5120 GEMV`（红色）**：`gate_up_proj` 的 `M=34816`，每个 CTA 算 2 个
+  输出行，因此启动 `34816/2=17408` 个 CTA。每个 CTA 固定为
+  `640 threads=10 waves×64 lanes`，不是 20 waves：同一批 640 threads 各读取
+  一个 8-BF16 输入块，并同时与两条权重行的对应块点积，保留两个累加值；随后
+  上下各 320 threads 配对合并，由 5 waves 分别归约每一行并写出 2 个结果。
+  其他 shape gate 同理按 `CTA数=M/每CTA行数`：`M=96` 时为 4 行/CTA、24 CTAs，
+  `M∈{14336,16384,34816,248320}` 时为 2 行/CTA。
+- **`K17408 GEMV`（橙色）**：一个 CTA 负责 `down_proj` 的一个输出行，即把
+  `[1,17408]` 输入与一条长度 17408 的权重行做点积。17408 个 BF16 元素分成
+  2176 个 8 元素块；CTA 内 1024 threads 中，`0–127` 各处理 3 块，其余
+  896 threads 各处理 2 块，即 `128×3+896×2=2176`。随后
+  `1024=16 waves×64 lanes` 合并所有部分和，写出 1 个 BF16 结果；`M=5120`
+  因而启动 5120 个 CTA，完成 `[1,17408]→[1,5120]`。
 
 ### C 中优化所在的 gated-MLP process
 
