@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Optimization Trace Report"
+  short_description: "Turn runtime traces into optimization evidence reports"
+  default_prompt: "Use $build-optimization-trace-report to turn this runtime trace into an optimization-centered report with result visualizations, process context, and CTA-level numeric explanations."
