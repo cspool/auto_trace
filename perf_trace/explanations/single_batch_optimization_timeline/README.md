@@ -1,5 +1,7 @@
 # 单 Batch 主要优化：按 A–D 分图阅读
 
+[下载完整 PDF 报告](./single_batch_optimization_timeline_report.pdf)
+
 这组图回答两个问题：一次优化后的单请求是怎样执行的，以及主要优化落在
 prefill 还是 decode。建议按 **A → B → C → D** 阅读：先定位两个阶段，再看
 prefill 路由、decode 主成本，最后放大到一个 decode layer。
@@ -345,3 +347,12 @@ python perf_trace/explanations/single_batch_optimization_timeline/build_timeline
 内容已固化为
 [`build-optimization-trace-report` 视觉参考规范](../../skills/build-optimization-trace-report/references/current-figure-reference.md)，
 用于生成其他 trace 报告时复用；其中当前 trace 的倍率和 cap 仅作为示例参数。
+
+<!-- pdf-build-instructions:start -->
+安装 `weasyprint` 与 `markdown-it-py` 后，可将包含中文字体的报告导出为 PDF：
+
+```bash
+python perf_trace/explanations/single_batch_optimization_timeline/build_pdf.py \
+  --font /path/to/NotoSansCJKsc-Regular.otf
+```
+<!-- pdf-build-instructions:end -->
