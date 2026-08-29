@@ -140,9 +140,13 @@ query 路径的最小 query-token 数。其他情况回退原 attention 路径�
 
 - **`K5120 GEMV`（红色）**：`gate_up_proj` 的 `M=34816`，每个 CTA 算 2 个
   输出行，因此启动 `34816/2=17408` 个 CTA。每个 CTA 固定为
-  `640 threads=10 waves×64 lanes`，不是 20 waves：同一批 640 threads 各读取
-  一个 8-BF16 输入块，并同时与两条权重行的对应块点积，保留两个累加值；随后
-  上下各 320 threads 配对合并，由 5 waves 分别归约每一行并写出 2 个结果。
+  `640 threads=10 waves×64 lanes`，不是 20 waves。同一 CTA 内，thread `t`
+  计算第 `t` 个 8-BF16 输入块与两条权重行（对应 2 个输出行）的对应块点积，
+  因而 `640×8=5120`，每个 thread 为每行各得到一个 8 项局部和。随后 thread
+  `t`（`0≤t<320`）加上 thread `t+320` 的局部和，形成 320 个各含 16 项的
+  部分和；这 320 threads 正好是 5 waves，每个 wave 归约 64 个部分和得到
+  1 个 wave 和，最后将 5 个 wave 和相加，得到每行完整的 5120 项点积；两行
+  分别写出 1 个结果。
   其他 shape gate 同理按 `CTA数=M/每CTA行数`：`M=96` 时为 4 行/CTA、24 CTAs，
   `M∈{14336,16384,34816,248320}` 时为 2 行/CTA。
 - **`K17408 GEMV`（橙色）**：一个 CTA 负责 `down_proj` 的一个输出行，即把
