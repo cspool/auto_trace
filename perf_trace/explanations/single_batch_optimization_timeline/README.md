@@ -40,7 +40,7 @@ duration 的累加值。这里主要看两条 attention 路由：
 
 | 图中位置 | 实际路由 | 主要优化 |
 | --- | --- | --- |
-| `P1`、`P6` 的蓝色 `GQA6 direct` | Wide-causal GQA6 | 将一个 KV head 对应的 6 个 query heads 分组处理，并利用 causal 上界减少无效 K/V 工作；只对 gfx936/BF16/head_size=256/GQA6 目标 shape 命中 |
+| `P1`、`P6` 的蓝色 `GQA6 direct` | Wide-causal GQA6 | 每个 CTA 处理 2 个 Q head，按 32-token Q block 只扫描可见的 56-token K/V tiles；仅用于 gfx936/BF16、head_dim=256、page=784、单序列且 q≥128 的 GQA6 prefill |
 | `P2–P5` 的橙/黄/粉色 | page784 `main / tail / pack+merge` | 将不能按 64 对齐的 784-token page 拆为 `768 main + 16 tail`，分别计算后用 FP32 log-sum-exp 合并，无需展开完整 KV cache |
 | 各柱中的紫色 | `MMAC GEMM` | M=4096 prefill linear 使用冻结的 TunableOp solution，作为 attention 之外的配套优化 |
 
