@@ -70,19 +70,30 @@ query 路径的最小 query-token 数。其他情况回退原 attention 路径�
 是输出通道数，`n=1` 表示一次只计算 1 个 decode token；gfx936 的 1 个 wave
 包含 64 个并行 lanes：
 
-- **`K5120 GEMV`（红色）**：`5120` 是模型 hidden width，且
-  `5120=640 threads×8 个 BF16 元素`，所以每个 thread 可一次覆盖一个 8 元素
-  chunk。`640=2×320`，两半的点积部分和配对后剩 `320=5 waves×64 lanes`
-  做 FP32 归约。`M=96` 是小 gate，CTA 一次算 4 行；较大的目标 M 一次算 2 行，其中
-  `34816=2×17408` 是 MLP gate/up，`248320` 是 LM-head 词表宽度。
-- **`K17408 GEMV`（橙色）**：`17408` 是 SwiGLU 后的 MLP intermediate
-  width；它完成 `[1,17408]→[1,5120]` down projection。每个输出行使用 1 个
-  1024-thread CTA，`1024=16 waves×64 lanes`，先做双路 FP32 FMA，再归约成
-  一个 BF16 输出。
-- **两条路径的组合**：MLP 的主链变为
-  `[1,5120] → [1,2×17408] →(SwiGLU) [1,17408] → [1,5120]`。第一步由
-  K5120/M34816 kernel 扩展 gate/up，最后一步由 K17408/M5120 kernel 收回
-  hidden width；组合后可覆盖单 token MLP 的两次大投影，而不是分别回退通用 GEMM。
+- **`K5120 GEMV`（红色）**：在 shape gate 中，`M` 是权重矩阵的输出行数，
+  `CTA 数=M/每 CTA 行数`。`M=96` 时每 CTA 算 4 行，共 24 CTAs；其余 shape
+  gate 值 `M∈{14336,16384,34816,248320}` 每 CTA 算 2 行，例如 `gate_up_proj` 的
+  `M=34816` 启动 17408 CTAs。
+  `K=5120=640 threads×8 个 BF16 元素`，所以每个 thread 恰好负责一个 8 元素块。
+- **`K17408 GEMV`（橙色）**：`17408` 个 BF16 元素分成 2176 个 8 元素块。
+  一个 1024-thread CTA 中，threads `0–127` 各处理 3 块，其余 896 threads 各
+  处理 2 块，即 `128×3+896×2=2176`；随后 `1024=16 waves×64 lanes` 归约出
+  1 个输出行。`M=5120`，因此共启动 5120 CTAs，完成
+  `[1,17408]→[1,5120]`。
+
+单 token 的具体 MLP 算子链是：
+
+```text
+hidden [1,5120]
+  → gate_up_proj: W[34816,5120]，K5120 GEMV
+  → split: gate/up 各 [1,17408]
+  → act_and_mul: SiLU(gate) ⊙ up → [1,17408]
+  → down_proj: W[5120,17408]，K17408 GEMV
+  → hidden [1,5120]
+```
+
+两条 GEMV 组合后覆盖 MLP 两端的大投影；中间的 `split + act_and_mul` 仍是独立
+算子，文档不把它计作 GEMV 融合收益。
 
 两者仅在 gfx936、BF16、单 token、无 bias、连续且 16-byte 对齐时启用；其余
 shape 回退原 GEMM。本次 trace 中两条 GEMV 占 decode kernel 累加时间的
