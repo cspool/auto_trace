@@ -1,50 +1,4 @@
-# 单 Batch 主要优化：按 A–D 分图阅读
-
-[下载完整 PDF 报告](./single_batch_optimization_timeline_report.pdf)
-
-这组图回答两个问题：一次优化后的单请求是怎样执行的，以及主要优化落在
-prefill 还是 decode。建议按 **A → B → C → D** 阅读：先定位两个阶段，再看
-prefill 路由、decode 主成本，最后放大到一个 decode layer。
-
-> A–D 展示的是同一次**优化后 trace**，不是 before/after 曲线。图旁的历史
-> 收益来自独立的固定 benchmark；不能用图中柱长直接计算优化幅度。
->
-> 为让最短矩形可辨，A/B 沿时长方向放大 `3×`，C 沿纵向放大 `9×`，D 沿
-> 横向放大 `6×`；超过各图显示上限的长块用折线断口拼接两个矩形表示。A/D
-> 的起点和所有文字数字仍是真实观测值；B/C 的矩形长度是显示尺度，不能越过
-> 折线按坐标反推真实时长或占比。
-> 导出画布、坐标轴和块内文字已同步放大；A/B/D 的矩形通过各自纵轴范围和面板
-> 高度动态换算为完全相同的物理高度，并在统一后整体增高 `25%`；A 的 strict
-> 时间带为新高度的 `1/2`；C 的
-> 柱宽单独放大。上述时长显示倍率不变，轴域由放大后的矩形边界重新计算，因此物理尺寸
-> 变大不会改变数字、比例或折线断口的含义。
-> A/D 的轴刻度定位真实起点，右边界为
-> `起点 + min(倍率×真实时长, cap)`；B/C 是累计显示坐标，后一块边界等于前一
-> 边界加 `min(倍率×该块真实时长, cap)`。因此折线后的边界是显示边界，不是
-> 可直接读取的真实结束时间。
-> 左下角坐标值只标每条时间线或每根柱内按真实 duration 排名最大的 3 个矩形：
-> A/D 标混合轴上的真实 start，B/C 标累计显示轴上的左/下边界。D 的数字从块内
-> 移到对应边界外侧；折叠矩形不再标锯齿两侧或右/上边界。
-> 矩形内主标签保持单行水平显示，固定字号在上一版基础上扩大 `2×`；边界坐标
-> 数字为前一版字号的 `2/3`。生成时按最终像素检查，无法在对应可见块内水平容纳的主
-> 标签不显示，不换行、不旋转，也不允许文字越过矩形边界。Top‑3 左下角坐标
-> 数字保持放大显示。
-> 相邻时间线/柱之间保留更大的空白间距，并同步扩大画布，避免间距增加后压缩
-> 矩形。矩形边界坐标值也使用放大字号。
->
-> “前 5”块内主标签在每条线/每根柱内独立计算：A 的每条 forward 子时间线、B 的每条
-> prefill 横柱、C 的每根三步均值竖柱、D 的每条 kernel 类别时间线分别标出
-> duration 最大的 5 个矩形（不足 5 个则全部标）。块内百分比的分母是该线或
-> 该柱的真实 duration 总和，不由放大后的矩形面积计算。
-
-<details>
-<summary>展开完整 A–D 总览图</summary>
-
-[![完整单 Batch 优化时间线](./single_batch_optimization_timeline.png)](./single_batch_optimization_timeline.svg)
-
-</details>
-
-## A. 请求全貌：先区分 prefill 和 decode
+# A. 请求全貌：先区分 prefill 和 decode
 
 [![子图 A：请求级时间线](./panel_a_request_overview.png)](./panel_a_request_overview.svg)
 
@@ -349,6 +303,8 @@ python perf_trace/explanations/single_batch_optimization_timeline/build_timeline
 用于生成其他 trace 报告时复用；其中当前 trace 的倍率和 cap 仅作为示例参数。
 
 <!-- pdf-build-instructions:start -->
+[下载完整 PDF 报告](./single_batch_optimization_timeline_report.pdf)
+
 安装 `weasyprint` 与 `markdown-it-py` 后，可将包含中文字体的报告导出为 PDF：
 
 ```bash

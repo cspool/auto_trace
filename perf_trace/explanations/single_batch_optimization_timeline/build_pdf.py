@@ -80,7 +80,7 @@ def markdown_to_html(markdown_text: str) -> str:
     )
     return (
         "<!doctype html><html lang='zh-CN'><head><meta charset='utf-8'>"
-        "<title>单 Batch 主要优化：按 A–D 分图阅读</title></head>"
+        "<title>A–D 单 Batch 主要优化报告</title></head>"
         f"<body>{body}</body></html>"
     )
 
