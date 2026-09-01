@@ -1,0 +1,394 @@
+{
+  "artifact_scope": "R09_degraded_observed_subset_business_outputs",
+  "artifacts": [
+    {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/analysis/tables/request_timeline.csv",
+      "sha256": "9f1a3bd2c35d2d6fd1c78599280b832f7e94a28cc16f8c9b31ae088156399d16",
+      "size_bytes": 338134
+    },
+    {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/analysis/tables/process_timeline.csv",
+      "sha256": "32eb17aa4d5108b8077936a6eadefa4ebfba39461ab697f07f2febe6b653fb17",
+      "size_bytes": 6381805
+    },
+    {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/analysis/tables/kernel_timeline.csv",
+      "sha256": "9ebd12eb16c1cba447e3cd87e44e47d6e8b1c52c74127f309765fc08645601cc",
+      "size_bytes": 11055511
+    },
+    {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/analysis/tables/live_utilization_aligned.csv",
+      "sha256": "dec70eb599526bf90141e9f9735b0d05f3f7c499dd8f38e972e03cbdfab770ea",
+      "size_bytes": 1495843561
+    },
+    {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/analysis/tables/process_live_utilization.csv",
+      "sha256": "17afd4fc20c27e63caeeb7491ff30041880e2c9764e9359b63b6ae7d74c34726",
+      "size_bytes": 4434160
+    },
+    {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/analysis/tables/kernel_concurrency.csv",
+      "sha256": "2059f5b13eda341b05a14ac52429f439e104e19eb5c03c4399438498e33dc428",
+      "size_bytes": 5872904
+    },
+    {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/analysis/tables/queue_concurrency.csv",
+      "sha256": "2ad68ee3644541f813213893f18ca5d511ea506a9b69e7304f5e0ffa2581c329",
+      "size_bytes": 5866378
+    },
+    {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/analysis/tables/launch_gaps.csv",
+      "sha256": "4f88d6bfedb0b0ea082c290cd6ee888e02e6fdea2bd969f6a02a39d327c6c15b",
+      "size_bytes": 7092749
+    },
+    {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/analysis/tables/high_latency_processes.csv",
+      "sha256": "97f3247944ba5a8d5df1dbc1092b5fff52771aec20135ebb529d3e5320d5aedd",
+      "size_bytes": 404828
+    },
+    {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/analysis/tables/dependency_state.csv",
+      "sha256": "c749b958fbeb68846149f5eddb109a240e16d99f8356afcf9dae36da0e0f679e",
+      "size_bytes": 16124275
+    },
+    {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/analysis/tables/traffic_resource_attachment.csv",
+      "sha256": "e993c2c9cacd246606fe6e90e9c93bff8c9f73e52080089387335ef636843a34",
+      "size_bytes": 39605569
+    },
+    {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/analysis/tables/opportunity_candidates.csv",
+      "sha256": "04e3d170509eaf8e954f968272318409c9e9c4c3766f706b8b025d02869ed933",
+      "size_bytes": 4179809
+    },
+    {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/analysis/fresh_e2e_analysis.json",
+      "sha256": "3294deca7717c5a2f34f841384cdd8c4ead7e2af6336d818c4ae681b3f4f67c7",
+      "size_bytes": 64146
+    },
+    {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/lineage/R09_SOURCE_LINEAGE.json",
+      "sha256": "10dcb05af4c415fdbde4926a9c57f453d84c6ec83f04e6e1cf5bd8cd0a85f025",
+      "size_bytes": 8305
+    }
+  ],
+  "lineage_id": "batch8-dp2-fresh-003",
+  "recovery_parts": [
+    {
+      "first_source_record_id": "sample:1:0:0",
+      "last_source_record_id": "sample:100000:1:1",
+      "marker_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/recovery/live_utilization_parts/part-0001.complete.json",
+      "marker_sha256": "79dc77fccf8b7a710e16990eb4144dc2fed82435936d10b6152da6f97d5f32ac",
+      "part_ordinal": 1,
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/recovery/live_utilization_parts/part-0001.csv.gz",
+      "row_count": 100000,
+      "schema_version": 1,
+      "sha256": "1d8be8deef070550738cb2c874e4d97d3f13de54b354aaf2cb79d5bf31d18015",
+      "size_bytes": 4805502,
+      "status": "complete"
+    },
+    {
+      "first_source_record_id": "sample:100001:0:0",
+      "last_source_record_id": "sample:200000:1:1",
+      "marker_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/recovery/live_utilization_parts/part-0002.complete.json",
+      "marker_sha256": "21fbb2da29f14ff5d5b8c0fed12ba5e538af7ee5670109dffa853eb1af02f20c",
+      "part_ordinal": 2,
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/recovery/live_utilization_parts/part-0002.csv.gz",
+      "row_count": 100000,
+      "schema_version": 1,
+      "sha256": "5569bddb0d4652634b829604b49b8608b656c9546d37294afd7f2047a4ca4bbe",
+      "size_bytes": 4804180,
+      "status": "complete"
+    },
+    {
+      "first_source_record_id": "sample:200001:0:0",
+      "last_source_record_id": "sample:300000:1:1",
+      "marker_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/recovery/live_utilization_parts/part-0003.complete.json",
+      "marker_sha256": "7579272a49fe69d34b1dcb94c167720ea50f47131f1861a1a773b15cce64d966",
+      "part_ordinal": 3,
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/recovery/live_utilization_parts/part-0003.csv.gz",
+      "row_count": 100000,
+      "schema_version": 1,
+      "sha256": "22c3e57f5ca5cf2fe0806513348c03fc882c300665cb1a4831beac4ae1a38063",
+      "size_bytes": 4807835,
+      "status": "complete"
+    },
+    {
+      "first_source_record_id": "sample:300001:0:0",
+      "last_source_record_id": "sample:400000:1:1",
+      "marker_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/recovery/live_utilization_parts/part-0004.complete.json",
+      "marker_sha256": "238b8b7e8dd7c4aec81979773fe789f67dfb8987b94887a12c473e0adc22d94b",
+      "part_ordinal": 4,
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/recovery/live_utilization_parts/part-0004.csv.gz",
+      "row_count": 100000,
+      "schema_version": 1,
+      "sha256": "bdb2e3a0c7f549a352df05417183774ab4a6a4c911f34ea70f0d70071afb5010",
+      "size_bytes": 4811470,
+      "status": "complete"
+    },
+    {
+      "first_source_record_id": "sample:400001:0:0",
+      "last_source_record_id": "sample:500000:1:1",
+      "marker_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/recovery/live_utilization_parts/part-0005.complete.json",
+      "marker_sha256": "ad99095380d7005105e5eacaba0f19893eaa7a522384c4f6c0527f103fd1883f",
+      "part_ordinal": 5,
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/recovery/live_utilization_parts/part-0005.csv.gz",
+      "row_count": 100000,
+      "schema_version": 1,
+      "sha256": "eb7f8e54a96d413078a78758fbeaf46bbb8c45ba621fbdd2cae3cedd5671f21a",
+      "size_bytes": 4812628,
+      "status": "complete"
+    },
+    {
+      "first_source_record_id": "sample:500001:0:0",
+      "last_source_record_id": "sample:600000:1:1",
+      "marker_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/recovery/live_utilization_parts/part-0006.complete.json",
+      "marker_sha256": "136320a3c69f1ebd6174bc80b4f761b635b3a6cc095f40b625db0349e20e5d32",
+      "part_ordinal": 6,
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/recovery/live_utilization_parts/part-0006.csv.gz",
+      "row_count": 100000,
+      "schema_version": 1,
+      "sha256": "b91265b4b9a77cb84b3010a49987b3934eb9c6dfab35be064adac926cf79234c",
+      "size_bytes": 4799268,
+      "status": "complete"
+    },
+    {
+      "first_source_record_id": "sample:600001:0:0",
+      "last_source_record_id": "sample:700000:1:1",
+      "marker_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/recovery/live_utilization_parts/part-0007.complete.json",
+      "marker_sha256": "b423b66adad3a3cf35bd9a320df03d5fcf524a4f618ccde0560d871b7a1f3cf0",
+      "part_ordinal": 7,
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/recovery/live_utilization_parts/part-0007.csv.gz",
+      "row_count": 100000,
+      "schema_version": 1,
+      "sha256": "c84213f217a9f8b8025117f052314db15433b34e2a54710bae1e96f7968f4ab4",
+      "size_bytes": 4811869,
+      "status": "complete"
+    },
+    {
+      "first_source_record_id": "sample:700001:0:0",
+      "last_source_record_id": "sample:800000:1:1",
+      "marker_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/recovery/live_utilization_parts/part-0008.complete.json",
+      "marker_sha256": "f04ed9fed9d5f56954129f7f599cbcfdc4ca2ca5c839b2dab0b53513a86ae803",
+      "part_ordinal": 8,
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/recovery/live_utilization_parts/part-0008.csv.gz",
+      "row_count": 100000,
+      "schema_version": 1,
+      "sha256": "7ef7e1d8f41c0f78020ec6249278ac1198104d0b8b2a4f2841356b062b76d282",
+      "size_bytes": 4809286,
+      "status": "complete"
+    },
+    {
+      "first_source_record_id": "sample:800001:0:0",
+      "last_source_record_id": "sample:900000:1:1",
+      "marker_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/recovery/live_utilization_parts/part-0009.complete.json",
+      "marker_sha256": "006a4f3ad344696c9dcb8d6edd721623f45b5b5d315960a22599ca80ee40c0ea",
+      "part_ordinal": 9,
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/recovery/live_utilization_parts/part-0009.csv.gz",
+      "row_count": 100000,
+      "schema_version": 1,
+      "sha256": "afe65c0a225dad62d25e2dc4e5f5cc35c86e41a5b0ee084033e65e649649b23a",
+      "size_bytes": 4802300,
+      "status": "complete"
+    },
+    {
+      "first_source_record_id": "sample:900001:0:0",
+      "last_source_record_id": "sample:1000000:1:1",
+      "marker_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/recovery/live_utilization_parts/part-0010.complete.json",
+      "marker_sha256": "050200b94e77b35a2e61e60aa7dbde6332295d3a67776c402a2574b43d5b4a2b",
+      "part_ordinal": 10,
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/recovery/live_utilization_parts/part-0010.csv.gz",
+      "row_count": 100000,
+      "schema_version": 1,
+      "sha256": "13112c3ad3e25c24750b9e14596f2e9e8bea972b78b1ea4062afc57e896c93bd",
+      "size_bytes": 4804319,
+      "status": "complete"
+    },
+    {
+      "first_source_record_id": "sample:1000001:0:0",
+      "last_source_record_id": "sample:1100000:1:1",
+      "marker_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/recovery/live_utilization_parts/part-0011.complete.json",
+      "marker_sha256": "cedc4636742e8513fda514f6ff0279845a577a5a7536db32ba04e070028cfca4",
+      "part_ordinal": 11,
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/recovery/live_utilization_parts/part-0011.csv.gz",
+      "row_count": 100000,
+      "schema_version": 1,
+      "sha256": "4490efcdf59942ab52c27911e57abb43b036de7c17624f5ce872b4a1064e50ca",
+      "size_bytes": 4791914,
+      "status": "complete"
+    },
+    {
+      "first_source_record_id": "sample:1100001:0:0",
+      "last_source_record_id": "sample:1200000:1:1",
+      "marker_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/recovery/live_utilization_parts/part-0012.complete.json",
+      "marker_sha256": "abecf9ab090e4abea2282817b9d8be75b266c617c3a9dc2da5e983bbe4673c23",
+      "part_ordinal": 12,
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/recovery/live_utilization_parts/part-0012.csv.gz",
+      "row_count": 100000,
+      "schema_version": 1,
+      "sha256": "f1dd0164e343fa44aaa5d2c11886b0335d2e026e9c3a83a88c2228b70acf4848",
+      "size_bytes": 4798468,
+      "status": "complete"
+    },
+    {
+      "first_source_record_id": "sample:1200001:0:0",
+      "last_source_record_id": "sample:1300000:1:1",
+      "marker_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/recovery/live_utilization_parts/part-0013.complete.json",
+      "marker_sha256": "185d05de39216a1fae9f50e19a17ecbd30339f21a4dd76a1cf2316b342bdf183",
+      "part_ordinal": 13,
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/recovery/live_utilization_parts/part-0013.csv.gz",
+      "row_count": 100000,
+      "schema_version": 1,
+      "sha256": "0c1e4161bc50151f9061c75a2a587f0bb898dec9d338974902da5d770c726feb",
+      "size_bytes": 4795059,
+      "status": "complete"
+    },
+    {
+      "first_source_record_id": "sample:1300001:0:0",
+      "last_source_record_id": "sample:1400000:1:1",
+      "marker_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/recovery/live_utilization_parts/part-0014.complete.json",
+      "marker_sha256": "36b8311e4c36e1e83bc7284d6e0910718e7a50c9bbc181eba713f0e53db65e18",
+      "part_ordinal": 14,
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/recovery/live_utilization_parts/part-0014.csv.gz",
+      "row_count": 100000,
+      "schema_version": 1,
+      "sha256": "6f4c4efe06a1ea582f5a091d081615b2c1ab95db4fc42e9c56c43bc6726caaf2",
+      "size_bytes": 4781178,
+      "status": "complete"
+    },
+    {
+      "first_source_record_id": "sample:1400001:0:0",
+      "last_source_record_id": "sample:1500000:1:1",
+      "marker_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/recovery/live_utilization_parts/part-0015.complete.json",
+      "marker_sha256": "9852a927f792c3f89cb46c1d7469aa86e46720ab0fcb746785862017f0283549",
+      "part_ordinal": 15,
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/recovery/live_utilization_parts/part-0015.csv.gz",
+      "row_count": 100000,
+      "schema_version": 1,
+      "sha256": "260c14e6f15466abcdc53f5e3e39e484fa826ac77ac91639cd28bfa433c4afd3",
+      "size_bytes": 4786381,
+      "status": "complete"
+    },
+    {
+      "first_source_record_id": "sample:1500001:0:0",
+      "last_source_record_id": "sample:1600000:1:1",
+      "marker_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/recovery/live_utilization_parts/part-0016.complete.json",
+      "marker_sha256": "779d8dd94abeab9c8c3d945a22cb94b100b0f12255e918a50716862b157c3ed0",
+      "part_ordinal": 16,
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/recovery/live_utilization_parts/part-0016.csv.gz",
+      "row_count": 100000,
+      "schema_version": 1,
+      "sha256": "03a42657584e4e602f8349d2439514cae3b7b077bb198f23549105daad3a07b4",
+      "size_bytes": 4782575,
+      "status": "complete"
+    },
+    {
+      "first_source_record_id": "sample:1600001:0:0",
+      "last_source_record_id": "sample:1700000:1:1",
+      "marker_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/recovery/live_utilization_parts/part-0017.complete.json",
+      "marker_sha256": "f0d2ce05b17aef9765aaba3077c557e442f97bad377a0b6b4c5fb405ecf227fd",
+      "part_ordinal": 17,
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/recovery/live_utilization_parts/part-0017.csv.gz",
+      "row_count": 100000,
+      "schema_version": 1,
+      "sha256": "1ef818cc3ede6df73b5235fee8761a58e4a8e30b0d86837a38e2c88b65f66240",
+      "size_bytes": 4784376,
+      "status": "complete"
+    },
+    {
+      "first_source_record_id": "sample:1700001:0:0",
+      "last_source_record_id": "sample:1800000:1:1",
+      "marker_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/recovery/live_utilization_parts/part-0018.complete.json",
+      "marker_sha256": "087cb033b1929ad4f8f8df21ca85b41ba241e7f0f31f13b35c6b20c088addb07",
+      "part_ordinal": 18,
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/recovery/live_utilization_parts/part-0018.csv.gz",
+      "row_count": 100000,
+      "schema_version": 1,
+      "sha256": "181b95cf3ccd4e45d98b12157c10b026452b8e33ee479ccf305f379126ca0c25",
+      "size_bytes": 4780744,
+      "status": "complete"
+    },
+    {
+      "first_source_record_id": "sample:1800001:0:0",
+      "last_source_record_id": "sample:1900000:1:1",
+      "marker_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/recovery/live_utilization_parts/part-0019.complete.json",
+      "marker_sha256": "e41925535c244a9661a7b6da7588c584dbeb17322457409b567387dc96a40788",
+      "part_ordinal": 19,
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/recovery/live_utilization_parts/part-0019.csv.gz",
+      "row_count": 100000,
+      "schema_version": 1,
+      "sha256": "5e889d04c12b5533cb9de0d5903961bc3fec9ff764e3001a17efb6576a42622b",
+      "size_bytes": 4776504,
+      "status": "complete"
+    },
+    {
+      "first_source_record_id": "sample:1900001:0:0",
+      "last_source_record_id": "sample:2000000:1:1",
+      "marker_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/recovery/live_utilization_parts/part-0020.complete.json",
+      "marker_sha256": "0f04e346b44a58a0f4acc51856fc0a86be4a389445eaefe685edacbf052ca811",
+      "part_ordinal": 20,
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/recovery/live_utilization_parts/part-0020.csv.gz",
+      "row_count": 100000,
+      "schema_version": 1,
+      "sha256": "bc5af81f8a5c946f56ff60a22805a3ed692139733cede7325128a49fc993e2a5",
+      "size_bytes": 4790633,
+      "status": "complete"
+    },
+    {
+      "first_source_record_id": "sample:2000001:0:0",
+      "last_source_record_id": "sample:2100000:1:1",
+      "marker_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/recovery/live_utilization_parts/part-0021.complete.json",
+      "marker_sha256": "955ca8894084747186dd8a6a1da0e032aa6d289e355f1d943c2dbfc714beb3df",
+      "part_ordinal": 21,
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/recovery/live_utilization_parts/part-0021.csv.gz",
+      "row_count": 100000,
+      "schema_version": 1,
+      "sha256": "bc4d3532f0cb21dcab4afc759f24ce08921322e25daf08f4a74245c8b0be8a00",
+      "size_bytes": 4782285,
+      "status": "complete"
+    },
+    {
+      "first_source_record_id": "sample:2100001:0:0",
+      "last_source_record_id": "sample:2200000:1:1",
+      "marker_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/recovery/live_utilization_parts/part-0022.complete.json",
+      "marker_sha256": "f4476ed9801c93b07300b68ca9cc9a550a7f7568e406f71c7f1a79edd322587f",
+      "part_ordinal": 22,
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/recovery/live_utilization_parts/part-0022.csv.gz",
+      "row_count": 100000,
+      "schema_version": 1,
+      "sha256": "aefc5042202b129cb15b4585a7d468027f173c5accebf22b5daa5b3d14aaafda",
+      "size_bytes": 4785111,
+      "status": "complete"
+    },
+    {
+      "first_source_record_id": "sample:2200001:0:0",
+      "last_source_record_id": "sample:2300000:1:1",
+      "marker_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/recovery/live_utilization_parts/part-0023.complete.json",
+      "marker_sha256": "9c00cfa95f1a52dc6eb3f37d93e7ef48bc134a8dbe0dba415d6f0ec1c4d9593f",
+      "part_ordinal": 23,
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/recovery/live_utilization_parts/part-0023.csv.gz",
+      "row_count": 100000,
+      "schema_version": 1,
+      "sha256": "9dc21fad7c0e5910b5e1c3c9d07cb90fe1f0029007fdce1f5ccc5410431fddf7",
+      "size_bytes": 4781038,
+      "status": "complete"
+    },
+    {
+      "first_source_record_id": "sample:2300001:0:0",
+      "last_source_record_id": "anchor:end",
+      "marker_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/recovery/live_utilization_parts/part-0024.complete.json",
+      "marker_sha256": "5e930554482f448188384137b8dccb7457d4e1a146400ebe0e3055b448e3504a",
+      "part_ordinal": 24,
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/recovery/live_utilization_parts/part-0024.csv.gz",
+      "row_count": 57674,
+      "schema_version": 1,
+      "sha256": "f841f11f913b86cd65fe6088fba6ebc94282e9d09d7bb61ab702337bdde81e7e",
+      "size_bytes": 2755273,
+      "status": "complete"
+    }
+  ],
+  "runtime_run_id": "batch8-dp2-fresh-003",
+  "schema_version": 1,
+  "status": "complete",
+  "strict_scheduler_handoff_included": false
+}

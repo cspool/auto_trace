@@ -1,0 +1,179 @@
+{
+  "counter_metrics_affected": false,
+  "end_gt_complete_delta_ns_max": 13128,
+  "end_gt_complete_delta_ns_sum": 26221387,
+  "end_gt_complete_row_count": 10047,
+  "end_gt_complete_row_fraction": 0.00887937937141736,
+  "examples_first_three_per_affected_segment": [
+    {
+      "complete_ns": 55527060161794,
+      "csv_data_row_1based": 158,
+      "end_gt_complete_delta_ns": 124,
+      "end_ns": 55527060161918,
+      "gpu_id": 0,
+      "kernel_name": "triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0",
+      "segment_id": "04_triton_rmsnorm_pmc"
+    },
+    {
+      "complete_ns": 55527085236227,
+      "csv_data_row_1based": 162,
+      "end_gt_complete_delta_ns": 89,
+      "end_ns": 55527085236316,
+      "gpu_id": 0,
+      "kernel_name": "triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0",
+      "segment_id": "04_triton_rmsnorm_pmc"
+    },
+    {
+      "complete_ns": 55527099651069,
+      "csv_data_row_1based": 164,
+      "end_gt_complete_delta_ns": 126,
+      "end_ns": 55527099651195,
+      "gpu_id": 0,
+      "kernel_name": "triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0",
+      "segment_id": "04_triton_rmsnorm_pmc"
+    },
+    {
+      "complete_ns": 57591274384514,
+      "csv_data_row_1based": 668,
+      "end_gt_complete_delta_ns": 2655,
+      "end_ns": 57591274387169,
+      "gpu_id": 1,
+      "kernel_name": "triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0",
+      "segment_id": "05_triton_rmsnorm_pmc_read"
+    },
+    {
+      "complete_ns": 57591279908815,
+      "csv_data_row_1based": 669,
+      "end_gt_complete_delta_ns": 2673,
+      "end_ns": 57591279911488,
+      "gpu_id": 1,
+      "kernel_name": "triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0",
+      "segment_id": "05_triton_rmsnorm_pmc_read"
+    },
+    {
+      "complete_ns": 57591285735589,
+      "csv_data_row_1based": 670,
+      "end_gt_complete_delta_ns": 2778,
+      "end_ns": 57591285738367,
+      "gpu_id": 1,
+      "kernel_name": "triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0",
+      "segment_id": "05_triton_rmsnorm_pmc_read"
+    },
+    {
+      "complete_ns": 59218679096355,
+      "csv_data_row_1based": 457,
+      "end_gt_complete_delta_ns": 227,
+      "end_ns": 59218679096582,
+      "gpu_id": 1,
+      "kernel_name": "triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0",
+      "segment_id": "06_triton_rmsnorm_pmc_write"
+    },
+    {
+      "complete_ns": 59218685031389,
+      "csv_data_row_1based": 458,
+      "end_gt_complete_delta_ns": 233,
+      "end_ns": 59218685031622,
+      "gpu_id": 1,
+      "kernel_name": "triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0",
+      "segment_id": "06_triton_rmsnorm_pmc_write"
+    },
+    {
+      "complete_ns": 59218690201049,
+      "csv_data_row_1based": 459,
+      "end_gt_complete_delta_ns": 174,
+      "end_ns": 59218690201223,
+      "gpu_id": 1,
+      "kernel_name": "triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0",
+      "segment_id": "06_triton_rmsnorm_pmc_write"
+    },
+    {
+      "complete_ns": 60747436952029,
+      "csv_data_row_1based": 47,
+      "end_gt_complete_delta_ns": 137,
+      "end_ns": 60747436952166,
+      "gpu_id": 0,
+      "kernel_name": "chunk_gated_delta_rule_fwd_kernel_h_blockdim64",
+      "segment_id": "07_chunk_group_pmc"
+    },
+    {
+      "complete_ns": 60748922691695,
+      "csv_data_row_1based": 326,
+      "end_gt_complete_delta_ns": 56,
+      "end_ns": 60748922691751,
+      "gpu_id": 0,
+      "kernel_name": "chunk_scaled_dot_kkt_fwd_kernel",
+      "segment_id": "07_chunk_group_pmc"
+    },
+    {
+      "complete_ns": 60748927814935,
+      "csv_data_row_1based": 328,
+      "end_gt_complete_delta_ns": 16,
+      "end_ns": 60748927814951,
+      "gpu_id": 0,
+      "kernel_name": "chunk_fwd_kernel_o",
+      "segment_id": "07_chunk_group_pmc"
+    },
+    {
+      "complete_ns": 61807802891610,
+      "csv_data_row_1based": 47,
+      "end_gt_complete_delta_ns": 132,
+      "end_ns": 61807802891742,
+      "gpu_id": 0,
+      "kernel_name": "chunk_gated_delta_rule_fwd_kernel_h_blockdim64",
+      "segment_id": "08_chunk_group_pmc_read"
+    },
+    {
+      "complete_ns": 61807830388197,
+      "csv_data_row_1based": 52,
+      "end_gt_complete_delta_ns": 182,
+      "end_ns": 61807830388379,
+      "gpu_id": 0,
+      "kernel_name": "chunk_fwd_kernel_o",
+      "segment_id": "08_chunk_group_pmc_read"
+    },
+    {
+      "complete_ns": 61808520246009,
+      "csv_data_row_1based": 190,
+      "end_gt_complete_delta_ns": 87,
+      "end_ns": 61808520246096,
+      "gpu_id": 0,
+      "kernel_name": "chunk_scaled_dot_kkt_fwd_kernel",
+      "segment_id": "08_chunk_group_pmc_read"
+    },
+    {
+      "complete_ns": 62858885327838,
+      "csv_data_row_1based": 154,
+      "end_gt_complete_delta_ns": 26,
+      "end_ns": 62858885327864,
+      "gpu_id": 0,
+      "kernel_name": "chunk_scaled_dot_kkt_fwd_kernel",
+      "segment_id": "09_chunk_group_pmc_write"
+    },
+    {
+      "complete_ns": 62858911716129,
+      "csv_data_row_1based": 158,
+      "end_gt_complete_delta_ns": 213,
+      "end_ns": 62858911716342,
+      "gpu_id": 0,
+      "kernel_name": "chunk_scaled_dot_kkt_fwd_kernel",
+      "segment_id": "09_chunk_group_pmc_write"
+    },
+    {
+      "complete_ns": 62858917298801,
+      "csv_data_row_1based": 160,
+      "end_gt_complete_delta_ns": 261,
+      "end_ns": 62858917299062,
+      "gpu_id": 0,
+      "kernel_name": "chunk_fwd_kernel_o",
+      "segment_id": "09_chunk_group_pmc_write"
+    }
+  ],
+  "required_orderings_verified": [
+    "DispatchNs <= BeginNs <= EndNs",
+    "DispatchNs <= CompleteNs"
+  ],
+  "schema_version": 1,
+  "source_row_count": 1131498,
+  "status": "complete",
+  "timing_is_production_latency": false
+}

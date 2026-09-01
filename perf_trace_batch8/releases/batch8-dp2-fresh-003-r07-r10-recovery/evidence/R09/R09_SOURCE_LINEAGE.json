@@ -1,0 +1,136 @@
+{
+  "R07_recovery_complete": {
+    "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/recovery/db_first_postprocess_001/DB_FIRST_R07_RECOVERY_COMPLETE.json",
+    "sha256": "368041278ba23842a80a277cd0e3331d4e19feba6bf2a8fc7599d85109423d7d",
+    "size_bytes": 1127
+  },
+  "R07_source_lineage": {
+    "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/recovery/db_first_postprocess_001/lineage/DB_FIRST_R07_SOURCE_LINEAGE.json",
+    "sha256": "2f5fabfa243bf41b593000314e11532d2c498d9f2d1f54788a7540ebdc025219",
+    "size_bytes": 2765
+  },
+  "R08_degraded_handoff": {
+    "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/observed_subset_replay_001/normalized_003/R08_DEGRADED_HANDOFF.json",
+    "sha256": "cbe30e20e7d46380e0e7321a835236b1c35491eec91646bd14288f6dc7533bfb",
+    "size_bytes": 4796
+  },
+  "evidence_status": "degraded_R07_observed_subset",
+  "full_request_analysis": {
+    "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/analysis/fresh_e2e_analysis.json",
+    "sha256": "3294deca7717c5a2f34f841384cdd8c4ead7e2af6336d818c4ae681b3f4f67c7",
+    "size_bytes": 64146
+  },
+  "gpu_dcu_execution_performed": false,
+  "lineage_id": "batch8-dp2-fresh-003",
+  "model_execution_performed": false,
+  "pmc_collection_performed": false,
+  "predecessor_artifacts_modified": false,
+  "prepared_database_sha256": "0d61e55e04c4010c144ae7d6c308ce09fa0c413e289be4f5e6ce5358292db3bf",
+  "profiler_execution_performed": false,
+  "recovery_scope": "user_authorized_cap_db_observed_subset_offline_continuation",
+  "runtime_run_id": "batch8-dp2-fresh-003",
+  "schema_version": 1,
+  "source_capture_database_sha256": "7e71f7977d7b67781d588cc9560bd25850cb501c803286f2494d2ad5e983b15d",
+  "source_inputs": [
+    {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/recovery/db_first_normalization_003/trace/request_ranges.csv",
+      "role": "request_ranges.csv",
+      "sha256": "874c5cff4df85edc28a7b97915b6822723f94862346fb3999b836fcaefcc48c3",
+      "size_bytes": 154929
+    },
+    {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/recovery/db_first_normalization_003/trace/process_ranges.csv",
+      "role": "process_ranges.csv",
+      "sha256": "edda8b05f0a31e0bc7027209ce9c598f33885a832fb5a11cecfa2f5e1818841a",
+      "size_bytes": 4447278
+    },
+    {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/recovery/db_first_normalization_003/trace/strict_owned_kernels.csv",
+      "role": "strict_owned_kernels.csv",
+      "sha256": "bfe61eed974c00c407c28935610db77ecdeb689e044fbd4a9ec7941a2a5336c7",
+      "size_bytes": 7456968
+    },
+    {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/recovery/db_first_postprocess_001/alignment/r07_live_utilization_aligned.csv",
+      "role": "r07_live_utilization_aligned.csv",
+      "sha256": "c4a4f427ae1a3a51ae76facddaa7e28f9fe14906a7cbe763cfcbd5c0318c5208",
+      "size_bytes": 709377133
+    },
+    {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/recovery/db_first_postprocess_001/alignment/r07_live_utilization_gaps.csv",
+      "role": "r07_live_utilization_gaps.csv",
+      "sha256": "d75bc27e4415284befce2b767acf5413edf23206a52adcf03a156457308ac1e9",
+      "size_bytes": 92280
+    },
+    {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/recovery/db_first_postprocess_001/alignment/r07_process_live_utilization.csv",
+      "role": "r07_process_live_utilization.csv",
+      "sha256": "56674b06c2a1bbc15e395c033963bef4982edabe491fae9002a8218b00a2adb5",
+      "size_bytes": 2515072
+    },
+    {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/recovery/db_first_postprocess_001/dependency/fresh_run_dependency_adapter.csv",
+      "role": "fresh_run_dependency_adapter.csv",
+      "sha256": "611c6613727e3a9f0010ff221aa0c0ef2d2cc49e0e8d2c8033b46287f50fb422",
+      "size_bytes": 11088428
+    },
+    {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-019/live_utilization/clock_anchors.json",
+      "role": "clock_anchors.json",
+      "sha256": "f614116ac9121ac8a5c5359a9fb39bc7f6092971b550037701361bdf7f0d187e",
+      "size_bytes": 1142
+    },
+    {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/recovery/db_first_normalization_003/trace/process_trace_summary.json",
+      "role": "process_trace_summary.json",
+      "sha256": "8a3ba04e80642030faefef00d25999acc49861ca040281ec8d9c14aa981f5e6a",
+      "size_bytes": 5279
+    },
+    {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/recovery/db_first_postprocess_001/alignment/live_utilization_summary.json",
+      "role": "live_utilization_summary.json",
+      "sha256": "44c69e6e999409e7b52012299df4a64c82168d0b6756082635070293ae8a72eb",
+      "size_bytes": 2985
+    },
+    {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/recovery/db_first_postprocess_001/DB_FIRST_R07_RECOVERY_COMPLETE.json",
+      "role": "DB_FIRST_R07_RECOVERY_COMPLETE.json",
+      "sha256": "368041278ba23842a80a277cd0e3331d4e19feba6bf2a8fc7599d85109423d7d",
+      "size_bytes": 1127
+    },
+    {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/recovery/db_first_postprocess_001/lineage/DB_FIRST_R07_SOURCE_LINEAGE.json",
+      "role": "DB_FIRST_R07_SOURCE_LINEAGE.json",
+      "sha256": "2f5fabfa243bf41b593000314e11532d2c498d9f2d1f54788a7540ebdc025219",
+      "size_bytes": 2765
+    },
+    {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/observed_subset_replay_001/normalized_003/R08_DEGRADED_HANDOFF.json",
+      "role": "R08_DEGRADED_HANDOFF.json",
+      "sha256": "cbe30e20e7d46380e0e7321a835236b1c35491eec91646bd14288f6dc7533bfb",
+      "size_bytes": 4796
+    },
+    {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/observed_subset_replay_001/normalized_003/kernel_metrics.csv",
+      "role": "kernel_metrics.csv",
+      "sha256": "8b04141c230c706c23dea362896df85e6117e1ba9c70aa9adc6d2824ecdf4e46",
+      "size_bytes": 10271
+    },
+    {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/observed_subset_replay_001/normalized_003/methodology.json",
+      "role": "methodology.json",
+      "sha256": "8769c51720f376c13dedb5bbaa56fd27ff31e98df8c3009e92e09db31570286b",
+      "size_bytes": 2861
+    },
+    {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/observed_subset_replay_001/normalized_003/semantic_missingness.json",
+      "role": "semantic_missingness.json",
+      "sha256": "4ee5077dcb9fb1a712d426c15d86d41a2c04fa5894a41450cb25ffced8388bdb",
+      "size_bytes": 8904
+    }
+  ],
+  "status": "complete",
+  "strict_R09_handoff_created": false,
+  "trace_collection_performed": false,
+  "trace_profile_sha256": "3b4c952063f48ae662b48b5ce9d8fd76e0ac4d74e170bdb1839ae8b1aaa23cce"
+}

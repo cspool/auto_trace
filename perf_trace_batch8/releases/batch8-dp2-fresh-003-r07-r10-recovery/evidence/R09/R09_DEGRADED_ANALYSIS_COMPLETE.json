@@ -1,0 +1,46 @@
+{
+  "artifact_manifest": {
+    "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/artifact_manifest.json",
+    "sha256": "1e78b2d28f3867e0fbab4d0ff27a9d45238ffbbb9b00e26e6e74011617534af0",
+    "size_bytes": 26244
+  },
+  "completion_audit": {
+    "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/validation/R09_COMPLETION_AUDIT.json",
+    "sha256": "fb2dfae409dc1bcbd3b40fe042550e4d096535ec066fe2b412dc5ad4cbc84945",
+    "size_bytes": 6492
+  },
+  "dcu_accessed": false,
+  "degraded_R10_offline_reporting_authorized_by_user_request": true,
+  "evidence_status": "degraded_R07_observed_subset",
+  "execution_status": "complete",
+  "finished_utc": "2026-09-01T11:31:01.520591Z",
+  "full_request_analysis": {
+    "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/analysis/fresh_e2e_analysis.json",
+    "sha256": "3294deca7717c5a2f34f841384cdd8c4ead7e2af6336d818c4ae681b3f4f67c7",
+    "size_bytes": 64146
+  },
+  "schema_version": 1,
+  "source_lineage": {
+    "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/lineage/R09_SOURCE_LINEAGE.json",
+    "sha256": "10dcb05af4c415fdbde4926a9c57f453d84c6ec83f04e6e1cf5bd8cd0a85f025",
+    "size_bytes": 8305
+  },
+  "status": "complete",
+  "strict_R09_handoff_created": false,
+  "strict_R10_authorized": false,
+  "table_count": 12,
+  "table_row_counts": {
+    "dependency_state": 9352,
+    "high_latency_processes": 391,
+    "kernel_concurrency": 6526,
+    "kernel_timeline": 6520,
+    "launch_gaps": 6515,
+    "live_utilization_aligned": 2357674,
+    "opportunity_candidates": 3921,
+    "process_live_utilization": 3920,
+    "process_timeline": 3920,
+    "queue_concurrency": 6526,
+    "request_timeline": 320,
+    "traffic_resource_attachment": 30712
+  }
+}

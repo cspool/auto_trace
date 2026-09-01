@@ -1,0 +1,202 @@
+{
+  "artifact_manifest": {
+    "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/artifact_manifest.json",
+    "sha256": "1e78b2d28f3867e0fbab4d0ff27a9d45238ffbbb9b00e26e6e74011617534af0",
+    "size_bytes": 26244
+  },
+  "audit_scope": "R09_degraded_observed_subset_not_strict_scheduler_R09",
+  "builder_marker": {
+    "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/R09_BUILDER_COMPLETE.json",
+    "sha256": "e954abd0207d3e197ab383a483c890c78ea2b8d9fdf2ecd209fbbd8b86843f48",
+    "size_bytes": 1691
+  },
+  "coverage": {
+    "declared_measured_request_count": 8,
+    "declared_process_marker_count": 12544,
+    "declared_target_count": 13568,
+    "dp_ranks": [
+      0,
+      1
+    ],
+    "missing_process_marker_count": 8624,
+    "missing_target_count": 9328,
+    "native_devices": [
+      0,
+      1
+    ],
+    "observed_process_marker_count": 3920,
+    "observed_target_count": 4240,
+    "observed_unique_request_identity_count": 5,
+    "request_range_row_count": 320,
+    "strict_owned_kernel_count": 6520,
+    "target_coverage_fraction": 0.3125
+  },
+  "dcu_accessed": false,
+  "declared_target_coverage_complete": false,
+  "elapsed_seconds": 32.72217649099184,
+  "evidence_status": "degraded_R07_observed_subset",
+  "finished_utc": "2026-09-01T11:31:01.503111Z",
+  "formal_scheduler_handoff_created": false,
+  "full_request_analysis": {
+    "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/analysis/fresh_e2e_analysis.json",
+    "sha256": "3294deca7717c5a2f34f841384cdd8c4ead7e2af6336d818c4ae681b3f4f67c7",
+    "size_bytes": 64146
+  },
+  "lineage_id": "batch8-dp2-fresh-003",
+  "observed_subset_table_conservation": true,
+  "runtime_run_id": "batch8-dp2-fresh-003",
+  "sampling_performed": false,
+  "schema_version": 1,
+  "source_lineage": {
+    "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/degraded_observed_subset_001/lineage/R09_SOURCE_LINEAGE.json",
+    "sha256": "10dcb05af4c415fdbde4926a9c57f453d84c6ec83f04e6e1cf5bd8cd0a85f025",
+    "size_bytes": 8305
+  },
+  "status": "complete",
+  "strict_R09_handoff_eligible": false,
+  "table_audits": {
+    "dependency_state": {
+      "availability_counts": {
+        "available_observed_subset": 6520,
+        "unknown_deterministically_derived": 2320,
+        "unknown_unavailable": 512
+      },
+      "record_kind_counts": {
+        "dependency_edge": 9352
+      },
+      "request_identity_count": 5,
+      "row_count": 9352
+    },
+    "high_latency_processes": {
+      "availability_counts": {
+        "available_observed_subset": 391
+      },
+      "record_kind_counts": {
+        "observed_process_p95_classification": 391
+      },
+      "request_identity_count": 5,
+      "row_count": 391
+    },
+    "kernel_concurrency": {
+      "availability_counts": {
+        "available_observed_subset": 6521,
+        "unavailable_cross_device_clock_alignment_not_proven": 5
+      },
+      "record_kind_counts": {
+        "cross_device_scope_sentinel": 5,
+        "observed_sweep_segment": 6521
+      },
+      "request_identity_count": 5,
+      "row_count": 6526
+    },
+    "kernel_timeline": {
+      "availability_counts": {
+        "available_observed_subset": 6520
+      },
+      "record_kind_counts": {
+        "strict_owned_kernel": 6520
+      },
+      "request_identity_count": 5,
+      "row_count": 6520
+    },
+    "launch_gaps": {
+      "availability_counts": {
+        "available_observed_subset": 6515
+      },
+      "record_kind_counts": {
+        "adjacent_correlated_launch_pair": 6515
+      },
+      "request_identity_count": 5,
+      "row_count": 6515
+    },
+    "live_utilization_aligned": {
+      "availability_counts": {
+        "available_anchor": 2,
+        "available_sample": 2357294,
+        "unavailable_alignment_error": 4,
+        "unavailable_sampling_gap": 374
+      },
+      "record_kind_counts": {
+        "anchor": 2,
+        "gap": 374,
+        "sample": 2357298
+      },
+      "request_identity_count": 0,
+      "row_count": 2357674
+    },
+    "opportunity_candidates": {
+      "availability_counts": {
+        "available_observed_subset": 3920,
+        "blocked_by_unavailable": 1
+      },
+      "candidate_state_counts": {
+        "blocked_by_unavailable": 1,
+        "candidate": 391,
+        "non_candidate": 3529
+      },
+      "record_kind_counts": {
+        "missing_declared_process_universe_sentinel": 1,
+        "observed_process_opportunity_evaluation": 3920
+      },
+      "request_identity_count": 5,
+      "row_count": 3921
+    },
+    "process_live_utilization": {
+      "availability_counts": {
+        "available": 1318,
+        "unavailable_intrinsic_short_window": 2586,
+        "unavailable_sampling_gap": 16
+      },
+      "record_kind_counts": {
+        "process_live_utilization": 3920
+      },
+      "request_identity_count": 5,
+      "row_count": 3920
+    },
+    "process_timeline": {
+      "availability_counts": {
+        "available_observed_subset": 3920
+      },
+      "record_kind_counts": {
+        "fragment": 1280,
+        "process_parent": 2640
+      },
+      "request_identity_count": 5,
+      "row_count": 3920
+    },
+    "queue_concurrency": {
+      "availability_counts": {
+        "available_observed_subset": 6521,
+        "unavailable_cross_device_clock_alignment_not_proven": 5
+      },
+      "record_kind_counts": {
+        "cross_device_scope_sentinel": 5,
+        "observed_sweep_segment": 6521
+      },
+      "request_identity_count": 5,
+      "row_count": 6526
+    },
+    "request_timeline": {
+      "availability_counts": {
+        "available_observed_subset": 320
+      },
+      "record_kind_counts": {
+        "repeated_layer_scope_request_marker": 320
+      },
+      "request_identity_count": 5,
+      "row_count": 320
+    },
+    "traffic_resource_attachment": {
+      "availability_counts": {
+        "available_replay_projected": 12928,
+        "available_replay_projected_partial": 12608,
+        "unavailable_no_exact_R08_kernel_name_device_match": 5176
+      },
+      "record_kind_counts": {},
+      "request_identity_count": 5,
+      "row_count": 30712
+    }
+  },
+  "table_count": 12,
+  "top_n_truncation_performed": false
+}

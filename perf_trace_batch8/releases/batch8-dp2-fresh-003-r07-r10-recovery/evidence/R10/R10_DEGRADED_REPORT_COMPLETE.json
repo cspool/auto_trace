@@ -1,0 +1,45 @@
+{
+  "artifact_manifest": {
+    "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/degraded_observed_subset_report_001/artifact_manifest.json",
+    "sha256": "81b21317dada8a2a0b9cb2d12474b9575029bcdf8a26ada75d8997b00e360ab1",
+    "size_bytes": 4045
+  },
+  "browser_runtime_available": false,
+  "complete_declared_target_report": false,
+  "complete_observed_subset_report": true,
+  "completion_audit": {
+    "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/degraded_observed_subset_report_001/R10_COMPLETION_AUDIT.json",
+    "sha256": "e982a7c7aa8224967c6b4ef8b86af3cf1b8a2868f7d6e45ab8752fb4322b82a6",
+    "size_bytes": 6669
+  },
+  "dcu_accessed": false,
+  "entry_point": {
+    "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/degraded_observed_subset_report_001/acceptance/index.html",
+    "sha256": "f4f1ff5ed1ff0718f31c0ac9a2f032040c6e6c97eb18493ab79eb3768c300acc",
+    "size_bytes": 8103
+  },
+  "event_count": 17280,
+  "evidence_status": "degraded_R07_observed_subset",
+  "execution_status": "complete",
+  "finished_utc": "2026-09-01T11:41:17.555888Z",
+  "full_timeline_manifest": {
+    "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/degraded_observed_subset_report_001/acceptance/full_timeline_manifest.json",
+    "sha256": "c78e9346796cb8c8067caa0fea48e2d7ba9249f7d34bd95b44fc28d1f10b43bf",
+    "size_bytes": 30408
+  },
+  "live_sample_count": 2357298,
+  "offline_acceptance_manifest": {
+    "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/degraded_observed_subset_report_001/acceptance/offline_acceptance_manifest.json",
+    "sha256": "f88f4105af60a96591ad66eb4c5b2eb43cd85673fcc03925e3cae13171e91621",
+    "size_bytes": 4340
+  },
+  "schema_version": 1,
+  "source_lineage": {
+    "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/degraded_observed_subset_report_001/R10_SOURCE_LINEAGE.json",
+    "sha256": "43012398088e47d74063d8ff01b25d2c4ceab55835082a630bd68d0ec5f1581b",
+    "size_bytes": 7960
+  },
+  "status": "complete",
+  "strict_R10_handoff_created": false,
+  "strict_offline_acceptance_complete": false
+}

@@ -1,0 +1,50 @@
+{
+  "aggregation": "exclude only all-NONE counter payloads, sum available raw counters, then evaluate derived ratios; max(instance) is evaluated per eligible dispatch then summed",
+  "device_constants": {
+    "CU_NUM": 80,
+    "SE_NUM": 8,
+    "SIMD_NUM": 320,
+    "SIMD_PER_CU": 4,
+    "source": "fresh gfx936 rocminfo sealed by device_capabilities_006"
+  },
+  "formula_corrections": {
+    "VALUBusy_pct": "Uses 320 total SIMD lanes groups (80 CU * 4 SIMD/CU); this supersedes the simplified capability-preflight note."
+  },
+  "formulas": {
+    "GPUBusy_pct": "100*sum(GRBM_GUI_ACTIVE)/sum(GRBM_COUNT)",
+    "L2CacheHit_pct": "100*sum(TCC_HIT)/(sum(TCC_HIT)+sum(TCC_MISS))",
+    "LDSBankConflict_pct": "100*sum(SQ_LDS_BANK_CONFLICT)/(80*sum(GRBM_GUI_ACTIVE))",
+    "MemUnitBusy_pct": "100*sum(max_16(TA_TA_BUSY))/(8*sum(GRBM_GUI_ACTIVE))",
+    "MemUnitStalled_pct": "100*sum(max_16(TCP_TCP_TA_DATA_STALL_CYCLES))/(8*sum(GRBM_GUI_ACTIVE))",
+    "VALUBusy_pct": "100*sum(SQ_ACTIVE_INST_VALU)*4/(320*sum(GRBM_GUI_ACTIVE))",
+    "WriteUnitStalled_pct": "100*sum(max_64(TCC_EA_WRREQ_STALL,TCC_EA1_WRREQ_STALL))/sum(GRBM_GUI_ACTIVE)",
+    "read_requests_sum": "sum(TCC_EA_RDREQ)+sum(TCC_EA1_RDREQ)",
+    "write_requests_sum": "sum(TCC_EA_WRREQ)+sum(TCC_EA1_WRREQ)"
+  },
+  "limitations": [
+    "HIPProf PMC replay serializes/replays selected kernels; exported timing columns are not production latency.",
+    "Achieved occupancy samples are unavailable; launch resource signatures are retained only as a static pressure proxy.",
+    "R07 marker coverage is 4240/13568 (31.25%); strict R08/R09 scheduler handoff is therefore forbidden.",
+    "The chunk_ filter is an intentional bounded superset containing four observed kernel names.",
+    "Twelve of 1,131,498 dispatch rows contain an all-NONE 186-counter payload; metadata is retained, counters are excluded, and every affected aggregate carries partial numeric coverage.",
+    "10,047 rows have EndNs slightly greater than CompleteNs (maximum 13,128 ns); the two internally monotonic timing intervals are retained and explicitly marked non-production timing."
+  ],
+  "schema_version": 1,
+  "semantic_missingness_policy": {
+    "coerce_NONE_to_zero": false,
+    "counter_payload_excluded_from_numeric_aggregation": true,
+    "coverage_fields_emitted": true,
+    "dispatch_metadata_retained": true,
+    "literal_NONE_meaning": "counter payload unavailable for that replay dispatch"
+  },
+  "status": "complete",
+  "timestamp_semantics_policy": {
+    "EndNs_le_CompleteNs_required": false,
+    "counter_metrics_affected": false,
+    "reason": "EndNs and CompleteNs are separately exported profiler event boundaries and show small ordering deltas; neither timing aggregate is used as production latency.",
+    "required_orderings": [
+      "DispatchNs <= BeginNs <= EndNs",
+      "DispatchNs <= CompleteNs"
+    ]
+  }
+}

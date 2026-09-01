@@ -1,0 +1,87 @@
+{
+  "capability_report": {
+    "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/observed_subset_replay_001/preflight/device_capabilities_006/CAPABILITY_COMPLETE.json",
+    "sha256": "cc3c07805f412b69b0860ba4e5720f07de877ed408388e0bd2c57ce5b421d428",
+    "size_bytes": 108297
+  },
+  "capture_segment_complete_count": 9,
+  "capture_segment_count": 9,
+  "counter_numeric_complete_row_count": 1131486,
+  "counter_numeric_complete_row_fraction": 0.9999893945901804,
+  "dcu_required_after_this_handoff": false,
+  "degraded_R09_offline_analysis_authorized_by_existing_user_request": true,
+  "end_gt_complete_delta_ns_max": 13128,
+  "end_gt_complete_row_count": 10047,
+  "evidence_status": "degraded_R07_observed_subset",
+  "execution_status": "complete",
+  "gpu_ids": [
+    0,
+    1
+  ],
+  "group_count": 3,
+  "handoff_kind": "degraded_observed_subset_offline_continuation",
+  "kernel_name_count": 6,
+  "limitations_sha256": "755ee7fe1c7686802440f8ab88e0ad1e212919e09b12982e5d911bd6b86c2482",
+  "literal_NONE_coerced_to_zero": false,
+  "mode_count": 3,
+  "normalized_outputs": {
+    "counter_aggregates": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/observed_subset_replay_001/normalized_003/counter_aggregates.json",
+      "sha256": "d23241b9178090f90acecc1334e052235823f8d97dcb897b275a346b0c50ad75",
+      "size_bytes": 638416
+    },
+    "kernel_metrics": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/observed_subset_replay_001/normalized_003/kernel_metrics.csv",
+      "sha256": "8b04141c230c706c23dea362896df85e6117e1ba9c70aa9adc6d2824ecdf4e46",
+      "size_bytes": 10271
+    },
+    "launch_signatures": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/observed_subset_replay_001/normalized_003/launch_signatures.csv",
+      "sha256": "f8f5fe990e12de71c6966fba4f67d42cdbdb8bbc39a7cf2aebf987d42ee56230",
+      "size_bytes": 10563
+    },
+    "methodology": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/observed_subset_replay_001/normalized_003/methodology.json",
+      "sha256": "8769c51720f376c13dedb5bbaa56fd27ff31e98df8c3009e92e09db31570286b",
+      "size_bytes": 2861
+    },
+    "mode_aggregates": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/observed_subset_replay_001/normalized_003/mode_aggregates.csv",
+      "sha256": "b62da894081f3f29b95226a5e230c3380dbd0df69a1e2bb96cf55f6a192d294b",
+      "size_bytes": 26480
+    },
+    "segment_inventory": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/observed_subset_replay_001/normalized_003/segment_inventory.csv",
+      "sha256": "c19d890667066bcd8b2053b54ec56dd0a87b15b6aac3e7c78b1871c7e5362863",
+      "size_bytes": 6349
+    },
+    "semantic_missingness": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/observed_subset_replay_001/normalized_003/semantic_missingness.json",
+      "sha256": "4ee5077dcb9fb1a712d426c15d86d41a2c04fa5894a41450cb25ffced8388bdb",
+      "size_bytes": 8904
+    },
+    "timestamp_semantics": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/observed_subset_replay_001/normalized_003/timestamp_semantics.json",
+      "sha256": "3b0ed1e9f1386f66a00536e6cff00837e4220d79143c7f46748981f5b4aeb250",
+      "size_bytes": 5627
+    }
+  },
+  "profiled_timing_is_production_latency": false,
+  "r07_source": {
+    "coverage_target_met": false,
+    "declared_target_count": 13568,
+    "missing_target_count": 9328,
+    "observed_target_count": 4240,
+    "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/recovery/db_first_postprocess_001/DB_FIRST_R07_RECOVERY_COMPLETE.json",
+    "sha256": "368041278ba23842a80a277cd0e3331d4e19feba6bf2a8fc7599d85109423d7d",
+    "strict_scheduler_handoff_created": false,
+    "target_coverage_fraction": 0.3125
+  },
+  "schema_version": 1,
+  "semantic_missing_counter_cell_count": 2232,
+  "semantic_missing_counter_row_count": 12,
+  "source_row_count": 1131498,
+  "status": "complete",
+  "strict_R08_handoff_eligible": false,
+  "strict_R09_authorized": false
+}

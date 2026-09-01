@@ -1,0 +1,168 @@
+{
+  "audit_scope": "R10_degraded_observed_subset_static_acceptance_not_strict_scheduler_R10",
+  "browser_runtime_available": false,
+  "complete_declared_target_report": false,
+  "complete_observed_subset_report": true,
+  "dcu_accessed": false,
+  "elapsed_seconds": 11.873724315009895,
+  "event_counts": {
+    "actual_display_event_count": 17280,
+    "formula": 17280,
+    "gpu_queue_kernel_display_events": 6520,
+    "kernel_timeline_rows": 6520,
+    "logical_event_count": 10760,
+    "process_timeline_rows": 3920,
+    "request_timeline_rows": 320,
+    "strict_owned_kernel_display_events": 6520
+  },
+  "evidence_status": "degraded_R07_observed_subset",
+  "finished_utc": "2026-09-01T11:41:17.546539Z",
+  "inline_live_anchor_count": 2,
+  "inline_live_gap_count": 374,
+  "inline_live_sample_count": 2357298,
+  "kernel_display_copy_counts": {
+    "gpu_queue": 6520,
+    "logical": 4240,
+    "strict_owned_kernel": 6520
+  },
+  "lineage_id": "batch8-dp2-fresh-003",
+  "network_denied_browser_execution_performed": false,
+  "page_audits": [
+    {
+      "forbidden_pattern_hits": [],
+      "links": [
+        "E2E_PROCESS_TIMELINE.html",
+        "E2E_PROCESS_TIMELINE_LOSSLESS.html",
+        "HIGH_LATENCY_PROCESS_HARDWARE_TIMELINE.html",
+        "CONCURRENCY_UTILIZATION.html",
+        "E2E_PROCESS_TIMELINE.full.perfetto.json",
+        "full_timeline_manifest.json",
+        "offline_acceptance_manifest.json",
+        "../R10_SOURCE_LINEAGE.json",
+        "../R10_COMPLETION_AUDIT.json"
+      ],
+      "metadata": {
+        "browser_runtime_audit_available": false,
+        "event_counts": {
+          "actual_display_event_count": 17280,
+          "formula": 17280,
+          "gpu_queue_kernel_display_events": 6520,
+          "kernel_timeline_rows": 6520,
+          "logical_event_count": 10760,
+          "process_timeline_rows": 3920,
+          "request_timeline_rows": 320,
+          "strict_owned_kernel_display_events": 6520
+        },
+        "evidence_status": "degraded_R07_observed_subset",
+        "page_role": "single_entry_index"
+      },
+      "name": "index.html",
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/degraded_observed_subset_report_001/acceptance/index.html",
+      "sha256": "f4f1ff5ed1ff0718f31c0ac9a2f032040c6e6c97eb18493ab79eb3768c300acc",
+      "size_bytes": 8103
+    },
+    {
+      "forbidden_pattern_hits": [],
+      "links": [
+        "E2E_PROCESS_TIMELINE_LOSSLESS.html",
+        "E2E_PROCESS_TIMELINE.full.perfetto.json"
+      ],
+      "metadata": {
+        "declared_request_count": 8,
+        "event_counts": {
+          "actual_display_event_count": 17280,
+          "formula": 17280,
+          "gpu_queue_kernel_display_events": 6520,
+          "kernel_timeline_rows": 6520,
+          "logical_event_count": 10760,
+          "process_timeline_rows": 3920,
+          "request_timeline_rows": 320,
+          "strict_owned_kernel_display_events": 6520
+        },
+        "observed_request_identity_count": 5,
+        "page_role": "timeline_overview",
+        "sampling_performed": false
+      },
+      "name": "E2E_PROCESS_TIMELINE.html",
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/degraded_observed_subset_report_001/acceptance/E2E_PROCESS_TIMELINE.html",
+      "sha256": "b233e2db4e7671f4ba7329250ce55641497ed007aedbd475c54e339c550fdd56",
+      "size_bytes": 4704
+    },
+    {
+      "forbidden_pattern_hits": [],
+      "links": [],
+      "metadata": {
+        "absolute_ns_transport": "decimal_string",
+        "clock_origin_ns": "1788117984314231266",
+        "embedded_event_count": 17280,
+        "event_budget_used": false,
+        "event_counts": {
+          "actual_display_event_count": 17280,
+          "formula": 17280,
+          "gpu_queue_kernel_display_events": 6520,
+          "kernel_timeline_rows": 6520,
+          "logical_event_count": 10760,
+          "process_timeline_rows": 3920,
+          "request_timeline_rows": 320,
+          "strict_owned_kernel_display_events": 6520
+        },
+        "history_capacity": 200,
+        "minimum_viewport_ns": 1,
+        "page_role": "lossless_timeline",
+        "sampling_performed": false
+      },
+      "name": "E2E_PROCESS_TIMELINE_LOSSLESS.html",
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/degraded_observed_subset_report_001/acceptance/E2E_PROCESS_TIMELINE_LOSSLESS.html",
+      "sha256": "389b4c6e6b0a6bc6ffd968bff2a22290f8edd8b4e976a6d85f35b5e2286933f9",
+      "size_bytes": 13380249
+    },
+    {
+      "forbidden_pattern_hits": [],
+      "links": [],
+      "metadata": {
+        "R08_timing_used_as_latency": false,
+        "high_latency_row_count": 391,
+        "page_role": "high_latency_hardware",
+        "top_n_truncation_performed": false
+      },
+      "name": "HIGH_LATENCY_PROCESS_HARDWARE_TIMELINE.html",
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/degraded_observed_subset_report_001/acceptance/HIGH_LATENCY_PROCESS_HARDWARE_TIMELINE.html",
+      "sha256": "712ae3fb16faa288827b8c78123cdf57d8cfc55f4e91702c98d5deb4258f755d",
+      "size_bytes": 552275
+    },
+    {
+      "forbidden_pattern_hits": [],
+      "links": [],
+      "metadata": {
+        "imputation_performed": false,
+        "kernel_concurrency_row_count": 6526,
+        "launch_gap_row_count": 6515,
+        "live_anchor_count": 2,
+        "live_gap_count": 374,
+        "live_sample_count": 2357298,
+        "page_role": "concurrency_utilization",
+        "process_live_row_count": 3920,
+        "queue_concurrency_row_count": 6526,
+        "sampling_performed": false,
+        "trace_origin_ns": "1788117984314231266"
+      },
+      "name": "CONCURRENCY_UTILIZATION.html",
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/degraded_observed_subset_report_001/acceptance/CONCURRENCY_UTILIZATION.html",
+      "sha256": "835ec25bab453d6d5d85c3edf15e0848f90a8ed0fb223284146b858d038dbb6f",
+      "size_bytes": 106066706
+    }
+  ],
+  "perfetto_event_kind_counts": {
+    "kernel": 13040,
+    "process": 3920,
+    "request": 320
+  },
+  "runtime_run_id": "batch8-dp2-fresh-003",
+  "sampling_performed": false,
+  "schema_version": 1,
+  "static_no_network_gate": true,
+  "status": "complete",
+  "strict_R10_handoff_created": false,
+  "strict_offline_acceptance_complete": false,
+  "top_n_truncation_performed": false
+}

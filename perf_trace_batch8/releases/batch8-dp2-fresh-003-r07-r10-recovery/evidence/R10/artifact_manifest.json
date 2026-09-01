@@ -1,0 +1,67 @@
+{
+  "artifact_scope": "R10_degraded_observed_subset_report",
+  "artifacts": [
+    {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/degraded_observed_subset_report_001/acceptance/index.html",
+      "sha256": "f4f1ff5ed1ff0718f31c0ac9a2f032040c6e6c97eb18493ab79eb3768c300acc",
+      "size_bytes": 8103
+    },
+    {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/degraded_observed_subset_report_001/acceptance/E2E_PROCESS_TIMELINE.html",
+      "sha256": "b233e2db4e7671f4ba7329250ce55641497ed007aedbd475c54e339c550fdd56",
+      "size_bytes": 4704
+    },
+    {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/degraded_observed_subset_report_001/acceptance/E2E_PROCESS_TIMELINE_LOSSLESS.html",
+      "sha256": "389b4c6e6b0a6bc6ffd968bff2a22290f8edd8b4e976a6d85f35b5e2286933f9",
+      "size_bytes": 13380249
+    },
+    {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/degraded_observed_subset_report_001/acceptance/E2E_PROCESS_TIMELINE.full.perfetto.json",
+      "sha256": "a69da6ee2a751b3636a35864df79ba60435e13ab71504bd293f3fdac5a6ed795",
+      "size_bytes": 14107795
+    },
+    {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/degraded_observed_subset_report_001/acceptance/full_timeline_manifest.json",
+      "sha256": "c78e9346796cb8c8067caa0fea48e2d7ba9249f7d34bd95b44fc28d1f10b43bf",
+      "size_bytes": 30408
+    },
+    {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/degraded_observed_subset_report_001/acceptance/HIGH_LATENCY_PROCESS_HARDWARE_TIMELINE.html",
+      "sha256": "712ae3fb16faa288827b8c78123cdf57d8cfc55f4e91702c98d5deb4258f755d",
+      "size_bytes": 552275
+    },
+    {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/degraded_observed_subset_report_001/acceptance/CONCURRENCY_UTILIZATION.html",
+      "sha256": "835ec25bab453d6d5d85c3edf15e0848f90a8ed0fb223284146b858d038dbb6f",
+      "size_bytes": 106066706
+    },
+    {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/degraded_observed_subset_report_001/acceptance/offline_acceptance_manifest.json",
+      "sha256": "f88f4105af60a96591ad66eb4c5b2eb43cd85673fcc03925e3cae13171e91621",
+      "size_bytes": 4340
+    },
+    {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/degraded_observed_subset_report_001/R10_SOURCE_LINEAGE.json",
+      "sha256": "43012398088e47d74063d8ff01b25d2c4ceab55835082a630bd68d0ec5f1581b",
+      "size_bytes": 7960
+    }
+  ],
+  "lineage_id": "batch8-dp2-fresh-003",
+  "runtime_run_id": "batch8-dp2-fresh-003",
+  "schema_version": 1,
+  "status": "complete",
+  "strict_scheduler_handoff_included": false,
+  "validation_inputs": [
+    {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/degraded_observed_subset_report_001/validation/static_offline_audit.json",
+      "sha256": "e1dfaace38ed137f64d1d9ee284f8ea44f6c60ddd3a960cf70146d5bf5a3326a",
+      "size_bytes": 2018
+    },
+    {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/degraded_observed_subset_report_001/validation/browser_capability.json",
+      "sha256": "54f3e43b5f6316ec003fd484b2e3a16750cc53ff2709dee206111c62dd6e243e",
+      "size_bytes": 382
+    }
+  ]
+}
