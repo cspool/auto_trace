@@ -57,15 +57,16 @@ installation.
 
 ## Restore
 
-Download every ordered `r08-r10-full-32m.tar.gz.part-NNN` asset plus
-`SHA256SUMS` and `ARCHIVE_STREAM_SHA256`, verify each part, concatenate in
-lexical order, then extract the GNU tar stream:
+Download every ordered `r08-r10-recovery-full-32m.tar.gz.part-NNN` asset plus
+`ARCHIVE_PARTS_SHA256SUMS` and `ARCHIVE_STREAM_SHA256`, verify each part,
+concatenate in lexical order, then extract the GNU tar stream:
 
 ```bash
-sha256sum -c SHA256SUMS
-cat r08-r10-full-32m.tar.gz.part-* > r08-r10-full.tar.gz
+sha256sum -c ARCHIVE_PARTS_SHA256SUMS
+cat r08-r10-recovery-full-32m.tar.gz.part-* > r08-r10-recovery-full.tar.gz
 sha256sum -c ARCHIVE_STREAM_SHA256
-tar -xzf r08-r10-full.tar.gz
+mkdir -p Qwen_DCU_Worker_0
+tar -xzf r08-r10-recovery-full.tar.gz -C Qwen_DCU_Worker_0
 ```
 
 The unified 1.49 GB R09 live-utilization CSV is intentionally omitted from the
@@ -73,7 +74,7 @@ archive because its 24 gzip parts are lossless and independently recoverable.
 Recreate it after extraction with:
 
 ```bash
-python3 perf_trace_batch8/releases/batch8-dp2-fresh-003-r07-r10-recovery/restore_r09_live_table.py \
+python3 restore_r09_live_table.py \
   --project-root /path/to/extracted/Qwen_DCU_Worker_0
 ```
 
