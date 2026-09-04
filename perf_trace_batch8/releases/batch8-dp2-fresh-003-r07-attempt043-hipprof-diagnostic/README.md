@@ -40,7 +40,8 @@ shapes before upload.
 
 ## Included evidence
 
-The archive contains 90 files, including:
+The release has 11 verified assets.  Its diagnostic archive contains 90 files,
+including:
 
 - `capture.log`, `service.log`, collector stdout/stderr, and a sanitized
   `process_registry.jsonl`;
@@ -86,16 +87,24 @@ Key control-file hashes:
 | `PAYLOAD_MANIFEST.json` | `183410d1ddcdfb0356642725ef7750e96441abdfe1ff6b8d3749705049704aae` |
 | `RELEASE_ASSETS.json` | `ccb5871d0a9a896304bfabfc7814c94a1b2235b65dbff5c554347c3d9075e9c3` |
 | `RELEASE_ASSET_SHA256SUMS` | `1cf93ed678f03a00e0880dc6d61458ae4c38597a2e308fc69236e18319eb96d0` |
+| `REMOTE_VERIFICATION.json` | `b4e3819caeb5bc7788b250437cd142e6f1645ef09a9d46648b5bb0703da006bc` |
+| `RELEASE_PUBLISHED.json` | `08124633ee03f23ad883312a20cbe361a794e414f7a00797c2316f683b91a644` |
+| `PUBLICATION_SHA256SUMS` | `e7f41fd4d447ff9398e2527badd6469b1f0b81306dc692ff803e13d53b40aea2` |
 | diagnostic archive | `55b4c097f32f3c7d22ef9324f4294979d9add98b451369d01ee33b65b060936a` |
 
 After downloading every release asset:
 
 ```bash
+sha256sum -c PUBLICATION_SHA256SUMS
 sha256sum -c RELEASE_ASSET_SHA256SUMS
 tar -xzf r07-attempt043-hipprof-live-diagnostic.tar.gz
 cd diagnostic_bundle
 sha256sum -c SHA256SUMS
 ```
+
+GitHub API readback verified all 11 remote assets by name, size, `uploaded`
+state, and server-provided SHA-256 digest.  The publication proof is preserved
+in `REMOTE_VERIFICATION.json` and `RELEASE_PUBLISHED.json`.
 
 The separately published open-writer DB insurance release remains available at:
 
