@@ -106,6 +106,52 @@ closed database named by that marker. Verify the marker and database hashes
 before using it; do not fall back to the open-writer snapshot merely because
 offline export is slow.
 
+### Published copy for non-DCU offline processing
+
+The open-writer insurance DB is also published as a GitHub Release:
+
+[`perf-trace-batch8-r07-attempt043-open-writer-db-20260904`](https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-r07-attempt043-open-writer-db-20260904)
+
+The deterministic gzip stream is 2,398,751,959 bytes with SHA-256
+`e6d40bbcb45a878d9b0796d7ef5e89ec83e862ad0c7c628afab154ef0f9d4dc4`.
+It is split into three assets:
+
+| Asset | Bytes | SHA-256 |
+| --- | ---: | --- |
+| `r07-attempt043-open-writer-capture.db.gz.part-000` | 1,073,741,824 | `5891a1edc34e672985e6430285fa4599fc240b2f80825f7073048d3192c42c85` |
+| `r07-attempt043-open-writer-capture.db.gz.part-001` | 1,073,741,824 | `81022dbf14489aa7ad0fe709c5a66c317e096c0e3972e0c24696cf304720b139` |
+| `r07-attempt043-open-writer-capture.db.gz.part-002` | 251,268,311 | `f8913ff9870e8e96f05d6000b74c1955bd3a930085ea4f44b7c727071322911a` |
+
+Download all release assets, then reconstruct and verify the DB before using a
+disposable copy:
+
+```bash
+sha256sum -c <(tail -n +2 PARTS.tsv | awk -F '\t' '{print $3 "  " $1}')
+cat r07-attempt043-open-writer-capture.db.gz.part-* \
+  > r07-attempt043-open-writer-capture.db.gz
+sha256sum -c ARCHIVE_STREAM_SHA256
+gzip -dc r07-attempt043-open-writer-capture.db.gz > capture.db
+sha256sum -c SOURCE_DB_SHA256
+```
+
+The release has 13 core assets whose remote sizes, GitHub digests, and upload
+states were verified, plus three publication-seal assets. The NFS publication
+record is:
+
+```text
+/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/remote_uploads/
+  perf-trace-batch8-r07-attempt043-open-writer-db-20260904/
+  RELEASE_PUBLISHED.json
+SHA-256: 52a9d5a8583aa4c99882899202209ad820440ddba62a12862e59f6a7b9f97cb8
+
+REMOTE_VERIFICATION.tsv SHA-256:
+645ae1067fb9335ca6bf55be5b21a96af4f7be2e4384efb6532987c501d0e6ee
+```
+
+The same capability boundary still applies: this upload enables an attempted
+offline `hipprof --db` run on a non-DCU host with matching userspace; it does
+not turn the snapshot into a closed checkpoint or guarantee native export.
+
 ## R01-R06 outputs
 
 The NFS bundle was generated at `2026-09-03T14:55:21.921685Z`. It contains
