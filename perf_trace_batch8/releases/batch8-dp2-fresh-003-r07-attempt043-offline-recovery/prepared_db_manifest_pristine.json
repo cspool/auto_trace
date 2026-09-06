@@ -1,0 +1,205 @@
+{
+  "device_access": false,
+  "elapsed_milliseconds": 58557,
+  "ended_epoch_ns": 1788695446303481214,
+  "hiptxops_rows": {
+    "173_18_25_2_296734_1788408919": 234444,
+    "173_18_25_2_296762_1788408920": 234832
+  },
+  "pid": 5993,
+  "prepared_bytes": 9443573760,
+  "prepared_db": "/dev/shm/auto_trace_r07_attempt043_recovery/capture.prepared.pristine.db",
+  "prepared_sha256": "14a1e21b4bf5a0b29b11a62c4d000cac4979aa5af4ddc687f614bdab4f3179cd",
+  "quick_check": "ok",
+  "recovery_kind": "attempt043_open_writer_db_derived_table_reconstruction",
+  "schema_version": 1,
+  "source_bytes": 8958377984,
+  "source_db": "/dev/shm/auto_trace_r07_attempt043_recovery/capture.source.db",
+  "source_immutable": true,
+  "source_sha256_after": "0ea77cdac40926182c4e04fc29e687e62df9b2cac50296c7e399817c583690b0",
+  "source_sha256_before": "0ea77cdac40926182c4e04fc29e687e62df9b2cac50296c7e399817c583690b0",
+  "started_epoch_ns": 1788695387746348915,
+  "status": "complete",
+  "trace_counter": [
+    {
+      "key": "173_18_25_2_295655_1788408859",
+      "max_begin_ns": 1788408872675145717,
+      "min_begin_ns": 1788408859099644000,
+      "trace_sum": 288,
+      "trace_type": 256
+    },
+    {
+      "key": "173_18_25_2_295972_1788408889",
+      "max_begin_ns": 1788408903430954772,
+      "min_begin_ns": 1788408889658149552,
+      "trace_sum": 288,
+      "trace_type": 256
+    },
+    {
+      "key": "173_18_25_2_295973_1788408889",
+      "max_begin_ns": 1788408904467598476,
+      "min_begin_ns": 1788408889716528288,
+      "trace_sum": 288,
+      "trace_type": 256
+    },
+    {
+      "key": "173_18_25_2_295976_1788408889",
+      "max_begin_ns": 1788408904514618516,
+      "min_begin_ns": 1788408889616404013,
+      "trace_sum": 288,
+      "trace_type": 256
+    },
+    {
+      "key": "173_18_25_2_295977_1788408889",
+      "max_begin_ns": 1788408903275627320,
+      "min_begin_ns": 1788408889619278439,
+      "trace_sum": 288,
+      "trace_type": 256
+    },
+    {
+      "key": "173_18_25_2_295978_1788408889",
+      "max_begin_ns": 1788408905546429712,
+      "min_begin_ns": 1788408889624541769,
+      "trace_sum": 288,
+      "trace_type": 256
+    },
+    {
+      "key": "173_18_25_2_295979_1788408889",
+      "max_begin_ns": 1788408903430486619,
+      "min_begin_ns": 1788408889653536476,
+      "trace_sum": 288,
+      "trace_type": 256
+    },
+    {
+      "key": "173_18_25_2_296734_1788408919",
+      "max_begin_ns": 1788409978693905963,
+      "min_begin_ns": 1788408919161543826,
+      "trace_sum": 22875820,
+      "trace_type": 256
+    },
+    {
+      "key": "173_18_25_2_296762_1788408920",
+      "max_begin_ns": 1788410035145000830,
+      "min_begin_ns": 1788408920074965552,
+      "trace_sum": 22884877,
+      "trace_type": 256
+    },
+    {
+      "key": "173_18_25_2_297595_1788408962",
+      "max_begin_ns": 1788408977072247848,
+      "min_begin_ns": 1788408962273145914,
+      "trace_sum": 288,
+      "trace_type": 256
+    },
+    {
+      "key": "173_18_25_2_297602_1788408961",
+      "max_begin_ns": 1788408961084115405,
+      "min_begin_ns": 1788408961083308541,
+      "trace_sum": 543,
+      "trace_type": 256
+    },
+    {
+      "key": "173_18_25_2_297613_1788408961",
+      "max_begin_ns": 1788408961771556874,
+      "min_begin_ns": 1788408961770747579,
+      "trace_sum": 543,
+      "trace_type": 256
+    },
+    {
+      "key": "173_18_25_2_297718_1788408966",
+      "max_begin_ns": 1788408980871537788,
+      "min_begin_ns": 1788408966501797090,
+      "trace_sum": 288,
+      "trace_type": 256
+    },
+    {
+      "key": "173_18_25_2_297725_1788408965",
+      "max_begin_ns": 1788408965399030687,
+      "min_begin_ns": 1788408965398216732,
+      "trace_sum": 543,
+      "trace_type": 256
+    },
+    {
+      "key": "173_18_25_2_297736_1788408966",
+      "max_begin_ns": 1788408966052417989,
+      "min_begin_ns": 1788408966051593285,
+      "trace_sum": 543,
+      "trace_type": 256
+    },
+    {
+      "key": "173_18_25_2_296734_1788408919",
+      "max_begin_ns": 1788409978693893253,
+      "min_begin_ns": 1788409245246970474,
+      "trace_sum": 9552900,
+      "trace_type": 1
+    },
+    {
+      "key": "173_18_25_2_296762_1788408920",
+      "max_begin_ns": 1788410035185169260,
+      "min_begin_ns": 1788409245345327008,
+      "trace_sum": 9597254,
+      "trace_type": 1
+    },
+    {
+      "key": "173_18_25_2_296734_1788408919",
+      "max_begin_ns": 1788409978690905703,
+      "min_begin_ns": 1788409245265346215,
+      "trace_sum": 1201999,
+      "trace_type": 2
+    },
+    {
+      "key": "173_18_25_2_296762_1788408920",
+      "max_begin_ns": 1788409989814770426,
+      "min_begin_ns": 1788409245361327126,
+      "trace_sum": 1205253,
+      "trace_type": 2
+    },
+    {
+      "key": "173_18_25_2_296734_1788408919",
+      "max_begin_ns": 1788409978691756583,
+      "min_begin_ns": 1788409245265003175,
+      "trace_sum": 27014,
+      "trace_type": 4
+    },
+    {
+      "key": "173_18_25_2_296762_1788408920",
+      "max_begin_ns": 1788409989815676426,
+      "min_begin_ns": 1788409245360925606,
+      "trace_sum": 27063,
+      "trace_type": 4
+    },
+    {
+      "key": "173_18_25_2_296734_1788408919",
+      "max_begin_ns": 1788409978681920703,
+      "min_begin_ns": 1788409245264557435,
+      "trace_sum": 238668,
+      "trace_type": 131072
+    },
+    {
+      "key": "173_18_25_2_296762_1788408920",
+      "max_begin_ns": 1788409989805877626,
+      "min_begin_ns": 1788409245360419595,
+      "trace_sum": 239056,
+      "trace_type": 131072
+    },
+    {
+      "key": "173_18_25_2_296734_1788408919",
+      "max_begin_ns": 1788409978682072745,
+      "min_begin_ns": 1788409245265346215,
+      "trace_sum": 234444,
+      "trace_type": 524288
+    },
+    {
+      "key": "173_18_25_2_296762_1788408920",
+      "max_begin_ns": 1788409989806029031,
+      "min_begin_ns": 1788409245361327126,
+      "trace_sum": 234832,
+      "trace_type": 524288
+    }
+  ],
+  "trace_counter_rows": 25,
+  "worker_keys": [
+    "173_18_25_2_296734_1788408919",
+    "173_18_25_2_296762_1788408920"
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "completed_epoch_ns": 1788708967249844638,
+  "dependency_audit": {
+    "dependency_state_counts": {
+      "deterministically_derived": 8832,
+      "observed": 23660
+    },
+    "edge_count": 32492,
+    "every_current_target_preserved": true,
+    "external_runtime_evidence_consumed": false,
+    "kernel_edge_conservation": true,
+    "kernel_edge_count": 23660,
+    "native_device_coverage": [
+      0,
+      1
+    ],
+    "rank_coverage": [
+      0,
+      1
+    ],
+    "status": "complete",
+    "target_count": 12544
+  },
+  "formal_handoff_written": false,
+  "live_utilization_audit": {
+    "aligned_sample_count": 2491806,
+    "all_gaps_preserved": true,
+    "all_real_samples_preserved": true,
+    "availability_counts": {
+      "available": 4631,
+      "unavailable_intrinsic_short_window": 7907,
+      "unavailable_sampling_gap": 6
+    },
+    "available_process_count": 4631,
+    "native_device_coverage": [
+      0,
+      1
+    ],
+    "no_interpolation_resampling_imputation_or_zero_fill": true,
+    "process_denominator": 12544,
+    "rank_coverage": [
+      0,
+      1
+    ],
+    "raw_gap_interval_count": 800,
+    "raw_sample_count": 2491806,
+    "status": "complete",
+    "unavailable_process_count": 7913
+  },
+  "remote_original_hipprof_status": "active_monitored_until_terminal",
+  "runtime_attempt_id": "batch8-dp2-fresh-003-R07-attempt-043",
+  "schema_version": 1,
+  "status": "complete_recovery_independent_audits",
+  "trace_audit": {
+    "ambiguous_owner_count": 0,
+    "bound_marker_coverage_fraction": 1.0,
+    "bound_request_phase_coverage_fraction": 1.0,
+    "bound_target_sidecar_sha256": "a912cd5f4f47bde82b1d0853b546ad82fb9b1ee719994716512cbf3bce278ea5",
+    "busy_union_independently_recomputed": true,
+    "busy_union_interval_count": 20405,
+    "coverage_target_met": true,
+    "explicit_no_direct_kernel_count": 8832,
+    "forward_range_count": 1024,
+    "full_time_and_runtime_index_containment": true,
+    "layer_range_count": 1024,
+    "measured_request_count": 8,
+    "native_device_coverage": [
+      0,
+      1
+    ],
+    "parent_fragment_double_count": 0,
+    "process_range_count": 12544,
+    "rank_coverage": [
+      0,
+      1
+    ],
+    "rank_to_physical_device": {
+      "0": 0,
+      "1": 1
+    },
+    "request_range_count": 1024,
+    "runtime_call_count": 316802,
+    "runtime_launch_correlation_fraction": 1.0,
+    "status": "complete",
+    "strict_owned_kernel_count": 23660,
+    "target_count": 13568,
+    "true_kernel_launch_count": 23660
+  }
+}

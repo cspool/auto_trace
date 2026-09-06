@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "status": "local_recovery_export_complete_remote_original_still_monitored",
+  "runtime_run_id": "batch8-dp2-fresh-003",
+  "runtime_attempt_id": "batch8-dp2-fresh-003-R07-attempt-043",
+  "recovery_kind": "open_writer_insurance_db_derived_table_reconstruction_and_offline_pftrace_export",
+  "source_db_sha256": "0ea77cdac40926182c4e04fc29e687e62df9b2cac50296c7e399817c583690b0",
+  "source_db_immutable": true,
+  "prepared_db_sha256": "14a1e21b4bf5a0b29b11a62c4d000cac4979aa5af4ddc687f614bdab4f3179cd",
+  "hipprof_binary_sha256": "53f67d3dd4c1fe5aa9850f58d174ecf9f2c688f1e07519b456b19ca699c57f22",
+  "device_access_performed": false,
+  "pftrace_count": 139,
+  "pftrace_total_bytes": 14961678057,
+  "pftrace_zero_size_count": 0,
+  "terminal_event_count": 68323944,
+  "terminal_progress_count": 1,
+  "hipprof_finish_count": 1,
+  "hipprof_error_count": 0,
+  "remote_original_hipprof_status": "active_monitored_until_terminal",
+  "formal_r07_completion_status": "pending_remote_original_terminal_and_recovery_seal"
+}
