@@ -69,3 +69,9 @@ surfaces. It does not overwrite R01-R06.
 - `R07_RECOVERY_ARTIFACT_MANIFEST.json`
 - `R07.recovered.json`
 - `SHA256SUMS`
+
+## GitHub Release
+
+- Tag: `perf-trace-batch8-r07-attempt043-offline-recovery-20260907`
+- URL: https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-r07-attempt043-offline-recovery-20260907
+- Consumer bundle: `r07-attempt043-recovery-consumer-bundle.tar.gz`
