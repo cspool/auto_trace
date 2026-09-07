@@ -1,0 +1,588 @@
+{
+  "schema_version": 1,
+  "policy": "Preserve historical link targets as metadata. The restore tool does not recreate absolute/dangling links or materialize their missing targets.",
+  "links": [
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-011/cache",
+      "target": "/workspace/qwen_dcu_perf_trace_batch8_spill/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R07/batch8-dp2-fresh-003-R07-attempt-012/aot_cache",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-011/capture/raw",
+      "target": "/workspace/qwen_dcu_perf_trace_batch8_spill/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R07/batch8-dp2-fresh-003-R07-attempt-012/raw",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-011/capture/hipprof_tmp",
+      "target": "/workspace/qwen_dcu_perf_trace_batch8_spill/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R07/batch8-dp2-fresh-003-R07-attempt-012/hipprof_tmp",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-011/validation/prefreeze_nonregular_fixture/entrypoint",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-011/validation/prefreeze_nonregular_fixture/storage",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-011/validation/prebulk_service_validation_fixture/artifact/capture/raw",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-011/validation/prebulk_service_validation_fixture/storage",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-011/validation/prebulk_service_validation_fixture/second_layer/target_link",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-011/validation/prebulk_service_validation_fixture/second_layer/real_storage",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-011/validation/prebulk_service_validation_fixture/second_layer/artifact/capture/raw",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-011/validation/prebulk_service_validation_fixture/second_layer/target_link",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-011/validation/prebulk_service_validation_fixture/resolved_mismatch/artifact/capture/raw",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-011/validation/prebulk_service_validation_fixture/resolved_mismatch/storage",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-011/validation/prebulk_service_validation_fixture/changed_target/artifact/capture/raw",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-011/validation/prebulk_service_validation_fixture/changed_target/changed_storage",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-010/cache",
+      "target": "/workspace/qwen_dcu_perf_trace_batch8_spill/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R07/batch8-dp2-fresh-003-R07-attempt-011/aot_cache",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-010/capture/raw",
+      "target": "/workspace/qwen_dcu_perf_trace_batch8_spill/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R07/batch8-dp2-fresh-003-R07-attempt-011/raw",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-010/capture/hipprof_tmp",
+      "target": "/workspace/qwen_dcu_perf_trace_batch8_spill/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R07/batch8-dp2-fresh-003-R07-attempt-011/hipprof_tmp",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-010/validation/prefreeze_nonregular_fixture/entrypoint",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-010/validation/prefreeze_nonregular_fixture/storage",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-009/cache",
+      "target": "/workspace/qwen_dcu_perf_trace_batch8_spill/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R07/batch8-dp2-fresh-003-R07-attempt-010/aot_cache",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-009/capture/raw",
+      "target": "/workspace/qwen_dcu_perf_trace_batch8_spill/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R07/batch8-dp2-fresh-003-R07-attempt-010/raw",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-009/capture/hipprof_tmp",
+      "target": "/workspace/qwen_dcu_perf_trace_batch8_spill/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R07/batch8-dp2-fresh-003-R07-attempt-010/hipprof_tmp",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-009/validation/prefreeze_nonregular_fixture/entrypoint",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-009/validation/prefreeze_nonregular_fixture/storage",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-013/cache",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime_nfs_bulk/qwen_dcu_perf_trace_batch8_spill/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R07/batch8-dp2-fresh-003-R07-attempt-014/aot_cache",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-013/capture/raw",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime_nfs_bulk/qwen_dcu_perf_trace_batch8_spill/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R07/batch8-dp2-fresh-003-R07-attempt-014/raw",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-013/capture/hipprof_tmp",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime_nfs_bulk/qwen_dcu_perf_trace_batch8_spill/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R07/batch8-dp2-fresh-003-R07-attempt-014/hipprof_tmp",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-013/validation/prefreeze_nonregular_fixture/entrypoint",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-013/validation/prefreeze_nonregular_fixture/storage",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-013/validation/prebulk_service_validation_fixture/artifact/capture/raw",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-013/validation/prebulk_service_validation_fixture/storage",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-013/validation/prebulk_service_validation_fixture/second_layer/target_link",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-013/validation/prebulk_service_validation_fixture/second_layer/real_storage",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-013/validation/prebulk_service_validation_fixture/second_layer/artifact/capture/raw",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-013/validation/prebulk_service_validation_fixture/second_layer/target_link",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-013/validation/prebulk_service_validation_fixture/resolved_mismatch/artifact/capture/raw",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-013/validation/prebulk_service_validation_fixture/resolved_mismatch/storage",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-013/validation/prebulk_service_validation_fixture/changed_target/artifact/capture/raw",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-013/validation/prebulk_service_validation_fixture/changed_target/changed_storage",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-005/cache",
+      "target": "/workspace/qwen_dcu_perf_trace_batch8_spill/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R07/batch8-dp2-fresh-003-R07-attempt-006/aot_cache",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-005/capture/raw",
+      "target": "/workspace/qwen_dcu_perf_trace_batch8_spill/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R07/batch8-dp2-fresh-003-R07-attempt-006/raw",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-005/capture/hipprof_tmp",
+      "target": "/workspace/qwen_dcu_perf_trace_batch8_spill/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R07/batch8-dp2-fresh-003-R07-attempt-006/hipprof_tmp",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-019/cache",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime_nfs_bulk/qwen_dcu_perf_trace_batch8_spill/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R07/batch8-dp2-fresh-003-R07-attempt-020/aot_cache",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-019/capture/raw",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime_nfs_bulk/qwen_dcu_perf_trace_batch8_spill/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R07/batch8-dp2-fresh-003-R07-attempt-020/raw",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-019/capture/hipprof_tmp",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime_nfs_bulk/qwen_dcu_perf_trace_batch8_spill/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R07/batch8-dp2-fresh-003-R07-attempt-020/hipprof_tmp",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-019/validation/prefreeze_nonregular_fixture/entrypoint",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-019/validation/prefreeze_nonregular_fixture/storage",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-019/validation/prebulk_service_validation_fixture/artifact/capture/raw",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-019/validation/prebulk_service_validation_fixture/storage",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-019/validation/prebulk_service_validation_fixture/second_layer/target_link",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-019/validation/prebulk_service_validation_fixture/second_layer/real_storage",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-019/validation/prebulk_service_validation_fixture/second_layer/artifact/capture/raw",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-019/validation/prebulk_service_validation_fixture/second_layer/target_link",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-019/validation/prebulk_service_validation_fixture/resolved_mismatch/artifact/capture/raw",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-019/validation/prebulk_service_validation_fixture/resolved_mismatch/storage",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-019/validation/prebulk_service_validation_fixture/changed_target/artifact/capture/raw",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-019/validation/prebulk_service_validation_fixture/changed_target/changed_storage",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-016/cache",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime_nfs_bulk/qwen_dcu_perf_trace_batch8_spill/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R07/batch8-dp2-fresh-003-R07-attempt-017/aot_cache",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-016/capture/raw",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime_nfs_bulk/qwen_dcu_perf_trace_batch8_spill/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R07/batch8-dp2-fresh-003-R07-attempt-017/raw",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-016/capture/hipprof_tmp",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime_nfs_bulk/qwen_dcu_perf_trace_batch8_spill/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R07/batch8-dp2-fresh-003-R07-attempt-017/hipprof_tmp",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-016/validation/prefreeze_nonregular_fixture/entrypoint",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-016/validation/prefreeze_nonregular_fixture/storage",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-016/validation/prebulk_service_validation_fixture/artifact/capture/raw",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-016/validation/prebulk_service_validation_fixture/storage",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-016/validation/prebulk_service_validation_fixture/second_layer/target_link",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-016/validation/prebulk_service_validation_fixture/second_layer/real_storage",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-016/validation/prebulk_service_validation_fixture/second_layer/artifact/capture/raw",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-016/validation/prebulk_service_validation_fixture/second_layer/target_link",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-016/validation/prebulk_service_validation_fixture/resolved_mismatch/artifact/capture/raw",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-016/validation/prebulk_service_validation_fixture/resolved_mismatch/storage",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-016/validation/prebulk_service_validation_fixture/changed_target/artifact/capture/raw",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-016/validation/prebulk_service_validation_fixture/changed_target/changed_storage",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-003/cache",
+      "target": "/workspace/qwen_dcu_perf_trace_batch8_spill/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R07/batch8-dp2-fresh-003-R07-attempt-004/aot_cache",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-003/capture/raw",
+      "target": "/workspace/qwen_dcu_perf_trace_batch8_spill/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R07/batch8-dp2-fresh-003-R07-attempt-004/raw",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-003/capture/hipprof_tmp",
+      "target": "/workspace/qwen_dcu_perf_trace_batch8_spill/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R07/batch8-dp2-fresh-003-R07-attempt-004/hipprof_tmp",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-015/cache",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime_nfs_bulk/qwen_dcu_perf_trace_batch8_spill/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R07/batch8-dp2-fresh-003-R07-attempt-016/aot_cache",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-015/capture/raw",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime_nfs_bulk/qwen_dcu_perf_trace_batch8_spill/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R07/batch8-dp2-fresh-003-R07-attempt-016/raw",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-015/capture/hipprof_tmp",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime_nfs_bulk/qwen_dcu_perf_trace_batch8_spill/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R07/batch8-dp2-fresh-003-R07-attempt-016/hipprof_tmp",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-015/validation/prefreeze_nonregular_fixture/entrypoint",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-015/validation/prefreeze_nonregular_fixture/storage",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-015/validation/prebulk_service_validation_fixture/artifact/capture/raw",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-015/validation/prebulk_service_validation_fixture/storage",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-015/validation/prebulk_service_validation_fixture/second_layer/target_link",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-015/validation/prebulk_service_validation_fixture/second_layer/real_storage",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-015/validation/prebulk_service_validation_fixture/second_layer/artifact/capture/raw",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-015/validation/prebulk_service_validation_fixture/second_layer/target_link",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-015/validation/prebulk_service_validation_fixture/resolved_mismatch/artifact/capture/raw",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-015/validation/prebulk_service_validation_fixture/resolved_mismatch/storage",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-015/validation/prebulk_service_validation_fixture/changed_target/artifact/capture/raw",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-015/validation/prebulk_service_validation_fixture/changed_target/changed_storage",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-012/cache",
+      "target": "/workspace/qwen_dcu_perf_trace_batch8_spill/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R07/batch8-dp2-fresh-003-R07-attempt-013/aot_cache",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-012/capture/raw",
+      "target": "/workspace/qwen_dcu_perf_trace_batch8_spill/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R07/batch8-dp2-fresh-003-R07-attempt-013/raw",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-012/capture/hipprof_tmp",
+      "target": "/workspace/qwen_dcu_perf_trace_batch8_spill/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R07/batch8-dp2-fresh-003-R07-attempt-013/hipprof_tmp",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-012/validation/prefreeze_nonregular_fixture/entrypoint",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-012/validation/prefreeze_nonregular_fixture/storage",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-012/validation/prebulk_service_validation_fixture/artifact/capture/raw",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-012/validation/prebulk_service_validation_fixture/storage",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-012/validation/prebulk_service_validation_fixture/second_layer/target_link",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-012/validation/prebulk_service_validation_fixture/second_layer/real_storage",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-012/validation/prebulk_service_validation_fixture/second_layer/artifact/capture/raw",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-012/validation/prebulk_service_validation_fixture/second_layer/target_link",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-012/validation/prebulk_service_validation_fixture/resolved_mismatch/artifact/capture/raw",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-012/validation/prebulk_service_validation_fixture/resolved_mismatch/storage",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-012/validation/prebulk_service_validation_fixture/changed_target/artifact/capture/raw",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-012/validation/prebulk_service_validation_fixture/changed_target/changed_storage",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/cache",
+      "target": "/workspace/qwen_dcu_perf_trace_batch8_spill_20260901/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R07/batch8-dp2-fresh-003-R07-attempt-043/aot_cache",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/capture/raw",
+      "target": "/workspace/qwen_dcu_perf_trace_batch8_spill_20260901/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R07/batch8-dp2-fresh-003-R07-attempt-043/raw",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/capture/hipprof_tmp",
+      "target": "/workspace/qwen_dcu_perf_trace_batch8_spill_20260901/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R07/batch8-dp2-fresh-003-R07-attempt-043/hipprof_tmp",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/validation/pre_freeze_durable_copy_fixture/negative_storage/raw/forbidden.link",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/validation/pre_freeze_durable_copy_fixture/source/complete.bin",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/validation/prefreeze_nonregular_fixture/entrypoint",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/validation/prefreeze_nonregular_fixture/storage",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/validation/prebulk_service_validation_fixture/artifact/capture/raw",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/validation/prebulk_service_validation_fixture/storage",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/validation/prebulk_service_validation_fixture/second_layer/target_link",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/validation/prebulk_service_validation_fixture/second_layer/real_storage",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/validation/prebulk_service_validation_fixture/second_layer/artifact/capture/raw",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/validation/prebulk_service_validation_fixture/second_layer/target_link",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/validation/prebulk_service_validation_fixture/resolved_mismatch/artifact/capture/raw",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/validation/prebulk_service_validation_fixture/resolved_mismatch/storage",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/validation/prebulk_service_validation_fixture/changed_target/artifact/capture/raw",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/validation/prebulk_service_validation_fixture/changed_target/changed_storage",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-018/cache",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime_nfs_bulk/qwen_dcu_perf_trace_batch8_spill/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R07/batch8-dp2-fresh-003-R07-attempt-019/aot_cache",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-018/capture/raw",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime_nfs_bulk/qwen_dcu_perf_trace_batch8_spill/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R07/batch8-dp2-fresh-003-R07-attempt-019/raw",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-018/capture/hipprof_tmp",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime_nfs_bulk/qwen_dcu_perf_trace_batch8_spill/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R07/batch8-dp2-fresh-003-R07-attempt-019/hipprof_tmp",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-018/validation/prefreeze_nonregular_fixture/entrypoint",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-018/validation/prefreeze_nonregular_fixture/storage",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-018/validation/prebulk_service_validation_fixture/artifact/capture/raw",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-018/validation/prebulk_service_validation_fixture/storage",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-018/validation/prebulk_service_validation_fixture/second_layer/target_link",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-018/validation/prebulk_service_validation_fixture/second_layer/real_storage",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-018/validation/prebulk_service_validation_fixture/second_layer/artifact/capture/raw",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-018/validation/prebulk_service_validation_fixture/second_layer/target_link",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-018/validation/prebulk_service_validation_fixture/resolved_mismatch/artifact/capture/raw",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-018/validation/prebulk_service_validation_fixture/resolved_mismatch/storage",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-018/validation/prebulk_service_validation_fixture/changed_target/artifact/capture/raw",
+      "target": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-018/validation/prebulk_service_validation_fixture/changed_target/changed_storage",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-002/cache",
+      "target": "/workspace/qwen_dcu_perf_trace_batch8_spill/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R07/batch8-dp2-fresh-003-R07-attempt-003/aot_cache",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-002/capture/raw",
+      "target": "/workspace/qwen_dcu_perf_trace_batch8_spill/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R07/batch8-dp2-fresh-003-R07-attempt-003/raw",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-002/capture/hipprof_tmp",
+      "target": "/workspace/qwen_dcu_perf_trace_batch8_spill/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R07/batch8-dp2-fresh-003-R07-attempt-003/hipprof_tmp",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-007/cache",
+      "target": "/workspace/qwen_dcu_perf_trace_batch8_spill/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R07/batch8-dp2-fresh-003-R07-attempt-008/aot_cache",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-007/capture/raw",
+      "target": "/workspace/qwen_dcu_perf_trace_batch8_spill/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R07/batch8-dp2-fresh-003-R07-attempt-008/raw",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-007/capture/hipprof_tmp",
+      "target": "/workspace/qwen_dcu_perf_trace_batch8_spill/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R07/batch8-dp2-fresh-003-R07-attempt-008/hipprof_tmp",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-004/cache",
+      "target": "/workspace/qwen_dcu_perf_trace_batch8_spill/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R07/batch8-dp2-fresh-003-R07-attempt-005/aot_cache",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-004/capture/raw",
+      "target": "/workspace/qwen_dcu_perf_trace_batch8_spill/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R07/batch8-dp2-fresh-003-R07-attempt-005/raw",
+      "target_exists_locally": false,
+      "mode": 511
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-004/capture/hipprof_tmp",
+      "target": "/workspace/qwen_dcu_perf_trace_batch8_spill/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R07/batch8-dp2-fresh-003-R07-attempt-005/hipprof_tmp",
+      "target_exists_locally": false,
+      "mode": 511
+    }
+  ],
+  "special_files": [
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/validation/prefreeze_nonregular_fixture/storage/preserved.sock",
+      "mode": 49645
+    }
+  ]
+}

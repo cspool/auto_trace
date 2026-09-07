@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "file_count": 17313,
+  "bytes": 4375253431,
+  "entries": [
+    {
+      "reason": "compiler_or_interpreter_cache",
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/recovery/scheduler-marker-denominator-recovery-maintenance-004/scripts/__pycache__/",
+      "files": 1,
+      "bytes": 84955
+    },
+    {
+      "reason": "compiler_or_interpreter_cache",
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-005/recovery/__pycache__/",
+      "files": 1,
+      "bytes": 20824
+    },
+    {
+      "reason": "compiler_or_interpreter_cache",
+      "path": "perf_trace_batch8/runtime_nfs_bulk/qwen_dcu_perf_trace_batch8_attempt043_local/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R07/batch8-dp2-fresh-003-R07-attempt-043/aot_cache/",
+      "files": 17290,
+      "bytes": 3858632645
+    },
+    {
+      "reason": "rebuildable_compiled_runtime",
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/recovery/runtime-abi-exact-old-container-003/vllm-0.18.1+das.dtk2604-cp310-cp310-linux_x86_64.whl",
+      "files": 1,
+      "bytes": 56940337
+    },
+    {
+      "reason": "rebuildable_compiled_runtime",
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/recovery/runtime-abi-exact-old-container-003/vllm-installed-runtime-exact.tar",
+      "files": 1,
+      "bytes": 345118720
+    },
+    {
+      "reason": "rebuildable_compiled_runtime",
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/recovery/runtime-abi-rebuild-001/vllm-0.18.1+das.dtk2604-cp310-cp310-linux_x86_64.whl",
+      "files": 1,
+      "bytes": 57026012
+    },
+    {
+      "reason": "rebuildable_compiled_runtime",
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/recovery/runtime-abi-rebuild-002-f382/vllm-0.18.1+das.dtk2604-cp310-cp310-linux_x86_64.whl",
+      "files": 1,
+      "bytes": 56905588
+    },
+    {
+      "reason": "rebuildable_compiled_runtime",
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-009/quarantine/pre_freeze_python_bytecode/tools___pycache__/prepare_r07_bulk_storage.cpython-310.pyc",
+      "files": 1,
+      "bytes": 39918
+    },
+    {
+      "reason": "rebuildable_compiled_runtime",
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-011/quarantine/pre_freeze_python_bytecode/tools___pycache__/align_r07_live_utilization.cpython-310.pyc",
+      "files": 1,
+      "bytes": 11827
+    },
+    {
+      "reason": "rebuildable_compiled_runtime",
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-011/quarantine/pre_freeze_python_bytecode/tools___pycache__/audit_r07_capture.cpython-310.pyc",
+      "files": 1,
+      "bytes": 77576
+    },
+    {
+      "reason": "rebuildable_compiled_runtime",
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-011/quarantine/pre_freeze_python_bytecode/tools___pycache__/build_r07_capture_contract.cpython-310.pyc",
+      "files": 1,
+      "bytes": 96002
+    },
+    {
+      "reason": "rebuildable_compiled_runtime",
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-011/quarantine/pre_freeze_python_bytecode/tools___pycache__/build_r07_dependency_adapter.cpython-310.pyc",
+      "files": 1,
+      "bytes": 8784
+    },
+    {
+      "reason": "rebuildable_compiled_runtime",
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-011/quarantine/pre_freeze_python_bytecode/tools___pycache__/collect_r07_live_utilization.cpython-310.pyc",
+      "files": 1,
+      "bytes": 6980
+    },
+    {
+      "reason": "rebuildable_compiled_runtime",
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-011/quarantine/pre_freeze_python_bytecode/tools___pycache__/freeze_r07_tools.cpython-310.pyc",
+      "files": 1,
+      "bytes": 33704
+    },
+    {
+      "reason": "rebuildable_compiled_runtime",
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-011/quarantine/pre_freeze_python_bytecode/tools___pycache__/materialize_r07_runtime_contracts.cpython-310.pyc",
+      "files": 1,
+      "bytes": 7190
+    },
+    {
+      "reason": "rebuildable_compiled_runtime",
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-011/quarantine/pre_freeze_python_bytecode/tools___pycache__/normalize_r07_process_trace.cpython-310.pyc",
+      "files": 1,
+      "bytes": 42989
+    },
+    {
+      "reason": "rebuildable_compiled_runtime",
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-011/quarantine/pre_freeze_python_bytecode/tools___pycache__/prepare_r07_bulk_storage.cpython-310.pyc",
+      "files": 1,
+      "bytes": 56959
+    },
+    {
+      "reason": "rebuildable_compiled_runtime",
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-011/quarantine/pre_freeze_python_bytecode/tools___pycache__/r07_common.cpython-310.pyc",
+      "files": 1,
+      "bytes": 28126
+    },
+    {
+      "reason": "rebuildable_compiled_runtime",
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-011/quarantine/pre_freeze_python_bytecode/tools___pycache__/r07_hiptx_adapter.cpython-310.pyc",
+      "files": 1,
+      "bytes": 9915
+    },
+    {
+      "reason": "rebuildable_compiled_runtime",
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-011/quarantine/pre_freeze_python_bytecode/tools___pycache__/r07_marker_contract.cpython-310.pyc",
+      "files": 1,
+      "bytes": 3499
+    },
+    {
+      "reason": "rebuildable_compiled_runtime",
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-011/quarantine/pre_freeze_python_bytecode/tools___pycache__/r07_runtime_patch_loader.cpython-310.pyc",
+      "files": 1,
+      "bytes": 20319
+    },
+    {
+      "reason": "rebuildable_compiled_runtime",
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-011/quarantine/pre_freeze_python_bytecode/tools___pycache__/r07_workload_driver.cpython-310.pyc",
+      "files": 1,
+      "bytes": 31347
+    },
+    {
+      "reason": "rebuildable_compiled_runtime",
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-011/quarantine/pre_freeze_python_bytecode/tools___pycache__/run_r07_full_request.cpython-310.pyc",
+      "files": 1,
+      "bytes": 47398
+    },
+    {
+      "reason": "rebuildable_compiled_runtime",
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-011/quarantine/pre_freeze_python_bytecode/tools___pycache__/sitecustomize.cpython-310.pyc",
+      "files": 1,
+      "bytes": 1817
+    }
+  ]
+}

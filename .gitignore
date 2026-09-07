@@ -11,6 +11,9 @@ workload_profile/fx/traces/
 /pra2026-bh408/
 /pra2026-bh408-gqa-page784-k5120-batch8/
 
+# Verified release-download cache created by the R07 restore tool.
+/.r07_restore_cache/
+
 # Python caches and local test state.
 **/__pycache__/
 *.py[cod]

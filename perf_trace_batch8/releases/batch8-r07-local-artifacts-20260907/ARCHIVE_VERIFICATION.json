@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "archive_sha256": "1b6b02ca0e6d7f38f56f1e623e7974384459eb99b16d34f6b3c3fca7b32b7e21",
+  "archive_parts": 45,
+  "regular_files": 396,
+  "uncompressed_file_bytes": 68766845960,
+  "checks": [
+    "each compressed part size and SHA-256",
+    "assembled stream size and SHA-256",
+    "full zstd decompression",
+    "exact tar member set, file size and mode",
+    "every extracted file SHA-256",
+    "all indexed source files retained size and mtime since hashing",
+    "packaging source reader rejected common credential/private-key signatures"
+  ]
+}
