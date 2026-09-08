@@ -70,3 +70,21 @@ R08_RAW_SOURCE_RESTORED 10_chunk_fwd_kernel_o_pmc capture.db 1704644608
 R08_RAW_SOURCE_RESTORED 10_chunk_fwd_kernel_o_pmc events.982062.jsonl 461931900
 R08_RAW_SOURCE_RESTORED 10_chunk_fwd_kernel_o_pmc events.982060.jsonl 461427850
 RESTORE_ASSET_SHA256_VERIFIED capture.tar.zst.part001 950000000
+RESTORE_ASSET_SHA256_VERIFIED capture.tar.zst.part002 697555227
+R08_RAW_SOURCE_RESTORED 11_chunk_fwd_kernel_o_pmc_read capture.db 3403972608
+R08_RAW_SOURCE_RESTORED 11_chunk_fwd_kernel_o_pmc_read capture.db 1696690176
+R08_RAW_SOURCE_RESTORED 11_chunk_fwd_kernel_o_pmc_read capture.db 1707307008
+R08_RAW_SOURCE_RESTORED 11_chunk_fwd_kernel_o_pmc_read events.1029916.jsonl 462623292
+R08_RAW_SOURCE_RESTORED 11_chunk_fwd_kernel_o_pmc_read events.1029918.jsonl 462117804
+RESTORE_ASSET_SHA256_VERIFIED capture.tar.zst.part001 950000000
+RESTORE_ASSET_SHA256_VERIFIED capture.tar.zst.part002 695943956
+R08_RAW_SOURCE_RESTORED 12_chunk_fwd_kernel_o_pmc_write capture.db 3402760192
+R08_RAW_SOURCE_RESTORED 12_chunk_fwd_kernel_o_pmc_write capture.db 1699852288
+R08_RAW_SOURCE_RESTORED 12_chunk_fwd_kernel_o_pmc_write capture.db 1702928384
+R08_RAW_SOURCE_RESTORED 12_chunk_fwd_kernel_o_pmc_write events.1077229.jsonl 462623185
+R08_RAW_SOURCE_RESTORED 12_chunk_fwd_kernel_o_pmc_write events.1077231.jsonl 462118125
+ALL_R08_RELEASE_EVICTIONS_RESTORED_AND_VERIFIED
+OUTER_CPU_SUFFIX_EXIT ['/usr/bin/python3', '-B', '/public/home/accl15ptg7/run_R08_R10/restore_all_R08_release_artifacts_002.py']
+OUTER_CPU_SUFFIX_START ['/usr/bin/python3', '-B', '/public/home/accl15ptg7/run_R08_R10/prepare_stage_assignments_003.py', 'assign', 'R08']
+PREFIX_FULL_MANIFEST_REHASHED R08 R01 73
+PREFIX_FULL_MANIFEST_REHASHED R08 R02 1437

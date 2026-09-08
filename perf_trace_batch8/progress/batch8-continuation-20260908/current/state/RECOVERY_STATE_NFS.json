@@ -17,7 +17,7 @@
   "accepted_capture_publisher": "/public/home/accl15ptg7/run_R08_R10/publish_accepted_captures_004.py",
   "original_NFS_session_state_superseded_by_this_emergency_record": true,
   "R09_R10_actual_execution_started": false,
-  "home_storage_available_gib": 11.36,
+  "home_storage_available_gib": 12.28,
   "weight_storage_constraint": "All physical weight bytes must stay under /root; never migrate weights to NFS again",
   "accepted_capture_publisher_session": 12763,
   "raw_storage_watchdog_session": 94301,
@@ -43,19 +43,32 @@
   "R08_final_validation_restore_policy": "Restore every temporarily evicted artifact and verify original SHA256 before final R08 validation; after all 12 GPU captures, user authorizes deleting root weights to provide restoration workspace.",
   "progress_watchdog": "/public/home/accl15ptg7/run_R08_R10/remote_checkpoint_watchdog_012.py",
   "postcapture_restoration_code": "/public/home/accl15ptg7/run_R08_R10/restore_all_R08_release_artifacts_002.py",
-  "postcapture_restoration_status": "8/12 groups restored with original SHA receipts; 45,795,450,475 bytes restored; group09 actual download in progress",
+  "postcapture_restoration_status": "complete: all 12 groups, 53 original files, 77,001,580,022 bytes restored; full original SHA256 rehash complete",
   "cpu_suffix_waiter_session": 74875,
-  "cpu_suffix_status": "actual raw restoration; R08 resource assignment and R09/R10 business pending",
+  "cpu_suffix_status": "R08 actual assignment/predecessor verification started after complete raw restoration",
   "complete_stage_publisher": "publish_complete_stages_003.py",
   "complete_stage_publisher_session": 1983,
   "current_capture_phase": "accepted",
   "latest_health_observation": {
-    "utc": "2026-09-08T21:11:10.961071+00:00",
+    "utc": "2026-09-08T21:21:12.400724+00:00",
     "accepted_R08": 12,
     "planned_R08": 12,
     "current_capture": "12_chunk_fwd_kernel_o_pmc_write/attempt_001",
     "current_phase": "accepted",
-    "native_workers": [],
+    "native_workers": [
+      {
+        "rank": 0,
+        "worker_pid": 1077229,
+        "PMC_bytes": 0,
+        "worker_alive": false
+      },
+      {
+        "rank": 1,
+        "worker_pid": 1077231,
+        "PMC_bytes": 0,
+        "worker_alive": false
+      }
+    ],
     "admission_releases": [
       {
         "rank": 0,
@@ -79,16 +92,19 @@
       }
     ],
     "pre_measured_health": "complete",
-    "measured_request_token_progress": {},
+    "measured_request_token_progress": {
+      "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41": 1023,
+      "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3": 1023
+    },
     "live_eight_request_target_coverage": {
       "status": "complete_live_marker_coverage",
       "report": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/live_eight_request_checks_001/12_chunk_fwd_kernel_o_pmc_write.attempt_001.1788898083201676026.json",
       "closed_capture_accepted": true,
       "all_first_phase_orders_match_R07": true
     },
-    "NFS_available_GiB": 11.36,
+    "NFS_available_GiB": 12.28,
     "temporarily_evicted_bytes": 77001580022,
-    "remaining_machine_hours": 7.12,
+    "remaining_machine_hours": 6.95,
     "completed_stages": []
   },
   "runtime_health_monitor_session": 44834,
@@ -147,6 +163,7 @@
   "weight_removal_complete": true,
   "weight_shards_remaining": 0,
   "progress_watchdog_documented_deadline_matches_actual_deadline": true,
-  "restored_capture_count": 8,
-  "restored_bytes": 45795450475
+  "restored_capture_count": 12,
+  "restored_bytes": 77001580022,
+  "restored_file_count": 53
 }
