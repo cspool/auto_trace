@@ -17,7 +17,7 @@
   "accepted_capture_publisher": "/public/home/accl15ptg7/run_R08_R10/publish_accepted_captures_003.py",
   "original_NFS_session_state_superseded_by_this_emergency_record": true,
   "R09_R10_actual_execution_started": false,
-  "home_storage_available_gib": 24.59,
+  "home_storage_available_gib": 22.61,
   "weight_storage_constraint": "All physical weight bytes must stay under /root; never migrate weights to NFS again",
   "accepted_capture_publisher_session": 64243,
   "raw_storage_watchdog_session": 19126,
@@ -44,13 +44,13 @@
   "progress_watchdog": "remote_checkpoint_watchdog_008.py",
   "postcapture_restoration_code": "/public/home/accl15ptg7/run_R08_R10/restore_all_R08_release_artifacts_001.py",
   "postcapture_restoration_status": "CPU synthetic gate complete; actual restoration and weight removal not started",
-  "cpu_suffix_waiter_session": 64781,
+  "cpu_suffix_waiter_session": 14512,
   "cpu_suffix_status": "outer waiting only; will restore all raw sources before R08 assignment",
   "complete_stage_publisher": "publish_complete_stages_002.py",
   "complete_stage_publisher_session": 46095,
   "current_capture_phase": "measured_batch",
   "latest_health_observation": {
-    "utc": "2026-09-08T10:13:36.168881+00:00",
+    "utc": "2026-09-08T10:23:38.884925+00:00",
     "accepted_R08": 3,
     "planned_R08": 12,
     "current_capture": "04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc/attempt_002",
@@ -59,20 +59,31 @@
       {
         "rank": 0,
         "worker_pid": 387442,
-        "PMC_bytes": 771464135,
+        "PMC_bytes": 1125248835,
         "worker_alive": true
       },
       {
         "rank": 1,
         "worker_pid": 387448,
-        "PMC_bytes": 774643615,
+        "PMC_bytes": 1129941037,
         "worker_alive": true
       }
     ],
     "pre_measured_health": "complete",
-    "NFS_available_GiB": 24.59,
+    "measured_request_token_progress": {
+      "batch8-dual-dcu-dp2-req-002-28a42990210e6f68": 562,
+      "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786": 437,
+      "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5": 481,
+      "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41": 522,
+      "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c": 483,
+      "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f": 567,
+      "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3": 523,
+      "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04": 442
+    },
+    "NFS_available_GiB": 22.61,
     "temporarily_evicted_bytes": 13251173857,
-    "remaining_machine_hours": 10.08,
+    "remaining_machine_hours": 9.91,
     "completed_stages": []
-  }
+  },
+  "runtime_health_monitor_session": 60630
 }
