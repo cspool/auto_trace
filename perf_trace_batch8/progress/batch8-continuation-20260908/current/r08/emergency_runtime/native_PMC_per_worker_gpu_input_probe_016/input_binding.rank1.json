@@ -1,0 +1,9 @@
+{
+  "rank": 1,
+  "pid": 904321,
+  "original_input_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_per_worker_gpu_input_probe_016/hipprof_tmprpl_data_260909_005504_904315/input0.txt",
+  "original_input_sha256": "d53d557c69610a619ed4620e1d7072d6698656f5562b69386fb93ecaf6349df0",
+  "worker_input_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_per_worker_gpu_input_probe_016/worker_input.rank1.txt",
+  "worker_input_sha256": "1740db84f0e61002c7d093af993938f37c689a9bc1cc2199e5b07c748deef560",
+  "only_gpu_selector_changed": true
+}

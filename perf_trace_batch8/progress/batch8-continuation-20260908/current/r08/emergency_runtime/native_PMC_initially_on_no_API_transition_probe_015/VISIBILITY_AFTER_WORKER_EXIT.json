@@ -1,0 +1,28 @@
+{
+  "phase": "VISIBILITY_AFTER_WORKER_EXIT.json",
+  "workers": [
+    {
+      "rank": 0,
+      "pid": 902702,
+      "native_files": [
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_initially_on_no_API_transition_probe_015/hipprof_tmprpl_data_260909_005231_902697/input0_results_260909_005231/pmc_results_902702.txt",
+          "size": 0,
+          "prefix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ]
+    },
+    {
+      "rank": 1,
+      "pid": 902703,
+      "native_files": [
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_initially_on_no_API_transition_probe_015/hipprof_tmprpl_data_260909_005231_902697/input0_results_260909_005231/pmc_results_902703.txt",
+          "size": 27337,
+          "prefix_sha256": "2e2f81b3eedfee33b5d93616f742fe36e39e28183fbc659b64e7be70f88976a3"
+        }
+      ]
+    }
+  ],
+  "model_free": true
+}

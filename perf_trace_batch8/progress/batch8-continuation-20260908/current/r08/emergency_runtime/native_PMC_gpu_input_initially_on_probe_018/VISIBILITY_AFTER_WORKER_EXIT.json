@@ -1,0 +1,28 @@
+{
+  "phase": "VISIBILITY_AFTER_WORKER_EXIT.json",
+  "workers": [
+    {
+      "rank": 0,
+      "pid": 906577,
+      "native_files": [
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_gpu_input_initially_on_probe_018/hipprof_tmprpl_data_260909_005815_906572/input0_results_260909_005815/pmc_results_906577.txt",
+          "size": 27282,
+          "prefix_sha256": "f863c9dd862c6d18189cc32bf840ea121e4fd6aa32428809abc7895c22e8ce5b"
+        }
+      ]
+    },
+    {
+      "rank": 1,
+      "pid": 906578,
+      "native_files": [
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_gpu_input_initially_on_probe_018/hipprof_tmprpl_data_260909_005815_906572/input0_results_260909_005815/pmc_results_906578.txt",
+          "size": 0,
+          "prefix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ]
+    }
+  ],
+  "model_free": true
+}
