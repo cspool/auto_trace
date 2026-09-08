@@ -1,0 +1,74 @@
+{
+  "status": "complete",
+  "raw_capture_and_normalized_business_files_retained": true,
+  "only_uploaded_verified_compressed_cache_removed": true,
+  "remote_manifest": {
+    "status": "published",
+    "tag": "perf-trace-batch8-r08-05-triton-red-fused--to-copy-add-mean-mul-pow-rsqrt-0-pmc-read-20260908",
+    "url": "https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-r08-05-triton-red-fused--to-copy-add-mean-mul-pow-rsqrt-0-pmc-read-20260908",
+    "id": 384738593,
+    "all_server_asset_sha256_match": true,
+    "segment_id": "05_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_read",
+    "accepted_item": {
+      "segment_id": "05_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_read",
+      "capture_attempt": "attempt_001",
+      "execution_manifest": {
+        "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/05_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_read/attempt_001/execution_manifest.json",
+        "size": 8721,
+        "sha256": "82640277c89b6661ff3b3d5b22f9daa842b3ab1fa17e48cf6646b568f5df03d8"
+      },
+      "normalization_manifest": {
+        "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/normalized/captures/05_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_read/attempt_001/revision_002/NORMALIZATION_COMPLETE.json",
+        "size": 4235,
+        "sha256": "872649f2afbb6ef51343be585bbd49129dbafe8b9f141e66f30793b00898fe52"
+      },
+      "independent_audit": {
+        "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/normalized/captures/05_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_read/attempt_001/revision_002/INDEPENDENT_AUDIT.json",
+        "size": 1053,
+        "sha256": "27af66683fffc6779521509fff13d3af5444547ad5b195f70edf71465a1ed4cd"
+      }
+    },
+    "assets": [
+      {
+        "id": 550525324,
+        "name": "ASSET_MANIFEST.json",
+        "size": 697,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-05-triton-red-fused--to-copy-add-mean-mul-pow-rsqrt-0-pmc-read-20260908/ASSET_MANIFEST.json",
+        "digest": "sha256:5b19f1c7fbc40ef4a8b6432762336bee35ec47d73d8aece932b2df449a04c633"
+      },
+      {
+        "id": 550522830,
+        "name": "capture.tar.zst.part001",
+        "size": 950000000,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-05-triton-red-fused--to-copy-add-mean-mul-pow-rsqrt-0-pmc-read-20260908/capture.tar.zst.part001",
+        "digest": "sha256:f2bd00c5944b4dc56a95b9cceacaea8c8169c2c3e2095e5ff7205c9e2560895c"
+      },
+      {
+        "id": 550525115,
+        "name": "capture.tar.zst.part002",
+        "size": 63887771,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-05-triton-red-fused--to-copy-add-mean-mul-pow-rsqrt-0-pmc-read-20260908/capture.tar.zst.part002",
+        "digest": "sha256:5512afd832f18c8839124b0ba19d31e02aabb54ef15b9feb694dd26e0a2dd9fc"
+      },
+      {
+        "id": 550525302,
+        "name": "FILE_MANIFEST.json",
+        "size": 24057,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-05-triton-red-fused--to-copy-add-mean-mul-pow-rsqrt-0-pmc-read-20260908/FILE_MANIFEST.json",
+        "digest": "sha256:c0c7b3d2230199228a3315cd0f9501a51e007dd7e5a94f4c97e4ad1748c37d66"
+      },
+      {
+        "id": 550525337,
+        "name": "SHA256SUMS",
+        "size": 265,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-05-triton-red-fused--to-copy-add-mean-mul-pow-rsqrt-0-pmc-read-20260908/SHA256SUMS",
+        "digest": "sha256:1b7db13f7894db046369192fe67de2fdf24d050cf812eeda974c6248f71c18a4"
+      }
+    ]
+  }
+}
