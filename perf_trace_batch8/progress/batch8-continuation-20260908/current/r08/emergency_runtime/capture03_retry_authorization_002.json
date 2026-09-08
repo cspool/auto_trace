@@ -1,0 +1,27 @@
+{
+  "status": "authorized_within_user_continuation",
+  "prior_attempt": "03__gqa6_pmc_write/attempt_002",
+  "new_attempt": "03__gqa6_pmc_write/attempt_003",
+  "prior_native_health": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/03__gqa6_pmc_write/attempt_002/control/PRE_MEASURED_NATIVE_PMC_HEALTH.json",
+    "size": 228,
+    "sha256": "5d17d719e0c60c5412e568ed08e59e1e63496bbe750df08adbb64288b8794854"
+  },
+  "measured_batch_not_started_in_prior_attempt": true,
+  "prior_pids_verified_terminated": [
+    287000,
+    287881,
+    288174,
+    304609,
+    289033,
+    289018,
+    286995
+  ],
+  "source_native_device_population_still_DP2": true,
+  "gate": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/runtime_capture_gate_009.json",
+    "size": 5929,
+    "sha256": "0cc22733cc9b681c1a9cb0648df6132748cbd3a57ec754835b5efdeb43347864"
+  },
+  "deadline_utc": "2026-09-08T20:18:09Z"
+}

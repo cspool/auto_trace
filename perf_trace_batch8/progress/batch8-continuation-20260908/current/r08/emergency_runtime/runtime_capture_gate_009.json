@@ -1,0 +1,96 @@
+{
+  "status": "complete",
+  "strategy": "fresh spawn vLLM workers plus existing read-only native health gate before full8request measurement",
+  "hypothesis": "default fork can inherit initialized native profiling state; explicit spawn avoids inheriting process-local native profiler state",
+  "root_cause_claimed_proven": false,
+  "pinned_runtime_context_source": {
+    "path": "/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/utils/system_utils.py",
+    "size": 9943,
+    "sha256": "aeebebddd805a31859b49d05a1f1ec14ecb0691facf37f44ad810b0d6193eae2"
+  },
+  "model_free_fresh_interpreter_native_probe": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_fresh_exec_pmc_write_probe_001/RESULT.json",
+    "size": 2926,
+    "sha256": "fd785f00e8e6b23b958e7ce7575a18d882659268dff6675b4766ac8392ea03b4"
+  },
+  "frozen_tools": [
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_015/launch_vllm.py",
+      "size": 927,
+      "sha256": "06ed4160d97ba5df4b70614c9bca4d402dfc87c3f9a7d005a02d02ad4e92055b"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_015/r07_common.py",
+      "size": 65595,
+      "sha256": "2c6a4995d527f1cc71742f5293dcbbba9ff3587680b2e1cce155eada555e0046"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_015/r07_marker_contract.py",
+      "size": 3275,
+      "sha256": "2f8b80cb4e2be8f7b837c959f07ba01d7283499055ff362cd0b09f35be09c11e"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_015/r08_memory_profile.py",
+      "size": 5356,
+      "sha256": "62fb519f3e610a77034e9e402ed7e15845ac14aaae0edd39ccf93842ad353d18"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_015/r08_native.py",
+      "size": 7880,
+      "sha256": "dde480e545bf3233313104b53f6b76f54d05ecca4e61ec4570c726bb4cbd7157"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_015/r08_native_health.py",
+      "size": 2847,
+      "sha256": "b1d04b295085593d10d5fa1b3b42579c6e9692548685b544710fc981cc835aa8"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_015/r08_pmc_gate.py",
+      "size": 10399,
+      "sha256": "9171815960ab2124292843d2a1e445392434a5b0712c760b9057dd6a8d050fc4"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_015/r08_process_overlay.py",
+      "size": 27675,
+      "sha256": "6e13052a3ef414919572ccecb189cf5b48922e14056317bff2d59fb81502380b"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_015/r08_workload_driver.py",
+      "size": 16351,
+      "sha256": "2e2b918fb3c4a46ca2337a5221ebbea2bb0b22e50b6258c9a9fd6248411ba703"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_015/run_capture.py",
+      "size": 13782,
+      "sha256": "fea1d92f43dae69c920d03c07056b3e3803b8c9ecfa9eaf698dad7b23f7a28c9"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_015/sitecustomize.py",
+      "size": 2051,
+      "sha256": "26507608c562a55f5611a2d8a9feec3ec6bfb55a79d05059f2277e61ad1b463c"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_015/source_abi_probe.py",
+      "size": 2030,
+      "sha256": "68b83e05c8d52b55f6b42d176669cf5b1a4aa3965b674454485402fd6fb09ed6"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_015/vllm_r08_contract_shim.sh",
+      "size": 285,
+      "sha256": "d04e2fd91b89e8c98da20332b0161f4ba33cd4f0d702917ef8a31aa3b9ffde37"
+    }
+  ],
+  "capture_plan_sha256": "78b987be5b0b763c4260ce56f6bba759675bfbcce5989a5e368aa7549d1b1e9e",
+  "prior_runtime_gate": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/runtime_capture_gate_008.json",
+    "size": 11943,
+    "sha256": "5586c451869e1b1633635d5f12fabfea7b1690ec8ed9095667f89139689af08c"
+  },
+  "model_initializations_this_cpu_gate": 0,
+  "device_queries_this_cpu_gate": 0,
+  "workload_request_selection_native_counters_and_marker_semantics_unchanged": true,
+  "worker_multiprocessing_method": "spawn",
+  "data_parallel_backend": "mp",
+  "native_health_gate_must_pass_before_measured_requests": true,
+  "raw_failure_checkpoint_now_explicit": true
+}
