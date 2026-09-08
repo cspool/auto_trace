@@ -50,7 +50,7 @@
   "complete_stage_publisher_session": 1983,
   "current_capture_phase": "failed_not_accepted",
   "latest_health_observation": {
-    "utc": "2026-09-08T16:13:21.761026+00:00",
+    "utc": "2026-09-08T16:18:22.318327+00:00",
     "accepted_R08": 8,
     "planned_R08": 12,
     "current_capture": "09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_005",
@@ -75,7 +75,7 @@
     "live_eight_request_target_coverage": null,
     "NFS_available_GiB": 13.44,
     "temporarily_evicted_bytes": 45795450475,
-    "remaining_machine_hours": 12.08,
+    "remaining_machine_hours": 12.0,
     "completed_stages": []
   },
   "runtime_health_monitor_session": 22460,
@@ -119,7 +119,8 @@
   "native_collection_initially_disabled_until_original_warmup": true,
   "startup_native_trace_before_original_warmups_intentionally_omitted": true,
   "native_capture_scheduler_status": "closed_failed_before_measured_requests",
-  "active_model_free_probe": "native_PMC_dual_context_probe_002",
-  "active_model_free_probe_session": 31457,
-  "full_model_capture_retry_waits_for_bounded_native_diagnostics": true
+  "active_model_free_probe": "native_PMC_dual_context_external_probe_003",
+  "active_model_free_probe_session": 30172,
+  "full_model_capture_retry_waits_for_bounded_native_diagnostics": true,
+  "native_counter_bounded_reproduction": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_multi_device_context_reproduction_001.json"
 }

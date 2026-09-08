@@ -1,0 +1,23 @@
+{
+  "status": "complete_bounded_model_free_reproduction",
+  "utc": "2026-09-08T16:18:29.748768+00:00",
+  "baseline": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_visibility_probe_001/RESULT.json",
+    "size": 6202,
+    "sha256": "5efa876302bb92e9dae58d94b39fab7c960f907fcbb9e1aaa790ceb131917fea"
+  },
+  "changed_case": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_dual_context_probe_002/RESULT.json",
+    "size": 6313,
+    "sha256": "343deb32fe472623a30e6be5e31f8763ea43f14bb05d7f55c27259eb70bbc616"
+  },
+  "changed_factor": "Each fresh worker additionally creates a tensor and synchronizes on the other physical device before profiling the original four gqa6 dispatches on its own device. Original probe warmup and measurement unchanged.",
+  "baseline_expected_four_per_device": true,
+  "changed_observed_native_counts": {
+    "1": 4
+  },
+  "changed_missing_rank_stayed_empty_before_Stop_after_Stop_after_fflush_and_after_worker_exit": true,
+  "only_model_free_probe_causal_scope_claimed": true,
+  "full_model_root_cause_and_repair_not_proven": true,
+  "workload_or_device_topology_for_real_capture_not_changed_by_probe": true
+}
