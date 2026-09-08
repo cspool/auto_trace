@@ -1,22 +1,23 @@
 {
-  "snapshot_started_utc": "2026-09-08T13:54:58.446548+00:00",
-  "snapshot_completed_utc": "2026-09-08T13:55:05.643460+00:00",
+  "snapshot_started_utc": "2026-09-08T14:04:58.608281+00:00",
+  "snapshot_completed_utc": "2026-09-08T14:05:08.051236+00:00",
   "runtime_run_id": "batch8-dp2-fresh-003",
-  "r08_accepted_capture_count": 5,
+  "r08_accepted_capture_count": 6,
   "r08_planned_capture_count": 12,
   "r08_accepted_segments": [
     "01__gqa6_pmc",
     "02__gqa6_pmc_read",
     "03__gqa6_pmc_write",
     "04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc",
-    "05_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_read"
+    "05_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_read",
+    "06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write"
   ],
   "deadline_utc": "2026-09-08T20:18:09Z",
   "remote_progress_branch": "progress/batch8-continuation-20260908",
   "current_execution_state": {
     "runtime_run_id": "batch8-dp2-fresh-003",
-    "current_capture": "06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write/attempt_001",
-    "accepted_prefix_count": 5,
+    "current_capture": "07_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc/attempt_001",
+    "accepted_prefix_count": 6,
     "current_runtime_revision": "revision_018",
     "runtime_gate": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/runtime_capture_gate_011.json",
     "scheduler": "serial_scheduler_007",
@@ -32,11 +33,11 @@
     "accepted_capture_publisher": "/public/home/accl15ptg7/run_R08_R10/publish_accepted_captures_003.py",
     "original_NFS_session_state_superseded_by_this_emergency_record": true,
     "R09_R10_actual_execution_started": false,
-    "home_storage_available_gib": 11.7,
+    "home_storage_available_gib": 15.4,
     "weight_storage_constraint": "All physical weight bytes must stay under /root; never migrate weights to NFS again",
     "accepted_capture_publisher_session": 64243,
     "raw_storage_watchdog_session": 19126,
-    "pre_measured_two_worker_native_health": "complete",
+    "pre_measured_two_worker_native_health": "pending",
     "user_storage_policy": "/public/home/accl15ptg7/run_R08_R10/USER_STORAGE_POLICY_20260908.json",
     "migration_session": null,
     "migration_log": "/public/home/accl15ptg7/run_R08_R10/migrate_R08_all_outputs_to_NFS_001.log",
@@ -52,8 +53,8 @@
     "additional_NFS_mount_requires_external_platform_action": true,
     "NFS_lossless_DB_ratio_validation": "real 3.49 GB closed DB compressed to 821.7 MB, full decompressed SHA256 verified; original DB still retained; archive activation awaits full resolver validation",
     "temporary_release_eviction_enabled": true,
-    "evicted_accepted_capture_count": 5,
-    "evicted_bytes": 29008878525,
+    "evicted_accepted_capture_count": 6,
+    "evicted_bytes": 36969651806,
     "weights_must_remain_until_all_12_R08_captures_accepted": true,
     "R08_final_validation_restore_policy": "Restore every temporarily evicted artifact and verify original SHA256 before final R08 validation; after all 12 GPU captures, user authorizes deleting root weights to provide restoration workspace.",
     "progress_watchdog": "remote_checkpoint_watchdog_010.py",
@@ -63,63 +64,34 @@
     "cpu_suffix_status": "outer waiting only; will restore all raw sources before R08 assignment",
     "complete_stage_publisher": "publish_complete_stages_002.py",
     "complete_stage_publisher_session": 46095,
-    "current_capture_phase": "raw_complete_attribution_or_audit_pending",
+    "current_capture_phase": "original_two_warmups",
     "latest_health_observation": {
-      "utc": "2026-09-08T13:54:46.104919+00:00",
-      "accepted_R08": 5,
+      "utc": "2026-09-08T14:04:47.198019+00:00",
+      "accepted_R08": 6,
       "planned_R08": 12,
-      "current_capture": "06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write/attempt_001",
-      "current_phase": "raw_complete_attribution_or_audit_pending",
+      "current_capture": "07_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc/attempt_001",
+      "current_phase": "original_two_warmups",
       "native_workers": [
         {
           "rank": 0,
-          "worker_pid": 620502,
-          "PMC_bytes": 0,
-          "worker_alive": false
+          "worker_pid": 687557,
+          "PMC_bytes": 14984198,
+          "worker_alive": true
         },
         {
           "rank": 1,
-          "worker_pid": 620496,
-          "PMC_bytes": 0,
-          "worker_alive": false
+          "worker_pid": 687560,
+          "PMC_bytes": 15811924,
+          "worker_alive": true
         }
       ],
-      "admission_releases": [
-        {
-          "rank": 0,
-          "engine_pid": 618883,
-          "request_order": [
-            "batch8-dual-dcu-dp2-req-002-28a42990210e6f68",
-            "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786",
-            "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5",
-            "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41"
-          ]
-        },
-        {
-          "rank": 1,
-          "engine_pid": 618884,
-          "request_order": [
-            "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c",
-            "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f",
-            "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04",
-            "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3"
-          ]
-        }
-      ],
-      "pre_measured_health": "complete",
-      "measured_request_token_progress": {
-        "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41": 1023,
-        "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3": 1023
-      },
-      "live_eight_request_target_coverage": {
-        "status": "complete_live_marker_coverage",
-        "report": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/live_eight_request_checks_001/06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write.attempt_001.1788874063098459096.json",
-        "closed_capture_accepted": false,
-        "all_first_phase_orders_match_R07": true
-      },
-      "NFS_available_GiB": 11.7,
-      "temporarily_evicted_bytes": 29008878525,
-      "remaining_machine_hours": 6.39,
+      "admission_releases": [],
+      "pre_measured_health": "pending",
+      "measured_request_token_progress": {},
+      "live_eight_request_target_coverage": null,
+      "NFS_available_GiB": 15.4,
+      "temporarily_evicted_bytes": 36969651806,
+      "remaining_machine_hours": 6.22,
       "completed_stages": []
     },
     "runtime_health_monitor_session": 55116,
@@ -138,7 +110,7 @@
       "sha256": "ca02d6f7da1f9407e5517d68f787e0b00e61be8f4e392db75ccbccfc312ffaa3"
     },
     "previous_scheduler_session": 25805,
-    "raw_capture_complete": true,
+    "raw_capture_complete": false,
     "all_required_1408_logical_owner_multiplicities_reached_before_failure": true,
     "CPU_normalization_session": null,
     "actual_graph_scope_proof": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_graph_selected_intersection_001.json",
@@ -368,10 +340,10 @@
       "source_path": "/public/home/accl15ptg7/run_R08_R10/offload_published_R08_files_001.log",
       "snapshot_relative_path": "logs/control/offload_published_R08_files_001.log",
       "kind": "log_snapshot",
-      "captured_bytes": 2565,
-      "source_captured_prefix_sha256": "bec6d5789d83e95696986ef3005d4edb55b6b9d8fefd8cf6cbd6bc74bf30e507",
-      "snapshot_bytes": 2565,
-      "snapshot_sha256": "bec6d5789d83e95696986ef3005d4edb55b6b9d8fefd8cf6cbd6bc74bf30e507",
+      "captured_bytes": 3430,
+      "source_captured_prefix_sha256": "868c1622589bbd505deeb0d865965b581090ffd18e767fc6e80e47168829c6a7",
+      "snapshot_bytes": 3430,
+      "snapshot_sha256": "868c1622589bbd505deeb0d865965b581090ffd18e767fc6e80e47168829c6a7",
       "redacted": false,
       "source_was_live": true
     },
@@ -533,10 +505,10 @@
       "source_path": "/public/home/accl15ptg7/run_R08_R10/publish_accepted_captures_003.log",
       "snapshot_relative_path": "logs/control/publish_accepted_captures_003.log",
       "kind": "log_snapshot",
-      "captured_bytes": 3972,
-      "source_captured_prefix_sha256": "0ec5fc4ec9117ab435d97610aeacbf7886b7b591dfee4b89f695221da414cfc5",
-      "snapshot_bytes": 3972,
-      "snapshot_sha256": "0ec5fc4ec9117ab435d97610aeacbf7886b7b591dfee4b89f695221da414cfc5",
+      "captured_bytes": 5977,
+      "source_captured_prefix_sha256": "3e5aadd84d90925012403e238956fbf3e276d479602cccd907af2943e5a4ab2e",
+      "snapshot_bytes": 5977,
+      "snapshot_sha256": "3e5aadd84d90925012403e238956fbf3e276d479602cccd907af2943e5a4ab2e",
       "redacted": false,
       "source_was_live": true
     },
@@ -940,10 +912,10 @@
       "source_path": "/public/home/accl15ptg7/run_R08_R10/remote_checkpoint_watchdog_010.log",
       "snapshot_relative_path": "logs/control/remote_checkpoint_watchdog_010.log",
       "kind": "log_snapshot",
-      "captured_bytes": 1089,
-      "source_captured_prefix_sha256": "8a36788b9a38bc2fa4d909310e4be993f0f83753e336baf4ddc64e4bd9f67b7e",
-      "snapshot_bytes": 1089,
-      "snapshot_sha256": "8a36788b9a38bc2fa4d909310e4be993f0f83753e336baf4ddc64e4bd9f67b7e",
+      "captured_bytes": 1188,
+      "source_captured_prefix_sha256": "4c8f276a33ad57c63c611bffff754a120b00786b3f8b082a4423cacac6491039",
+      "snapshot_bytes": 1188,
+      "snapshot_sha256": "4c8f276a33ad57c63c611bffff754a120b00786b3f8b082a4423cacac6491039",
       "redacted": false,
       "source_was_live": true
     },
@@ -995,10 +967,10 @@
       "source_path": "/public/home/accl15ptg7/run_R08_R10/run_r08_serial_suffix_007.log",
       "snapshot_relative_path": "logs/control/run_r08_serial_suffix_007.log",
       "kind": "log_snapshot",
-      "captured_bytes": 3610,
-      "source_captured_prefix_sha256": "c8a0bb638c6971362d4c4bd003dfd8464adf72154c740f7d9673737f57348e93",
-      "snapshot_bytes": 3610,
-      "snapshot_sha256": "c8a0bb638c6971362d4c4bd003dfd8464adf72154c740f7d9673737f57348e93",
+      "captured_bytes": 4253,
+      "source_captured_prefix_sha256": "3e91140982abd61876b351408773c8743fcf9e6d5d1b59965efe344049bfab16",
+      "snapshot_bytes": 4253,
+      "snapshot_sha256": "3e91140982abd61876b351408773c8743fcf9e6d5d1b59965efe344049bfab16",
       "redacted": false,
       "source_was_live": true
     },
@@ -1149,10 +1121,10 @@
       "source_path": "/public/home/accl15ptg7/run_R08_R10/watch_runtime_health_005.log",
       "snapshot_relative_path": "logs/control/watch_runtime_health_005.log",
       "kind": "log_snapshot",
-      "captured_bytes": 121216,
-      "source_captured_prefix_sha256": "ac3cdbf306ef974ae4f3c667f7c492a77e6ce052811d18383f0eb95b9a2f57c2",
-      "snapshot_bytes": 121216,
-      "snapshot_sha256": "ac3cdbf306ef974ae4f3c667f7c492a77e6ce052811d18383f0eb95b9a2f57c2",
+      "captured_bytes": 126927,
+      "source_captured_prefix_sha256": "87088f5df566a080de0efed4157e3f1761ee8d5ee3b4fdd2ce1374b50a5aecf9",
+      "snapshot_bytes": 126927,
+      "snapshot_sha256": "87088f5df566a080de0efed4157e3f1761ee8d5ee3b4fdd2ce1374b50a5aecf9",
       "redacted": false,
       "source_was_live": true
     },
@@ -2117,10 +2089,10 @@
       "source_path": "/public/home/accl15ptg7/run_R08_R10/RECOVERY_STATE_NFS.json",
       "snapshot_relative_path": "state/RECOVERY_STATE_NFS.json",
       "kind": "authoritative_execution_state",
-      "captured_bytes": 7653,
-      "source_captured_prefix_sha256": "529d513132b6f37a854a3e681f22814f7e12066a1e7d200c8fb81a7359580e80",
-      "snapshot_bytes": 7653,
-      "snapshot_sha256": "529d513132b6f37a854a3e681f22814f7e12066a1e7d200c8fb81a7359580e80",
+      "captured_bytes": 6362,
+      "source_captured_prefix_sha256": "5eb785eba372dfe0bd3e2a0dd8fb9da86deaa143f156c7125e495c4173a8a913",
+      "snapshot_bytes": 6362,
+      "snapshot_sha256": "5eb785eba372dfe0bd3e2a0dd8fb9da86deaa143f156c7125e495c4173a8a913",
       "redacted": false,
       "source_was_live": false
     },
@@ -4809,13 +4781,24 @@
       "source_was_live": false
     },
     {
+      "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/validation/serial_scheduler_007/06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write.accepted_checkpoint.json",
+      "snapshot_relative_path": "r08/scheduler/serial_scheduler_007/06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write.accepted_checkpoint.json",
+      "kind": "closed_checkpoint",
+      "captured_bytes": 1486,
+      "source_captured_prefix_sha256": "0dac71cc63aafd66b06acce5d118f281a94e67e750b2624444797dc0e280c2f1",
+      "snapshot_bytes": 1486,
+      "snapshot_sha256": "0dac71cc63aafd66b06acce5d118f281a94e67e750b2624444797dc0e280c2f1",
+      "redacted": false,
+      "source_was_live": false
+    },
+    {
       "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/validation/serial_scheduler_007/06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write.audit.log",
       "snapshot_relative_path": "r08/scheduler/serial_scheduler_007/06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write.audit.log",
       "kind": "log_snapshot",
-      "captured_bytes": 0,
-      "source_captured_prefix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "snapshot_bytes": 0,
-      "snapshot_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "captured_bytes": 106,
+      "source_captured_prefix_sha256": "469685fa0e8729ee1a9f4d6f16947d369fafd43012cf70ccc67e62cef819a7f6",
+      "snapshot_bytes": 106,
+      "snapshot_sha256": "469685fa0e8729ee1a9f4d6f16947d369fafd43012cf70ccc67e62cef819a7f6",
       "redacted": false,
       "source_was_live": true
     },
@@ -4851,6 +4834,17 @@
       "snapshot_sha256": "7112fa09103333c24360aaa332094d20313e198f14fa359db7dbdd733c4e91e3",
       "redacted": false,
       "source_was_live": false
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/validation/serial_scheduler_007/07_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc.capture.log",
+      "snapshot_relative_path": "r08/scheduler/serial_scheduler_007/07_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc.capture.log",
+      "kind": "log_snapshot",
+      "captured_bytes": 0,
+      "source_captured_prefix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "snapshot_bytes": 0,
+      "snapshot_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redacted": false,
+      "source_was_live": true
     },
     {
       "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/validation/serial_scheduler_007/START.json",
@@ -8307,6 +8301,94 @@
       "source_was_live": false
     },
     {
+      "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/07_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc/attempt_001/control/capture_contract.json",
+      "snapshot_relative_path": "r08/capture_control/07_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc/attempt_001/control/capture_contract.json",
+      "kind": "closed_or_live_control_snapshot",
+      "captured_bytes": 8616,
+      "source_captured_prefix_sha256": "f9deb5f835c0ec4ad41727b0af936b65260b197356f51d8c2b9307fe8d8ac117",
+      "snapshot_bytes": 8616,
+      "snapshot_sha256": "f9deb5f835c0ec4ad41727b0af936b65260b197356f51d8c2b9307fe8d8ac117",
+      "redacted": false,
+      "source_was_live": false
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/07_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc/attempt_001/control/live_collector_exec.json",
+      "snapshot_relative_path": "r08/capture_control/07_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc/attempt_001/control/live_collector_exec.json",
+      "kind": "closed_or_live_control_snapshot",
+      "captured_bytes": 768,
+      "source_captured_prefix_sha256": "b4e6f68ac87641b973a70e600adc373db915da9bcd6a171a4f28833d36b359b2",
+      "snapshot_bytes": 768,
+      "snapshot_sha256": "b4e6f68ac87641b973a70e600adc373db915da9bcd6a171a4f28833d36b359b2",
+      "redacted": false,
+      "source_was_live": false
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/07_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc/attempt_001/control/pmc_gate_events/warmup_start.rank0.pid687557.json",
+      "snapshot_relative_path": "r08/capture_control/07_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc/attempt_001/control/pmc_gate_events/warmup_start.rank0.pid687557.json",
+      "kind": "closed_or_live_control_snapshot",
+      "captured_bytes": 1100,
+      "source_captured_prefix_sha256": "7b7e72f4a2049f7c0bae16a6de7b6f323724be081bd808c73405207a34e1ccb9",
+      "snapshot_bytes": 1100,
+      "snapshot_sha256": "7b7e72f4a2049f7c0bae16a6de7b6f323724be081bd808c73405207a34e1ccb9",
+      "redacted": false,
+      "source_was_live": false
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/07_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc/attempt_001/control/pmc_gate_events/warmup_start.rank1.pid687560.json",
+      "snapshot_relative_path": "r08/capture_control/07_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc/attempt_001/control/pmc_gate_events/warmup_start.rank1.pid687560.json",
+      "kind": "closed_or_live_control_snapshot",
+      "captured_bytes": 1100,
+      "source_captured_prefix_sha256": "01c276e36b0b47dbd2906094281222a3707c365ab8b7b77f4b3e78b9cb23cbed",
+      "snapshot_bytes": 1100,
+      "snapshot_sha256": "01c276e36b0b47dbd2906094281222a3707c365ab8b7b77f4b3e78b9cb23cbed",
+      "redacted": false,
+      "source_was_live": false
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/07_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc/attempt_001/control/profiler_identity.json",
+      "snapshot_relative_path": "r08/capture_control/07_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc/attempt_001/control/profiler_identity.json",
+      "kind": "closed_or_live_control_snapshot",
+      "captured_bytes": 47,
+      "source_captured_prefix_sha256": "a4bd39ad3408af12ecff5c53df9757241a30e1f6de64502c6e0cdbbf9194bb26",
+      "snapshot_bytes": 47,
+      "snapshot_sha256": "a4bd39ad3408af12ecff5c53df9757241a30e1f6de64502c6e0cdbbf9194bb26",
+      "redacted": false,
+      "source_was_live": false
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/07_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc/attempt_001/control/runtime_cwd_binding.json",
+      "snapshot_relative_path": "r08/capture_control/07_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc/attempt_001/control/runtime_cwd_binding.json",
+      "kind": "closed_or_live_control_snapshot",
+      "captured_bytes": 534,
+      "source_captured_prefix_sha256": "5239577234744983c9f664c5774783e3cf2e268efb4bc4c14a7f579a24ff53ee",
+      "snapshot_bytes": 534,
+      "snapshot_sha256": "5239577234744983c9f664c5774783e3cf2e268efb4bc4c14a7f579a24ff53ee",
+      "redacted": false,
+      "source_was_live": false
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/07_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc/attempt_001/control/runtime_environment.json",
+      "snapshot_relative_path": "r08/capture_control/07_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc/attempt_001/control/runtime_environment.json",
+      "kind": "closed_or_live_control_snapshot",
+      "captured_bytes": 4791,
+      "source_captured_prefix_sha256": "ed1a51f25b4b7f72f3a7fc1f0222e137f27b9d9117f613e355ef4df270167a31",
+      "snapshot_bytes": 4791,
+      "snapshot_sha256": "ed1a51f25b4b7f72f3a7fc1f0222e137f27b9d9117f613e355ef4df270167a31",
+      "redacted": false,
+      "source_was_live": false
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/07_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc/attempt_001/control/service_identity.json",
+      "snapshot_relative_path": "r08/capture_control/07_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc/attempt_001/control/service_identity.json",
+      "kind": "closed_or_live_control_snapshot",
+      "captured_bytes": 93,
+      "source_captured_prefix_sha256": "8771482e43483f06b9b60587e796ef97eccc9b2df8c66252f55f220af18a6c2a",
+      "snapshot_bytes": 93,
+      "snapshot_sha256": "8771482e43483f06b9b60587e796ef97eccc9b2df8c66252f55f220af18a6c2a",
+      "redacted": false,
+      "source_was_live": false
+    },
+    {
       "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/01__gqa6_pmc/attempt_001/logs/hipprof.log",
       "snapshot_relative_path": "r08/capture_logs/01__gqa6_pmc/attempt_001/logs/hipprof.log",
       "kind": "log_snapshot",
@@ -8747,6 +8829,39 @@
       "source_was_live": true
     },
     {
+      "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/07_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc/attempt_001/logs/hipprof.log",
+      "snapshot_relative_path": "r08/capture_logs/07_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc/attempt_001/logs/hipprof.log",
+      "kind": "log_snapshot",
+      "captured_bytes": 1231,
+      "source_captured_prefix_sha256": "db1d78a3b3f30888352417c317598294d5c1e1abbeb3cf50901ff8aadd9b001b",
+      "snapshot_bytes": 1231,
+      "snapshot_sha256": "db1d78a3b3f30888352417c317598294d5c1e1abbeb3cf50901ff8aadd9b001b",
+      "redacted": false,
+      "source_was_live": true
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/07_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc/attempt_001/logs/service.log",
+      "snapshot_relative_path": "r08/capture_logs/07_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc/attempt_001/logs/service.log",
+      "kind": "log_snapshot",
+      "captured_bytes": 46734,
+      "source_captured_prefix_sha256": "89d5ab61b16b33ecfecee159a23b5f3daadd695f3a54708c97ae847c0f7b563c",
+      "snapshot_bytes": 46734,
+      "snapshot_sha256": "89d5ab61b16b33ecfecee159a23b5f3daadd695f3a54708c97ae847c0f7b563c",
+      "redacted": false,
+      "source_was_live": true
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/07_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc/attempt_001/logs/workload.log",
+      "snapshot_relative_path": "r08/capture_logs/07_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc/attempt_001/logs/workload.log",
+      "kind": "log_snapshot",
+      "captured_bytes": 0,
+      "source_captured_prefix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "snapshot_bytes": 0,
+      "snapshot_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redacted": false,
+      "source_was_live": true
+    },
+    {
       "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/01__gqa6_pmc/attempt_005/execution_manifest.json",
       "snapshot_relative_path": "r08/accepted/01__gqa6_pmc/execution_manifest.json",
       "kind": "accepted_capture_checkpoint",
@@ -8908,6 +9023,39 @@
       "source_captured_prefix_sha256": "27af66683fffc6779521509fff13d3af5444547ad5b195f70edf71465a1ed4cd",
       "snapshot_bytes": 1053,
       "snapshot_sha256": "27af66683fffc6779521509fff13d3af5444547ad5b195f70edf71465a1ed4cd",
+      "redacted": false,
+      "source_was_live": false
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write/attempt_001/execution_manifest.json",
+      "snapshot_relative_path": "r08/accepted/06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write/execution_manifest.json",
+      "kind": "accepted_capture_checkpoint",
+      "captured_bytes": 8743,
+      "source_captured_prefix_sha256": "4fb3a6177466b2c31072224b8d6114de455a1dde28b3c92fcc190379a295a83a",
+      "snapshot_bytes": 8743,
+      "snapshot_sha256": "4fb3a6177466b2c31072224b8d6114de455a1dde28b3c92fcc190379a295a83a",
+      "redacted": false,
+      "source_was_live": false
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/normalized/captures/06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write/attempt_001/revision_002/NORMALIZATION_COMPLETE.json",
+      "snapshot_relative_path": "r08/accepted/06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write/NORMALIZATION_COMPLETE.json",
+      "kind": "accepted_capture_checkpoint",
+      "captured_bytes": 4243,
+      "source_captured_prefix_sha256": "82e5d1e1277876758658c7c10f1c5ed6401c1c0eb889f5bd3aef44183ce90662",
+      "snapshot_bytes": 4243,
+      "snapshot_sha256": "82e5d1e1277876758658c7c10f1c5ed6401c1c0eb889f5bd3aef44183ce90662",
+      "redacted": false,
+      "source_was_live": false
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/normalized/captures/06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write/attempt_001/revision_002/INDEPENDENT_AUDIT.json",
+      "snapshot_relative_path": "r08/accepted/06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write/INDEPENDENT_AUDIT.json",
+      "kind": "accepted_capture_checkpoint",
+      "captured_bytes": 1054,
+      "source_captured_prefix_sha256": "982eaccc5568e33fb6a305b7e4eb43b5652e8c4b6545cfd2d6899f5543472b73",
+      "snapshot_bytes": 1054,
+      "snapshot_sha256": "982eaccc5568e33fb6a305b7e4eb43b5652e8c4b6545cfd2d6899f5543472b73",
       "redacted": false,
       "source_was_live": false
     },
@@ -10241,6 +10389,28 @@
       "source_was_live": false
     },
     {
+      "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/remote_release_offloads_001/06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write.complete.json",
+      "snapshot_relative_path": "r08/emergency_runtime/remote_release_offloads_001/06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write.complete.json",
+      "kind": "frozen_runtime_tool_or_gate",
+      "captured_bytes": 9303,
+      "source_captured_prefix_sha256": "de97f12c4510c144ab1bef573d3cd18d256e82490713ed2a309c7a40c97db762",
+      "snapshot_bytes": 9303,
+      "snapshot_sha256": "de97f12c4510c144ab1bef573d3cd18d256e82490713ed2a309c7a40c97db762",
+      "redacted": false,
+      "source_was_live": false
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/remote_release_offloads_001/06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write.prepared.json",
+      "snapshot_relative_path": "r08/emergency_runtime/remote_release_offloads_001/06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write.prepared.json",
+      "kind": "frozen_runtime_tool_or_gate",
+      "captured_bytes": 8850,
+      "source_captured_prefix_sha256": "5c23b033940f132baceb694ea09251671a3ffb4c4622f68fb0de3863b40ed597",
+      "snapshot_bytes": 8850,
+      "snapshot_sha256": "5c23b033940f132baceb694ea09251671a3ffb4c4622f68fb0de3863b40ed597",
+      "redacted": false,
+      "source_was_live": false
+    },
+    {
       "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/remote_release_offloads_001/CLOSED_RAW_INVENTORY_PRESENCE_CHECK_001.json",
       "snapshot_relative_path": "r08/emergency_runtime/remote_release_offloads_001/CLOSED_RAW_INVENTORY_PRESENCE_CHECK_001.json",
       "kind": "frozen_runtime_tool_or_gate",
@@ -11403,6 +11573,17 @@
       "source_captured_prefix_sha256": "3f1266a3a5880237e2be8cc275408bf7a1569b46cb5024c759c77b9e56656850",
       "snapshot_bytes": 3919,
       "snapshot_sha256": "3f1266a3a5880237e2be8cc275408bf7a1569b46cb5024c759c77b9e56656850",
+      "redacted": false,
+      "source_was_live": false
+    },
+    {
+      "source_path": "/root/capture_publication_emergency/r08_06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write/PUBLICATION_COMPLETE.json",
+      "snapshot_relative_path": "remote_publications/r08_06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write/PUBLICATION_COMPLETE.json",
+      "kind": "published_release_index",
+      "captured_bytes": 3931,
+      "source_captured_prefix_sha256": "6f62e72b05519f4312e05735309bf0115bbc7a4033d0d5c379be52c1b9c60283",
+      "snapshot_bytes": 3931,
+      "snapshot_sha256": "6f62e72b05519f4312e05735309bf0115bbc7a4033d0d5c379be52c1b9c60283",
       "redacted": false,
       "source_was_live": false
     },
