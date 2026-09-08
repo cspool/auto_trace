@@ -170,3 +170,130 @@ R08_PMC_GATE_READY attempt=batch8-dp2-fresh-003-R08-04_triton_red_fused__to_copy
 (Worker pid=356356) /public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/v1/attention/ops/vit_attn_wrappers.py:202: UserWarning: sdpa adopt the new interface of flash-attn (Triggered internally at /home/pytorch/aten/src/ATen/native/transformers/hip/cutlassfa_adapter.h:145.)
 (Worker pid=356352)   output = F.scaled_dot_product_attention(
 (Worker pid=356356)   output = F.scaled_dot_product_attention(
+(Worker pid=356356) INFO 09-08 17:32:53 [backends.py:988] Using cache directory: /public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_cache/vllm/torch_compile_cache/7737b31bfa/rank_0_0/backbone for vLLM's torch.compile
+(Worker pid=356356) INFO 09-08 17:32:53 [backends.py:1048] Dynamo bytecode transform time: 6.90 s
+(Worker pid=356356) INFO 09-08 17:33:29 [backends.py:284] Directly load the compiled graph(s) for compile range (4096, 4096) from the cache, took 34.054 s
+(Worker pid=356356) INFO 09-08 17:33:29 [backends.py:284] Directly load the compiled graph(s) for compile range (1, 4096) from the cache, took 34.159 s
+(Worker pid=356352) INFO 09-08 17:33:29 [decorators.py:296] Directly load AOT compilation from path /public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_cache/vllm/torch_compile_cache/torch_aot_compile/3742d5fd0f486b9bb06d370adf48f7bfafddeab604203c8f9fcb5c838d4bb4b1/rank_0_1/model
+(Worker pid=356356) INFO 09-08 17:33:29 [monitor.py:48] torch.compile took 42.87 s in total
+(Worker pid=356356) INFO 09-08 17:33:29 [decorators.py:296] Directly load AOT compilation from path /public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_cache/vllm/torch_compile_cache/torch_aot_compile/3742d5fd0f486b9bb06d370adf48f7bfafddeab604203c8f9fcb5c838d4bb4b1/rank_0_0/model
+(Worker pid=356356) /public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/model_executor/layers/fla/ops/utils.py:113: UserWarning: Input tensor shape suggests potential format mismatch: seq_len (16) < num_heads (48). This may indicate the inputs were passed in head-first format [B, H, T, ...] when head_first=False was specified. Please verify your input tensor format matches the expected shape [B, T, H, ...].
+(Worker pid=356356)   return fn(*contiguous_args, **contiguous_kwargs)
+(EngineCore_DP0 pid=354922) INFO 09-08 17:33:33 [shm_broadcast.py:681] No available shared memory broadcast block found in 60 seconds. This typically happens when some processes are hanging or doing some time-consuming work (e.g. compilation, weight/kv cache quantization).
+(EngineCore_DP1 pid=354923) INFO 09-08 17:33:33 [shm_broadcast.py:681] No available shared memory broadcast block found in 60 seconds. This typically happens when some processes are hanging or doing some time-consuming work (e.g. compilation, weight/kv cache quantization).
+(Worker pid=356352) /public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/model_executor/layers/fla/ops/utils.py:113: UserWarning: Input tensor shape suggests potential format mismatch: seq_len (16) < num_heads (48). This may indicate the inputs were passed in head-first format [B, H, T, ...] when head_first=False was specified. Please verify your input tensor format matches the expected shape [B, T, H, ...].
+(Worker pid=356352)   return fn(*contiguous_args, **contiguous_kwargs)
+(Worker pid=356356) /public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/model_executor/layers/fla/ops/utils.py:113: UserWarning: Input tensor shape suggests potential format mismatch: seq_len (32) < num_heads (48). This may indicate the inputs were passed in head-first format [B, H, T, ...] when head_first=False was specified. Please verify your input tensor format matches the expected shape [B, T, H, ...].
+(Worker pid=356356)   return fn(*contiguous_args, **contiguous_kwargs)
+(Worker pid=356352) /public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/model_executor/layers/fla/ops/utils.py:113: UserWarning: Input tensor shape suggests potential format mismatch: seq_len (32) < num_heads (48). This may indicate the inputs were passed in head-first format [B, H, T, ...] when head_first=False was specified. Please verify your input tensor format matches the expected shape [B, T, H, ...].
+(Worker pid=356352)   return fn(*contiguous_args, **contiguous_kwargs)
+(Worker pid=356356) INFO 09-08 17:34:19 [monitor.py:76] Initial profiling/warmup run took 49.61 s
+(Worker pid=356356) INFO 09-08 17:34:20 [gpu_worker.py:456] Available KV cache memory: 6.74 GiB
+(Worker pid=356356) R01_KV_TARGET_RESTORATION dp_rank=0 observed_tokens=27440 target_tokens=28224 observed_bytes=7237795328 target_bytes=7398752256 restoration_bytes=160956928 remaining_reserve_bytes=2936536576 status=ready
+(EngineCore_DP0 pid=354922) INFO 09-08 17:34:20 [kv_cache_utils.py:1316] GPU KV cache size: 28,224 tokens
+(EngineCore_DP0 pid=354922) INFO 09-08 17:34:20 [kv_cache_utils.py:1321] Maximum concurrency for 262,144 tokens per request: 0.43x
+(Worker pid=356356) VLLM_ROCM_TUNABLEOP_PRE_CAPTURE dp_rank=0 physical_device=0 profile=gfx936_qwen3_5_27b_bf16_tn_m4096 profile_sha256=169c7b11a0340d9e22405327b5e5667b2aa9e9e8d899bd59e10ca4fb7fb52030 results=5 validators=5 enabled=true tuning=false record_untuned=false status=ready
+(Worker pid=356356) INFO 09-08 17:34:20 [gpu_worker.py:598] Compile and warming up model for size 4096
+(Worker pid=356356) Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):   0%|          | 0/5 [00:00<?, ?it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  20%|██        | 1/5 [00:01<00:04,  1.15s/it]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  40%|████      | 2/5 [00:02<00:03,  1.08s/it]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  60%|██████    | 3/5 [00:03<00:02,  1.06s/it]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  80%|████████  | 4/5 [00:04<00:01,  1.05s/it]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE): 100%|██████████| 5/5 [00:05<00:00,  1.04s/it]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE): 100%|██████████| 5/5 [00:05<00:00,  1.06s/it]
+(Worker pid=356356) Capturing CUDA graphs (decode, FULL):   0%|          | 0/5 [00:00<?, ?it/s](Worker pid=356352) R01_KV_TARGET_RESTORATION dp_rank=1 observed_tokens=27440 target_tokens=28224 observed_bytes=7206338048 target_bytes=7398752256 restoration_bytes=192414208 remaining_reserve_bytes=2905079296 status=ready
+(EngineCore_DP1 pid=354923) INFO 09-08 17:34:27 [kv_cache_utils.py:1316] GPU KV cache size: 28,224 tokens
+(EngineCore_DP1 pid=354923) INFO 09-08 17:34:27 [kv_cache_utils.py:1321] Maximum concurrency for 262,144 tokens per request: 0.43x
+(Worker pid=356352) VLLM_ROCM_TUNABLEOP_PRE_CAPTURE dp_rank=1 physical_device=1 profile=gfx936_qwen3_5_27b_bf16_tn_m4096 profile_sha256=169c7b11a0340d9e22405327b5e5667b2aa9e9e8d899bd59e10ca4fb7fb52030 results=5 validators=5 enabled=true tuning=false record_untuned=false status=ready
+(Worker pid=356352) INFO 09-08 17:34:27 [gpu_worker.py:598] Compile and warming up model for size 4096
+Capturing CUDA graphs (decode, FULL):  20%|██        | 1/5 [00:00<00:03,  1.04it/s](Worker pid=356352) Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):   0%|          | 0/5 [00:00<?, ?it/s]Capturing CUDA graphs (decode, FULL):  40%|████      | 2/5 [00:01<00:02,  1.11it/s]Capturing CUDA graphs (decode, FULL):  60%|██████    | 3/5 [00:02<00:01,  1.20it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  20%|██        | 1/5 [00:01<00:06,  1.54s/it]Capturing CUDA graphs (decode, FULL):  80%|████████  | 4/5 [00:03<00:00,  1.23it/s]Capturing CUDA graphs (decode, FULL): 100%|██████████| 5/5 [00:04<00:00,  1.20it/s]Capturing CUDA graphs (decode, FULL): 100%|██████████| 5/5 [00:04<00:00,  1.19it/s]
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  40%|████      | 2/5 [00:03<00:04,  1.50s/it](Worker pid=356356) INFO 09-08 17:34:31 [gpu_model_runner.py:5758] Graph capturing finished in 10 secs, took 0.29 GiB
+(EngineCore_DP0 pid=354922) INFO 09-08 17:34:32 [core.py:281] init engine (profile, create kv cache, warmup model) took 119.30 seconds
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  60%|██████    | 3/5 [00:04<00:02,  1.48s/it]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  80%|████████  | 4/5 [00:05<00:01,  1.46s/it](EngineCore_DP0 pid=354922) `Qwen2VLImageProcessorFast` is deprecated. The `Fast` suffix for image processors has been removed; use `Qwen2VLImageProcessor` instead.
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE): 100%|██████████| 5/5 [00:07<00:00,  1.59s/it]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE): 100%|██████████| 5/5 [00:07<00:00,  1.54s/it]
+(Worker pid=356352) Capturing CUDA graphs (decode, FULL):   0%|          | 0/5 [00:00<?, ?it/s]Capturing CUDA graphs (decode, FULL):  20%|██        | 1/5 [00:01<00:05,  1.49s/it]Capturing CUDA graphs (decode, FULL):  40%|████      | 2/5 [00:02<00:04,  1.46s/it](EngineCore_DP0 pid=354922) The `use_fast` parameter is deprecated and will be removed in a future version. Use `backend="torchvision"` instead of `use_fast=True`, or `backend="pil"` instead of `use_fast=False`.
+Capturing CUDA graphs (decode, FULL):  60%|██████    | 3/5 [00:04<00:02,  1.42s/it]Capturing CUDA graphs (decode, FULL):  80%|████████  | 4/5 [00:05<00:01,  1.39s/it]Capturing CUDA graphs (decode, FULL): 100%|██████████| 5/5 [00:07<00:00,  1.41s/it]Capturing CUDA graphs (decode, FULL): 100%|██████████| 5/5 [00:07<00:00,  1.42s/it]
+(EngineCore_DP1 pid=354923) INFO 09-08 17:34:44 [core.py:281] init engine (profile, create kv cache, warmup model) took 132.12 seconds
+(EngineCore_DP1 pid=354923) `Qwen2VLImageProcessorFast` is deprecated. The `Fast` suffix for image processors has been removed; use `Qwen2VLImageProcessor` instead.
+(EngineCore_DP1 pid=354923) The `use_fast` parameter is deprecated and will be removed in a future version. Use `backend="torchvision"` instead of `use_fast=True`, or `backend="pil"` instead of `use_fast=False`.
+(EngineCore_DP0 pid=354922) INFO 09-08 17:34:55 [core.py:882] Waiting for READY message from DP Coordinator...
+INFO 09-08 17:34:58 [coordinator.py:205] All engine subscriptions received by DP coordinator
+(EngineCore_DP1 pid=354923) INFO 09-08 17:34:58 [vllm.py:775] Asynchronous scheduling is enabled.
+(EngineCore_DP0 pid=354922) INFO 09-08 17:34:58 [vllm.py:775] Asynchronous scheduling is enabled.
+(ApiServer_1 pid=354925) WARNING 09-08 17:34:58 [loggers.py:1271] AsyncLLM created with api_server_count more than 1; disabling stats logging to avoid incomplete stats.
+(ApiServer_0 pid=354924) WARNING 09-08 17:34:58 [loggers.py:1271] AsyncLLM created with api_server_count more than 1; disabling stats logging to avoid incomplete stats.
+INFO 09-08 17:34:58 [utils.py:250] Waiting for API servers to complete ...
+(ApiServer_0 pid=354924) INFO 09-08 17:34:58 [api_server.py:576] Supported tasks: ['generate']
+(ApiServer_1 pid=354925) INFO 09-08 17:34:58 [api_server.py:576] Supported tasks: ['generate']
+(ApiServer_1 pid=354925) INFO 09-08 17:34:58 [parser_manager.py:202] "auto" tool choice has been enabled.
+(ApiServer_0 pid=354924) INFO 09-08 17:34:58 [parser_manager.py:202] "auto" tool choice has been enabled.
+(ApiServer_0 pid=354924) WARNING 09-08 17:34:58 [model.py:1376] Default vLLM sampling parameters have been overridden by the model's `generation_config.json`: `{'temperature': 0.6, 'top_k': 20, 'top_p': 0.95}`. If this is not intended, please relaunch vLLM instance with `--generation-config vllm`.
+(ApiServer_1 pid=354925) WARNING 09-08 17:34:58 [model.py:1376] Default vLLM sampling parameters have been overridden by the model's `generation_config.json`: `{'temperature': 0.6, 'top_k': 20, 'top_p': 0.95}`. If this is not intended, please relaunch vLLM instance with `--generation-config vllm`.
+(ApiServer_1 pid=354925) INFO 09-08 17:34:58 [parser_manager.py:202] "auto" tool choice has been enabled.
+(ApiServer_0 pid=354924) INFO 09-08 17:34:58 [parser_manager.py:202] "auto" tool choice has been enabled.
+(ApiServer_0 pid=354924) INFO 09-08 17:34:58 [parser_manager.py:202] "auto" tool choice has been enabled.
+(ApiServer_1 pid=354925) INFO 09-08 17:34:58 [parser_manager.py:202] "auto" tool choice has been enabled.
+(ApiServer_1 pid=354925) INFO 09-08 17:35:01 [hf.py:320] Detected the chat template content format to be 'string'. You can set `--chat-template-content-format` to override this.
+(ApiServer_0 pid=354924) INFO 09-08 17:35:01 [hf.py:320] Detected the chat template content format to be 'string'. You can set `--chat-template-content-format` to override this.
+(ApiServer_1 pid=354925) INFO 09-08 17:35:11 [base.py:216] Multi-modal warmup completed in 10.348s
+(ApiServer_1 pid=354925) INFO 09-08 17:35:11 [parser_manager.py:202] "auto" tool choice has been enabled.
+(ApiServer_1 pid=354925) INFO 09-08 17:35:11 [api_server.py:580] Starting vLLM server on http://0.0.0.0:8001
+(ApiServer_1 pid=354925) INFO 09-08 17:35:11 [launcher.py:37] Available routes are:
+(ApiServer_1 pid=354925) INFO 09-08 17:35:11 [launcher.py:46] Route: /openapi.json, Methods: GET, HEAD
+(ApiServer_1 pid=354925) INFO 09-08 17:35:11 [launcher.py:46] Route: /docs, Methods: GET, HEAD
+(ApiServer_1 pid=354925) INFO 09-08 17:35:11 [launcher.py:46] Route: /docs/oauth2-redirect, Methods: GET, HEAD
+(ApiServer_1 pid=354925) INFO 09-08 17:35:11 [launcher.py:46] Route: /redoc, Methods: GET, HEAD
+(ApiServer_1 pid=354925) INFO 09-08 17:35:11 [launcher.py:46] Route: /tokenize, Methods: POST
+(ApiServer_1 pid=354925) INFO 09-08 17:35:11 [launcher.py:46] Route: /detokenize, Methods: POST
+(ApiServer_1 pid=354925) INFO 09-08 17:35:11 [launcher.py:46] Route: /load, Methods: GET
+(ApiServer_0 pid=354924) INFO 09-08 17:35:11 [base.py:216] Multi-modal warmup completed in 10.378s
+(ApiServer_1 pid=354925) INFO 09-08 17:35:11 [launcher.py:46] Route: /version, Methods: GET
+(ApiServer_1 pid=354925) INFO 09-08 17:35:11 [launcher.py:46] Route: /health, Methods: GET
+(ApiServer_1 pid=354925) INFO 09-08 17:35:11 [launcher.py:46] Route: /metrics, Methods: GET
+(ApiServer_1 pid=354925) INFO 09-08 17:35:11 [launcher.py:46] Route: /v1/models, Methods: GET
+(ApiServer_1 pid=354925) INFO 09-08 17:35:11 [launcher.py:46] Route: /ping, Methods: GET
+(ApiServer_1 pid=354925) INFO 09-08 17:35:11 [launcher.py:46] Route: /ping, Methods: POST
+(ApiServer_1 pid=354925) INFO 09-08 17:35:11 [launcher.py:46] Route: /invocations, Methods: POST
+(ApiServer_1 pid=354925) INFO 09-08 17:35:11 [launcher.py:46] Route: /v1/chat/completions, Methods: POST
+(ApiServer_1 pid=354925) INFO 09-08 17:35:11 [launcher.py:46] Route: /v1/responses, Methods: POST
+(ApiServer_1 pid=354925) INFO 09-08 17:35:11 [launcher.py:46] Route: /v1/responses/{response_id}, Methods: GET
+(ApiServer_1 pid=354925) INFO 09-08 17:35:11 [launcher.py:46] Route: /v1/responses/{response_id}/cancel, Methods: POST
+(ApiServer_1 pid=354925) INFO 09-08 17:35:11 [launcher.py:46] Route: /v1/completions, Methods: POST
+(ApiServer_1 pid=354925) INFO 09-08 17:35:11 [launcher.py:46] Route: /v1/messages, Methods: POST
+(ApiServer_1 pid=354925) INFO 09-08 17:35:11 [launcher.py:46] Route: /v1/messages/count_tokens, Methods: POST
+(ApiServer_1 pid=354925) INFO 09-08 17:35:11 [launcher.py:46] Route: /inference/v1/generate, Methods: POST
+(ApiServer_1 pid=354925) INFO 09-08 17:35:11 [launcher.py:46] Route: /scale_elastic_ep, Methods: POST
+(ApiServer_1 pid=354925) INFO 09-08 17:35:11 [launcher.py:46] Route: /is_scaling_elastic_ep, Methods: POST
+(ApiServer_1 pid=354925) INFO 09-08 17:35:11 [launcher.py:46] Route: /v1/chat/completions/render, Methods: POST
+(ApiServer_1 pid=354925) INFO 09-08 17:35:11 [launcher.py:46] Route: /v1/completions/render, Methods: POST
+(ApiServer_0 pid=354924) INFO 09-08 17:35:11 [parser_manager.py:202] "auto" tool choice has been enabled.
+(ApiServer_0 pid=354924) INFO 09-08 17:35:11 [api_server.py:580] Starting vLLM server on http://0.0.0.0:8001
+(ApiServer_0 pid=354924) INFO 09-08 17:35:11 [launcher.py:37] Available routes are:
+(ApiServer_0 pid=354924) INFO 09-08 17:35:11 [launcher.py:46] Route: /openapi.json, Methods: GET, HEAD
+(ApiServer_0 pid=354924) INFO 09-08 17:35:11 [launcher.py:46] Route: /docs, Methods: GET, HEAD
+(ApiServer_0 pid=354924) INFO 09-08 17:35:11 [launcher.py:46] Route: /docs/oauth2-redirect, Methods: GET, HEAD
+(ApiServer_0 pid=354924) INFO 09-08 17:35:11 [launcher.py:46] Route: /redoc, Methods: GET, HEAD
+(ApiServer_0 pid=354924) INFO 09-08 17:35:11 [launcher.py:46] Route: /tokenize, Methods: POST
+(ApiServer_0 pid=354924) INFO 09-08 17:35:11 [launcher.py:46] Route: /detokenize, Methods: POST
+(ApiServer_0 pid=354924) INFO 09-08 17:35:11 [launcher.py:46] Route: /load, Methods: GET
+(ApiServer_0 pid=354924) INFO 09-08 17:35:11 [launcher.py:46] Route: /version, Methods: GET
+(ApiServer_0 pid=354924) INFO 09-08 17:35:11 [launcher.py:46] Route: /health, Methods: GET
+(ApiServer_0 pid=354924) INFO 09-08 17:35:11 [launcher.py:46] Route: /metrics, Methods: GET
+(ApiServer_0 pid=354924) INFO 09-08 17:35:11 [launcher.py:46] Route: /v1/models, Methods: GET
+(ApiServer_0 pid=354924) INFO 09-08 17:35:11 [launcher.py:46] Route: /ping, Methods: GET
+(ApiServer_0 pid=354924) INFO 09-08 17:35:11 [launcher.py:46] Route: /ping, Methods: POST
+(ApiServer_0 pid=354924) INFO 09-08 17:35:11 [launcher.py:46] Route: /invocations, Methods: POST
+(ApiServer_0 pid=354924) INFO 09-08 17:35:11 [launcher.py:46] Route: /v1/chat/completions, Methods: POST
+(ApiServer_0 pid=354924) INFO 09-08 17:35:11 [launcher.py:46] Route: /v1/responses, Methods: POST
+(ApiServer_0 pid=354924) INFO 09-08 17:35:11 [launcher.py:46] Route: /v1/responses/{response_id}, Methods: GET
+(ApiServer_0 pid=354924) INFO 09-08 17:35:11 [launcher.py:46] Route: /v1/responses/{response_id}/cancel, Methods: POST
+(ApiServer_0 pid=354924) INFO 09-08 17:35:11 [launcher.py:46] Route: /v1/completions, Methods: POST
+(ApiServer_0 pid=354924) INFO 09-08 17:35:11 [launcher.py:46] Route: /v1/messages, Methods: POST
+(ApiServer_0 pid=354924) INFO 09-08 17:35:11 [launcher.py:46] Route: /v1/messages/count_tokens, Methods: POST
+(ApiServer_0 pid=354924) INFO 09-08 17:35:11 [launcher.py:46] Route: /inference/v1/generate, Methods: POST
+(ApiServer_0 pid=354924) INFO 09-08 17:35:11 [launcher.py:46] Route: /scale_elastic_ep, Methods: POST
+(ApiServer_0 pid=354924) INFO 09-08 17:35:11 [launcher.py:46] Route: /is_scaling_elastic_ep, Methods: POST
+(ApiServer_0 pid=354924) INFO 09-08 17:35:11 [launcher.py:46] Route: /v1/chat/completions/render, Methods: POST
+(ApiServer_0 pid=354924) INFO 09-08 17:35:11 [launcher.py:46] Route: /v1/completions/render, Methods: POST
+(ApiServer_1 pid=354925) INFO:     Started server process [354925]
+(ApiServer_1 pid=354925) INFO:     Waiting for application startup.
+(ApiServer_0 pid=354924) INFO:     Started server process [354924]
+(ApiServer_0 pid=354924) INFO:     Waiting for application startup.
+(ApiServer_0 pid=354924) INFO:     Application startup complete.
+(ApiServer_1 pid=354925) INFO:     Application startup complete.
+(ApiServer_0 pid=354924) INFO:     127.0.0.1:33754 - "GET /v1/models HTTP/1.1" 200 OK
+(ApiServer_1 pid=354925) INFO:     127.0.0.1:33772 - "POST /v1/chat/completions HTTP/1.1" 200 OK

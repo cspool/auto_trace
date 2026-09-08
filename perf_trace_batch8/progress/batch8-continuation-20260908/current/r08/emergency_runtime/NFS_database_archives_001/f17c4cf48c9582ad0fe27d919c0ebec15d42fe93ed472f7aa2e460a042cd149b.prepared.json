@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "status": "verified_ready_for_reversible_NFS_archive",
+  "runtime_goal": "R08",
+  "runtime_run_id": "batch8-dp2-fresh-003",
+  "original_file": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/03__gqa6_pmc_write/attempt_003/capture.db",
+    "sha256": "9cd409a01d67583ded7da362efd0187cbc418d902751bf08eb2b0eb1297c7faa",
+    "size": 3494690816
+  },
+  "archive": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/03__gqa6_pmc_write/attempt_003/capture.db.lossless.zst",
+    "size": 821683569,
+    "sha256": "4c9b820f724a26bb8260ca74180d6075b5ab413806c0c9fac10734b288bae91c"
+  },
+  "archive_codec": "zstd",
+  "decompressed_byte_verification": {
+    "uncompressed_size": 3494690816,
+    "uncompressed_sha256": "9cd409a01d67583ded7da362efd0187cbc418d902751bf08eb2b0eb1297c7faa",
+    "all_bytes_recovered_exactly": true
+  },
+  "execution_manifest": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/03__gqa6_pmc_write/attempt_003/execution_manifest.json",
+    "size": 8253,
+    "sha256": "e043d386af3d1f3cb38586dabc9ef7e6fa11bab9934aec60f8fa9251daaacfa8"
+  },
+  "raw_inventory": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/03__gqa6_pmc_write/attempt_003/raw_inventory_at_exit.json",
+    "size": 14475,
+    "sha256": "87609e0d241793813bc08334e88172728ccbf854fc8e945f0a9285cac70f834b"
+  },
+  "prior_remote_publication": {
+    "path": "/public/home/accl15ptg7/run_R08_R10/publication_emergency/r08_03__gqa6_pmc_write/PUBLICATION_COMPLETE.json",
+    "size": 3010,
+    "sha256": "859bc81e5ea787ba54afc09346eb320f7d94f1771fb12cfd0b57a7e7c7052460"
+  },
+  "physically_stored_on_NFS": true,
+  "storage_policy": {
+    "path": "/public/home/accl15ptg7/run_R08_R10/USER_STORAGE_POLICY_20260908.json",
+    "size": 446,
+    "sha256": "dcb3735b5416946930a63dfa4181f323b90c98e0b17fd82ff98c012cc09a8458"
+  },
+  "no_model_or_device_execution_performed": true,
+  "original_inventory_or_execution_manifest_modified": false,
+  "restore_instruction": "Stream zstd decompression from archive.path into original_file.path on NFS; verify full uncompressed size and SHA-256 before any SQLite read. Never point a .db symlink at compressed bytes.",
+  "prepared_utc": "2026-09-08T09:39:35.700802+00:00"
+}
