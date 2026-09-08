@@ -1,0 +1,61 @@
+{
+  "status": "complete",
+  "remote_reverification": {
+    "status": "complete",
+    "receipt": {
+      "path": "/public/home/accl15ptg7/run_R08_R10/publication_emergency/r08_capture09_closed_prehealth_failures_001/PUBLICATION_COMPLETE.json",
+      "size": 2497,
+      "sha256": "66d9948a910977427a53669a38bc75ca3808ab6a21ae8d4d64fa8cf8f364a645"
+    },
+    "release_url": "https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-r08-capture09-prehealth-failures-20260908-001",
+    "remote_rechecked_utc": "2026-09-08T17:43:38.721185+00:00",
+    "assets": [
+      {
+        "name": "ASSET_MANIFEST.json",
+        "size": 677,
+        "digest": "sha256:0e14478578b7bdefca251d028e1fb5e01b821a71f257e86dd983781d03d9e7a6",
+        "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-capture09-prehealth-failures-20260908-001/ASSET_MANIFEST.json"
+      },
+      {
+        "name": "capture.tar.zst.part001",
+        "size": 950000000,
+        "digest": "sha256:fdaa556d0043ae72e4b0d908ea03258bd9f50a0c95dc75f425ac6320c846916f",
+        "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-capture09-prehealth-failures-20260908-001/capture.tar.zst.part001"
+      },
+      {
+        "name": "capture.tar.zst.part002",
+        "size": 35128071,
+        "digest": "sha256:19608d4c12ce26eb3bb6188b82ef8fc996feb16599fabf08bf8537b5d0ead608",
+        "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-capture09-prehealth-failures-20260908-001/capture.tar.zst.part002"
+      },
+      {
+        "name": "FILE_MANIFEST.json",
+        "size": 391536,
+        "digest": "sha256:b5db3846fc77fa3c658a0c06fcdd65f77217bdd8514f5d6eb7274b698cc5c038",
+        "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-capture09-prehealth-failures-20260908-001/FILE_MANIFEST.json"
+      },
+      {
+        "name": "SHA256SUMS",
+        "size": 265,
+        "digest": "sha256:9e9efb15ec819cb853b8392fb2a21807242fb210e038e3eeeb807782f4e1963a",
+        "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-capture09-prehealth-failures-20260908-001/SHA256SUMS"
+      }
+    ]
+  },
+  "parts": [
+    {
+      "name": "capture.tar.zst.part001",
+      "size": 950000000,
+      "sha256": "fdaa556d0043ae72e4b0d908ea03258bd9f50a0c95dc75f425ac6320c846916f"
+    },
+    {
+      "name": "capture.tar.zst.part002",
+      "size": 35128071,
+      "sha256": "19608d4c12ce26eb3bb6188b82ef8fc996feb16599fabf08bf8537b5d0ead608"
+    }
+  ],
+  "original_failed_raw_data_and_all_diagnostics_retained": true,
+  "raw_data_eviction_performed": false,
+  "removed_upload_cache_bytes": 985128071,
+  "completed_utc": "2026-09-08T17:43:39.840834+00:00"
+}

@@ -1,0 +1,23 @@
+{
+  "status": "verified_ready_for_release",
+  "member_count": 688,
+  "member_bytes": 4493883361,
+  "archive_codec": "zstd concatenated stream; concatenate parts in manifest order",
+  "assets": [
+    {
+      "name": "capture.tar.zst.part001",
+      "size": 950000000,
+      "sha256": "fdaa556d0043ae72e4b0d908ea03258bd9f50a0c95dc75f425ac6320c846916f"
+    },
+    {
+      "name": "capture.tar.zst.part002",
+      "size": 35128071,
+      "sha256": "19608d4c12ce26eb3bb6188b82ef8fc996feb16599fabf08bf8537b5d0ead608"
+    },
+    {
+      "name": "FILE_MANIFEST.json",
+      "size": 391536,
+      "sha256": "b5db3846fc77fa3c658a0c06fcdd65f77217bdd8514f5d6eb7274b698cc5c038"
+    }
+  ]
+}

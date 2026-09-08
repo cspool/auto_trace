@@ -1,0 +1,32 @@
+[
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_006/control/PRE_MEASURED_NATIVE_PMC_HEALTH.json",
+    "size": 2029,
+    "sha256": "b76b20294033e195b458a17f299ade8439e7bdcbd5b34d7c791af0dd4b8a0483"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_006/control/capture_contract.json",
+    "size": 8212,
+    "sha256": "740f318ea826cfe77330afda99c29d45be99a482dbf40ff741c9cd2b50107f03"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_006/control/admission_order/929100.005.json",
+    "size": 818,
+    "sha256": "038b080d0740bff18682e3533836ef49a74ebcb6b2155428008a4276a090d445"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_006/control/admission_order/929101.005.json",
+    "size": 818,
+    "sha256": "6bdb6939ae9b2a12a3e28ef8b4ae45697a567cf8f768323f95631e672718616a"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_006/control/pmc_gate_events/warmup_start.rank0.pid930501.json",
+    "size": 1112,
+    "sha256": "ec25a55c56349d8c8705a3bd639cd625ee8459d6704ce3e3bd1decb5ecba64a8"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_006/control/pmc_gate_events/warmup_start.rank1.pid930503.json",
+    "size": 1112,
+    "sha256": "1a016c0d0428f845f157cd0a291fd37d57707a90d2570c1df1027b2c225d52e7"
+  }
+]

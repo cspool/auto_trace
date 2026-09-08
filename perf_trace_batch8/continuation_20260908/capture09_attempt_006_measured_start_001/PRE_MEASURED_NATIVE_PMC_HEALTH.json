@@ -1,0 +1,32 @@
+{
+  "status": "complete",
+  "workers": [
+    {
+      "rank": 0,
+      "native_device": 0,
+      "pid": 930501,
+      "worker_identity_path": "/public/home/accl15ptg7/r08_continuation_001_NFS_bulk/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_006/workload/r01_events/rank0/events.930501.jsonl",
+      "native_raw_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_006/native_collectors/rank0/hipprof_tmprpl_data_260909_013529_930288/input0_results_260909_013529/pmc_results_930501.txt",
+      "observed_native_bytes": 15297527,
+      "examined_prefix_bytes": 65536,
+      "examined_prefix_sha256": "363b2c225e5234a5ebc9392208826525793d0df5edd3d872b9e8c845dec05512",
+      "native_dispatch_headers_in_prefix": 12
+    },
+    {
+      "rank": 1,
+      "native_device": 1,
+      "pid": 930503,
+      "worker_identity_path": "/public/home/accl15ptg7/r08_continuation_001_NFS_bulk/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_006/workload/r01_events/rank1/events.930503.jsonl",
+      "native_raw_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_006/native_collectors/rank1/hipprof_tmprpl_data_260909_013529_930298/input0_results_260909_013529/pmc_results_930503.txt",
+      "observed_native_bytes": 16209360,
+      "examined_prefix_bytes": 65536,
+      "examined_prefix_sha256": "f6d32979602c6c8fa847634ce86557970f19ed851a51dce131abc913122bb4f4",
+      "native_dispatch_headers_in_prefix": 12
+    }
+  ],
+  "measured_requests_started": false,
+  "read_only_native_file_gate": true,
+  "no_native_calls_no_added_workload": true,
+  "elapsed_seconds": 0.01026814803481102,
+  "checked_realtime_ns": 1788889346740535871
+}
