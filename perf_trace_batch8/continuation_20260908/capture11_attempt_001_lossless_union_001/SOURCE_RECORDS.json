@@ -1,0 +1,22 @@
+[
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/11_chunk_fwd_kernel_o_pmc_read/attempt_001/NATIVE_SESSION_UNION.json",
+    "size": 13413,
+    "sha256": "c8efba7551ed2acdd1a0c9586c71a6ffc591a70287f2dd9c3bb3ee07869cdff4"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/closed_native_source_snapshots_001/11_chunk_fwd_kernel_o_pmc_read.attempt_001.json",
+    "size": 2886,
+    "sha256": "65f096a4b3e6344cb255e9b5417213d170a65136537cb3a202d8ded3297a5af6"
+  },
+  {
+    "path": "/public/home/accl15ptg7/run_R08_R10/capture11_derived_DB_sequential_read_001.log",
+    "size": 1468,
+    "sha256": "e0722988362475f5f8ac2eeb5cf4492a220e9177d4c4e767d53f256abb2f10f2"
+  },
+  {
+    "path": "/public/home/accl15ptg7/run_R08_R10/read_closed_derived_db_sequentially_001.py",
+    "size": 2051,
+    "sha256": "d95f3dcdc5c96395ec1d8e180a430fd618c0a9f4ecc7942df5f9d2994615e08b"
+  }
+]
