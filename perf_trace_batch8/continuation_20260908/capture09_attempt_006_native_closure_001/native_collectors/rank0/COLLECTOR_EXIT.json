@@ -1,0 +1,14 @@
+{
+  "collector_pid": 930288,
+  "collector_returncode": 0,
+  "descriptor": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_006/native_collectors/rank0/COLLECTOR_DESCRIPTOR.json",
+  "finished_realtime_ns": 1788890192030401946,
+  "physical_device_id": 0,
+  "process_group": 930287,
+  "received_signals": [],
+  "started_realtime_ns": 1788888929349898808,
+  "status": "complete",
+  "timeout": false,
+  "wrapper_pid": 930287,
+  "wrapper_start_ticks": 52415220
+}

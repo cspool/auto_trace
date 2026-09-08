@@ -1,0 +1,66 @@
+/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/__init__.py:7: RuntimeWarning: Failed to read commit hash:
+No module named 'vllm._version'
+  from .version import __version__, __version_tuple__  # isort:skip
+R08_COMPILED_OVERLAY_READY attempt=batch8-dp2-fresh-003-R08-09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write-attempt_006 process_targets=12544 layer_targets=1024 r01_patch_sha256=5329e3ecb54c724d259b4eeb7deccd90be447233d23b438a4cfee725e6705a48 status=ready
+R08_PMC_GATE_READY attempt=batch8-dp2-fresh-003-R08-09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write-attempt_006 segment=09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write measured_requests=8 collection_state=native_always_on canonical_window=offline_exact_marker_guard
+`Qwen2VLImageProcessorFast` is deprecated. The `Fast` suffix for image processors has been removed; use `Qwen2VLImageProcessor` instead.
+(Worker pid=930501) INFO 09-09 01:36:35 [parallel_state.py:1395] world_size=1 rank=0 local_rank=0 distributed_init_method=tcp://127.0.0.1:59699 backend=nccl
+(Worker pid=930501) INFO 09-09 01:36:35 [parallel_state.py:1717] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+(Worker pid=930501) The `use_fast` parameter is deprecated and will be removed in a future version. Use `backend="torchvision"` instead of `use_fast=True`, or `backend="pil"` instead of `use_fast=False`.
+(Worker pid=930501) VLLM_ROCM_TUNABLEOP_INIT dp_rank=0 physical_device=0 profile=gfx936_qwen3_5_27b_bf16_tn_m4096 profile_sha256=169c7b11a0340d9e22405327b5e5667b2aa9e9e8d899bd59e10ca4fb7fb52030 results=5 validators=5 enabled=true tuning=false record_untuned=false status=ready
+(Worker pid=930501) R01_RUNTIME_CONFIG dp_rank=0 speculative_config=None compile_sizes=[4096] tensor_parallel_size=1 outer_data_parallel_size=2 worker_local_data_parallel_size=1 status=ready
+(Worker pid=930501) INFO 09-09 01:36:46 [gpu_model_runner.py:4493] Starting to load model /root/Qwen3.5-27B...
+(Worker pid=930501) INFO 09-09 01:36:47 [rocm.py:561] Using Torch SDPA backend for ViT model.
+(Worker pid=930501) WARNING 09-09 01:36:47 [activation.py:643] [ROCm] PyTorch's native GELU with tanh approximation is unstable. Falling back to GELU(approximate='none').
+(Worker pid=930501) INFO 09-09 01:36:47 [mm_encoder_attention.py:230] Using AttentionBackendEnum.TORCH_SDPA for MMEncoderAttention.
+(Worker pid=930501) INFO 09-09 01:36:47 [qwen3_next.py:199] Using Triton/FLA GDN prefill kernel
+(Worker pid=930501) INFO 09-09 01:36:48 [rocm.py:501] Using ROCM_AITER_UNIFIED_ATTN attention backend out of potential backends: ['ROCM_AITER_UNIFIED_ATTN', 'TRITON_ATTN'].
+(Worker pid=930501) INFO 09-09 01:36:48 [rocm_aiter_unified_attn.py:124] Using aiter unified attention for RocmAiterUnifiedAttentionImpl
+(Worker pid=930501) WARNING 09-09 01:36:50 [compilation.py:1136] Op 'sparse_attn_indexer' not present in model, enabling with '+sparse_attn_indexer' has no effect
+(Worker pid=930501) Loading safetensors checkpoint shards:   0% Completed | 0/11 [00:00<?, ?it/s]
+(Worker pid=930501) Loading safetensors checkpoint shards:   9% Completed | 1/11 [00:05<00:59,  5.97s/it]
+(Worker pid=930501) Loading safetensors checkpoint shards:  18% Completed | 2/11 [00:11<00:53,  5.97s/it]
+(Worker pid=930501) Loading safetensors checkpoint shards:  27% Completed | 3/11 [00:21<00:59,  7.41s/it]
+(Worker pid=930501) Loading safetensors checkpoint shards:  36% Completed | 4/11 [00:28<00:52,  7.54s/it]
+(Worker pid=930501) Loading safetensors checkpoint shards:  45% Completed | 5/11 [00:36<00:45,  7.65s/it]
+(Worker pid=930501) Loading safetensors checkpoint shards:  55% Completed | 6/11 [00:44<00:38,  7.66s/it]
+(Worker pid=930501) Loading safetensors checkpoint shards:  64% Completed | 7/11 [00:51<00:30,  7.64s/it]
+(Worker pid=930501) Loading safetensors checkpoint shards:  73% Completed | 8/11 [00:59<00:22,  7.48s/it]
+(Worker pid=930501) Loading safetensors checkpoint shards:  82% Completed | 9/11 [01:06<00:14,  7.49s/it]
+(Worker pid=930501) Loading safetensors checkpoint shards:  91% Completed | 10/11 [01:13<00:07,  7.44s/it]
+(Worker pid=930501) Loading safetensors checkpoint shards: 100% Completed | 11/11 [01:17<00:00,  6.25s/it]
+(Worker pid=930501) Loading safetensors checkpoint shards: 100% Completed | 11/11 [01:17<00:00,  7.04s/it]
+(Worker pid=930501) 
+(Worker pid=930501) INFO 09-09 01:38:07 [default_loader.py:384] Loading weights took 77.61 seconds
+(Worker pid=930501) INFO 09-09 01:38:08 [gpu_model_runner.py:4578] Model loading took 51.2 GiB memory and 80.608440 seconds
+(Worker pid=930501) INFO 09-09 01:38:09 [gpu_model_runner.py:5500] Encoder cache will be initialized with a budget of 16384 tokens, and profiled with 1 image items of the maximum feature size.
+(Worker pid=930501) /public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/v1/attention/ops/vit_attn_wrappers.py:202: UserWarning: sdpa adopt the new interface of flash-attn (Triggered internally at /home/pytorch/aten/src/ATen/native/transformers/hip/cutlassfa_adapter.h:145.)
+(Worker pid=930501)   output = F.scaled_dot_product_attention(
+(Worker pid=930501) INFO 09-09 01:38:29 [backends.py:988] Using cache directory: /public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_cache/vllm/torch_compile_cache/7737b31bfa/rank_0_0/backbone for vLLM's torch.compile
+(Worker pid=930501) INFO 09-09 01:38:29 [backends.py:1048] Dynamo bytecode transform time: 6.84 s
+(Worker pid=930501) INFO 09-09 01:39:04 [backends.py:284] Directly load the compiled graph(s) for compile range (4096, 4096) from the cache, took 33.671 s
+(Worker pid=930501) INFO 09-09 01:39:04 [backends.py:284] Directly load the compiled graph(s) for compile range (1, 4096) from the cache, took 33.770 s
+(Worker pid=930501) INFO 09-09 01:39:04 [monitor.py:48] torch.compile took 42.42 s in total
+(Worker pid=930501) INFO 09-09 01:39:04 [decorators.py:296] Directly load AOT compilation from path /public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_cache/vllm/torch_compile_cache/torch_aot_compile/3742d5fd0f486b9bb06d370adf48f7bfafddeab604203c8f9fcb5c838d4bb4b1/rank_0_0/model
+(Worker pid=930501) /public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/model_executor/layers/fla/ops/utils.py:113: UserWarning: Input tensor shape suggests potential format mismatch: seq_len (16) < num_heads (48). This may indicate the inputs were passed in head-first format [B, H, T, ...] when head_first=False was specified. Please verify your input tensor format matches the expected shape [B, T, H, ...].
+(Worker pid=930501)   return fn(*contiguous_args, **contiguous_kwargs)
+(Worker pid=930501) /public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/model_executor/layers/fla/ops/utils.py:113: UserWarning: Input tensor shape suggests potential format mismatch: seq_len (32) < num_heads (48). This may indicate the inputs were passed in head-first format [B, H, T, ...] when head_first=False was specified. Please verify your input tensor format matches the expected shape [B, T, H, ...].
+(Worker pid=930501)   return fn(*contiguous_args, **contiguous_kwargs)
+(Worker pid=930501) INFO 09-09 01:39:54 [monitor.py:76] Initial profiling/warmup run took 50.35 s
+(Worker pid=930501) INFO 09-09 01:39:56 [gpu_worker.py:456] Available KV cache memory: 6.74 GiB
+(Worker pid=930501) R01_KV_TARGET_RESTORATION dp_rank=0 observed_tokens=27440 target_tokens=28224 observed_bytes=7237795328 target_bytes=7398752256 restoration_bytes=160956928 remaining_reserve_bytes=2936536576 status=ready
+(Worker pid=930501) VLLM_ROCM_TUNABLEOP_PRE_CAPTURE dp_rank=0 physical_device=0 profile=gfx936_qwen3_5_27b_bf16_tn_m4096 profile_sha256=169c7b11a0340d9e22405327b5e5667b2aa9e9e8d899bd59e10ca4fb7fb52030 results=5 validators=5 enabled=true tuning=false record_untuned=false status=ready
+(Worker pid=930501) INFO 09-09 01:39:56 [gpu_worker.py:598] Compile and warming up model for size 4096
+(Worker pid=930501) Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):   0%|          | 0/5 [00:00<?, ?it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  20%|██        | 1/5 [00:01<00:05,  1.48s/it]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  40%|████      | 2/5 [00:02<00:03,  1.24s/it]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  60%|██████    | 3/5 [00:03<00:02,  1.15s/it]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  80%|████████  | 4/5 [00:04<00:01,  1.12s/it]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE): 100%|██████████| 5/5 [00:05<00:00,  1.11s/it]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE): 100%|██████████| 5/5 [00:05<00:00,  1.16s/it]
+(Worker pid=930501) Capturing CUDA graphs (decode, FULL):   0%|          | 0/5 [00:00<?, ?it/s]Capturing CUDA graphs (decode, FULL):  20%|██        | 1/5 [00:00<00:03,  1.14it/s]Capturing CUDA graphs (decode, FULL):  40%|████      | 2/5 [00:01<00:02,  1.19it/s]Capturing CUDA graphs (decode, FULL):  60%|██████    | 3/5 [00:02<00:01,  1.24it/s]Capturing CUDA graphs (decode, FULL):  80%|████████  | 4/5 [00:03<00:00,  1.25it/s]Capturing CUDA graphs (decode, FULL): 100%|██████████| 5/5 [00:04<00:00,  1.24it/s]Capturing CUDA graphs (decode, FULL): 100%|██████████| 5/5 [00:04<00:00,  1.23it/s]
+(Worker pid=930501) INFO 09-09 01:40:08 [gpu_model_runner.py:5758] Graph capturing finished in 11 secs, took 0.29 GiB
+(Worker pid=930501) INFO 09-09 01:55:45 [multiproc_executor.py:759] Parent process exited, terminating worker queues
+(Worker pid=930501) INFO 09-09 01:55:45 [multiproc_executor.py:854] WorkerProc shutting down.
+HIP_PROF:on Wed Sep  9 01:35:39 2026
+HIP_PROF:process id '930288'
+HIP_PROF:db file '/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_006/native_collectors/rank0/capture.db'
+HIP_PROF:out put file '/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_006/native_collectors/rank0/capture'
+HIP_PROF:profiling ' /usr/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=12, pipe_handle=38) --multiprocessing-fork'
+HIP_PROF:process begin
+HIP_PROF:process end run total cost:1212(s)
+HIP_PROF:finish
