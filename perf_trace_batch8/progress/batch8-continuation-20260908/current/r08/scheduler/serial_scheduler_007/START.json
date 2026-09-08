@@ -1,0 +1,36 @@
+{
+  "pid": 550288,
+  "source": {
+    "path": "/public/home/accl15ptg7/run_R08_R10/run_r08_serial_suffix_007.py",
+    "size": 5700,
+    "sha256": "3a3d0b2bbc227a63f39be55c5f2354f8f459c0864d6165c121996205aa9261de"
+  },
+  "deadline_utc": "2026-09-08T20:18:09Z",
+  "deadline_authorization": {
+    "path": "/public/home/accl15ptg7/run_R08_R10/MACHINE_TIME_EXTENSION_001.json",
+    "size": 727,
+    "sha256": "b725c7ee9c96a7fac49d7d28ac3a5116fd18ae58d95119608db574c8b5074e5b"
+  },
+  "previous_scheduler": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/validation/serial_scheduler_006/START.json",
+    "size": 1965,
+    "sha256": "45dab356ba928c36c40e73676726035fe6e9cdd9448ead167ddd98a106e893d1"
+  },
+  "resume_reason": "reuse four audited captures; fourth raw reused unchanged after offline graph-background classification repair",
+  "CPU_only_repair_authorization": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/validation/cpu_attribution_repair_001/AUTHORIZATION.json",
+    "size": 1681,
+    "sha256": "2b3fc6024eac289436ff85b752fc9425f3ac4c6752488a7cbe6d56b93250321e"
+  },
+  "NFS_storage_authorization": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/authorization/NFS_output_storage_authorization_001.json",
+    "size": 2790,
+    "sha256": "095a893828fe5ae8396804131170f957af3e0e58f748b6f62a20e6e83d33de30"
+  },
+  "user_storage_policy": {
+    "path": "/public/home/accl15ptg7/run_R08_R10/USER_STORAGE_POLICY_20260908.json",
+    "size": 446,
+    "sha256": "dcb3735b5416946930a63dfa4181f323b90c98e0b17fd82ff98c012cc09a8458"
+  },
+  "scope": "R08 captures and CPU attribution; no R09/R10 business execution"
+}
