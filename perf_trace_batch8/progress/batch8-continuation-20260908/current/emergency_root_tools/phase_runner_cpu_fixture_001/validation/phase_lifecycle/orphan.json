@@ -1,0 +1,54 @@
+{
+  "status": "complete",
+  "phase": "orphan",
+  "argv": [
+    "python3",
+    "-B",
+    "/root/r08_emergency_tools/phase_runner_cpu_fixture_001/orphan_fixture.py"
+  ],
+  "started_utc": "2026-09-08T09:07:54.967296+00:00",
+  "finished_utc": "2026-09-08T09:07:57.024187+00:00",
+  "elapsed_seconds": 2.0569241190096363,
+  "leader_pid": 340413,
+  "leader_returncode": 0,
+  "observed_descendant_identities": [
+    {
+      "pid": 340413,
+      "ppid": 340412,
+      "state": "R",
+      "start_ticks": 49369786
+    },
+    {
+      "pid": 340415,
+      "ppid": 340412,
+      "state": "S",
+      "start_ticks": 49369788
+    }
+  ],
+  "observed_list_is_not_claimed_full_spawn_event_log": true,
+  "orphan_reaping": [
+    {
+      "pid": 340414,
+      "wait_status": 0
+    },
+    {
+      "pid": 340415,
+      "wait_status": 0
+    }
+  ],
+  "kernel_child_subreaper_enabled": true,
+  "remaining_owned_descendants": [],
+  "all_started_processes_terminated": true,
+  "forced_cleanup": false,
+  "cpu_only_environment_device_visibility_empty": true,
+  "proxy_and_profiler_injection_removed": true,
+  "stdout_stderr": {
+    "path": "/root/r08_emergency_tools/phase_runner_cpu_fixture_001/logs/orphan.log",
+    "size": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "outer_runner": {
+    "path": "/root/r08_emergency_tools/phase_runner_001.py",
+    "sha256": "be0634487f7e47f2aee6e84e7bdfb935821db11f20c659f2a71f3688870a3713"
+  }
+}

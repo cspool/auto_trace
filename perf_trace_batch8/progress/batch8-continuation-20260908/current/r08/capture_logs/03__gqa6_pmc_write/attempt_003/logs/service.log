@@ -295,3 +295,14 @@ INFO 09-08 16:59:14 [utils.py:250] Waiting for API servers to complete ...
 (ApiServer_0 pid=318328) INFO:     Application startup complete.
 (ApiServer_1 pid=318329) INFO:     Application startup complete.
 (ApiServer_0 pid=318328) INFO:     127.0.0.1:55462 - "GET /v1/models HTTP/1.1" 200 OK
+(ApiServer_0 pid=318328) INFO:     127.0.0.1:55478 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(ApiServer_1 pid=318329) INFO:     127.0.0.1:55476 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(Worker pid=319440) /public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/model_executor/layers/fla/ops/utils.py:113: UserWarning: Input tensor shape suggests potential format mismatch: seq_len (36) < num_heads (48). This may indicate the inputs were passed in head-first format [B, H, T, ...] when head_first=False was specified. Please verify your input tensor format matches the expected shape [B, T, H, ...].
+(Worker pid=319440)   return fn(*contiguous_args, **contiguous_kwargs)
+(ApiServer_1 pid=318329) INFO:     127.0.0.1:54460 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(ApiServer_1 pid=318329) INFO:     127.0.0.1:54504 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(ApiServer_1 pid=318329) INFO:     127.0.0.1:54434 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(ApiServer_0 pid=318328) INFO:     127.0.0.1:54448 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(ApiServer_1 pid=318329) INFO:     127.0.0.1:54478 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(ApiServer_0 pid=318328) INFO:     127.0.0.1:54498 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(ApiServer_0 pid=318328) INFO:     127.0.0.1:54492 - "POST /v1/chat/completions HTTP/1.1" 200 OK

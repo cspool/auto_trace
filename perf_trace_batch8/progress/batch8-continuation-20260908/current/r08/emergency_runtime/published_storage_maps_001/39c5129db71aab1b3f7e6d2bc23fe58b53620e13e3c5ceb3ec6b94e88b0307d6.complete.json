@@ -1,0 +1,18 @@
+{
+  "status": "complete",
+  "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/02__gqa6_pmc_read/attempt_001/workload/r01_events/rank0/events.206038.jsonl",
+  "destination_path": "/dev/shm/r08_published_capture_backing_001/02__gqa6_pmc_read/attempt_001/workload/r01_events/rank0/events.206038.jsonl",
+  "size": 461933396,
+  "sha256": "9988027468639774df91d2a55b9a115dbc3a788b28d6a861a1f2574b1de8d31c",
+  "prior_remote_publication": {
+    "path": "/root/capture_publication_emergency/r08_02__gqa6_pmc_read/PUBLICATION_COMPLETE.json",
+    "sha256": "df7c68300711fe34a91328fbec90bc6c6a463b1f552bc055d119e5b8a26ff090",
+    "url": "https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-r08-02--gqa6-pmc-read-20260908",
+    "all_server_asset_sha256_match": true
+  },
+  "role": "closed_accepted_native_capture_file",
+  "measurement_completed_on_original_root_disk": true,
+  "new_measurement_or_content_change": false,
+  "recorded_utc": "2026-09-08T09:03:35.941063+00:00",
+  "canonical_link_verified": true
+}

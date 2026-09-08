@@ -1,0 +1,179 @@
+{
+  "status": "complete",
+  "fixture_only": true,
+  "R10_actual_stage_execution": false,
+  "checks": {
+    "full_universe": {
+      "main": 2072,
+      "context": 1056,
+      "all": 3128,
+      "unique_ids": 3128,
+      "kinds": {
+        "request": 8,
+        "forward": 16,
+        "layer": 16,
+        "process": 16,
+        "HIP runtime": 1024,
+        "strict_owned_kernel": 1024,
+        "gpu_queue": 1024
+      },
+      "requests": {
+        "synthetic-request-0": {
+          "rank": "0",
+          "device": "0",
+          "requests": 1,
+          "processes": 2,
+          "owner_kernels": 128,
+          "queue_kernels": 128
+        },
+        "synthetic-request-1": {
+          "rank": "1",
+          "device": "1",
+          "requests": 1,
+          "processes": 2,
+          "owner_kernels": 128,
+          "queue_kernels": 128
+        },
+        "synthetic-request-2": {
+          "rank": "0",
+          "device": "0",
+          "requests": 1,
+          "processes": 2,
+          "owner_kernels": 128,
+          "queue_kernels": 128
+        },
+        "synthetic-request-3": {
+          "rank": "1",
+          "device": "1",
+          "requests": 1,
+          "processes": 2,
+          "owner_kernels": 128,
+          "queue_kernels": 128
+        },
+        "synthetic-request-4": {
+          "rank": "0",
+          "device": "0",
+          "requests": 1,
+          "processes": 2,
+          "owner_kernels": 128,
+          "queue_kernels": 128
+        },
+        "synthetic-request-5": {
+          "rank": "1",
+          "device": "1",
+          "requests": 1,
+          "processes": 2,
+          "owner_kernels": 128,
+          "queue_kernels": 128
+        },
+        "synthetic-request-6": {
+          "rank": "0",
+          "device": "0",
+          "requests": 1,
+          "processes": 2,
+          "owner_kernels": 128,
+          "queue_kernels": 128
+        },
+        "synthetic-request-7": {
+          "rank": "1",
+          "device": "1",
+          "requests": 1,
+          "processes": 2,
+          "owner_kernels": 128,
+          "queue_kernels": 128
+        }
+      },
+      "source_lookup_all_pass": true,
+      "integer_coordinates_all_pass": true,
+      "nonoverlap_lanes": true
+    },
+    "exact_history": {
+      "states": 105,
+      "span_ns": "1",
+      "back_forward_exact": true
+    },
+    "pan_zoom_reset": {
+      "exact_pan_ns": 17,
+      "pointer_anchor_zoom": true,
+      "reset": true
+    },
+    "filters_fit_locate": {
+      "filters": {
+        "process": {
+          "value": "synthetic_prefill",
+          "complete_matches": 1544
+        },
+        "event": {
+          "value": "request",
+          "complete_matches": 8
+        },
+        "layer": {
+          "value": "0",
+          "complete_matches": 1560
+        },
+        "phase": {
+          "value": "prefill",
+          "complete_matches": 1560
+        },
+        "family": {
+          "value": "synthetic_prefill",
+          "complete_matches": 520
+        },
+        "track": {
+          "value": "request / synthetic-request-0 / lane 0",
+          "complete_matches": 1
+        },
+        "request_id": {
+          "value": "synthetic-request-0",
+          "complete_matches": 391
+        }
+      },
+      "first_id": "request:synthetic-request-0",
+      "last_id": "kernel-queue:synthetic-request-7-decode-k63",
+      "complete_universe_unchanged": 3128
+    },
+    "unbounded_interval_inspection": {
+      "full_viewport_count": 3128,
+      "dom_rows_before_zoom": 3128,
+      "one_ns_overlap_count": 35,
+      "result_cap": false,
+      "density_preserves_all": true
+    },
+    "visible_pointer_and_jump_controls": {
+      "wheel": true,
+      "shift_box": true,
+      "drag_pan": true,
+      "pixel_all_intersections": true,
+      "exact_jump_one_ns": true
+    }
+  },
+  "static": {
+    "file": {
+      "path": "/root/r08_emergency_tools/cpu_viewer_fixture_001/fixture.html",
+      "size": 132815,
+      "sha256": "a79a4055bd892b5219bc4d440f31043f176696be5c62e64f66f384779cc0acda"
+    },
+    "active_external_resources": [],
+    "runtime_code_sha256": "373f0d11054c5b361ce1b104283ab4aed90ae7c77c7c9cdf2a8ff1ccd544cb8a",
+    "network_patterns_rejected": [
+      "\\bfetch\\s*\\(",
+      "\\bXMLHttpRequest\\b",
+      "\\bWebSocket\\b",
+      "\\bEventSource\\b",
+      "\\bimport\\s*\\(",
+      "serviceWorker\\s*\\.\\s*register",
+      "\\bsendBeacon\\s*\\(",
+      "https?://",
+      "(?<!:)//[a-zA-Z0-9.-]+/"
+    ],
+    "relative_navigation": []
+  },
+  "browser": {
+    "path": "/root/r08_r10_browser_tools/chromium-1234/chrome-linux64/chrome",
+    "size": 290614600,
+    "sha256": "0b20b130e7edd9dd51873be867761295fe0cfad490c2b9a64f95bd3cfc08fa71"
+  },
+  "errors": [],
+  "network_requests": [],
+  "elapsed_seconds": 2.90384369000094
+}

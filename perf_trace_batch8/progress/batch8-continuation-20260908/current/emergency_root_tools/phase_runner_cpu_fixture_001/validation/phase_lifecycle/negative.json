@@ -1,0 +1,39 @@
+{
+  "status": "failed",
+  "phase": "negative",
+  "argv": [
+    "python3",
+    "-c",
+    "raise SystemExit(3)"
+  ],
+  "started_utc": "2026-09-08T09:07:57.084333+00:00",
+  "finished_utc": "2026-09-08T09:07:57.191317+00:00",
+  "elapsed_seconds": 0.10701156599679962,
+  "leader_pid": 340551,
+  "leader_returncode": 3,
+  "observed_descendant_identities": [
+    {
+      "pid": 340551,
+      "ppid": 340409,
+      "state": "R",
+      "start_ticks": 49369997
+    }
+  ],
+  "observed_list_is_not_claimed_full_spawn_event_log": true,
+  "orphan_reaping": [],
+  "kernel_child_subreaper_enabled": true,
+  "remaining_owned_descendants": [],
+  "all_started_processes_terminated": true,
+  "forced_cleanup": false,
+  "cpu_only_environment_device_visibility_empty": true,
+  "proxy_and_profiler_injection_removed": true,
+  "stdout_stderr": {
+    "path": "/root/r08_emergency_tools/phase_runner_cpu_fixture_001/logs/negative.log",
+    "size": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "outer_runner": {
+    "path": "/root/r08_emergency_tools/phase_runner_001.py",
+    "sha256": "be0634487f7e47f2aee6e84e7bdfb935821db11f20c659f2a71f3688870a3713"
+  }
+}

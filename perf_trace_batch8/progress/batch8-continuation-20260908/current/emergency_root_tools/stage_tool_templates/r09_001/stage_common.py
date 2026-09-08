@@ -27,20 +27,13 @@ def save(p,v):
 def rows(p):
  with Path(p).open(newline='') as f:yield from csv.DictReader(f)
 def validate_source(p):
- p=Path(p);check(p.is_absolute() and '..' not in p.parts,'input lexical path')
- if p.is_relative_to(R08):
-  authorization=read(R08/'authorization/bulk_storage_authorization.json');assignment=read(R08/'authorization/continuation_assignment.json');check(sha(R08/'authorization/bulk_storage_authorization.json')==assignment['bulk_storage_authorization_sha256'],'R08 bulk hash')
-  for lexical,dest in authorization['paths'].items():
-   if p.is_relative_to(Path(lexical)):
-    check(Path(lexical).is_symlink() and os.readlink(lexical)==dest,'R08 bulk symlink');check(p.resolve()==Path(dest)/p.relative_to(Path(lexical)),'R08 nested path');return
- check(p.resolve().is_relative_to(PROJECT) or p.is_relative_to(CONTROL/'r07_additional_inputs'),'explicit source owner')
+ from cpu_stage_common import validate_path
+ validate_path(p)
 def verify(x):
  p=Path(x['path']);validate_source(p);check(p.stat().st_size==x.get('size',p.stat().st_size) and sha(p)==x['sha256'],'source bytes: '+str(p));return p
 def source_state():
- t=PROJECT/'pra2026-bh408-gqa-page784-k5120-batch8'
- def git(*args):return subprocess.check_output(['git','-C',str(t),*args],text=True).strip()
- check(git('rev-parse','HEAD')=='2b4b2119ae3cc2c4c626dc5690ef9593c1477f66','source commit');check(not git('status','--porcelain','--untracked-files=all'),'immutable target')
- return {'commit':git('rev-parse','HEAD'),'branch':git('branch','--show-current'),'clean':True}
+ from cpu_stage_common import target_state
+ return target_state()
 def admission():
  a=read(ROOT/'authorization/assignment.json');check(a['runtime_goal']=='R09' and a['runtime_run_id']==RUN_ID,'R09 assigned stage');check(a['predecessor_stages']==['R%02d'%i for i in range(1,9)],'ordered R01-R08')
  for x in a['predecessor_handoffs']:
