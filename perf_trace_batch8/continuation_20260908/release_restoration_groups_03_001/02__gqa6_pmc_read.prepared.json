@@ -1,0 +1,32 @@
+{
+  "status": "prepared",
+  "offload_record": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/remote_release_offloads_001/02__gqa6_pmc_read.complete.json",
+    "size": 5991,
+    "sha256": "f32e466b14a2b153ba9ff85307344a9278417a81069bf65db6f97cf3d32d0985"
+  },
+  "placements": [
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/02__gqa6_pmc_read/attempt_001/capture.db",
+      "archive_member_path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/02__gqa6_pmc_read/attempt_001/capture.db",
+      "size": 3492327424,
+      "sha256": "7dd72717cb1e05b402152408603fc9be4586182af663cd02e166d0ba2208a3aa",
+      "destination_path": "/root/R08_release_restored_after_capture_001/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/02__gqa6_pmc_read/attempt_001/capture.db"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/02__gqa6_pmc_read/attempt_001/workload/r01_events/rank0/events.206038.jsonl",
+      "archive_member_path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/02__gqa6_pmc_read/attempt_001/workload/r01_events/rank0/events.206038.jsonl",
+      "size": 461933396,
+      "sha256": "9988027468639774df91d2a55b9a115dbc3a788b28d6a861a1f2574b1de8d31c",
+      "destination_path": "/root/R08_release_restored_after_capture_001/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/02__gqa6_pmc_read/attempt_001/workload/r01_events/rank0/events.206038.jsonl"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/02__gqa6_pmc_read/attempt_001/workload/r01_events/rank1/events.205996.jsonl",
+      "archive_member_path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/02__gqa6_pmc_read/attempt_001/workload/r01_events/rank1/events.205996.jsonl",
+      "size": 461430360,
+      "sha256": "2705c5f923ae5ed71429078aae81e9e8282397b0f95da037b430685180c706d0",
+      "destination_path": "/root/R08_release_restored_after_capture_001/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/02__gqa6_pmc_read/attempt_001/workload/r01_events/rank1/events.205996.jsonl"
+    }
+  ],
+  "all_GPU_captures_accepted_before_any_root_restore": true
+}

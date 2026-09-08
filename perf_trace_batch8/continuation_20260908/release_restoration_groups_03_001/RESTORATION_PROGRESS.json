@@ -1,0 +1,29 @@
+{
+  "utc": "2026-09-08T20:50:29.815782+00:00",
+  "status": "restoration_in_progress",
+  "weight_removal_complete_after_all_GPU_captures": true,
+  "restored_capture_count": 3,
+  "restored_bytes": 13251173857,
+  "producer_original_SHA_verification_receipts": [
+    {
+      "segment_id": "01__gqa6_pmc",
+      "restored_file_count": 3,
+      "restored_bytes": 4417429389,
+      "completed_utc": "2026-09-08T20:46:22.911139+00:00"
+    },
+    {
+      "segment_id": "02__gqa6_pmc_read",
+      "restored_file_count": 3,
+      "restored_bytes": 4415691180,
+      "completed_utc": "2026-09-08T20:48:08.764279+00:00"
+    },
+    {
+      "segment_id": "03__gqa6_pmc_write",
+      "restored_file_count": 3,
+      "restored_bytes": 4418053288,
+      "completed_utc": "2026-09-08T20:49:59.170804+00:00"
+    }
+  ],
+  "observer_does_not_repeat_full_raw_hashing": true,
+  "stage_acceptance_not_inferred_from_restoration": true
+}
