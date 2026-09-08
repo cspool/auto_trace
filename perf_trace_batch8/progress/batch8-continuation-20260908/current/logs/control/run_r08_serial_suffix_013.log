@@ -16,3 +16,19 @@ WAITING_FOR_VERIFIED_RELEASE_OFFLOAD_SPACE 10_chunk_fwd_kernel_o_pmc 4428136448
 WAITING_FOR_VERIFIED_RELEASE_OFFLOAD_SPACE 10_chunk_fwd_kernel_o_pmc 4428136448
 WAITING_FOR_VERIFIED_RELEASE_OFFLOAD_SPACE 10_chunk_fwd_kernel_o_pmc 4428136448
 PHASE_START 2026-09-08T18:24:15.825713+00:00 ['/usr/bin/python', '-B', '/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_021/run_capture.py', 'capture', '--segment', '10_chunk_fwd_kernel_o_pmc', '--attempt', 'attempt_001']
+PHASE_EXIT /public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_021/run_capture.py 0
+PHASE_START 2026-09-08T19:01:37.994828+00:00 ['/usr/bin/python', '-B', '/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/analysis_008/normalize_capture.py', '--segment', '10_chunk_fwd_kernel_o_pmc', '--attempt', 'attempt_001', '--revision', 'revision_002']
+PHASE_EXIT /public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/analysis_008/normalize_capture.py 0
+PHASE_START 2026-09-08T19:02:06.903851+00:00 ['/usr/bin/python', '-B', '/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/analysis_008/audit_capture.py', '--normalization', '/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/normalized/captures/10_chunk_fwd_kernel_o_pmc/attempt_001/revision_002']
+PHASE_EXIT /public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/analysis_008/audit_capture.py 0
+CAPTURE_ACCEPTED 10_chunk_fwd_kernel_o_pmc PREFIX 10
+WAITING_FOR_VERIFIED_RELEASE_OFFLOAD_SPACE 11_chunk_fwd_kernel_o_pmc_read 6094323712
+WAITING_FOR_VERIFIED_RELEASE_OFFLOAD_SPACE 11_chunk_fwd_kernel_o_pmc_read 5576327168
+WAITING_FOR_VERIFIED_RELEASE_OFFLOAD_SPACE 11_chunk_fwd_kernel_o_pmc_read 5576327168
+WAITING_FOR_VERIFIED_RELEASE_OFFLOAD_SPACE 11_chunk_fwd_kernel_o_pmc_read 4442816512
+WAITING_FOR_VERIFIED_RELEASE_OFFLOAD_SPACE 11_chunk_fwd_kernel_o_pmc_read 4442816512
+WAITING_FOR_VERIFIED_RELEASE_OFFLOAD_SPACE 11_chunk_fwd_kernel_o_pmc_read 4442816512
+WAITING_FOR_VERIFIED_RELEASE_OFFLOAD_SPACE 11_chunk_fwd_kernel_o_pmc_read 4442816512
+WAITING_FOR_VERIFIED_RELEASE_OFFLOAD_SPACE 11_chunk_fwd_kernel_o_pmc_read 6094323712
+WAITING_FOR_VERIFIED_RELEASE_OFFLOAD_SPACE 11_chunk_fwd_kernel_o_pmc_read 6094323712
+PHASE_START 2026-09-08T19:09:42.579152+00:00 ['/usr/bin/python', '-B', '/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_021/run_capture.py', 'capture', '--segment', '11_chunk_fwd_kernel_o_pmc_read', '--attempt', 'attempt_001']

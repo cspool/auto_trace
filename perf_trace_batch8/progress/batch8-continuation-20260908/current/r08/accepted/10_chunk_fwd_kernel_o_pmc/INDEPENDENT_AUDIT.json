@@ -1,0 +1,29 @@
+{
+  "accepted_dispatches": 384,
+  "all_graph_dispatches_outside_selected_scopes": true,
+  "auditor_sha256": "e59dd412fea24df6972ad37387c25cbc35568caa287dcb030e8712e01ce42cf2",
+  "background_graph_native_dispatches_independently_classified": 0,
+  "counter_values_recomputed": 71424,
+  "elapsed_seconds": 184.91017149202526,
+  "exact_native_chain": true,
+  "excluded_dispatches": 29357,
+  "independent_audit": true,
+  "native_session_union_sha256": "d6b9cbed894da719a38a6794c0799e1630222d739abf6d387190e98d2447d871",
+  "normalization_manifest_sha256": "e3c1f29391609a60221021ffab242dbff730e912458abb30cfa9c60f2d44c19c",
+  "original_native_session_count": 2,
+  "original_native_session_union_independently_rechecked": true,
+  "rank_native_device_counts": {
+    "0": 192,
+    "1": 192
+  },
+  "raw_database_sha256": "5f3cd0fed32aea33d535cef79281aa97e8a9c931206d95c2109eb8052ec9cee9",
+  "raw_partition_conserved": true,
+  "raw_pmc_sha256": "d2642fbdfe3b90b1d83a93e345cd889efee7e2c8891571c9dfce9d179c4df6d3",
+  "replay_timing_used_as_latency": false,
+  "runtime_shape_match_counts": {
+    "True": 384
+  },
+  "same_R06_R07_logical_ownership": true,
+  "segment_id": "10_chunk_fwd_kernel_o_pmc",
+  "status": "complete"
+}
