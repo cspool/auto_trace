@@ -1,0 +1,70 @@
+{
+  "R07_observed_clock_modified": false,
+  "accepted_rows": 384,
+  "all_attributes_replay_projected": true,
+  "background_native_graph_classification": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/normalized/captures/07_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc/attempt_001/revision_002/background_native_graph_classification.json",
+    "sha256": "5e98e2c0fc2a892076ee8c7c72bab941b638fb93e7a8883faccd623a0925c169",
+    "size": 823
+  },
+  "capture": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/07_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc/attempt_001/execution_manifest.json",
+    "sha256": "629cb95b000e2f277b82eaba2c8ca64ea9155873f52bd2affb52fa335871c32e",
+    "size": 8295
+  },
+  "counter_count": 186,
+  "counter_mode": "pmc",
+  "current_bound_targets": 13568,
+  "current_process_markers": 12544,
+  "dispatch_attributes": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/normalized/captures/07_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc/attempt_001/revision_002/dispatch_attributes.jsonl",
+    "sha256": "acf1cd5d02950efe49fcd466a13bf3f4bf0eec3c18ae3a67d520fc8c8db6d347",
+    "size": 3221225
+  },
+  "dispatch_attributes_csv": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/normalized/captures/07_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc/attempt_001/revision_002/dispatch_attributes.csv",
+    "sha256": "168f3b06bee4c1024f2f26de999caf7d8710c1d11be511e8d3af21873e6bdcc4",
+    "size": 1107613
+  },
+  "elapsed_seconds": 21.818770542973652,
+  "excluded_rows": 21285,
+  "excluded_rows_file": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/normalized/captures/07_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc/attempt_001/revision_002/excluded_pmc_rows.jsonl",
+    "sha256": "bb0ac57df420037e8db21fbb9ad86c791decd2342b1daf8514e9a58eb6aa1174",
+    "size": 9975351
+  },
+  "full_native_chain_proven": true,
+  "logical_family_ids": [
+    "r08-plan-007-83695e88a5dc"
+  ],
+  "mapped_R07_kernel_count": 384,
+  "missing_selected_counter_cells": 0,
+  "native_correlation_method": "native PMC CPU submission timestamp inside unique same-PID/TID exact-literal native HIP launch with CONFIG conversion and no tolerance; one HIPOPS per native API _Index, same device; deepest exact HIPTX process -> logical R06 target -> R07 kernel subsequence; GPU timestamp equality retained as diagnostic only",
+  "native_device_counts": {
+    "0": 192,
+    "1": 192
+  },
+  "native_owned_kernel_count": 23660,
+  "normalizer": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/analysis_007/normalize_capture.py",
+    "sha256": "8bcec1b8e7f63b27d031ec19e0f6f904d2ebad29552bccf4c53fb7b9b100f7a7",
+    "size": 22119
+  },
+  "owner_multiplicity": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/normalized/captures/07_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc/attempt_001/revision_002/logical_owner_multiplicity.json",
+    "sha256": "b0c840b47b41a05c0d92a0dd3597d72badf863bec77fc6b2fc59d13ae70d40a9",
+    "size": 173187
+  },
+  "rank_counts": {
+    "0": 192,
+    "1": 192
+  },
+  "raw_pmc_rows": 21669,
+  "runtime_run_id": "batch8-dp2-fresh-003",
+  "runtime_shape_match_counts": {
+    "True": 384
+  },
+  "segment_id": "07_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc",
+  "selected_owner_count": 384,
+  "status": "complete"
+}
