@@ -1,0 +1,22 @@
+{
+  "status": "complete",
+  "source_directory_alias": "/root/r08_continuation_001_bulk",
+  "physical_NFS_directory": "/public/home/accl15ptg7/r08_continuation_001_NFS_bulk",
+  "file_count": 7630,
+  "logical_bytes": 28025404918,
+  "manifest_path": "/public/home/accl15ptg7/run_R08_R10/storage_policy_correction_001/r08_bulk.FILES.json",
+  "manifest_sha256": "4ab9d15f9b29adbe321ad4623f3ebbc136941c0b1c1d73f6fa103af67c2f1dc0",
+  "all_canonical_file_reads_sha256_verified": true,
+  "removed_only_verified_old_R08_RAM_backings": [
+    "/dev/shm/r08_quota_recovery_002/01__gqa6_pmc/attempt_004/capture.db",
+    "/dev/shm/r08_quota_recovery_002/01__gqa6_pmc/attempt_003/capture.db",
+    "/dev/shm/r08_published_capture_backing_001/01__gqa6_pmc/attempt_005/capture.db",
+    "/dev/shm/r08_published_capture_backing_001/01__gqa6_pmc/attempt_005/workload/r01_events/rank0/events.173996.jsonl",
+    "/dev/shm/r08_published_capture_backing_001/01__gqa6_pmc/attempt_005/workload/r01_events/rank1/events.174038.jsonl",
+    "/dev/shm/r08_published_capture_backing_001/02__gqa6_pmc_read/attempt_001/capture.db",
+    "/dev/shm/r08_published_capture_backing_001/02__gqa6_pmc_read/attempt_001/workload/r01_events/rank0/events.206038.jsonl",
+    "/dev/shm/r08_published_capture_backing_001/02__gqa6_pmc_read/attempt_001/workload/r01_events/rank1/events.205996.jsonl",
+    "/dev/shm/r08_quota_recovery_002/03__gqa6_pmc_write/attempt_001/capture.db"
+  ],
+  "recorded_utc": "2026-09-08T09:24:42.260634+00:00"
+}

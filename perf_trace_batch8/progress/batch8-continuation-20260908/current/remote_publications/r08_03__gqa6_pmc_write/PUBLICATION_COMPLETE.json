@@ -1,0 +1,61 @@
+{
+  "status": "published",
+  "tag": "perf-trace-batch8-r08-03--gqa6-pmc-write-20260908",
+  "url": "https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-r08-03--gqa6-pmc-write-20260908",
+  "id": 384597105,
+  "all_server_asset_sha256_match": true,
+  "segment_id": "03__gqa6_pmc_write",
+  "accepted_item": {
+    "segment_id": "03__gqa6_pmc_write",
+    "capture_attempt": "attempt_003",
+    "execution_manifest": {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/03__gqa6_pmc_write/attempt_003/execution_manifest.json",
+      "size": 8253,
+      "sha256": "e043d386af3d1f3cb38586dabc9ef7e6fa11bab9934aec60f8fa9251daaacfa8"
+    },
+    "normalization_manifest": {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/normalized/captures/03__gqa6_pmc_write/attempt_003/revision_002/NORMALIZATION_COMPLETE.json",
+      "size": 3354,
+      "sha256": "42a371ec2ea29ce7ab9ec25f0ffe1ef2fba04ec2e420598109d556ad66f9d6d1"
+    },
+    "independent_audit": {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/normalized/captures/03__gqa6_pmc_write/attempt_003/revision_002/INDEPENDENT_AUDIT.json",
+      "size": 890,
+      "sha256": "82f70e73e70bdb44e5b344a96141cfd982e27b75dc55d0d6011160a52dcd228c"
+    }
+  },
+  "assets": [
+    {
+      "id": 550220864,
+      "name": "ASSET_MANIFEST.json",
+      "size": 536,
+      "state": "uploaded",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-03--gqa6-pmc-write-20260908/ASSET_MANIFEST.json",
+      "digest": "sha256:4210429d45775ea10ebf9d843d8535bf211bd707ce7a6177e64c2e27c7de4d62"
+    },
+    {
+      "id": 550219534,
+      "name": "capture.tar.zst.part001",
+      "size": 855840073,
+      "state": "uploaded",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-03--gqa6-pmc-write-20260908/capture.tar.zst.part001",
+      "digest": "sha256:051d2074043073fa8ea223e44f1f86d78eec4c58e5c6bde3b14aaf73775c5cd6"
+    },
+    {
+      "id": 550220818,
+      "name": "FILE_MANIFEST.json",
+      "size": 16944,
+      "state": "uploaded",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-03--gqa6-pmc-write-20260908/FILE_MANIFEST.json",
+      "digest": "sha256:171c1806dd53dd35348de7dc8343bf7008caba3b4fb7f71a5b11a2296c2bbaf5"
+    },
+    {
+      "id": 550220889,
+      "name": "SHA256SUMS",
+      "size": 175,
+      "state": "uploaded",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-03--gqa6-pmc-write-20260908/SHA256SUMS",
+      "digest": "sha256:a969b99b2fa9a3a7897c566eacb803855e8a569322a582310a23f4713edb73d2"
+    }
+  ]
+}

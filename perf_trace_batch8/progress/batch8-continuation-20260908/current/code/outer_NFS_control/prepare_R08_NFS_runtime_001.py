@@ -38,11 +38,12 @@ def main():
 
 '''
  s=s[:b]+new+s[e:];native.write_text(s)
- # Runtime control sockets require short local paths; only sockets remain there.
- # All durable trace, PMC, model-event, compiler-cache and log bytes use ROOT.
+ # Short NFS paths were CPU-tested for Unix socket IPC, so temporary runtime
+ # files and control sockets also remain on NFS.
  for p in tools.glob('*'):
   if p.is_file() and p.suffix in ['.sh','.py']:
    text=p.read_text().replace('/revision_015/','/revision_016/');p.write_text(text)
+ runtime=tools/'run_capture.py';r=runtime.read_text().replace("tmp=Path('/tmp')/('r8-'+str(os.getpid()))","tmp=Path('/public/home/accl15ptg7/r8tmp')/('r8-'+str(os.getpid()))");runtime.write_text(r)
  analysis=ROOT/'tools/analysis_005';shutil.copytree(ROOT/'tools/analysis_004',analysis,ignore=shutil.ignore_patterns('__pycache__'))
  for p in analysis.glob('*.py'):
   s=p.read_text().replace("ROOT/'tools/revision_008'", "ROOT/'raw/runtime_tools/revision_016'").replace("ROOT/'tools/revision_011'", "ROOT/'raw/runtime_tools/revision_016'");p.write_text(s)

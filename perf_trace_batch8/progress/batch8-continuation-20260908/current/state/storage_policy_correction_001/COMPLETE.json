@@ -1,0 +1,124 @@
+{
+  "status": "complete",
+  "recorded_utc": "2026-09-08T09:24:42.269576+00:00",
+  "weights_all_physical_root": true,
+  "R08_all_current_data_outputs_logs_physical_NFS": true,
+  "pre_R08_predecessor_relocations": [
+    {
+      "source_path": "/public/home/accl15ptg7/verified-memory-backing-20260908/r08_continuation_predecessors/artifacts/R01/raw/hipprof/capture.db",
+      "destination_path": "/dev/shm/pre_r08_nfs_quota_reclaim_001/artifacts/R01/raw/hipprof/capture.db",
+      "size": 8948797440,
+      "sha256": "fa03c1ff5b58deb250e1d245e36e59b8168941fc501e2c78a4cfdd1ea59790d1",
+      "role": "predecessor_000",
+      "same_bytes": true,
+      "only_R01_R03_predecessor_data_relocated_to_RAM": true,
+      "status": "complete",
+      "canonical_link_verified": true
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/verified-memory-backing-20260908/r08_continuation_predecessors/artifacts/R01/raw/hipprof/capture_1.pftrace",
+      "destination_path": "/dev/shm/pre_r08_nfs_quota_reclaim_001/artifacts/R01/raw/hipprof/capture_1.pftrace",
+      "size": 10866338531,
+      "sha256": "d2579d0931753c1b7f5bfdaebaa738eb50993b0fb8aa8cf1b7349dd98e6c5e3c",
+      "role": "predecessor_001",
+      "same_bytes": true,
+      "only_R01_R03_predecessor_data_relocated_to_RAM": true,
+      "status": "complete",
+      "canonical_link_verified": true
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/verified-memory-backing-20260908/r08_continuation_predecessors/artifacts/R01/raw/hipprof/capture_2.pftrace",
+      "destination_path": "/dev/shm/pre_r08_nfs_quota_reclaim_001/artifacts/R01/raw/hipprof/capture_2.pftrace",
+      "size": 4258580814,
+      "sha256": "c5cc3aa531cd586df726f5621f82b1ee27932c6c7ef9aa93fe254a4fc23fe14b",
+      "role": "predecessor_002",
+      "same_bytes": true,
+      "only_R01_R03_predecessor_data_relocated_to_RAM": true,
+      "status": "complete",
+      "canonical_link_verified": true
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/verified-memory-backing-20260908/r08_continuation_predecessors/artifacts/R01/tmp/db-recovery/capture.db.original_candidate.gz",
+      "destination_path": "/dev/shm/pre_r08_nfs_quota_reclaim_001/artifacts/R01/tmp/db-recovery/capture.db.original_candidate.gz",
+      "size": 2405765444,
+      "sha256": "7058e296fbbf2a172f16d2242109a1a30059ac8b0b224295210dbc28dcaf2bf6",
+      "role": "predecessor_003",
+      "same_bytes": true,
+      "only_R01_R03_predecessor_data_relocated_to_RAM": true,
+      "status": "complete",
+      "canonical_link_verified": true
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/verified-memory-backing-20260908/r08_continuation_predecessors/artifacts/R03/raw/process/capture.db",
+      "destination_path": "/dev/shm/pre_r08_nfs_quota_reclaim_001/artifacts/R03/raw/process/capture.db",
+      "size": 8939151360,
+      "sha256": "66a661748a01d2cbd8014605d028bfbd7b342be4ca586ed63ad4ac183c9584af",
+      "role": "predecessor_004",
+      "same_bytes": true,
+      "only_R01_R03_predecessor_data_relocated_to_RAM": true,
+      "status": "complete",
+      "canonical_link_verified": true
+    }
+  ],
+  "directory_relocations": [
+    {
+      "status": "complete",
+      "source_directory_alias": "/root/r08_emergency_tools",
+      "physical_NFS_directory": "/public/home/accl15ptg7/run_R08_R10/emergency_tools",
+      "file_count": 62,
+      "logical_bytes": 844080,
+      "manifest_path": "/public/home/accl15ptg7/run_R08_R10/storage_policy_correction_001/emergency_tools.FILES.json",
+      "manifest_sha256": "7ce96f498e6ce0a230573aeb49d41579b92d943a23a757101b539be3c4f01b11",
+      "all_canonical_file_reads_sha256_verified": true,
+      "removed_only_verified_old_R08_RAM_backings": [],
+      "recorded_utc": "2026-09-08T09:20:20.997302+00:00"
+    },
+    {
+      "status": "complete",
+      "source_directory_alias": "/root/capture_publication_emergency",
+      "physical_NFS_directory": "/public/home/accl15ptg7/run_R08_R10/publication_emergency",
+      "file_count": 1,
+      "logical_bytes": 2999,
+      "manifest_path": "/public/home/accl15ptg7/run_R08_R10/storage_policy_correction_001/publication_emergency.FILES.json",
+      "manifest_sha256": "cf139e2e27ad5268c6186d76edbd8c8c0c63da49514d3d9e383d1a3283572330",
+      "all_canonical_file_reads_sha256_verified": true,
+      "removed_only_verified_old_R08_RAM_backings": [],
+      "recorded_utc": "2026-09-08T09:20:21.027202+00:00"
+    },
+    {
+      "status": "complete",
+      "source_directory_alias": "/root/remote_progress_checkout_002",
+      "physical_NFS_directory": "/public/home/accl15ptg7/run_R08_R10/remote_progress_worktree_003",
+      "file_count": 1419,
+      "logical_bytes": 436203832,
+      "manifest_path": "/public/home/accl15ptg7/run_R08_R10/storage_policy_correction_001/remote_progress_worktree.FILES.json",
+      "manifest_sha256": "3d3af9213474794a9d011346198492fba11ea4717748a20cd9c2ed0d6cfc285f",
+      "all_canonical_file_reads_sha256_verified": true,
+      "removed_only_verified_old_R08_RAM_backings": [],
+      "recorded_utc": "2026-09-08T09:20:34.747050+00:00"
+    },
+    {
+      "status": "complete",
+      "source_directory_alias": "/root/r08_continuation_001_bulk",
+      "physical_NFS_directory": "/public/home/accl15ptg7/r08_continuation_001_NFS_bulk",
+      "file_count": 7630,
+      "logical_bytes": 28025404918,
+      "manifest_path": "/public/home/accl15ptg7/run_R08_R10/storage_policy_correction_001/r08_bulk.FILES.json",
+      "manifest_sha256": "4ab9d15f9b29adbe321ad4623f3ebbc136941c0b1c1d73f6fa103af67c2f1dc0",
+      "all_canonical_file_reads_sha256_verified": true,
+      "removed_only_verified_old_R08_RAM_backings": [
+        "/dev/shm/r08_quota_recovery_002/01__gqa6_pmc/attempt_004/capture.db",
+        "/dev/shm/r08_quota_recovery_002/01__gqa6_pmc/attempt_003/capture.db",
+        "/dev/shm/r08_published_capture_backing_001/01__gqa6_pmc/attempt_005/capture.db",
+        "/dev/shm/r08_published_capture_backing_001/01__gqa6_pmc/attempt_005/workload/r01_events/rank0/events.173996.jsonl",
+        "/dev/shm/r08_published_capture_backing_001/01__gqa6_pmc/attempt_005/workload/r01_events/rank1/events.174038.jsonl",
+        "/dev/shm/r08_published_capture_backing_001/02__gqa6_pmc_read/attempt_001/capture.db",
+        "/dev/shm/r08_published_capture_backing_001/02__gqa6_pmc_read/attempt_001/workload/r01_events/rank0/events.206038.jsonl",
+        "/dev/shm/r08_published_capture_backing_001/02__gqa6_pmc_read/attempt_001/workload/r01_events/rank1/events.205996.jsonl",
+        "/dev/shm/r08_quota_recovery_002/03__gqa6_pmc_write/attempt_001/capture.db"
+      ],
+      "recorded_utc": "2026-09-08T09:24:42.260634+00:00"
+    }
+  ],
+  "new_capture_launch_requires_new_NFS_path_CPU_gate": true
+}

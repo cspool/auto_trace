@@ -1,0 +1,25 @@
+{
+  "accepted_dispatches": 128,
+  "auditor_sha256": "7d668fa1e600b76b291856943194eaa5bf24b519bd7ba2b7525d092bea6966a5",
+  "counter_values_recomputed": 23808,
+  "elapsed_seconds": 15.486619450035505,
+  "exact_native_chain": true,
+  "excluded_dispatches": 6608,
+  "independent_audit": true,
+  "normalization_manifest_sha256": "42a371ec2ea29ce7ab9ec25f0ffe1ef2fba04ec2e420598109d556ad66f9d6d1",
+  "rank_native_device_counts": {
+    "0": 64,
+    "1": 64
+  },
+  "raw_database_sha256": "9cd409a01d67583ded7da362efd0187cbc418d902751bf08eb2b0eb1297c7faa",
+  "raw_partition_conserved": true,
+  "raw_pmc_sha256": "b0f10ad2a3c9ba6eb278e2c73ae03d6feb454e565a4d92995b49897e7148a707",
+  "replay_timing_used_as_latency": false,
+  "runtime_shape_match_counts": {
+    "False": 112,
+    "True": 16
+  },
+  "same_R06_R07_logical_ownership": true,
+  "segment_id": "03__gqa6_pmc_write",
+  "status": "complete"
+}
