@@ -277,3 +277,5 @@ Capture 04 is published at https://github.com/cspool/auto_trace/releases/tag/per
 - 2026-09-08T21:35:05.137745+00:00: Actual R08 CPU admission complete after all restored originals: 155475 ordered predecessor business file records fully rehashed (65852812265 logical bytes), including 136,521 R04 entries and the R07 recovered-offline exception. Resource model construction started under the closed CPU phase runner. R08 stage completion remains pending.
 
 - 2026-09-08T21:36:22.126835+00:00: Actual R08 resource model construction and independent resource audit completed normally. Closed phase lifecycle records, logs, resource model manifest and independent audit checkpointed; full resource data remain physical NFS for the complete R08 Release. R08 sealing and completion audit now running.
+
+- 2026-09-08T21:41:57.178861+00:00: R08 sealer completed rehashing every recorded raw inventory, including failed attempts, and produced the device capabilities, 12-capture targeted PMC manifest, resource manifest and complete source lineage. Final artifact manifest and independent R08 completion audit remain pending.
