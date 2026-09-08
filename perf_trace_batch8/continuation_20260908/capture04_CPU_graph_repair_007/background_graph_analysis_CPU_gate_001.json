@@ -1,0 +1,94 @@
+{
+  "status": "complete",
+  "analysis_revision": "analysis_007",
+  "changes": "classify only hipGraphLaunch dispatches proven outside every selected process native index interval; retain and hash every original graph identity; selected direct PMC correlation and exact R07 multiplicity unchanged",
+  "CPU_interval_boundary_checks": [
+    {
+      "HIP_Index": 3,
+      "outside_selected": true
+    },
+    {
+      "HIP_Index": 4,
+      "outside_selected": false
+    },
+    {
+      "HIP_Index": 10,
+      "outside_selected": false
+    },
+    {
+      "HIP_Index": 14,
+      "outside_selected": false
+    },
+    {
+      "HIP_Index": 15,
+      "outside_selected": true
+    },
+    {
+      "HIP_Index": 19,
+      "outside_selected": true
+    },
+    {
+      "HIP_Index": 20,
+      "outside_selected": false
+    },
+    {
+      "HIP_Index": 24,
+      "outside_selected": false
+    },
+    {
+      "HIP_Index": 25,
+      "outside_selected": true
+    }
+  ],
+  "cross_PID_and_TID_positive_cases": true,
+  "actual_closed_capture_graph_scope_proof": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_graph_selected_intersection_001.json",
+    "size": 383,
+    "sha256": "e05f086741c5495bd36a6898cf6e97d0adb7716df4fd137dcde9099a064c2348"
+  },
+  "actual_raw_execution": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc/attempt_003/execution_manifest.json",
+    "size": 8498,
+    "sha256": "198b6952387d56ac888f371083775a283183bb1f3589cae8c7c4b8170de65222"
+  },
+  "all_raw_bytes_preserved_no_new_capture": true,
+  "independent_auditor_rescans_entire_original_graph_population": true,
+  "prior_analysis_gate": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/validation/NFS_mmap_analysis_CPU_gate_001.json",
+    "size": 2760,
+    "sha256": "a54fb13e31830df4ca918f6c1a3bd68e778511c2dc36561c4687fb92025ce928"
+  },
+  "frozen_tools": [
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/analysis_007/audit_capture.py",
+      "size": 13772,
+      "sha256": "2c2baf5bf9964b9d96ca0586de6a6808e312434dbbeec67c9f133725421088d1"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/analysis_007/audit_resource_model.py",
+      "size": 10649,
+      "sha256": "2f93deaff827ea0729cad279903e9fa7ef7cd70bd8a29f5f12f80c7e4dff85f1"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/analysis_007/build_fx_model.py",
+      "size": 7183,
+      "sha256": "460d2ff5855c7dfa1d9157f7ce138ed6dc9e6fe46923d9b04860fab59dabcef1"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/analysis_007/build_resource_model.py",
+      "size": 10572,
+      "sha256": "a63bb5ec0598b004da2c66391d2561cfcabb5c931b670060cd4bf2122bdb1b5f"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/analysis_007/metric_rules.py",
+      "size": 5074,
+      "sha256": "2fdbc537abb7d5ae54ec849fd3aa88cd8092c77ba5b667ea0f5097141b45bc5e"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/analysis_007/normalize_capture.py",
+      "size": 22119,
+      "sha256": "8bcec1b8e7f63b27d031ec19e0f6f904d2ebad29552bccf4c53fb7b9b100f7a7"
+    }
+  ],
+  "model_or_device_actions": 0
+}

@@ -69,3 +69,11 @@ Capture 04 attempt 003 passed pre-measured native PMC health for rank 0 / worker
 ## 2026-09-08 11:28 UTC — all eight live target sets and first-phase order verified
 
 Capture 04 attempt 003 has all 12,544 declared process targets across the eight original measured requests, with no missing, extra or duplicate target. Each request retains 784 first-prefill and 784 first-decode targets. Both ranks’ actual first-prefill and first-decode request orders equal the recorded R07 order. This is a read-only live process-marker checkpoint, not completed native DB/PMC attribution; all eight 1,024-token requests and the final 1,408-owner Triton counter audit still must finish before acceptance.
+
+## 2026-09-08 12:12 UTC — complete native ownership, CPU-only graph classification repair
+
+Capture 04 attempt 003 completed 8/8 HTTP 200 requests, exactly 1,024 tokens each, and closed both workers. Native output contains all 12,544 process markers and 23,660 strictly owned kernels. **All 1,408 required Triton owner multiplicities now match R07**, resolving the previous 128 missing-owner mismatch.
+
+Analysis 006 then rejected an out-of-scope `hipGraphLaunch` while globally scanning every same-literal native kernel, including warmup/later unselected execution. A complete native diagnostic found 527,868 graph dispatch records (263,934 per worker), none attached to a required selected dispatch. A separate CPU native-index check found zero graph launch intersections with all 1,408 selected process ranges. The full 434 MiB diagnostic remains on NFS with a hash reference here; no raw DB/counter bytes were changed.
+
+Analysis 007 preserves direct selected launch/PMC correlation, exact per-owner kernel multiplicity and all raw row partition gates. It permits only known graph dispatches strictly outside every selected process index union, records a complete ordered identity hash/count, and has the independent auditor rescan that original native population. Eleven CPU boundary cases passed; actual new normalization is running against the same sealed capture in revision 003. No GPU recapture or completed-capture acceptance is claimed yet. The progress publisher now keeps large evidence files in NFS for Release publication and pushes their complete hash references, avoiding Git blob limits.

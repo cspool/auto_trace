@@ -1,0 +1,26 @@
+{
+  "status": "complete",
+  "downloaded_published_manifest": {
+    "path": "/public/home/accl15ptg7/run_R08_R10/release_transport_probe_001/FILE_MANIFEST.json",
+    "size": 16944,
+    "sha256": "171c1806dd53dd35348de7dc8343bf7008caba3b4fb7f71a5b11a2296c2bbaf5"
+  },
+  "original_published_file_manifest": {
+    "path": "/public/home/accl15ptg7/run_R08_R10/publication_emergency/r08_03__gqa6_pmc_write/FILE_MANIFEST.json",
+    "size": 16944,
+    "sha256": "171c1806dd53dd35348de7dc8343bf7008caba3b4fb7f71a5b11a2296c2bbaf5"
+  },
+  "same_original_SHA256": true,
+  "production_transport_helper": {
+    "path": "/public/home/accl15ptg7/run_R08_R10/restore_all_R08_release_artifacts_001.py",
+    "size": 12914,
+    "sha256": "360ec1566bab7a441df1d69aca5b6ebc8e075daafd5238e12c53e2f67b558351"
+  },
+  "elapsed_seconds": 2.0939609220367856,
+  "downloaded_bytes": 16944,
+  "download_is_physical_NFS": true,
+  "weights_removed": false,
+  "raw_capture_files_restored": false,
+  "model_or_device_actions": 0,
+  "R09_R10_business_execution": false
+}
