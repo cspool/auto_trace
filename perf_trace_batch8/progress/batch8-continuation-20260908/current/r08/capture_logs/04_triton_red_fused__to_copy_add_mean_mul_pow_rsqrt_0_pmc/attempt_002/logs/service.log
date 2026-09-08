@@ -299,3 +299,32 @@ INFO 09-08 18:02:51 [utils.py:250] Waiting for API servers to complete ...
 (ApiServer_1 pid=385936) INFO:     127.0.0.1:37036 - "POST /v1/chat/completions HTTP/1.1" 200 OK
 (Worker pid=387448) /public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/model_executor/layers/fla/ops/utils.py:113: UserWarning: Input tensor shape suggests potential format mismatch: seq_len (36) < num_heads (48). This may indicate the inputs were passed in head-first format [B, H, T, ...] when head_first=False was specified. Please verify your input tensor format matches the expected shape [B, T, H, ...].
 (Worker pid=387448)   return fn(*contiguous_args, **contiguous_kwargs)
+(ApiServer_0 pid=385935) INFO:     127.0.0.1:52468 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(ApiServer_0 pid=385935) INFO:     127.0.0.1:52488 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(ApiServer_0 pid=385935) INFO:     127.0.0.1:52518 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(ApiServer_0 pid=385935) INFO:     127.0.0.1:52536 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(ApiServer_1 pid=385936) INFO:     127.0.0.1:52510 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(ApiServer_1 pid=385936) INFO:     127.0.0.1:52474 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(ApiServer_1 pid=385936) INFO:     127.0.0.1:52534 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(ApiServer_1 pid=385936) INFO:     127.0.0.1:52502 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(Worker pid=387442) WARNING 09-08 18:33:08 [multiproc_executor.py:866] WorkerProc was terminated
+(Worker pid=387448) WARNING 09-08 18:33:08 [multiproc_executor.py:866] WorkerProc was terminated
+(EngineCore_DP0 pid=385933) INFO 09-08 18:33:08 [core.py:1201] Shutdown initiated (timeout=0)
+(EngineCore_DP0 pid=385933) INFO 09-08 18:33:08 [core.py:1224] Shutdown complete
+(Worker pid=387442) INFO 09-08 18:33:08 [multiproc_executor.py:759] Parent process exited, terminating worker queues
+(EngineCore_DP1 pid=385934) INFO 09-08 18:33:08 [core.py:1201] Shutdown initiated (timeout=0)
+INFO 09-08 18:33:08 [utils.py:289] Received KeyboardInterrupt, shutting down API servers...
+(EngineCore_DP1 pid=385934) INFO 09-08 18:33:08 [core.py:1224] Shutdown complete
+(Worker pid=387448) INFO 09-08 18:33:08 [multiproc_executor.py:759] Parent process exited, terminating worker queues
+(ApiServer_1 pid=385936) INFO 09-08 18:33:08 [launcher.py:137] Shutting down FastAPI HTTP server.
+(ApiServer_1 pid=385936) INFO:     Shutting down
+(ApiServer_0 pid=385935) WARNING 09-08 18:33:08 [launcher.py:131] port 8001 is used by process psutil.Process(pid=385936, name='VLLM::APIServer_1', status='sleeping') launched with command:
+(ApiServer_0 pid=385935) WARNING 09-08 18:33:08 [launcher.py:131] VLLM::APIServer_1                                                                                                                   
+(ApiServer_0 pid=385935) INFO 09-08 18:33:08 [launcher.py:137] Shutting down FastAPI HTTP server.
+(ApiServer_0 pid=385935) INFO:     Shutting down
+(ApiServer_1 pid=385936) INFO:     Waiting for application shutdown.
+(ApiServer_1 pid=385936) INFO:     Application shutdown complete.
+(ApiServer_0 pid=385935) INFO:     Waiting for application shutdown.
+(ApiServer_0 pid=385935) INFO:     Application shutdown complete.
+/usr/lib/python3.10/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 2 leaked shared_memory objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
