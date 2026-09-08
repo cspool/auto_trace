@@ -111,3 +111,5 @@ Capture 04 is published at https://github.com/cspool/auto_trace/releases/tag/per
 2026-09-08 14:06 UTC: Capture 07 (chunk_gated_delta_rule_fwd_kernel_h_blockdim64 PMC) passed the original two-warmup native health gate on rank 0 worker 687557 and rank 1 worker 687560. Both rank admission release records are retained and the original eight-request measured batch is running. Trace coverage and native attribution remain pending.
 
 2026-09-08 14:10 UTC: Capture 07 live marker audit passed all 16 request/first-phase sets, 784 exact targets each and 12544 total, with no missing, unexpected, or duplicate targets; both ranks and all first-phase request orders match R07. All eight requests are generating. This live prefix check does not replace closed native DB/PMC attribution.
+
+2026-09-08T14:21:25.041372Z: Capture 07 attempt_001 completed all eight original measured requests, HTTP 200 and 1024 tokens each, total 8192, zero failed requests; both native rank stop events are retained. Measured replay duration 975.233 seconds is diagnostic only, not R07 observed latency. Native export and independent attribution are still required.
