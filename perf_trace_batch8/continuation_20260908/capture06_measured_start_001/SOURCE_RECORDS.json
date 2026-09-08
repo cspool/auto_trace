@@ -1,0 +1,26 @@
+{
+  "status": "original_eight_measured_requests_started_after_two_rank_native_health",
+  "source_records": [
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write/attempt_001/control/PRE_MEASURED_NATIVE_PMC_HEALTH.json",
+      "size": 2000,
+      "sha256": "1fd498c31d331f7e9678fedaf8d8e501e74f6a39c2105095cdfd6f222aa3b2e5"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write/attempt_001/control/capture_contract.json",
+      "size": 9073,
+      "sha256": "ee3f52b4517888c80d8f60de505587aa04b3437674447cdfe81d92fabdeb983c"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write/attempt_001/control/admission_order/618883.005.json",
+      "size": 818,
+      "sha256": "e12d12e8db582ab77cba960ef8ff0ec0e4fe04ddbbff7266bdc09eee9111b863"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write/attempt_001/control/admission_order/618884.005.json",
+      "size": 818,
+      "sha256": "642a9146a4bcc92c77959ed5c72e91bfcf41caf2d9451eac4f480630e67ffcd9"
+    }
+  ],
+  "closed_capture_accepted": false
+}
