@@ -1,0 +1,55 @@
+{
+  "status": "metadata_only_capacity_estimate_not_restore_authorization",
+  "utc": "2026-09-08T18:22:36.159941+00:00",
+  "accepted_capture_count_at_forecast": 9,
+  "remaining_capture_count": 3,
+  "original_native_session_layout": "both_original_DBs_plus_lossless_derived_DB_retained",
+  "capture09_raw_bytes": 8263964076,
+  "capture09_all_published_member_bytes": 8279055387,
+  "capture09_large_raw_files_to_restore": [
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_006/capture.db",
+      "size": 3543883776,
+      "sha256": "bc15a83f9678f801049d37541729c306e3cd95249c8454f97325e505c7ff0965"
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_006/native_collectors/rank0/capture.db",
+      "size": 1769570304,
+      "sha256": "3b9f7d09bc0d87cc48b2be6ed68a58a8671d756ce9ce21e6435c365c4fd10373"
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_006/native_collectors/rank1/capture.db",
+      "size": 1774333952,
+      "sha256": "e6cd45818a53890c842edcdede00dd5ad440ee3de9ea222476948de3a84d2e9c"
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_006/workload/r01_events/rank0/events.930501.jsonl",
+      "size": 461931669,
+      "sha256": "8478e8c1ca477064cb1466b9bfab75fe89461258b19818598f2b8e6da3e71bfc"
+    },
+    {
+      "path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_006/workload/r01_events/rank1/events.930503.jsonl",
+      "size": 461427786,
+      "sha256": "a9677c76aa094d86f31b418f6793218bcd915788b4f4e1dd64c0e07ce90bcb7a"
+    }
+  ],
+  "capture09_large_raw_bytes": 8011147487,
+  "prior_eight_evicted_bytes": 45795450475,
+  "projected_total_restore_bytes_at_capture09_size": 77840040423,
+  "projected_total_restore_bytes_if_last_three_each_grow_50_percent": 89856761655,
+  "root_available_bytes_now": 112022351872,
+  "NFS_available_bytes_now": 4428136448,
+  "physical_root_weight_bytes_still_retained": 55563022432,
+  "root_only_projected_free_after_weights_and_full_restore": 89745333881,
+  "root_only_projected_free_with_last_three_50_percent_larger": 77728612649,
+  "actual_restorer_minimum_aggregate_reserve_bytes": 21474836480,
+  "actual_restorer_rechecks_all_12_releases_and_original_sizes": true,
+  "assumptions": "Restoration projection uses the accepted capture09 large-file set for captures10-12. Future retries and CPU stage output growth are excluded. All new CPU outputs remain on NFS; transient next-capture/package space is checked separately. No NFS free bytes are added to the root-only reserve estimate.",
+  "weights_removed": false,
+  "raw_files_removed_by_forecast": false,
+  "source_file_manifest": {
+    "path": "/public/home/accl15ptg7/run_R08_R10/publication_emergency/r08_09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/FILE_MANIFEST.json",
+    "size": 29218,
+    "sha256": "e84ace9b8fd5849c7a83a9d4aaf2a21f46246654f63c658fdabd81937ba31568"
+  }
+}
