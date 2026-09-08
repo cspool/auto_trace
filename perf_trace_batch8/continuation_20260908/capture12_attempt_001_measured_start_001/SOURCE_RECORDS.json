@@ -1,0 +1,32 @@
+[
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/12_chunk_fwd_kernel_o_pmc_write/attempt_001/control/PRE_MEASURED_NATIVE_PMC_HEALTH.json",
+    "size": 1925,
+    "sha256": "75e4614b5dcd8917ac68cf8cd13f9745a55229177f799001ef4444161b82fbb6"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/12_chunk_fwd_kernel_o_pmc_write/attempt_001/control/capture_contract.json",
+    "size": 8073,
+    "sha256": "f07db9b3cc881292ce3427a0d1aba01fc153dfc75a4b100dadfc2bf3ca4f2201"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/12_chunk_fwd_kernel_o_pmc_write/attempt_001/control/admission_order/1075798.005.json",
+    "size": 819,
+    "sha256": "bcc6d51c63b2426c7c6366be2553ef4b1f94f453fef126ee94be74f5ad97a7f6"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/12_chunk_fwd_kernel_o_pmc_write/attempt_001/control/admission_order/1075799.005.json",
+    "size": 819,
+    "sha256": "5d9136174c627e539e635660cbf1f02a75dca555f43b5b6f760903328b0039a6"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/12_chunk_fwd_kernel_o_pmc_write/attempt_001/control/pmc_gate_events/warmup_start.rank0.pid1077229.json",
+    "size": 1060,
+    "sha256": "25a3ceb942e695f118e8eb771973537441f85614c70b64af2994da5b93f81aa5"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/12_chunk_fwd_kernel_o_pmc_write/attempt_001/control/pmc_gate_events/warmup_start.rank1.pid1077231.json",
+    "size": 1060,
+    "sha256": "7ef6afb4be582342433553a1e32341811f56838b6c4bbf00bd3d7e318c81696a"
+  }
+]
