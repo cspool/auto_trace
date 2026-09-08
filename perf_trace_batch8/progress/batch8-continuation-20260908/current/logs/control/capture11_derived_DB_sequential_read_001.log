@@ -1,0 +1,14 @@
+{"event": "READ_ONLY_SEQUENTIAL_PREFETCH_START", "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/11_chunk_fwd_kernel_o_pmc_read/attempt_001/capture.db", "utc": "2026-09-08T19:44:09.046391+00:00", "size": 3403972608, "does_not_replace_SQLite_or_native_audit": true}
+{"bytes_read": 268435456, "elapsed_seconds": 0.579}
+{"bytes_read": 536870912, "elapsed_seconds": 1.199}
+{"bytes_read": 805306368, "elapsed_seconds": 1.724}
+{"bytes_read": 1073741824, "elapsed_seconds": 2.248}
+{"bytes_read": 1342177280, "elapsed_seconds": 2.802}
+{"bytes_read": 1610612736, "elapsed_seconds": 3.323}
+{"bytes_read": 1879048192, "elapsed_seconds": 3.744}
+{"bytes_read": 2147483648, "elapsed_seconds": 4.259}
+{"bytes_read": 2415919104, "elapsed_seconds": 4.548}
+{"bytes_read": 2684354560, "elapsed_seconds": 4.827}
+{"bytes_read": 2952790016, "elapsed_seconds": 5.106}
+{"bytes_read": 3221225472, "elapsed_seconds": 5.564}
+{"status": "read_only_sequential_pass_complete", "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/11_chunk_fwd_kernel_o_pmc_read/attempt_001/capture.db", "size": 3403972608, "sha256": "ab9b7adf1e3e739b2fe4ec422f5ffbe21ca0bca50652d51a167e89b248e251b8", "elapsed_seconds": 5.896439459989779, "capture_accepted": false, "SQLite_check_replaced": false}
