@@ -17,7 +17,7 @@
   "accepted_capture_publisher": "/public/home/accl15ptg7/run_R08_R10/publish_accepted_captures_004.py",
   "original_NFS_session_state_superseded_by_this_emergency_record": true,
   "R09_R10_actual_execution_started": false,
-  "home_storage_available_gib": 13.44,
+  "home_storage_available_gib": 13.43,
   "weight_storage_constraint": "All physical weight bytes must stay under /root; never migrate weights to NFS again",
   "accepted_capture_publisher_session": 12763,
   "raw_storage_watchdog_session": 94301,
@@ -50,7 +50,7 @@
   "complete_stage_publisher_session": 1983,
   "current_capture_phase": "failed_not_accepted",
   "latest_health_observation": {
-    "utc": "2026-09-08T16:40:24.705128+00:00",
+    "utc": "2026-09-08T16:50:25.774649+00:00",
     "accepted_R08": 8,
     "planned_R08": 12,
     "current_capture": "09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_005",
@@ -73,9 +73,9 @@
     "pre_measured_health": "failed",
     "measured_request_token_progress": {},
     "live_eight_request_target_coverage": null,
-    "NFS_available_GiB": 13.44,
+    "NFS_available_GiB": 13.43,
     "temporarily_evicted_bytes": 45795450475,
-    "remaining_machine_hours": 11.63,
+    "remaining_machine_hours": 11.46,
     "completed_stages": []
   },
   "runtime_health_monitor_session": 22460,
@@ -119,8 +119,10 @@
   "native_collection_initially_disabled_until_original_warmup": true,
   "startup_native_trace_before_original_warmups_intentionally_omitted": true,
   "native_capture_scheduler_status": "closed_failed_before_measured_requests",
-  "active_model_free_probe": "native_PMC_dual_context_external_probe_003",
-  "active_model_free_probe_session": 30172,
+  "active_model_free_probe": "native_PMC_serial_initialization_probe_013",
+  "active_model_free_probe_session": 47060,
   "full_model_capture_retry_waits_for_bounded_native_diagnostics": true,
-  "native_counter_bounded_reproduction": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_multi_device_context_reproduction_001.json"
+  "native_counter_bounded_reproduction": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_multi_device_context_reproduction_001.json",
+  "native_counter_root_cause_proven": false,
+  "native_counter_diagnostic_correction": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/continuation_20260908/native_counter_probe_reproducibility_correction_001/OBSERVATION_AND_LIMITS.json"
 }
