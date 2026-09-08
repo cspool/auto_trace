@@ -1,0 +1,65 @@
+{
+  "utc": "2026-09-08T21:06:18.457200+00:00",
+  "status": "restoration_in_progress",
+  "weight_removal_complete_after_all_GPU_captures": true,
+  "restored_capture_count": 9,
+  "restored_bytes": 53806597962,
+  "producer_original_SHA_verification_receipts": [
+    {
+      "segment_id": "01__gqa6_pmc",
+      "restored_file_count": 3,
+      "restored_bytes": 4417429389,
+      "completed_utc": "2026-09-08T20:46:22.911139+00:00"
+    },
+    {
+      "segment_id": "02__gqa6_pmc_read",
+      "restored_file_count": 3,
+      "restored_bytes": 4415691180,
+      "completed_utc": "2026-09-08T20:48:08.764279+00:00"
+    },
+    {
+      "segment_id": "03__gqa6_pmc_write",
+      "restored_file_count": 3,
+      "restored_bytes": 4418053288,
+      "completed_utc": "2026-09-08T20:49:59.170804+00:00"
+    },
+    {
+      "segment_id": "04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc",
+      "restored_file_count": 6,
+      "restored_bytes": 7841751606,
+      "completed_utc": "2026-09-08T20:52:33.329466+00:00"
+    },
+    {
+      "segment_id": "05_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_read",
+      "restored_file_count": 6,
+      "restored_bytes": 7915953062,
+      "completed_utc": "2026-09-08T20:55:15.271718+00:00"
+    },
+    {
+      "segment_id": "06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write",
+      "restored_file_count": 6,
+      "restored_bytes": 7960773281,
+      "completed_utc": "2026-09-08T20:58:03.541339+00:00"
+    },
+    {
+      "segment_id": "07_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc",
+      "restored_file_count": 3,
+      "restored_bytes": 4413265764,
+      "completed_utc": "2026-09-08T20:59:53.870948+00:00"
+    },
+    {
+      "segment_id": "08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read",
+      "restored_file_count": 3,
+      "restored_bytes": 4412532905,
+      "completed_utc": "2026-09-08T21:01:58.752798+00:00"
+    },
+    {
+      "segment_id": "09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write",
+      "restored_file_count": 5,
+      "restored_bytes": 8011147487,
+      "completed_utc": "2026-09-08T21:05:44.553833+00:00"
+    }
+  ],
+  "observer_does_not_repeat_full_raw_hashing": true,
+  "stage_acceptance_not_inferred_from_restoration": true
+}
