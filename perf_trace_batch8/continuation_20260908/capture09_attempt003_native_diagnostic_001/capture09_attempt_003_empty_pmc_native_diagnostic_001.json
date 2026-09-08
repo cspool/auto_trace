@@ -1,0 +1,90 @@
+{
+  "status": "complete_closed_failure_diagnostic",
+  "utc": "2026-09-08T15:42:11.066986+00:00",
+  "failure_reason": "empty native PMC worker file before measured requests",
+  "native_database": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_003/capture.db",
+    "sha256": "c62c029a17447b6ee2a2e81c8e077da4df0c459312e23c089f95f1283d718a1e",
+    "size": 885706752
+  },
+  "kernel_full_literal": "chunk_gated_delta_rule_fwd_kernel_h_blockdim64",
+  "HIPOPS": [
+    {
+      "table": "HIPOPS_173_10_105_2_827205_1788881501",
+      "total_native_HIPOPS_rows": 1117840,
+      "exact_literal_native_dispatches": [
+        {
+          "pid": 827205,
+          "device": 0,
+          "count": 2714,
+          "first_index": 340085,
+          "last_index": 2285309
+        }
+      ]
+    },
+    {
+      "table": "HIPOPS_173_10_105_2_827210_1788881501",
+      "total_native_HIPOPS_rows": 1134706,
+      "exact_literal_native_dispatches": [
+        {
+          "pid": 827210,
+          "device": 1,
+          "count": 3477,
+          "first_index": 427900,
+          "last_index": 2607116
+        }
+      ]
+    }
+  ],
+  "kernel_names_resolved_through_native_STR_TABLE_type6": true,
+  "segment_id": "09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write",
+  "attempt": "attempt_003",
+  "preserved_native_PMC_files": [
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_003/control/native_pmc_before_collector_merge/pmc_results_824798.txt",
+      "size": 0
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_003/control/native_pmc_before_collector_merge/pmc_results_825662.txt",
+      "size": 0
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_003/control/native_pmc_before_collector_merge/pmc_results_825663.txt",
+      "size": 0
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_003/control/native_pmc_before_collector_merge/pmc_results_825666.txt",
+      "size": 0
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_003/control/native_pmc_before_collector_merge/pmc_results_825667.txt",
+      "size": 0
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_003/control/native_pmc_before_collector_merge/pmc_results_825668.txt",
+      "size": 0
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_003/control/native_pmc_before_collector_merge/pmc_results_825669.txt",
+      "size": 0
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_003/control/native_pmc_before_collector_merge/pmc_results_827205.txt",
+      "size": 15458667
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_003/control/native_pmc_before_collector_merge/pmc_results_827210.txt",
+      "size": 0
+    }
+  ],
+  "both_warmup_native_start_statuses": [
+    0,
+    0
+  ],
+  "measured_capture_accepted": false,
+  "all_eight_measured_requests_started": false,
+  "root_cause_beyond_native_counter_loss_proven": false,
+  "read_only_no_GPU_actions": true,
+  "database_size_mtime_and_original_SHA256_unchanged": true,
+  "elapsed_seconds": 1.2289603929966688
+}
