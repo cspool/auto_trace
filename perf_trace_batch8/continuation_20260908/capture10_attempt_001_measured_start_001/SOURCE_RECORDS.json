@@ -1,0 +1,32 @@
+[
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/10_chunk_fwd_kernel_o_pmc/attempt_001/control/PRE_MEASURED_NATIVE_PMC_HEALTH.json",
+    "size": 1894,
+    "sha256": "2c9a5b6e9c03aae12b99121d76797c3d81edcc344aa5692c2c0b01070399d27a"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/10_chunk_fwd_kernel_o_pmc/attempt_001/control/capture_contract.json",
+    "size": 7841,
+    "sha256": "3e9d49760c12ebb10e2b5405b135e9b23a29e1e10ed4a4668e7638fdee1608a2"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/10_chunk_fwd_kernel_o_pmc/attempt_001/control/admission_order/980572.005.json",
+    "size": 818,
+    "sha256": "7e313b86dab5279415ceba382cb62742982cc0da49198652ea9032818b4db755"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/10_chunk_fwd_kernel_o_pmc/attempt_001/control/admission_order/980573.005.json",
+    "size": 818,
+    "sha256": "c4868edc046bf0120fd8cfb334444fc40123b07859ba849d0c9e9503353f2d5d"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/10_chunk_fwd_kernel_o_pmc/attempt_001/control/pmc_gate_events/warmup_start.rank0.pid982062.json",
+    "size": 1044,
+    "sha256": "620cb3f9b28aaa6e364685bd77e9054f76e40adcc626b5c9246cd7fad4d0f7e1"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/10_chunk_fwd_kernel_o_pmc/attempt_001/control/pmc_gate_events/warmup_start.rank1.pid982060.json",
+    "size": 1044,
+    "sha256": "8ff1f4c3b7172678c5c5e9cd09adb6c5d4188edc6d5d21b39ce723f43c053045"
+  }
+]
