@@ -1,0 +1,726 @@
+{
+  "schema_version": 1,
+  "collected_utc": "2026-09-08T03:47:55.982653+00:00",
+  "source_project_root": "/public/home/tangyu408/Qwen_DCU_Worker_0",
+  "files": [
+    {
+      "path": "inputs/model_metadata/config.json",
+      "source_path": "/root/Qwen3.5-27B/config.json",
+      "size": 4134,
+      "sha256": "f8d190c5b89c1521220f935d2567a587d6e291ed69066a45a106560b05a2174c",
+      "mode": 420,
+      "mtime_ns": 1782295245000000000
+    },
+    {
+      "path": "inputs/model_metadata/generation_config.json",
+      "source_path": "/root/Qwen3.5-27B/generation_config.json",
+      "size": 244,
+      "sha256": "303aba891d66ab63908a7b3cc9163bcb835fdf8b9f6301c73216f3f1eb3992dd",
+      "mode": 420,
+      "mtime_ns": 1782295245000000000
+    },
+    {
+      "path": "inputs/model_metadata/model.safetensors.index.json",
+      "source_path": "/root/Qwen3.5-27B/model.safetensors.index.json",
+      "size": 126601,
+      "sha256": "b3737e9d00bda0e37f0b873629d98bf9b407bef35735b9193c23d9844bcc96a6",
+      "mode": 420,
+      "mtime_ns": 1782295469000000000
+    },
+    {
+      "path": "inputs/model_metadata/tokenizer_config.json",
+      "source_path": "/root/Qwen3.5-27B/tokenizer_config.json",
+      "size": 16710,
+      "sha256": "316230d6a809701f4db5ea8f8fc862bc3a6f3229c937c174e674ff3ca0a64ac8",
+      "mode": 420,
+      "mtime_ns": 1782295470000000000
+    },
+    {
+      "path": "inputs/testdata/16-32K_throughput.jsonl",
+      "source_path": "/home/testdata/16-32K_throughput.jsonl",
+      "size": 2357856,
+      "sha256": "633ba4c8b4f500d2ab28094de42698c5494e5232f40eafcd119c0a314b44b936",
+      "mode": 420,
+      "mtime_ns": 1780037636000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/configs/trace_targets/batch8_dual_dcu_dp2.json",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/configs/trace_targets/batch8_dual_dcu_dp2.json",
+      "size": 3156,
+      "sha256": "3b4c952063f48ae662b48b5ce9d8fd76e0ac4d74e170bdb1839ae8b1aaa23cce",
+      "mode": 420,
+      "mtime_ns": 1787368300000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/configs/workflow01_10_fresh_e2e_batch8_dual_dcu_dp2.json",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/configs/workflow01_10_fresh_e2e_batch8_dual_dcu_dp2.json",
+      "size": 14244,
+      "sha256": "89d4455bd89c5f59aeea9f082353507565264ac30881faaad8f8ef966ba48ad7",
+      "mode": 420,
+      "mtime_ns": 1787384961000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/manifests/workflow01_10_fresh_e2e_pipeline.json",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/manifests/workflow01_10_fresh_e2e_pipeline.json",
+      "size": 10983,
+      "sha256": "398afff74dcc0d23296511f7a5d0b188707c45b060a7f1b9227c04d46b6ed465",
+      "mode": 420,
+      "mtime_ns": 1788405152000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/scripts/archive_legacy_app_server_log.py",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/scripts/archive_legacy_app_server_log.py",
+      "size": 9944,
+      "sha256": "ff3bf539575a92f8f9511a3c5c850efd43c300ac83627d46a21bfb4a1663a518",
+      "mode": 493,
+      "mtime_ns": 1788094178000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/scripts/audit_runtime_abi_interface.py",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/scripts/audit_runtime_abi_interface.py",
+      "size": 12794,
+      "sha256": "be795616ce18e9e48fbfbda211bfdb21c154291590578211de07ba9dbe5f199b",
+      "mode": 420,
+      "mtime_ns": 1788103122000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/scripts/build_exact_runtime_recovery_wheel.py",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/scripts/build_exact_runtime_recovery_wheel.py",
+      "size": 15202,
+      "sha256": "970f3edc865565ed0c417c9d40cdd5bcbe6c37661419399f040cfdb27d48dbe9",
+      "mode": 420,
+      "mtime_ns": 1788103871000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/scripts/build_r01_r06_output_recovery_bundle.py",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/scripts/build_r01_r06_output_recovery_bundle.py",
+      "size": 16245,
+      "sha256": "257a6ceb6ffdfe7aa30c7fe872d53c61492073972cd5882db6c487c1424ca5d4",
+      "mode": 420,
+      "mtime_ns": 1788447310000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/scripts/checkpoint_r07_capture_db_to_nfs.py",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/scripts/checkpoint_r07_capture_db_to_nfs.py",
+      "size": 17996,
+      "sha256": "a0fc4fb8bc8a8ff847e81976cac16742d77521af192e9ec3630555b8a3d02d35",
+      "mode": 420,
+      "mtime_ns": 1788376170000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/scripts/collect_r07_hipprof_live_diagnostics.py",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/scripts/collect_r07_hipprof_live_diagnostics.py",
+      "size": 41173,
+      "sha256": "7dcf16d15e2a61e77aec1f213f2d1d430b98f717f6b9281a8f1ccf0b922559a3",
+      "mode": 420,
+      "mtime_ns": 1788539530000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/scripts/dispose_nonpromotable_r07_storage.py",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/scripts/dispose_nonpromotable_r07_storage.py",
+      "size": 19199,
+      "sha256": "badaf7cb8c4474dd4ff6ab8bc0a29f65a3871b4258cad48319b9b262e3222093",
+      "mode": 493,
+      "mtime_ns": 1788094570000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/scripts/github_http_connect_proxy.py",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/scripts/github_http_connect_proxy.py",
+      "size": 2327,
+      "sha256": "262c46037bee3cfff6938f2e68bfd52e56b31c862425b9b5ef24ca6ed8303155",
+      "mode": 493,
+      "mtime_ns": 1788062631000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/scripts/materialize_relocated_predecessors.py",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/scripts/materialize_relocated_predecessors.py",
+      "size": 26554,
+      "sha256": "b2a116000231f4bd2fb8684d797149aa34dde128f578c1493bffa0dfe3034d85",
+      "mode": 493,
+      "mtime_ns": 1788093479000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/scripts/mirror_github_release_assets.sh",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/scripts/mirror_github_release_assets.sh",
+      "size": 4758,
+      "sha256": "f1551b5b099a1541f849ab300f29f74957cc00b3a618c5abebc1c050acd72063",
+      "mode": 493,
+      "mtime_ns": 1788069579000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/scripts/package_r07_attempt043_open_writer_db_release.py",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/scripts/package_r07_attempt043_open_writer_db_release.py",
+      "size": 15008,
+      "sha256": "54dbad992bfc741dca0ec53050b7a29e89010fbf93e75d87c422970faa3c8a98",
+      "mode": 420,
+      "mtime_ns": 1788530072000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/scripts/prepare_r01_r06_worker_reconstruction_v3.py",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/scripts/prepare_r01_r06_worker_reconstruction_v3.py",
+      "size": 11976,
+      "sha256": "a2867003dcb6eda3c4bf234598b55e68e1a9cf518359be40fa92821a2b29312e",
+      "mode": 420,
+      "mtime_ns": 1788273690000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/scripts/prepare_r01_r06_worker_reconstruction_v4.py",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/scripts/prepare_r01_r06_worker_reconstruction_v4.py",
+      "size": 10578,
+      "sha256": "6c579d1d819867d7d2b585815aa5b3b2989a96e9023f67199ffd83b0ffc7b590",
+      "mode": 420,
+      "mtime_ns": 1788372460000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/scripts/reapply_exact_vllm_runtime_after_worker_rebuild.py",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/scripts/reapply_exact_vllm_runtime_after_worker_rebuild.py",
+      "size": 4747,
+      "sha256": "9af284a8aa0be916998dd3babf9f0c6bfa9003f62a1395d5e9416c0e8c3860c1",
+      "mode": 420,
+      "mtime_ns": 1788370012000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/scripts/record_r07_container_loss_insurance.py",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/scripts/record_r07_container_loss_insurance.py",
+      "size": 13629,
+      "sha256": "af0266c66d161dd50ab4ff20b4e29b42968f2710f93da6633ece530ba858b1e5",
+      "mode": 420,
+      "mtime_ns": 1788446137000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/scripts/repair_r07_attempt032_export_interrupt_state.py",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/scripts/repair_r07_attempt032_export_interrupt_state.py",
+      "size": 9333,
+      "sha256": "c773eb5a53b3f5613ee78c3b792dfb5cf8734f28dd55b9a73d9b14802717b61b",
+      "mode": 420,
+      "mtime_ns": 1788370170000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/scripts/restore_relocated_release_archives.py",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/scripts/restore_relocated_release_archives.py",
+      "size": 14807,
+      "sha256": "bda20e48938da98630ad7a98fe69d78d70244ce617479dfd301fb2786ce0bb6f",
+      "mode": 493,
+      "mtime_ns": 1788093302000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/scripts/run_perf_trace_01_10.py",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/scripts/run_perf_trace_01_10.py",
+      "size": 830769,
+      "sha256": "f639692bdbb7a7f248b5f610a3ba854b5bdac30a6865211e3b1879c1d89a2fd4",
+      "mode": 493,
+      "mtime_ns": 1788405160000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/scripts/run_r07_attempt032_diagnostic_db_export.py",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/scripts/run_r07_attempt032_diagnostic_db_export.py",
+      "size": 15648,
+      "sha256": "3ec49c7897a18a6901bf892d7f176671816516ccc32eed3737fc33e06f452dae",
+      "mode": 420,
+      "mtime_ns": 1788374414000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/scripts/seal_r01_r06_worker_reconstruction.py",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/scripts/seal_r01_r06_worker_reconstruction.py",
+      "size": 22350,
+      "sha256": "68bd7f9d30ba4cbadfdd69a211f06b09ba0269726ebae8982a593045ab6a9471",
+      "mode": 493,
+      "mtime_ns": 1788093637000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/scripts/seal_r01_r06_worker_reconstruction_v3.py",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/scripts/seal_r01_r06_worker_reconstruction_v3.py",
+      "size": 14413,
+      "sha256": "641066c0a5f9d65c5c8834549ba403e7c3ca6f7ebfb6e7ad72b5fa9da90ae762",
+      "mode": 420,
+      "mtime_ns": 1788275046000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/scripts/seal_r01_r06_worker_reconstruction_v4.py",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/scripts/seal_r01_r06_worker_reconstruction_v4.py",
+      "size": 18478,
+      "sha256": "8429e1dcc6ba648a9ccccc63209e7086996fd47abfe12205e7048f5bbc1df646",
+      "mode": 420,
+      "mtime_ns": 1788372771000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/scripts/seal_r07_attempt_013_failure.py",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/scripts/seal_r07_attempt_013_failure.py",
+      "size": 25337,
+      "sha256": "7b4068fbe21c3f61b7cf1d447ac2d6b3dd23eb65586aead50801c1402976da3e",
+      "mode": 493,
+      "mtime_ns": 1788073787000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/scripts/seal_r07_attempt_016_worker_rebuild_failure.py",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/scripts/seal_r07_attempt_016_worker_rebuild_failure.py",
+      "size": 38316,
+      "sha256": "001ff97cb4dda90161b70bd42b9db053617ab68048bf79293fd51b5cfc1196a5",
+      "mode": 493,
+      "mtime_ns": 1788093163000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/scripts/seal_r07_historical_attempt_root_resolution_recovery_v1.py",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/scripts/seal_r07_historical_attempt_root_resolution_recovery_v1.py",
+      "size": 8429,
+      "sha256": "7aaa9e6bdc5a560cb23de05006f92f1d43604e8401a889d14892afa93ad0de3f",
+      "mode": 420,
+      "mtime_ns": 1788277242000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/scripts/seal_r07_historical_bulk_base_binding_recovery_v1.py",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/scripts/seal_r07_historical_bulk_base_binding_recovery_v1.py",
+      "size": 8190,
+      "sha256": "d61586c75de5b6c0eaac863b22b2756372b79a7f3dcd12a383533af9af12c2bb",
+      "mode": 420,
+      "mtime_ns": 1788276565000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/scripts/seal_runtime_abi_rebuild.py",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/scripts/seal_runtime_abi_rebuild.py",
+      "size": 8892,
+      "sha256": "c6ad9cf33326ae12fbceba613b3b080f5f461e9021bfcb6e07b097c8dca31580",
+      "mode": 420,
+      "mtime_ns": 1788102767000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/scripts/switch_relocated_predecessors.py",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/scripts/switch_relocated_predecessors.py",
+      "size": 19166,
+      "sha256": "73d73c93fad36bbeab5a3c31a17caf565d0cb733de49f2ec6a688efc162dbb42",
+      "mode": 493,
+      "mtime_ns": 1788074394000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/skills/qwen-dcu-fx-process-nvtx-instrumentation/SKILL.md",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/skills/qwen-dcu-fx-process-nvtx-instrumentation/SKILL.md",
+      "size": 31472,
+      "sha256": "9f57f15ce9fad0ab2f9d0d0945bf6837720d472439700ac2f58a990515d53c7d",
+      "mode": 420,
+      "mtime_ns": 1787615085000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/skills/qwen-dcu-process-gpu-hardware-trace/SKILL.md",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/skills/qwen-dcu-process-gpu-hardware-trace/SKILL.md",
+      "size": 46654,
+      "sha256": "83cb40098355dc9f9ee37ff79c77cdea2c793e9db3bc44a1219fd1ebff6df564",
+      "mode": 420,
+      "mtime_ns": 1787897011000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/skills/qwen-dcu-process-performance-breakdown/SKILL.md",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/skills/qwen-dcu-process-performance-breakdown/SKILL.md",
+      "size": 35903,
+      "sha256": "266151cb14e7f2eba71c2d26a4d794e1b2d2a3fcdc37e8858d18eb8651519be2",
+      "mode": 420,
+      "mtime_ns": 1787615085000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/skills/qwen-dcu-same-input-layer-wise-workflow/SKILL.md",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/skills/qwen-dcu-same-input-layer-wise-workflow/SKILL.md",
+      "size": 19665,
+      "sha256": "5d575807870cec30c8da02b0aa6bd506737c381af351cfd5446a8ded2d1740aa",
+      "mode": 420,
+      "mtime_ns": 1787605653000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/skills/qwen-dcu-segmented-process-attribution/SKILL.md",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/skills/qwen-dcu-segmented-process-attribution/SKILL.md",
+      "size": 42069,
+      "sha256": "081f70937ff5f6e0655788b78e2c8b704c3468760de6ccae2933c3528e9c5b98",
+      "mode": 420,
+      "mtime_ns": 1787922224000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/skills/qwen-dcu-workflow05-evidence-planning/SKILL.md",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/skills/qwen-dcu-workflow05-evidence-planning/SKILL.md",
+      "size": 43152,
+      "sha256": "5d132560fa796f424f05b9c874e5aede5b093a10ecb942d2e57bbda886c9f1a7",
+      "mode": 420,
+      "mtime_ns": 1788277449000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/skills/qwen-dcu-workflow05-full-request-process-trace/SKILL.md",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/skills/qwen-dcu-workflow05-full-request-process-trace/SKILL.md",
+      "size": 193754,
+      "sha256": "43462bc8a81bfcb87d819db4720abe688c7738a15530ca3c2af06750405b677a",
+      "mode": 420,
+      "mtime_ns": 1788405116000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/skills/qwen-dcu-workflow05-targeted-hardware-gap-analysis/SKILL.md",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/skills/qwen-dcu-workflow05-targeted-hardware-gap-analysis/SKILL.md",
+      "size": 50389,
+      "sha256": "2e5a851497d2937280272d05224452eee83e313cd6997dc19112ed8b9bc238d5",
+      "mode": 420,
+      "mtime_ns": 1788277449000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/skills/qwen-dcu-workflow05-trace-visualization-reporting/SKILL.md",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/skills/qwen-dcu-workflow05-trace-visualization-reporting/SKILL.md",
+      "size": 53183,
+      "sha256": "623c9deb23b4e4dafd88fbc6a714566e5cdc70ff710ab8a6e68c169942c5182a",
+      "mode": 420,
+      "mtime_ns": 1788277449000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/skills/qwen-dcu-workflow05-utilization-concurrency-analysis/SKILL.md",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/skills/qwen-dcu-workflow05-utilization-concurrency-analysis/SKILL.md",
+      "size": 46117,
+      "sha256": "c02cf5849c915e4414d64329e559407a681bdc12eabc947dc96759c280ee446e",
+      "mode": 420,
+      "mtime_ns": 1788277449000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/workflows/01_layer_wise_end_to_end_trace.md",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/01_layer_wise_end_to_end_trace.md",
+      "size": 7225,
+      "sha256": "47ea99a10db856c0a3ad644bb3f9b668d9816bc7f25bfd591f41eeb101d5c412",
+      "mode": 420,
+      "mtime_ns": 1787570434000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/workflows/02_representative_fx_process_wise_trace.md",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/02_representative_fx_process_wise_trace.md",
+      "size": 22634,
+      "sha256": "6bd95e2bd76873f01a3599e419923f87aa613318b4339e87062733e79fdfcdae",
+      "mode": 420,
+      "mtime_ns": 1787615085000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/workflows/03_process_gpu_hardware_trace.md",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/03_process_gpu_hardware_trace.md",
+      "size": 19059,
+      "sha256": "9a171d4484bf186fc6069d228def005fcd7ef58ebb4edc7e614b8bc0f5a5932f",
+      "mode": 420,
+      "mtime_ns": 1787896986000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/workflows/04_full_layer_fx_process_wise_estimate.md",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/04_full_layer_fx_process_wise_estimate.md",
+      "size": 9887,
+      "sha256": "15ca7c2f442b761dcbef65f4a5e18ff24f1bd163868a32d73dc78aa7f2fda3b7",
+      "mode": 420,
+      "mtime_ns": 1787922224000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/workflows/05_process_trace_and_resource_gap_analysis.md",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/05_process_trace_and_resource_gap_analysis.md",
+      "size": 123036,
+      "sha256": "5eba46bee01c5dc9f05e22b8eaf9162d3f714802a7b3a67ad1f11a42fcf1d30f",
+      "mode": 420,
+      "mtime_ns": 1788307564000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/workflows/project_adaptation/dry_run.json",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/dry_run.json",
+      "size": 68034,
+      "sha256": "9e4ca8e4a1b7f08d4642963da4ce43a62103bab2d9cf66e461d906557577e766",
+      "mode": 420,
+      "mtime_ns": 1787368451000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/workflows/project_adaptation/dry_run_a11_bootstrap.json",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/dry_run_a11_bootstrap.json",
+      "size": 68034,
+      "sha256": "5a43e8d733c400301c04e045c887cec59148a7dea95cdf0deef3d19690ea9246",
+      "mode": 420,
+      "mtime_ns": 1787381549000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/workflows/project_adaptation/goals/A00.md",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/goals/A00.md",
+      "size": 1442,
+      "sha256": "7be4381fd55f52016b6d0bc3710dd1da03ed3df82f9e44415d51ec6eb16dc217",
+      "mode": 420,
+      "mtime_ns": 1787385589000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/workflows/project_adaptation/goals/A01.md",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/goals/A01.md",
+      "size": 1883,
+      "sha256": "45acd76087086f5d984e32a78315286a66b567fa8185d85a8a4b33b03dedf47d",
+      "mode": 420,
+      "mtime_ns": 1787385589000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/workflows/project_adaptation/goals/A02.md",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/goals/A02.md",
+      "size": 1876,
+      "sha256": "ececfb11e32159c48a9f3c140d79177c7ba8da3c54f1506d3c859a0a8bc32d6a",
+      "mode": 420,
+      "mtime_ns": 1787385589000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/workflows/project_adaptation/goals/A03.md",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/goals/A03.md",
+      "size": 1859,
+      "sha256": "72f115f638ce4e012b978c673985ed85d300b19f39a02e32e3875b415dc77388",
+      "mode": 420,
+      "mtime_ns": 1787385589000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/workflows/project_adaptation/goals/A04.md",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/goals/A04.md",
+      "size": 1684,
+      "sha256": "ded6cbaa8968332aee302590b8d35766499b2d6acb3e12a2b5a57eca74455293",
+      "mode": 420,
+      "mtime_ns": 1787385589000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/workflows/project_adaptation/goals/A05.md",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/goals/A05.md",
+      "size": 1897,
+      "sha256": "d6ee0a6222a20c778a61680e36cfe38480a2b4634df853f608a4ada0142d07fc",
+      "mode": 420,
+      "mtime_ns": 1787385589000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/workflows/project_adaptation/goals/A06.md",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/goals/A06.md",
+      "size": 1723,
+      "sha256": "d3bbf252d66ba602d4de278e20614a7244b821eb4dc517d686573bb7f60411d9",
+      "mode": 420,
+      "mtime_ns": 1787385589000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/workflows/project_adaptation/goals/A07.md",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/goals/A07.md",
+      "size": 1740,
+      "sha256": "5b3d23883465667a1e05d71d5db1bd09d31335e440e6b935283b7482021c9eeb",
+      "mode": 420,
+      "mtime_ns": 1787385589000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/workflows/project_adaptation/goals/A08.md",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/goals/A08.md",
+      "size": 1760,
+      "sha256": "6ec199ab5b36852ce85b2088dd7e5175594486a78e8909327871243f81c5ec6d",
+      "mode": 420,
+      "mtime_ns": 1787385589000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/workflows/project_adaptation/goals/A09.md",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/goals/A09.md",
+      "size": 1752,
+      "sha256": "74b1a2cfe760d8dfbef050b36c3fb7610788ab961446e1dcb2ee35f829d3d51a",
+      "mode": 420,
+      "mtime_ns": 1787385589000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/workflows/project_adaptation/goals/A10.md",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/goals/A10.md",
+      "size": 1756,
+      "sha256": "112e9ac691f4a8ed503546a2cafea03b4cf76ed6bbaf6629d733d772cbd2e6a4",
+      "mode": 420,
+      "mtime_ns": 1787385589000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/workflows/project_adaptation/goals/A11.md",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/goals/A11.md",
+      "size": 2720,
+      "sha256": "679047128ab9567a886e7030926aa89ce909f3417bebabfdb8a0f16a4535b4c7",
+      "mode": 420,
+      "mtime_ns": 1787385589000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/workflows/project_adaptation/manifests/adapt_goals.json",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/manifests/adapt_goals.json",
+      "size": 78145,
+      "sha256": "b03fa230180807f4fdd467a1307c38a8f5d0dd514509e2b8a3eb7666ce1fa093",
+      "mode": 420,
+      "mtime_ns": 1787385589000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/workflows/project_adaptation/runtime_scheduler_dry_run.json",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/runtime_scheduler_dry_run.json",
+      "size": 18207,
+      "sha256": "c58fa8d461ddbdbdea555a1bc7176094cea442105f2d2280ec2593fc29fdd6a9",
+      "mode": 420,
+      "mtime_ns": 1787380983000000000
+    },
+    {
+      "path": "project/perf_trace_batch8/workflows/project_adaptation/scripts/adapt_perf_trace.py",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/workflows/project_adaptation/scripts/adapt_perf_trace.py",
+      "size": 66107,
+      "sha256": "3cd343866588c54a8164d31616c98586307407f7c47060fdf997a269ff984315",
+      "mode": 493,
+      "mtime_ns": 1787385566000000000
+    },
+    {
+      "path": "recovery_index/R01_R06_OUTPUT_RECOVERY_INDEX.json",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime_nfs_bulk/qwen_dcu_perf_trace_batch8_container_loss_insurance_20260903/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R01-R06/output_recovery_index_001/R01_R06_OUTPUT_RECOVERY_INDEX.json",
+      "size": 63875,
+      "sha256": "79cb6d014b33d194c5d543d18758253c502220aa76af852807e468cebdfbe552",
+      "mode": 420,
+      "mtime_ns": 1788447321000000000
+    },
+    {
+      "path": "recovery_index/RECOVERY_COMPLETE.json",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime_nfs_bulk/qwen_dcu_perf_trace_batch8_container_loss_insurance_20260903/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R01-R06/output_recovery_index_001/RECOVERY_COMPLETE.json",
+      "size": 592,
+      "sha256": "70ca5c32894d91d23f277efd81dbb6c60a4aa6b5230be837027b5bdfe8c6644c",
+      "mode": 420,
+      "mtime_ns": 1788447321000000000
+    },
+    {
+      "path": "recovery_index/SHA256SUMS",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime_nfs_bulk/qwen_dcu_perf_trace_batch8_container_loss_insurance_20260903/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R01-R06/output_recovery_index_001/SHA256SUMS",
+      "size": 190,
+      "sha256": "650100f127bce501acd089dbe417086369a3ffebc6736ab9569cc2463d9d052e",
+      "mode": 420,
+      "mtime_ns": 1788447340000000000
+    },
+    {
+      "path": "recovery_index/control/PREPARATION.json",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime_nfs_bulk/qwen_dcu_perf_trace_batch8_container_loss_insurance_20260903/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R01-R06/output_recovery_index_001/control/PREPARATION.json",
+      "size": 2159,
+      "sha256": "2bfcc4c7b2884c40090cc05efe90d2f73c06e437c1258c84e41ebf25e5c0adfd",
+      "mode": 420,
+      "mtime_ns": 1788447321000000000
+    },
+    {
+      "path": "recovery_index/control/materialization_report.json",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime_nfs_bulk/qwen_dcu_perf_trace_batch8_container_loss_insurance_20260903/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R01-R06/output_recovery_index_001/control/materialization_report.json",
+      "size": 54547437,
+      "sha256": "40c99216696495af478fec7e2fc1a8120f68425a303913cef42f3916e230b301",
+      "mode": 420,
+      "mtime_ns": 1788447321000000000
+    },
+    {
+      "path": "recovery_index/control/r01_r06_worker_root_reconstruction_004.json",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime_nfs_bulk/qwen_dcu_perf_trace_batch8_container_loss_insurance_20260903/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R01-R06/output_recovery_index_001/control/r01_r06_worker_root_reconstruction_004.json",
+      "size": 51528,
+      "sha256": "1bad97176b0ebed1c07d58a56714691f64cd50e36c50d396383cc23924e63aa9",
+      "mode": 420,
+      "mtime_ns": 1788447321000000000
+    },
+    {
+      "path": "recovery_index/control/runtime_handoff_ledger.r01_r06_prefix.json",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime_nfs_bulk/qwen_dcu_perf_trace_batch8_container_loss_insurance_20260903/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R01-R06/output_recovery_index_001/control/runtime_handoff_ledger.r01_r06_prefix.json",
+      "size": 7798078,
+      "sha256": "86990e6156267c36334c31ae3ead733807d11286002d0fe00425b395d3397670",
+      "mode": 420,
+      "mtime_ns": 1788447321000000000
+    },
+    {
+      "path": "recovery_index/handoffs/R01.json",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime_nfs_bulk/qwen_dcu_perf_trace_batch8_container_loss_insurance_20260903/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R01-R06/output_recovery_index_001/handoffs/R01.json",
+      "size": 12370,
+      "sha256": "f28cb9274151c5b08f15964e9645cbcaa41b90fb6f867607472028e993b774d6",
+      "mode": 420,
+      "mtime_ns": 1788447321000000000
+    },
+    {
+      "path": "recovery_index/handoffs/R02.json",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime_nfs_bulk/qwen_dcu_perf_trace_batch8_container_loss_insurance_20260903/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R01-R06/output_recovery_index_001/handoffs/R02.json",
+      "size": 15609,
+      "sha256": "9c1b908430fe9757935d029e8f423192652f21675aeffd77bc6a0f5d48d2e7e6",
+      "mode": 420,
+      "mtime_ns": 1788447321000000000
+    },
+    {
+      "path": "recovery_index/handoffs/R03.json",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime_nfs_bulk/qwen_dcu_perf_trace_batch8_container_loss_insurance_20260903/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R01-R06/output_recovery_index_001/handoffs/R03.json",
+      "size": 46234,
+      "sha256": "f7e6066bd72272cee9e96d2ac31596bd20f01841157bda4d0c2eb56092f99885",
+      "mode": 420,
+      "mtime_ns": 1788447321000000000
+    },
+    {
+      "path": "recovery_index/handoffs/R04.json",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime_nfs_bulk/qwen_dcu_perf_trace_batch8_container_loss_insurance_20260903/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R01-R06/output_recovery_index_001/handoffs/R04.json",
+      "size": 6980912,
+      "sha256": "403af982ff2f70f89fce2cfda59074a9b014a32e95c53e9e05e292dc843e6719",
+      "mode": 420,
+      "mtime_ns": 1788447321000000000
+    },
+    {
+      "path": "recovery_index/handoffs/R05.json",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime_nfs_bulk/qwen_dcu_perf_trace_batch8_container_loss_insurance_20260903/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R01-R06/output_recovery_index_001/handoffs/R05.json",
+      "size": 12434,
+      "sha256": "db08474f64a999428287388a949762274716df125132cbccbabe3ec23c1aec66",
+      "mode": 420,
+      "mtime_ns": 1788447321000000000
+    },
+    {
+      "path": "recovery_index/handoffs/R06.json",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime_nfs_bulk/qwen_dcu_perf_trace_batch8_container_loss_insurance_20260903/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R01-R06/output_recovery_index_001/handoffs/R06.json",
+      "size": 38123,
+      "sha256": "0da6d692f1d69194ab02f4de0993c7aaca2381793eeb61ce33ffeb52ec058976",
+      "mode": 420,
+      "mtime_ns": 1788447321000000000
+    },
+    {
+      "path": "recovery_index/release_parts/R01-R03.PARTS.tsv",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime_nfs_bulk/qwen_dcu_perf_trace_batch8_container_loss_insurance_20260903/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R01-R06/output_recovery_index_001/release_parts/R01-R03.PARTS.tsv",
+      "size": 922,
+      "sha256": "d419e3b423b69acdf31a6bfa4549164eec5875b33ed20dcd633cf7e90d87d9cc",
+      "mode": 420,
+      "mtime_ns": 1788447321000000000
+    },
+    {
+      "path": "recovery_index/release_parts/R04-R06.PARTS.tsv",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime_nfs_bulk/qwen_dcu_perf_trace_batch8_container_loss_insurance_20260903/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R01-R06/output_recovery_index_001/release_parts/R04-R06.PARTS.tsv",
+      "size": 9512,
+      "sha256": "b87c9d17b92e9c4f23e27c87f39f93986a9d27194baff6dc290dea3c12d6c191",
+      "mode": 420,
+      "mtime_ns": 1788447321000000000
+    },
+    {
+      "path": "recovery_index/stage_manifests/R01.artifact_manifest.json",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime_nfs_bulk/qwen_dcu_perf_trace_batch8_container_loss_insurance_20260903/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R01-R06/output_recovery_index_001/stage_manifests/R01.artifact_manifest.json",
+      "size": 55589,
+      "sha256": "be394f98cc18892c176d444ed08247d411ed7a911d248e6aded28352f8a69d56",
+      "mode": 420,
+      "mtime_ns": 1788447321000000000
+    },
+    {
+      "path": "recovery_index/stage_manifests/R02.artifact_manifest.json",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime_nfs_bulk/qwen_dcu_perf_trace_batch8_container_loss_insurance_20260903/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R01-R06/output_recovery_index_001/stage_manifests/R02.artifact_manifest.json",
+      "size": 3273334,
+      "sha256": "0bd7fb447cb51ae63f54d957fd703b9c0018196a7913f01ff414f5fbdeab1487",
+      "mode": 420,
+      "mtime_ns": 1788447321000000000
+    },
+    {
+      "path": "recovery_index/stage_manifests/R03.artifact_manifest.json",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime_nfs_bulk/qwen_dcu_perf_trace_batch8_container_loss_insurance_20260903/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R01-R06/output_recovery_index_001/stage_manifests/R03.artifact_manifest.json",
+      "size": 4990408,
+      "sha256": "9b49cddeb1a2823becb6bd1a8e191fea4180aa7fa2d2adc0ef9dfc23e693aed1",
+      "mode": 420,
+      "mtime_ns": 1788447321000000000
+    },
+    {
+      "path": "recovery_index/stage_manifests/R04.artifact_manifest.json",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime_nfs_bulk/qwen_dcu_perf_trace_batch8_container_loss_insurance_20260903/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R01-R06/output_recovery_index_001/stage_manifests/R04.artifact_manifest.json",
+      "size": 39185728,
+      "sha256": "bb3ab2c39d0b1c52ea1d0ff6355c58d34fa2df5f84bc29e04f9cb6fb1767730c",
+      "mode": 420,
+      "mtime_ns": 1788447321000000000
+    },
+    {
+      "path": "recovery_index/stage_manifests/R05.artifact_manifest.json",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime_nfs_bulk/qwen_dcu_perf_trace_batch8_container_loss_insurance_20260903/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R01-R06/output_recovery_index_001/stage_manifests/R05.artifact_manifest.json",
+      "size": 136685,
+      "sha256": "ee8aa843f85d4cbe5d02e3c7aa0cd54c36faa155fa050218cfb3101254366325",
+      "mode": 420,
+      "mtime_ns": 1788447321000000000
+    },
+    {
+      "path": "recovery_index/stage_manifests/R06.artifact_manifest.json",
+      "source_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime_nfs_bulk/qwen_dcu_perf_trace_batch8_container_loss_insurance_20260903/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/R01-R06/output_recovery_index_001/stage_manifests/R06.artifact_manifest.json",
+      "size": 337807,
+      "sha256": "c5b8a21eb164478e4c5ad67d0e0bd828d337cb070588616deba4a3a2e0455f0d",
+      "mode": 420,
+      "mtime_ns": 1788447321000000000
+    },
+    {
+      "path": "ENVIRONMENT_METADATA.json",
+      "source_path": "generated_from_read_only_inspection",
+      "size": 27067,
+      "sha256": "af2b0a93a09663a229316499a7c25963a327815f7b9a6b194449e02a41ad4a92",
+      "mode": 420
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "source_collected_utc": "2026-09-08T03:47:55.982653+00:00",
+  "continuation_ready_without_adaptation": false,
+  "archived_data": {
+    "r01_r06_release_assets_present": true,
+    "r01_r06_handoffs_match_restored_archives": true,
+    "r07_supplement_assets_verified": 56,
+    "r07_manifest_regular_files": 2655,
+    "r07_recovery_handoff_status": "complete_recovered_offline"
+  },
+  "added_snapshot": {
+    "name": "r08-continuation-sources-inputs-control-20260908.tar.gz",
+    "bytes": 20543621,
+    "sha256": "2458f86ba5cf2bb835a23cd6c469ed6ee8519dc36694b06fa4340824d5084937",
+    "members": 92,
+    "dataset_sha256": "633ba4c8b4f500d2ab28094de42698c5494e5232f40eafcd119c0a314b44b936",
+    "complete_member_hash_verification_passed": true,
+    "model_weights_included": false,
+    "compiled_libraries_included": false
+  },
+  "continuation_requirements": [
+    "Restore predecessor artifacts and verify hashes",
+    "Reconstruct or explicitly rebind absolute paths and links",
+    "Prepare matching model weights, DTK, HIPProf, Python/vLLM ABI and two-DCU DP2 runtime",
+    "Implement and validate explicit recovered-R07 admission instead of renaming or relabeling the handoff"
+  ],
+  "original_remote_observation": {
+    "utc": "2026-09-08T03:42:06Z",
+    "hipprof_attempt043_pids_still_present": [
+      295635,
+      295637
+    ],
+    "formal_handoffs_present": {
+      "R07": false,
+      "R08": false,
+      "R09": false,
+      "R10": false
+    },
+    "newer_regular_files_in_scanned_r07_and_nfs_roots_since_20260907_0805_utc": 0
+  },
+  "archive_state": {
+    "status": "stopped",
+    "R07": "stopped",
+    "R08": "pending",
+    "R09": "pending",
+    "R10": "pending"
+  }
+}

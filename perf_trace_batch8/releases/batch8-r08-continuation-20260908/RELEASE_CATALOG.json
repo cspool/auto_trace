@@ -1,0 +1,2528 @@
+{
+  "verified_utc": "2026-09-08T03:42:06Z",
+  "repository": "cspool/auto_trace",
+  "releases": [
+    {
+      "tag": "perf-trace-batch8-r07-local-artifacts-20260907",
+      "url": "https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-r07-local-artifacts-20260907",
+      "draft": false,
+      "assets": [
+        {
+          "name": "ARCHIVE_PARTS.json",
+          "size": 15215,
+          "sha256": "bb2c172136741737c24b6f7f190ac818462453e6e9d40db039dbc5ffaae7182d",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-local-artifacts-20260907/ARCHIVE_PARTS.json"
+        },
+        {
+          "name": "ARCHIVE_PARTS_SHA256SUMS",
+          "size": 4635,
+          "sha256": "dc06f2948dc796c664b3aeadcceb97c504b6eb13affb9ca779e0b5b90d7734ac",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-local-artifacts-20260907/ARCHIVE_PARTS_SHA256SUMS"
+        },
+        {
+          "name": "ARCHIVE_STREAM_SHA256",
+          "size": 94,
+          "sha256": "c2046679f458890678e328dbe58683f7f6bb9189ff2323e285fe6de68b919ddd",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-local-artifacts-20260907/ARCHIVE_STREAM_SHA256"
+        },
+        {
+          "name": "ARCHIVE_VERIFICATION.json",
+          "size": 572,
+          "sha256": "00e02771681f3d3707f1e00065ab75d4be635404231031b941c28edd7060b99d",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-local-artifacts-20260907/ARCHIVE_VERIFICATION.json"
+        },
+        {
+          "name": "CONTROL_SHA256SUMS",
+          "size": 844,
+          "sha256": "71f8bda8bcab7e01ad2bada16dc07a58e6f7895573172b069181d183419ff642",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-local-artifacts-20260907/CONTROL_SHA256SUMS"
+        },
+        {
+          "name": "COVERAGE_SUMMARY.json",
+          "size": 644,
+          "sha256": "6b28a119fa9e6aa3c92c6cef966e20bcf59f0274fb4bbd103a8a67e2623a8efa",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-local-artifacts-20260907/COVERAGE_SUMMARY.json"
+        },
+        {
+          "name": "EXCLUSIONS.json",
+          "size": 7318,
+          "sha256": "32ecb935cf0bde4545417ab17fdecb1573e855f5952d8e733c5e136af800fea9",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-local-artifacts-20260907/EXCLUSIONS.json"
+        },
+        {
+          "name": "FILE_MANIFEST.json",
+          "size": 2260577,
+          "sha256": "e48c9e4a85bafdb3716c5584f679db3162a90b8144440133d47e34b4514f828d",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-local-artifacts-20260907/FILE_MANIFEST.json"
+        },
+        {
+          "name": "r07-local-artifacts.tar.zst.part-000",
+          "size": 268435456,
+          "sha256": "a8d42f5cd67747ad79e27e5113aa794add113bfc7761aa85e2a148581d5107ff",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-local-artifacts-20260907/r07-local-artifacts.tar.zst.part-000"
+        },
+        {
+          "name": "r07-local-artifacts.tar.zst.part-001",
+          "size": 268435456,
+          "sha256": "12d2bc78caf2daff02bd13f2596c2b9d7d5591d2d3ff2a21c8e4171f09944b7f",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-local-artifacts-20260907/r07-local-artifacts.tar.zst.part-001"
+        },
+        {
+          "name": "r07-local-artifacts.tar.zst.part-002",
+          "size": 268435456,
+          "sha256": "0a51d03b794ab2653508fdfdaed5186c14ac8d3fec862ed4fed0f8a8551bc83e",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-local-artifacts-20260907/r07-local-artifacts.tar.zst.part-002"
+        },
+        {
+          "name": "r07-local-artifacts.tar.zst.part-003",
+          "size": 268435456,
+          "sha256": "ce9c72eed41f8aeb48528953dd2be903d0d3374234fa081410a7aec4fe21e3dd",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-local-artifacts-20260907/r07-local-artifacts.tar.zst.part-003"
+        },
+        {
+          "name": "r07-local-artifacts.tar.zst.part-004",
+          "size": 268435456,
+          "sha256": "509d1cb1e380d1e44709b7c8531e5337e653537991fcdfc3da822a95b935a48f",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-local-artifacts-20260907/r07-local-artifacts.tar.zst.part-004"
+        },
+        {
+          "name": "r07-local-artifacts.tar.zst.part-005",
+          "size": 268435456,
+          "sha256": "596a21b576802ce576dd8a69bbb365bc2ef0d8f159840f0ce9a6835475198a67",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-local-artifacts-20260907/r07-local-artifacts.tar.zst.part-005"
+        },
+        {
+          "name": "r07-local-artifacts.tar.zst.part-006",
+          "size": 268435456,
+          "sha256": "e7acf4366db9ca6b289024ef40f6ade79a07de4d329c23b88ece1ac0cd01e931",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-local-artifacts-20260907/r07-local-artifacts.tar.zst.part-006"
+        },
+        {
+          "name": "r07-local-artifacts.tar.zst.part-007",
+          "size": 268435456,
+          "sha256": "539f3b13f41fea3d618b07226d035c84f1b2b01bb7e19cdebb7240d317caffe5",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-local-artifacts-20260907/r07-local-artifacts.tar.zst.part-007"
+        },
+        {
+          "name": "r07-local-artifacts.tar.zst.part-008",
+          "size": 268435456,
+          "sha256": "aaae7c72cdd5e37a4b66c3bb503c3e0c233eea4629172a774051a5dabeba70f9",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-local-artifacts-20260907/r07-local-artifacts.tar.zst.part-008"
+        },
+        {
+          "name": "r07-local-artifacts.tar.zst.part-009",
+          "size": 268435456,
+          "sha256": "2f8c6d1c98d3acedb9dd1e2469c871aef0a710d283502721ba9df9ce137a85c5",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-local-artifacts-20260907/r07-local-artifacts.tar.zst.part-009"
+        },
+        {
+          "name": "r07-local-artifacts.tar.zst.part-010",
+          "size": 268435456,
+          "sha256": "657ca61ace9141c77f2395f73b7d064e6698809697d6fa6a17969a973f94772f",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-local-artifacts-20260907/r07-local-artifacts.tar.zst.part-010"
+        },
+        {
+          "name": "r07-local-artifacts.tar.zst.part-011",
+          "size": 268435456,
+          "sha256": "b2b98e68a13cf060347a0c8465269090c94078ab0672d8e6a80d8ac889e9738a",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-local-artifacts-20260907/r07-local-artifacts.tar.zst.part-011"
+        },
+        {
+          "name": "r07-local-artifacts.tar.zst.part-012",
+          "size": 268435456,
+          "sha256": "e0c9ebc0d8a571e051c611249c882c9f956cc702c140698212e5e1a0cf1a1cd9",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-local-artifacts-20260907/r07-local-artifacts.tar.zst.part-012"
+        },
+        {
+          "name": "r07-local-artifacts.tar.zst.part-013",
+          "size": 268435456,
+          "sha256": "f65c9699941dc8a9573d52c35b1d644e5441740e03e06b5c51742c975be22174",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-local-artifacts-20260907/r07-local-artifacts.tar.zst.part-013"
+        },
+        {
+          "name": "r07-local-artifacts.tar.zst.part-014",
+          "size": 268435456,
+          "sha256": "f89f277fb7fcc1d35895dfb368f77aaaab1c45d924012c63891aa013cbe5a212",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-local-artifacts-20260907/r07-local-artifacts.tar.zst.part-014"
+        },
+        {
+          "name": "r07-local-artifacts.tar.zst.part-015",
+          "size": 268435456,
+          "sha256": "b8073f31425cf172f71ae3c173d526431f47eb6da8cf1bdca5298ffa7f897922",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-local-artifacts-20260907/r07-local-artifacts.tar.zst.part-015"
+        },
+        {
+          "name": "r07-local-artifacts.tar.zst.part-016",
+          "size": 268435456,
+          "sha256": "4e4ba49ddc74cc0031444d8ee3f7a6c137e1f412ebe6511439ce9c185b047b17",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-local-artifacts-20260907/r07-local-artifacts.tar.zst.part-016"
+        },
+        {
+          "name": "r07-local-artifacts.tar.zst.part-017",
+          "size": 268435456,
+          "sha256": "3cccaba27ed19eaf3d55a544e470db422e20a3677969c1a9aa652d8e4f1fc5c5",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-local-artifacts-20260907/r07-local-artifacts.tar.zst.part-017"
+        },
+        {
+          "name": "r07-local-artifacts.tar.zst.part-018",
+          "size": 268435456,
+          "sha256": "7bd9b33319ee1a851815b52e9d68d17377bda7930361a34b4fb7306f5508565a",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-local-artifacts-20260907/r07-local-artifacts.tar.zst.part-018"
+        },
+        {
+          "name": "r07-local-artifacts.tar.zst.part-019",
+          "size": 268435456,
+          "sha256": "6957f84ceebe841c963a5731d5f254b08834a9554b3d970d5a09a5a16b84ed9a",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-local-artifacts-20260907/r07-local-artifacts.tar.zst.part-019"
+        },
+        {
+          "name": "r07-local-artifacts.tar.zst.part-020",
+          "size": 268435456,
+          "sha256": "e338aa924b3d8becc5ae42e6663597c169a53b8ccf6d460fd6d9fcf0d3465667",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-local-artifacts-20260907/r07-local-artifacts.tar.zst.part-020"
+        },
+        {
+          "name": "r07-local-artifacts.tar.zst.part-021",
+          "size": 268435456,
+          "sha256": "561ffcd2fb4945480df5cab9eceafbe0ae172514c6f9fd365b64f630f0a93660",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-local-artifacts-20260907/r07-local-artifacts.tar.zst.part-021"
+        },
+        {
+          "name": "r07-local-artifacts.tar.zst.part-022",
+          "size": 268435456,
+          "sha256": "12879c0084da78919baa65187bec0933c0c8334888263e2725990a4ec4d2dbf3",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-local-artifacts-20260907/r07-local-artifacts.tar.zst.part-022"
+        },
+        {
+          "name": "r07-local-artifacts.tar.zst.part-023",
+          "size": 268435456,
+          "sha256": "5cb7921011da85a2d54e7d1ac827e6117f6124f1fba198d43984e11a6ea7aff4",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-local-artifacts-20260907/r07-local-artifacts.tar.zst.part-023"
+        },
+        {
+          "name": "r07-local-artifacts.tar.zst.part-024",
+          "size": 268435456,
+          "sha256": "e9fc0c71e6d8ca973784e6d9da7cb2fee7383b7ff6ed934d959336e6fbfa1d1a",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-local-artifacts-20260907/r07-local-artifacts.tar.zst.part-024"
+        },
+        {
+          "name": "r07-local-artifacts.tar.zst.part-025",
+          "size": 268435456,
+          "sha256": "f76eb0d2808897bd9228c7e02ebddaccd02fb600484db4ddf5bf67e1ea170e71",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-local-artifacts-20260907/r07-local-artifacts.tar.zst.part-025"
+        },
+        {
+          "name": "r07-local-artifacts.tar.zst.part-026",
+          "size": 268435456,
+          "sha256": "a87d7b48fe26111a2742da6e1f89629e368a33887194b8e279ada1a6d707e28e",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-local-artifacts-20260907/r07-local-artifacts.tar.zst.part-026"
+        },
+        {
+          "name": "r07-local-artifacts.tar.zst.part-027",
+          "size": 268435456,
+          "sha256": "1a502bab0fa1f2693dd985aae7c92f7bb6f519bbd6b2fc2a388fc47a9ce1b90b",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-local-artifacts-20260907/r07-local-artifacts.tar.zst.part-027"
+        },
+        {
+          "name": "r07-local-artifacts.tar.zst.part-028",
+          "size": 268435456,
+          "sha256": "858a2667ce48182f52ae4d0f557e9553209385255d0d49c9f92ed6d73ff899fb",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-local-artifacts-20260907/r07-local-artifacts.tar.zst.part-028"
+        },
+        {
+          "name": "r07-local-artifacts.tar.zst.part-029",
+          "size": 268435456,
+          "sha256": "5384978ace2507ec300d1c9c6857ac79a6484a7b0575d034667f812cb223faa3",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-local-artifacts-20260907/r07-local-artifacts.tar.zst.part-029"
+        },
+        {
+          "name": "r07-local-artifacts.tar.zst.part-030",
+          "size": 268435456,
+          "sha256": "0badecc982efd6436f1ecd313b4470dd39e8bd109597555f9808135dc0eaac6d",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-local-artifacts-20260907/r07-local-artifacts.tar.zst.part-030"
+        },
+        {
+          "name": "r07-local-artifacts.tar.zst.part-031",
+          "size": 268435456,
+          "sha256": "dea0f0519c62a7c698134a51762732fb544540f5c2709f6d6065b3e24a05decb",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-local-artifacts-20260907/r07-local-artifacts.tar.zst.part-031"
+        },
+        {
+          "name": "r07-local-artifacts.tar.zst.part-032",
+          "size": 268435456,
+          "sha256": "fa7820083989bfdd3cfa9bc39769ef4d29c1dfe62ca599d196444c4f6726b1d6",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-local-artifacts-20260907/r07-local-artifacts.tar.zst.part-032"
+        },
+        {
+          "name": "r07-local-artifacts.tar.zst.part-033",
+          "size": 268435456,
+          "sha256": "be5a8382f33d05bf058f43880799e2ad56f66d7059d3f3ebd37226e38d4b1a77",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-local-artifacts-20260907/r07-local-artifacts.tar.zst.part-033"
+        },
+        {
+          "name": "r07-local-artifacts.tar.zst.part-034",
+          "size": 268435456,
+          "sha256": "ff2b5b8b7eb464ea48fe969a761609b047b810f4690969dc89ea67d13f4eb278",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-local-artifacts-20260907/r07-local-artifacts.tar.zst.part-034"
+        },
+        {
+          "name": "r07-local-artifacts.tar.zst.part-035",
+          "size": 268435456,
+          "sha256": "0ad215381f46e1d0449e1803e6aa12986511ea4e3413954e5d51c6147a5d1c25",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-local-artifacts-20260907/r07-local-artifacts.tar.zst.part-035"
+        },
+        {
+          "name": "r07-local-artifacts.tar.zst.part-036",
+          "size": 268435456,
+          "sha256": "e1b4814c71c6513ec64f5a039cc3227306a3e15c45a08d811f6ce5a9eee7ab9b",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-local-artifacts-20260907/r07-local-artifacts.tar.zst.part-036"
+        },
+        {
+          "name": "r07-local-artifacts.tar.zst.part-037",
+          "size": 268435456,
+          "sha256": "2423a289fea251f2b0c59f0ba88104f667c53472818eba89c7ba0fe6c1b0a320",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-local-artifacts-20260907/r07-local-artifacts.tar.zst.part-037"
+        },
+        {
+          "name": "r07-local-artifacts.tar.zst.part-038",
+          "size": 268435456,
+          "sha256": "81f4e7af6e3b34e23fe8e76102b4e361806f7f1a05e9f71085a782d1fe597e51",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-local-artifacts-20260907/r07-local-artifacts.tar.zst.part-038"
+        },
+        {
+          "name": "r07-local-artifacts.tar.zst.part-039",
+          "size": 268435456,
+          "sha256": "669d1d2c78b2585c83cad0b96848d16e7639af326523501e2bce175712beafc7",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-local-artifacts-20260907/r07-local-artifacts.tar.zst.part-039"
+        },
+        {
+          "name": "r07-local-artifacts.tar.zst.part-040",
+          "size": 268435456,
+          "sha256": "3886914a5f61c7bc2b5bc992af1069244393b379ee44da0f4a8de03ef34e253f",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-local-artifacts-20260907/r07-local-artifacts.tar.zst.part-040"
+        },
+        {
+          "name": "r07-local-artifacts.tar.zst.part-041",
+          "size": 268435456,
+          "sha256": "422f43544b01be8a33904417cebf92c002224ac7735e0b6807591bf082223fa8",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-local-artifacts-20260907/r07-local-artifacts.tar.zst.part-041"
+        },
+        {
+          "name": "r07-local-artifacts.tar.zst.part-042",
+          "size": 268435456,
+          "sha256": "3ab4d2794916ece6409ad1cdb6b8300f417b7c90b997b093b7a368a803530d63",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-local-artifacts-20260907/r07-local-artifacts.tar.zst.part-042"
+        },
+        {
+          "name": "r07-local-artifacts.tar.zst.part-043",
+          "size": 268435456,
+          "sha256": "f89e4f122cba9c9cbf75eebb5f3ab7109ef734c339cdd5799d21bed716c06b69",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-local-artifacts-20260907/r07-local-artifacts.tar.zst.part-043"
+        },
+        {
+          "name": "r07-local-artifacts.tar.zst.part-044",
+          "size": 143249483,
+          "sha256": "5097518ae64362553969be9250dc6316603052e1b7885393caecca06500e1cbc",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-local-artifacts-20260907/r07-local-artifacts.tar.zst.part-044"
+        },
+        {
+          "name": "README.md",
+          "size": 4269,
+          "sha256": "57a4e4194b3f811f2107e08d05479493f370d773bf23a7a6b30ffad2d6a5e0b3",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-local-artifacts-20260907/README.md"
+        },
+        {
+          "name": "restore.py",
+          "size": 8256,
+          "sha256": "a9185159abee383634e221e3ac8ae49bb010373b324d41252f37561b4d5bb20d",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-local-artifacts-20260907/restore.py"
+        },
+        {
+          "name": "SYMLINKS.json",
+          "size": 41510,
+          "sha256": "d572f64fc7a496cb05f003dd7789a9e2e8b35b855893c92f08b909b73acf3f40",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-local-artifacts-20260907/SYMLINKS.json"
+        }
+      ]
+    },
+    {
+      "tag": "perf-trace-batch8-r07-attempt043-offline-recovery-20260907",
+      "url": "https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-r07-attempt043-offline-recovery-20260907",
+      "draft": false,
+      "assets": [
+        {
+          "name": "r07-attempt043-recovery-consumer-bundle.tar.gz",
+          "size": 153968943,
+          "sha256": "79f058bbf93152fbbea3b8d6b6960ecf1096f90844e864a01a82f363edc73c0b",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-attempt043-offline-recovery-20260907/r07-attempt043-recovery-consumer-bundle.tar.gz"
+        },
+        {
+          "name": "r07-attempt043-recovery-consumer-bundle.tar.gz.sha256",
+          "size": 162,
+          "sha256": "530f02c3a4a0a062f219a12e42fdf941949bce59313d80b6f7f8d4d0e8ed7ef3",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-attempt043-offline-recovery-20260907/r07-attempt043-recovery-consumer-bundle.tar.gz.sha256"
+        },
+        {
+          "name": "R07.recovered.json",
+          "size": 7223,
+          "sha256": "437e753f5dbdea8e9b0a6009ede6eebed0a61c76a26683cad6b6618f9c374b10",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-attempt043-offline-recovery-20260907/R07.recovered.json"
+        },
+        {
+          "name": "README.md",
+          "size": 2818,
+          "sha256": "73f651285983640e3ee3be29649396ab79896ef13843bcac51a74c530b387af4",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-attempt043-offline-recovery-20260907/README.md"
+        },
+        {
+          "name": "SHA256SUMS",
+          "size": 1259,
+          "sha256": "0ee4deb55fe6c12261e1d5fc9af2b6721421009be9e0252c88e1af30c75f2a5d",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-attempt043-offline-recovery-20260907/SHA256SUMS"
+        }
+      ]
+    },
+    {
+      "tag": "perf-trace-batch8-r07-attempt043-open-writer-db-20260904",
+      "url": "https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-r07-attempt043-open-writer-db-20260904",
+      "draft": false,
+      "assets": [
+        {
+          "name": "ARCHIVE_STREAM_SHA256",
+          "size": 107,
+          "sha256": "ce9e9b8e76e8d8087331dbb2cd704851f9dc6900066a0b91ed41be2ec4020e80",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-attempt043-open-writer-db-20260904/ARCHIVE_STREAM_SHA256"
+        },
+        {
+          "name": "DB_PACKAGE_MANIFEST.json",
+          "size": 3131,
+          "sha256": "3f780a235a6ba79d827ca9a8d5a650a8f4f6ee6392f5593c1082e069e50c0909",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-attempt043-open-writer-db-20260904/DB_PACKAGE_MANIFEST.json"
+        },
+        {
+          "name": "PACKAGE_COMPLETE.json",
+          "size": 566,
+          "sha256": "59ee7b4f8a01045de4b89ab26dd2b3165281a72cc3110469f12e9f29a13ca96b",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-attempt043-open-writer-db-20260904/PACKAGE_COMPLETE.json"
+        },
+        {
+          "name": "PARTS.tsv",
+          "size": 401,
+          "sha256": "bbab89ed98757eb6c3691c097a2983ad15b1e76c1f9494717ab795b2566dacf9",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-attempt043-open-writer-db-20260904/PARTS.tsv"
+        },
+        {
+          "name": "PUBLICATION_SHA256SUMS",
+          "size": 179,
+          "sha256": "b13389e5545ee2f1ce1dfb523b66d585b34465ef236387f2ba5420076b2c0766",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-attempt043-open-writer-db-20260904/PUBLICATION_SHA256SUMS"
+        },
+        {
+          "name": "r07-attempt043-open-writer-capture.db.gz.part-000",
+          "size": 1073741824,
+          "sha256": "5891a1edc34e672985e6430285fa4599fc240b2f80825f7073048d3192c42c85",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-attempt043-open-writer-db-20260904/r07-attempt043-open-writer-capture.db.gz.part-000"
+        },
+        {
+          "name": "r07-attempt043-open-writer-capture.db.gz.part-001",
+          "size": 1073741824,
+          "sha256": "81022dbf14489aa7ad0fe709c5a66c317e096c0e3972e0c24696cf304720b139",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-attempt043-open-writer-db-20260904/r07-attempt043-open-writer-capture.db.gz.part-001"
+        },
+        {
+          "name": "r07-attempt043-open-writer-capture.db.gz.part-002",
+          "size": 251268311,
+          "sha256": "f8913ff9870e8e96f05d6000b74c1955bd3a930085ea4f44b7c727071322911a",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-attempt043-open-writer-db-20260904/r07-attempt043-open-writer-capture.db.gz.part-002"
+        },
+        {
+          "name": "README.md",
+          "size": 1041,
+          "sha256": "f7a2c6d4478b530af62af68828b2d4932da0f98f59604a41942a0a255df11fe3",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-attempt043-open-writer-db-20260904/README.md"
+        },
+        {
+          "name": "RECOVERY_ENTRYPOINT.json",
+          "size": 8247,
+          "sha256": "0a72eb05c1be07ceb3a52b6267322c27327cd85acae8c3f59e4963af47e867d3",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-attempt043-open-writer-db-20260904/RECOVERY_ENTRYPOINT.json"
+        },
+        {
+          "name": "RECOVERY_INDEX.json",
+          "size": 119241,
+          "sha256": "df5da1ddf9a31ae568e5acf688dc6d57ef14f1921c81d419bd11505d7912e353",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-attempt043-open-writer-db-20260904/RECOVERY_INDEX.json"
+        },
+        {
+          "name": "release_notes.md",
+          "size": 604,
+          "sha256": "06b48e7e5bdc87c85c4f2a08dacdbb5a37f2b2d78585d4cd726bdef586f3581b",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-attempt043-open-writer-db-20260904/release_notes.md"
+        },
+        {
+          "name": "RELEASE_PUBLISHED.json",
+          "size": 874,
+          "sha256": "52a9d5a8583aa4c99882899202209ad820440ddba62a12862e59f6a7b9f97cb8",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-attempt043-open-writer-db-20260904/RELEASE_PUBLISHED.json"
+        },
+        {
+          "name": "REMOTE_VERIFICATION.tsv",
+          "size": 4258,
+          "sha256": "645ae1067fb9335ca6bf55be5b21a96af4f7be2e4384efb6532987c501d0e6ee",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-attempt043-open-writer-db-20260904/REMOTE_VERIFICATION.tsv"
+        },
+        {
+          "name": "SHA256SUMS",
+          "size": 1022,
+          "sha256": "a18e07c797da3c02cf7ffb61b5f38e5263b5d264f7fce792dc78dc5c15e4af4c",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-attempt043-open-writer-db-20260904/SHA256SUMS"
+        },
+        {
+          "name": "SOURCE_DB_SHA256",
+          "size": 77,
+          "sha256": "851372ae693c89ad450a6f4fa93f9dd5794a7dcd72ef5b1f676f8969332d8ad4",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-attempt043-open-writer-db-20260904/SOURCE_DB_SHA256"
+        }
+      ]
+    },
+    {
+      "tag": "perf-trace-batch8-r07-attempt043-hipprof-diagnostic-20260905",
+      "url": "https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-r07-attempt043-hipprof-diagnostic-20260905",
+      "draft": false,
+      "assets": [
+        {
+          "name": "COLLECTION_COMPLETE.json",
+          "size": 726,
+          "sha256": "36a5b3608e34fa74fa5739ddf9c5b7addb67d75096ec96aa3e8867eb36889533",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-attempt043-hipprof-diagnostic-20260905/COLLECTION_COMPLETE.json"
+        },
+        {
+          "name": "DIAGNOSTIC_SUMMARY.json",
+          "size": 4796,
+          "sha256": "1664a73b0a1c49cb38dd4996ca3112c32f354ac86e04e1f84e464aa823b0f0bf",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-attempt043-hipprof-diagnostic-20260905/DIAGNOSTIC_SUMMARY.json"
+        },
+        {
+          "name": "PAYLOAD_MANIFEST.json",
+          "size": 14786,
+          "sha256": "183410d1ddcdfb0356642725ef7750e96441abdfe1ff6b8d3749705049704aae",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-attempt043-hipprof-diagnostic-20260905/PAYLOAD_MANIFEST.json"
+        },
+        {
+          "name": "PUBLICATION_SHA256SUMS",
+          "size": 271,
+          "sha256": "e7f41fd4d447ff9398e2527badd6469b1f0b81306dc692ff803e13d53b40aea2",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-attempt043-hipprof-diagnostic-20260905/PUBLICATION_SHA256SUMS"
+        },
+        {
+          "name": "r07-attempt043-hipprof-live-diagnostic.tar.gz",
+          "size": 672279,
+          "sha256": "55b4c097f32f3c7d22ef9324f4294979d9add98b451369d01ee33b65b060936a",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-attempt043-hipprof-diagnostic-20260905/r07-attempt043-hipprof-live-diagnostic.tar.gz"
+        },
+        {
+          "name": "README.md",
+          "size": 1227,
+          "sha256": "85a28abfbc47fca972e7560fc112edff66b7c2c677e4afd3c2fe995c55a217e5",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-attempt043-hipprof-diagnostic-20260905/README.md"
+        },
+        {
+          "name": "RELEASE_ASSETS.json",
+          "size": 1295,
+          "sha256": "ccb5871d0a9a896304bfabfc7814c94a1b2235b65dbff5c554347c3d9075e9c3",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-attempt043-hipprof-diagnostic-20260905/RELEASE_ASSETS.json"
+        },
+        {
+          "name": "RELEASE_ASSET_SHA256SUMS",
+          "size": 620,
+          "sha256": "1cf93ed678f03a00e0880dc6d61458ae4c38597a2e308fc69236e18319eb96d0",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-attempt043-hipprof-diagnostic-20260905/RELEASE_ASSET_SHA256SUMS"
+        },
+        {
+          "name": "RELEASE_PUBLISHED.json",
+          "size": 1279,
+          "sha256": "08124633ee03f23ad883312a20cbe361a794e414f7a00797c2316f683b91a644",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-attempt043-hipprof-diagnostic-20260905/RELEASE_PUBLISHED.json"
+        },
+        {
+          "name": "REMOTE_VERIFICATION.json",
+          "size": 2202,
+          "sha256": "b4e3819caeb5bc7788b250437cd142e6f1645ef09a9d46648b5bb0703da006bc",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-attempt043-hipprof-diagnostic-20260905/REMOTE_VERIFICATION.json"
+        },
+        {
+          "name": "SHA256SUMS",
+          "size": 8952,
+          "sha256": "109bb0793745f46c4eaa1d1edc7ef1d8613fbf818e70a64a7a116213390f6c60",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-attempt043-hipprof-diagnostic-20260905/SHA256SUMS"
+        }
+      ]
+    },
+    {
+      "tag": "perf-trace-batch8-r08-r10-batch8-dp2-fresh-003-20260901",
+      "url": "https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-r08-r10-batch8-dp2-fresh-003-20260901",
+      "draft": false,
+      "assets": [
+        {
+          "name": "ARCHIVE_MEMBERS.nul",
+          "size": 107626,
+          "sha256": "1cd5ea008f337e0a3e4379fa684ec88084906fea64706cf240b2cf44bab23966",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-r10-batch8-dp2-fresh-003-20260901/ARCHIVE_MEMBERS.nul"
+        },
+        {
+          "name": "ARCHIVE_MEMBERS.tsv",
+          "size": 107626,
+          "sha256": "f973e5b6afcba15c68833405e74a85980035cd09d7bec000ee1f65b664aebab4",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-r10-batch8-dp2-fresh-003-20260901/ARCHIVE_MEMBERS.tsv"
+        },
+        {
+          "name": "ARCHIVE_PARTS_SHA256SUMS",
+          "size": 1080,
+          "sha256": "9e63d0e398352ffdacbb948b69344a082a0725bf91f6ea2fc5ab41650be42c5b",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-r10-batch8-dp2-fresh-003-20260901/ARCHIVE_PARTS_SHA256SUMS"
+        },
+        {
+          "name": "ARCHIVE_STREAM.tsv",
+          "size": 130,
+          "sha256": "4bea3e23b50b0a96dd234b41740af202b5abfb8242286d9b985c11c0727e108d",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-r10-batch8-dp2-fresh-003-20260901/ARCHIVE_STREAM.tsv"
+        },
+        {
+          "name": "ARCHIVE_STREAM_SHA256",
+          "size": 95,
+          "sha256": "783c102062551ada1d4d9c5f93ddc7a17d6d50ed8fd72c9d9ee0f623ccbc4fe4",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-r10-batch8-dp2-fresh-003-20260901/ARCHIVE_STREAM_SHA256"
+        },
+        {
+          "name": "ARCHIVE_UPLOAD_COMPLETE",
+          "size": 30,
+          "sha256": "8a21256bd226cca4e98f461288c14d900cd820662b0594cf713dc504e50dc859",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-r10-batch8-dp2-fresh-003-20260901/ARCHIVE_UPLOAD_COMPLETE"
+        },
+        {
+          "name": "PARTS.tsv",
+          "size": 1410,
+          "sha256": "463909fd53e8da29965cf339960a58ec3c020c1e36b8e05b6190fee4cdc6f7a3",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-r10-batch8-dp2-fresh-003-20260901/PARTS.tsv"
+        },
+        {
+          "name": "r08-r10-recovery-full-32m.tar.gz.part-000",
+          "size": 33554432,
+          "sha256": "73b2784ec17b5b77e8bda8a18f32ecf0451233787a3de0e6a736450a857c009c",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-r10-batch8-dp2-fresh-003-20260901/r08-r10-recovery-full-32m.tar.gz.part-000"
+        },
+        {
+          "name": "r08-r10-recovery-full-32m.tar.gz.part-001",
+          "size": 33554432,
+          "sha256": "c56c2345df4c4fb6586112cd9d18b0c34d473e6b59745620efc4620acc22fc4c",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-r10-batch8-dp2-fresh-003-20260901/r08-r10-recovery-full-32m.tar.gz.part-001"
+        },
+        {
+          "name": "r08-r10-recovery-full-32m.tar.gz.part-002",
+          "size": 33554432,
+          "sha256": "68d416043794171b27b5ed52675a3aa4c5d5a8f28cbe65e6318a85d776705da7",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-r10-batch8-dp2-fresh-003-20260901/r08-r10-recovery-full-32m.tar.gz.part-002"
+        },
+        {
+          "name": "r08-r10-recovery-full-32m.tar.gz.part-003",
+          "size": 33554432,
+          "sha256": "bddb1cdfe7d87c023462e6cda75cc8431592cd7abec9e29812347705ab92b7cf",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-r10-batch8-dp2-fresh-003-20260901/r08-r10-recovery-full-32m.tar.gz.part-003"
+        },
+        {
+          "name": "r08-r10-recovery-full-32m.tar.gz.part-004",
+          "size": 33554432,
+          "sha256": "93b4181ca15de435ef30639a733ecba3eaf863be74db539d7bcdc6455f3f4d7d",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-r10-batch8-dp2-fresh-003-20260901/r08-r10-recovery-full-32m.tar.gz.part-004"
+        },
+        {
+          "name": "r08-r10-recovery-full-32m.tar.gz.part-005",
+          "size": 33554432,
+          "sha256": "a73e0805ebb1bc817f4200b348a07438f46e592c9c474b78b5685e5eeed56b3a",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-r10-batch8-dp2-fresh-003-20260901/r08-r10-recovery-full-32m.tar.gz.part-005"
+        },
+        {
+          "name": "r08-r10-recovery-full-32m.tar.gz.part-006",
+          "size": 33554432,
+          "sha256": "b3315990c33e7bf11583a1cf6186980ebb119fd25829ea086b00d0be72da1b71",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-r10-batch8-dp2-fresh-003-20260901/r08-r10-recovery-full-32m.tar.gz.part-006"
+        },
+        {
+          "name": "r08-r10-recovery-full-32m.tar.gz.part-007",
+          "size": 33554432,
+          "sha256": "f113f38150ba77273127d9cc07b8b261b27deed17d9ea8d1ffca6b48b7a335ce",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-r10-batch8-dp2-fresh-003-20260901/r08-r10-recovery-full-32m.tar.gz.part-007"
+        },
+        {
+          "name": "r08-r10-recovery-full-32m.tar.gz.part-008",
+          "size": 33554432,
+          "sha256": "a264f9f10a389af4ba4210cabf121ab6b1509bcffa857855e623bfbf24fab9d4",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-r10-batch8-dp2-fresh-003-20260901/r08-r10-recovery-full-32m.tar.gz.part-008"
+        },
+        {
+          "name": "r08-r10-recovery-full-32m.tar.gz.part-009",
+          "size": 25712794,
+          "sha256": "9c00e741b5d3f66fe36a75d206eecc7e9e1b55e60b7eb9cb660315c01d681512",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-r10-batch8-dp2-fresh-003-20260901/r08-r10-recovery-full-32m.tar.gz.part-009"
+        },
+        {
+          "name": "README.md",
+          "size": 2285,
+          "sha256": "64540cf6290d76e433263b3a4d54c53f8e2418d740d4a573e64d293542481e0d",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-r10-batch8-dp2-fresh-003-20260901/README.md"
+        },
+        {
+          "name": "release_notes.md",
+          "size": 1422,
+          "sha256": "1bc06009b602d0352189765cf3bbbacc37616ee126aa9daabdb5759e1add0ff9",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-r10-batch8-dp2-fresh-003-20260901/release_notes.md"
+        },
+        {
+          "name": "REMOTE_VERIFICATION.tsv",
+          "size": 4767,
+          "sha256": "be48986daae9fd1a7d1bb20e3ba8ac93d92f15af9839fe051a45e8f2fb4ec176",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-r10-batch8-dp2-fresh-003-20260901/REMOTE_VERIFICATION.tsv"
+        },
+        {
+          "name": "restore_r09_live_table.py",
+          "size": 4439,
+          "sha256": "96c27151747abfa1530512c19b20fe9a9d575ef620a0b6c70d930191c949369c",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-r10-batch8-dp2-fresh-003-20260901/restore_r09_live_table.py"
+        },
+        {
+          "name": "SHA256SUMS",
+          "size": 3074,
+          "sha256": "0373d3d968a14fc56d516b54a0246c4c524874204dabc5ebb57915c9cd5116ef",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-r10-batch8-dp2-fresh-003-20260901/SHA256SUMS"
+        },
+        {
+          "name": "SOURCE_FILE_SHA256SUMS",
+          "size": 147622,
+          "sha256": "9fbdb26c09aa74e8f8e5142291c06a92833696d9cd952e6166745dc715475416",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-r10-batch8-dp2-fresh-003-20260901/SOURCE_FILE_SHA256SUMS"
+        },
+        {
+          "name": "SOURCE_METADATA.nul",
+          "size": 128630,
+          "sha256": "e0d3355ac34a814cabbc85d612882b620c480796359fa1b1203e3ec19522bdff",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-r10-batch8-dp2-fresh-003-20260901/SOURCE_METADATA.nul"
+        },
+        {
+          "name": "SOURCE_METADATA.tsv",
+          "size": 128630,
+          "sha256": "995a580b81edc1f5273ba607a5229786983c5ee5bc130da7c84708e4cef79a3f",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-r10-batch8-dp2-fresh-003-20260901/SOURCE_METADATA.tsv"
+        },
+        {
+          "name": "SOURCE_SCOPE_SUMMARY.tsv",
+          "size": 84,
+          "sha256": "b38d9b9b662767bc7b8d341a2fd7ea5b0b224d9744a6568385ad26c78e407818",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-r10-batch8-dp2-fresh-003-20260901/SOURCE_SCOPE_SUMMARY.tsv"
+        }
+      ]
+    },
+    {
+      "tag": "perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831",
+      "url": "https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831",
+      "draft": false,
+      "assets": [
+        {
+          "name": "ARCHIVE_MEMBERS.nul",
+          "size": 427555,
+          "sha256": "d054b9d81a1a32e40ae596feb68774dba3e27bc8d091ce438fb6a305034866f9",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/ARCHIVE_MEMBERS.nul"
+        },
+        {
+          "name": "ARCHIVE_MEMBERS.tsv",
+          "size": 427555,
+          "sha256": "3102c84855fea9b581541c5d831ac8afa5375d3001e1b456d312fd0b2b662fae",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/ARCHIVE_MEMBERS.tsv"
+        },
+        {
+          "name": "ARCHIVE_STREAM.tsv",
+          "size": 122,
+          "sha256": "82381cbb5dab1517fa7b7bd6d12fbb6ba7b6ca5c412059ff216a5174cfbcfd4d",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/ARCHIVE_STREAM.tsv"
+        },
+        {
+          "name": "ARCHIVE_STREAM_SHA256",
+          "size": 86,
+          "sha256": "8bf10b6e678d9deedfe17b255afbb69b0237c3649a54edfbded346a8947ef3b2",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/ARCHIVE_STREAM_SHA256"
+        },
+        {
+          "name": "ARCHIVE_UPLOAD_COMPLETE",
+          "size": 30,
+          "sha256": "9796221e6a2046e040ddbc8367ea8b05dc1960c93fb25c6db4205542bf418b81",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/ARCHIVE_UPLOAD_COMPLETE"
+        },
+        {
+          "name": "CAPTURE_DB_QUICK_CHECK.txt",
+          "size": 3,
+          "sha256": "dc51b8c96c2d745df3bd5590d990230a482fd247123599548e0632fdbf97fc22",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/CAPTURE_DB_QUICK_CHECK.txt"
+        },
+        {
+          "name": "DB_FIRST_SEGMENTED_EXPORT_SUMMARY.md",
+          "size": 3076,
+          "sha256": "91a8fe264be3d22f750ab2be9ae5bd9b845d555e4fd1cca1c74038a04ca71e94",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/DB_FIRST_SEGMENTED_EXPORT_SUMMARY.md"
+        },
+        {
+          "name": "EXCLUDED_RUNTIME_SOCKETS.tsv",
+          "size": 1338,
+          "sha256": "417a57d024a73507bee4f04b531ee23479c16a6dd8df977a15a4c8fb887100cb",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/EXCLUDED_RUNTIME_SOCKETS.tsv"
+        },
+        {
+          "name": "PARTS.tsv",
+          "size": 21672,
+          "sha256": "dfbcef0815aa9d41dd897bf63fed57ed10513f7f1bfe707066e36a57a6540dec",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/PARTS.tsv"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-000",
+          "size": 33554432,
+          "sha256": "8c078af234e74904242b1b7901713930e5e1f479a95c1f9e622b15d8a93ca889",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-000"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-001",
+          "size": 33554432,
+          "sha256": "9491ceb263a11ee5148dcff1f1ccd2a0cdae62c9bfb7053d0a5f0407e56c0c39",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-001"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-002",
+          "size": 33554432,
+          "sha256": "0dcd4a7644969ea19949b2330119dad6d5131c61c082b9386d71ede795cdbefd",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-002"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-003",
+          "size": 33554432,
+          "sha256": "5b7b06dcea56dbdc206f7586b7a59498ffb69c8828e842ffbb24177771bf2bbd",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-003"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-004",
+          "size": 33554432,
+          "sha256": "43dae9b9079f884c3ae939c1e6a5dd9cab6e53665422d66a50ec503a4f98d9f2",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-004"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-005",
+          "size": 33554432,
+          "sha256": "24b89eee084e43ca7166abe00b62c1b29eaaff077a9f95d0cbf1d4e421cbc052",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-005"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-006",
+          "size": 33554432,
+          "sha256": "ff1e29ff3c4735fdb65495ff827788e8d186b4fb306bb2121580ebf0a6b5fb27",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-006"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-007",
+          "size": 33554432,
+          "sha256": "8f3fe0fba83ee79c7aa97985cd406e208441e13aa09841354c1f72b075f20b4e",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-007"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-008",
+          "size": 33554432,
+          "sha256": "e51419e93bf772adb34d5555e41e431d992651df61056f12aa6e6cd4a50a0120",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-008"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-009",
+          "size": 33554432,
+          "sha256": "f3d3b209d088d703290baad3bdec46cde030cdc0e78510d4f95aa8c5bc1976d7",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-009"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-010",
+          "size": 33554432,
+          "sha256": "c6153ef655cc618c74e718762ee58ec2183f30e0ddac45f9c8bbf7c28dcdb9ed",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-010"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-011",
+          "size": 33554432,
+          "sha256": "0bf22f61240b0b7bbf205f748f96894f75bee8c15bf94a755510fd102b7af35c",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-011"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-012",
+          "size": 33554432,
+          "sha256": "c1deb406802284f1c3279294091aed9fbd1a50c6a66d043683c71b6857cdc6a3",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-012"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-013",
+          "size": 33554432,
+          "sha256": "e06b28b6211778b668cbdfa42d9ca1ab216f1a3a42d5f8e7dcad307555c9070c",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-013"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-014",
+          "size": 33554432,
+          "sha256": "f7e3cef44260e7596446439115b0509d7a260cfab82817ca385853a97e988465",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-014"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-015",
+          "size": 33554432,
+          "sha256": "67ecb6f9adcc87cd9f757367cf1668c8edebb421d415396002053da26a5bed5b",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-015"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-016",
+          "size": 33554432,
+          "sha256": "a7d6bfd9fa8b7c033de00d7b0f0bebdf5717c5a4813c732659bd3fa79b18a511",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-016"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-017",
+          "size": 33554432,
+          "sha256": "f00218b55536a7c17b98fbcce27bf3d159c2b1eb6ba5d0d932b22814186af045",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-017"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-018",
+          "size": 33554432,
+          "sha256": "11fb1c1228c193541916ddfadda35d68f8b401c1e0be11f2362bb0a4eab060c5",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-018"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-019",
+          "size": 33554432,
+          "sha256": "426f1b688fc8ce9b5dbf096a560b2ae7b0d4854d5860d1ca4e57bfec5362c9df",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-019"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-020",
+          "size": 33554432,
+          "sha256": "d193246272ccc403320d7918b7a87c58ca8d986515517bd4366421c09cbd2603",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-020"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-021",
+          "size": 33554432,
+          "sha256": "d128e7d249107a56a5277a12dadf42b5d1a10dfd6c96da82141fcc3389ce4433",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-021"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-022",
+          "size": 33554432,
+          "sha256": "b15fc4d7d2680b3ac188e126dc502b57afec770ebac7e5250d7702c66fb83581",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-022"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-023",
+          "size": 33554432,
+          "sha256": "4076aa1f4579f100e40e1987acabf9c607280af7b58d4482cf94aef6a79fd197",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-023"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-024",
+          "size": 33554432,
+          "sha256": "4482c330fa0a44f365eca596c261a89590ba56aca480f8791d1c3e0cb6672ef7",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-024"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-025",
+          "size": 33554432,
+          "sha256": "d8a364c8093f470ed429c88a0116970472a5df5f62ed879d577f473b0a220ca6",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-025"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-026",
+          "size": 33554432,
+          "sha256": "a798345e79fe2fe92f4a9f2fc5ac87a18c6f9237e3565a955adb93a2b044a32d",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-026"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-027",
+          "size": 33554432,
+          "sha256": "2fd48d3e9179855e3011c499c1c507948ad8c8981dcf75b5ac55506f2f5072a1",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-027"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-028",
+          "size": 33554432,
+          "sha256": "c9a75f55bde20cbe671ad00543cd2e090a0525f64c281ecc595db67b2571bf96",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-028"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-029",
+          "size": 33554432,
+          "sha256": "8569cb7622a03f491e473fa84aab071ad12900741f8945c60c6cf0e371b3dc87",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-029"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-030",
+          "size": 33554432,
+          "sha256": "8f67a74040d86b5414ab96a365e631fcea91ee81b94f5ad664f490c5a4b2c065",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-030"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-031",
+          "size": 33554432,
+          "sha256": "efe953f892da4c84614655421f7d70bae2b80eb57993ec53c444ec6741aa812c",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-031"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-032",
+          "size": 33554432,
+          "sha256": "e624fc3e835ab69b1d06a67a8ae1fce383be0c5fbe65e84b4d9d4c979535d70e",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-032"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-033",
+          "size": 33554432,
+          "sha256": "a9752672a7a88e30affbfd3584947ef5c600ab95e0778d28abee040dc1ed17aa",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-033"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-034",
+          "size": 33554432,
+          "sha256": "291db512b228abf274b41b48890ab5c88a376e3d269c7747c596ff03bd11caa8",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-034"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-035",
+          "size": 33554432,
+          "sha256": "3e079c2dab404ab3308373c8a143725a7e2c18037de0fa240c151c09872c4df3",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-035"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-036",
+          "size": 33554432,
+          "sha256": "6b4ad9de18b42f3fb8e0d096157632522de518954bd7148207a4d068a6c8396e",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-036"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-037",
+          "size": 33554432,
+          "sha256": "cf9a6210867d761465e86bd75796e574ded4596f3d63af886780235ec363d0b1",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-037"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-038",
+          "size": 33554432,
+          "sha256": "70c49ebde7d96f82008332af83a2355ec77ba2bc67aa1116a411980ade75a143",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-038"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-039",
+          "size": 33554432,
+          "sha256": "879a6edee246cf7400ed1f4674e09a3b1a5d1cdd507e1a3490ea1e996454b2a2",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-039"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-040",
+          "size": 33554432,
+          "sha256": "aa50f2e3a54cae438b22ee7e58d7da9e74a85b0cd838bd0f572b79ae70c79226",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-040"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-041",
+          "size": 33554432,
+          "sha256": "d94c25725824391f13257c1c8e814c4d9bcbefa658f88a0deae16fd6d29af948",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-041"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-042",
+          "size": 33554432,
+          "sha256": "a0580efa2b26d8c7c1e273983a29c96d412338383cb7951644a5c3cd15c42363",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-042"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-043",
+          "size": 33554432,
+          "sha256": "f69307544aba9ea9e9de59b15295df1ca3036719b52e38d87af1d0d422973b42",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-043"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-044",
+          "size": 33554432,
+          "sha256": "348947197e7f7d6397f807f0b31972f0a587e51ca9d56a5bebf68ff8574592a7",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-044"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-045",
+          "size": 33554432,
+          "sha256": "50aa63ac6ca630c864c8719df135a56654f1ddace9bd6d9c9b89c26a807d97b5",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-045"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-046",
+          "size": 33554432,
+          "sha256": "bb44b1c27b595be2564b434cf6545b102d2da3cd7cad275b339ecc5ee1be29ed",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-046"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-047",
+          "size": 33554432,
+          "sha256": "da3b9d4d15f35b046a68a5bfe34d7dff211c42c0091b92af53d4bcf5b32ace98",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-047"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-048",
+          "size": 33554432,
+          "sha256": "2dce544225f7efbd64e1327b4162cfbf19adbaba9f483186551be51305511299",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-048"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-049",
+          "size": 33554432,
+          "sha256": "c47a69f41fd93c4193ea9a74fdc04ae7e71ac5002c22818a15b92d2866ddf0e4",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-049"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-050",
+          "size": 33554432,
+          "sha256": "63823168997fab55ac20c4af23ad12c40b39adb5b587434045df7ef327f447db",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-050"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-051",
+          "size": 33554432,
+          "sha256": "106f51da3ef7d1f25de225b864b699b4e52e9181834c39536f9e6490fd273443",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-051"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-052",
+          "size": 33554432,
+          "sha256": "e65e743d6726ab3d7fda9bced8958fe8995f728202f3003a05aa424f7591feea",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-052"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-053",
+          "size": 33554432,
+          "sha256": "2c241b18339a07a013fda2129e4254007f5fac67ef4a1336960428edaf88546a",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-053"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-054",
+          "size": 33554432,
+          "sha256": "4de9c34827aea371ce60bdfb954f24eb52e4e82218b3a873b13e14a31f3c094a",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-054"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-055",
+          "size": 33554432,
+          "sha256": "7b79fad06aaa0cc2292239ff3a14f03fbda8dd082a05b84f32e7cfe8c4b4f5ae",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-055"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-056",
+          "size": 33554432,
+          "sha256": "63b41cf79330713d09bcb8c479e717c1e091462cae5682fda58a77310d724088",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-056"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-057",
+          "size": 33554432,
+          "sha256": "3c9e43443f563f57474f466424bc995af979ba499d0cee483132f53e96013b39",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-057"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-058",
+          "size": 33554432,
+          "sha256": "022d0adb6d7e44add8cc2a4eba4ea8c670cfcdb43d7938e4470f775e1744e825",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-058"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-059",
+          "size": 33554432,
+          "sha256": "42d116b6c189db658c531d32655e623b397ac172d647a6521c99a1621313f4cd",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-059"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-060",
+          "size": 33554432,
+          "sha256": "3f15716f9447bbf9b1fcd2ee64ae7e8f9f6e3d00ba119161847eeada51277b2b",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-060"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-061",
+          "size": 33554432,
+          "sha256": "4c98867bdff934e9d6e1c3f4b819112d182bf8c9f1f012d87bd68e518d8d3df3",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-061"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-062",
+          "size": 33554432,
+          "sha256": "6c61137c53dc2c3f1073ed0bd8bb59d5cfa0b29905104f95295beab09d2de6f2",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-062"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-063",
+          "size": 33554432,
+          "sha256": "f3888eafaccd78d953d0883fc50e171ec4f6c427aedbc7aa66bd0419a09d101c",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-063"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-064",
+          "size": 33554432,
+          "sha256": "a93b7594c53fb9389c802a5cdfc2fad32b5d732ee5faed03c33a00dc52a1299f",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-064"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-065",
+          "size": 33554432,
+          "sha256": "098cb16c0e27a7e6e2b52f1b91f39bcc1cee73da296022cb0802d8df61547b6f",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-065"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-066",
+          "size": 33554432,
+          "sha256": "97307cd8e7f01c3dcf1f6d2855cda0f0c6968a59c2fb08fc23596ec9a2806490",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-066"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-067",
+          "size": 33554432,
+          "sha256": "b6c400f6aa061075b1b1770983bb64d3d54c00819e52396a4831307a6a2dcbd1",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-067"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-068",
+          "size": 33554432,
+          "sha256": "273366c9bf881eb68f31175a36fd81f0bee57e90e00c1425e66cfbdd706d0f5a",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-068"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-069",
+          "size": 33554432,
+          "sha256": "edc26df853cab8771a4717b9deec2475afd2b94e65017e42bff4af41598b7f2e",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-069"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-070",
+          "size": 33554432,
+          "sha256": "040d17126e8840cdc8db1e1388b46699a344f373737920712d525e108b470f24",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-070"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-071",
+          "size": 33554432,
+          "sha256": "81b96a0418783c87c5efe6559c239c0fde4d54c8e480fcc81ee99c6f8ec1eeea",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-071"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-072",
+          "size": 33554432,
+          "sha256": "cf40bef8e2bab866762ee0582fa235444118cc8308c2df6ea042b4cf49e81fb2",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-072"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-073",
+          "size": 33554432,
+          "sha256": "f0a39d73c99db792d5a0e4305506855e6c9e2b4af95df959a29cdae470b2faf1",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-073"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-074",
+          "size": 33554432,
+          "sha256": "7c12a79c895bf37c8e6ceb3caa744fa238fc1f9e6353779b0a12ecc59559c668",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-074"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-075",
+          "size": 33554432,
+          "sha256": "9e924baf7f617094fe5e6a5e91eee0bac7616256772984fd6da4b3992eb6fba2",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-075"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-076",
+          "size": 33554432,
+          "sha256": "24cbe27f3d0678691b142510911960409f0032435467dc99cff7829034a472ea",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-076"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-077",
+          "size": 33554432,
+          "sha256": "820ee0945dbef630bf83bf42e14eedde6ebf25a18477117fe8e2c2ee375eef37",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-077"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-078",
+          "size": 33554432,
+          "sha256": "98ae5691c7f9704f209c92ef65f34d35d5dbc9e6583a839a295832459a920915",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-078"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-079",
+          "size": 33554432,
+          "sha256": "fe40ca2073c75225e3ded53bba6cae2f2eba8ccd00e25f452ede447fe93ea26b",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-079"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-080",
+          "size": 33554432,
+          "sha256": "6b2243071d6915dd0265b5a172467ff9d0567b6e786ddef49b74fb76e79caa71",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-080"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-081",
+          "size": 33554432,
+          "sha256": "e6c6bea4d9f2706414e0fe82eee9b30cf9989c919b54e34627126edbae144a20",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-081"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-082",
+          "size": 33554432,
+          "sha256": "dedf5a995e3cf5738548350d0264751bd7867275c4c6826fda44fb95a455db05",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-082"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-083",
+          "size": 33554432,
+          "sha256": "36b6589362297335a0d49df0e4462010c70e336eb70ce38e7bcc6d9f87a2f94b",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-083"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-084",
+          "size": 33554432,
+          "sha256": "59d952a4dbf18af1ab0d1a3ae063b5259fd5c68376e5dc4cd0d0d8e9e1ae03d1",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-084"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-085",
+          "size": 33554432,
+          "sha256": "f7e57b0ed1dafc112de1d0338e358da8b156135f85694db9a9ff3757f60a61dc",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-085"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-086",
+          "size": 33554432,
+          "sha256": "722491333785dc448120e688f0af7460f8ec72ece61306c86ec5cbbad4279790",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-086"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-087",
+          "size": 33554432,
+          "sha256": "9bb840fd17a1c85221d264023e9630f83b9539d947e1528eb6f0f622bb9f0545",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-087"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-088",
+          "size": 33554432,
+          "sha256": "eaebadc39fffc0f100a5c7406e4708240b7d0bcd7ab898f4e8299fba52218cfb",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-088"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-089",
+          "size": 33554432,
+          "sha256": "4be88ab630e64db8a303ae3e9982a11df9d9a43062c358451cc41b2620fa69d7",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-089"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-090",
+          "size": 33554432,
+          "sha256": "be0feae0d687ffa37bafed0ace5365cece5875ef25c56d94411ecabbcd8e5c69",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-090"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-091",
+          "size": 33554432,
+          "sha256": "306fea6f503dd56f6da42016999a317c50d795d3fe10819d68ffaacb3b4375fc",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-091"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-092",
+          "size": 33554432,
+          "sha256": "3ae83f57e5d1be91b2398fc0b5f844ccc8ace1db3d8d35a5757bea0304bf4f20",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-092"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-093",
+          "size": 33554432,
+          "sha256": "3c044237b1de94f70e4650d312de7d39ed1ae1fb7b8ca7bd48c02822d073d8ef",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-093"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-094",
+          "size": 33554432,
+          "sha256": "7a69fb1b2c41bff3fddfc049a4efc65d049d85be2c2eec57c4d19e96f45793a5",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-094"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-095",
+          "size": 33554432,
+          "sha256": "234377c2c4b1cf5fe45e05a1aad92c7baf8a632e9edaa1147873147de5f71cdb",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-095"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-096",
+          "size": 33554432,
+          "sha256": "694b476108611aba8236ab48a4978dadaac0afd750813e0b5801155c11ab7d0e",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-096"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-097",
+          "size": 33554432,
+          "sha256": "45eb19ff273b6a4a6327c06a027836358a22812b8db39e816eedb432abf97a7f",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-097"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-098",
+          "size": 33554432,
+          "sha256": "4cbe538cc0129f864a1b6ddf86a8529de4ecfba188f2d3250d744bcd6a0c3f20",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-098"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-099",
+          "size": 33554432,
+          "sha256": "fd07da27c213db1da88a732f03ae848c3758b5b30775a82b75df2cd474453833",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-099"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-100",
+          "size": 33554432,
+          "sha256": "aed666f74869113abc67e991b334141e7ae8e76769d7cfe666e9302ad1a13fe5",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-100"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-101",
+          "size": 33554432,
+          "sha256": "84716d48359aa63a6e0c43a412a3754ccdda35105ea1c9be956636f5648fa6bf",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-101"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-102",
+          "size": 33554432,
+          "sha256": "b45cc339743a070351a73ccc54451de9d1370a037fabd5bba2fda2c10c3b7f29",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-102"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-103",
+          "size": 33554432,
+          "sha256": "eca7f8facf8695b22edaeb32448d757623098ad99288749e23627ffccae05272",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-103"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-104",
+          "size": 33554432,
+          "sha256": "0fb396b85bc580c7e4023e393c16ece93ef737ae93493acc69d5889e3ba94dd6",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-104"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-105",
+          "size": 33554432,
+          "sha256": "24f723a7b62fc98ff9c307a21fdee6988f3c608314cb8a4ba08363044650b7e4",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-105"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-106",
+          "size": 33554432,
+          "sha256": "f38cdc114d30b30376b68911158fa6e65f0f7f1a9a9bdd1e0d847eab8507512b",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-106"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-107",
+          "size": 33554432,
+          "sha256": "26968ca346347730ddfa0db20bd9ed2033036f1f583dc673f9b8b8376606df07",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-107"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-108",
+          "size": 33554432,
+          "sha256": "98e2675b1d812de9809591bf5fe0f954b4c637f0397913dace21298f41b09b7a",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-108"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-109",
+          "size": 33554432,
+          "sha256": "8581e648cc620c5d3fc4718c8e7663272ffd4da63e67fbfb39b742c48e200b61",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-109"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-110",
+          "size": 33554432,
+          "sha256": "2dc4a9010824121033b39c99b165e5ff053bad165fd0a714663ef19effb7a47e",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-110"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-111",
+          "size": 33554432,
+          "sha256": "88a9c1ef2a80fed18ef66029ff19f60149cf43caca69d8526e1dea7b519fdfd9",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-111"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-112",
+          "size": 33554432,
+          "sha256": "490a81e993f01dd21df773473db236b8ad9e697567af6e86d8c20ee20cc4a088",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-112"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-113",
+          "size": 33554432,
+          "sha256": "c97595d556466a5f76cab1aa5aa43ec41cb8e766d3a997e1a706c0a018f9c2e8",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-113"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-114",
+          "size": 33554432,
+          "sha256": "507671a495a0921766222a8407a2268ad73274bed2e182f3019ba279d2653117",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-114"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-115",
+          "size": 33554432,
+          "sha256": "bc1b9325af0e105376cbc2cdce352526d212191bd381d8035fcba257af0bf5df",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-115"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-116",
+          "size": 33554432,
+          "sha256": "98d80cb6e290608f9ba92489d444635a14e380833e27c528af0635d44113c955",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-116"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-117",
+          "size": 33554432,
+          "sha256": "c75cfe56631bdd5ba9009be20ba6857fc48ff9038b3b426127d5bd22cc112887",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-117"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-118",
+          "size": 33554432,
+          "sha256": "37ebab8e8184e57912348d6b7fae74f10f3b641889f2c37ffe73161dd9a7ce4e",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-118"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-119",
+          "size": 33554432,
+          "sha256": "71473591480d0271357d3f17596bb4208ee032a9fe8b07a55a8073b2b09d4bf7",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-119"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-120",
+          "size": 33554432,
+          "sha256": "0f8d2ec697dbef1752140ca57977dcd7c2a8f990551d7d0d9de82abdc9fbf751",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-120"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-121",
+          "size": 33554432,
+          "sha256": "882aff05e6878fc0abcd1e10a190111c80ccc47a9300f17e99bf44175cc919f1",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-121"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-122",
+          "size": 33554432,
+          "sha256": "a204530dbfa0258bc37012a1dcb52b6340f9e5a41727cf71d39ea70672458c2b",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-122"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-123",
+          "size": 33554432,
+          "sha256": "ff8d04b33a769cc5750416fd36e9ba975d2b61f0ec801ac0025a0c27a00abe40",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-123"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-124",
+          "size": 33554432,
+          "sha256": "6f08a401e32f7e57049ea870f7fa9c18da48c26ac82a158926c10735453a5068",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-124"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-125",
+          "size": 33554432,
+          "sha256": "b1e78a9e09590415518af046532aa8b68c873b40c1c92fc006855022b1e26542",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-125"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-126",
+          "size": 33554432,
+          "sha256": "dddab1e5aea529e17dc5cec89c739d7ee2f1a6d74b420a043db44fb6aeb52d70",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-126"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-127",
+          "size": 33554432,
+          "sha256": "783303bb1906c022aa9b4f1578190ae6be0e415aa7db53516bdfcb48505a50f7",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-127"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-128",
+          "size": 33554432,
+          "sha256": "adde800f232c3446a5bf540a3499483ac0c3310354af98affed0e2bac8372f07",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-128"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-129",
+          "size": 33554432,
+          "sha256": "35c90dba9d99eb5e0bd813f574246b728bf08b2aa853ce142cef85d01f546507",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-129"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-130",
+          "size": 33554432,
+          "sha256": "b19663ab4ae8ba74e6e9858489b4ceb5d75e18e540461560765239b4800f706e",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-130"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-131",
+          "size": 33554432,
+          "sha256": "9f733ef0cfeae4876adb26cb5d3e3ccfae86444c8712979061582870f9534597",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-131"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-132",
+          "size": 33554432,
+          "sha256": "e73c3d0a2666acc36bc297d201b52a4d78d32946859838e5021f11240fdc5d93",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-132"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-133",
+          "size": 33554432,
+          "sha256": "21fce3bdddf9e1e5c676b284d0a562a2d2b1b9722f9988ee523e3c479e0168d7",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-133"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-134",
+          "size": 33554432,
+          "sha256": "38fbeb60d69e26d659e7051fbad47787d3c5a0419816d491b02d835f6b893eb7",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-134"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-135",
+          "size": 33554432,
+          "sha256": "96c7a84aad13162ae32ba0619bae0f5c424c62342296445b7e30c61450a26f2a",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-135"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-136",
+          "size": 33554432,
+          "sha256": "8338dede0ed49466da6e7277a516e56a54aa7a6cb634def28a5a28d493f7307a",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-136"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-137",
+          "size": 33554432,
+          "sha256": "77f5b39a6bf5341992847ed9440fb528901b99f1fa2e43d9ce9763817c9d9b4b",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-137"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-138",
+          "size": 33554432,
+          "sha256": "b87c4d684c6ab5339227c469000261dc32a26dcd830360a8728c6b4b18c67f0d",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-138"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-139",
+          "size": 33554432,
+          "sha256": "add92dbe6d1da55f844ad1bad4e2f5d240d2868eb5f59f78252123f7a0baa7d8",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-139"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-140",
+          "size": 33554432,
+          "sha256": "f21545315321b680724c4b00046a9c6e9d08fc29df09817b21a4e2caefb9552c",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-140"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-141",
+          "size": 33554432,
+          "sha256": "3c4c7931f5d8741ad0c50382e11db87304896a5ca88ab3e025d956962efcd159",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-141"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-142",
+          "size": 33554432,
+          "sha256": "b531b0cb1f436d0edf2dee68e10842db94f29785ba4e803a29982d22c54da979",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-142"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-143",
+          "size": 33554432,
+          "sha256": "83e595e776354cdc80cfcddaa4198066dcdcba22aa1d1cd752d2bcd58ead193a",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-143"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-144",
+          "size": 33554432,
+          "sha256": "c74cf30de6cbec08ee4ab8a1d4adb5ed8a95d05f4077a9543b1c94595cf89d7e",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-144"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-145",
+          "size": 33554432,
+          "sha256": "2a3ad589912909be0472981c1c12e4bbedad70ae0b59fb68dc7bc158699a8182",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-145"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-146",
+          "size": 33554432,
+          "sha256": "fd7e7251889dd271d2f088519bcc5f8aaa486da1fc57464a4f9c64559ed5a7cd",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-146"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-147",
+          "size": 33554432,
+          "sha256": "e292bd28e42df5aa7f8c10eac9b56f5c2b8a22305e7040cfca8c832d5b853f13",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-147"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-148",
+          "size": 33554432,
+          "sha256": "06021445ad5297b5748fca6fc106ba8736c8bbc4c7a1a4db8e418ee6f637798e",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-148"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-149",
+          "size": 33554432,
+          "sha256": "a620f93e737bdf060b25ba214c6820ab3235d3bb2183f059d5c93b0749890b3a",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-149"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-150",
+          "size": 33554432,
+          "sha256": "1ecbb363316f0b15bf284c43789fe6d2bc9838ebe73f4bec71efba80e1365788",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-150"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-151",
+          "size": 33554432,
+          "sha256": "0aa330ef10bfb5cce1c711fcce2f8806b8be1a5de91b3dbadf9ebe7d3504b8a0",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-151"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-152",
+          "size": 33554432,
+          "sha256": "e4369dd4fa1a820a59baf1e164d8b3cf91b3390a8c025a99b21fa37952abee90",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-152"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-153",
+          "size": 33554432,
+          "sha256": "c7cdbf927b137edfd127eed47f10305254132a5ab9d8751a6994d06f95cc7323",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-153"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-154",
+          "size": 33554432,
+          "sha256": "799ca6429f7024bbf84d743e69a0529be5667afb784fb8177a32493f1730c95c",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-154"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-155",
+          "size": 33554432,
+          "sha256": "bb5a3b311fb2cfb80ad7ddde8ad4f0cef6b7c69bd8ab5fe8f87e38f99611baf9",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-155"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-156",
+          "size": 33554432,
+          "sha256": "c1458c5e8d87d45b3a2c3164e5244d4ad9f6213e6cab072acf43feee64817530",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-156"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-157",
+          "size": 33554432,
+          "sha256": "db88f0af90b3736ec66b17e1c36900c618af04cc192681e9b6f9dbc93a5c5197",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-157"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-158",
+          "size": 33554432,
+          "sha256": "75e5428b068e0001e07dfb9162980ade8eb1443f9bc11cb9d5bf7f187b75dfaf",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-158"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-159",
+          "size": 33554432,
+          "sha256": "c97098978afac662c7703f2434e54aa1305a1bd2c292311b29febcf4b476dc15",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-159"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-160",
+          "size": 33554432,
+          "sha256": "b1432d27d7a2516165b28b9eef303cf1ebf26f66dda7df9ed6e87d0383b5aee1",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-160"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-161",
+          "size": 33554432,
+          "sha256": "8d8467867f5e5040f29c0d01ef7c597677f0def66b37f076b10deb7eb864df9f",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-161"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-162",
+          "size": 33554432,
+          "sha256": "535b65581a7277a66a47f6a0555c811c975bf02931e5cc52049735920bdc1565",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-162"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-163",
+          "size": 33554432,
+          "sha256": "9d19d010e1a53f9b07303cd826b9de1cb1b1f4dcee4b3c65e850d2be90a29418",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-163"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-164",
+          "size": 33554432,
+          "sha256": "7739609c4c0f9528c724871a6bcf11c580f2ecc1e141c2be1e36ce24adadc664",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-164"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-165",
+          "size": 33554432,
+          "sha256": "482b2c6ef5d11b5698c36bcf4c1763706eda87dcabeee06cbe5b7c97b78f9448",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-165"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-166",
+          "size": 33554432,
+          "sha256": "bc327ed8b09cea842821119e218a2c4aa999d24ca7387be2ddb195d862d25c48",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-166"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-167",
+          "size": 33554432,
+          "sha256": "7b489c1183cf3786d0da643057810b427dfa978c54e2dc34e2ca810ca25391c6",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-167"
+        },
+        {
+          "name": "r07-raw-full-32m.tar.gz.part-168",
+          "size": 27625272,
+          "sha256": "05c53db466c075f3ce1b66361a6764e771bacd56f9d40e6443d190eca5b8c983",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/r07-raw-full-32m.tar.gz.part-168"
+        },
+        {
+          "name": "R07_R10_DCU_DEPENDENCY_AUDIT.md",
+          "size": 3227,
+          "sha256": "fc88c46fd123f41c9043e4b81f25be8f8979c499c9ede3e1a3f5a09ee0702bde",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/R07_R10_DCU_DEPENDENCY_AUDIT.md"
+        },
+        {
+          "name": "R07_STATUS_AT_EXPORT.md",
+          "size": 1836,
+          "sha256": "58c122ea1badec0628c2cf934cd233b3f41314e26921eca4c75c9217d7f810c0",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/R07_STATUS_AT_EXPORT.md"
+        },
+        {
+          "name": "README.md",
+          "size": 3603,
+          "sha256": "ed39760d64ba09d311b28a8e991b482f198757d000c359d4178c793c944c9f00",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/README.md"
+        },
+        {
+          "name": "release_notes.md",
+          "size": 1421,
+          "sha256": "894c60408e22fb91d519f074b1773bfff746398960eb43a04b70d77dccd3f63b",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/release_notes.md"
+        },
+        {
+          "name": "REMOTE_VERIFICATION.tsv",
+          "size": 33362,
+          "sha256": "6870f343ca61fac3870bf1ea19268b09307a3eb19f96ba7533e9673d51e81205",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/REMOTE_VERIFICATION.tsv"
+        },
+        {
+          "name": "SHA256SUMS",
+          "size": 16731,
+          "sha256": "7109adfdbbb33fa9435fde85d8ddd77664c03ab263ff0854aa8a0ca99bbd14f2",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/SHA256SUMS"
+        },
+        {
+          "name": "SOURCE_METADATA.nul",
+          "size": 538638,
+          "sha256": "e5f01428f6c25e0136ac5565a25a3a5d2c15819d15ec629d0200faabe1ce5ae3",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/SOURCE_METADATA.nul"
+        },
+        {
+          "name": "SOURCE_METADATA.tsv",
+          "size": 538638,
+          "sha256": "66696f206aba6bceaa9293860ef4dcce0457ea6340c674617df0a9b2bd094b0b",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/SOURCE_METADATA.tsv"
+        },
+        {
+          "name": "SOURCE_SCOPE_SUMMARY.tsv",
+          "size": 1042,
+          "sha256": "6866688626de04274654a09ba6665ea00e1af1799d0ede92491bb707eba4bf3b",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r07-raw-batch8-dp2-fresh-003-20260831/SOURCE_SCOPE_SUMMARY.tsv"
+        }
+      ]
+    },
+    {
+      "tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829",
+      "url": "https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829",
+      "draft": false,
+      "assets": [
+        {
+          "name": "ARCHIVE_MEMBERS.nul",
+          "size": 22922488,
+          "sha256": "bf22169e3da2a909945e80bcf830bb2f6d3f88e7f63ffe8551f4b616b291b9a5",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/ARCHIVE_MEMBERS.nul"
+        },
+        {
+          "name": "ARCHIVE_MEMBERS.tsv",
+          "size": 28234788,
+          "sha256": "60f07eadf7099b9e6410135a046c12e1e5b4765214b0394e514973fe80704e66",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/ARCHIVE_MEMBERS.tsv"
+        },
+        {
+          "name": "ARCHIVE_STREAM.tsv",
+          "size": 122,
+          "sha256": "270331126e585a0db81117b8ff48e2b10e4131fcca22f8830fa2a968a1841704",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/ARCHIVE_STREAM.tsv"
+        },
+        {
+          "name": "ARCHIVE_STREAM_SHA256",
+          "size": 86,
+          "sha256": "269991b1c85ec242033d48b1f95d5497ef23aa1d4e9fc1b8929c6763b97ecaec",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/ARCHIVE_STREAM_SHA256"
+        },
+        {
+          "name": "ARCHIVE_UPLOAD_COMPLETE",
+          "size": 30,
+          "sha256": "4ba54a1bd99e87a324023d83a9ff755ac4f19055e793c090b3a871f3b630e91b",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/ARCHIVE_UPLOAD_COMPLETE"
+        },
+        {
+          "name": "AUTO_TRACE_TARGET_VERIFICATION.md",
+          "size": 985,
+          "sha256": "cbc6c91b11764801b90226cd118dab8797bc8e4952864b53c79ae5aa57d2a8f9",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/AUTO_TRACE_TARGET_VERIFICATION.md"
+        },
+        {
+          "name": "EXCLUDED_RUNTIME_SOCKETS.tsv",
+          "size": 13524,
+          "sha256": "230f21af3de6156a706f20af5c3878d7faa4f79ae4da4a41f526233c67d2ecdf",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/EXCLUDED_RUNTIME_SOCKETS.tsv"
+        },
+        {
+          "name": "PARTS.tsv",
+          "size": 9512,
+          "sha256": "b87c9d17b92e9c4f23e27c87f39f93986a9d27194baff6dc290dea3c12d6c191",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/PARTS.tsv"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-000",
+          "size": 33554432,
+          "sha256": "d0b9e98c430b3b3bffe1e4f3421f3cec107f9ce45ee7ea19634928bf434184d6",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-000"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-001",
+          "size": 33554432,
+          "sha256": "d82452c490f38d549bd93f648c300eb7bb2be6fe9296af451133630bdb206f32",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-001"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-002",
+          "size": 33554432,
+          "sha256": "961f0acbe53aef698b6dea13ebc77edf937c8c455a86671ab92ce34c4debc891",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-002"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-003",
+          "size": 33554432,
+          "sha256": "1a6eaa919bcc5aaade1db00d86dff873087e73665533a194b549d39a9aa1734d",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-003"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-004",
+          "size": 33554432,
+          "sha256": "8153d257fc353c6e275ae5f4db3d2bf8a087624ecdf2b425ae772cee79256bb0",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-004"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-005",
+          "size": 33554432,
+          "sha256": "1113215ebce922b90089e7e62a91cd1a3e60f04cf3c8963b58a70ba37725cf9a",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-005"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-006",
+          "size": 33554432,
+          "sha256": "c267d4ca7cf124a826412e08fe7d371fb0288d093af6883767c02cc79a375749",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-006"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-007",
+          "size": 33554432,
+          "sha256": "f4406e4b6aefc1659fe3ccd95112d18245847db385094d21d1bf1c0084beae1a",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-007"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-008",
+          "size": 33554432,
+          "sha256": "83a50fb4a2e5b6edf465207467ae8433d7f66e8ccaa155672b627bb2ae91ff5c",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-008"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-009",
+          "size": 33554432,
+          "sha256": "bff4ad629b1a061568fded1ff58342b03974a906dfce5117a98cebc8505fadbc",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-009"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-010",
+          "size": 33554432,
+          "sha256": "7a27ba92f40cfe20d194270122f126426a23426473b2d323400eeaa3db99f145",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-010"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-011",
+          "size": 33554432,
+          "sha256": "46740f0acb5b074f13da8a8bee1bc6d85e137a7a777bbfee93638ac5873ac42c",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-011"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-012",
+          "size": 33554432,
+          "sha256": "076e81bf86c2870be424551a729f5f010e256bb10a6061b3fb36d3828a31d888",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-012"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-013",
+          "size": 33554432,
+          "sha256": "4d3092752f3e108d3cd9df3d67c317d10ffa953207253dd84bb97d59cbf31408",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-013"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-014",
+          "size": 33554432,
+          "sha256": "868da71308df11b2c33cc359065bd398064a584a26239ec5dc4ec3fb234eecbb",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-014"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-015",
+          "size": 33554432,
+          "sha256": "3f5cdffa845a30fa541dc8325d1065abe3e4838fbab157ec5ff304fb9b093cf9",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-015"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-016",
+          "size": 33554432,
+          "sha256": "2712811f6ebbdf5e3d61a3ee60691460289f5c6677e224bd038e36d6d8e2b9b6",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-016"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-017",
+          "size": 33554432,
+          "sha256": "260b6aa1464a320452455ecfbdc7c68363bd841f7756339c21bb16e767d6044b",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-017"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-018",
+          "size": 33554432,
+          "sha256": "693850a491918ca89fd86be8331b60ec4e5cfeb04ccfbcce4510cd767ea6fe8e",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-018"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-019",
+          "size": 33554432,
+          "sha256": "4a66fb4eaaba8b0b25471f327cb1aa0df6a0b21dddd9d0c4952d71fdc108be56",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-019"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-020",
+          "size": 33554432,
+          "sha256": "b058fb7b792270759509f06f9807ebde14835ef21844f04109443c03c33d33f5",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-020"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-021",
+          "size": 33554432,
+          "sha256": "2e4a0370a272444491ee8adf10db5d1110382981877c323eafb658f13d431140",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-021"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-022",
+          "size": 33554432,
+          "sha256": "6942c3d460cd1008668e9a0d503527b137a247ac4a94c87e686b6462331d8793",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-022"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-023",
+          "size": 33554432,
+          "sha256": "e35d8d2b9d8d139e53e5f7d8deea9adeac5c869137239e2397482fef627f98eb",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-023"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-024",
+          "size": 33554432,
+          "sha256": "98220642e7dfe6d7b76c39a6b609f0679c9863273c7eb14fe30d61ade86f2b72",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-024"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-025",
+          "size": 33554432,
+          "sha256": "60b3845466afe65d2b1452dfc07fe232628c863a9a2140f21d7a78850b67c094",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-025"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-026",
+          "size": 33554432,
+          "sha256": "c7dd2bc8164f039ee8db3d07c5a685a96ab642028f84355df48956c9b6a243fc",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-026"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-027",
+          "size": 33554432,
+          "sha256": "1cbe347e3b9274f3a3ec42ecf0d69f32cb6573d6c89189adf2ea98bf11452730",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-027"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-028",
+          "size": 33554432,
+          "sha256": "b2a7cea1ac40ec0b3cfafda00178338748f1b12fe78f631539ed061b9ac35a9d",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-028"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-029",
+          "size": 33554432,
+          "sha256": "7299908b3c0e8a8dcbdb350bc7e5d30cb6a61b37614d528acf3f0e2e32cff2fa",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-029"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-030",
+          "size": 33554432,
+          "sha256": "161f5313e0082fb8d76a8d79c94706ca477b72d0682c1b01cb66e6f12f9c5215",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-030"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-031",
+          "size": 33554432,
+          "sha256": "78358d1b495d366eb5da12ded2b51e5c16cef82826735fa7cf2fb3f2c12f3da1",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-031"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-032",
+          "size": 33554432,
+          "sha256": "75ade13fae82dbca1bff37eb77a73c07abd75ecb8ebceb6acc5bd47af49064cf",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-032"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-033",
+          "size": 33554432,
+          "sha256": "7cf1ed7dfd766c17effadfbde9d4e1d6fb7d2357b60b9eae37c6290691288128",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-033"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-034",
+          "size": 33554432,
+          "sha256": "04d4e8063825259874caf21bfe5d418e88b01f758b09351f6e21158bcf393664",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-034"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-035",
+          "size": 33554432,
+          "sha256": "1bdb4b836f76325a8e7483945641d50da29469a021bee82d9dbe7ed48becf3b9",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-035"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-036",
+          "size": 33554432,
+          "sha256": "343a8818338e453179473cd12c39feb4709d23bc9d723411000cd0832d5917b6",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-036"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-037",
+          "size": 33554432,
+          "sha256": "9e105f256b72bef0fd5621c0874c4339d8fb13a1c8858b30e031bc65050914e9",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-037"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-038",
+          "size": 33554432,
+          "sha256": "ce2e1a9351b00be0c96b4a8e53f452421d3d11f440639b580066d46da9df6577",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-038"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-039",
+          "size": 33554432,
+          "sha256": "430ee920eb8899f8ab53f7db07009bd458e74b1fddd36346104be9150ad77839",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-039"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-040",
+          "size": 33554432,
+          "sha256": "d144e6bcedbf1aacc64f81d112a37b10a12bea7ea60483eead56d06aedd6c94d",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-040"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-041",
+          "size": 33554432,
+          "sha256": "616c225c8efc1fcb9157463e172adad833ac9985224ae4ab87a416f9bc9eb3fc",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-041"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-042",
+          "size": 33554432,
+          "sha256": "0b7743c81b9040bf7e3c427830e1dcf7fbb3202d6b2d9eb703d5c669e7e5d055",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-042"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-043",
+          "size": 33554432,
+          "sha256": "28047877b1bea948b997a5d99773113685ee23dd3bca3f857653a1c037fefd6c",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-043"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-044",
+          "size": 33554432,
+          "sha256": "eed00fded52a040df6f374722681a64242a01e719be5cf747418f61cde5adb46",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-044"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-045",
+          "size": 33554432,
+          "sha256": "bf0e6625eebababfc9f2c29b97766af8bea58819ada3433b5930d21a8763d674",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-045"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-046",
+          "size": 33554432,
+          "sha256": "caa672ae509ebf7b6da1c3d385c64bc7a8733dbdce8a18289054b940107a6090",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-046"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-047",
+          "size": 33554432,
+          "sha256": "48f540c24a64fbf2e787cafed613610578d9fe9e0e6417f191cbb15eedccadbf",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-047"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-048",
+          "size": 33554432,
+          "sha256": "fca3e0dc64ff2337164b21131d1391ea1a84aa44b18d01dfd00381a0dcb8f2a2",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-048"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-049",
+          "size": 33554432,
+          "sha256": "c6f261674e51dce7dfb2aa9ab988b309b49428ee7e79555ea377a0deabf61725",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-049"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-050",
+          "size": 33554432,
+          "sha256": "a7fa7d3b4bb63c4d57f39a1d9880a039fafe3f1dbaaf74c0b78226243b7871bb",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-050"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-051",
+          "size": 33554432,
+          "sha256": "f0fc5da585e8e3d4602d1c0b50287c5c81cd32c96a801ebb8932d63ff60df4a7",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-051"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-052",
+          "size": 33554432,
+          "sha256": "05ccbb3b5e86f867634830bc153c8dd6efeb21e61120a439d72d82323e19fc62",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-052"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-053",
+          "size": 33554432,
+          "sha256": "5bad8fe5128047c1ed063c6148de07f905ffa88e66bf9509cf3ecf8c8738c79c",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-053"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-054",
+          "size": 33554432,
+          "sha256": "5c3f6017003e7cbd9a637058abd30c5d32da923ac3b95b3414c85fb6b67132e7",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-054"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-055",
+          "size": 33554432,
+          "sha256": "d2402507dd889478d8fefd7061464fd092c93628724abe4c1f50f0285bba6aaa",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-055"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-056",
+          "size": 33554432,
+          "sha256": "9c5057ad833dd52567d45ee1aca614fc534fb50f63c2f9089fbf09c1755d0e26",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-056"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-057",
+          "size": 33554432,
+          "sha256": "fc222a28930f67fa3157d88b9fcc1cbae58fcbbd8c672d050a0dd619c6667d1c",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-057"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-058",
+          "size": 33554432,
+          "sha256": "436700dbcb453b8b551fdd83e65e71f8d8ff1fddbdb15db128d57a9bfc4dbc29",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-058"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-059",
+          "size": 33554432,
+          "sha256": "d9a6d67c2f4ad77cf32f6a41359c82547e56181cb71fff368f5ee622a231841a",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-059"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-060",
+          "size": 33554432,
+          "sha256": "ee584e6c829d03965101abcca51319448323344a82eef1f57582329cfc984a36",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-060"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-061",
+          "size": 33554432,
+          "sha256": "d5ba960b90b17994b6914c6daf480c2af6b376e6b33638c61692a3950d593240",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-061"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-062",
+          "size": 33554432,
+          "sha256": "548b6a330bbd6531af86937bc0f7abdf6b6a38f3ea424dbce32772b422e7207a",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-062"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-063",
+          "size": 33554432,
+          "sha256": "4801f44c92213509abcf5d016b56c1f78096a2dadff5121b399f381213636b39",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-063"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-064",
+          "size": 33554432,
+          "sha256": "bcba7e317d1bd9a1d2307e0beffccc9d31994f730286fbfd18a1529e25a667fe",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-064"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-065",
+          "size": 33554432,
+          "sha256": "a503eb7a61b78e1f52c0ff77782fe617182e93812dbc72d1bc3670d6ad71e73b",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-065"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-066",
+          "size": 33554432,
+          "sha256": "c22637d18ca41cadc8c3be8f6b927dc23e71a4194767c160acf4037ffa792700",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-066"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-067",
+          "size": 33554432,
+          "sha256": "16d5d05a9c9a87a81fd5d7521b1cbd1a4f67d4cc388ae3733e6f1309e9b39895",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-067"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-068",
+          "size": 33554432,
+          "sha256": "32aa4c1aa169f35b771ebe96c835441a2ef979f208789c798ad3aa7467f77db1",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-068"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-069",
+          "size": 33554432,
+          "sha256": "9aa6d46b00aad549193399116343b527171757fe9d273aab72bbbe166365ba82",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-069"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-070",
+          "size": 33554432,
+          "sha256": "57f177b6802275b4aa146fcb5ba040f6d22dbbe8796d24ab8391c587942f1657",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-070"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-071",
+          "size": 33554432,
+          "sha256": "ea693856a612ab288f535be1f9d75f55463967809f97a130a84c7708bac5cba0",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-071"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-072",
+          "size": 33554432,
+          "sha256": "890653f0d35329853ae33563d2683a185bb2be7064b56f2a84fe5734cb2ca6fa",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-072"
+        },
+        {
+          "name": "r04-r06-full-32m.tar.gz.part-073",
+          "size": 11848880,
+          "sha256": "0d3d1263cb63c23002731ec685d952997b76c3c186152d76d41ae6230e759bdc",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-073"
+        },
+        {
+          "name": "README.md",
+          "size": 1556,
+          "sha256": "fa44c02a52928069aace906156abd695b4aa71c762e2f4d2d86cb29afeb08ab2",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/README.md"
+        },
+        {
+          "name": "release_notes.md",
+          "size": 871,
+          "sha256": "1d97775a3b4e3082b2ab7cea8edcd88cc69920d7e5ed5cfda79467f31ae66a10",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/release_notes.md"
+        },
+        {
+          "name": "REMOTE_VERIFICATION.tsv",
+          "size": 14647,
+          "sha256": "cd9f1a28fe6e5b82ddd19787e7c079988ee820b63af9712d06e6daec66e6fb2b",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/REMOTE_VERIFICATION.tsv"
+        },
+        {
+          "name": "runtime_handoff_ledger.R06.snapshot.json",
+          "size": 7798078,
+          "sha256": "86990e6156267c36334c31ae3ead733807d11286002d0fe00425b395d3397670",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/runtime_handoff_ledger.R06.snapshot.json"
+        },
+        {
+          "name": "SHA256SUMS",
+          "size": 7396,
+          "sha256": "192d3d2f50f673d5d5a8d06265f7dff54d2d9c555c370171f1b34d025d63d1a5",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/SHA256SUMS"
+        },
+        {
+          "name": "SOURCE_METADATA.nul",
+          "size": 28234788,
+          "sha256": "304e9a17ff0a1c36226e2ba8e8f40dc07a93bdb7456ebc80cd5876354d657491",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/SOURCE_METADATA.nul"
+        },
+        {
+          "name": "SOURCE_METADATA.tsv",
+          "size": 28234788,
+          "sha256": "86d63c22a5cfbe4a51f3e133c2ec96bbaf3b620dec34b8161b29c8626f24e1d0",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/SOURCE_METADATA.tsv"
+        },
+        {
+          "name": "SOURCE_SCOPE_SUMMARY.tsv",
+          "size": 215,
+          "sha256": "e045117753e963dcaf8e587c6d787f8fcaeba1661117518ca22bf1f33cdbea18",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/SOURCE_SCOPE_SUMMARY.tsv"
+        }
+      ]
+    },
+    {
+      "tag": "perf-trace-batch8-r01-r03-batch8-dp2-fresh-003-20260827",
+      "url": "https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-r01-r03-batch8-dp2-fresh-003-20260827",
+      "draft": false,
+      "assets": [
+        {
+          "name": "ARCHIVE_MEMBERS.nul",
+          "size": 7005652,
+          "sha256": "1528f2f658fc44d1b65a951c44df36a11c1ec18321f7e57316584a7add868f63",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r01-r03-batch8-dp2-fresh-003-20260827/ARCHIVE_MEMBERS.nul"
+        },
+        {
+          "name": "ARCHIVE_MEMBERS.tsv",
+          "size": 9178660,
+          "sha256": "d0f2372630492c40a6af97e16d8de75be35803e28cdd26eeabab9dcb5aba5f59",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r01-r03-batch8-dp2-fresh-003-20260827/ARCHIVE_MEMBERS.tsv"
+        },
+        {
+          "name": "AUTO_TRACE_TARGET_VERIFICATION.md",
+          "size": 876,
+          "sha256": "df828a8d77b9d55952ace852738c08bcd63218ea7374e4017c737ea45d609c02",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r01-r03-batch8-dp2-fresh-003-20260827/AUTO_TRACE_TARGET_VERIFICATION.md"
+        },
+        {
+          "name": "CODE_MEMBERS.nul",
+          "size": 3816,
+          "sha256": "7915b940740fdb76b99bc04cc4c1372e1bdc37c6a21c68a5bb0c1fa95fd50119",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r01-r03-batch8-dp2-fresh-003-20260827/CODE_MEMBERS.nul"
+        },
+        {
+          "name": "CODE_MEMBERS.tsv",
+          "size": 5853,
+          "sha256": "0928efda0dac4f5afa7de7c57720d0e3c8ded3e0bd10085fd43664f1d7a0d297",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r01-r03-batch8-dp2-fresh-003-20260827/CODE_MEMBERS.tsv"
+        },
+        {
+          "name": "EXCLUDED_RUNTIME_SOCKETS.tsv",
+          "size": 40972,
+          "sha256": "e52a6d5292832014d53abfe0b00b6a560b6bd4ab0b5905d371ef8efb2c49f906",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r01-r03-batch8-dp2-fresh-003-20260827/EXCLUDED_RUNTIME_SOCKETS.tsv"
+        },
+        {
+          "name": "PARTS.tsv",
+          "size": 922,
+          "sha256": "d419e3b423b69acdf31a6bfa4549164eec5875b33ed20dcd633cf7e90d87d9cc",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r01-r03-batch8-dp2-fresh-003-20260827/PARTS.tsv"
+        },
+        {
+          "name": "perf_trace_batch8-r01-r03-code-workflow-snapshot.tar.gz",
+          "size": 355872,
+          "sha256": "af175e56dc973f7c1a685eba41f8c647fbd0a70f31ef6fa135a772d0714eea21",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r01-r03-batch8-dp2-fresh-003-20260827/perf_trace_batch8-r01-r03-code-workflow-snapshot.tar.gz"
+        },
+        {
+          "name": "r01-r03-full.tar.gz.part-000",
+          "size": 1992294400,
+          "sha256": "bf9c9a232c9ee00b59c5339ca491ea9ca3a5c06b6dbb822323c3116b30afd16d",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r01-r03-batch8-dp2-fresh-003-20260827/r01-r03-full.tar.gz.part-000"
+        },
+        {
+          "name": "r01-r03-full.tar.gz.part-001",
+          "size": 1992294400,
+          "sha256": "d772e5bdc4d32abaa2b9ee6911d79343cf15bfb04392f7b33cfda664f49dffa4",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r01-r03-batch8-dp2-fresh-003-20260827/r01-r03-full.tar.gz.part-001"
+        },
+        {
+          "name": "r01-r03-full.tar.gz.part-002",
+          "size": 1992294400,
+          "sha256": "60d03bc9976ce45d43990892eaa305e6746328b6b9606b7862ab6f645edf50dd",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r01-r03-batch8-dp2-fresh-003-20260827/r01-r03-full.tar.gz.part-002"
+        },
+        {
+          "name": "r01-r03-full.tar.gz.part-003",
+          "size": 1992294400,
+          "sha256": "887919b38294ce09e69a142c5fb737cdc28c1469da49bb7948a72468084dde37",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r01-r03-batch8-dp2-fresh-003-20260827/r01-r03-full.tar.gz.part-003"
+        },
+        {
+          "name": "r01-r03-full.tar.gz.part-004",
+          "size": 1992294400,
+          "sha256": "84397b73a5dd3df2968fc5a73e62b1083f4c5243fcbd7106ed4d0af0b2f935f7",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r01-r03-batch8-dp2-fresh-003-20260827/r01-r03-full.tar.gz.part-004"
+        },
+        {
+          "name": "r01-r03-full.tar.gz.part-005",
+          "size": 1992294400,
+          "sha256": "517ee9d64d608b270b5e1cdfaaa7b017e0005178b7bcf711889b8cadcc38bb82",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r01-r03-batch8-dp2-fresh-003-20260827/r01-r03-full.tar.gz.part-005"
+        },
+        {
+          "name": "r01-r03-full.tar.gz.part-006",
+          "size": 1809599301,
+          "sha256": "a5241ba2f4a9153c856d4bb5f0bbffcb97568366e91ae552811ba6368590f570",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r01-r03-batch8-dp2-fresh-003-20260827/r01-r03-full.tar.gz.part-006"
+        },
+        {
+          "name": "README.md",
+          "size": 1667,
+          "sha256": "5bd7c148d2008832f21b07e88ae862806beda2eca6f67e6d741b11bb41438be1",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r01-r03-batch8-dp2-fresh-003-20260827/README.md"
+        },
+        {
+          "name": "release_notes.md",
+          "size": 1308,
+          "sha256": "dd948f49082421575a4b668502ccd95c623a08b9703d100e0d89233ff825ab49",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r01-r03-batch8-dp2-fresh-003-20260827/release_notes.md"
+        },
+        {
+          "name": "REMOTE_VERIFICATION.tsv",
+          "size": 584,
+          "sha256": "bccf61870585b9d24d76a59f5f31501c94f38457c658b53aa35db1215dc05a11",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r01-r03-batch8-dp2-fresh-003-20260827/REMOTE_VERIFICATION.tsv"
+        },
+        {
+          "name": "SHA256SUMS",
+          "size": 787,
+          "sha256": "959e35c1da443bd7575275e07a5c81752a67525cec94f719dd6956b85058e4b6",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r01-r03-batch8-dp2-fresh-003-20260827/SHA256SUMS"
+        },
+        {
+          "name": "SOURCE_SCOPE_SUMMARY.tsv",
+          "size": 156,
+          "sha256": "f87d0ba51573bb158e4a25815e1f1ec251c9e3a7827fb36e4c3596ea0a6ee9b5",
+          "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r01-r03-batch8-dp2-fresh-003-20260827/SOURCE_SCOPE_SUMMARY.tsv"
+        }
+      ]
+    }
+  ]
+}
