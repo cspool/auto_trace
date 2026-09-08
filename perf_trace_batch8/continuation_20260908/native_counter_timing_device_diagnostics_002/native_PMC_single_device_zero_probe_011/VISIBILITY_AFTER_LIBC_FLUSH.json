@@ -1,0 +1,17 @@
+{
+  "phase": "VISIBILITY_AFTER_LIBC_FLUSH.json",
+  "workers": [
+    {
+      "rank": 0,
+      "pid": 897621,
+      "native_files": [
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_single_device_zero_probe_011/hipprof_tmprpl_data_260909_004554_897616/input0_results_260909_004554/pmc_results_897621.txt",
+          "size": 21903,
+          "prefix_sha256": "ab0bb5ce50aa083b6f937de898f445b238f40f4daaad1d861e02385f8cda4c99"
+        }
+      ]
+    }
+  ],
+  "model_free": true
+}

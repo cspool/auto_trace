@@ -1,0 +1,50 @@
+{
+  "utc": "2026-09-08T16:48:26.696261+00:00",
+  "status": "diagnostic_only",
+  "results": [
+    {
+      "probe": "native_PMC_synchronized_transitions_probe_008",
+      "counts": {
+        "0": 4,
+        "1": 4
+      },
+      "result_sha256": "5cd8b66a54b7e3c25d0d0b169f516647a1ce6ddbf8c0779c29ad1b3e5ca7fde7",
+      "full_model": false
+    },
+    {
+      "probe": "native_PMC_synchronized_dual_context_probe_009",
+      "counts": {
+        "1": 4
+      },
+      "result_sha256": "635903fdae9a2a19257c3560cd590c66c4147f812a604dead20bc3f5fb38618f",
+      "full_model": false
+    },
+    {
+      "probe": "native_PMC_synchronized_masked_probe_010",
+      "counts": {
+        "1": 4
+      },
+      "result_sha256": "cf27e397741d1a575c20295d1ba2467908daa828e5048eab002525c470273e9c",
+      "full_model": false
+    },
+    {
+      "probe": "native_PMC_single_device_zero_probe_011",
+      "counts": {
+        "0": 4
+      },
+      "result_sha256": "458b33350621f319334ef876c331efcffc72967d3649e0cf8c1b97ef474ac87e",
+      "full_model": false
+    },
+    {
+      "probe": "native_PMC_no_flush_env_probe_012",
+      "counts": {
+        "0": 4
+      },
+      "result_sha256": "e676e63c66f4d868b0581042abfeecb18f0823577235fd04b6b214106d941902",
+      "full_model": false
+    }
+  ],
+  "root_cause_proven": false,
+  "full_model_repair_admitted": false,
+  "conclusion": "Single device zero recorded all four targets. Baseline with synchronized transitions passed once; dual-context, masked synchronized, and no-flush-env dual-worker probes each lost a worker. No tested multi-worker strategy is yet established as reliable. Serial worker initialization before concurrent target collection is the next bounded test."
+}
