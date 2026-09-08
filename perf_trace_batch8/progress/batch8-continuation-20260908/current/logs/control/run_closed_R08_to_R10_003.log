@@ -33,3 +33,15 @@ OUTER_CPU_SUFFIX_START ['/usr/bin/python3', '-B', '/public/home/accl15ptg7/run_R
 OUTER_PHASE_CLOSED seal complete 2
 OUTER_CPU_SUFFIX_EXIT ['/usr/bin/python3', '-B', '/public/home/accl15ptg7/run_R08_R10/phase_runner_002.py', '--stage-root', '/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001', '--phase', 'seal', '--timeout', '24060', '--', '/usr/bin/python3', '-B', '/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/closure_001/seal_r08.py']
 OUTER_CPU_SUFFIX_START ['/usr/bin/python3', '-B', '/public/home/accl15ptg7/run_R08_R10/phase_runner_002.py', '--stage-root', '/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001', '--phase', 'completion_audit', '--timeout', '23355', '--', '/usr/bin/python3', '-B', '/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/closure_001/audit_r08.py']
+OUTER_PHASE_CLOSED completion_audit complete 2
+OUTER_CPU_SUFFIX_EXIT ['/usr/bin/python3', '-B', '/public/home/accl15ptg7/run_R08_R10/phase_runner_002.py', '--stage-root', '/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001', '--phase', 'completion_audit', '--timeout', '23355', '--', '/usr/bin/python3', '-B', '/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/closure_001/audit_r08.py']
+OUTER_CPU_SUFFIX_START ['/usr/bin/python3', '-B', '/public/home/accl15ptg7/run_R08_R10/prepare_stage_assignments_004.py', 'handoff', 'R08']
+OUTER_HANDOFF_SEALED R08 6d0f64acc912472645bbca489bd16ff88f58eaeb91bd733f55558e0198bfdbbd
+OUTER_CPU_SUFFIX_EXIT ['/usr/bin/python3', '-B', '/public/home/accl15ptg7/run_R08_R10/prepare_stage_assignments_004.py', 'handoff', 'R08']
+OUTER_CPU_SUFFIX_START ['/usr/bin/python3', '-B', '/public/home/accl15ptg7/run_R08_R10/prepare_stage_assignments_004.py', 'assign', 'R09']
+PREFIX_FULL_MANIFEST_REHASHED R09 R01 73
+PREFIX_FULL_MANIFEST_REHASHED R09 R02 1437
+PREFIX_FULL_MANIFEST_REHASHED R09 R03 17182
+PREFIX_FULL_MANIFEST_REHASHED R09 R04 136521
+PREFIX_FULL_MANIFEST_REHASHED R09 R05 69
+PREFIX_FULL_MANIFEST_REHASHED R09 R06 152
