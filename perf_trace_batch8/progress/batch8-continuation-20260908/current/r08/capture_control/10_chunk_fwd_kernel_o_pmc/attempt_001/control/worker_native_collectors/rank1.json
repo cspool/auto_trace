@@ -1,0 +1,25 @@
+{
+  "CUDA_VISIBLE_DEVICES": "0,1",
+  "HIP_VISIBLE_DEVICES": "0,1",
+  "collector_descriptor": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/10_chunk_fwd_kernel_o_pmc/attempt_001/native_collectors/rank1/COLLECTOR_DESCRIPTOR.json",
+    "sha256": "571ee8ceafc0a2a86723f6d14f2f7143935adb3ed81949eade87aee494a4b570",
+    "size": 1494
+  },
+  "native_injected_input": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/10_chunk_fwd_kernel_o_pmc/attempt_001/native_collectors/rank1/hipprof_tmprpl_data_260909_022601_981843/input0.txt",
+    "sha256": "f5fec10e014a6bd95a5f80dbfc25195436c11633bb92feaec1683b614e9a6dde",
+    "size": 337
+  },
+  "native_input_snapshot": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/10_chunk_fwd_kernel_o_pmc/attempt_001/native_collectors/rank1/native_input_at_worker_start.txt",
+    "sha256": "f5fec10e014a6bd95a5f80dbfc25195436c11633bb92feaec1683b614e9a6dde",
+    "size": 337
+  },
+  "native_output_directory": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/10_chunk_fwd_kernel_o_pmc/attempt_001/native_collectors/rank1/hipprof_tmprpl_data_260909_022601_981843/input0_results_260909_022601",
+  "rank": 1,
+  "realtime_ns": 1788892026615580910,
+  "status": "native_collector_bound_before_device_initialization",
+  "unit_directory": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/10_chunk_fwd_kernel_o_pmc/attempt_001/native_collectors/rank1",
+  "worker_pid": 982060
+}
