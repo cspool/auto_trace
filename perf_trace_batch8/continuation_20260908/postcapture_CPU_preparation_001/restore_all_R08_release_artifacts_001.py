@@ -32,6 +32,7 @@ def all_captures_closed():
  return i,rec(index)
 def folder(seg):return C/'publication/checkpoint_001' if seg=='01__gqa6_pmc' else C/'publication/r08_02__gqa6_pmc_read' if seg=='02__gqa6_pmc_read' else C/'publication_emergency'/('r08_'+seg)
 def wait_all_publications_and_offloads(index):
+ ready=False
  while time.time()<DEADLINE-1800:
   ready=all((folder(x['segment_id'])/'PUBLICATION_COMPLETE.json').exists() and (R/'raw/runtime_tools/remote_release_offloads_001'/(x['segment_id']+'.complete.json')).exists() for x in index['captures'])
   if ready:break
@@ -110,10 +111,13 @@ class ConcatReader:
 
 def restore_segment(offload):
  seg=offload['segment_id'];complete=O/(seg+'.complete.json')
- if complete.exists():
-  result=read(complete)
-  for x in offload['temporarily_evicted_files']:verify(x)
-  return result
+ previous=read(complete) if complete.exists() else None
+ if previous:
+  missing=[x for x in offload['temporarily_evicted_files'] if not Path(x['path']).exists()]
+  for x in offload['temporarily_evicted_files']:
+   if Path(x['path']).exists():verify(x)
+  if not missing:return previous
+  print('RESTORING_PREVIOUSLY_VERIFIED_FILES_LOST_WITH_CONTAINER',seg,len(missing),flush=True)
  out=C/'release_restore_downloads_001'/seg;out.mkdir(parents=True,exist_ok=True);assets=[a for a in offload['remote_verification']['assets'] if '.tar.zst' in a['name']];assert assets and all(a['digest'].startswith('sha256:') for a in assets)
  paths=[download(a,out) for a in sorted(assets,key=lambda a:a['name'])]
  filemanifest=offload['published_file_manifest'];verify(filemanifest);expected={x['path']:x for x in read(filemanifest['path'])['files']};wanted={x['archive_member_path']:x for x in offload['temporarily_evicted_files']};seen=set();moves=[]
@@ -147,7 +151,11 @@ def restore_segment(offload):
      moves.append({**x,'source_path':str(source),'same_bytes':True,'canonical_link_verified':True,'source_content_not_changed':True})
     verify(x);seen.add(member.name);print('R08_RAW_SOURCE_RESTORED',seg,source.name,x['size'],flush=True)
  assert seen==set(wanted),'every temporarily evicted file restored'
- result={'status':'complete','segment_id':seg,'prepared_record':rec(prepared),'file_mappings':moves,'restored_files':offload['temporarily_evicted_files'],'all_original_SHA256_verified':True,'remote_backing':offload['remote_verification'],'completed_utc':datetime.datetime.now(datetime.timezone.utc).isoformat()};save(complete,result)
+ result={'status':'complete','segment_id':seg,'prepared_record':rec(prepared),'file_mappings':moves,'restored_files':offload['temporarily_evicted_files'],'all_original_SHA256_verified':True,'remote_backing':offload['remote_verification'],'completed_utc':datetime.datetime.now(datetime.timezone.utc).isoformat()}
+ if previous:
+  for key in ['segment_id','prepared_record','file_mappings','restored_files','remote_backing']:assert result[key]==previous[key],'rehydration preserves existing receipt identity'
+  save(O/(seg+'.rehydrated.'+str(time.time_ns())+'.json'),{'status':'complete','original_complete_receipt':rec(complete),'all_original_files_recreated_and_SHA256_verified':True,'original_receipt_unchanged':True});result=previous
+ else:save(complete,result)
  for path in paths:path.unlink()
  return result
 

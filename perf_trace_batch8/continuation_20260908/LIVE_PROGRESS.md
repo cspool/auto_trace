@@ -39,3 +39,11 @@ An outer waiter is running; R09/R10 business execution has not started. New CPU-
 The immutable storage authorization maps are cached per CPU process to avoid parsing and rehashing the same multi-megabyte proof for each of more than 136,000 predecessor files; each actual source file still gets its own full content hash and exact symlink check. A production-path check validated 300 paths in 0.72 seconds with a single authorization-map load.
 
 Fourth capture retry revision017: both worker warmup hipProfilerStart calls returned 0 and both native PMC files are growing. Full measured and independent attribution acceptance still pending.
+
+## 2026-09-08 10:26 UTC: all-eight early target coverage in fourth capture
+
+Fourth segment attempt002 passed the native per-worker pre-measurement health check at 10:11:16 UTC. Both original warmups completed; both native PMC files were about 715 MB, with exact PID/device identities. The measured eight-request batch remains running.
+
+A read-only early marker check now observes the full declared R06 first-prefill/first-decode process target universe: 8 requests, 12,544 process rows, exact logical-target sets per request/phase, no missing/unexpected/duplicate targets, exactly one worker per rank. This is a live-prefix coverage checkpoint and does not substitute final native DB correlation or PMC attribution. The full 1,024-token workload per request remains required.
+
+The restoration CPU fixture additionally simulates loss of a previously restored root backing while NFS receipts remain. It successfully recreates the original bytes without rewriting the immutable completion receipt. Actual weights remain on root and no actual post-capture restoration has run.
