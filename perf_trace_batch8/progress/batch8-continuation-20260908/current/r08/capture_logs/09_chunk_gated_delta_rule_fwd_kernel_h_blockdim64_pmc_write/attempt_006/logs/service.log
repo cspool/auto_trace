@@ -196,3 +196,26 @@ INFO 09-09 01:40:21 [utils.py:250] Waiting for API servers to complete ...
 (ApiServer_0 pid=929102) INFO:     Application startup complete.
 (ApiServer_1 pid=929103) INFO:     127.0.0.1:42870 - "POST /v1/chat/completions HTTP/1.1" 200 OK
 (ApiServer_1 pid=929103) INFO:     127.0.0.1:42868 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(ApiServer_0 pid=929102) INFO:     127.0.0.1:47862 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(ApiServer_0 pid=929102) INFO:     127.0.0.1:47868 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(ApiServer_1 pid=929103) INFO:     127.0.0.1:47876 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(ApiServer_1 pid=929103) INFO:     127.0.0.1:47880 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(ApiServer_1 pid=929103) INFO:     127.0.0.1:47930 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(ApiServer_1 pid=929103) INFO:     127.0.0.1:47892 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(ApiServer_0 pid=929102) INFO:     127.0.0.1:47920 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(ApiServer_1 pid=929103) INFO:     127.0.0.1:47908 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(EngineCore_DP1 pid=929101) INFO 09-09 01:55:45 [core.py:1201] Shutdown initiated (timeout=0)
+(EngineCore_DP1 pid=929101) INFO 09-09 01:55:45 [core.py:1224] Shutdown complete
+INFO 09-09 01:55:45 [utils.py:289] Received KeyboardInterrupt, shutting down API servers...
+(EngineCore_DP0 pid=929100) INFO 09-09 01:55:45 [core.py:1201] Shutdown initiated (timeout=0)
+(EngineCore_DP0 pid=929100) INFO 09-09 01:55:45 [core.py:1224] Shutdown complete
+(ApiServer_1 pid=929103) INFO 09-09 01:55:45 [launcher.py:137] Shutting down FastAPI HTTP server.
+(ApiServer_1 pid=929103) INFO:     Shutting down
+(ApiServer_0 pid=929102) WARNING 09-09 01:55:45 [launcher.py:131] port 8001 is used by process psutil.Process(pid=929103, name='VLLM::APIServer_1', status='sleeping') launched with command:
+(ApiServer_0 pid=929102) WARNING 09-09 01:55:45 [launcher.py:131] VLLM::APIServer_1                                                                                                                   
+(ApiServer_0 pid=929102) INFO 09-09 01:55:45 [launcher.py:137] Shutting down FastAPI HTTP server.
+(ApiServer_0 pid=929102) INFO:     Shutting down
+(ApiServer_1 pid=929103) INFO:     Waiting for application shutdown.
+(ApiServer_1 pid=929103) INFO:     Application shutdown complete.
+(ApiServer_0 pid=929102) INFO:     Waiting for application shutdown.
+(ApiServer_0 pid=929102) INFO:     Application shutdown complete.
