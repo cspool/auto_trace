@@ -1,0 +1,100 @@
+{
+  "status": "complete",
+  "cases": [
+    {
+      "segment_id": "01__gqa6_pmc",
+      "attempt": "attempt_005",
+      "expected": "complete",
+      "observed": {
+        "status": "complete",
+        "workers": [
+          {
+            "rank": 0,
+            "native_device": 0,
+            "pid": 173996,
+            "worker_identity_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/01__gqa6_pmc/attempt_005/workload/r01_events/rank0/events.173996.jsonl",
+            "native_raw_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/01__gqa6_pmc/attempt_005/control/native_pmc_before_collector_merge/pmc_results_173996.txt",
+            "observed_native_bytes": 18700634,
+            "examined_prefix_bytes": 65536,
+            "examined_prefix_sha256": "012b86b3f602b67bbd50787f06609f4526645da91d15b65cb1abc28d6a43b98e",
+            "native_dispatch_headers_in_prefix": 12
+          },
+          {
+            "rank": 1,
+            "native_device": 1,
+            "pid": 174038,
+            "worker_identity_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/01__gqa6_pmc/attempt_005/workload/r01_events/rank1/events.174038.jsonl",
+            "native_raw_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/01__gqa6_pmc/attempt_005/control/native_pmc_before_collector_merge/pmc_results_174038.txt",
+            "observed_native_bytes": 18791093,
+            "examined_prefix_bytes": 65536,
+            "examined_prefix_sha256": "7fd0bc00e088cf2ceda965ba6a04071f497cf387d2760279d6f8fa70b4c48aee",
+            "native_dispatch_headers_in_prefix": 12
+          }
+        ],
+        "measured_requests_started": false,
+        "read_only_native_file_gate": true,
+        "no_native_calls_no_added_workload": true
+      }
+    },
+    {
+      "segment_id": "02__gqa6_pmc_read",
+      "attempt": "attempt_001",
+      "expected": "complete",
+      "observed": {
+        "status": "complete",
+        "workers": [
+          {
+            "rank": 0,
+            "native_device": 0,
+            "pid": 206038,
+            "worker_identity_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/02__gqa6_pmc_read/attempt_001/workload/r01_events/rank0/events.206038.jsonl",
+            "native_raw_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/02__gqa6_pmc_read/attempt_001/control/native_pmc_before_collector_merge/pmc_results_206038.txt",
+            "observed_native_bytes": 18771195,
+            "examined_prefix_bytes": 65536,
+            "examined_prefix_sha256": "ade4a9b0cf2e2a2f7f8cf4fdf9ec7df5d4d5b8db31b65da334794d33e466ae35",
+            "native_dispatch_headers_in_prefix": 12
+          },
+          {
+            "rank": 1,
+            "native_device": 1,
+            "pid": 205996,
+            "worker_identity_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/02__gqa6_pmc_read/attempt_001/workload/r01_events/rank1/events.205996.jsonl",
+            "native_raw_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/02__gqa6_pmc_read/attempt_001/control/native_pmc_before_collector_merge/pmc_results_205996.txt",
+            "observed_native_bytes": 18858212,
+            "examined_prefix_bytes": 65536,
+            "examined_prefix_sha256": "13b3a4ab0ccf697b166c3140781a693084c4557c5b26a246497cf77bc3514aca",
+            "native_dispatch_headers_in_prefix": 12
+          }
+        ],
+        "measured_requests_started": false,
+        "read_only_native_file_gate": true,
+        "no_native_calls_no_added_workload": true
+      }
+    },
+    {
+      "segment_id": "03__gqa6_pmc_write",
+      "attempt": "attempt_001",
+      "expected": "failed",
+      "observed": {
+        "status": "failed",
+        "reason": "empty native PMC worker file before measured requests",
+        "rank": 1,
+        "pid": 244542,
+        "workers": [
+          {
+            "rank": 0,
+            "native_device": 0,
+            "pid": 244529,
+            "worker_identity_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/03__gqa6_pmc_write/attempt_001/workload/r01_events/rank0/events.244529.jsonl",
+            "native_raw_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/03__gqa6_pmc_write/attempt_001/control/native_pmc_before_collector_merge/pmc_results_244529.txt",
+            "observed_native_bytes": 18800332,
+            "examined_prefix_bytes": 65536,
+            "examined_prefix_sha256": "7692fabf1647ad79ad10167e9cd4cc630c585fa5d5d236b9fb2554d3b629042e",
+            "native_dispatch_headers_in_prefix": 12
+          }
+        ]
+      }
+    }
+  ],
+  "device_or_model_execution_performed": false
+}

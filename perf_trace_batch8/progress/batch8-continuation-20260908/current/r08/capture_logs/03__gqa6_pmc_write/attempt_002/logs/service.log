@@ -1,0 +1,5 @@
+starting internal DP=2, TP=1 on HIP devices 0,1
+model=/root/Qwen3.5-27B port=8001 backend=mp
+/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/__init__.py:7: RuntimeWarning: Failed to read commit hash:
+No module named 'vllm._version'
+  from .version import __version__, __version_tuple__  # isort:skip

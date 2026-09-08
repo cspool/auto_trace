@@ -1,0 +1,200 @@
+{
+  "status": "complete",
+  "strategy": "unchanged revision013 native acquisition; read-only both-worker native PMC health gate after original2warmups before full8measured requests",
+  "reason": "third capture rank1 native PMC empty; actual128 targets only64 attributable; restart whole full-DP2 capture without worker splice",
+  "root_cause_claimed_proven": false,
+  "cpu_health_regressions": {
+    "status": "complete",
+    "cases": [
+      {
+        "segment_id": "01__gqa6_pmc",
+        "attempt": "attempt_005",
+        "expected": "complete",
+        "observed": {
+          "status": "complete",
+          "workers": [
+            {
+              "rank": 0,
+              "native_device": 0,
+              "pid": 173996,
+              "worker_identity_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/01__gqa6_pmc/attempt_005/workload/r01_events/rank0/events.173996.jsonl",
+              "native_raw_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/01__gqa6_pmc/attempt_005/control/native_pmc_before_collector_merge/pmc_results_173996.txt",
+              "observed_native_bytes": 18700634,
+              "examined_prefix_bytes": 65536,
+              "examined_prefix_sha256": "012b86b3f602b67bbd50787f06609f4526645da91d15b65cb1abc28d6a43b98e",
+              "native_dispatch_headers_in_prefix": 12
+            },
+            {
+              "rank": 1,
+              "native_device": 1,
+              "pid": 174038,
+              "worker_identity_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/01__gqa6_pmc/attempt_005/workload/r01_events/rank1/events.174038.jsonl",
+              "native_raw_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/01__gqa6_pmc/attempt_005/control/native_pmc_before_collector_merge/pmc_results_174038.txt",
+              "observed_native_bytes": 18791093,
+              "examined_prefix_bytes": 65536,
+              "examined_prefix_sha256": "7fd0bc00e088cf2ceda965ba6a04071f497cf387d2760279d6f8fa70b4c48aee",
+              "native_dispatch_headers_in_prefix": 12
+            }
+          ],
+          "measured_requests_started": false,
+          "read_only_native_file_gate": true,
+          "no_native_calls_no_added_workload": true
+        }
+      },
+      {
+        "segment_id": "02__gqa6_pmc_read",
+        "attempt": "attempt_001",
+        "expected": "complete",
+        "observed": {
+          "status": "complete",
+          "workers": [
+            {
+              "rank": 0,
+              "native_device": 0,
+              "pid": 206038,
+              "worker_identity_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/02__gqa6_pmc_read/attempt_001/workload/r01_events/rank0/events.206038.jsonl",
+              "native_raw_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/02__gqa6_pmc_read/attempt_001/control/native_pmc_before_collector_merge/pmc_results_206038.txt",
+              "observed_native_bytes": 18771195,
+              "examined_prefix_bytes": 65536,
+              "examined_prefix_sha256": "ade4a9b0cf2e2a2f7f8cf4fdf9ec7df5d4d5b8db31b65da334794d33e466ae35",
+              "native_dispatch_headers_in_prefix": 12
+            },
+            {
+              "rank": 1,
+              "native_device": 1,
+              "pid": 205996,
+              "worker_identity_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/02__gqa6_pmc_read/attempt_001/workload/r01_events/rank1/events.205996.jsonl",
+              "native_raw_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/02__gqa6_pmc_read/attempt_001/control/native_pmc_before_collector_merge/pmc_results_205996.txt",
+              "observed_native_bytes": 18858212,
+              "examined_prefix_bytes": 65536,
+              "examined_prefix_sha256": "13b3a4ab0ccf697b166c3140781a693084c4557c5b26a246497cf77bc3514aca",
+              "native_dispatch_headers_in_prefix": 12
+            }
+          ],
+          "measured_requests_started": false,
+          "read_only_native_file_gate": true,
+          "no_native_calls_no_added_workload": true
+        }
+      },
+      {
+        "segment_id": "03__gqa6_pmc_write",
+        "attempt": "attempt_001",
+        "expected": "failed",
+        "observed": {
+          "status": "failed",
+          "reason": "empty native PMC worker file before measured requests",
+          "rank": 1,
+          "pid": 244542,
+          "workers": [
+            {
+              "rank": 0,
+              "native_device": 0,
+              "pid": 244529,
+              "worker_identity_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/03__gqa6_pmc_write/attempt_001/workload/r01_events/rank0/events.244529.jsonl",
+              "native_raw_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/03__gqa6_pmc_write/attempt_001/control/native_pmc_before_collector_merge/pmc_results_244529.txt",
+              "observed_native_bytes": 18800332,
+              "examined_prefix_bytes": 65536,
+              "examined_prefix_sha256": "7692fabf1647ad79ad10167e9cd4cc630c585fa5d5d236b9fb2554d3b629042e",
+              "native_dispatch_headers_in_prefix": 12
+            }
+          ]
+        }
+      }
+    ],
+    "device_or_model_execution_performed": false
+  },
+  "frozen_tools": [
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_014/launch_vllm.py",
+      "size": 927,
+      "sha256": "06ed4160d97ba5df4b70614c9bca4d402dfc87c3f9a7d005a02d02ad4e92055b"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_014/r07_common.py",
+      "size": 65595,
+      "sha256": "2c6a4995d527f1cc71742f5293dcbbba9ff3587680b2e1cce155eada555e0046"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_014/r07_marker_contract.py",
+      "size": 3275,
+      "sha256": "2f8b80cb4e2be8f7b837c959f07ba01d7283499055ff362cd0b09f35be09c11e"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_014/r08_memory_profile.py",
+      "size": 5356,
+      "sha256": "62fb519f3e610a77034e9e402ed7e15845ac14aaae0edd39ccf93842ad353d18"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_014/r08_native.py",
+      "size": 7880,
+      "sha256": "dde480e545bf3233313104b53f6b76f54d05ecca4e61ec4570c726bb4cbd7157"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_014/r08_native_health.py",
+      "size": 2847,
+      "sha256": "b1d04b295085593d10d5fa1b3b42579c6e9692548685b544710fc981cc835aa8"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_014/r08_pmc_gate.py",
+      "size": 10399,
+      "sha256": "9171815960ab2124292843d2a1e445392434a5b0712c760b9057dd6a8d050fc4"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_014/r08_process_overlay.py",
+      "size": 27675,
+      "sha256": "6e13052a3ef414919572ccecb189cf5b48922e14056317bff2d59fb81502380b"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_014/r08_workload_driver.py",
+      "size": 16312,
+      "sha256": "6fdf740914d24aab1a45a545a990c4b590005909d22d2d7addef3bf8b6da42ac"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_014/run_capture.py",
+      "size": 13247,
+      "sha256": "ba4f781556f50a42d83bd8b8a4a2f46f5794ab9a23c8fec09b79baff6fb437a8"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_014/sitecustomize.py",
+      "size": 2051,
+      "sha256": "26507608c562a55f5611a2d8a9feec3ec6bfb55a79d05059f2277e61ad1b463c"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_014/source_abi_probe.py",
+      "size": 2030,
+      "sha256": "68b83e05c8d52b55f6b42d176669cf5b1a4aa3965b674454485402fd6fb09ed6"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_014/vllm_r08_contract_shim.sh",
+      "size": 285,
+      "sha256": "6394bac8cbf0aa5ebf7e4c99dba11626c8b7bbb267659d8da0d687d013dee72a"
+    }
+  ],
+  "capture_plan_sha256": "78b987be5b0b763c4260ce56f6bba759675bfbcce5989a5e368aa7549d1b1e9e",
+  "prior_runtime_gate": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/validation/runtime_capture_gate_007.json",
+    "size": 5630,
+    "sha256": "97892eee286a37d78e6d78e544355929167712f56afe03702e1cb952fb2a57e1"
+  },
+  "model_initializations_this_gate": 0,
+  "device_queries_this_gate": 0,
+  "same_workload": true,
+  "same_DP2": true,
+  "same_native_counter_marker_semantics": true,
+  "runtime_tool_storage": {
+    "reason": "home NFS50GB quota newly reports full; new tool bytes stored through existing authorized raw bulk entrypoint on root disk",
+    "canonical_runtime_artifact_root_unchanged": true,
+    "tools_root": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_014",
+    "tool_root_lexically_inside_R08": true,
+    "bulk_authorization": {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/authorization/bulk_storage_authorization.json",
+      "size": 1781,
+      "sha256": "7ceb2b611620633b3e5dada477405d59ae48362cdca4bf046aeb71b678e40735"
+    }
+  },
+  "user_extension": {
+    "path": "/public/home/accl15ptg7/run_R08_R10/MACHINE_TIME_EXTENSION_001.json",
+    "size": 727,
+    "sha256": "b725c7ee9c96a7fac49d7d28ac3a5116fd18ae58d95119608db574c8b5074e5b"
+  }
+}

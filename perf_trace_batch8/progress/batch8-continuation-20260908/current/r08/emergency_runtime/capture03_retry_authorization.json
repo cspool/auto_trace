@@ -1,0 +1,21 @@
+{
+  "status": "authorized_within_user_continuation",
+  "prior_attempt": "03__gqa6_pmc_write/attempt_001",
+  "new_attempt": "03__gqa6_pmc_write/attempt_002",
+  "prior_native_rank1_PMC_empty": true,
+  "prior8request_workload_complete": true,
+  "prior_processes_terminated": true,
+  "prior_evidence_retained": true,
+  "CPU_diagnostic": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/normalized/captures/03__gqa6_pmc_write/attempt_001/diagnostic_001/MISSING_PMC_DIAGNOSTIC.json",
+    "size": 192267,
+    "sha256": "4aa7ff076ba5c9c4d70d4cad7ae0e5e78543e720b1d6735b870bec28612f58db"
+  },
+  "new_runtime_gate": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/runtime_capture_gate_008.json",
+    "size": 11943,
+    "sha256": "5586c451869e1b1633635d5f12fabfea7b1690ec8ed9095667f89139689af08c"
+  },
+  "no_accepted_capture_rerun": true,
+  "deadline_utc": "2026-09-08T20:18:09Z"
+}

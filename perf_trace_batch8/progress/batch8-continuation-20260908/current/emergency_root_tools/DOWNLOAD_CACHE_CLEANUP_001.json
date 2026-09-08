@@ -1,0 +1,51 @@
+{
+  "reason": "home quota full; remove only byte-verified remotely recoverable compressed download cache after full extracted predecessor validation",
+  "retained_extracted_business_artifacts": true,
+  "remote_release": "https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-r01-r03-batch8-dp2-fresh-003-20260827",
+  "deleted_redundant_downloads": [
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r01-r03-batch8-dp2-fresh-003-20260827/r01-r03-full.tar.gz.part-000",
+      "size": 1992294400,
+      "sha256": "bf9c9a232c9ee00b59c5339ca491ea9ca3a5c06b6dbb822323c3116b30afd16d",
+      "remote_source_sha256_verified": true
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r01-r03-batch8-dp2-fresh-003-20260827/r01-r03-full.tar.gz.part-001",
+      "size": 1992294400,
+      "sha256": "d772e5bdc4d32abaa2b9ee6911d79343cf15bfb04392f7b33cfda664f49dffa4",
+      "remote_source_sha256_verified": true
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r01-r03-batch8-dp2-fresh-003-20260827/r01-r03-full.tar.gz.part-002",
+      "size": 1992294400,
+      "sha256": "60d03bc9976ce45d43990892eaa305e6746328b6b9606b7862ab6f645edf50dd",
+      "remote_source_sha256_verified": true
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r01-r03-batch8-dp2-fresh-003-20260827/r01-r03-full.tar.gz.part-003",
+      "size": 1992294400,
+      "sha256": "887919b38294ce09e69a142c5fb737cdc28c1469da49bb7948a72468084dde37",
+      "remote_source_sha256_verified": true
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r01-r03-batch8-dp2-fresh-003-20260827/r01-r03-full.tar.gz.part-004",
+      "size": 1992294400,
+      "sha256": "84397b73a5dd3df2968fc5a73e62b1083f4c5243fcbd7106ed4d0af0b2f935f7",
+      "remote_source_sha256_verified": true
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r01-r03-batch8-dp2-fresh-003-20260827/r01-r03-full.tar.gz.part-005",
+      "size": 1992294400,
+      "sha256": "517ee9d64d608b270b5e1cdfaaa7b017e0005178b7bcf711889b8cadcc38bb82",
+      "remote_source_sha256_verified": true
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r01-r03-batch8-dp2-fresh-003-20260827/r01-r03-full.tar.gz.part-006",
+      "size": 1809599301,
+      "sha256": "a5241ba2f4a9153c856d4bb5f0bbffcb97568366e91ae552811ba6368590f570",
+      "remote_source_sha256_verified": true
+    }
+  ],
+  "status": "complete",
+  "completed_utc": "2026-09-08T08:20:16.413455+00:00"
+}
