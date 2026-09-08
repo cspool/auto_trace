@@ -1,0 +1,28 @@
+{
+  "status": "complete",
+  "file_mappings": [
+    {
+      "source_path": "/dev/shm/r07_cpu_validation_001/capture.prepared.db",
+      "resolved_destination": "/public/home/accl15ptg7/verified-memory-backing-20260908/r07_cpu_validation_001/capture.prepared.db",
+      "size": 9443573760,
+      "sha256": "14a1e21b4bf5a0b29b11a62c4d000cac4979aa5af4ddc687f614bdab4f3179cd",
+      "double_hash_verified": true
+    },
+    {
+      "source_path": "/dev/shm/r07_cpu_validation_001/capture.source.db",
+      "resolved_destination": "/public/home/accl15ptg7/verified-memory-backing-20260908/r07_cpu_validation_001/capture.source.db",
+      "size": 8958377984,
+      "sha256": "0ea77cdac40926182c4e04fc29e687e62df9b2cac50296c7e399817c583690b0",
+      "double_hash_verified": true
+    },
+    {
+      "source_path": "/dev/shm/r08_continuation_predecessors/artifacts/R01/raw/hipprof/capture_1.pftrace",
+      "resolved_destination": "/public/home/accl15ptg7/verified-memory-backing-20260908/r08_continuation_predecessors/artifacts/R01/raw/hipprof/capture_1.pftrace",
+      "size": 10866338531,
+      "sha256": "d2579d0931753c1b7f5bfdaebaa738eb50993b0fb8aa8cf1b7349dd98e6c5e3c",
+      "double_hash_verified": true
+    }
+  ],
+  "authorization_sha256": "7103888b1a2ac2a0e6bebe7135fe5dad86d970a42e94fb737ec892210a892d75",
+  "predecessor_content_changed": false
+}

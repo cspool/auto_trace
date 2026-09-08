@@ -1,0 +1,66 @@
+{
+  "R07_observed_clock_modified": false,
+  "accepted_rows": 128,
+  "all_attributes_replay_projected": true,
+  "capture": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/01__gqa6_pmc/attempt_005/execution_manifest.json",
+    "sha256": "ea181a0c3d25e4cf3dd2b1c05f0dc045084355f80be455a636f64d2ab6feb03b",
+    "size": 8009
+  },
+  "counter_count": 186,
+  "counter_mode": "pmc",
+  "current_bound_targets": 13568,
+  "current_process_markers": 12544,
+  "dispatch_attributes": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/normalized/captures/01__gqa6_pmc/attempt_005/revision_002/dispatch_attributes.jsonl",
+    "sha256": "475e8c646beb1f58dcf628b3ccd553382dc8e02fa9968a6fbd2cf7045968fd54",
+    "size": 1047859
+  },
+  "dispatch_attributes_csv": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/normalized/captures/01__gqa6_pmc/attempt_005/revision_002/dispatch_attributes.csv",
+    "sha256": "22c94897565a1574073e5fa2f64839fdae3f0b37460c2f0bbf5283af865a3fb5",
+    "size": 346599
+  },
+  "elapsed_seconds": 45.80586426402442,
+  "excluded_rows": 6608,
+  "excluded_rows_file": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/normalized/captures/01__gqa6_pmc/attempt_005/revision_002/excluded_pmc_rows.jsonl",
+    "sha256": "ab3879b5ca8e283eda12370ae32ec28a48d8b0f1565e7cd6ad4e7c5b12ec2b27",
+    "size": 2806620
+  },
+  "full_native_chain_proven": true,
+  "logical_family_ids": [
+    "r08-plan-002-b6d3b43ad901"
+  ],
+  "mapped_R07_kernel_count": 128,
+  "missing_selected_counter_cells": 0,
+  "native_correlation_method": "native PMC CPU submission timestamp inside unique same-PID/TID exact-literal native HIP launch with CONFIG conversion and no tolerance; one HIPOPS per native API _Index, same device; deepest exact HIPTX process -> logical R06 target -> R07 kernel subsequence; GPU timestamp equality retained as diagnostic only",
+  "native_device_counts": {
+    "0": 64,
+    "1": 64
+  },
+  "native_owned_kernel_count": 23660,
+  "normalizer": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/analysis_004/normalize_capture.py",
+    "sha256": "5245598d2c76655e23e23ceeffe40f8f896b21f9d28425cf68ba7b01dd18ba32",
+    "size": 19429
+  },
+  "owner_multiplicity": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/normalized/captures/01__gqa6_pmc/attempt_005/revision_002/logical_owner_multiplicity.json",
+    "sha256": "12b997d22bb988a633ec0979a7409a20f99cd3604c939a2e2e54a35d8747aeb0",
+    "size": 57795
+  },
+  "rank_counts": {
+    "0": 64,
+    "1": 64
+  },
+  "raw_pmc_rows": 6736,
+  "runtime_run_id": "batch8-dp2-fresh-003",
+  "runtime_shape_match_counts": {
+    "False": 80,
+    "True": 48
+  },
+  "segment_id": "01__gqa6_pmc",
+  "selected_owner_count": 128,
+  "status": "complete"
+}

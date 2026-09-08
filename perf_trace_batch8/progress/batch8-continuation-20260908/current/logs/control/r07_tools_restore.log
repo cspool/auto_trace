@@ -1,0 +1,36 @@
+04:54:04 AWAITING_PARTS 6 45
+04:54:34 AWAITING_PARTS 6 45
+04:55:04 AWAITING_PARTS 12 45
+04:55:34 AWAITING_PARTS 12 45
+04:56:04 AWAITING_PARTS 12 45
+04:56:34 AWAITING_PARTS 12 45
+04:57:04 AWAITING_PARTS 12 45
+04:57:34 AWAITING_PARTS 12 45
+04:58:04 AWAITING_PARTS 12 45
+04:58:34 AWAITING_PARTS 12 45
+04:59:04 AWAITING_PARTS 12 45
+04:59:34 AWAITING_PARTS 17 45
+05:00:04 AWAITING_PARTS 27 45
+05:00:34 AWAITING_PARTS 36 45
+STREAM_VERIFIED 20 selected tools/contracts
+EXTRACTED_VERIFIED perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/contract/r01_aot_cache_copy_manifest.json 4658107
+EXTRACTED_VERIFIED perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/contract/r01_r02_r03_r04_r05_r06_predecessor_validation.json 1244057
+EXTRACTED_VERIFIED perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/contract/r07_full_request_selection.json 1552476
+EXTRACTED_VERIFIED perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/contract/r07_process_range_inventory.json 24889932
+EXTRACTED_VERIFIED perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/contract/resolved_input_contract.json 1058137
+EXTRACTED_VERIFIED perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/tools/align_r07_live_utilization.py 16741
+EXTRACTED_VERIFIED perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/tools/audit_r07_capture.py 237852
+EXTRACTED_VERIFIED perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/tools/build_r07_capture_contract.py 466450
+EXTRACTED_VERIFIED perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/tools/build_r07_dependency_adapter.py 10656
+EXTRACTED_VERIFIED perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/tools/collect_r07_live_utilization.py 14887
+EXTRACTED_VERIFIED perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/tools/freeze_r07_tools.py 158757
+EXTRACTED_VERIFIED perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/tools/materialize_r07_runtime_contracts.py 9399
+EXTRACTED_VERIFIED perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/tools/normalize_r07_process_trace.py 73544
+EXTRACTED_VERIFIED perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/tools/prepare_r07_bulk_storage.py 238737
+EXTRACTED_VERIFIED perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/tools/r07_common.py 65595
+EXTRACTED_VERIFIED perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/tools/r07_hiptx_adapter.py 11590
+EXTRACTED_VERIFIED perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/tools/r07_marker_contract.py 3275
+EXTRACTED_VERIFIED perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/tools/r07_runtime_patch_loader.py 30065
+EXTRACTED_VERIFIED perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/tools/r07_workload_driver.py 41838
+EXTRACTED_VERIFIED perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/tools/sitecustomize.py 4675
+R07_TOOLS_RESTORED_VERIFIED 20

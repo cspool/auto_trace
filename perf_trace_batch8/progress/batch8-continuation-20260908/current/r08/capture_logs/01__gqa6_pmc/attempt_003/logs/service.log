@@ -1,0 +1,466 @@
+starting internal DP=2, TP=1 on HIP devices 0,1
+model=/root/Qwen3.5-27B port=8001 backend=mp
+/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/__init__.py:7: RuntimeWarning: Failed to read commit hash:
+No module named 'vllm._version'
+  from .version import __version__, __version_tuple__  # isort:skip
+R08_COMPILED_OVERLAY_READY attempt=batch8-dp2-fresh-003-R08-01__gqa6_pmc-attempt_003 process_targets=12544 layer_targets=1024 r01_patch_sha256=5329e3ecb54c724d259b4eeb7deccd90be447233d23b438a4cfee725e6705a48 status=ready
+R08_PMC_GATE_READY attempt=batch8-dp2-fresh-003-R08-01__gqa6_pmc-attempt_003 segment=01__gqa6_pmc measured_requests=8 collection_state=initially_stopped canonical_window=dynamic_plus_offline_guard
+INFO 09-08 13:50:56 [serve.py:106] Defaulting api_server_count to data_parallel_size (2).
+INFO 09-08 13:50:56 [utils.py:297] 
+INFO 09-08 13:50:56 [utils.py:297]        █     █     █▄   ▄█
+INFO 09-08 13:50:56 [utils.py:297]  ▄▄ ▄█ █     █     █ ▀▄▀ █  version dev
+INFO 09-08 13:50:56 [utils.py:297]   █▄█▀ █     █     █     █  model   /root/Qwen3.5-27B
+INFO 09-08 13:50:56 [utils.py:297]    ▀▀  ▀▀▀▀▀ ▀▀▀▀▀ ▀     ▀
+INFO 09-08 13:50:56 [utils.py:297] 
+INFO 09-08 13:50:56 [utils.py:233] non-default args: {'model_tag': '/root/Qwen3.5-27B', 'api_server_count': 2, 'default_chat_template_kwargs': {'enable_thinking': False}, 'enable_auto_tool_choice': True, 'tool_call_parser': 'qwen3_coder', 'port': 8001, 'model': '/root/Qwen3.5-27B', 'trust_remote_code': True, 'dtype': 'bfloat16', 'served_model_name': ['Qwen3.5-27B'], 'reasoning_parser': 'qwen3', 'data_parallel_size': 2, 'gpu_memory_utilization': 0.95, 'max_num_batched_tokens': 4096, 'max_num_seqs': 128, 'long_prefill_token_threshold': 512, 'compilation_config': {'mode': None, 'debug_dump_path': None, 'cache_dir': '', 'compile_cache_save_format': 'binary', 'backend': 'inductor', 'custom_ops': [], 'splitting_ops': None, 'compile_mm_encoder': False, 'compile_sizes': [4096], 'compile_ranges_endpoints': None, 'inductor_compile_config': {'enable_auto_functionalized_v2': False, 'combo_kernels': True, 'benchmark_combo_kernel': True}, 'inductor_passes': {}, 'cudagraph_mode': None, 'cudagraph_num_of_warmups': 0, 'cudagraph_capture_sizes': None, 'cudagraph_copy_inputs': False, 'cudagraph_specialize_lora': True, 'use_inductor_graph_partition': None, 'pass_config': {}, 'max_cudagraph_capture_size': None, 'dynamic_shapes_config': {'type': <DynamicShapesType.BACKED: 'backed'>, 'evaluate_guards': False, 'assume_32_bit_indexing': False}, 'local_cache_dir': None, 'fast_moe_cold_start': None, 'static_all_moe_layers': []}}
+WARNING 09-08 13:50:56 [envs.py:1717] Unknown vLLM environment variable detected: VLLM_ROCM_TUNABLEOP_PROFILE
+WARNING 09-08 13:50:56 [envs.py:1717] Unknown vLLM environment variable detected: VLLM_BIN
+WARNING 09-08 13:50:56 [envs.py:1717] Unknown vLLM environment variable detected: VLLM_ROCM_TUNABLEOP_PROFILE_SHA256
+The argument `trust_remote_code` is to be used with Auto classes. It has no effect here and is ignored.
+`layer_type_validation` is deprecated and will be removed in v5.20. Use `PreTrainedConfig.validate_layer_type` instead
+`layer_type_validation` is deprecated and will be removed in v5.20. Use `PreTrainedConfig.validate_layer_type` instead
+`layer_type_validation` is deprecated and will be removed in v5.20. Use `PreTrainedConfig.validate_layer_type` instead
+INFO 09-08 13:50:56 [model.py:533] Resolved architecture: Qwen3_5ForConditionalGeneration
+INFO 09-08 13:50:56 [model.py:1582] Using max model len 262144
+INFO 09-08 13:50:56 [scheduler.py:231] Chunked prefill is enabled with max_num_batched_tokens=4096.
+`Qwen2VLImageProcessorFast` is deprecated. The `Fast` suffix for image processors has been removed; use `Qwen2VLImageProcessor` instead.
+INFO 09-08 13:50:57 [config.py:212] Setting attention block size to 784 tokens to ensure that attention page size is >= mamba page size.
+INFO 09-08 13:50:57 [config.py:243] Padding mamba page size by 0.13% to ensure that mamba page size and attention page size are exactly equal.
+INFO 09-08 13:50:57 [vllm.py:775] Asynchronous scheduling is enabled.
+INFO 09-08 13:50:57 [rocm.py:661] Capping Qwen3.5-27B DP2 CUDA Graph capture size at 16
+INFO 09-08 13:50:57 [utils.py:889] Started DP Coordinator process (PID: 106060)
+INFO 09-08 13:50:57 [utils.py:217] Started 2 API server processes
+/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/__init__.py:7: RuntimeWarning: Failed to read commit hash:
+No module named 'vllm._version'
+  from .version import __version__, __version_tuple__  # isort:skip
+/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/__init__.py:7: RuntimeWarning: Failed to read commit hash:
+No module named 'vllm._version'
+  from .version import __version__, __version_tuple__  # isort:skip
+/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/__init__.py:7: RuntimeWarning: Failed to read commit hash:
+No module named 'vllm._version'
+  from .version import __version__, __version_tuple__  # isort:skip
+/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/__init__.py:7: RuntimeWarning: Failed to read commit hash:
+No module named 'vllm._version'
+  from .version import __version__, __version_tuple__  # isort:skip
+/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/__init__.py:7: RuntimeWarning: Failed to read commit hash:
+No module named 'vllm._version'
+  from .version import __version__, __version_tuple__  # isort:skip
+/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/__init__.py:7: RuntimeWarning: Failed to read commit hash:
+No module named 'vllm._version'
+  from .version import __version__, __version_tuple__  # isort:skip
+R08_COMPILED_OVERLAY_READY attempt=batch8-dp2-fresh-003-R08-01__gqa6_pmc-attempt_003 process_targets=12544 layer_targets=1024 r01_patch_sha256=5329e3ecb54c724d259b4eeb7deccd90be447233d23b438a4cfee725e6705a48 status=ready
+R08_PMC_GATE_READY attempt=batch8-dp2-fresh-003-R08-01__gqa6_pmc-attempt_003 segment=01__gqa6_pmc measured_requests=8 collection_state=initially_stopped canonical_window=dynamic_plus_offline_guard
+(EngineCore_DP0 pid=106063) INFO 09-08 13:51:39 [core.py:103] Initializing a V1 LLM engine (vdev) with config: model='/root/Qwen3.5-27B', speculative_config=None, tokenizer='/root/Qwen3.5-27B', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=262144, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, data_parallel_size=1, decode_context_parallel_size=1, dcp_comm_backend=ag_rs, disable_custom_all_reduce=True, quantization=None, enforce_eager=False, enable_return_routed_experts=False, kv_cache_dtype=auto, device_config=cuda, structured_outputs_config=StructuredOutputsConfig(backend='auto', disable_any_whitespace=False, disable_additional_properties=False, reasoning_parser='qwen3', reasoning_parser_plugin='', enable_in_reasoning=False), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None, kv_cache_metrics=False, kv_cache_metrics_sample=0.01, cudagraph_metrics=False, enable_layerwise_nvtx_tracing=False, enable_mfu_metrics=False, enable_mm_processor_stats=False, enable_logging_iteration_details=False), seed=0, served_model_name=Qwen3.5-27B, enable_prefix_caching=False, enable_chunked_prefill=True, pooler_config=None, compilation_config={'mode': <CompilationMode.VLLM_COMPILE: 3>, 'debug_dump_path': None, 'cache_dir': '', 'compile_cache_save_format': 'binary', 'backend': 'inductor', 'custom_ops': ['+sparse_attn_indexer', 'none'], 'splitting_ops': ['vllm::unified_attention', 'vllm::unified_attention_with_output', 'vllm::unified_mla_attention', 'vllm::unified_mla_attention_with_output', 'vllm::mamba_mixer2', 'vllm::mamba_mixer', 'vllm::short_conv', 'vllm::linear_attention', 'vllm::plamo2_mamba_mixer', 'vllm::gdn_attention_core', 'vllm::olmo_hybrid_gdn_full_forward', 'vllm::kda_attention', 'vllm::sparse_attn_indexer', 'vllm::rocm_aiter_sparse_attn_indexer', 'vllm::unified_kv_cache_update', 'vllm::unified_mla_kv_cache_update'], 'compile_mm_encoder': False, 'compile_sizes': [4096], 'compile_ranges_endpoints': [4096], 'inductor_compile_config': {'enable_auto_functionalized_v2': False, 'combo_kernels': True, 'benchmark_combo_kernel': True}, 'inductor_passes': {}, 'cudagraph_mode': <CUDAGraphMode.FULL_AND_PIECEWISE: (2, 1)>, 'cudagraph_num_of_warmups': 1, 'cudagraph_capture_sizes': [1, 2, 4, 8, 16], 'cudagraph_copy_inputs': False, 'cudagraph_specialize_lora': True, 'use_inductor_graph_partition': False, 'pass_config': {'fuse_norm_quant': False, 'fuse_act_quant': False, 'fuse_attn_quant': False, 'enable_sp': False, 'fuse_gemm_comms': False, 'fuse_allreduce_rms': False}, 'max_cudagraph_capture_size': 16, 'dynamic_shapes_config': {'type': <DynamicShapesType.BACKED: 'backed'>, 'evaluate_guards': False, 'assume_32_bit_indexing': False}, 'local_cache_dir': None, 'fast_moe_cold_start': True, 'static_all_moe_layers': []}
+(EngineCore_DP0 pid=106063) WARNING 09-08 13:51:39 [multiproc_executor.py:997] Reducing Torch parallelism from 32 threads to 1 to avoid unnecessary CPU contention. Set OMP_NUM_THREADS in the external environment to tune this value as needed.
+(EngineCore_DP0 pid=106063) INFO 09-08 13:51:39 [multiproc_executor.py:134] DP group leader: node_rank=0, node_rank_within_dp=0, master_addr=127.0.0.1, mq_connect_ip=173.10.105.2 (local), world_size=1, local_world_size=1
+/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/__init__.py:7: RuntimeWarning: Failed to read commit hash:
+No module named 'vllm._version'
+  from .version import __version__, __version_tuple__  # isort:skip
+R08_COMPILED_OVERLAY_READY attempt=batch8-dp2-fresh-003-R08-01__gqa6_pmc-attempt_003 process_targets=12544 layer_targets=1024 r01_patch_sha256=5329e3ecb54c724d259b4eeb7deccd90be447233d23b438a4cfee725e6705a48 status=ready
+R08_PMC_GATE_READY attempt=batch8-dp2-fresh-003-R08-01__gqa6_pmc-attempt_003 segment=01__gqa6_pmc measured_requests=8 collection_state=initially_stopped canonical_window=dynamic_plus_offline_guard
+R08_COMPILED_OVERLAY_READY attempt=batch8-dp2-fresh-003-R08-01__gqa6_pmc-attempt_003 process_targets=12544 layer_targets=1024 r01_patch_sha256=5329e3ecb54c724d259b4eeb7deccd90be447233d23b438a4cfee725e6705a48 status=ready
+R08_PMC_GATE_READY attempt=batch8-dp2-fresh-003-R08-01__gqa6_pmc-attempt_003 segment=01__gqa6_pmc measured_requests=8 collection_state=initially_stopped canonical_window=dynamic_plus_offline_guard
+R08_COMPILED_OVERLAY_READY attempt=batch8-dp2-fresh-003-R08-01__gqa6_pmc-attempt_003 process_targets=12544 layer_targets=1024 r01_patch_sha256=5329e3ecb54c724d259b4eeb7deccd90be447233d23b438a4cfee725e6705a48 status=ready
+R08_PMC_GATE_READY attempt=batch8-dp2-fresh-003-R08-01__gqa6_pmc-attempt_003 segment=01__gqa6_pmc measured_requests=8 collection_state=initially_stopped canonical_window=dynamic_plus_offline_guard
+R08_COMPILED_OVERLAY_READY attempt=batch8-dp2-fresh-003-R08-01__gqa6_pmc-attempt_003 process_targets=12544 layer_targets=1024 r01_patch_sha256=5329e3ecb54c724d259b4eeb7deccd90be447233d23b438a4cfee725e6705a48 status=ready
+R08_PMC_GATE_READY attempt=batch8-dp2-fresh-003-R08-01__gqa6_pmc-attempt_003 segment=01__gqa6_pmc measured_requests=8 collection_state=initially_stopped canonical_window=dynamic_plus_offline_guard
+R08_COMPILED_OVERLAY_READY attempt=batch8-dp2-fresh-003-R08-01__gqa6_pmc-attempt_003 process_targets=12544 layer_targets=1024 r01_patch_sha256=5329e3ecb54c724d259b4eeb7deccd90be447233d23b438a4cfee725e6705a48 status=ready
+R08_PMC_GATE_READY attempt=batch8-dp2-fresh-003-R08-01__gqa6_pmc-attempt_003 segment=01__gqa6_pmc measured_requests=8 collection_state=initially_stopped canonical_window=dynamic_plus_offline_guard
+(EngineCore_DP1 pid=106064) WARNING 09-08 13:51:40 [multiproc_executor.py:997] Reducing Torch parallelism from 32 threads to 1 to avoid unnecessary CPU contention. Set OMP_NUM_THREADS in the external environment to tune this value as needed.
+(EngineCore_DP1 pid=106064) INFO 09-08 13:51:40 [multiproc_executor.py:134] DP group leader: node_rank=0, node_rank_within_dp=0, master_addr=127.0.0.1, mq_connect_ip=173.10.105.2 (local), world_size=1, local_world_size=1
+/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/__init__.py:7: RuntimeWarning: Failed to read commit hash:
+No module named 'vllm._version'
+  from .version import __version__, __version_tuple__  # isort:skip
+(ApiServer_1 pid=106066) WARNING 09-08 13:51:44 [envs.py:1717] Unknown vLLM environment variable detected: VLLM_ROCM_TUNABLEOP_PROFILE
+(ApiServer_1 pid=106066) WARNING 09-08 13:51:44 [envs.py:1717] Unknown vLLM environment variable detected: VLLM_BIN
+(ApiServer_1 pid=106066) WARNING 09-08 13:51:44 [envs.py:1717] Unknown vLLM environment variable detected: VLLM_ROCM_TUNABLEOP_PROFILE_SHA256
+(ApiServer_1 pid=106066) The argument `trust_remote_code` is to be used with Auto classes. It has no effect here and is ignored.
+(ApiServer_1 pid=106066) `layer_type_validation` is deprecated and will be removed in v5.20. Use `PreTrainedConfig.validate_layer_type` instead
+(ApiServer_1 pid=106066) `layer_type_validation` is deprecated and will be removed in v5.20. Use `PreTrainedConfig.validate_layer_type` instead
+(ApiServer_1 pid=106066) `layer_type_validation` is deprecated and will be removed in v5.20. Use `PreTrainedConfig.validate_layer_type` instead
+(ApiServer_1 pid=106066) INFO 09-08 13:51:44 [model.py:533] Resolved architecture: Qwen3_5ForConditionalGeneration
+(ApiServer_1 pid=106066) INFO 09-08 13:51:44 [model.py:1582] Using max model len 262144
+(ApiServer_0 pid=106065) WARNING 09-08 13:51:44 [envs.py:1717] Unknown vLLM environment variable detected: VLLM_ROCM_TUNABLEOP_PROFILE
+(ApiServer_0 pid=106065) WARNING 09-08 13:51:44 [envs.py:1717] Unknown vLLM environment variable detected: VLLM_BIN
+(ApiServer_0 pid=106065) WARNING 09-08 13:51:44 [envs.py:1717] Unknown vLLM environment variable detected: VLLM_ROCM_TUNABLEOP_PROFILE_SHA256
+(ApiServer_0 pid=106065) The argument `trust_remote_code` is to be used with Auto classes. It has no effect here and is ignored.
+(ApiServer_0 pid=106065) `layer_type_validation` is deprecated and will be removed in v5.20. Use `PreTrainedConfig.validate_layer_type` instead
+(ApiServer_0 pid=106065) `layer_type_validation` is deprecated and will be removed in v5.20. Use `PreTrainedConfig.validate_layer_type` instead
+(ApiServer_0 pid=106065) `layer_type_validation` is deprecated and will be removed in v5.20. Use `PreTrainedConfig.validate_layer_type` instead
+(ApiServer_0 pid=106065) INFO 09-08 13:51:44 [model.py:533] Resolved architecture: Qwen3_5ForConditionalGeneration
+(ApiServer_0 pid=106065) INFO 09-08 13:51:44 [model.py:1582] Using max model len 262144
+(ApiServer_1 pid=106066) INFO 09-08 13:51:44 [scheduler.py:231] Chunked prefill is enabled with max_num_batched_tokens=4096.
+(ApiServer_1 pid=106066) `Qwen2VLImageProcessorFast` is deprecated. The `Fast` suffix for image processors has been removed; use `Qwen2VLImageProcessor` instead.
+(ApiServer_1 pid=106066) INFO 09-08 13:51:45 [config.py:212] Setting attention block size to 784 tokens to ensure that attention page size is >= mamba page size.
+(ApiServer_1 pid=106066) INFO 09-08 13:51:45 [config.py:243] Padding mamba page size by 0.13% to ensure that mamba page size and attention page size are exactly equal.
+(ApiServer_1 pid=106066) INFO 09-08 13:51:45 [vllm.py:775] Asynchronous scheduling is enabled.
+(ApiServer_1 pid=106066) INFO 09-08 13:51:45 [rocm.py:661] Capping Qwen3.5-27B DP2 CUDA Graph capture size at 16
+(ApiServer_0 pid=106065) INFO 09-08 13:51:45 [scheduler.py:231] Chunked prefill is enabled with max_num_batched_tokens=4096.
+(ApiServer_0 pid=106065) `Qwen2VLImageProcessorFast` is deprecated. The `Fast` suffix for image processors has been removed; use `Qwen2VLImageProcessor` instead.
+(ApiServer_0 pid=106065) INFO 09-08 13:51:45 [config.py:212] Setting attention block size to 784 tokens to ensure that attention page size is >= mamba page size.
+(ApiServer_0 pid=106065) INFO 09-08 13:51:45 [config.py:243] Padding mamba page size by 0.13% to ensure that mamba page size and attention page size are exactly equal.
+(ApiServer_0 pid=106065) INFO 09-08 13:51:45 [vllm.py:775] Asynchronous scheduling is enabled.
+(ApiServer_0 pid=106065) INFO 09-08 13:51:45 [rocm.py:661] Capping Qwen3.5-27B DP2 CUDA Graph capture size at 16
+(ApiServer_1 pid=106066) The `use_fast` parameter is deprecated and will be removed in a future version. Use `backend="torchvision"` instead of `use_fast=True`, or `backend="pil"` instead of `use_fast=False`.
+(ApiServer_0 pid=106065) The `use_fast` parameter is deprecated and will be removed in a future version. Use `backend="torchvision"` instead of `use_fast=True`, or `backend="pil"` instead of `use_fast=False`.
+R08_COMPILED_OVERLAY_READY attempt=batch8-dp2-fresh-003-R08-01__gqa6_pmc-attempt_003 process_targets=12544 layer_targets=1024 r01_patch_sha256=5329e3ecb54c724d259b4eeb7deccd90be447233d23b438a4cfee725e6705a48 status=ready
+R08_PMC_GATE_READY attempt=batch8-dp2-fresh-003-R08-01__gqa6_pmc-attempt_003 segment=01__gqa6_pmc measured_requests=8 collection_state=initially_stopped canonical_window=dynamic_plus_offline_guard
+`Qwen2VLImageProcessorFast` is deprecated. The `Fast` suffix for image processors has been removed; use `Qwen2VLImageProcessor` instead.
+R08_COMPILED_OVERLAY_READY attempt=batch8-dp2-fresh-003-R08-01__gqa6_pmc-attempt_003 process_targets=12544 layer_targets=1024 r01_patch_sha256=5329e3ecb54c724d259b4eeb7deccd90be447233d23b438a4cfee725e6705a48 status=ready
+R08_PMC_GATE_READY attempt=batch8-dp2-fresh-003-R08-01__gqa6_pmc-attempt_003 segment=01__gqa6_pmc measured_requests=8 collection_state=initially_stopped canonical_window=dynamic_plus_offline_guard
+`Qwen2VLImageProcessorFast` is deprecated. The `Fast` suffix for image processors has been removed; use `Qwen2VLImageProcessor` instead.
+(Worker pid=106992) INFO 09-08 13:52:24 [parallel_state.py:1395] world_size=1 rank=0 local_rank=0 distributed_init_method=tcp://127.0.0.1:56173 backend=nccl
+(Worker pid=106992) INFO 09-08 13:52:24 [parallel_state.py:1717] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+(Worker pid=107003) INFO 09-08 13:52:24 [parallel_state.py:1395] world_size=1 rank=0 local_rank=1 distributed_init_method=tcp://127.0.0.1:45569 backend=nccl
+(Worker pid=107003) INFO 09-08 13:52:24 [parallel_state.py:1717] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+(Worker pid=106992) The `use_fast` parameter is deprecated and will be removed in a future version. Use `backend="torchvision"` instead of `use_fast=True`, or `backend="pil"` instead of `use_fast=False`.
+(Worker pid=107003) The `use_fast` parameter is deprecated and will be removed in a future version. Use `backend="torchvision"` instead of `use_fast=True`, or `backend="pil"` instead of `use_fast=False`.
+(Worker pid=106992) VLLM_ROCM_TUNABLEOP_INIT dp_rank=0 physical_device=0 profile=gfx936_qwen3_5_27b_bf16_tn_m4096 profile_sha256=169c7b11a0340d9e22405327b5e5667b2aa9e9e8d899bd59e10ca4fb7fb52030 results=5 validators=5 enabled=true tuning=false record_untuned=false status=ready
+(Worker pid=106992) R01_RUNTIME_CONFIG dp_rank=0 speculative_config=None compile_sizes=[4096] tensor_parallel_size=1 outer_data_parallel_size=2 worker_local_data_parallel_size=1 status=ready
+(Worker pid=106992) INFO 09-08 13:52:35 [gpu_model_runner.py:4493] Starting to load model /root/Qwen3.5-27B...
+(Worker pid=106992) INFO 09-08 13:52:36 [rocm.py:561] Using Torch SDPA backend for ViT model.
+(Worker pid=106992) WARNING 09-08 13:52:36 [activation.py:643] [ROCm] PyTorch's native GELU with tanh approximation is unstable. Falling back to GELU(approximate='none').
+(Worker pid=106992) INFO 09-08 13:52:36 [mm_encoder_attention.py:230] Using AttentionBackendEnum.TORCH_SDPA for MMEncoderAttention.
+(Worker pid=106992) INFO 09-08 13:52:36 [qwen3_next.py:199] Using Triton/FLA GDN prefill kernel
+(Worker pid=107003) VLLM_ROCM_TUNABLEOP_INIT dp_rank=1 physical_device=1 profile=gfx936_qwen3_5_27b_bf16_tn_m4096 profile_sha256=169c7b11a0340d9e22405327b5e5667b2aa9e9e8d899bd59e10ca4fb7fb52030 results=5 validators=5 enabled=true tuning=false record_untuned=false status=ready
+(Worker pid=107003) R01_RUNTIME_CONFIG dp_rank=1 speculative_config=None compile_sizes=[4096] tensor_parallel_size=1 outer_data_parallel_size=2 worker_local_data_parallel_size=1 status=ready
+(Worker pid=107003) INFO 09-08 13:52:37 [gpu_model_runner.py:4493] Starting to load model /root/Qwen3.5-27B...
+(Worker pid=107003) INFO 09-08 13:52:37 [rocm.py:561] Using Torch SDPA backend for ViT model.
+(Worker pid=107003) WARNING 09-08 13:52:37 [activation.py:643] [ROCm] PyTorch's native GELU with tanh approximation is unstable. Falling back to GELU(approximate='none').
+(Worker pid=107003) INFO 09-08 13:52:37 [mm_encoder_attention.py:230] Using AttentionBackendEnum.TORCH_SDPA for MMEncoderAttention.
+(Worker pid=107003) INFO 09-08 13:52:37 [qwen3_next.py:199] Using Triton/FLA GDN prefill kernel
+(Worker pid=106992) INFO 09-08 13:52:37 [rocm.py:501] Using ROCM_AITER_UNIFIED_ATTN attention backend out of potential backends: ['ROCM_AITER_UNIFIED_ATTN', 'TRITON_ATTN'].
+(Worker pid=106992) INFO 09-08 13:52:37 [rocm_aiter_unified_attn.py:124] Using aiter unified attention for RocmAiterUnifiedAttentionImpl
+(Worker pid=106992) WARNING 09-08 13:52:39 [compilation.py:1136] Op 'sparse_attn_indexer' not present in model, enabling with '+sparse_attn_indexer' has no effect
+(Worker pid=106992) Loading safetensors checkpoint shards:   0% Completed | 0/11 [00:00<?, ?it/s]
+(Worker pid=107003) INFO 09-08 13:52:39 [rocm_aiter_unified_attn.py:124] Using aiter unified attention for RocmAiterUnifiedAttentionImpl
+(Worker pid=107003) WARNING 09-08 13:52:40 [compilation.py:1136] Op 'sparse_attn_indexer' not present in model, enabling with '+sparse_attn_indexer' has no effect
+(Worker pid=107003) Loading safetensors checkpoint shards:   0% Completed | 0/11 [00:00<?, ?it/s]
+(Worker pid=107003) Loading safetensors checkpoint shards:   9% Completed | 1/11 [00:04<00:47,  4.74s/it]
+(Worker pid=106992) Loading safetensors checkpoint shards:   9% Completed | 1/11 [00:06<01:00,  6.04s/it]
+(Worker pid=106992) Loading safetensors checkpoint shards:  18% Completed | 2/11 [00:11<00:52,  5.85s/it]
+(Worker pid=107003) Loading safetensors checkpoint shards:  18% Completed | 2/11 [00:10<00:47,  5.31s/it]
+(Worker pid=106992) Loading safetensors checkpoint shards:  27% Completed | 3/11 [00:18<00:48,  6.10s/it]
+(Worker pid=107003) Loading safetensors checkpoint shards:  27% Completed | 3/11 [00:16<00:46,  5.81s/it]
+(Worker pid=106992) Loading safetensors checkpoint shards:  36% Completed | 4/11 [00:24<00:43,  6.26s/it]
+(Worker pid=107003) Loading safetensors checkpoint shards:  36% Completed | 4/11 [00:23<00:42,  6.08s/it]
+(Worker pid=107003) Loading safetensors checkpoint shards:  45% Completed | 5/11 [00:30<00:38,  6.38s/it]
+(Worker pid=106992) Loading safetensors checkpoint shards:  45% Completed | 5/11 [00:31<00:38,  6.49s/it]
+(Worker pid=106992) Loading safetensors checkpoint shards:  55% Completed | 6/11 [00:38<00:32,  6.49s/it]
+(Worker pid=107003) Loading safetensors checkpoint shards:  55% Completed | 6/11 [00:36<00:32,  6.42s/it]
+(Worker pid=106992) Loading safetensors checkpoint shards:  64% Completed | 7/11 [00:44<00:25,  6.46s/it]
+(Worker pid=107003) Loading safetensors checkpoint shards:  64% Completed | 7/11 [00:43<00:25,  6.41s/it]
+(Worker pid=106992) Loading safetensors checkpoint shards:  73% Completed | 8/11 [00:50<00:19,  6.34s/it]
+(Worker pid=107003) Loading safetensors checkpoint shards:  73% Completed | 8/11 [00:49<00:18,  6.30s/it]
+(Worker pid=106992) Loading safetensors checkpoint shards:  82% Completed | 9/11 [00:56<00:12,  6.37s/it]
+(Worker pid=107003) Loading safetensors checkpoint shards:  82% Completed | 9/11 [00:55<00:12,  6.35s/it]
+(Worker pid=107003) Loading safetensors checkpoint shards:  91% Completed | 10/11 [01:01<00:06,  6.31s/it]
+(Worker pid=106992) Loading safetensors checkpoint shards:  91% Completed | 10/11 [01:03<00:06,  6.33s/it]
+(Worker pid=106992) Loading safetensors checkpoint shards: 100% Completed | 11/11 [01:05<00:00,  5.22s/it]
+(Worker pid=107003) Loading safetensors checkpoint shards: 100% Completed | 11/11 [01:04<00:00,  5.21s/it]
+(Worker pid=107003) Loading safetensors checkpoint shards: 100% Completed | 11/11 [01:04<00:00,  5.87s/it]
+(Worker pid=106992) Loading safetensors checkpoint shards: 100% Completed | 11/11 [01:05<00:00,  5.99s/it]
+(Worker pid=107003) 
+(Worker pid=106992) 
+(Worker pid=106992) INFO 09-08 13:53:45 [default_loader.py:384] Loading weights took 65.98 seconds
+(Worker pid=106992) INFO 09-08 13:53:46 [gpu_model_runner.py:4578] Model loading took 51.2 GiB memory and 68.685502 seconds
+(Worker pid=106992) INFO 09-08 13:53:46 [gpu_model_runner.py:5500] Encoder cache will be initialized with a budget of 16384 tokens, and profiled with 1 image items of the maximum feature size.
+(Worker pid=107003) INFO 09-08 13:53:46 [gpu_model_runner.py:5500] Encoder cache will be initialized with a budget of 16384 tokens, and profiled with 1 image items of the maximum feature size.
+(Worker pid=106992) /public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/v1/attention/ops/vit_attn_wrappers.py:202: UserWarning: sdpa adopt the new interface of flash-attn (Triggered internally at /home/pytorch/aten/src/ATen/native/transformers/hip/cutlassfa_adapter.h:145.)
+(Worker pid=107003) /public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/v1/attention/ops/vit_attn_wrappers.py:202: UserWarning: sdpa adopt the new interface of flash-attn (Triggered internally at /home/pytorch/aten/src/ATen/native/transformers/hip/cutlassfa_adapter.h:145.)
+(Worker pid=106992)   output = F.scaled_dot_product_attention(
+(Worker pid=107003)   output = F.scaled_dot_product_attention(
+(Worker pid=106992) Exception in thread Thread-1 (_report_usage_worker):
+(Worker pid=107003) Exception in thread Thread-1 (_report_usage_worker):
+(Worker pid=106992) Traceback (most recent call last):
+(Worker pid=107003) Traceback (most recent call last):
+(Worker pid=106992)   File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+(Worker pid=107003)   File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+(Worker pid=107003)     self.run()
+(Worker pid=106992)     self.run()
+(Worker pid=107003)   File "/usr/lib/python3.10/threading.py", line 953, in run
+(Worker pid=106992)   File "/usr/lib/python3.10/threading.py", line 953, in run
+(Worker pid=107003)     self._target(*self._args, **self._kwargs)
+(Worker pid=106992)     self._target(*self._args, **self._kwargs)
+(Worker pid=107003)   File "/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/usage/usage_lib.py", line 173, in _report_usage_worker
+(Worker pid=106992)   File "/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/usage/usage_lib.py", line 173, in _report_usage_worker
+(Worker pid=107003)     self._report_usage_once(model_architecture, usage_context, extra_kvs)
+(Worker pid=106992)     self._report_usage_once(model_architecture, usage_context, extra_kvs)
+(Worker pid=107003)   File "/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/usage/usage_lib.py", line 212, in _report_usage_once
+(Worker pid=106992)   File "/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/usage/usage_lib.py", line 212, in _report_usage_once
+(Worker pid=107003)     info = cpuinfo.get_cpu_info()
+(Worker pid=106992)     info = cpuinfo.get_cpu_info()
+(Worker pid=107003)   File "/usr/local/lib/python3.10/dist-packages/cpuinfo/cpuinfo.py", line 2762, in get_cpu_info
+(Worker pid=106992)   File "/usr/local/lib/python3.10/dist-packages/cpuinfo/cpuinfo.py", line 2762, in get_cpu_info
+(Worker pid=107003)     output = json.loads(output, object_hook = _utf_to_str)
+(Worker pid=106992)     output = json.loads(output, object_hook = _utf_to_str)
+(Worker pid=107003)   File "/usr/lib/python3.10/json/__init__.py", line 359, in loads
+(Worker pid=106992)   File "/usr/lib/python3.10/json/__init__.py", line 359, in loads
+(Worker pid=106992)     return cls(**kw).decode(s)
+(Worker pid=107003)     return cls(**kw).decode(s)
+(Worker pid=106992)   File "/usr/lib/python3.10/json/decoder.py", line 337, in decode
+(Worker pid=107003)   File "/usr/lib/python3.10/json/decoder.py", line 337, in decode
+(Worker pid=107003)     obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+(Worker pid=107003)   File "/usr/lib/python3.10/json/decoder.py", line 355, in raw_decode
+(Worker pid=106992)     obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+(Worker pid=106992)   File "/usr/lib/python3.10/json/decoder.py", line 355, in raw_decode
+(Worker pid=107003)     raise JSONDecodeError("Expecting value", s, err.value) from None
+(Worker pid=106992)     raise JSONDecodeError("Expecting value", s, err.value) from None
+(Worker pid=107003) json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+(Worker pid=106992) json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+(Worker pid=106992) INFO 09-08 13:54:06 [backends.py:988] Using cache directory: /public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_cache/vllm/torch_compile_cache/7737b31bfa/rank_0_0/backbone for vLLM's torch.compile
+(Worker pid=106992) INFO 09-08 13:54:06 [backends.py:1048] Dynamo bytecode transform time: 6.91 s
+(Worker pid=106992) INFO 09-08 13:54:36 [backends.py:284] Directly load the compiled graph(s) for compile range (4096, 4096) from the cache, took 28.795 s
+(Worker pid=107003) INFO 09-08 13:54:36 [decorators.py:296] Directly load AOT compilation from path /public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_cache/vllm/torch_compile_cache/torch_aot_compile/3742d5fd0f486b9bb06d370adf48f7bfafddeab604203c8f9fcb5c838d4bb4b1/rank_0_1/model
+(Worker pid=106992) INFO 09-08 13:54:36 [backends.py:284] Directly load the compiled graph(s) for compile range (1, 4096) from the cache, took 28.836 s
+(Worker pid=106992) INFO 09-08 13:54:36 [monitor.py:48] torch.compile took 37.53 s in total
+(Worker pid=106992) INFO 09-08 13:54:36 [decorators.py:296] Directly load AOT compilation from path /public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_cache/vllm/torch_compile_cache/torch_aot_compile/3742d5fd0f486b9bb06d370adf48f7bfafddeab604203c8f9fcb5c838d4bb4b1/rank_0_0/model
+(Worker pid=106992) /public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/model_executor/layers/fla/ops/utils.py:113: UserWarning: Input tensor shape suggests potential format mismatch: seq_len (16) < num_heads (48). This may indicate the inputs were passed in head-first format [B, H, T, ...] when head_first=False was specified. Please verify your input tensor format matches the expected shape [B, T, H, ...].
+(Worker pid=106992)   return fn(*contiguous_args, **contiguous_kwargs)
+(Worker pid=107003) /public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/model_executor/layers/fla/ops/utils.py:113: UserWarning: Input tensor shape suggests potential format mismatch: seq_len (16) < num_heads (48). This may indicate the inputs were passed in head-first format [B, H, T, ...] when head_first=False was specified. Please verify your input tensor format matches the expected shape [B, T, H, ...].
+(Worker pid=107003)   return fn(*contiguous_args, **contiguous_kwargs)
+(EngineCore_DP0 pid=106063) INFO 09-08 13:54:47 [shm_broadcast.py:681] No available shared memory broadcast block found in 60 seconds. This typically happens when some processes are hanging or doing some time-consuming work (e.g. compilation, weight/kv cache quantization).
+(EngineCore_DP1 pid=106064) INFO 09-08 13:54:47 [shm_broadcast.py:681] No available shared memory broadcast block found in 60 seconds. This typically happens when some processes are hanging or doing some time-consuming work (e.g. compilation, weight/kv cache quantization).
+(Worker pid=106992) /public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/model_executor/layers/fla/ops/utils.py:113: UserWarning: Input tensor shape suggests potential format mismatch: seq_len (32) < num_heads (48). This may indicate the inputs were passed in head-first format [B, H, T, ...] when head_first=False was specified. Please verify your input tensor format matches the expected shape [B, T, H, ...].
+(Worker pid=106992)   return fn(*contiguous_args, **contiguous_kwargs)
+(Worker pid=107003) /public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/model_executor/layers/fla/ops/utils.py:113: UserWarning: Input tensor shape suggests potential format mismatch: seq_len (32) < num_heads (48). This may indicate the inputs were passed in head-first format [B, H, T, ...] when head_first=False was specified. Please verify your input tensor format matches the expected shape [B, T, H, ...].
+(Worker pid=107003)   return fn(*contiguous_args, **contiguous_kwargs)
+(Worker pid=106992) INFO 09-08 13:55:05 [monitor.py:76] Initial profiling/warmup run took 28.63 s
+(Worker pid=107003) /public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/model_executor/layers/fla/ops/utils.py:113: UserWarning: Input tensor shape suggests potential format mismatch: seq_len (16) < num_heads (48). This may indicate the inputs were passed in head-first format [B, H, T, ...] when head_first=False was specified. Please verify your input tensor format matches the expected shape [B, T, H, ...].
+(Worker pid=107003)   return fn(*contiguous_args, **contiguous_kwargs)
+(Worker pid=106992) INFO 09-08 13:55:06 [gpu_worker.py:456] Available KV cache memory: 6.74 GiB
+(Worker pid=106992) R01_KV_TARGET_RESTORATION dp_rank=0 observed_tokens=27440 target_tokens=28224 observed_bytes=7237795328 target_bytes=7398752256 restoration_bytes=160956928 remaining_reserve_bytes=2936536576 status=ready
+(EngineCore_DP0 pid=106063) INFO 09-08 13:55:06 [kv_cache_utils.py:1316] GPU KV cache size: 28,224 tokens
+(EngineCore_DP0 pid=106063) INFO 09-08 13:55:06 [kv_cache_utils.py:1321] Maximum concurrency for 262,144 tokens per request: 0.43x
+(Worker pid=106992) VLLM_ROCM_TUNABLEOP_PRE_CAPTURE dp_rank=0 physical_device=0 profile=gfx936_qwen3_5_27b_bf16_tn_m4096 profile_sha256=169c7b11a0340d9e22405327b5e5667b2aa9e9e8d899bd59e10ca4fb7fb52030 results=5 validators=5 enabled=true tuning=false record_untuned=false status=ready
+(Worker pid=106992) INFO 09-08 13:55:07 [gpu_worker.py:598] Compile and warming up model for size 4096
+(Worker pid=106992) Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):   0%|          | 0/5 [00:00<?, ?it/s](Worker pid=107003) R01_KV_TARGET_RESTORATION dp_rank=1 observed_tokens=27440 target_tokens=28224 observed_bytes=7235698176 target_bytes=7398752256 restoration_bytes=163054080 remaining_reserve_bytes=2934439424 status=ready
+(EngineCore_DP1 pid=106064) INFO 09-08 13:55:08 [kv_cache_utils.py:1316] GPU KV cache size: 28,224 tokens
+(EngineCore_DP1 pid=106064) INFO 09-08 13:55:08 [kv_cache_utils.py:1321] Maximum concurrency for 262,144 tokens per request: 0.43x
+(Worker pid=107003) VLLM_ROCM_TUNABLEOP_PRE_CAPTURE dp_rank=1 physical_device=1 profile=gfx936_qwen3_5_27b_bf16_tn_m4096 profile_sha256=169c7b11a0340d9e22405327b5e5667b2aa9e9e8d899bd59e10ca4fb7fb52030 results=5 validators=5 enabled=true tuning=false record_untuned=false status=ready
+(Worker pid=107003) INFO 09-08 13:55:08 [gpu_worker.py:598] Compile and warming up model for size 4096
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  20%|██        | 1/5 [00:00<00:01,  2.18it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  40%|████      | 2/5 [00:00<00:01,  2.76it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  60%|██████    | 3/5 [00:01<00:00,  3.02it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  80%|████████  | 4/5 [00:01<00:00,  3.11it/s](Worker pid=107003) Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):   0%|          | 0/5 [00:00<?, ?it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE): 100%|██████████| 5/5 [00:01<00:00,  3.14it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE): 100%|██████████| 5/5 [00:01<00:00,  3.00it/s]
+(Worker pid=106992) Capturing CUDA graphs (decode, FULL):   0%|          | 0/5 [00:00<?, ?it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  20%|██        | 1/5 [00:00<00:01,  3.07it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  40%|████      | 2/5 [00:00<00:00,  3.20it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  60%|██████    | 3/5 [00:00<00:00,  3.24it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  80%|████████  | 4/5 [00:01<00:00,  3.25it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE): 100%|██████████| 5/5 [00:01<00:00,  3.24it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE): 100%|██████████| 5/5 [00:01<00:00,  3.23it/s]
+(Worker pid=107003) Capturing CUDA graphs (decode, FULL):   0%|          | 0/5 [00:00<?, ?it/s]Capturing CUDA graphs (decode, FULL):  20%|██        | 1/5 [00:04<00:17,  4.32s/it]Capturing CUDA graphs (decode, FULL):  20%|██        | 1/5 [00:02<00:11,  2.98s/it]Capturing CUDA graphs (decode, FULL):  40%|████      | 2/5 [00:06<00:09,  3.21s/it]Capturing CUDA graphs (decode, FULL):  60%|██████    | 3/5 [00:07<00:03,  1.86s/it]Capturing CUDA graphs (decode, FULL):  40%|████      | 2/5 [00:05<00:08,  2.73s/it]Capturing CUDA graphs (decode, FULL):  60%|██████    | 3/5 [00:05<00:03,  1.60s/it]Capturing CUDA graphs (decode, FULL):  80%|████████  | 4/5 [00:07<00:01,  1.44s/it]Capturing CUDA graphs (decode, FULL):  80%|████████  | 4/5 [00:06<00:01,  1.25s/it]Capturing CUDA graphs (decode, FULL): 100%|██████████| 5/5 [00:10<00:00,  1.92s/it]Capturing CUDA graphs (decode, FULL): 100%|██████████| 5/5 [00:10<00:00,  2.11s/it]
+Capturing CUDA graphs (decode, FULL): 100%|██████████| 5/5 [00:09<00:00,  1.80s/it]Capturing CUDA graphs (decode, FULL): 100%|██████████| 5/5 [00:09<00:00,  1.86s/it]
+(Worker pid=106992) INFO 09-08 13:55:21 [gpu_model_runner.py:5758] Graph capturing finished in 13 secs, took 0.29 GiB
+(EngineCore_DP0 pid=106063) INFO 09-08 13:55:21 [core.py:281] init engine (profile, create kv cache, warmup model) took 95.09 seconds
+(EngineCore_DP1 pid=106064) INFO 09-08 13:55:21 [core.py:281] init engine (profile, create kv cache, warmup model) took 95.27 seconds
+(EngineCore_DP0 pid=106063) `Qwen2VLImageProcessorFast` is deprecated. The `Fast` suffix for image processors has been removed; use `Qwen2VLImageProcessor` instead.
+(EngineCore_DP1 pid=106064) `Qwen2VLImageProcessorFast` is deprecated. The `Fast` suffix for image processors has been removed; use `Qwen2VLImageProcessor` instead.
+(EngineCore_DP1 pid=106064) The `use_fast` parameter is deprecated and will be removed in a future version. Use `backend="torchvision"` instead of `use_fast=True`, or `backend="pil"` instead of `use_fast=False`.
+(EngineCore_DP0 pid=106063) The `use_fast` parameter is deprecated and will be removed in a future version. Use `backend="torchvision"` instead of `use_fast=True`, or `backend="pil"` instead of `use_fast=False`.
+INFO 09-08 13:55:35 [coordinator.py:205] All engine subscriptions received by DP coordinator
+(EngineCore_DP0 pid=106063) INFO 09-08 13:55:35 [vllm.py:775] Asynchronous scheduling is enabled.
+(EngineCore_DP1 pid=106064) INFO 09-08 13:55:35 [vllm.py:775] Asynchronous scheduling is enabled.
+(ApiServer_1 pid=106066) WARNING 09-08 13:55:35 [loggers.py:1271] AsyncLLM created with api_server_count more than 1; disabling stats logging to avoid incomplete stats.
+(ApiServer_0 pid=106065) WARNING 09-08 13:55:35 [loggers.py:1271] AsyncLLM created with api_server_count more than 1; disabling stats logging to avoid incomplete stats.
+INFO 09-08 13:55:35 [utils.py:250] Waiting for API servers to complete ...
+(ApiServer_1 pid=106066) INFO 09-08 13:55:35 [api_server.py:576] Supported tasks: ['generate']
+(ApiServer_0 pid=106065) INFO 09-08 13:55:35 [api_server.py:576] Supported tasks: ['generate']
+(ApiServer_1 pid=106066) INFO 09-08 13:55:36 [parser_manager.py:202] "auto" tool choice has been enabled.
+(ApiServer_0 pid=106065) INFO 09-08 13:55:36 [parser_manager.py:202] "auto" tool choice has been enabled.
+(ApiServer_1 pid=106066) WARNING 09-08 13:55:36 [model.py:1376] Default vLLM sampling parameters have been overridden by the model's `generation_config.json`: `{'temperature': 0.6, 'top_k': 20, 'top_p': 0.95}`. If this is not intended, please relaunch vLLM instance with `--generation-config vllm`.
+(ApiServer_0 pid=106065) WARNING 09-08 13:55:36 [model.py:1376] Default vLLM sampling parameters have been overridden by the model's `generation_config.json`: `{'temperature': 0.6, 'top_k': 20, 'top_p': 0.95}`. If this is not intended, please relaunch vLLM instance with `--generation-config vllm`.
+(ApiServer_1 pid=106066) INFO 09-08 13:55:36 [parser_manager.py:202] "auto" tool choice has been enabled.
+(ApiServer_0 pid=106065) INFO 09-08 13:55:36 [parser_manager.py:202] "auto" tool choice has been enabled.
+(ApiServer_1 pid=106066) INFO 09-08 13:55:36 [parser_manager.py:202] "auto" tool choice has been enabled.
+(ApiServer_0 pid=106065) INFO 09-08 13:55:36 [parser_manager.py:202] "auto" tool choice has been enabled.
+(ApiServer_1 pid=106066) INFO 09-08 13:55:38 [hf.py:320] Detected the chat template content format to be 'string'. You can set `--chat-template-content-format` to override this.
+(ApiServer_0 pid=106065) INFO 09-08 13:55:38 [hf.py:320] Detected the chat template content format to be 'string'. You can set `--chat-template-content-format` to override this.
+(ApiServer_0 pid=106065) INFO 09-08 13:55:48 [base.py:216] Multi-modal warmup completed in 9.968s
+(ApiServer_1 pid=106066) INFO 09-08 13:55:48 [base.py:216] Multi-modal warmup completed in 9.991s
+(ApiServer_0 pid=106065) INFO 09-08 13:55:48 [parser_manager.py:202] "auto" tool choice has been enabled.
+(ApiServer_0 pid=106065) INFO 09-08 13:55:48 [api_server.py:580] Starting vLLM server on http://0.0.0.0:8001
+(ApiServer_0 pid=106065) INFO 09-08 13:55:48 [launcher.py:37] Available routes are:
+(ApiServer_0 pid=106065) INFO 09-08 13:55:48 [launcher.py:46] Route: /openapi.json, Methods: GET, HEAD
+(ApiServer_0 pid=106065) INFO 09-08 13:55:48 [launcher.py:46] Route: /docs, Methods: GET, HEAD
+(ApiServer_0 pid=106065) INFO 09-08 13:55:48 [launcher.py:46] Route: /docs/oauth2-redirect, Methods: GET, HEAD
+(ApiServer_0 pid=106065) INFO 09-08 13:55:48 [launcher.py:46] Route: /redoc, Methods: GET, HEAD
+(ApiServer_0 pid=106065) INFO 09-08 13:55:48 [launcher.py:46] Route: /tokenize, Methods: POST
+(ApiServer_0 pid=106065) INFO 09-08 13:55:48 [launcher.py:46] Route: /detokenize, Methods: POST
+(ApiServer_0 pid=106065) INFO 09-08 13:55:48 [launcher.py:46] Route: /load, Methods: GET
+(ApiServer_0 pid=106065) INFO 09-08 13:55:48 [launcher.py:46] Route: /version, Methods: GET
+(ApiServer_0 pid=106065) INFO 09-08 13:55:48 [launcher.py:46] Route: /health, Methods: GET
+(ApiServer_0 pid=106065) INFO 09-08 13:55:48 [launcher.py:46] Route: /metrics, Methods: GET
+(ApiServer_0 pid=106065) INFO 09-08 13:55:48 [launcher.py:46] Route: /v1/models, Methods: GET
+(ApiServer_0 pid=106065) INFO 09-08 13:55:48 [launcher.py:46] Route: /ping, Methods: GET
+(ApiServer_0 pid=106065) INFO 09-08 13:55:48 [launcher.py:46] Route: /ping, Methods: POST
+(ApiServer_0 pid=106065) INFO 09-08 13:55:48 [launcher.py:46] Route: /invocations, Methods: POST
+(ApiServer_0 pid=106065) INFO 09-08 13:55:48 [launcher.py:46] Route: /v1/chat/completions, Methods: POST
+(ApiServer_0 pid=106065) INFO 09-08 13:55:48 [launcher.py:46] Route: /v1/responses, Methods: POST
+(ApiServer_0 pid=106065) INFO 09-08 13:55:48 [launcher.py:46] Route: /v1/responses/{response_id}, Methods: GET
+(ApiServer_0 pid=106065) INFO 09-08 13:55:48 [launcher.py:46] Route: /v1/responses/{response_id}/cancel, Methods: POST
+(ApiServer_0 pid=106065) INFO 09-08 13:55:48 [launcher.py:46] Route: /v1/completions, Methods: POST
+(ApiServer_0 pid=106065) INFO 09-08 13:55:48 [launcher.py:46] Route: /v1/messages, Methods: POST
+(ApiServer_0 pid=106065) INFO 09-08 13:55:48 [launcher.py:46] Route: /v1/messages/count_tokens, Methods: POST
+(ApiServer_0 pid=106065) INFO 09-08 13:55:48 [launcher.py:46] Route: /inference/v1/generate, Methods: POST
+(ApiServer_0 pid=106065) INFO 09-08 13:55:48 [launcher.py:46] Route: /scale_elastic_ep, Methods: POST
+(ApiServer_0 pid=106065) INFO 09-08 13:55:48 [launcher.py:46] Route: /is_scaling_elastic_ep, Methods: POST
+(ApiServer_0 pid=106065) INFO 09-08 13:55:48 [launcher.py:46] Route: /v1/chat/completions/render, Methods: POST
+(ApiServer_0 pid=106065) INFO 09-08 13:55:48 [launcher.py:46] Route: /v1/completions/render, Methods: POST
+(ApiServer_1 pid=106066) INFO 09-08 13:55:48 [parser_manager.py:202] "auto" tool choice has been enabled.
+(ApiServer_1 pid=106066) INFO 09-08 13:55:48 [api_server.py:580] Starting vLLM server on http://0.0.0.0:8001
+(ApiServer_1 pid=106066) INFO 09-08 13:55:48 [launcher.py:37] Available routes are:
+(ApiServer_1 pid=106066) INFO 09-08 13:55:48 [launcher.py:46] Route: /openapi.json, Methods: GET, HEAD
+(ApiServer_1 pid=106066) INFO 09-08 13:55:48 [launcher.py:46] Route: /docs, Methods: GET, HEAD
+(ApiServer_1 pid=106066) INFO 09-08 13:55:48 [launcher.py:46] Route: /docs/oauth2-redirect, Methods: GET, HEAD
+(ApiServer_1 pid=106066) INFO 09-08 13:55:48 [launcher.py:46] Route: /redoc, Methods: GET, HEAD
+(ApiServer_1 pid=106066) INFO 09-08 13:55:48 [launcher.py:46] Route: /tokenize, Methods: POST
+(ApiServer_1 pid=106066) INFO 09-08 13:55:48 [launcher.py:46] Route: /detokenize, Methods: POST
+(ApiServer_1 pid=106066) INFO 09-08 13:55:48 [launcher.py:46] Route: /load, Methods: GET
+(ApiServer_1 pid=106066) INFO 09-08 13:55:48 [launcher.py:46] Route: /version, Methods: GET
+(ApiServer_1 pid=106066) INFO 09-08 13:55:48 [launcher.py:46] Route: /health, Methods: GET
+(ApiServer_1 pid=106066) INFO 09-08 13:55:48 [launcher.py:46] Route: /metrics, Methods: GET
+(ApiServer_1 pid=106066) INFO 09-08 13:55:48 [launcher.py:46] Route: /v1/models, Methods: GET
+(ApiServer_1 pid=106066) INFO 09-08 13:55:48 [launcher.py:46] Route: /ping, Methods: GET
+(ApiServer_1 pid=106066) INFO 09-08 13:55:48 [launcher.py:46] Route: /ping, Methods: POST
+(ApiServer_1 pid=106066) INFO 09-08 13:55:48 [launcher.py:46] Route: /invocations, Methods: POST
+(ApiServer_1 pid=106066) INFO 09-08 13:55:48 [launcher.py:46] Route: /v1/chat/completions, Methods: POST
+(ApiServer_1 pid=106066) INFO 09-08 13:55:48 [launcher.py:46] Route: /v1/responses, Methods: POST
+(ApiServer_1 pid=106066) INFO 09-08 13:55:48 [launcher.py:46] Route: /v1/responses/{response_id}, Methods: GET
+(ApiServer_1 pid=106066) INFO 09-08 13:55:48 [launcher.py:46] Route: /v1/responses/{response_id}/cancel, Methods: POST
+(ApiServer_1 pid=106066) INFO 09-08 13:55:48 [launcher.py:46] Route: /v1/completions, Methods: POST
+(ApiServer_1 pid=106066) INFO 09-08 13:55:48 [launcher.py:46] Route: /v1/messages, Methods: POST
+(ApiServer_1 pid=106066) INFO 09-08 13:55:48 [launcher.py:46] Route: /v1/messages/count_tokens, Methods: POST
+(ApiServer_1 pid=106066) INFO 09-08 13:55:48 [launcher.py:46] Route: /inference/v1/generate, Methods: POST
+(ApiServer_1 pid=106066) INFO 09-08 13:55:48 [launcher.py:46] Route: /scale_elastic_ep, Methods: POST
+(ApiServer_1 pid=106066) INFO 09-08 13:55:48 [launcher.py:46] Route: /is_scaling_elastic_ep, Methods: POST
+(ApiServer_1 pid=106066) INFO 09-08 13:55:48 [launcher.py:46] Route: /v1/chat/completions/render, Methods: POST
+(ApiServer_1 pid=106066) INFO 09-08 13:55:48 [launcher.py:46] Route: /v1/completions/render, Methods: POST
+(ApiServer_1 pid=106066) INFO:     Started server process [106066]
+(ApiServer_1 pid=106066) INFO:     Waiting for application startup.
+(ApiServer_0 pid=106065) INFO:     Started server process [106065]
+(ApiServer_0 pid=106065) INFO:     Waiting for application startup.
+(ApiServer_1 pid=106066) INFO:     Application startup complete.
+(ApiServer_0 pid=106065) INFO:     Application startup complete.
+(ApiServer_0 pid=106065) INFO:     127.0.0.1:49740 - "GET /v1/models HTTP/1.1" 200 OK
+(ApiServer_0 pid=106065) INFO:     127.0.0.1:49744 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(ApiServer_1 pid=106066) INFO:     127.0.0.1:49742 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(Worker pid=107003) /public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/model_executor/layers/fla/ops/utils.py:113: UserWarning: Input tensor shape suggests potential format mismatch: seq_len (36) < num_heads (48). This may indicate the inputs were passed in head-first format [B, H, T, ...] when head_first=False was specified. Please verify your input tensor format matches the expected shape [B, T, H, ...].
+(Worker pid=107003)   return fn(*contiguous_args, **contiguous_kwargs)
+(ApiServer_1 pid=106066) INFO:     127.0.0.1:51672 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(ApiServer_1 pid=106066) INFO:     127.0.0.1:51652 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(ApiServer_1 pid=106066) INFO:     127.0.0.1:51710 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(ApiServer_0 pid=106065) INFO:     127.0.0.1:51684 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(ApiServer_0 pid=106065) INFO:     127.0.0.1:51658 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(ApiServer_0 pid=106065) INFO:     127.0.0.1:51692 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(ApiServer_0 pid=106065) INFO:     127.0.0.1:51716 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(ApiServer_0 pid=106065) INFO:     127.0.0.1:51696 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(EngineCore_DP1 pid=106064) INFO 09-08 14:05:00 [core.py:1201] Shutdown initiated (timeout=0)
+(EngineCore_DP1 pid=106064) INFO 09-08 14:05:00 [core.py:1224] Shutdown complete
+(Worker pid=107003) INFO 09-08 14:05:00 [multiproc_executor.py:759] Parent process exited, terminating worker queues
+(Worker pid=106992) WARNING 09-08 14:05:00 [multiproc_executor.py:866] WorkerProc was terminated
+(Worker pid=107003) INFO 09-08 14:05:00 [multiproc_executor.py:854] WorkerProc shutting down.
+(ApiServer_0 pid=106065) INFO:     Shutting down
+(EngineCore_DP0 pid=106063) INFO 09-08 14:05:00 [core.py:1201] Shutdown initiated (timeout=0)
+(EngineCore_DP0 pid=106063) INFO 09-08 14:05:00 [core.py:1224] Shutdown complete
+(Worker pid=106992) INFO 09-08 14:05:00 [multiproc_executor.py:759] Parent process exited, terminating worker queues
+INFO 09-08 14:05:00 [utils.py:289] Received KeyboardInterrupt, shutting down API servers...
+(ApiServer_0 pid=106065) WARNING 09-08 14:05:00 [launcher.py:131] port 8001 is used by process psutil.Process(pid=106066, name='VLLM::APIServer_1', status='running') launched with command:
+(ApiServer_0 pid=106065) WARNING 09-08 14:05:00 [launcher.py:131] VLLM::APIServer_1                                                                                                                   
+(ApiServer_0 pid=106065) INFO 09-08 14:05:00 [launcher.py:137] Shutting down FastAPI HTTP server.
+(ApiServer_0 pid=106065) INFO:     Shutting down
+(ApiServer_1 pid=106066) ERROR:    Traceback (most recent call last):
+(ApiServer_1 pid=106066)   File "/usr/local/lib/python3.10/dist-packages/uvicorn/server.py", line 79, in serve
+(ApiServer_1 pid=106066)     await self._serve(sockets)
+(ApiServer_1 pid=106066)   File "/usr/local/lib/python3.10/dist-packages/uvicorn/server.py", line 96, in _serve
+(ApiServer_1 pid=106066)     await self.main_loop()
+(ApiServer_1 pid=106066)   File "/usr/local/lib/python3.10/dist-packages/uvicorn/server.py", line 238, in main_loop
+(ApiServer_1 pid=106066)     await asyncio.sleep(0.1)
+(ApiServer_1 pid=106066)   File "/usr/lib/python3.10/asyncio/tasks.py", line 605, in sleep
+(ApiServer_1 pid=106066)     return await future
+(ApiServer_1 pid=106066) asyncio.exceptions.CancelledError
+(ApiServer_1 pid=106066) 
+(ApiServer_1 pid=106066) During handling of the above exception, another exception occurred:
+(ApiServer_1 pid=106066) 
+(ApiServer_1 pid=106066) Traceback (most recent call last):
+(ApiServer_1 pid=106066)   File "/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/entrypoints/launcher.py", line 125, in serve_http
+(ApiServer_1 pid=106066)     await server_task
+(ApiServer_1 pid=106066) asyncio.exceptions.CancelledError
+(ApiServer_1 pid=106066) 
+(ApiServer_1 pid=106066) During handling of the above exception, another exception occurred:
+(ApiServer_1 pid=106066) 
+(ApiServer_1 pid=106066) Traceback (most recent call last):
+(ApiServer_1 pid=106066)   File "/usr/local/lib/python3.10/dist-packages/uvloop/__init__.py", line 69, in run
+(ApiServer_1 pid=106066)     return loop.run_until_complete(wrapper())
+(ApiServer_1 pid=106066)   File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
+(ApiServer_1 pid=106066)   File "/usr/local/lib/python3.10/dist-packages/uvloop/__init__.py", line 48, in wrapper
+(ApiServer_1 pid=106066)     return await main
+(ApiServer_1 pid=106066)   File "/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/entrypoints/openai/api_server.py", line 674, in run_server_worker
+(ApiServer_1 pid=106066)     shutdown_task = await build_and_serve(
+(ApiServer_1 pid=106066)   File "/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/entrypoints/openai/api_server.py", line 582, in build_and_serve
+(ApiServer_1 pid=106066)     return await serve_http(
+(ApiServer_1 pid=106066)   File "/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/entrypoints/launcher.py", line 135, in serve_http
+(ApiServer_1 pid=106066)     " ".join(process.cmdline()),
+(ApiServer_1 pid=106066)   File "/usr/local/lib/python3.10/dist-packages/psutil/__init__.py", line 748, in cmdline
+(ApiServer_1 pid=106066)     return self._proc.cmdline()
+(ApiServer_1 pid=106066)   File "/usr/local/lib/python3.10/dist-packages/psutil/_pslinux.py", line 1593, in wrapper
+(ApiServer_1 pid=106066)     return fun(self, *args, **kwargs)
+(ApiServer_1 pid=106066)   File "/usr/local/lib/python3.10/dist-packages/psutil/_pslinux.py", line 1754, in cmdline
+(ApiServer_1 pid=106066)     self._raise_if_zombie()
+(ApiServer_1 pid=106066)   File "/usr/local/lib/python3.10/dist-packages/psutil/_pslinux.py", line 1648, in _raise_if_zombie
+(ApiServer_1 pid=106066)     raise ZombieProcess(self.pid, self._name, self._ppid)
+(ApiServer_1 pid=106066) psutil.ZombieProcess: PID still exists but it's a zombie (pid=106323)
+(ApiServer_1 pid=106066) 
+(ApiServer_1 pid=106066) During handling of the above exception, another exception occurred:
+(ApiServer_1 pid=106066) 
+(ApiServer_1 pid=106066) Traceback (most recent call last):
+(ApiServer_1 pid=106066)   File "/usr/local/lib/python3.10/dist-packages/starlette/routing.py", line 701, in lifespan
+(ApiServer_1 pid=106066)     await receive()
+(ApiServer_1 pid=106066)   File "/usr/local/lib/python3.10/dist-packages/uvicorn/lifespan/on.py", line 137, in receive
+(ApiServer_1 pid=106066)     return await self.receive_queue.get()
+(ApiServer_1 pid=106066)   File "/usr/lib/python3.10/asyncio/queues.py", line 159, in get
+(ApiServer_1 pid=106066)     await getter
+(ApiServer_1 pid=106066) asyncio.exceptions.CancelledError
+(ApiServer_1 pid=106066) 
+(ApiServer_1 pid=106066) Process ApiServer_1:
+(ApiServer_1 pid=106066) Traceback (most recent call last):
+(ApiServer_1 pid=106066)   File "/usr/local/lib/python3.10/dist-packages/uvicorn/server.py", line 79, in serve
+(ApiServer_1 pid=106066)     await self._serve(sockets)
+(ApiServer_1 pid=106066)   File "/usr/local/lib/python3.10/dist-packages/uvicorn/server.py", line 96, in _serve
+(ApiServer_1 pid=106066)     await self.main_loop()
+(ApiServer_1 pid=106066)   File "/usr/local/lib/python3.10/dist-packages/uvicorn/server.py", line 238, in main_loop
+(ApiServer_1 pid=106066)     await asyncio.sleep(0.1)
+(ApiServer_1 pid=106066)   File "/usr/lib/python3.10/asyncio/tasks.py", line 605, in sleep
+(ApiServer_1 pid=106066)     return await future
+(ApiServer_1 pid=106066) asyncio.exceptions.CancelledError
+(ApiServer_1 pid=106066) 
+(ApiServer_1 pid=106066) During handling of the above exception, another exception occurred:
+(ApiServer_1 pid=106066) 
+(ApiServer_1 pid=106066) Traceback (most recent call last):
+(ApiServer_1 pid=106066)   File "/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/entrypoints/launcher.py", line 125, in serve_http
+(ApiServer_1 pid=106066)     await server_task
+(ApiServer_1 pid=106066) asyncio.exceptions.CancelledError
+(ApiServer_1 pid=106066) 
+(ApiServer_1 pid=106066) During handling of the above exception, another exception occurred:
+(ApiServer_1 pid=106066) 
+(ApiServer_1 pid=106066) Traceback (most recent call last):
+(ApiServer_1 pid=106066)   File "/usr/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+(ApiServer_1 pid=106066)     self.run()
+(ApiServer_1 pid=106066)   File "/usr/lib/python3.10/multiprocessing/process.py", line 108, in run
+(ApiServer_1 pid=106066)     self._target(*self._args, **self._kwargs)
+(ApiServer_1 pid=106066)   File "/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/entrypoints/cli/serve.py", line 352, in run_api_server_worker_proc
+(ApiServer_1 pid=106066)     uvloop.run(
+(ApiServer_1 pid=106066)   File "/usr/local/lib/python3.10/dist-packages/uvloop/__init__.py", line 69, in run
+(ApiServer_1 pid=106066)     return loop.run_until_complete(wrapper())
+(ApiServer_1 pid=106066)   File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
+(ApiServer_1 pid=106066)   File "/usr/local/lib/python3.10/dist-packages/uvloop/__init__.py", line 48, in wrapper
+(ApiServer_1 pid=106066)     return await main
+(ApiServer_1 pid=106066)   File "/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/entrypoints/openai/api_server.py", line 674, in run_server_worker
+(ApiServer_1 pid=106066)     shutdown_task = await build_and_serve(
+(ApiServer_1 pid=106066)   File "/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/entrypoints/openai/api_server.py", line 582, in build_and_serve
+(ApiServer_1 pid=106066)     return await serve_http(
+(ApiServer_1 pid=106066)   File "/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/entrypoints/launcher.py", line 135, in serve_http
+(ApiServer_1 pid=106066)     " ".join(process.cmdline()),
+(ApiServer_1 pid=106066)   File "/usr/local/lib/python3.10/dist-packages/psutil/__init__.py", line 748, in cmdline
+(ApiServer_1 pid=106066)     return self._proc.cmdline()
+(ApiServer_1 pid=106066)   File "/usr/local/lib/python3.10/dist-packages/psutil/_pslinux.py", line 1593, in wrapper
+(ApiServer_1 pid=106066)     return fun(self, *args, **kwargs)
+(ApiServer_1 pid=106066)   File "/usr/local/lib/python3.10/dist-packages/psutil/_pslinux.py", line 1754, in cmdline
+(ApiServer_1 pid=106066)     self._raise_if_zombie()
+(ApiServer_1 pid=106066)   File "/usr/local/lib/python3.10/dist-packages/psutil/_pslinux.py", line 1648, in _raise_if_zombie
+(ApiServer_1 pid=106066)     raise ZombieProcess(self.pid, self._name, self._ppid)
+(ApiServer_1 pid=106066) psutil.ZombieProcess: PID still exists but it's a zombie (pid=106323)
+(ApiServer_0 pid=106065) INFO:     Waiting for application shutdown.
+(ApiServer_0 pid=106065) INFO:     Application shutdown complete.

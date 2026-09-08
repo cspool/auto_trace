@@ -1,0 +1,20 @@
+{
+  "status": "authorized_same_bytes_storage_relocation",
+  "reason": "121.5GiB cgroup memory limit and85GiB immutable predecessor tmpfs pressure cause repeated weight-cache eviction",
+  "content_changes": false,
+  "existing_stage_directory_symlinks_unchanged": true,
+  "exact_file_mappings": [
+    {
+      "source": "/dev/shm/r07_cpu_validation_001/capture.prepared.db",
+      "destination": "/public/home/accl15ptg7/verified-memory-backing-20260908/r07_cpu_validation_001/capture.prepared.db"
+    },
+    {
+      "source": "/dev/shm/r07_cpu_validation_001/capture.source.db",
+      "destination": "/public/home/accl15ptg7/verified-memory-backing-20260908/r07_cpu_validation_001/capture.source.db"
+    },
+    {
+      "source": "/dev/shm/r08_continuation_predecessors/artifacts/R01/raw/hipprof/capture_1.pftrace",
+      "destination": "/public/home/accl15ptg7/verified-memory-backing-20260908/r08_continuation_predecessors/artifacts/R01/raw/hipprof/capture_1.pftrace"
+    }
+  ]
+}

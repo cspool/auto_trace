@@ -1,0 +1,18 @@
+VERIFIED downloaded PARTS.tsv 1410
+VERIFIED downloaded ARCHIVE_STREAM_SHA256 95
+VERIFIED downloaded r08-r10-recovery-full-32m.tar.gz.part-000 33554432
+VERIFIED downloaded r08-r10-recovery-full-32m.tar.gz.part-001 33554432
+RETRY r08-r10-recovery-full-32m.tar.gz.part-003 0 HTTPSConnectionPool(host='github.com', port=443): Max retries exceeded with url: /cspool/auto_trace/releases/download/perf-trace-batch8-r08-r10-batch8-dp2-fresh-003-20260901/r08-r10-recovery-full-32m.tar.gz.part-003 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred
+RETRY r08-r10-recovery-full-32m.tar.gz.part-003 1 HTTPSConnectionPool(host='github.com', port=443): Max retries exceeded with url: /cspool/auto_trace/releases/download/perf-trace-batch8-r08-r10-batch8-dp2-fresh-003-20260901/r08-r10-recovery-full-32m.tar.gz.part-003 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred
+VERIFIED downloaded r08-r10-recovery-full-32m.tar.gz.part-002 33554432
+VERIFIED downloaded r08-r10-recovery-full-32m.tar.gz.part-003 33554432
+RETRY r08-r10-recovery-full-32m.tar.gz.part-005 0 HTTPSConnectionPool(host='github.com', port=443): Max retries exceeded with url: /cspool/auto_trace/releases/download/perf-trace-batch8-r08-r10-batch8-dp2-fresh-003-20260901/r08-r10-recovery-full-32m.tar.gz.part-005 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred
+VERIFIED downloaded r08-r10-recovery-full-32m.tar.gz.part-004 33554432
+VERIFIED downloaded r08-r10-recovery-full-32m.tar.gz.part-005 33554432
+VERIFIED downloaded r08-r10-recovery-full-32m.tar.gz.part-006 33554432
+VERIFIED downloaded r08-r10-recovery-full-32m.tar.gz.part-007 33554432
+VERIFIED downloaded r08-r10-recovery-full-32m.tar.gz.part-008 33554432
+VERIFIED downloaded README.md 2285
+VERIFIED downloaded r08-r10-recovery-full-32m.tar.gz.part-009 25712794
+VERIFIED downloaded SHA256SUMS 3074
+ALL_DOWNLOADS_VERIFIED

@@ -1,0 +1,13 @@
+/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/__init__.py:7: RuntimeWarning: Failed to read commit hash:
+No module named 'vllm._version'
+  from .version import __version__, __version_tuple__  # isort:skip
+Traceback (most recent call last):
+  File "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/revision_002/source_abi_probe.py", line 12, in <module>
+    import vllm
+  File "/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/__init__.py", line 14, in <module>
+    import vllm.env_override  # noqa: F401
+  File "/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/env_override.py", line 87, in <module>
+    import torch
+  File "/usr/local/lib/python3.10/dist-packages/torch/__init__.py", line 431, in <module>
+    from torch._C import *  # noqa: F403
+ImportError: librocm_smi64.so.2: cannot open shared object file: No such file or directory

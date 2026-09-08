@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/revision_004/probe_current_capability.py", line 77, in <module>
+    if __name__=='__main__':main()
+  File "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/revision_004/probe_current_capability.py", line 47, in main
+    require(not root.exists(),'new capability revision');root.mkdir()
+  File "/usr/lib/python3.10/pathlib.py", line 1175, in mkdir
+    self._accessor.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/preflight/native_probe_001'

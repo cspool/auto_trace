@@ -1,0 +1,35 @@
+{
+  "status": "complete",
+  "file_mappings": [
+    {
+      "source_path": "/dev/shm/r08_continuation_predecessors/artifacts/R01/raw/hipprof/capture.db",
+      "resolved_destination": "/public/home/accl15ptg7/verified-memory-backing-20260908/r08_continuation_predecessors/artifacts/R01/raw/hipprof/capture.db",
+      "size": 8948797440,
+      "sha256": "fa03c1ff5b58deb250e1d245e36e59b8168941fc501e2c78a4cfdd1ea59790d1",
+      "double_hash_verified": true
+    },
+    {
+      "source_path": "/dev/shm/r08_continuation_predecessors/artifacts/R03/raw/process/capture.db",
+      "resolved_destination": "/public/home/accl15ptg7/verified-memory-backing-20260908/r08_continuation_predecessors/artifacts/R03/raw/process/capture.db",
+      "size": 8939151360,
+      "sha256": "66a661748a01d2cbd8014605d028bfbd7b342be4ca586ed63ad4ac183c9584af",
+      "double_hash_verified": true
+    },
+    {
+      "source_path": "/dev/shm/r08_continuation_predecessors/artifacts/R01/raw/hipprof/capture_2.pftrace",
+      "resolved_destination": "/public/home/accl15ptg7/verified-memory-backing-20260908/r08_continuation_predecessors/artifacts/R01/raw/hipprof/capture_2.pftrace",
+      "size": 4258580814,
+      "sha256": "c5cc3aa531cd586df726f5621f82b1ee27932c6c7ef9aa93fe254a4fc23fe14b",
+      "double_hash_verified": true
+    },
+    {
+      "source_path": "/dev/shm/r08_continuation_predecessors/artifacts/R01/tmp/db-recovery/capture.db.original_candidate.gz",
+      "resolved_destination": "/public/home/accl15ptg7/verified-memory-backing-20260908/r08_continuation_predecessors/artifacts/R01/tmp/db-recovery/capture.db.original_candidate.gz",
+      "size": 2405765444,
+      "sha256": "7058e296fbbf2a172f16d2242109a1a30059ac8b0b224295210dbc28dcaf2bf6",
+      "double_hash_verified": true
+    }
+  ],
+  "authorization_sha256": "20be6aa2205248964ce9f05d11dc950850f297d83e00727dbc5b2e6e267ab431",
+  "predecessor_content_changed": false
+}

@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/revision_008/run_capture.py", line 138, in <module>
+    if __name__=='__main__':main()
+  File "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/revision_008/run_capture.py", line 136, in main
+    else:capture(args)
+  File "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/revision_008/run_capture.py", line 121, in capture
+    require((root/'capture.csv').is_file() and (root/'capture.csv').stat().st_size>0,'native PMC CSV missing')
+  File "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/revision_008/r08_native.py", line 23, in require
+    if not condition:raise ValueError(message)
+ValueError: native PMC CSV missing

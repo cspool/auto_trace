@@ -1,0 +1,41 @@
+/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/gate_probe_001/probe.cpp:53:95: warning: 'hipProfilerStart' is deprecated: use roctracer/rocTX instead [-Wdeprecated-declarations]
+   53 |   auto start=direct ? reinterpret_cast<hipError_t(*)()>(dlsym(runtime,"hipProfilerStart")) : &hipProfilerStart;
+      |                                                                                               ^
+/opt/dtk/hip/include/hip/hip_runtime_api.h:6533:1: note: 'hipProfilerStart' has been explicitly marked deprecated here
+ 6533 | DEPRECATED("use roctracer/rocTX instead")
+      | ^
+/opt/dtk/hip/include/hip/hip_runtime_api.h:66:41: note: expanded from macro 'DEPRECATED'
+   66 | #define DEPRECATED(msg) __attribute__ ((deprecated(msg)))
+      |                                         ^
+/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/gate_probe_001/probe.cpp:54:93: warning: 'hipProfilerStop' is deprecated: use roctracer/rocTX instead [-Wdeprecated-declarations]
+   54 |   auto stop=direct ? reinterpret_cast<hipError_t(*)()>(dlsym(runtime,"hipProfilerStop")) : &hipProfilerStop;
+      |                                                                                             ^
+/opt/dtk/hip/include/hip/hip_runtime_api.h:6540:1: note: 'hipProfilerStop' has been explicitly marked deprecated here
+ 6540 | DEPRECATED("use roctracer/rocTX instead")
+      | ^
+/opt/dtk/hip/include/hip/hip_runtime_api.h:66:41: note: expanded from macro 'DEPRECATED'
+   66 | #define DEPRECATED(msg) __attribute__ ((deprecated(msg)))
+      |                                         ^
+2 warnings generated when compiling for gfx936.
+/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/gate_probe_001/probe.cpp:53:95: warning: 'hipProfilerStart' is deprecated: use roctracer/rocTX instead [-Wdeprecated-declarations]
+   53 |   auto start=direct ? reinterpret_cast<hipError_t(*)()>(dlsym(runtime,"hipProfilerStart")) : &hipProfilerStart;
+      |                                                                                               ^
+/opt/dtk/hip/include/hip/hip_runtime_api.h:6533:1: note: 'hipProfilerStart' has been explicitly marked deprecated here
+ 6533 | DEPRECATED("use roctracer/rocTX instead")
+      | ^
+/opt/dtk/hip/include/hip/hip_runtime_api.h:66:41: note: expanded from macro 'DEPRECATED'
+   66 | #define DEPRECATED(msg) __attribute__ ((deprecated(msg)))
+      |                                         ^
+/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/gate_probe_001/probe.cpp:54:93: warning: 'hipProfilerStop' is deprecated: use roctracer/rocTX instead [-Wdeprecated-declarations]
+   54 |   auto stop=direct ? reinterpret_cast<hipError_t(*)()>(dlsym(runtime,"hipProfilerStop")) : &hipProfilerStop;
+      |                                                                                             ^
+/opt/dtk/hip/include/hip/hip_runtime_api.h:6540:1: note: 'hipProfilerStop' has been explicitly marked deprecated here
+ 6540 | DEPRECATED("use roctracer/rocTX instead")
+      | ^
+/opt/dtk/hip/include/hip/hip_runtime_api.h:66:41: note: expanded from macro 'DEPRECATED'
+   66 | #define DEPRECATED(msg) __attribute__ ((deprecated(msg)))
+      |                                         ^
+2 warnings generated when compiling for host.
+PMC_TRANSITION_PROBE direct_default_on 0 4
+PMC_TRANSITION_PROBE direct_off 0 4
+PMC_TRANSITION_PROBE linked_off 0 4

@@ -1,0 +1,4 @@
+/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/__init__.py:7: RuntimeWarning: Failed to read commit hash:
+No module named 'vllm._version'
+  from .version import __version__, __version_tuple__  # isort:skip
+CURRENT_SOURCE_ABI_PROBE_COMPLETE [{'dp_rank': 0, 'native_device': 0, 'name': 'BW', 'architecture': 'gfx936:sramecc+:xnack-', 'total_memory': 68702699520, 'compute_units': 80}, {'dp_rank': 1, 'native_device': 1, 'name': 'BW', 'architecture': 'gfx936:sramecc+:xnack-', 'total_memory': 68702699520, 'compute_units': 80}]

@@ -1,0 +1,30 @@
+{"utc": "2026-09-08T04:52:57Z", "event": "awaiting_verified_download", "ready": 0, "total": 3}
+{"utc": "2026-09-08T04:53:27Z", "event": "awaiting_verified_download", "ready": 0, "total": 3}
+{"utc": "2026-09-08T04:53:57Z", "event": "awaiting_verified_download", "ready": 0, "total": 3}
+{"utc": "2026-09-08T04:54:27Z", "event": "awaiting_verified_download", "ready": 0, "total": 3}
+{"utc": "2026-09-08T04:54:57Z", "event": "awaiting_verified_download", "ready": 0, "total": 3}
+{"utc": "2026-09-08T04:55:27Z", "event": "awaiting_verified_download", "ready": 0, "total": 3}
+{"utc": "2026-09-08T04:55:57Z", "event": "awaiting_verified_download", "ready": 0, "total": 3}
+{"utc": "2026-09-08T04:56:27Z", "event": "awaiting_verified_download", "ready": 0, "total": 3}
+{"utc": "2026-09-08T04:56:58Z", "event": "awaiting_verified_download", "ready": 0, "total": 3}
+{"utc": "2026-09-08T04:57:28Z", "event": "awaiting_verified_download", "ready": 0, "total": 3}
+{"utc": "2026-09-08T04:57:58Z", "event": "awaiting_verified_download", "ready": 0, "total": 3}
+{"utc": "2026-09-08T04:58:28Z", "event": "awaiting_verified_download", "ready": 0, "total": 3}
+{"utc": "2026-09-08T04:58:58Z", "event": "awaiting_verified_download", "ready": 0, "total": 3}
+{"utc": "2026-09-08T04:59:28Z", "event": "awaiting_verified_download", "ready": 1, "total": 3}
+{"utc": "2026-09-08T04:59:58Z", "event": "awaiting_verified_download", "ready": 1, "total": 3}
+{"utc": "2026-09-08T05:00:28Z", "event": "awaiting_verified_download", "ready": 1, "total": 3}
+{"utc": "2026-09-08T05:01:05Z", "event": "decompression_started"}
+{"utc": "2026-09-08T05:02:03Z", "event": "source_verified", "bytes": 8958377984, "sha256": "0ea77cdac40926182c4e04fc29e687e62df9b2cac50296c7e399817c583690b0"}
+{"utc": "2026-09-08T05:02:14Z", "event": "source_quick_check_ok", "seconds": 10.899945929006208, "tables": 26}
+{"utc": "2026-09-08T05:02:14Z", "event": "native_row_validation_complete", "file": "process_ranges.csv", "sha256": "591bd9b338b21c21d65536139a7b3ebe815021d4f70a6fad770bafb825cf9029", "rows": 12544, "native_rows_exact": true, "fields": {"begin_ns": "BeginNs", "end_ns": "EndNs", "hiptx_range_index": "_Index", "pid": "pid", "tid": "tid"}, "tables": {"HIPTX_173_18_25_2_296734_1788408919": 6272, "HIPTX_173_18_25_2_296762_1788408920": 6272}, "seconds": 0.4302507219836116}
+{"utc": "2026-09-08T05:02:16Z", "event": "native_row_validation_progress", "file": "hip_runtime_calls.csv", "rows": 50000}
+{"utc": "2026-09-08T05:02:17Z", "event": "native_row_validation_progress", "file": "hip_runtime_calls.csv", "rows": 100000}
+{"utc": "2026-09-08T05:02:18Z", "event": "native_row_validation_progress", "file": "hip_runtime_calls.csv", "rows": 150000}
+{"utc": "2026-09-08T05:02:20Z", "event": "native_row_validation_progress", "file": "hip_runtime_calls.csv", "rows": 200000}
+{"utc": "2026-09-08T05:02:21Z", "event": "native_row_validation_progress", "file": "hip_runtime_calls.csv", "rows": 250000}
+{"utc": "2026-09-08T05:02:22Z", "event": "native_row_validation_progress", "file": "hip_runtime_calls.csv", "rows": 300000}
+{"utc": "2026-09-08T05:02:23Z", "event": "native_row_validation_complete", "file": "hip_runtime_calls.csv", "sha256": "69a5a47bd2e6083cf63c0c6335175316292084b2b3877007ce4fb11f5cea54c7", "rows": 316802, "native_rows_exact": true, "fields": {"begin_ns": "BeginNs", "end_ns": "EndNs", "hip_runtime_index": "_Index", "pid": "pid", "tid": "tid"}, "tables": {"HIP_173_18_25_2_296734_1788408919": 158401, "HIP_173_18_25_2_296762_1788408920": 158401}, "seconds": 8.201650987030007}
+{"utc": "2026-09-08T05:02:23Z", "event": "native_row_validation_complete", "file": "strict_owned_kernels.csv", "sha256": "aaa51fa3ce337cff07cf8a005a15ffaa229dbe77223d4c76b3b2caa4e45da030", "rows": 23660, "native_rows_exact": true, "fields": {"begin_ns": "BeginNs", "end_ns": "EndNs", "native_device_index": "_Index", "pid": "pid", "native_device": "dev_id", "queue_id": "queue_id"}, "tables": {"HIPOPS_173_18_25_2_296734_1788408919": 11830, "HIPOPS_173_18_25_2_296762_1788408920": 11830}, "seconds": 0.7588850490283221}
+{"utc": "2026-09-08T05:02:23Z", "event": "derived_table_reconstruction_started", "timeout_seconds": 600}
+{"utc": "2026-09-08T05:04:36Z", "event": "CPU_DB_VALIDATION_COMPLETE", "report_path": "/public/home/accl15ptg7/run_R08_R10/r07_cpu_validation_001/CPU_DB_VALIDATION.json", "prepare_wall_seconds": 132.5449802109506}

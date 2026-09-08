@@ -1,0 +1,89 @@
+VERIFIED existing SHA256SUMS
+VERIFIED existing r07-attempt043-recovery-consumer-bundle.tar.gz.sha256
+VERIFIED existing ARCHIVE_STREAM_SHA256
+VERIFIED existing PARTS.tsv
+VERIFIED existing README.md
+VERIFIED existing r04-r06-full-32m.tar.gz.part-000
+VERIFIED existing r04-r06-full-32m.tar.gz.part-003
+VERIFIED existing r04-r06-full-32m.tar.gz.part-001
+VERIFIED existing r04-r06-full-32m.tar.gz.part-002
+VERIFIED existing r04-r06-full-32m.tar.gz.part-004
+VERIFIED existing r04-r06-full-32m.tar.gz.part-005
+VERIFIED existing r04-r06-full-32m.tar.gz.part-006
+VERIFIED existing r04-r06-full-32m.tar.gz.part-007
+VERIFIED existing r04-r06-full-32m.tar.gz.part-008
+VERIFIED existing r04-r06-full-32m.tar.gz.part-009
+VERIFIED existing r04-r06-full-32m.tar.gz.part-010
+VERIFIED existing r04-r06-full-32m.tar.gz.part-011
+VERIFIED existing r04-r06-full-32m.tar.gz.part-012
+VERIFIED existing r04-r06-full-32m.tar.gz.part-014
+VERIFIED existing r04-r06-full-32m.tar.gz.part-013
+VERIFIED existing r04-r06-full-32m.tar.gz.part-015
+VERIFIED existing r04-r06-full-32m.tar.gz.part-016
+VERIFIED existing r07-attempt043-recovery-consumer-bundle.tar.gz
+VERIFIED existing r04-r06-full-32m.tar.gz.part-017
+VERIFIED existing r04-r06-full-32m.tar.gz.part-019
+VERIFIED existing r04-r06-full-32m.tar.gz.part-021
+VERIFIED existing r04-r06-full-32m.tar.gz.part-020
+VERIFIED existing r04-r06-full-32m.tar.gz.part-022
+VERIFIED existing r04-r06-full-32m.tar.gz.part-018
+VERIFIED existing r04-r06-full-32m.tar.gz.part-023
+VERIFIED existing r04-r06-full-32m.tar.gz.part-024
+VERIFIED existing r04-r06-full-32m.tar.gz.part-025
+VERIFIED existing r04-r06-full-32m.tar.gz.part-026
+VERIFIED existing r04-r06-full-32m.tar.gz.part-027
+VERIFIED existing r04-r06-full-32m.tar.gz.part-028
+RETRY r04-r06-full-32m.tar.gz.part-032 0 HTTPSConnectionPool(host='github.com', port=443): Max retries exceeded with url: /cspool/auto_trace/releases/download/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-032 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in viola
+VERIFIED downloaded r04-r06-full-32m.tar.gz.part-029 33554432
+VERIFIED downloaded r04-r06-full-32m.tar.gz.part-030 33554432
+VERIFIED downloaded r04-r06-full-32m.tar.gz.part-033 33554432
+VERIFIED downloaded r04-r06-full-32m.tar.gz.part-031 33554432
+VERIFIED downloaded r04-r06-full-32m.tar.gz.part-034 33554432
+VERIFIED downloaded r04-r06-full-32m.tar.gz.part-032 33554432
+VERIFIED downloaded r04-r06-full-32m.tar.gz.part-035 33554432
+VERIFIED downloaded r04-r06-full-32m.tar.gz.part-036 33554432
+VERIFIED downloaded r04-r06-full-32m.tar.gz.part-037 33554432
+VERIFIED downloaded r04-r06-full-32m.tar.gz.part-038 33554432
+VERIFIED downloaded r04-r06-full-32m.tar.gz.part-039 33554432
+VERIFIED downloaded r04-r06-full-32m.tar.gz.part-040 33554432
+VERIFIED downloaded r04-r06-full-32m.tar.gz.part-041 33554432
+VERIFIED downloaded r04-r06-full-32m.tar.gz.part-042 33554432
+VERIFIED downloaded r04-r06-full-32m.tar.gz.part-044 33554432
+VERIFIED downloaded r04-r06-full-32m.tar.gz.part-045 33554432
+VERIFIED downloaded r04-r06-full-32m.tar.gz.part-043 33554432
+VERIFIED downloaded r04-r06-full-32m.tar.gz.part-046 33554432
+VERIFIED downloaded r04-r06-full-32m.tar.gz.part-047 33554432
+VERIFIED downloaded r04-r06-full-32m.tar.gz.part-048 33554432
+VERIFIED downloaded r04-r06-full-32m.tar.gz.part-049 33554432
+VERIFIED downloaded r04-r06-full-32m.tar.gz.part-050 33554432
+VERIFIED downloaded r04-r06-full-32m.tar.gz.part-054 33554432
+VERIFIED downloaded r04-r06-full-32m.tar.gz.part-052 33554432
+VERIFIED downloaded r04-r06-full-32m.tar.gz.part-051 33554432
+VERIFIED downloaded r04-r06-full-32m.tar.gz.part-053 33554432
+VERIFIED downloaded r04-r06-full-32m.tar.gz.part-055 33554432
+VERIFIED downloaded r04-r06-full-32m.tar.gz.part-056 33554432
+VERIFIED downloaded r04-r06-full-32m.tar.gz.part-058 33554432
+VERIFIED downloaded r04-r06-full-32m.tar.gz.part-057 33554432
+VERIFIED downloaded r04-r06-full-32m.tar.gz.part-059 33554432
+VERIFIED downloaded r04-r06-full-32m.tar.gz.part-060 33554432
+VERIFIED downloaded r04-r06-full-32m.tar.gz.part-061 33554432
+VERIFIED downloaded r04-r06-full-32m.tar.gz.part-062 33554432
+VERIFIED downloaded r04-r06-full-32m.tar.gz.part-063 33554432
+VERIFIED downloaded r04-r06-full-32m.tar.gz.part-066 33554432
+VERIFIED downloaded r04-r06-full-32m.tar.gz.part-065 33554432
+VERIFIED downloaded r04-r06-full-32m.tar.gz.part-064 33554432
+VERIFIED downloaded r04-r06-full-32m.tar.gz.part-067 33554432
+VERIFIED downloaded r04-r06-full-32m.tar.gz.part-068 33554432
+VERIFIED downloaded r04-r06-full-32m.tar.gz.part-073 11848880
+VERIFIED downloaded README.md 1556
+VERIFIED downloaded SHA256SUMS 7396
+VERIFIED downloaded runtime_handoff_ledger.R06.snapshot.json 7798078
+VERIFIED downloaded r04-r06-full-32m.tar.gz.part-069 33554432
+VERIFIED downloaded r04-r06-full-32m.tar.gz.part-071 33554432
+VERIFIED downloaded PARTS.tsv 922
+VERIFIED downloaded r04-r06-full-32m.tar.gz.part-072 33554432
+VERIFIED downloaded r04-r06-full-32m.tar.gz.part-070 33554432
+VERIFIED downloaded perf_trace_batch8-r01-r03-code-workflow-snapshot.tar.gz 355872
+RETRY r01-r03-full.tar.gz.part-000 0 ('Connection broken: IncompleteRead(215398951 bytes read, 1776895449 more expected)', IncompleteRead(215398951 bytes read, 1776895449 more expected))
+RETRY r01-r03-full.tar.gz.part-000 1 HTTPSConnectionPool(host='github.com', port=443): Max retries exceeded with url: /cspool/auto_trace/releases/download/perf-trace-batch8-r01-r03-batch8-dp2-fresh-003-20260827/r01-r03-full.tar.gz.part-000 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation
+RETRY r01-r03-full.tar.gz.part-003 0 ('Connection broken: IncompleteRead(330053300 bytes read, 1662241100 more expected)', IncompleteRead(330053300 bytes read, 1662241100 more expected))

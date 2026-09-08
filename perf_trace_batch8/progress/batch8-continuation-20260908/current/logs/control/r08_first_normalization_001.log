@@ -1,0 +1,10 @@
+NATIVE_PROCESS_ROWS 01__gqa6_pmc 0 6272
+NATIVE_PROCESS_ROWS 01__gqa6_pmc 1 12544
+Traceback (most recent call last):
+  File "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/analysis_002/normalize_capture.py", line 156, in <module>
+    if __name__=='__main__':main()
+  File "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/analysis_002/normalize_capture.py", line 141, in main
+    require(used==set(eligible),'missing PMC payload for a selected native dispatch')
+  File "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/revision_008/r08_native.py", line 23, in require
+    if not condition:raise ValueError(message)
+ValueError: missing PMC payload for a selected native dispatch

@@ -1,0 +1,3 @@
+TORCH_PMC_EXEC_PROBE off_trace 0 8 0
+TORCH_PMC_EXEC_PROBE on_trace 0 8 0
+TORCH_PMC_EXEC_PROBE on_pmc_only 0 8 0

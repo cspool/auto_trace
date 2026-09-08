@@ -1,0 +1,183 @@
+starting internal DP=2, TP=1 on HIP devices 0,1
+model=/root/Qwen3.5-27B port=8001 backend=mp
+/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/__init__.py:7: RuntimeWarning: Failed to read commit hash:
+No module named 'vllm._version'
+  from .version import __version__, __version_tuple__  # isort:skip
+R08_COMPILED_OVERLAY_READY attempt=batch8-dp2-fresh-003-R08-01__gqa6_pmc-attempt_001 process_targets=12544 layer_targets=1024 r01_patch_sha256=5329e3ecb54c724d259b4eeb7deccd90be447233d23b438a4cfee725e6705a48 status=ready
+R08_PMC_GATE_READY attempt=batch8-dp2-fresh-003-R08-01__gqa6_pmc-attempt_001 segment=01__gqa6_pmc measured_requests=8 collection_state=initially_stopped canonical_window=dynamic_plus_offline_guard
+INFO 09-08 13:29:49 [serve.py:106] Defaulting api_server_count to data_parallel_size (2).
+INFO 09-08 13:29:49 [utils.py:297] 
+INFO 09-08 13:29:49 [utils.py:297]        █     █     █▄   ▄█
+INFO 09-08 13:29:49 [utils.py:297]  ▄▄ ▄█ █     █     █ ▀▄▀ █  version dev
+INFO 09-08 13:29:49 [utils.py:297]   █▄█▀ █     █     █     █  model   /root/Qwen3.5-27B
+INFO 09-08 13:29:49 [utils.py:297]    ▀▀  ▀▀▀▀▀ ▀▀▀▀▀ ▀     ▀
+INFO 09-08 13:29:49 [utils.py:297] 
+INFO 09-08 13:29:49 [utils.py:233] non-default args: {'model_tag': '/root/Qwen3.5-27B', 'api_server_count': 2, 'default_chat_template_kwargs': {'enable_thinking': False}, 'enable_auto_tool_choice': True, 'tool_call_parser': 'qwen3_coder', 'port': 8001, 'model': '/root/Qwen3.5-27B', 'trust_remote_code': True, 'dtype': 'bfloat16', 'served_model_name': ['Qwen3.5-27B'], 'reasoning_parser': 'qwen3', 'data_parallel_size': 2, 'gpu_memory_utilization': 0.95, 'max_num_batched_tokens': 4096, 'max_num_seqs': 128, 'long_prefill_token_threshold': 512, 'compilation_config': {'mode': None, 'debug_dump_path': None, 'cache_dir': '', 'compile_cache_save_format': 'binary', 'backend': 'inductor', 'custom_ops': [], 'splitting_ops': None, 'compile_mm_encoder': False, 'compile_sizes': [4096], 'compile_ranges_endpoints': None, 'inductor_compile_config': {'enable_auto_functionalized_v2': False, 'combo_kernels': True, 'benchmark_combo_kernel': True}, 'inductor_passes': {}, 'cudagraph_mode': None, 'cudagraph_num_of_warmups': 0, 'cudagraph_capture_sizes': None, 'cudagraph_copy_inputs': False, 'cudagraph_specialize_lora': True, 'use_inductor_graph_partition': None, 'pass_config': {}, 'max_cudagraph_capture_size': None, 'dynamic_shapes_config': {'type': <DynamicShapesType.BACKED: 'backed'>, 'evaluate_guards': False, 'assume_32_bit_indexing': False}, 'local_cache_dir': None, 'fast_moe_cold_start': None, 'static_all_moe_layers': []}}
+WARNING 09-08 13:29:49 [envs.py:1717] Unknown vLLM environment variable detected: VLLM_ROCM_TUNABLEOP_PROFILE
+WARNING 09-08 13:29:49 [envs.py:1717] Unknown vLLM environment variable detected: VLLM_BIN
+WARNING 09-08 13:29:49 [envs.py:1717] Unknown vLLM environment variable detected: VLLM_ROCM_TUNABLEOP_PROFILE_SHA256
+The argument `trust_remote_code` is to be used with Auto classes. It has no effect here and is ignored.
+`layer_type_validation` is deprecated and will be removed in v5.20. Use `PreTrainedConfig.validate_layer_type` instead
+`layer_type_validation` is deprecated and will be removed in v5.20. Use `PreTrainedConfig.validate_layer_type` instead
+`layer_type_validation` is deprecated and will be removed in v5.20. Use `PreTrainedConfig.validate_layer_type` instead
+INFO 09-08 13:30:37 [model.py:533] Resolved architecture: Qwen3_5ForConditionalGeneration
+INFO 09-08 13:30:37 [model.py:1582] Using max model len 262144
+INFO 09-08 13:30:37 [scheduler.py:231] Chunked prefill is enabled with max_num_batched_tokens=4096.
+`Qwen2VLImageProcessorFast` is deprecated. The `Fast` suffix for image processors has been removed; use `Qwen2VLImageProcessor` instead.
+INFO 09-08 13:30:38 [config.py:212] Setting attention block size to 784 tokens to ensure that attention page size is >= mamba page size.
+INFO 09-08 13:30:38 [config.py:243] Padding mamba page size by 0.13% to ensure that mamba page size and attention page size are exactly equal.
+INFO 09-08 13:30:38 [vllm.py:775] Asynchronous scheduling is enabled.
+INFO 09-08 13:30:38 [rocm.py:661] Capping Qwen3.5-27B DP2 CUDA Graph capture size at 16
+INFO 09-08 13:30:38 [utils.py:889] Started DP Coordinator process (PID: 45475)
+INFO 09-08 13:30:38 [utils.py:217] Started 2 API server processes
+/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/__init__.py:7: RuntimeWarning: Failed to read commit hash:
+No module named 'vllm._version'
+  from .version import __version__, __version_tuple__  # isort:skip
+/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/__init__.py:7: RuntimeWarning: Failed to read commit hash:
+No module named 'vllm._version'
+  from .version import __version__, __version_tuple__  # isort:skip
+/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/__init__.py:7: RuntimeWarning: Failed to read commit hash:
+No module named 'vllm._version'
+  from .version import __version__, __version_tuple__  # isort:skip
+/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/__init__.py:7: RuntimeWarning: Failed to read commit hash:
+No module named 'vllm._version'
+  from .version import __version__, __version_tuple__  # isort:skip
+/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/__init__.py:7: RuntimeWarning: Failed to read commit hash:
+No module named 'vllm._version'
+  from .version import __version__, __version_tuple__  # isort:skip
+/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/__init__.py:7: RuntimeWarning: Failed to read commit hash:
+No module named 'vllm._version'
+  from .version import __version__, __version_tuple__  # isort:skip
+R08_COMPILED_OVERLAY_READY attempt=batch8-dp2-fresh-003-R08-01__gqa6_pmc-attempt_001 process_targets=12544 layer_targets=1024 r01_patch_sha256=5329e3ecb54c724d259b4eeb7deccd90be447233d23b438a4cfee725e6705a48 status=ready
+R08_COMPILED_OVERLAY_READY attempt=batch8-dp2-fresh-003-R08-01__gqa6_pmc-attempt_001 process_targets=12544 layer_targets=1024 r01_patch_sha256=5329e3ecb54c724d259b4eeb7deccd90be447233d23b438a4cfee725e6705a48 status=ready
+R08_PMC_GATE_READY attempt=batch8-dp2-fresh-003-R08-01__gqa6_pmc-attempt_001 segment=01__gqa6_pmc measured_requests=8 collection_state=initially_stopped canonical_window=dynamic_plus_offline_guard
+R08_PMC_GATE_READY attempt=batch8-dp2-fresh-003-R08-01__gqa6_pmc-attempt_001 segment=01__gqa6_pmc measured_requests=8 collection_state=initially_stopped canonical_window=dynamic_plus_offline_guard
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/usr/lib/python3.10/multiprocessing/spawn.py", line 116, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+  File "/usr/lib/python3.10/multiprocessing/spawn.py", line 125, in _main
+    prepare(preparation_data)
+  File "/usr/lib/python3.10/multiprocessing/spawn.py", line 236, in prepare
+    _fixup_main_from_path(data['init_main_from_path'])
+  File "/usr/lib/python3.10/multiprocessing/spawn.py", line 287, in _fixup_main_from_path
+    main_content = runpy.run_path(main_path,
+  File "/usr/lib/python3.10/runpy.py", line 289, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/usr/lib/python3.10/runpy.py", line 96, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/revision_007/launch_vllm.py", line 6, in <module>
+    require(Path.cwd()==TARGET,'service entry cwd must be pinned target')
+  File "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/revision_007/r08_native.py", line 23, in require
+    if not condition:raise ValueError(message)
+ValueError: service entry cwd must be pinned target
+R08_COMPILED_OVERLAY_READY attempt=batch8-dp2-fresh-003-R08-01__gqa6_pmc-attempt_001 process_targets=12544 layer_targets=1024 r01_patch_sha256=5329e3ecb54c724d259b4eeb7deccd90be447233d23b438a4cfee725e6705a48 status=ready
+R08_PMC_GATE_READY attempt=batch8-dp2-fresh-003-R08-01__gqa6_pmc-attempt_001 segment=01__gqa6_pmc measured_requests=8 collection_state=initially_stopped canonical_window=dynamic_plus_offline_guard
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/usr/lib/python3.10/multiprocessing/spawn.py", line 116, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+  File "/usr/lib/python3.10/multiprocessing/spawn.py", line 125, in _main
+    prepare(preparation_data)
+  File "/usr/lib/python3.10/multiprocessing/spawn.py", line 236, in prepare
+    _fixup_main_from_path(data['init_main_from_path'])
+  File "/usr/lib/python3.10/multiprocessing/spawn.py", line 287, in _fixup_main_from_path
+    main_content = runpy.run_path(main_path,
+  File "/usr/lib/python3.10/runpy.py", line 289, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/usr/lib/python3.10/runpy.py", line 96, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/revision_007/launch_vllm.py", line 6, in <module>
+    require(Path.cwd()==TARGET,'service entry cwd must be pinned target')
+  File "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/revision_007/r08_native.py", line 23, in require
+    if not condition:raise ValueError(message)
+ValueError: service entry cwd must be pinned target
+R08_COMPILED_OVERLAY_READY attempt=batch8-dp2-fresh-003-R08-01__gqa6_pmc-attempt_001 process_targets=12544 layer_targets=1024 r01_patch_sha256=5329e3ecb54c724d259b4eeb7deccd90be447233d23b438a4cfee725e6705a48 status=ready
+R08_PMC_GATE_READY attempt=batch8-dp2-fresh-003-R08-01__gqa6_pmc-attempt_001 segment=01__gqa6_pmc measured_requests=8 collection_state=initially_stopped canonical_window=dynamic_plus_offline_guard
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/usr/lib/python3.10/multiprocessing/spawn.py", line 116, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+  File "/usr/lib/python3.10/multiprocessing/spawn.py", line 125, in _main
+    prepare(preparation_data)
+  File "/usr/lib/python3.10/multiprocessing/spawn.py", line 236, in prepare
+    _fixup_main_from_path(data['init_main_from_path'])
+  File "/usr/lib/python3.10/multiprocessing/spawn.py", line 287, in _fixup_main_from_path
+    main_content = runpy.run_path(main_path,
+  File "/usr/lib/python3.10/runpy.py", line 289, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/usr/lib/python3.10/runpy.py", line 96, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/revision_007/launch_vllm.py", line 6, in <module>
+    require(Path.cwd()==TARGET,'service entry cwd must be pinned target')
+  File "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/revision_007/r08_native.py", line 23, in require
+    if not condition:raise ValueError(message)
+ValueError: service entry cwd must be pinned target
+R08_COMPILED_OVERLAY_READY attempt=batch8-dp2-fresh-003-R08-01__gqa6_pmc-attempt_001 process_targets=12544 layer_targets=1024 r01_patch_sha256=5329e3ecb54c724d259b4eeb7deccd90be447233d23b438a4cfee725e6705a48 status=ready
+R08_PMC_GATE_READY attempt=batch8-dp2-fresh-003-R08-01__gqa6_pmc-attempt_001 segment=01__gqa6_pmc measured_requests=8 collection_state=initially_stopped canonical_window=dynamic_plus_offline_guard
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/usr/lib/python3.10/multiprocessing/spawn.py", line 116, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+  File "/usr/lib/python3.10/multiprocessing/spawn.py", line 125, in _main
+    prepare(preparation_data)
+  File "/usr/lib/python3.10/multiprocessing/spawn.py", line 236, in prepare
+    _fixup_main_from_path(data['init_main_from_path'])
+  File "/usr/lib/python3.10/multiprocessing/spawn.py", line 287, in _fixup_main_from_path
+    main_content = runpy.run_path(main_path,
+  File "/usr/lib/python3.10/runpy.py", line 289, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/usr/lib/python3.10/runpy.py", line 96, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/revision_007/launch_vllm.py", line 6, in <module>
+    require(Path.cwd()==TARGET,'service entry cwd must be pinned target')
+  File "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/revision_007/r08_native.py", line 23, in require
+    if not condition:raise ValueError(message)
+ValueError: service entry cwd must be pinned target
+R08_COMPILED_OVERLAY_READY attempt=batch8-dp2-fresh-003-R08-01__gqa6_pmc-attempt_001 process_targets=12544 layer_targets=1024 r01_patch_sha256=5329e3ecb54c724d259b4eeb7deccd90be447233d23b438a4cfee725e6705a48 status=ready
+R08_PMC_GATE_READY attempt=batch8-dp2-fresh-003-R08-01__gqa6_pmc-attempt_001 segment=01__gqa6_pmc measured_requests=8 collection_state=initially_stopped canonical_window=dynamic_plus_offline_guard
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/usr/lib/python3.10/multiprocessing/spawn.py", line 116, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+  File "/usr/lib/python3.10/multiprocessing/spawn.py", line 125, in _main
+    prepare(preparation_data)
+  File "/usr/lib/python3.10/multiprocessing/spawn.py", line 236, in prepare
+    _fixup_main_from_path(data['init_main_from_path'])
+  File "/usr/lib/python3.10/multiprocessing/spawn.py", line 287, in _fixup_main_from_path
+    main_content = runpy.run_path(main_path,
+  File "/usr/lib/python3.10/runpy.py", line 289, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/usr/lib/python3.10/runpy.py", line 96, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/revision_007/launch_vllm.py", line 6, in <module>
+    require(Path.cwd()==TARGET,'service entry cwd must be pinned target')
+  File "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/revision_007/r08_native.py", line 23, in require
+    if not condition:raise ValueError(message)
+ValueError: service entry cwd must be pinned target
+Traceback (most recent call last):
+  File "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/revision_007/launch_vllm.py", line 14, in <module>
+    main()
+  File "/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/entrypoints/cli/main.py", line 75, in main
+    args.dispatch_function(args)
+  File "/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/entrypoints/cli/serve.py", line 114, in cmd
+    run_multi_api_server(args)
+  File "/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/entrypoints/cli/serve.py", line 282, in run_multi_api_server
+    with launch_core_engines(
+  File "/usr/lib/python3.10/contextlib.py", line 142, in __exit__
+    next(self.gen)
+  File "/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/v1/engine/utils.py", line 972, in launch_core_engines
+    wait_for_engine_startup(
+  File "/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/v1/engine/utils.py", line 1031, in wait_for_engine_startup
+    raise RuntimeError(
+RuntimeError: Engine core initialization failed. See root cause above. Failed core proc(s): {}

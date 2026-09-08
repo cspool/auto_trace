@@ -1,0 +1,9 @@
+{"case": "baseline", "returncode": 0, "native_rows": 0, "native_devices": [], "db_count": 1, "seconds": 12.946518522978295}
+Traceback (most recent call last):
+  File "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/revision_004/probe_current_capability.py", line 77, in <module>
+    if __name__=='__main__':main()
+  File "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/revision_004/probe_current_capability.py", line 72, in main
+    require(len(rows)==expected,'native probe dispatch multiplicity '+name)
+  File "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/revision_004/r08_native.py", line 23, in require
+    if not condition:raise ValueError(message)
+ValueError: native probe dispatch multiplicity baseline

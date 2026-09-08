@@ -1,0 +1,24 @@
+{
+  "status": "authorized_same_bytes_storage_relocation",
+  "reason": "121.5GiB cgroup memory limit and57GiB immutable predecessor tmpfs plus22GiB runtime RSS pressure cause repeated weight-cache eviction",
+  "content_changes": false,
+  "existing_stage_directory_symlinks_unchanged": true,
+  "exact_file_mappings": [
+    {
+      "source": "/dev/shm/r08_continuation_predecessors/artifacts/R01/raw/hipprof/capture.db",
+      "destination": "/public/home/accl15ptg7/verified-memory-backing-20260908/r08_continuation_predecessors/artifacts/R01/raw/hipprof/capture.db"
+    },
+    {
+      "source": "/dev/shm/r08_continuation_predecessors/artifacts/R03/raw/process/capture.db",
+      "destination": "/public/home/accl15ptg7/verified-memory-backing-20260908/r08_continuation_predecessors/artifacts/R03/raw/process/capture.db"
+    },
+    {
+      "source": "/dev/shm/r08_continuation_predecessors/artifacts/R01/raw/hipprof/capture_2.pftrace",
+      "destination": "/public/home/accl15ptg7/verified-memory-backing-20260908/r08_continuation_predecessors/artifacts/R01/raw/hipprof/capture_2.pftrace"
+    },
+    {
+      "source": "/dev/shm/r08_continuation_predecessors/artifacts/R01/tmp/db-recovery/capture.db.original_candidate.gz",
+      "destination": "/public/home/accl15ptg7/verified-memory-backing-20260908/r08_continuation_predecessors/artifacts/R01/tmp/db-recovery/capture.db.original_candidate.gz"
+    }
+  ]
+}
