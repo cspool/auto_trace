@@ -69,3 +69,9 @@ PREFIX_FULL_MANIFEST_REHASHED R10 R03 17182
 PREFIX_FULL_MANIFEST_REHASHED R10 R04 136521
 PREFIX_FULL_MANIFEST_REHASHED R10 R05 69
 PREFIX_FULL_MANIFEST_REHASHED R10 R06 152
+OUTER_STAGE_ASSIGNED R10
+OUTER_CPU_SUFFIX_EXIT ['/usr/bin/python3', '-B', '/public/home/accl15ptg7/run_R08_R10/prepare_stage_assignments_004.py', 'assign', 'R10']
+OUTER_CPU_SUFFIX_START ['/usr/bin/python3', '-B', '/public/home/accl15ptg7/run_R08_R10/phase_runner_002.py', '--stage-root', '/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001', '--phase', 'render', '--timeout', '21694', '--', '/usr/bin/python3', '-B', '/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/tools/revision_001/build_report.py']
+OUTER_PHASE_CLOSED render complete 1
+OUTER_CPU_SUFFIX_EXIT ['/usr/bin/python3', '-B', '/public/home/accl15ptg7/run_R08_R10/phase_runner_002.py', '--stage-root', '/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001', '--phase', 'render', '--timeout', '21694', '--', '/usr/bin/python3', '-B', '/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/tools/revision_001/build_report.py']
+OUTER_CPU_SUFFIX_START ['/usr/bin/python3', '-B', '/public/home/accl15ptg7/run_R08_R10/phase_runner_002.py', '--stage-root', '/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001', '--phase', 'browser', '--timeout', '21441', '--', '/usr/bin/python3', '-B', '/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/tools/revision_001/browser_acceptance.py']
