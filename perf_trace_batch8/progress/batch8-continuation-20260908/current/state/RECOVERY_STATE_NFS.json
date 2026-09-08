@@ -50,7 +50,7 @@
   "complete_stage_publisher_session": 1983,
   "current_capture_phase": "accepted",
   "latest_health_observation": {
-    "utc": "2026-09-08T21:41:16.126238+00:00",
+    "utc": "2026-09-08T21:51:18.601674+00:00",
     "accepted_R08": 12,
     "planned_R08": 12,
     "current_capture": "12_chunk_fwd_kernel_o_pmc_write/attempt_001",
@@ -104,7 +104,7 @@
     },
     "NFS_available_GiB": 12.02,
     "temporarily_evicted_bytes": 77001580022,
-    "remaining_machine_hours": 6.61,
+    "remaining_machine_hours": 6.45,
     "completed_stages": []
   },
   "runtime_health_monitor_session": 44834,
