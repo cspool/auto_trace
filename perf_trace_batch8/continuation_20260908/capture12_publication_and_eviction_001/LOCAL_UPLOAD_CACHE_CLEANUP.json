@@ -1,0 +1,74 @@
+{
+  "status": "complete",
+  "raw_capture_and_normalized_business_files_retained": true,
+  "only_uploaded_verified_compressed_cache_removed": true,
+  "remote_manifest": {
+    "status": "published",
+    "tag": "perf-trace-batch8-r08-12-chunk-fwd-kernel-o-pmc-write-20260908",
+    "url": "https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-r08-12-chunk-fwd-kernel-o-pmc-write-20260908",
+    "id": 385046885,
+    "all_server_asset_sha256_match": true,
+    "segment_id": "12_chunk_fwd_kernel_o_pmc_write",
+    "accepted_item": {
+      "segment_id": "12_chunk_fwd_kernel_o_pmc_write",
+      "capture_attempt": "attempt_001",
+      "execution_manifest": {
+        "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/12_chunk_fwd_kernel_o_pmc_write/attempt_001/execution_manifest.json",
+        "size": 10841,
+        "sha256": "db30c15f50880aa8bab052e669f6f21df577db171eb43b18b6d0c839377f1c36"
+      },
+      "normalization_manifest": {
+        "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/normalized/captures/12_chunk_fwd_kernel_o_pmc_write/attempt_001/revision_002/NORMALIZATION_COMPLETE.json",
+        "size": 4340,
+        "sha256": "303a58404b4e39af180d160d479ef60e9b99496e90054713774a06448bccf442"
+      },
+      "independent_audit": {
+        "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/normalized/captures/12_chunk_fwd_kernel_o_pmc_write/attempt_001/revision_002/INDEPENDENT_AUDIT.json",
+        "size": 1217,
+        "sha256": "1fcf6e423d5c256dfcd8a0a0648f0044cb047d7410ae07c511bcbed2a9e5d462"
+      }
+    },
+    "assets": [
+      {
+        "id": 551270153,
+        "name": "ASSET_MANIFEST.json",
+        "size": 698,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-12-chunk-fwd-kernel-o-pmc-write-20260908/ASSET_MANIFEST.json",
+        "digest": "sha256:fa04eda8c266e25a0b3b60b2e92edcf04639fe1fb7f3a0414ebfa55d00950772"
+      },
+      {
+        "id": 551266691,
+        "name": "capture.tar.zst.part001",
+        "size": 950000000,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-12-chunk-fwd-kernel-o-pmc-write-20260908/capture.tar.zst.part001",
+        "digest": "sha256:068d5cca9b29ce2eb4a0133ea4aef16122869fc1f9aaebbb7055d067d6fa2452"
+      },
+      {
+        "id": 551268827,
+        "name": "capture.tar.zst.part002",
+        "size": 695943956,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-12-chunk-fwd-kernel-o-pmc-write-20260908/capture.tar.zst.part002",
+        "digest": "sha256:dd05ef66e85b144ee0333361b3a824513ec91c954c670880bbf3b7a30d4de977"
+      },
+      {
+        "id": 551270130,
+        "name": "FILE_MANIFEST.json",
+        "size": 26974,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-12-chunk-fwd-kernel-o-pmc-write-20260908/FILE_MANIFEST.json",
+        "digest": "sha256:736ba418dc07e16d8ad7ae39bd49fbf754e6211d8dcff178c16b46297c194d2b"
+      },
+      {
+        "id": 551270163,
+        "name": "SHA256SUMS",
+        "size": 265,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-12-chunk-fwd-kernel-o-pmc-write-20260908/SHA256SUMS",
+        "digest": "sha256:117682d69ccb41e00f50d59955a2caf9ff461fe986c341aadb2c94f1ede6a903"
+      }
+    ]
+  }
+}
