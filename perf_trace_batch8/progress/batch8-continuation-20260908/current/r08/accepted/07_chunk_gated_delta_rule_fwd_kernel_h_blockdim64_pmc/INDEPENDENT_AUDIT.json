@@ -1,0 +1,26 @@
+{
+  "accepted_dispatches": 384,
+  "all_graph_dispatches_outside_selected_scopes": true,
+  "auditor_sha256": "2c2baf5bf9964b9d96ca0586de6a6808e312434dbbeec67c9f133725421088d1",
+  "background_graph_native_dispatches_independently_classified": 0,
+  "counter_values_recomputed": 71424,
+  "elapsed_seconds": 16.813302602036856,
+  "exact_native_chain": true,
+  "excluded_dispatches": 21285,
+  "independent_audit": true,
+  "normalization_manifest_sha256": "c1fda83cd583b91dd778ee6e7a6f0311cefafafbacb9b473fec0a64e1432b767",
+  "rank_native_device_counts": {
+    "0": 192,
+    "1": 192
+  },
+  "raw_database_sha256": "10ff449a28fbbe6a3ee54e8df8f51c3de7648a83049cd4fef5ec1e65e1408423",
+  "raw_partition_conserved": true,
+  "raw_pmc_sha256": "e5c0524634241dd765f8c5d50367c5c9765e5ce5356561e15aac8e38646f851d",
+  "replay_timing_used_as_latency": false,
+  "runtime_shape_match_counts": {
+    "True": 384
+  },
+  "same_R06_R07_logical_ownership": true,
+  "segment_id": "07_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc",
+  "status": "complete"
+}

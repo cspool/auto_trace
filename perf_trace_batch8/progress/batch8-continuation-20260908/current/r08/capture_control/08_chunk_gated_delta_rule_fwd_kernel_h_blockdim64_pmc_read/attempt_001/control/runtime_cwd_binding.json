@@ -1,0 +1,6 @@
+{
+  "entry_cwd": "/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8",
+  "native_output_cwd": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read/attempt_001/native_working_directory",
+  "reason": "Native pmc_results text follows process cwd; isolate it before the first model kernel to keep pinned target source clean.",
+  "target_source_modified": false
+}

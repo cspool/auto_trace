@@ -1,7 +1,7 @@
 {
   "runtime_run_id": "batch8-dp2-fresh-003",
-  "current_capture": "07_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc/attempt_001",
-  "accepted_prefix_count": 6,
+  "current_capture": "08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read/attempt_001",
+  "accepted_prefix_count": 7,
   "current_runtime_revision": "revision_018",
   "runtime_gate": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/runtime_capture_gate_011.json",
   "scheduler": "serial_scheduler_007",
@@ -17,11 +17,11 @@
   "accepted_capture_publisher": "/public/home/accl15ptg7/run_R08_R10/publish_accepted_captures_003.py",
   "original_NFS_session_state_superseded_by_this_emergency_record": true,
   "R09_R10_actual_execution_started": false,
-  "home_storage_available_gib": 16.5,
+  "home_storage_available_gib": 13.78,
   "weight_storage_constraint": "All physical weight bytes must stay under /root; never migrate weights to NFS again",
   "accepted_capture_publisher_session": 64243,
   "raw_storage_watchdog_session": 19126,
-  "pre_measured_two_worker_native_health": "complete",
+  "pre_measured_two_worker_native_health": "pending",
   "user_storage_policy": "/public/home/accl15ptg7/run_R08_R10/USER_STORAGE_POLICY_20260908.json",
   "migration_session": null,
   "migration_log": "/public/home/accl15ptg7/run_R08_R10/migrate_R08_all_outputs_to_NFS_001.log",
@@ -48,69 +48,21 @@
   "cpu_suffix_status": "outer waiting only; will restore all raw sources before R08 assignment",
   "complete_stage_publisher": "publish_complete_stages_002.py",
   "complete_stage_publisher_session": 46095,
-  "current_capture_phase": "measured_batch",
+  "current_capture_phase": "model_initialization",
   "latest_health_observation": {
-    "utc": "2026-09-08T14:14:49.627760+00:00",
-    "accepted_R08": 6,
+    "utc": "2026-09-08T14:24:50.641829+00:00",
+    "accepted_R08": 7,
     "planned_R08": 12,
-    "current_capture": "07_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc/attempt_001",
-    "current_phase": "measured_batch",
-    "native_workers": [
-      {
-        "rank": 0,
-        "worker_pid": 687557,
-        "PMC_bytes": 60401524,
-        "worker_alive": true
-      },
-      {
-        "rank": 1,
-        "worker_pid": 687560,
-        "PMC_bytes": 60672081,
-        "worker_alive": true
-      }
-    ],
-    "admission_releases": [
-      {
-        "rank": 0,
-        "engine_pid": 685797,
-        "request_order": [
-          "batch8-dual-dcu-dp2-req-002-28a42990210e6f68",
-          "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786",
-          "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5",
-          "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41"
-        ]
-      },
-      {
-        "rank": 1,
-        "engine_pid": 685798,
-        "request_order": [
-          "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c",
-          "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f",
-          "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04",
-          "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3"
-        ]
-      }
-    ],
-    "pre_measured_health": "complete",
-    "measured_request_token_progress": {
-      "batch8-dual-dcu-dp2-req-002-28a42990210e6f68": 557,
-      "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786": 513,
-      "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5": 473,
-      "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41": 432,
-      "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c": 569,
-      "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f": 527,
-      "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3": 443,
-      "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04": 487
-    },
-    "live_eight_request_target_coverage": {
-      "status": "complete_live_marker_coverage",
-      "report": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/live_eight_request_checks_001/07_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc.attempt_001.1788876648821015725.json",
-      "closed_capture_accepted": false,
-      "all_first_phase_orders_match_R07": true
-    },
-    "NFS_available_GiB": 16.5,
+    "current_capture": "08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read/attempt_001",
+    "current_phase": "model_initialization",
+    "native_workers": [],
+    "admission_releases": [],
+    "pre_measured_health": "pending",
+    "measured_request_token_progress": {},
+    "live_eight_request_target_coverage": null,
+    "NFS_available_GiB": 13.78,
     "temporarily_evicted_bytes": 36969651806,
-    "remaining_machine_hours": 6.06,
+    "remaining_machine_hours": 5.89,
     "completed_stages": []
   },
   "runtime_health_monitor_session": 55116,

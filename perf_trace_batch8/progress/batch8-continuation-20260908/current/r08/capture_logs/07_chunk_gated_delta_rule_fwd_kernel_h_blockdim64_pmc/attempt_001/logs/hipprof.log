@@ -12,3 +12,11 @@ R08_MODEL_INITIALIZING 07_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc 330
 R08_MODEL_INITIALIZING 07_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc 360 seconds
 R08_MODEL_INITIALIZING 07_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc 390 seconds
 R08_MODEL_READY 07_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc 410.46
+HIP_PROF:on Tue Sep  8 21:55:31 2026
+HIP_PROF:process id '684657'
+HIP_PROF:db file '/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/07_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc/attempt_001/capture.db'
+HIP_PROF:out put file '/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/07_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc/attempt_001/capture'
+HIP_PROF:profiling ' /usr/bin/python3 -B /public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_018/run_capture.py tracee --pass-root /public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/07_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc/attempt_001 --segment 07_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc'
+HIP_PROF:process begin
+HIP_PROF:process end run total cost:1567(s)
+HIP_PROF:finish
