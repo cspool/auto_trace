@@ -5,6 +5,9 @@ import csv
 def main():
  assignment=read(ROOT/'authorization/closure_assignment_001.json');check(assignment['runtime_goal']=='R08' and assignment['predecessor_stages']==['R%02d'%i for i in range(1,8)],'complete assigned prefix');target=target_state();check(target==assignment['target'],'immutable source state')
  for x in assignment['predecessor_handoffs']:verify(x)
+ restoration=read(ROOT/'raw/runtime_tools/release_restoration_001/COMPLETE.json');check(restoration['status']=='complete' and restoration['all_evicted_raw_files_original_SHA256_verified'],'all Release evictions restored')
+ for raw_inventory in sorted((ROOT/'raw/captures').glob('*/*/raw_inventory_at_exit.json')):
+  for source in read(raw_inventory)['files']:verify(source)
  indexpath=ROOT/'normalized/accepted_captures.json';index=read(indexpath);plan=read(ROOT/'plans/r08_capture_plan.json');check(index['status']=='complete' and len(index['captures'])==12,'all captures accepted');check([x['segment_id'] for x in index['captures']]==[x['segment_id'] for x in plan['physical_captures']],'ordered full physical plan')
  modelroot=ROOT/'model/resource_model_001';model=read(modelroot/'traffic_resource_model.json');audit=read(modelroot/'RESOURCE_MODEL_INDEPENDENT_AUDIT.json');check(audit['status']=='complete' and audit['model_manifest_sha256']==sha(modelroot/'traffic_resource_model.json'),'accepted resource model')
  captures=[];schemas={};attrs=0

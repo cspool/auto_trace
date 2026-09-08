@@ -1,0 +1,32 @@
+{
+  "status": "complete",
+  "workers": [
+    {
+      "rank": 0,
+      "native_device": 0,
+      "pid": 387442,
+      "worker_identity_path": "/public/home/accl15ptg7/r08_continuation_001_NFS_bulk/raw/captures/04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc/attempt_002/workload/r01_events/rank0/events.387442.jsonl",
+      "native_raw_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc/attempt_002/hipprof_tmprpl_data_260908_175604_384763/input0_results_260908_175604/pmc_results_387442.txt",
+      "observed_native_bytes": 714718986,
+      "examined_prefix_bytes": 65536,
+      "examined_prefix_sha256": "4ae78b2dd3c704879c008b247280f188e5e9b204bfaffc15669d0d8b99d84473",
+      "native_dispatch_headers_in_prefix": 12
+    },
+    {
+      "rank": 1,
+      "native_device": 1,
+      "pid": 387448,
+      "worker_identity_path": "/public/home/accl15ptg7/r08_continuation_001_NFS_bulk/raw/captures/04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc/attempt_002/workload/r01_events/rank1/events.387448.jsonl",
+      "native_raw_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc/attempt_002/hipprof_tmprpl_data_260908_175604_384763/input0_results_260908_175604/pmc_results_387448.txt",
+      "observed_native_bytes": 717370297,
+      "examined_prefix_bytes": 65536,
+      "examined_prefix_sha256": "0a36b54db8bdcdc40da13391907c3077af7a8df3dec290af983fcb404419cb40",
+      "native_dispatch_headers_in_prefix": 12
+    }
+  ],
+  "measured_requests_started": false,
+  "read_only_native_file_gate": true,
+  "no_native_calls_no_added_workload": true,
+  "elapsed_seconds": 0.026588874985463917,
+  "checked_realtime_ns": 1788862276558517525
+}
