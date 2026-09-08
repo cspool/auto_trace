@@ -1,0 +1,43 @@
+{
+  "all_started_native_groups_terminated": true,
+  "collectors": [
+    {
+      "forced_group_cleanup": false,
+      "process_group": 981829,
+      "rank": 0,
+      "remaining_live_group_members": [],
+      "status": "complete",
+      "unit": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/10_chunk_fwd_kernel_o_pmc/attempt_001/native_collectors/rank0",
+      "wrapper_exit": {
+        "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/10_chunk_fwd_kernel_o_pmc/attempt_001/native_collectors/rank0/COLLECTOR_EXIT.json",
+        "sha256": "9db8aca106a57dac488b84c24ec2d3a9334a43b6964c3e4725c01bd7f0c86158",
+        "size": 593
+      },
+      "wrapper_start": {
+        "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/10_chunk_fwd_kernel_o_pmc/attempt_001/native_collectors/rank0/COLLECTOR_WRAPPER_START.json",
+        "sha256": "8aac435150178c7a65853fedf1a31981e953b02d46fa79fb00b5a880b7d0949b",
+        "size": 443
+      }
+    },
+    {
+      "forced_group_cleanup": false,
+      "process_group": 981842,
+      "rank": 1,
+      "remaining_live_group_members": [],
+      "status": "complete",
+      "unit": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/10_chunk_fwd_kernel_o_pmc/attempt_001/native_collectors/rank1",
+      "wrapper_exit": {
+        "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/10_chunk_fwd_kernel_o_pmc/attempt_001/native_collectors/rank1/COLLECTOR_EXIT.json",
+        "sha256": "a24d9b24e7ba2890ca76bef08b6d33ff9f4fe2ee97a79498d0a894b1b3cfdb15",
+        "size": 593
+      },
+      "wrapper_start": {
+        "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/10_chunk_fwd_kernel_o_pmc/attempt_001/native_collectors/rank1/COLLECTOR_WRAPPER_START.json",
+        "sha256": "c53c50f1d7ccc3c991bb83a621ac0334d35291203a8c7a61c8bd3f41d52adbef",
+        "size": 443
+      }
+    }
+  ],
+  "complete_requires_both_native_returncodes_zero": true,
+  "status": "complete"
+}
