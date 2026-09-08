@@ -1,0 +1,43 @@
+{
+  "utc": "2026-09-08T13:03:31.277444+00:00",
+  "segment_id": "05_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_read",
+  "attempt": "attempt_001",
+  "status": "scoped_native_export_observation",
+  "processes": [
+    {
+      "pid": 550306,
+      "process_state": "S",
+      "user_cpu_ticks": 0,
+      "system_cpu_ticks": 0,
+      "io": {
+        "rchar": 16644,
+        "wchar": 375,
+        "syscr": 27,
+        "syscw": 4,
+        "read_bytes": 16986112,
+        "write_bytes": 4096,
+        "cancelled_write_bytes": 0
+      },
+      "PMC_input_file_positions": []
+    },
+    {
+      "pid": 550307,
+      "process_state": "R",
+      "user_cpu_ticks": 56125,
+      "system_cpu_ticks": 2014,
+      "io": {
+        "rchar": 22113769285,
+        "wchar": 19706059434,
+        "syscr": 1926613,
+        "syscw": 2203583,
+        "read_bytes": 67433615360,
+        "write_bytes": 23604682752,
+        "cancelled_write_bytes": 310243328
+      },
+      "PMC_input_file_positions": []
+    }
+  ],
+  "database_was_not_opened": true,
+  "model_or_device_actions": 0,
+  "native_export_complete": false
+}
