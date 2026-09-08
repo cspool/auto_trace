@@ -1,0 +1,20 @@
+{
+  "status": "verified_ready_for_release",
+  "runtime_goal": "R09",
+  "member_count": 37,
+  "previously_published_raw_file_count": 0,
+  "member_bytes": 2716251042,
+  "archive_codec": "zstd one concatenated tar stream; concatenate capture.tar.zst parts in order before extraction",
+  "assets": [
+    {
+      "name": "capture.tar.zst.part001",
+      "size": 234893672,
+      "sha256": "466a593700a7720017b16c07766edb7435fcb90cbd67341237cbb0a780d24666"
+    },
+    {
+      "name": "FILE_MANIFEST.json",
+      "size": 11546,
+      "sha256": "c919073f8f6739b756dd7990490cfafabac70164002c30329d3cd04cce0f8467"
+    }
+  ]
+}

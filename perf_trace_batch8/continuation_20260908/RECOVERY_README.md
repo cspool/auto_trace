@@ -8,7 +8,7 @@ NFS 控制目录：`/public/home/accl15ptg7/run_R08_R10`。原始 R08 运行目�
 
 - 核对 `RECOVERY_STATE_NFS.json`、最新进度提交及各 `*.accepted_checkpoint.json` 的时间和 SHA256。会话 ID 与 PID 仅适用于原容器。
 - 当前冻结工具为 `raw/runtime_tools/revision_021`、`tools/analysis_008`，对应 `runtime_capture_gate_014.json` 与 `independent_native_sessions_analysis_CPU_gate_001.json`；原有后台 graph 范围门禁仍保留。不得修改已冻结的运行代码、原始数据或验收凭证。
-- 2026-09-08 20:36 UTC，`run_r08_serial_suffix_013.py` 已完成全部 12 项采集及独立审计；总索引和 36 份执行/归因/审计凭证的 SHA256 复核已提交于 `all_twelve_captures_accepted_001`。每组均有 12,544 个目标 process 标记、23,660 个原生归属 kernel，全部三种 PMC 模式共 6,912 项物理 dispatch 归属；每组两张卡均覆盖完整。第十二项原始数据正常关闭，独立审计耗时 185.44 秒。GPU 采集已全部结束，无须重新执行。截至 21:55 UTC，R08 已通过独立总审计并生成完整 handoff，四个 CPU 阶段正常关闭，全部 12 组均满足八请求 trace 与选中 PMC 覆盖。完成凭证见 `R08_local_complete_001`。R09 也已于 22:08 UTC 通过全部 12 张分析表的独立审计及阶段总审计，完成凭证见 `R09_local_complete_001`。当前正在准备完整阶段 Release，并执行 R10 前序入场核验；R10 尚未完成。
+- 2026-09-08 20:36 UTC，`run_r08_serial_suffix_013.py` 已完成全部 12 项采集及独立审计；总索引和 36 份执行/归因/审计凭证的 SHA256 复核已提交于 `all_twelve_captures_accepted_001`。每组均有 12,544 个目标 process 标记、23,660 个原生归属 kernel，全部三种 PMC 模式共 6,912 项物理 dispatch 归属；每组两张卡均覆盖完整。第十二项原始数据正常关闭，独立审计耗时 185.44 秒。GPU 采集已全部结束，无须重新执行。截至 21:55 UTC，R08 已通过独立总审计并生成完整 handoff，四个 CPU 阶段正常关闭，全部 12 组均满足八请求 trace 与选中 PMC 覆盖。完成凭证见 `R08_local_complete_001`。R09 也已于 22:08 UTC 通过全部 12 张分析表的独立审计及阶段总审计，完成凭证见 `R09_local_complete_001`。R08、R09 完整阶段 Release 均已发布并通过全部远端资产 SHA256 核验，凭证见 `R08_full_stage_publication_001`、`R09_full_stage_publication_001`。R10 已通过完整前序入场核验，正在生成离线页面；R10 实际浏览器验收、阶段总审计和最终发布尚未完成。
 - 只有完整执行清单、归因清单和独立审计同时存在且哈希匹配，才算一项采集完成。HTTP 成功或实时 marker 覆盖报告本身不能代替原生 DB/PMC 归因审计。
 
 ## 存储与远端恢复

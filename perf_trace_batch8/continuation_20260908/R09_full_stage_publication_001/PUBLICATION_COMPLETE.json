@@ -1,0 +1,42 @@
+{
+  "status": "published",
+  "runtime_goal": "R09",
+  "tag": "perf-trace-batch8-r09-complete-20260908",
+  "url": "https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-r09-complete-20260908",
+  "all_server_asset_sha256_match": true,
+  "handoff": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/handoffs/R09.continuation.json",
+    "size": 109530,
+    "sha256": "4bc3719b2de031c8c7adc993ed5d4603cb059fd3043a612b7d01ea2ec4aefe1b"
+  },
+  "assets": [
+    {
+      "id": 551424415,
+      "name": "ASSET_MANIFEST.json",
+      "size": 616,
+      "digest": "sha256:307cf7f438dae9166a63f1410a21c9a43a824a398cfec0f9f6f89c1277633523",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r09-complete-20260908/ASSET_MANIFEST.json"
+    },
+    {
+      "id": 551423808,
+      "name": "capture.tar.zst.part001",
+      "size": 234893672,
+      "digest": "sha256:466a593700a7720017b16c07766edb7435fcb90cbd67341237cbb0a780d24666",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r09-complete-20260908/capture.tar.zst.part001"
+    },
+    {
+      "id": 551424397,
+      "name": "FILE_MANIFEST.json",
+      "size": 11546,
+      "digest": "sha256:c919073f8f6739b756dd7990490cfafabac70164002c30329d3cd04cce0f8467",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r09-complete-20260908/FILE_MANIFEST.json"
+    },
+    {
+      "id": 551424432,
+      "name": "SHA256SUMS",
+      "size": 175,
+      "digest": "sha256:82d404f7d6e5db8a49174ea13d9fd25577e82d6a5171cf0cd04756ebac2d4383",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r09-complete-20260908/SHA256SUMS"
+    }
+  ]
+}
