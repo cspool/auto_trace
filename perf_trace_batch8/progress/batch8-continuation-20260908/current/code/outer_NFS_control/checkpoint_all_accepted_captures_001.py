@@ -30,6 +30,7 @@ for item in index['captures']:
         assert item[key] == record(Path(item[key]['path']))
         records.append(item[key])
     execution = read(Path(item['execution_manifest']['path']))
+    normalization = read(Path(item['normalization_manifest']['path']))
     audit = read(Path(item['independent_audit']['path']))
     assert execution['all_started_processes_terminated']
     assert execution['workload']['status'] == 'complete'
@@ -37,8 +38,14 @@ for item in index['captures']:
     assert set(audit['rank_native_device_counts']) == {'0', '1'}
     assert audit['same_R06_R07_logical_ownership'] and audit['exact_native_chain']
     assert audit['raw_partition_conserved'] and not audit['replay_timing_used_as_latency']
+    assert normalization['status'] == 'complete'
+    assert normalization['current_process_markers'] == 12544
+    assert normalization['native_owned_kernel_count'] == 23660
+    assert normalization['missing_selected_counter_cells'] == 0
     summaries.append({'segment_id': item['segment_id'], 'attempt': item['capture_attempt'],
                       'accepted_dispatches': audit['accepted_dispatches'],
+                      'current_process_markers': normalization['current_process_markers'],
+                      'native_owned_kernel_count': normalization['native_owned_kernel_count'],
                       'rank_native_device_counts': audit['rank_native_device_counts'],
                       'counter_values_recomputed': audit['counter_values_recomputed']})
 assert sum(x['accepted_dispatches'] for x in summaries) == 6912

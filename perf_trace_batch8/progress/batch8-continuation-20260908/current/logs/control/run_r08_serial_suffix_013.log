@@ -48,3 +48,10 @@ WAITING_FOR_VERIFIED_RELEASE_OFFLOAD_SPACE 12_chunk_fwd_kernel_o_pmc_write 41313
 WAITING_FOR_VERIFIED_RELEASE_OFFLOAD_SPACE 12_chunk_fwd_kernel_o_pmc_write 4131389440
 WAITING_FOR_VERIFIED_RELEASE_OFFLOAD_SPACE 12_chunk_fwd_kernel_o_pmc_write 5778702336
 PHASE_START 2026-09-08T19:55:19.196255+00:00 ['/usr/bin/python', '-B', '/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_021/run_capture.py', 'capture', '--segment', '12_chunk_fwd_kernel_o_pmc_write', '--attempt', 'attempt_001']
+PHASE_EXIT /public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_021/run_capture.py 0
+PHASE_START 2026-09-08T20:32:36.992824+00:00 ['/usr/bin/python', '-B', '/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/analysis_008/normalize_capture.py', '--segment', '12_chunk_fwd_kernel_o_pmc_write', '--attempt', 'attempt_001', '--revision', 'revision_002']
+PHASE_EXIT /public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/analysis_008/normalize_capture.py 0
+PHASE_START 2026-09-08T20:33:06.653204+00:00 ['/usr/bin/python', '-B', '/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/analysis_008/audit_capture.py', '--normalization', '/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/normalized/captures/12_chunk_fwd_kernel_o_pmc_write/attempt_001/revision_002']
+PHASE_EXIT /public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/analysis_008/audit_capture.py 0
+CAPTURE_ACCEPTED 12_chunk_fwd_kernel_o_pmc_write PREFIX 12
+ALL_R08_CAPTURES_ACCEPTED 12

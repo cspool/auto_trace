@@ -1,7 +1,7 @@
 {
   "runtime_run_id": "batch8-dp2-fresh-003",
   "current_capture": "12_chunk_fwd_kernel_o_pmc_write/attempt_001",
-  "accepted_prefix_count": 11,
+  "accepted_prefix_count": 12,
   "current_runtime_revision": "revision_021",
   "runtime_gate": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/runtime_capture_gate_014.json",
   "scheduler": "serial_scheduler_013",
@@ -17,7 +17,7 @@
   "accepted_capture_publisher": "/public/home/accl15ptg7/run_R08_R10/publish_accepted_captures_004.py",
   "original_NFS_session_state_superseded_by_this_emergency_record": true,
   "R09_R10_actual_execution_started": false,
-  "home_storage_available_gib": 5.13,
+  "home_storage_available_gib": 3.55,
   "weight_storage_constraint": "All physical weight bytes must stay under /root; never migrate weights to NFS again",
   "accepted_capture_publisher_session": 12763,
   "raw_storage_watchdog_session": 94301,
@@ -43,18 +43,18 @@
   "R08_final_validation_restore_policy": "Restore every temporarily evicted artifact and verify original SHA256 before final R08 validation; after all 12 GPU captures, user authorizes deleting root weights to provide restoration workspace.",
   "progress_watchdog": "remote_checkpoint_watchdog_011.py",
   "postcapture_restoration_code": "/public/home/accl15ptg7/run_R08_R10/restore_all_R08_release_artifacts_002.py",
-  "postcapture_restoration_status": "CPU synthetic gate complete; actual restoration and weight removal not started",
+  "postcapture_restoration_status": "actual restorer started; waiting for final publication and offload",
   "cpu_suffix_waiter_session": 74875,
-  "cpu_suffix_status": "outer waiting only; will restore all raw sources before R08 assignment",
+  "cpu_suffix_status": "restoration prerequisite running; R08 resource and R09/R10 business pending",
   "complete_stage_publisher": "publish_complete_stages_003.py",
   "complete_stage_publisher_session": 1983,
-  "current_capture_phase": "workload_complete_collector_export_or_raw_sealing",
+  "current_capture_phase": "accepted",
   "latest_health_observation": {
-    "utc": "2026-09-08T20:30:05.981501+00:00",
-    "accepted_R08": 11,
+    "utc": "2026-09-08T20:40:07.180479+00:00",
+    "accepted_R08": 12,
     "planned_R08": 12,
     "current_capture": "12_chunk_fwd_kernel_o_pmc_write/attempt_001",
-    "current_phase": "workload_complete_collector_export_or_raw_sealing",
+    "current_phase": "accepted",
     "native_workers": [
       {
         "rank": 0,
@@ -99,12 +99,12 @@
     "live_eight_request_target_coverage": {
       "status": "complete_live_marker_coverage",
       "report": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/live_eight_request_checks_001/12_chunk_fwd_kernel_o_pmc_write.attempt_001.1788898083201676026.json",
-      "closed_capture_accepted": false,
+      "closed_capture_accepted": true,
       "all_first_phase_orders_match_R07": true
     },
-    "NFS_available_GiB": 5.13,
+    "NFS_available_GiB": 3.55,
     "temporarily_evicted_bytes": 69271297848,
-    "remaining_machine_hours": 7.8,
+    "remaining_machine_hours": 7.63,
     "completed_stages": []
   },
   "runtime_health_monitor_session": 44834,
@@ -123,7 +123,7 @@
     "sha256": "ca02d6f7da1f9407e5517d68f787e0b00e61be8f4e392db75ccbccfc312ffaa3"
   },
   "previous_scheduler_session": 40553,
-  "raw_capture_complete": false,
+  "raw_capture_complete": true,
   "all_required_1408_logical_owner_multiplicities_reached_before_failure": true,
   "CPU_normalization_session": null,
   "actual_graph_scope_proof": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_graph_selected_intersection_001.json",
@@ -133,7 +133,7 @@
     "size": 1048,
     "sha256": "a5534488686cb7f46de8957fe6d3e88d9eee943947956d46a18ff06eb26dc093"
   },
-  "last_completed_capture": "11_chunk_fwd_kernel_o_pmc_read/attempt_001",
+  "last_completed_capture": "12_chunk_fwd_kernel_o_pmc_write/attempt_001",
   "last_failed_capture": "09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_005",
   "last_capture_retry_reason": "independent overlapping native sessions passed repeated model-free and supervised MP transport/marker checks; full workload unchanged",
   "retry_authorization": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/capture09_independent_native_sessions_retry_001.json",
@@ -147,7 +147,7 @@
   "native_warmup_reset_actual_validation_status": "runtime021 actual captures09-11 accepted with both original warmups unchanged; native collection initially on and independent per GPU worker",
   "native_collection_initially_disabled_until_original_warmup": false,
   "startup_native_trace_before_original_warmups_intentionally_omitted": false,
-  "native_capture_scheduler_status": "scheduler013 active; consult latest_health_observation for the current capture and phase",
+  "native_capture_scheduler_status": "complete_all_twelve_accepted",
   "active_model_free_probe": null,
   "active_model_free_probe_session": null,
   "full_model_capture_retry_waits_for_bounded_native_diagnostics": false,
@@ -159,5 +159,5 @@
   "native_session_layout": "two_independent_native_GPU_worker_collectors_same_single_DP2_service",
   "native_collection_initially_disabled": false,
   "native_collection_initially_on": true,
-  "last_reviewed_main_commit": "b4fa8afa541d179403bcd25e778775261f08bd97"
+  "last_reviewed_main_commit": "7cd579ee486c17ca7db0c9661a71710f463ce216"
 }
