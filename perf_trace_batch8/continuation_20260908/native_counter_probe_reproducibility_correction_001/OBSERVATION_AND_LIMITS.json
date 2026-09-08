@@ -1,0 +1,422 @@
+{
+  "utc": "2026-09-08T16:42:20.140952+00:00",
+  "status": "diagnostic_only_root_cause_not_proven",
+  "accepted_R08": 8,
+  "planned_R08": 12,
+  "baseline_repeat_006": {
+    "native_device_counts": {
+      "1": 4
+    },
+    "same_missing_worker_without_cross_device_perturbation": true
+  },
+  "masked_extra_005": {
+    "native_device_counts": {
+      "1": 4
+    }
+  },
+  "masked_no_extra_007": {
+    "native_device_counts": {
+      "0": 4,
+      "1": 4
+    }
+  },
+  "correction": "Earlier baseline-versus-dual-context comparison is not sufficient causal evidence: the unmodified baseline can also lose a worker. Startup/Stop/Start timing is now tested with explicit barriers. No repair is admitted and no full-model attempt started.",
+  "possible_brief_collector_lifetime_overlap_between_006_and_007": "006 completion was not yet returned before 007 launched; no simultaneous measured GPU work is proven absent, so 006/007 must not be treated as definitive isolated comparison.",
+  "sources": [
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_owner_barrier_probe_004/ALLOW_EXIT",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_owner_barrier_probe_004/ALLOW_LIBC_FLUSH",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_owner_barrier_probe_004/ALLOW_OTHER_CONTEXT",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_owner_barrier_probe_004/ALLOW_STOP",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_owner_barrier_probe_004/CPU_GATE.json",
+      "size": 1015,
+      "sha256": "439d61fab8ed2ce788af7b5e5498ff80d6f86827164c871d92a3df6ffac7f9e7"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_owner_barrier_probe_004/RESULT.json",
+      "size": 6405,
+      "sha256": "0a9547e857825e17413bb813d089cb82eb489f07fae657d2189f1e83179404e4"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_owner_barrier_probe_004/VISIBILITY_AFTER_LIBC_FLUSH.json",
+      "size": 1139,
+      "sha256": "9e4e5be36452e20cf2d75f7bc33dfd746e2aa90c17487f9c4a43542fd25ad3c4"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_owner_barrier_probe_004/VISIBILITY_AFTER_STOP.json",
+      "size": 1133,
+      "sha256": "8177a1e43ad94e2ee89aa6547106b38d11eabfd68d40d3a15e4d8cc8fed59668"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_owner_barrier_probe_004/VISIBILITY_AFTER_WORKER_EXIT.json",
+      "size": 1140,
+      "sha256": "fca5c8ef7aeda8ce51419ea650fbad62f5ffc981053bb5ddbead5575c815abb4"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_owner_barrier_probe_004/VISIBILITY_BEFORE_STOP.json",
+      "size": 1134,
+      "sha256": "9d9174ce7ad4af49cee725b18e27b29d1c2c3c62087c4646ac2a04509a00080a"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_owner_barrier_probe_004/after_libc_flush.rank0.json",
+      "size": 55,
+      "sha256": "61797bef01cbbd4e0e46e44759e17e5a1d813b141302981a41e4622d8730e4af"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_owner_barrier_probe_004/after_libc_flush.rank1.json",
+      "size": 55,
+      "sha256": "1636681588e32aae88dec8cc0744b3289dbd81365fe294b7fac40e259d7f3d52"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_owner_barrier_probe_004/after_stop.rank0.json",
+      "size": 33,
+      "sha256": "d7c906d60ad5a9423f648c8de85f6a2cb2a6dd520496c3b59c00b17d33ce5c76"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_owner_barrier_probe_004/after_stop.rank1.json",
+      "size": 33,
+      "sha256": "7254310732643d3649be9fdf73799d84e0a7af13a290eeec14dca3ded8cc9009"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_owner_barrier_probe_004/before_stop.rank0.json",
+      "size": 33,
+      "sha256": "d7c906d60ad5a9423f648c8de85f6a2cb2a6dd520496c3b59c00b17d33ce5c76"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_owner_barrier_probe_004/before_stop.rank1.json",
+      "size": 33,
+      "sha256": "7254310732643d3649be9fdf73799d84e0a7af13a290eeec14dca3ded8cc9009"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_owner_barrier_probe_004/capture.csv",
+      "size": 6964,
+      "sha256": "f9e5e5735b6c4edf8dc8d2440d057c6b442c58c01b06f2be22ae0fcb1a897170"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_owner_barrier_probe_004/capture.db",
+      "size": 77824,
+      "sha256": "d52b00f67d2fd7dbeca18619a564b4ad49b7a77f060edc6cdc39f7f1951ae970"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_owner_barrier_probe_004/collector.log",
+      "size": 1394,
+      "sha256": "f897814d8016cd46f0ebdb2174d856aebd6ac52c78a450a1dd2bc5af374dddae"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_owner_barrier_probe_004/gqa6_visibility_probe.py",
+      "size": 3552,
+      "sha256": "fd271639b945ee47af11d4daf81077b324a9662d3b53b93feeb12d203c920658"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_owner_barrier_probe_004/owner_ready.rank0.json",
+      "size": 33,
+      "sha256": "d7c906d60ad5a9423f648c8de85f6a2cb2a6dd520496c3b59c00b17d33ce5c76"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_owner_barrier_probe_004/owner_ready.rank1.json",
+      "size": 33,
+      "sha256": "7254310732643d3649be9fdf73799d84e0a7af13a290eeec14dca3ded8cc9009"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_masked_worker_probe_005/ALLOW_EXIT",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_masked_worker_probe_005/ALLOW_LIBC_FLUSH",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_masked_worker_probe_005/ALLOW_STOP",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_masked_worker_probe_005/CPU_GATE.json",
+      "size": 1015,
+      "sha256": "f5931887796a4bcb7d4a80ae4e51c40de78ee2f6ea5e94381854dba0dc46c8f2"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_masked_worker_probe_005/RESULT.json",
+      "size": 6451,
+      "sha256": "16462d8217914711d22240fa073b0bf4108dfa70ce1f52e6b66bf7212e35d7e0"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_masked_worker_probe_005/VISIBILITY_AFTER_LIBC_FLUSH.json",
+      "size": 1139,
+      "sha256": "4e515f4b7bfa6ea791fe8624abc5ca33a40369c8f73e30c9f9f67f78f691f3ea"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_masked_worker_probe_005/VISIBILITY_AFTER_STOP.json",
+      "size": 1133,
+      "sha256": "f1031d3f91826a6a12a5c32f10e904ad76716b78361e675fb51d510c8c521b18"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_masked_worker_probe_005/VISIBILITY_AFTER_WORKER_EXIT.json",
+      "size": 1140,
+      "sha256": "25887d48b55993b67669693d7aff5d1297b2d21b553797c07665321d4aae1dea"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_masked_worker_probe_005/VISIBILITY_BEFORE_STOP.json",
+      "size": 1134,
+      "sha256": "b641eecf57d9baaa07be64cf8af8a719a6bbd91c68e991a2af9d8c4e5b78475c"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_masked_worker_probe_005/after_libc_flush.rank0.json",
+      "size": 55,
+      "sha256": "e35b6948429c151a9eeea89463bfa03972ae3fce1d7ae04ef15ba0cfd1f5165e"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_masked_worker_probe_005/after_libc_flush.rank1.json",
+      "size": 55,
+      "sha256": "10df382b5bc1edf1ffbc6a61b01e8e85af3e4f8735979790f95117e14df7ddc1"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_masked_worker_probe_005/after_stop.rank0.json",
+      "size": 33,
+      "sha256": "235c60ccee7a4cad823e1571e1c556efe0683229b14bd5c20a50a70ead94643b"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_masked_worker_probe_005/after_stop.rank1.json",
+      "size": 33,
+      "sha256": "9c73dcbd0fcb8dd11bc0fde1e8f11ab8538ff2e623bdc07df7fda73b23ceecee"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_masked_worker_probe_005/before_stop.rank0.json",
+      "size": 33,
+      "sha256": "235c60ccee7a4cad823e1571e1c556efe0683229b14bd5c20a50a70ead94643b"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_masked_worker_probe_005/before_stop.rank1.json",
+      "size": 33,
+      "sha256": "9c73dcbd0fcb8dd11bc0fde1e8f11ab8538ff2e623bdc07df7fda73b23ceecee"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_masked_worker_probe_005/capture.csv",
+      "size": 6972,
+      "sha256": "5f70eeabb1783871a55fc0a37ec4a2501e98f26de86dadaa0ec0259952f27989"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_masked_worker_probe_005/capture.db",
+      "size": 77824,
+      "sha256": "6154ba3e3b06e66a103b7f6dedf1eb4cdb4ed1b10316be4a62f028e251795f36"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_masked_worker_probe_005/collector.log",
+      "size": 1394,
+      "sha256": "26927c722a3a121aeffbda769229f2838fa2e4df62c51a3adc1f8a1e5c0c2311"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_masked_worker_probe_005/gqa6_visibility_probe.py",
+      "size": 3435,
+      "sha256": "d309c172bdc1c38b27745cfe6b2f964f3eeaca1fd5eaa84931d03bcca7a6978a"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_baseline_repeat_probe_006/ALLOW_EXIT",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_baseline_repeat_probe_006/ALLOW_LIBC_FLUSH",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_baseline_repeat_probe_006/ALLOW_STOP",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_baseline_repeat_probe_006/CPU_GATE.json",
+      "size": 1017,
+      "sha256": "f03dc6aedb4d4536e777234e5adc14636f5cd3c0a0ea89f2444f9b34f028920f"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_baseline_repeat_probe_006/RESULT.json",
+      "size": 6271,
+      "sha256": "40d97d7e6e3936518f49e3cc9edb6c70ead65ca7222e0f81e325823389ae9f9b"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_baseline_repeat_probe_006/VISIBILITY_AFTER_LIBC_FLUSH.json",
+      "size": 1143,
+      "sha256": "7756deea9ec246f39fcd8c8fb1125b2935ee99e957aa1b25284b436106fc0085"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_baseline_repeat_probe_006/VISIBILITY_AFTER_STOP.json",
+      "size": 1137,
+      "sha256": "f65828d3409bd558338b937ca4888e5eb46c36e08b827bac98ce28c3a6104a6d"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_baseline_repeat_probe_006/VISIBILITY_AFTER_WORKER_EXIT.json",
+      "size": 1144,
+      "sha256": "13561b3adb9cbd798c739c87ae9ca7872d57c5b3311ad138b68a5c9789ad3869"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_baseline_repeat_probe_006/VISIBILITY_BEFORE_STOP.json",
+      "size": 1138,
+      "sha256": "fba3d9ed1d892fa2c857d45ec642fcf5c1ed0f08661ade8e661883244ff09c71"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_baseline_repeat_probe_006/after_libc_flush.rank0.json",
+      "size": 55,
+      "sha256": "f8a200c6998e0e21b1cd4999225bda82e435cae666b9bec3feeea66baffb4e23"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_baseline_repeat_probe_006/after_libc_flush.rank1.json",
+      "size": 55,
+      "sha256": "c6f262409554f9399e1c5bcd3f3dafcff95736e53cd72f9dde47a8aa29656baa"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_baseline_repeat_probe_006/after_stop.rank0.json",
+      "size": 33,
+      "sha256": "e87281a3937a7fac07948697434845cf13dd9e5d03c3f3ad8047a0a035cd42fd"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_baseline_repeat_probe_006/after_stop.rank1.json",
+      "size": 33,
+      "sha256": "3bfe9b1a208102c21fd17592db45e10762844d78e43449c2b43ca1c42643aca0"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_baseline_repeat_probe_006/before_stop.rank0.json",
+      "size": 33,
+      "sha256": "e87281a3937a7fac07948697434845cf13dd9e5d03c3f3ad8047a0a035cd42fd"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_baseline_repeat_probe_006/before_stop.rank1.json",
+      "size": 33,
+      "sha256": "3bfe9b1a208102c21fd17592db45e10762844d78e43449c2b43ca1c42643aca0"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_baseline_repeat_probe_006/capture.csv",
+      "size": 6977,
+      "sha256": "dd2f594bb63b100a09990adab16746471cd606e5464e7125c01388895d01216e"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_baseline_repeat_probe_006/capture.db",
+      "size": 77824,
+      "sha256": "55340dffa8b4f9dcace74dc3a388f232526072d73dc494482cfa782f7d9e66be"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_baseline_repeat_probe_006/collector.log",
+      "size": 1399,
+      "sha256": "e13cf5d3eac89d5aa90b039bf90e208178dfe0c8ed7a30d5b14a8c3344dd664a"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_baseline_repeat_probe_006/gqa6_visibility_probe.py",
+      "size": 3228,
+      "sha256": "e85a2cbfb1d19895b1d18240180429571a66ec7a73593b6c010014165a62d5d3"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_masked_no_extra_probe_007/ALLOW_EXIT",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_masked_no_extra_probe_007/ALLOW_LIBC_FLUSH",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_masked_no_extra_probe_007/ALLOW_STOP",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_masked_no_extra_probe_007/CPU_GATE.json",
+      "size": 1017,
+      "sha256": "0d597689e11b3c427aef6a6150c76484a829f2e92efea95b56fa06d0594db4db"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_masked_no_extra_probe_007/RESULT.json",
+      "size": 6298,
+      "sha256": "5d34a09922c76d4b750fe195eef408c2dc6bf8804815a07faa1591658d755da0"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_masked_no_extra_probe_007/VISIBILITY_AFTER_LIBC_FLUSH.json",
+      "size": 1147,
+      "sha256": "5d3884b44e9981825e6c336adce1b735920b0b7d55666aa6669c67807b08dd5b"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_masked_no_extra_probe_007/VISIBILITY_AFTER_STOP.json",
+      "size": 1141,
+      "sha256": "07e50b89a9a627701a80cba2d4a46c16ebe771d39aa793eb321a9ec40ce6c797"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_masked_no_extra_probe_007/VISIBILITY_AFTER_WORKER_EXIT.json",
+      "size": 1148,
+      "sha256": "3337b981c2dc1e5f3f109afaa7aa00373b28ed21a4099065a6780859e469af21"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_masked_no_extra_probe_007/VISIBILITY_BEFORE_STOP.json",
+      "size": 1142,
+      "sha256": "fb89640b75c4845c8eafaf4f49eee9f1b426f44babe47601d5206cac71da80b5"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_masked_no_extra_probe_007/after_libc_flush.rank0.json",
+      "size": 55,
+      "sha256": "409b20bee5f1fd17864dd74a8e6dd199f2155cff331d1b5771cde266ba2f8614"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_masked_no_extra_probe_007/after_libc_flush.rank1.json",
+      "size": 55,
+      "sha256": "3ac435ea9db1fd96525f61996210c25d43a4377ce1580681a9aba9e36105a732"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_masked_no_extra_probe_007/after_stop.rank0.json",
+      "size": 33,
+      "sha256": "430a5877835f012575a25446af2b35603b99a85470fff213d3bf4f6a5b0ef08c"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_masked_no_extra_probe_007/after_stop.rank1.json",
+      "size": 33,
+      "sha256": "590463e478555c635b6c7dd026260611102d71cd377ca138eab02aa05a70f6d4"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_masked_no_extra_probe_007/before_stop.rank0.json",
+      "size": 33,
+      "sha256": "430a5877835f012575a25446af2b35603b99a85470fff213d3bf4f6a5b0ef08c"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_masked_no_extra_probe_007/before_stop.rank1.json",
+      "size": 33,
+      "sha256": "590463e478555c635b6c7dd026260611102d71cd377ca138eab02aa05a70f6d4"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_masked_no_extra_probe_007/capture.csv",
+      "size": 9935,
+      "sha256": "eca61e1a77f884e040898dfa4509f45217a05ea35ee0de47c4a8d651cf425c52"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_masked_no_extra_probe_007/capture.db",
+      "size": 77824,
+      "sha256": "1d0b02b8d5491b9f62adbdbdd9474f587911c7d3b3d6a0fc25354612c19f0d28"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_masked_no_extra_probe_007/collector.log",
+      "size": 1399,
+      "sha256": "6db63eccf652bf65df9d480ffe99ba79e1bf6775be16cc36f9ae32ddc932001d"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_masked_no_extra_probe_007/gqa6_visibility_probe.py",
+      "size": 3306,
+      "sha256": "9c0200792b127ad428e57e5c68ea92b05cf809916a53a0791b230ae012378890"
+    }
+  ]
+}
