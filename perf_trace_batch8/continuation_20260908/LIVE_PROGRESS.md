@@ -129,3 +129,5 @@ Capture 04 is published at https://github.com/cspool/auto_trace/releases/tag/per
 - 2026-09-08T15:01:11.809474+00:00: Extension002 outer observers active (health006, progress011, capture publisher004, offloader002, CPU waiter002, stage publisher003). Capture08 attempt002 live marker audit covers all 12,544 declared first-phase targets for eight requests with exact R07 phase orders; native closed attribution remains pending.
 
 2026-09-08T15:02:29.223203Z: Capture 08 attempt_002 completed all eight original measured requests, HTTP 200 and 1024 tokens each, total 8192, zero failed requests; both native rank stop events are retained. Measured replay duration 946.873 seconds is diagnostic only, not R07 observed latency. Native export and independent attribution are still required.
+
+- 2026-09-08T15:05:43.130185+00:00: 08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read attempt_002 accepted after closed native attribution and independent audit; 384 exact dispatches, ranks {"0": 192, "1": 192}, 71424 counter values independently recomputed. Raw Release publication/offload status is tracked separately.

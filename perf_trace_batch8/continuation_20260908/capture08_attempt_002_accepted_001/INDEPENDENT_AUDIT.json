@@ -1,0 +1,26 @@
+{
+  "accepted_dispatches": 384,
+  "all_graph_dispatches_outside_selected_scopes": true,
+  "auditor_sha256": "2c2baf5bf9964b9d96ca0586de6a6808e312434dbbeec67c9f133725421088d1",
+  "background_graph_native_dispatches_independently_classified": 0,
+  "counter_values_recomputed": 71424,
+  "elapsed_seconds": 16.712001084000804,
+  "exact_native_chain": true,
+  "excluded_dispatches": 21312,
+  "independent_audit": true,
+  "normalization_manifest_sha256": "d959489e90a14f3142647765d24e1d8e1d7b38633d0f698ff0bc100124ee92da",
+  "rank_native_device_counts": {
+    "0": 192,
+    "1": 192
+  },
+  "raw_database_sha256": "6be9058e20dc5bbadae95043e6e5d3a23d5e0179d3476a3ac5b0a9a2b59a5ea0",
+  "raw_partition_conserved": true,
+  "raw_pmc_sha256": "6b0ad63ba39d0ce7c62983bce84c1b8ddd9d8888b1b5a1cd66cd89566870155d",
+  "replay_timing_used_as_latency": false,
+  "runtime_shape_match_counts": {
+    "True": 384
+  },
+  "same_R06_R07_logical_ownership": true,
+  "segment_id": "08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read",
+  "status": "complete"
+}

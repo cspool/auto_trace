@@ -1,0 +1,51 @@
+{
+  "status": "complete_outer_deadline_extension",
+  "utc": "2026-09-08T15:03:55.528517+00:00",
+  "deadline_utc": "2026-09-09T04:18:09Z",
+  "active_extended_outer_processes": [
+    {
+      "script": "watch_runtime_health_006.py",
+      "pid": 785433,
+      "start_ticks": 51483614
+    },
+    {
+      "script": "publish_accepted_captures_004.py",
+      "pid": 785442,
+      "start_ticks": 51483732
+    },
+    {
+      "script": "offload_published_R08_files_002.py",
+      "pid": 785447,
+      "start_ticks": 51483849
+    },
+    {
+      "script": "await_all_captures_then_cpu_002.py",
+      "pid": 785490,
+      "start_ticks": 51483965
+    },
+    {
+      "script": "publish_complete_stages_003.py",
+      "pid": 785555,
+      "start_ticks": 51484082
+    },
+    {
+      "script": "remote_checkpoint_watchdog_011.py",
+      "pid": 786122,
+      "start_ticks": 51486649
+    }
+  ],
+  "main_authorization_commit_verified_remote": "d0da05f67ace41ff43a68aefdc46761c10e4f6d0",
+  "remote_progress_checkpoint": {
+    "status": "pushed",
+    "utc": "2026-09-08T15:01:01.395260+00:00",
+    "commit": "535c5ddaae7f8220ee1ddd547324d870d2e4cebe",
+    "branch": "progress/batch8-continuation-20260908",
+    "accepted_R08": 7,
+    "url": "https://github.com/cspool/auto_trace/tree/progress/batch8-continuation-20260908/perf_trace_batch8/progress/batch8-continuation-20260908",
+    "source_snapshot_manifest_sha256": "793ca729d140b9a021ea6ef85b6c28c8eb33c493f865b5d4dd7b692b70bd872a"
+  },
+  "authorization_sha256": "fd69661ead053a8cd805f5132bd1382583ffc3b9775c5fd9e005565be0bf39b3",
+  "active_GPU_capture_interrupted": false,
+  "current_capture_scheduler_008_conservative_deadline_retained": true,
+  "R08_R09_R10_completion_not_claimed": true
+}
