@@ -29,3 +29,13 @@ Weights remain physical `/root` until all 12 R08 GPU captures are accepted and a
 Fourth segment attempt001 failed the pre-measurement native health gate (rank0 empty PMC); the eight measured requests never started. All its known processes are terminated. Revision017 starts native collection explicitly before each of the original two warmups and retains explicit measured start, exact marker boundaries, all-eight coverage and independent attribution gates. CPU fixtures pass; actual two-worker native validation remains pending. Attempt002 started at 09:56:04 UTC. Spawn alone is not a proven remedy.
 
 Latest recovery state: `/public/home/accl15ptg7/run_R08_R10/RECOVERY_STATE_NFS.json`. Deadline remains 2026-09-08 20:18:09 UTC.
+
+## 2026-09-08 10:07 UTC: restoration and CPU suffix prepared
+
+The post-capture restorer is prepared and passed a CPU-only binary member roundtrip, original SHA256 validation, completed restart, and wrong-hash rejection. It has not deleted weights or restored actual capture files. It requires all 12 accepted captures, closed GPU processes, complete per-segment publication and offload receipts, and a capacity reserve before deleting any weight shard. Every removed source is restored byte-for-byte before formal R08 assignment. Final R08 checks also rehash every member in every original raw capture inventory, including rejected attempts.
+
+An outer waiter is running; R09/R10 business execution has not started. New CPU-stage outputs and logs remain on NFS. Final R08 publication references already published accepted raw captures instead of duplicating their compressed upload caches. Each reference contains the original Release receipt and exact file manifest.
+
+The immutable storage authorization maps are cached per CPU process to avoid parsing and rehashing the same multi-megabyte proof for each of more than 136,000 predecessor files; each actual source file still gets its own full content hash and exact symlink check. A production-path check validated 300 paths in 0.72 seconds with a single authorization-map load.
+
+Fourth capture retry revision017: both worker warmup hipProfilerStart calls returned 0 and both native PMC files are growing. Full measured and independent attribution acceptance still pending.
