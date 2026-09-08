@@ -1,0 +1,77 @@
+{
+  "status": "all_eight_requests_complete_native_export_pending",
+  "utc": "2026-09-08T11:44:29.974023+00:00",
+  "driver": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc/attempt_003/workload/driver.json",
+    "size": 121564,
+    "sha256": "8a0297fc1084eb8a174a9630a323c347137cf25d70d49f1b371316fd3431d683"
+  },
+  "requests": [
+    {
+      "request_id": "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c",
+      "http_status": 200,
+      "completion_tokens": 1024,
+      "error": null
+    },
+    {
+      "request_id": "batch8-dual-dcu-dp2-req-002-28a42990210e6f68",
+      "http_status": 200,
+      "completion_tokens": 1024,
+      "error": null
+    },
+    {
+      "request_id": "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f",
+      "http_status": 200,
+      "completion_tokens": 1024,
+      "error": null
+    },
+    {
+      "request_id": "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786",
+      "http_status": 200,
+      "completion_tokens": 1024,
+      "error": null
+    },
+    {
+      "request_id": "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5",
+      "http_status": 200,
+      "completion_tokens": 1024,
+      "error": null
+    },
+    {
+      "request_id": "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41",
+      "http_status": 200,
+      "completion_tokens": 1024,
+      "error": null
+    },
+    {
+      "request_id": "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3",
+      "http_status": 200,
+      "completion_tokens": 1024,
+      "error": null
+    },
+    {
+      "request_id": "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04",
+      "http_status": 200,
+      "completion_tokens": 1024,
+      "error": null
+    }
+  ],
+  "native_stop_records": [
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc/attempt_003/control/pmc_gate_events/stop.rank0.pid471808.json",
+      "size": 1367,
+      "sha256": "69797cf32d20d18cc44be08cbbc534b01758ce2aad817120177917e3380c56f8"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc/attempt_003/control/pmc_gate_events/stop.rank1.pid471801.json",
+      "size": 1367,
+      "sha256": "b34a76acaa6d4ac755600680d9189d0ae8f1a9d613aabdbd325534251fdc4104"
+    }
+  ],
+  "worker_PIDs_present_now": {
+    "471808": false,
+    "471801": false
+  },
+  "capture_accepted": false,
+  "exact_native_kernel_multiplicity_audit_pending": true
+}
