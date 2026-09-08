@@ -1,0 +1,18 @@
+{
+  "status": "verified_ready_for_release",
+  "member_count": 61,
+  "member_bytes": 4658290114,
+  "archive_codec": "zstd one concatenated stream; concatenate parts in manifest order before extraction",
+  "assets": [
+    {
+      "name": "capture.tar.zst.part001",
+      "size": 881558091,
+      "sha256": "c82b950fb271075dafe83855903a5f962c75439102d588c5660b27e76ab65386"
+    },
+    {
+      "name": "FILE_MANIFEST.json",
+      "size": 23455,
+      "sha256": "be85436dcd1ae0760f31716c2ce8ae6700cdd404d7ebe5f3c56f017dbe4c29ef"
+    }
+  ]
+}
