@@ -1,0 +1,240 @@
+{
+  "status": "complete_live_marker_coverage",
+  "segment_id": "07_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc",
+  "attempt": "attempt_001",
+  "checks": [
+    {
+      "request_id": "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c",
+      "phase": "decode",
+      "expected_targets": 784,
+      "observed_marker_rows": 784,
+      "missing_targets": [],
+      "unexpected_targets": [],
+      "duplicate_targets": 0
+    },
+    {
+      "request_id": "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c",
+      "phase": "prefill",
+      "expected_targets": 784,
+      "observed_marker_rows": 784,
+      "missing_targets": [],
+      "unexpected_targets": [],
+      "duplicate_targets": 0
+    },
+    {
+      "request_id": "batch8-dual-dcu-dp2-req-002-28a42990210e6f68",
+      "phase": "decode",
+      "expected_targets": 784,
+      "observed_marker_rows": 784,
+      "missing_targets": [],
+      "unexpected_targets": [],
+      "duplicate_targets": 0
+    },
+    {
+      "request_id": "batch8-dual-dcu-dp2-req-002-28a42990210e6f68",
+      "phase": "prefill",
+      "expected_targets": 784,
+      "observed_marker_rows": 784,
+      "missing_targets": [],
+      "unexpected_targets": [],
+      "duplicate_targets": 0
+    },
+    {
+      "request_id": "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f",
+      "phase": "decode",
+      "expected_targets": 784,
+      "observed_marker_rows": 784,
+      "missing_targets": [],
+      "unexpected_targets": [],
+      "duplicate_targets": 0
+    },
+    {
+      "request_id": "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f",
+      "phase": "prefill",
+      "expected_targets": 784,
+      "observed_marker_rows": 784,
+      "missing_targets": [],
+      "unexpected_targets": [],
+      "duplicate_targets": 0
+    },
+    {
+      "request_id": "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786",
+      "phase": "decode",
+      "expected_targets": 784,
+      "observed_marker_rows": 784,
+      "missing_targets": [],
+      "unexpected_targets": [],
+      "duplicate_targets": 0
+    },
+    {
+      "request_id": "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786",
+      "phase": "prefill",
+      "expected_targets": 784,
+      "observed_marker_rows": 784,
+      "missing_targets": [],
+      "unexpected_targets": [],
+      "duplicate_targets": 0
+    },
+    {
+      "request_id": "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5",
+      "phase": "decode",
+      "expected_targets": 784,
+      "observed_marker_rows": 784,
+      "missing_targets": [],
+      "unexpected_targets": [],
+      "duplicate_targets": 0
+    },
+    {
+      "request_id": "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5",
+      "phase": "prefill",
+      "expected_targets": 784,
+      "observed_marker_rows": 784,
+      "missing_targets": [],
+      "unexpected_targets": [],
+      "duplicate_targets": 0
+    },
+    {
+      "request_id": "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41",
+      "phase": "decode",
+      "expected_targets": 784,
+      "observed_marker_rows": 784,
+      "missing_targets": [],
+      "unexpected_targets": [],
+      "duplicate_targets": 0
+    },
+    {
+      "request_id": "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41",
+      "phase": "prefill",
+      "expected_targets": 784,
+      "observed_marker_rows": 784,
+      "missing_targets": [],
+      "unexpected_targets": [],
+      "duplicate_targets": 0
+    },
+    {
+      "request_id": "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3",
+      "phase": "decode",
+      "expected_targets": 784,
+      "observed_marker_rows": 784,
+      "missing_targets": [],
+      "unexpected_targets": [],
+      "duplicate_targets": 0
+    },
+    {
+      "request_id": "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3",
+      "phase": "prefill",
+      "expected_targets": 784,
+      "observed_marker_rows": 784,
+      "missing_targets": [],
+      "unexpected_targets": [],
+      "duplicate_targets": 0
+    },
+    {
+      "request_id": "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04",
+      "phase": "decode",
+      "expected_targets": 784,
+      "observed_marker_rows": 784,
+      "missing_targets": [],
+      "unexpected_targets": [],
+      "duplicate_targets": 0
+    },
+    {
+      "request_id": "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04",
+      "phase": "prefill",
+      "expected_targets": 784,
+      "observed_marker_rows": 784,
+      "missing_targets": [],
+      "unexpected_targets": [],
+      "duplicate_targets": 0
+    }
+  ],
+  "expected_process_marker_count": 12544,
+  "observed_process_marker_count": 12544,
+  "eight_requests": 8,
+  "rank_worker_PIDs": {
+    "0": [
+      687557
+    ],
+    "1": [
+      687560
+    ]
+  },
+  "source_prefixes": [
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/07_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc/attempt_001/workload/overlay_events/rank0/events.687557.jsonl",
+      "captured_prefix_size": 18648460,
+      "captured_prefix_sha256": "06a61ea48416decb06302c856dc27141cf80e68854e504ab5f5870cd148a9d10",
+      "active_source_full_file_completion_claimed": false
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/07_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc/attempt_001/workload/overlay_events/rank1/events.687560.jsonl",
+      "captured_prefix_size": 18648464,
+      "captured_prefix_sha256": "a92434551ef4509f6ccf1bcf4d2e16d37cacadec9912a180240ae59159f5758b",
+      "active_source_full_file_completion_claimed": false
+    }
+  ],
+  "R07_reference": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/contract/r07_bound_target_sidecar.json",
+    "size": 77816576,
+    "sha256": "a912cd5f4f47bde82b1d0853b546ad82fb9b1ee719994716512cbf3bce278ea5"
+  },
+  "R07_first_phase_order": {
+    "prefill.rank0": [
+      "batch8-dual-dcu-dp2-req-002-28a42990210e6f68",
+      "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786",
+      "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5",
+      "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41"
+    ],
+    "prefill.rank1": [
+      "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c",
+      "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f",
+      "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04",
+      "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3"
+    ],
+    "decode.rank0": [
+      "batch8-dual-dcu-dp2-req-002-28a42990210e6f68",
+      "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786",
+      "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5",
+      "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41"
+    ],
+    "decode.rank1": [
+      "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c",
+      "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f",
+      "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04",
+      "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3"
+    ]
+  },
+  "actual_first_phase_order": {
+    "prefill.rank0": [
+      "batch8-dual-dcu-dp2-req-002-28a42990210e6f68",
+      "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786",
+      "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5",
+      "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41"
+    ],
+    "prefill.rank1": [
+      "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c",
+      "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f",
+      "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04",
+      "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3"
+    ],
+    "decode.rank0": [
+      "batch8-dual-dcu-dp2-req-002-28a42990210e6f68",
+      "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786",
+      "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5",
+      "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41"
+    ],
+    "decode.rank1": [
+      "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c",
+      "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f",
+      "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04",
+      "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3"
+    ]
+  },
+  "all_first_phase_orders_match_R07": true,
+  "first_phase_order_is_diagnostic_not_native_kernel_acceptance": true,
+  "scope": "all declared R06 first-prefill/first-decode process targets, not every one of 1024 generated token invocations",
+  "read_only_no_native_calls": true,
+  "closed_capture_accepted": false,
+  "native_DB_and_PMC_correlation_audited": false,
+  "created_realtime_ns": 1788876648820728324
+}
