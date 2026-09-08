@@ -1,0 +1,25 @@
+{
+  "both_collectors_active": true,
+  "workers": [
+    {
+      "files": [
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_independent_dual_context_probe_021/rank0/hipprof_tmprpl_data_260909_010354_910791/input0_results_260909_010354/pmc_results_910798.txt",
+          "size": 16660
+        }
+      ],
+      "pid": 910798,
+      "rank": 0
+    },
+    {
+      "files": [
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_independent_dual_context_probe_021/rank1/hipprof_tmprpl_data_260909_010354_910793/input0_results_260909_010354/pmc_results_910800.txt",
+          "size": 16711
+        }
+      ],
+      "pid": 910800,
+      "rank": 1
+    }
+  ]
+}

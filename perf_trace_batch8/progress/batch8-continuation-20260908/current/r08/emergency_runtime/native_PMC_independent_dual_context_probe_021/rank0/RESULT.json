@@ -1,0 +1,38 @@
+{
+  "argv": [
+    "/opt/dtk/bin/hipprof",
+    "--pmc-write",
+    "--pmc-type",
+    "3",
+    "--kernel-name",
+    "_gqa6",
+    "--hip-trace",
+    "--hiptx-trace",
+    "--trace-args",
+    "--no-export",
+    "--pmc-off",
+    "--trace-off",
+    "--follow-fork",
+    "--exit-cleanup",
+    "-d",
+    "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_independent_dual_context_probe_021/rank0/hipprof_tmp",
+    "-o",
+    "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_independent_dual_context_probe_021/rank0/capture",
+    "/usr/bin/python",
+    "-B",
+    "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_independent_dual_context_probe_021/rank0/gqa6_native_probe.py",
+    "worker",
+    "0",
+    "direct"
+  ],
+  "expected_four_own_device": true,
+  "native_device_counts": {
+    "0": 4
+  },
+  "positive_DispatchNs": true,
+  "rank": 0,
+  "returncode": 0,
+  "worker_pids": [
+    "910798"
+  ]
+}

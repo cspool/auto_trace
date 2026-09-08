@@ -1,0 +1,57 @@
+{
+  "all_started_processes_terminated": true,
+  "both_workers_touched_both_devices": true,
+  "independent_collector_per_MP_child": true,
+  "model_free": true,
+  "results": [
+    {
+      "counts": {
+        "0": 4
+      },
+      "native_csv": {
+        "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_mp_executable_probe_022/rank0/capture.csv",
+        "sha256": "f3b29b40bbdb49e86ba37df2119bb45f99cd6a3dde2bf735675c71d19748751e",
+        "size": 6888
+      },
+      "native_db": {
+        "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_mp_executable_probe_022/rank0/capture.db",
+        "sha256": "8d487d1193459fb524b9638eac4732d2782316e55ec9ba7e305308772340e7b4",
+        "size": 49152
+      },
+      "pipe_result": {
+        "complete": true,
+        "rank": 0,
+        "worker_pid": 912770
+      },
+      "rank": 0
+    },
+    {
+      "counts": {
+        "1": 4
+      },
+      "native_csv": {
+        "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_mp_executable_probe_022/rank1/capture.csv",
+        "sha256": "726cc9a2a0aead12124a2b06b8d411812558b800951262e1fff524995a3e2e27",
+        "size": 6977
+      },
+      "native_db": {
+        "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_mp_executable_probe_022/rank1/capture.db",
+        "sha256": "cf6884c6bf5b0ef72d9c8e0ff4b31d4315035ec5b62c5b1841889653cce08c4b",
+        "size": 49152
+      },
+      "pipe_result": {
+        "complete": true,
+        "rank": 1,
+        "worker_pid": 912772
+      },
+      "rank": 1
+    }
+  ],
+  "source": {
+    "path": "/public/home/accl15ptg7/run_R08_R10/probe_native_mp_executable_022.py",
+    "sha256": "96719f7c18532f25b5427c66eac2c2fb23884353f4effd4b84155148e898c630",
+    "size": 5694
+  },
+  "spawn_pipe_transport_preserved": true,
+  "status": "complete"
+}
