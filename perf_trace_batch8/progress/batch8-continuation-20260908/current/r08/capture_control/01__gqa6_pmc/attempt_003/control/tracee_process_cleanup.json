@@ -1,0 +1,15 @@
+{
+  "service": {
+    "leader_pid": 105507,
+    "remaining_group_members_before_final_cleanup": [
+      106059,
+      106331
+    ],
+    "returncode": 0
+  },
+  "workload": {
+    "leader_pid": 115309,
+    "remaining_group_members_before_final_cleanup": [],
+    "returncode": 0
+  }
+}

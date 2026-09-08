@@ -1,0 +1,26 @@
+{
+  "completion_tokens": 8192,
+  "driver": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/03__gqa6_pmc_write/attempt_003/workload/driver.json",
+    "sha256": "874823eda8b60633b6e6cc7a89beda80e5b7af6497e46692cd863014304cf5d2",
+    "size": 121189
+  },
+  "measured_requests": 8,
+  "model_initializations": 2,
+  "observed_latency_evidence": false,
+  "overlay_summaries": [
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/03__gqa6_pmc_write/attempt_003/control/workers/rank0/overlay_summary.319441.json",
+      "sha256": "0dfd35a446cff501001ed1511227f94192a2a5d44dc11f5cd973cdbfd56b2a7b",
+      "size": 1512
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/03__gqa6_pmc_write/attempt_003/control/workers/rank1/overlay_summary.319440.json",
+      "sha256": "3ba2a924df6cd8f2236837192a006a7c677e07e5751f94ef42566d59b379ddf0",
+      "size": 1512
+    }
+  ],
+  "service_launches": 1,
+  "status": "complete",
+  "warmups": 2
+}

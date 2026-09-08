@@ -1,0 +1,32 @@
+{
+  "control_backend": "native_initially_on_explicit_measured_start_and_terminal_stop",
+  "dp_rank": 0,
+  "first_broad_marker": "qwen_dcu.layer00.prefill",
+  "initial_profiler_stop_monotonic_ns": 486102100415759,
+  "legacy_initial_stop_field_is_logical_guard_only": true,
+  "measured_request_ids": [
+    "batch8-dual-dcu-dp2-req-002-28a42990210e6f68"
+  ],
+  "monotonic_ns": 486519935683370,
+  "native_collection_initially_on": true,
+  "operation": "start",
+  "participant_request_ids": [
+    "batch8-dual-dcu-dp2-req-002-28a42990210e6f68"
+  ],
+  "physical_device_id": 0,
+  "pid": 173996,
+  "profiler_transition": {
+    "finished_monotonic_ns": 486519935534230,
+    "operation": "hipProfilerStart",
+    "pid": 173996,
+    "started_monotonic_ns": 486519933927375,
+    "status": 0,
+    "tid": 173996
+  },
+  "realtime_ns": 1788851297040739199,
+  "runtime_attempt_id": "batch8-dp2-fresh-003-R08-01__gqa6_pmc-attempt_005",
+  "schema_version": 1,
+  "segment_id": "01__gqa6_pmc",
+  "status": "complete",
+  "tid": 173996
+}

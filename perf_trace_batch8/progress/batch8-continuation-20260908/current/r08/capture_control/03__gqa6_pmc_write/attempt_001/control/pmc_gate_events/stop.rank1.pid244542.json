@@ -1,0 +1,42 @@
+{
+  "control_backend": "native_initially_on_explicit_measured_start_and_terminal_stop",
+  "device_transition": {
+    "finished_monotonic_ns": 490226607156683,
+    "operation": "hipSetDevice",
+    "pid": 244542,
+    "started_monotonic_ns": 490226607009663,
+    "status": 0,
+    "tid": 263292
+  },
+  "dp_rank": 1,
+  "initial_profiler_stop_monotonic_ns": 489012212758089,
+  "legacy_initial_stop_field_is_logical_guard_only": true,
+  "monotonic_ns": 490226620782483,
+  "native_collection_initially_on": true,
+  "operation": "stop",
+  "physical_device_id": 1,
+  "pid": 244542,
+  "profiler_transition": {
+    "finished_monotonic_ns": 490226620712412,
+    "operation": "hipProfilerStop",
+    "pid": 244542,
+    "started_monotonic_ns": 490226620694682,
+    "status": 0,
+    "tid": 263292
+  },
+  "realtime_ns": 1788855003725838192,
+  "reason": "measured_batch_complete_control_file",
+  "runtime_attempt_id": "batch8-dp2-fresh-003-R08-03__gqa6_pmc_write-attempt_001",
+  "schema_version": 1,
+  "segment_id": "03__gqa6_pmc_write",
+  "status": "complete",
+  "synchronize_transition": {
+    "finished_monotonic_ns": 490226607186623,
+    "operation": "hipDeviceSynchronize",
+    "pid": 244542,
+    "started_monotonic_ns": 490226607169123,
+    "status": 0,
+    "tid": 263292
+  },
+  "tid": 263292
+}

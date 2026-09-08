@@ -1,0 +1,319 @@
+{
+  "status": "all_copied_verified",
+  "source": "/root/r08_emergency_tools",
+  "destination": "/public/home/accl15ptg7/run_R08_R10/emergency_tools",
+  "files": [
+    {
+      "relative_path": "probe_fresh_exec_pmc_write_001.log",
+      "size": 49,
+      "sha256": "bd895ffb87a6a293cabe4194a8adfa168c0327fb98d7a5065a4c9724e47db336"
+    },
+    {
+      "relative_path": "REMOTE_PROGRESS_LAST_PUSH.json",
+      "size": 453,
+      "sha256": "600f53d01ac5196d2ec004fd57386896e5156d208dfc1d24bb991f09ffe89c5d"
+    },
+    {
+      "relative_path": "run_r08_serial_suffix_003.log",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "restore_root_weights_and_quota_001.log",
+      "size": 898,
+      "sha256": "be1815cf8eeccd7849e37ba09715d3a3b1ebf593b33121874ca6b285f9c9780f"
+    },
+    {
+      "relative_path": "R07_ARCHIVE_CACHE_CLEANUP_001.json",
+      "size": 12423,
+      "sha256": "9c5351ca906f0f891fb3c0630414b8fc8862145debf4543ab8ae123b9b5e180b"
+    },
+    {
+      "relative_path": "phase_runner_001.py",
+      "size": 4493,
+      "sha256": "be0634487f7e47f2aee6e84e7bdfb935821db11f20c659f2a71f3688870a3713"
+    },
+    {
+      "relative_path": "build_cpu_viewer_fixture_001.py",
+      "size": 3878,
+      "sha256": "cc903c2bede51b9681d0a143b419f07180135591fd01dc20029ffc52ab170b61"
+    },
+    {
+      "relative_path": "run_cpu_viewer_fixture_001.log",
+      "size": 46,
+      "sha256": "16bfa71f956049c2e2d297eca2de0c530b9c3818a1c2cb5b69829088fbd187af"
+    },
+    {
+      "relative_path": "probe_fresh_exec_pmc_write_001.py",
+      "size": 1931,
+      "sha256": "c76d87c72f04ceab6b0fb9a2bafae088ace25eae2dd571bc0667e96fee162d22"
+    },
+    {
+      "relative_path": "remote_checkpoint_watchdog_004.log",
+      "size": 198,
+      "sha256": "78b5bc3e81b6d981dff7be4560760147f47ca768a4e58ad9115af7af0708dedc"
+    },
+    {
+      "relative_path": "publish_accepted_captures_002.py",
+      "size": 10537,
+      "sha256": "c020c99f66071d7235d37ff960d22b8abfe291dd70ba15a4aae52fafca5c0898"
+    },
+    {
+      "relative_path": "publish_accepted_captures_002.log",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "prepare_spawn_capture_revision_015.py",
+      "size": 4967,
+      "sha256": "f4bef9f7f9f16fe986a9e5317895b4cf5a8cbcf1980f5d55e1d7ea482a5625f7"
+    },
+    {
+      "relative_path": "RECOVERY_STATE.json",
+      "size": 1551,
+      "sha256": "95426791c50683d26f3e21e0a3036713752e0e0a891f471ecdd83b7b440386c7"
+    },
+    {
+      "relative_path": "remote_checkpoint_watchdog_003.log",
+      "size": 396,
+      "sha256": "57789f1137f65f30d63af5366c045058972c5a3291330bad46e9820676a41d71"
+    },
+    {
+      "relative_path": "remote_checkpoint_watchdog_003.py",
+      "size": 8823,
+      "sha256": "b8e3ac18afe6c3373b82167df087035a761a71e5f4cfd75927c7369f3a558792"
+    },
+    {
+      "relative_path": "preserve_published_raw_in_memory_001.py",
+      "size": 3607,
+      "sha256": "d054bfb0fba864fdd0304428e7831676e6615f3e8aeac9a06c49749a97848d27"
+    },
+    {
+      "relative_path": "run_cpu_viewer_fixture_001.py",
+      "size": 1831,
+      "sha256": "f7a7533e0779c23fabe672481e3ef762881f4ea39e3e25b07fa5001b2e508d5f"
+    },
+    {
+      "relative_path": "restore_root_weights_and_quota_002.log",
+      "size": 10268,
+      "sha256": "fd8e72d45f0006709d553ddfa96a478312094dec10e872cb14dbceefd4886318"
+    },
+    {
+      "relative_path": "NATIVE_HEALTH_CPU_REGRESSIONS.json",
+      "size": 5573,
+      "sha256": "476aa32ba7d8a43888ab4990cd536fee1701473f58c9b207fbc9bde9d28a5942"
+    },
+    {
+      "relative_path": "restore_root_weights_and_quota_002.py",
+      "size": 5829,
+      "sha256": "f060f50103dc18ccfc04b9418c6be84a71249ec87c3533bbdf69df151bda7563"
+    },
+    {
+      "relative_path": "capture03_attempt003.log",
+      "size": 64,
+      "sha256": "b4e95b207e0481bed6918f69e850455867ef9ec5af376066715760b4b78f19da"
+    },
+    {
+      "relative_path": "run_r08_serial_suffix_003.py",
+      "size": 5527,
+      "sha256": "60946dca8eb5eb376a81092af40ffdc425b5f8b02866b74e4e6db5194d7cd8b8"
+    },
+    {
+      "relative_path": "EXACT_STORAGE_VALIDATOR_CPU_CHECK.json",
+      "size": 9194,
+      "sha256": "96a516c32303298b74706275697b20e1c8db8dbcfdb05f0421d05031e0274fad"
+    },
+    {
+      "relative_path": "r08_native_health.py",
+      "size": 2847,
+      "sha256": "b1d04b295085593d10d5fa1b3b42579c6e9692548685b544710fc981cc835aa8"
+    },
+    {
+      "relative_path": "preserve_published_raw_in_memory_001.log",
+      "size": 714,
+      "sha256": "64281e4c4c8b97566138d447e4f53037c82ec88f744e9352be9aff57d4e234e8"
+    },
+    {
+      "relative_path": "WEIGHTS_MUST_REMAIN_PHYSICAL_ROOT.json",
+      "size": 3212,
+      "sha256": "f2c90c0f268f9eeebc2196745bad57f7c9149a7a357b36d125e60be0389b2e9f"
+    },
+    {
+      "relative_path": "run_r08_serial_suffix_002.py",
+      "size": 5490,
+      "sha256": "3582d7b1880a0f34b794ad28bf49d1bb5fdc957f0c749b16aedf623694b83e72"
+    },
+    {
+      "relative_path": "remote_checkpoint_watchdog_002.py",
+      "size": 8676,
+      "sha256": "094d424213bd9cb1a826a116559883e37a034a9fbbb447b35d59c454aaf0e6aa"
+    },
+    {
+      "relative_path": "prepare_exact_storage_validator_001.py",
+      "size": 4534,
+      "sha256": "c1abbcdcfbaa176f27d3bd1dac3d0064270124b541b07aeea4d306dd0ee81074"
+    },
+    {
+      "relative_path": "capture03_attempt002.log",
+      "size": 1574,
+      "sha256": "773280ff6c2bb07f6dba953c636d2665228af705c5ff18674f7745108bd4f18d"
+    },
+    {
+      "relative_path": "remote_checkpoint_watchdog_004.py",
+      "size": 9075,
+      "sha256": "56370983b0f00dd11da436ae1463e322bf8e14a89ae0c1206dc22069ab904068"
+    },
+    {
+      "relative_path": "restore_root_weights_and_quota_001.py",
+      "size": 5308,
+      "sha256": "b447024143fc51df4fb264bb45af3dca77965c476310a77f261a09c00f04f99a"
+    },
+    {
+      "relative_path": "remote_checkpoint_watchdog_002.log",
+      "size": 99,
+      "sha256": "31ff85cff17514d26d3885b029aa11cf05c3938ad6f523fa2ea398a22a310251"
+    },
+    {
+      "relative_path": "r08_serial_suffix_002.log",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "phase_runner_cpu_fixture_001/orphan_fixture.py",
+      "size": 113,
+      "sha256": "727bb4eb032a26f3a56714da7a4b1919df4f0f470b2e97dacd3a3512ced65c9f"
+    },
+    {
+      "relative_path": "phase_runner_cpu_fixture_001/logs/negative.log",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "phase_runner_cpu_fixture_001/logs/orphan.log",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "phase_runner_cpu_fixture_001/validation/phase_lifecycle/orphan.json",
+      "size": 1451,
+      "sha256": "1fe2827a20bb53221d6b3aa87494ee2329c85f6faba4bde3cd3bfd122c6c7de8"
+    },
+    {
+      "relative_path": "phase_runner_cpu_fixture_001/validation/phase_lifecycle/negative.json",
+      "size": 1179,
+      "sha256": "a453f13702ec4ac142c8bcc1c90dd64f0e3578e9fea56fbd602b9d9abba7b190"
+    },
+    {
+      "relative_path": "cpu_viewer_fixture_001/CPU_BROWSER_FIXTURE_AUDIT.json",
+      "size": 4752,
+      "sha256": "a37652daffa3413cff61e5b5ab77fcc0e85b1ae1545622e14ce99ae63a65672c"
+    },
+    {
+      "relative_path": "cpu_viewer_fixture_001/FIXTURE_MANIFEST.json",
+      "size": 4866,
+      "sha256": "2b519e151857dd6f5210fcef34ebe3b4eb0810e31684f57fd9960daf463b8978"
+    },
+    {
+      "relative_path": "cpu_viewer_fixture_001/request_timeline.csv",
+      "size": 750,
+      "sha256": "da23d9622db7f8809ba439a8ea16927b0e4f289861900138c94d69b282442b8c"
+    },
+    {
+      "relative_path": "cpu_viewer_fixture_001/fixture.html",
+      "size": 132815,
+      "sha256": "a79a4055bd892b5219bc4d440f31043f176696be5c62e64f66f384779cc0acda"
+    },
+    {
+      "relative_path": "cpu_viewer_fixture_001/process_timeline.csv",
+      "size": 94926,
+      "sha256": "fb443782db1d84b8852f9de20695113139a5a0e9586bd9b5fa40a1e585b13345"
+    },
+    {
+      "relative_path": "cpu_viewer_fixture_001/fixture.png",
+      "size": 104982,
+      "sha256": "ba0effa42add1770171b039876b9c71fcdb50b05d88cdd0df2e5dd9abba84c34"
+    },
+    {
+      "relative_path": "cpu_viewer_fixture_001/kernel_timeline.csv",
+      "size": 201763,
+      "sha256": "434bde5d83fd60552fc2fc2df9129e76be35ee7ad65b43ac60e5f9071bab6564"
+    },
+    {
+      "relative_path": "stage_tool_templates/r08_closure_001/audit_r08.py",
+      "size": 5222,
+      "sha256": "acaf4a2aeb08eaa9e34c3e88773be65f2c30db3b6ae3b55623c666cd7cf4b3e4"
+    },
+    {
+      "relative_path": "stage_tool_templates/r08_closure_001/seal_r08.py",
+      "size": 7861,
+      "sha256": "4c0ffa1f542faaedda23990ef1e4c2edfa5d4dfee2127b251d310f61d3f24298"
+    },
+    {
+      "relative_path": "stage_tool_templates/r10_001/audit_report.py",
+      "size": 15817,
+      "sha256": "367f12629bcd269a0bcfcd8658aea53a30b913349aa1532b00068a7245ad66dd"
+    },
+    {
+      "relative_path": "stage_tool_templates/r10_001/viewer.js",
+      "size": 19884,
+      "sha256": "373f0d11054c5b361ce1b104283ab4aed90ae7c77c7c9cdf2a8ff1ccd544cb8a"
+    },
+    {
+      "relative_path": "stage_tool_templates/r10_001/seal_acceptance.py",
+      "size": 6535,
+      "sha256": "ddc4030b0f74f17b48885a6bed145fc8c57cb5a52588814e4c1989fdd94390a6"
+    },
+    {
+      "relative_path": "stage_tool_templates/r10_001/build_report.py",
+      "size": 18666,
+      "sha256": "b5df07e87aa0253b00c26dc4da054d6b89dfeadf97ed25d7e47bf7d5421f21ec"
+    },
+    {
+      "relative_path": "stage_tool_templates/r10_001/viewer.css",
+      "size": 2377,
+      "sha256": "2c7cedbe377e42f4d087c5f346c31b207d0a9413d3b484b06f706bf3f95170b6"
+    },
+    {
+      "relative_path": "stage_tool_templates/r10_001/browser_acceptance.py",
+      "size": 14655,
+      "sha256": "7922f50f39a83a21fe1effd451d5c62d24d77c4c52a0ba783ca4692a7346890d"
+    },
+    {
+      "relative_path": "stage_tool_templates/r09_001/audit_analysis.py",
+      "size": 21458,
+      "sha256": "752848b4dddb78ee9b1af4f3dafb3409cb36ee8f74253f3a82ccfb5750ea2d1e"
+    },
+    {
+      "relative_path": "stage_tool_templates/r09_001/build_analysis.py",
+      "size": 26415,
+      "sha256": "aa57fb6dde47cbb0018a64918f3f74184f8297f400892626623483d5daef9afd"
+    },
+    {
+      "relative_path": "stage_tool_templates/r09_001/audit_completion.py",
+      "size": 3185,
+      "sha256": "11432085c7d6c6a9205ad369717bce58494e771e82b7ee34480c0682f698026f"
+    },
+    {
+      "relative_path": "stage_tool_templates/r09_001/stage_common.py",
+      "size": 4864,
+      "sha256": "596fdfef88f9675df098efb9364ac39c4aa1173ba2169ef3d856a694bbd5bf6f"
+    },
+    {
+      "relative_path": "stage_tool_templates/r09_001/seal_r09.py",
+      "size": 3512,
+      "sha256": "b4b1bb7ff1f5bb4af904407f92a6e318b8e405f123f5144b89f6068ca363e2d5"
+    },
+    {
+      "relative_path": "stage_tool_templates/shared_001/cpu_stage_common.py",
+      "size": 8470,
+      "sha256": "64b60f5403edcffe8a506afcc76c008c94e872a3a848cdf7bf0e497a731df49f"
+    },
+    {
+      "relative_path": "__pycache__/r08_native_health.cpython-310.pyc",
+      "size": 3497,
+      "sha256": "a2568edbcf04d4cad2da92bb2990e1c18a774c9eef1d1ee0aa8376f94b251047"
+    }
+  ],
+  "previous_file_backings": [],
+  "recorded_utc": "2026-09-08T09:20:20.970149+00:00"
+}

@@ -1,0 +1,26 @@
+{
+  "pid": 330343,
+  "source": {
+    "path": "/root/r08_emergency_tools/run_r08_serial_suffix_003.py",
+    "size": 5527,
+    "sha256": "60946dca8eb5eb376a81092af40ffdc425b5f8b02866b74e4e6db5194d7cd8b8"
+  },
+  "deadline_utc": "2026-09-08T20:18:09Z",
+  "deadline_authorization": {
+    "path": "/public/home/accl15ptg7/run_R08_R10/MACHINE_TIME_EXTENSION_001.json",
+    "size": 727,
+    "sha256": "b725c7ee9c96a7fac49d7d28ac3a5116fd18ae58d95119608db574c8b5074e5b"
+  },
+  "previous_scheduler": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/validation/serial_scheduler_001/START.json",
+    "size": 440,
+    "sha256": "32039f2ea6614394fe50ed50c09365e707d5cdf9c6d3f5e70c5770504949d197"
+  },
+  "resume_reason": "native one-worker coverage failures preserved; explicit spawn full DP2 replacement attempt003 with read-only pre-measured gate",
+  "native_retry_authorization": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/capture03_retry_authorization_002.json",
+    "size": 1120,
+    "sha256": "7438a667990a67d6aa6ae682185d19421a7bd81184cd87324a6dacbf3e9444dd"
+  },
+  "scope": "R08 captures and CPU attribution; no R09/R10 business execution"
+}
