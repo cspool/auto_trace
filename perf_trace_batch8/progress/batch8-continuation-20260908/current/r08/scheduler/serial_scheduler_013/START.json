@@ -1,0 +1,36 @@
+{
+  "pid": 928320,
+  "source": {
+    "path": "/public/home/accl15ptg7/run_R08_R10/run_r08_serial_suffix_013.py",
+    "size": 5837,
+    "sha256": "b20bbb36f924aab87b51ce22c9939d2d445b237bfe3b8f523989bb08af638110"
+  },
+  "deadline_utc": "2026-09-09T04:18:09Z",
+  "deadline_authorization": {
+    "path": "/public/home/accl15ptg7/run_R08_R10/MACHINE_TIME_EXTENSION_002.json",
+    "size": 849,
+    "sha256": "fd69661ead053a8cd805f5132bd1382583ffc3b9775c5fd9e005565be0bf39b3"
+  },
+  "previous_scheduler": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/validation/serial_scheduler_012/START.json",
+    "size": 1995,
+    "sha256": "e460fd965309f42e0107531bc8fbcb770c02fa91542b6bdeb3a5f28847cba5d0"
+  },
+  "resume_reason": "reuse eight audited captures; retry capture09 after rank1 native pre-measured health failure using native-probed runtime021 independent worker collectors with retained original sources and unchanged full workload",
+  "native_prehealth_retry_authorization": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/capture09_independent_native_sessions_retry_001.json",
+    "size": 4883,
+    "sha256": "ce408f270ca3256252f30bab3586e0ed20b509a080f5fafd3d7239c50c540b09"
+  },
+  "NFS_storage_authorization": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/authorization/NFS_output_storage_authorization_001.json",
+    "size": 2790,
+    "sha256": "095a893828fe5ae8396804131170f957af3e0e58f748b6f62a20e6e83d33de30"
+  },
+  "user_storage_policy": {
+    "path": "/public/home/accl15ptg7/run_R08_R10/USER_STORAGE_POLICY_20260908.json",
+    "size": 446,
+    "sha256": "dcb3735b5416946930a63dfa4181f323b90c98e0b17fd82ff98c012cc09a8458"
+  },
+  "scope": "R08 captures and CPU attribution; no R09/R10 business execution"
+}

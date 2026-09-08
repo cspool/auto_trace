@@ -1,0 +1,6 @@
+{
+  "mode": "independent_native_worker_collectors",
+  "native_collector_count": 2,
+  "service_parent_unprofiled": true,
+  "worker_bindings_directory": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_006/control/worker_native_collectors"
+}
