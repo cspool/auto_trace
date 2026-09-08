@@ -1,0 +1,17 @@
+{
+  "auditor": {
+    "path": "/public/home/accl15ptg7/run_R08_R10/native_session_merge_001.py",
+    "sha256": "1b54512422e17c91559238d4ccc466fb973b96700f02fe2efa80ed59752ce14e",
+    "size": 10438
+  },
+  "independent_cell_comparison": true,
+  "native_CSV_body_bytes_compared": true,
+  "native_rows_compared": 136,
+  "no_native_data_values_recalculated": true,
+  "status": "complete",
+  "union_manifest": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_session_union_CPU_gate_001/actual_native_probe_union/NATIVE_SESSION_UNION.json",
+    "sha256": "70bf100956750d14e46875acb2808d18ed2e1ae018ab9c1b611e880421c55328",
+    "size": 11904
+  }
+}

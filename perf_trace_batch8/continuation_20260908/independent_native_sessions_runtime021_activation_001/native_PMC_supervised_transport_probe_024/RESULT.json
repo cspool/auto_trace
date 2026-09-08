@@ -1,0 +1,59 @@
+{
+  "all_started_processes_terminated": true,
+  "both_workers_touched_both_devices": true,
+  "independent_collector_per_MP_child": true,
+  "model_free": true,
+  "results": [
+    {
+      "counts": {
+        "0": 4
+      },
+      "native_csv": {
+        "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_supervised_transport_probe_024/rank0/capture.csv",
+        "sha256": "382e7e0adc081e4a27dd99c27ff8c9978109df7a3028db955f3fd9348268313c",
+        "size": 6964
+      },
+      "native_db": {
+        "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_supervised_transport_probe_024/rank0/capture.db",
+        "sha256": "05299d2d25b4d53c77489fc2f8e9d4d64df147c7220c137fd91d3bdb99ea4c6d",
+        "size": 77824
+      },
+      "native_marker_count": 1,
+      "pipe_result": {
+        "complete": true,
+        "rank": 0,
+        "worker_pid": 918863
+      },
+      "rank": 0
+    },
+    {
+      "counts": {
+        "1": 4
+      },
+      "native_csv": {
+        "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_supervised_transport_probe_024/rank1/capture.csv",
+        "sha256": "e45adccb640c2989ba93bce411b98a48ac7fea30e4ae6d4f2793761374f6e9df",
+        "size": 6948
+      },
+      "native_db": {
+        "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_supervised_transport_probe_024/rank1/capture.db",
+        "sha256": "15484d2c9076006937f9f08be6659882213515ed75cc17fad8ea45db94d6c000",
+        "size": 77824
+      },
+      "native_marker_count": 1,
+      "pipe_result": {
+        "complete": true,
+        "rank": 1,
+        "worker_pid": 918865
+      },
+      "rank": 1
+    }
+  ],
+  "source": {
+    "path": "/public/home/accl15ptg7/run_R08_R10/probe_native_supervised_transport_024.py",
+    "sha256": "691f9840e62447eedcefd60d3ca23637dd4640f520e22480c0dc7817a7808492",
+    "size": 6907
+  },
+  "spawn_pipe_transport_preserved": true,
+  "status": "complete"
+}

@@ -1,0 +1,225 @@
+{
+  "derived_csv": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_session_union_CPU_gate_001/actual_native_probe_union/capture.csv",
+    "sha256": "f748171257d9719940fe2298fabf14629443c98bf28f0348680b9a81d346e68f",
+    "size": 9910
+  },
+  "derived_database": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_session_union_CPU_gate_001/actual_native_probe_union/capture.db",
+    "sha256": "4e4a22c99ed18efd40d25c226d21d1819d8da594b4f6d07e4506ddcfced7ff28",
+    "size": 110592
+  },
+  "derived_union_is_not_a_new_native_collection": true,
+  "original_native_files_retained_unmodified": true,
+  "per_PID_native_table_rowids_unchanged": true,
+  "producer": {
+    "path": "/public/home/accl15ptg7/run_R08_R10/native_session_merge_001.py",
+    "sha256": "1b54512422e17c91559238d4ccc466fb973b96700f02fe2efa80ed59752ce14e",
+    "size": 10438
+  },
+  "shared_metadata_rowid_offsets_explicit": true,
+  "source_sessions": [
+    {
+      "CSV_identity_mapping": {
+        "all_original_body_bytes_preserved": true,
+        "body_bytes": 2958,
+        "body_sha256": "5b7e348a45f8334b26bb60e964802a0bdebe836873e3cad9f6cd94d61665be63",
+        "data_lines": 4,
+        "derived_body_byte_offset": 3972,
+        "derived_first_data_line": 2,
+        "source_first_data_line": 2
+      },
+      "config_pid_keys": [
+        [
+          913924,
+          "173_10_105_2_913924_1788887287"
+        ]
+      ],
+      "csv": {
+        "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_mp_transport_marker_probe_023/rank0/capture.csv",
+        "sha256": "0d85614833e090448b0193fad174ea02389a518cd343112e606c2f0e4dd82794",
+        "size": 6930
+      },
+      "database": {
+        "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_mp_transport_marker_probe_023/rank0/capture.db",
+        "sha256": "647193e9bb4b22f20bb185d6df4df3fe7a8fe05c6b273444f3947dbea87f7770",
+        "size": 61440
+      },
+      "rank": 0,
+      "tables": [
+        {
+          "derived_rowid_offset": 0,
+          "name": "CONFIG",
+          "native_per_PID_rowids_unchanged": false,
+          "ordered_native_row_and_cell_sha256": "d2134a5c90a74bbe7e2ba8656679f5ca0d0a30385214252dfa66ddc164d555ae",
+          "row_count": 1,
+          "source_rowid_max": 1,
+          "source_rowid_min": 1,
+          "source_schema_sql": "CREATE TABLE CONFIG (KEY TEXT, PID INTEGER NOT NULL, RANK_ID INTEGER, START_TIME TEXT, TIME_OF_DAY TEXT NOT NULL, MPI_TIME TEXT, CPU_ID TEXT, IP TEXT NOT NULL, DB_ID)"
+        },
+        {
+          "derived_rowid_offset": 0,
+          "name": "HIPOPS_173_10_105_2_913924_1788887287",
+          "native_per_PID_rowids_unchanged": true,
+          "ordered_native_row_and_cell_sha256": "6ec40d6df96cdbdf9192f1c82b90911a0b2396579f2c57dc5df62da92f117ccb",
+          "row_count": 4,
+          "source_rowid_max": 4,
+          "source_rowid_min": 1,
+          "source_schema_sql": "CREATE TABLE HIPOPS_173_10_105_2_913924_1788887287 (BeginNs INTEGER, EndNs INTEGER, dev_id INTEGER, queue_id TEXT, Name TEXT, pid INTEGER, tid INTEGER, _Index INTEGER, DurationNs INTEGER, PARS TEXT, accum_id INTEGER)"
+        },
+        {
+          "derived_rowid_offset": 0,
+          "name": "HIPTX_173_10_105_2_913924_1788887287",
+          "native_per_PID_rowids_unchanged": true,
+          "ordered_native_row_and_cell_sha256": "0a8cce490252ac1badceb8cb22f0c89742ff1a68139342e49cf251ba94afdb9e",
+          "row_count": 1,
+          "source_rowid_max": 1,
+          "source_rowid_min": 1,
+          "source_schema_sql": "CREATE TABLE HIPTX_173_10_105_2_913924_1788887287 (type integer, cid integer, _Index integer, BeginNs integer, EndNs integer, pid integer, tid integer, rid integer, message TEXT, begin_Index intetger, end_Index intetger)"
+        },
+        {
+          "derived_rowid_offset": 0,
+          "name": "HIP_173_10_105_2_913924_1788887287",
+          "native_per_PID_rowids_unchanged": true,
+          "ordered_native_row_and_cell_sha256": "3d4905577353c5215a8bbe2b8daee685e9b677fd2e49a63032b8d8b149eabc39",
+          "row_count": 52,
+          "source_rowid_max": 52,
+          "source_rowid_min": 1,
+          "source_schema_sql": "CREATE TABLE HIP_173_10_105_2_913924_1788887287 (BeginNs INTEGER, EndNs INTEGER, pid INTEGER, tid INTEGER, Name INTEGER, args TEXT, _Index INTEGER, State INTEGER, DurationNs INTEGER, ExtIndex INTEGER)"
+        },
+        {
+          "derived_rowid_offset": 0,
+          "name": "STR_TABLE",
+          "native_per_PID_rowids_unchanged": false,
+          "ordered_native_row_and_cell_sha256": "6c3660dc26441ef31ff50100eca52ab16f7cbdcc6ec35f9b06d801def0475d5c",
+          "row_count": 1,
+          "source_rowid_max": 1,
+          "source_rowid_min": 1,
+          "source_schema_sql": "CREATE TABLE STR_TABLE(PID INTEGER, CONFIG_KEY TEXT, TYPE INTEGER, STR_ID INTEGER, STR_NAME TEXT)"
+        },
+        {
+          "derived_rowid_offset": 0,
+          "name": "SUMMARY",
+          "native_per_PID_rowids_unchanged": false,
+          "ordered_native_row_and_cell_sha256": "ee162b17b5dee7fac8df4910a981166a5ea610d1d8b4a190ad513eef4033dd93",
+          "row_count": 6,
+          "source_rowid_max": 6,
+          "source_rowid_min": 1,
+          "source_schema_sql": "CREATE TABLE SUMMARY(NAME integer, KIND integer, PID integer, CONFIG_KEY text, CALLS integer, MAX_NS integer, MIN_NS integer, TOTAL_NS integer, PARS text, TOTAL_BYTE integer, MAX_GBPS real, MIN_GBPS real, TOTAL_GBPS real)"
+        },
+        {
+          "derived_rowid_offset": 0,
+          "name": "TRACE_COUNTER",
+          "native_per_PID_rowids_unchanged": false,
+          "ordered_native_row_and_cell_sha256": "30a160d4d8e2104a7b0783f33badc56beec51cc3e3c5c21927653387592e001c",
+          "row_count": 3,
+          "source_rowid_max": 3,
+          "source_rowid_min": 1,
+          "source_schema_sql": "CREATE TABLE TRACE_COUNTER (Key TEXT, TraceType INTEGER, MinBeginNs INTEGER, MaxBeginNs INTEGER, TraceSum INTEGER, MinTs INTEGER, MaxTs INTEGER, DbMinTimeOfDay INTEGER)"
+        }
+      ]
+    },
+    {
+      "CSV_identity_mapping": {
+        "all_original_body_bytes_preserved": true,
+        "body_bytes": 2980,
+        "body_sha256": "a2e0803b2c0df09afed04d8e6bd6d1223637469eed6bc6b4175844548213a76d",
+        "data_lines": 4,
+        "derived_body_byte_offset": 6930,
+        "derived_first_data_line": 6,
+        "source_first_data_line": 2
+      },
+      "config_pid_keys": [
+        [
+          913926,
+          "173_10_105_2_913926_1788887287"
+        ]
+      ],
+      "csv": {
+        "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_mp_transport_marker_probe_023/rank1/capture.csv",
+        "sha256": "ca6e6c9887102118278f5106fd7b330c2d47eff1455b3eabb250bcf10d328123",
+        "size": 6952
+      },
+      "database": {
+        "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_mp_transport_marker_probe_023/rank1/capture.db",
+        "sha256": "2e990311fb759ac831abb7b24ea76ae2dfc60993c420ec8c6d434b3d79fd3153",
+        "size": 61440
+      },
+      "rank": 1,
+      "tables": [
+        {
+          "derived_rowid_offset": 1,
+          "name": "CONFIG",
+          "native_per_PID_rowids_unchanged": false,
+          "ordered_native_row_and_cell_sha256": "9d2c94ae76679b191f0907d2c2de624c88c9da6131584c0612b1943d425abb7a",
+          "row_count": 1,
+          "source_rowid_max": 1,
+          "source_rowid_min": 1,
+          "source_schema_sql": "CREATE TABLE CONFIG (KEY TEXT, PID INTEGER NOT NULL, RANK_ID INTEGER, START_TIME TEXT, TIME_OF_DAY TEXT NOT NULL, MPI_TIME TEXT, CPU_ID TEXT, IP TEXT NOT NULL, DB_ID)"
+        },
+        {
+          "derived_rowid_offset": 0,
+          "name": "HIPOPS_173_10_105_2_913926_1788887287",
+          "native_per_PID_rowids_unchanged": true,
+          "ordered_native_row_and_cell_sha256": "06e8dd130c80cb9604c50d200b1403ae08feb6475569c3982b91d81d9ad861ce",
+          "row_count": 4,
+          "source_rowid_max": 4,
+          "source_rowid_min": 1,
+          "source_schema_sql": "CREATE TABLE HIPOPS_173_10_105_2_913926_1788887287 (BeginNs INTEGER, EndNs INTEGER, dev_id INTEGER, queue_id TEXT, Name TEXT, pid INTEGER, tid INTEGER, _Index INTEGER, DurationNs INTEGER, PARS TEXT, accum_id INTEGER)"
+        },
+        {
+          "derived_rowid_offset": 0,
+          "name": "HIPTX_173_10_105_2_913926_1788887287",
+          "native_per_PID_rowids_unchanged": true,
+          "ordered_native_row_and_cell_sha256": "a7621e2affd48735b583c5409927464a8532cfb697718a7aca7d31291fb378b1",
+          "row_count": 1,
+          "source_rowid_max": 1,
+          "source_rowid_min": 1,
+          "source_schema_sql": "CREATE TABLE HIPTX_173_10_105_2_913926_1788887287 (type integer, cid integer, _Index integer, BeginNs integer, EndNs integer, pid integer, tid integer, rid integer, message TEXT, begin_Index intetger, end_Index intetger)"
+        },
+        {
+          "derived_rowid_offset": 0,
+          "name": "HIP_173_10_105_2_913926_1788887287",
+          "native_per_PID_rowids_unchanged": true,
+          "ordered_native_row_and_cell_sha256": "e5fcda0fbde76e7fa2c83aa5f44357b6ae9faa140fe813c75e8911393292ba85",
+          "row_count": 52,
+          "source_rowid_max": 52,
+          "source_rowid_min": 1,
+          "source_schema_sql": "CREATE TABLE HIP_173_10_105_2_913926_1788887287 (BeginNs INTEGER, EndNs INTEGER, pid INTEGER, tid INTEGER, Name INTEGER, args TEXT, _Index INTEGER, State INTEGER, DurationNs INTEGER, ExtIndex INTEGER)"
+        },
+        {
+          "derived_rowid_offset": 1,
+          "name": "STR_TABLE",
+          "native_per_PID_rowids_unchanged": false,
+          "ordered_native_row_and_cell_sha256": "1ee730a06398c0899f72ac48559365dc0c8293f98745b18d37f43a73443bb405",
+          "row_count": 1,
+          "source_rowid_max": 1,
+          "source_rowid_min": 1,
+          "source_schema_sql": "CREATE TABLE STR_TABLE(PID INTEGER, CONFIG_KEY TEXT, TYPE INTEGER, STR_ID INTEGER, STR_NAME TEXT)"
+        },
+        {
+          "derived_rowid_offset": 6,
+          "name": "SUMMARY",
+          "native_per_PID_rowids_unchanged": false,
+          "ordered_native_row_and_cell_sha256": "9921aa240425f80ee83acbe7ee6b6ba98d052858e2ffa3a41bd088c6d0dd95a9",
+          "row_count": 6,
+          "source_rowid_max": 6,
+          "source_rowid_min": 1,
+          "source_schema_sql": "CREATE TABLE SUMMARY(NAME integer, KIND integer, PID integer, CONFIG_KEY text, CALLS integer, MAX_NS integer, MIN_NS integer, TOTAL_NS integer, PARS text, TOTAL_BYTE integer, MAX_GBPS real, MIN_GBPS real, TOTAL_GBPS real)"
+        },
+        {
+          "derived_rowid_offset": 3,
+          "name": "TRACE_COUNTER",
+          "native_per_PID_rowids_unchanged": false,
+          "ordered_native_row_and_cell_sha256": "4ca6db213214f671da8b65d9db4f2213cad9436a48860dc5dd605dedc00b5d11",
+          "row_count": 3,
+          "source_rowid_max": 3,
+          "source_rowid_min": 1,
+          "source_schema_sql": "CREATE TABLE TRACE_COUNTER (Key TEXT, TraceType INTEGER, MinBeginNs INTEGER, MaxBeginNs INTEGER, TraceSum INTEGER, MinTs INTEGER, MaxTs INTEGER, DbMinTimeOfDay INTEGER)"
+        }
+      ]
+    }
+  ],
+  "status": "complete_lossless_derived_union",
+  "timestamps_counters_PID_device_and_correlation_values_unchanged": true
+}

@@ -1,0 +1,25 @@
+{
+  "both_MP_collector_processes_alive": true,
+  "workers": [
+    {
+      "native_files": [
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_mp_transport_marker_probe_023/rank0/hipprof_tmprpl_data_260909_010759_913917/input0_results_260909_010759/pmc_results_913924.txt",
+          "size": 16684
+        }
+      ],
+      "pid": 913924,
+      "rank": 0
+    },
+    {
+      "native_files": [
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_mp_transport_marker_probe_023/rank1/hipprof_tmprpl_data_260909_010759_913918/input0_results_260909_010759/pmc_results_913926.txt",
+          "size": 16698
+        }
+      ],
+      "pid": 913926,
+      "rank": 1
+    }
+  ]
+}

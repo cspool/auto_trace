@@ -1,0 +1,24 @@
+{
+  "collector_argv_prefix": [
+    "/opt/dtk/bin/hipprof",
+    "--pmc-write",
+    "--pmc-type",
+    "3",
+    "--kernel-name",
+    "_gqa6",
+    "--hip-trace",
+    "--hiptx-trace",
+    "--trace-args",
+    "--no-export",
+    "--follow-fork",
+    "--exit-cleanup",
+    "-d",
+    "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_supervised_transport_probe_024/rank1/hipprof_tmp",
+    "-o",
+    "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_supervised_transport_probe_024/rank1/capture"
+  ],
+  "output_directory": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_supervised_transport_probe_024/rank1",
+  "physical_device_id": 1,
+  "status": "prepared",
+  "working_directory": "/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8"
+}

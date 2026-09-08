@@ -1,0 +1,10 @@
+#!/usr/bin/python
+import os,sys
+from pathlib import Path
+sys.path.insert(0,'/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_020')
+from r08_native import clean_env
+env=clean_env();env.pop("PYTHONPATH",None);env.update(TRITON_CACHE_DIR='/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_cache/triton',PYTHONPYCACHEPREFIX='/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_cache/pycache')
+argv=['/opt/dtk/bin/hipprof', '--pmc-write', '--pmc-type', '3', '--kernel-name', '_gqa6', '--hip-trace', '--hiptx-trace', '--trace-args', '--no-export', '--pmc-off', '--trace-off', '--follow-fork', '--exit-cleanup', '-d', '/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_mp_transport_marker_probe_023/rank1/hipprof_tmp', '-o', '/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_mp_transport_marker_probe_023/rank1/capture', '/usr/bin/python']+sys.argv[1:]
+log=os.open('/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_mp_transport_marker_probe_023/rank1/collector.log',os.O_WRONLY|os.O_CREAT|os.O_EXCL,0o600);os.dup2(log,1);os.dup2(log,2);os.close(log)
+os.chdir('/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_mp_transport_marker_probe_023/rank1')
+os.execvpe(argv[0],argv,env)

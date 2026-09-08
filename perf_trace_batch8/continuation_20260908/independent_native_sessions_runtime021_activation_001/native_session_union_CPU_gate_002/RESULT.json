@@ -1,0 +1,23 @@
+{
+  "actual_two_native_DB_CSV_union": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_session_union_CPU_gate_002/actual_native_probe_union/NATIVE_SESSION_UNION.json",
+    "sha256": "7147d56d4beb11be69a772609b0591446d972150ab07cf99bb665ab1f64da7d9",
+    "size": 11913
+  },
+  "altered_native_timestamp_rejected_despite_updated_derived_hash": true,
+  "duplicate_native_PID_source_rejected": true,
+  "independent_cell_audit": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_session_union_CPU_gate_002/actual_native_probe_union/NATIVE_SESSION_UNION_AUDIT.json",
+    "sha256": "55f9a35e437a0390a478d4c5f5b17e914478656268cba05d8e050f9fcdec751f",
+    "size": 767
+  },
+  "native_GPU_calls": 0,
+  "original_native_DBs_retained": true,
+  "read_only_reaudit_performs_no_output_mutation": true,
+  "source": {
+    "path": "/public/home/accl15ptg7/run_R08_R10/native_session_merge_002.py",
+    "sha256": "da88c2c8a33f856c399be1a2274baf8a0d2dc8630b5765c8c5b5d67badddd96b",
+    "size": 10482
+  },
+  "status": "complete_CPU_gate"
+}

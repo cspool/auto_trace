@@ -1,0 +1,63 @@
+{
+  "status": "complete",
+  "analysis_revision": "analysis_008",
+  "frozen_tools": [
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/analysis_008/audit_capture.py",
+      "size": 14364,
+      "sha256": "e59dd412fea24df6972ad37387c25cbc35568caa287dcb030e8712e01ce42cf2"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/analysis_008/audit_resource_model.py",
+      "size": 10649,
+      "sha256": "2f93deaff827ea0729cad279903e9fa7ef7cd70bd8a29f5f12f80c7e4dff85f1"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/analysis_008/build_fx_model.py",
+      "size": 7183,
+      "sha256": "460d2ff5855c7dfa1d9157f7ce138ed6dc9e6fe46923d9b04860fab59dabcef1"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/analysis_008/build_resource_model.py",
+      "size": 10572,
+      "sha256": "a63bb5ec0598b004da2c66391d2561cfcabb5c931b670060cd4bf2122bdb1b5f"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/analysis_008/metric_rules.py",
+      "size": 5074,
+      "sha256": "2fdbc537abb7d5ae54ec849fd3aa88cd8092c77ba5b667ea0f5097141b45bc5e"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/analysis_008/native_session_provenance.py",
+      "size": 6367,
+      "sha256": "f373c6a185c5e6accc8c373969dfbe68938c824a7062676e0e5b2c8bb83519ef"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/analysis_008/normalize_capture.py",
+      "size": 22641,
+      "sha256": "f3fe4b5cbe24985c906c2ed06a99c1a5ba231344c18d74085f45e7a07631ae76"
+    }
+  ],
+  "previous_analysis_gate": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/validation/background_graph_analysis_CPU_gate_001.json",
+    "size": 4110,
+    "sha256": "cdc04afb9c73de0b2b953a89dda35783713c20bdbd3223d3bfe1bb1bcd43d631"
+  },
+  "native_runtime_gate": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/runtime_capture_gate_014.json",
+    "size": 9913,
+    "sha256": "cc192e2ae77e9cb2fc5c85c89f6635e8ecb82754b7abee2a1c65b7327b52b1e5"
+  },
+  "CPU_gate": {
+    "native_GPU_calls": 0,
+    "actual_native_rows_independently_compared": 192,
+    "actual_native_CSV_rows_original_source_bound": 8,
+    "wrong_PID_and_out_of_range_source_line_rejected": true,
+    "changed_native_timestamp_independently_rejected": true
+  },
+  "original_R06_R07_logical_selection_and_native_attribution_rules_unchanged": true,
+  "original_single_session_captures_remain_supported": true,
+  "new_attribute_fields_explicitly_identify_original_DB_CSV_and_line": true,
+  "independent_auditor_does_not_import_union_producer": true,
+  "counter_values_and_native_timestamps_not_recalculated": true
+}

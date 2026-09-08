@@ -1,0 +1,12 @@
+/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/__init__.py:7: RuntimeWarning: Failed to read commit hash:
+No module named 'vllm._version'
+  from .version import __version__, __version_tuple__  # isort:skip
+GQA6_PROBE_COMPLETE 0 direct
+HIP_PROF:on Wed Sep  9 01:06:42 2026
+HIP_PROF:process id '912763'
+HIP_PROF:db file '/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_mp_executable_probe_022/rank0/capture.db'
+HIP_PROF:out put file '/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_mp_executable_probe_022/rank0/capture'
+HIP_PROF:profiling ' /usr/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=6, pipe_handle=8) --multiprocessing-fork'
+HIP_PROF:process begin
+HIP_PROF:process end run total cost:29(s)
+HIP_PROF:finish
