@@ -1,0 +1,66 @@
+{
+  "status": "complete_summary_of_full_read_only_query",
+  "utc": "2026-09-08T15:59:39.511859+00:00",
+  "full_query": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/capture09_attempt_004_native_device_context_query_001.json",
+    "size": 229901120,
+    "sha256": "c00782fbce765505f67de49638e380fbb568ba0ab5094877e230f94f9f17f9f2"
+  },
+  "original_database": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_004/capture.db",
+    "sha256": "7b8476bd64f372b12bc606b9723a2e0c5eea19288d00d9c614eb19dba02d0f20",
+    "size": 884051968
+  },
+  "full_query_records_not_discarded": true,
+  "clock_comparisons_are_native_wallclock_vs_control_wallclock_not_crossclock_precision_proof": true,
+  "workers": [
+    {
+      "rank": 0,
+      "pid": 843717,
+      "total_set_device_calls": 663418,
+      "main_thread_device_call_counts": {
+        "hipSetDevice(deviceId=0)": 660223
+      },
+      "last_main_thread_call_before_warmup_control_timestamp": [
+        1788882451909404031,
+        1788882451909404241,
+        843717,
+        843717,
+        "hipSetDevice(deviceId=0)",
+        1546794
+      ],
+      "first_main_thread_call_after_warmup_control_timestamp": [
+        1788882481470868459,
+        1788882481470869239,
+        843717,
+        843717,
+        "hipSetDevice(deviceId=0)",
+        1546814
+      ]
+    },
+    {
+      "rank": 1,
+      "pid": 843714,
+      "total_set_device_calls": 652689,
+      "main_thread_device_call_counts": {
+        "hipSetDevice(deviceId=1)": 648419
+      },
+      "last_main_thread_call_before_warmup_control_timestamp": [
+        1788882453842659308,
+        1788882453842659498,
+        843714,
+        843714,
+        "hipSetDevice(deviceId=1)",
+        1400715
+      ],
+      "first_main_thread_call_after_warmup_control_timestamp": [
+        1788882481468297322,
+        1788882481468298112,
+        843714,
+        843714,
+        "hipSetDevice(deviceId=1)",
+        1400735
+      ]
+    }
+  ]
+}
