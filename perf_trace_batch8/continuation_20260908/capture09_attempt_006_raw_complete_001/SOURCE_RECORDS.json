@@ -1,0 +1,22 @@
+[
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_006/execution_manifest.json",
+    "size": 11202,
+    "sha256": "ee572e8db7b2b72e133217c8622a65b7805dab4ede5f79252d96e671d7834a2e"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_006/raw_inventory_at_exit.json",
+    "size": 26772,
+    "sha256": "fcdd291692de058f70f8f1d7d68a19925b1e1a21cedb68143278af86b37b845b"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_006/NATIVE_SESSION_UNION_AUDIT.json",
+    "size": 824,
+    "sha256": "c712d9500c8f5b72d42f06aef945ea62aaf371b3ba76b41d109905eeb2b8c2dd"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_006/logs/hipprof.log",
+    "size": 1315,
+    "sha256": "61db532e34d228b00b77f09506311e00ca2f63fed62f0e9baad6c391df800c6d"
+  }
+]
