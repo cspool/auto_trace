@@ -1,0 +1,28 @@
+{
+  "phase": "VISIBILITY_BEFORE_STOP.json",
+  "workers": [
+    {
+      "rank": 0,
+      "pid": 875277,
+      "native_files": [
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_visibility_probe_001/hipprof_tmprpl_data_260909_000846_875272/input0_results_260909_000846/pmc_results_875277.txt",
+          "size": 16710,
+          "prefix_sha256": "bccf0b66b630db8d2aab839cf6bbf92a23ad44e4c04defb7665ee5fefe619951"
+        }
+      ]
+    },
+    {
+      "rank": 1,
+      "pid": 875278,
+      "native_files": [
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_visibility_probe_001/hipprof_tmprpl_data_260909_000846_875272/input0_results_260909_000846/pmc_results_875278.txt",
+          "size": 16708,
+          "prefix_sha256": "469e339cb04896509cd6bc626b16236b0cde191a8227ae9332f6af8828542e96"
+        }
+      ]
+    }
+  ],
+  "model_free": true
+}

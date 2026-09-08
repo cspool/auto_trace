@@ -1,0 +1,25 @@
+{
+  "failure_type": "ValueError",
+  "measurement_completion_claimed": false,
+  "native_health": {
+    "checked_realtime_ns": 1788883365500652221,
+    "elapsed_seconds": 10.02037410804769,
+    "pid": 861055,
+    "rank": 0,
+    "reason": "empty native PMC worker file before measured requests",
+    "status": "failed",
+    "workers": []
+  },
+  "profiler_cleanup": {
+    "leader_pid": 858588,
+    "remaining_group_members_before_final_cleanup": [],
+    "returncode": 0
+  },
+  "raw_inventory": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_005/raw_inventory_at_exit.json",
+    "sha256": "d695f52ffd356165a9744b0e7da7393e757941a3ba748cb3db0bed893e8a24dd",
+    "size": 11327
+  },
+  "reason": "native PMC CSV missing",
+  "status": "failed_not_accepted"
+}
