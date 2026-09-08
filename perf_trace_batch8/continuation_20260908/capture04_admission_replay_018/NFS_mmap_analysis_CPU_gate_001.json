@@ -1,0 +1,48 @@
+{
+  "status": "complete",
+  "analysis_revision": "analysis_006",
+  "changes": "connection-local SQLite mmap and pager cache only; exact attribution and auditor arithmetic unchanged",
+  "native_real_DB_quick_check": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/NFS_SQLite_mmap_probe_001.json",
+    "size": 762,
+    "sha256": "a19140b82063aac2789f204257c42c349690cb74c3b2848af2ce2b76d54e7e0a"
+  },
+  "prior_analysis_gate": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/validation/NFS_runtime_CPU_gate_001.json",
+    "size": 7654,
+    "sha256": "e6efd9ac3a71e682f0b52d8909f133e743fe0facbaed88da09b6308b9885397d"
+  },
+  "frozen_tools": [
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/analysis_006/audit_capture.py",
+      "size": 11093,
+      "sha256": "88ea1ad09f4b8f3ffddbb15436b9fd4f54bd4c65f888ab0bd6656afd2739f2b1"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/analysis_006/audit_resource_model.py",
+      "size": 10649,
+      "sha256": "2f93deaff827ea0729cad279903e9fa7ef7cd70bd8a29f5f12f80c7e4dff85f1"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/analysis_006/build_fx_model.py",
+      "size": 7183,
+      "sha256": "460d2ff5855c7dfa1d9157f7ce138ed6dc9e6fe46923d9b04860fab59dabcef1"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/analysis_006/build_resource_model.py",
+      "size": 10572,
+      "sha256": "a63bb5ec0598b004da2c66391d2561cfcabb5c931b670060cd4bf2122bdb1b5f"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/analysis_006/metric_rules.py",
+      "size": 5074,
+      "sha256": "2fdbc537abb7d5ae54ec849fd3aa88cd8092c77ba5b667ea0f5097141b45bc5e"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/analysis_006/normalize_capture.py",
+      "size": 19528,
+      "sha256": "42dff036998900cbde67293bfb1e3d43486f6c7f9fc5c3aadbc5af449a3fd15d"
+    }
+  ],
+  "model_or_device_actions": 0
+}

@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "orders_by_rank": {
+    "0": [
+      "batch8-dual-dcu-dp2-req-002-28a42990210e6f68",
+      "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786",
+      "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5",
+      "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41"
+    ],
+    "1": [
+      "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c",
+      "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f",
+      "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04",
+      "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3"
+    ]
+  },
+  "source_R07_bound_sidecar": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/contract/r07_bound_target_sidecar.json",
+    "size": 77816576,
+    "sha256": "a912cd5f4f47bde82b1d0853b546ad82fb9b1ee719994716512cbf3bce278ea5"
+  },
+  "first_prefill_order_evidence": [
+    {
+      "request_id": "batch8-dual-dcu-dp2-req-002-28a42990210e6f68",
+      "dp_rank": 0,
+      "phase": "prefill",
+      "runtime_execution_id": "hipprof-rank0-execute-00000001",
+      "canonical_target_id": "r07-bound-0389b909df9d2c1f26dd4b31"
+    },
+    {
+      "request_id": "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786",
+      "dp_rank": 0,
+      "phase": "prefill",
+      "runtime_execution_id": "hipprof-rank0-execute-00000044",
+      "canonical_target_id": "r07-bound-6f04a07dc161b75664cc0937"
+    },
+    {
+      "request_id": "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5",
+      "dp_rank": 0,
+      "phase": "prefill",
+      "runtime_execution_id": "hipprof-rank0-execute-00000088",
+      "canonical_target_id": "r07-bound-cb47b1eb397a0ed8e342bf7b"
+    },
+    {
+      "request_id": "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41",
+      "dp_rank": 0,
+      "phase": "prefill",
+      "runtime_execution_id": "hipprof-rank0-execute-00000128",
+      "canonical_target_id": "r07-bound-966c7260498d897abdb45b9c"
+    },
+    {
+      "request_id": "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c",
+      "dp_rank": 1,
+      "phase": "prefill",
+      "runtime_execution_id": "hipprof-rank1-execute-00000001",
+      "canonical_target_id": "r07-bound-ea299734fee6b63db8de0558"
+    },
+    {
+      "request_id": "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f",
+      "dp_rank": 1,
+      "phase": "prefill",
+      "runtime_execution_id": "hipprof-rank1-execute-00000041",
+      "canonical_target_id": "r07-bound-5eb312f5a8c5743ec9719bad"
+    },
+    {
+      "request_id": "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04",
+      "dp_rank": 1,
+      "phase": "prefill",
+      "runtime_execution_id": "hipprof-rank1-execute-00000083",
+      "canonical_target_id": "r07-bound-542f03560c0fbf9cf0785c96"
+    },
+    {
+      "request_id": "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3",
+      "dp_rank": 1,
+      "phase": "prefill",
+      "runtime_execution_id": "hipprof-rank1-execute-00000123",
+      "canonical_target_id": "r07-bound-8483c4bb825712a12489c6f4"
+    }
+  ],
+  "reason": "Measured client final-byte order does not guarantee EngineCore arrival order; restore observed R07 per-rank admission order for exact compiled-kernel ownership replay",
+  "client_request_ids_and_HTTP_commit_order_unchanged": true,
+  "request_prompts_tokens_parameters_unchanged": true,
+  "DP2_eight_requests_concurrency_unchanged": true,
+  "waiting_barrier_only_before_first_measured_scheduler_admission": true,
+  "R07_observed_latency_never_modified": true
+}

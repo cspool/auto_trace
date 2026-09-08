@@ -1,0 +1,33 @@
+{
+  "status": "complete",
+  "utc": "2026-09-08T11:05:44.160181+00:00",
+  "reason": "Valid closed native replay had all 12544 process ranges and 23660 owned kernels, but 128 of 1408 required Triton owners differed under changed batch admission context; do not accept or alter required target set",
+  "previous_execution_manifest": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc/attempt_002/execution_manifest.json",
+    "size": 8499,
+    "sha256": "3c03013c88125ff44d478b1110fddef0f640b4d25dc3647a192c6e607f961b4a"
+  },
+  "native_kernel_diagnostic": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/capture04_multiplicity_diagnostic_001.json",
+    "size": 60156,
+    "sha256": "08270bf9427d843763f74fb066cb9acdbaf00c2af96c6844b5d8dcceccebd513"
+  },
+  "runtime_CPU_gate": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/runtime_capture_gate_011.json",
+    "size": 6453,
+    "sha256": "1877caa360bbfe044923b89341f5a6b6ac54ca1c452f0925e1e366a640ffed15"
+  },
+  "analysis_CPU_gate": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/validation/NFS_mmap_analysis_CPU_gate_001.json",
+    "size": 2760,
+    "sha256": "a54fb13e31830df4ca918f6c1a3bd68e778511c2dc36561c4687fb92025ce928"
+  },
+  "new_attempt": "attempt_003",
+  "original_failed_raw_and_normalization_preserved": true,
+  "all_eight_requests_and_exact_R07_kernel_multiplicity_required": true,
+  "scheduler": {
+    "path": "/public/home/accl15ptg7/run_R08_R10/run_r08_serial_suffix_006.py",
+    "size": 5676,
+    "sha256": "1f6f50a70ddf6051d9df707476e01c8ce3d254e8621c80c296848745c09b8faf"
+  }
+}
