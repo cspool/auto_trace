@@ -1,0 +1,34 @@
+R08_MODEL_INITIALIZING 09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write 30 seconds
+R08_MODEL_INITIALIZING 09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write 60 seconds
+R08_MODEL_INITIALIZING 09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write 90 seconds
+R08_MODEL_INITIALIZING 09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write 120 seconds
+R08_MODEL_INITIALIZING 09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write 150 seconds
+R08_MODEL_INITIALIZING 09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write 180 seconds
+R08_MODEL_INITIALIZING 09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write 210 seconds
+R08_MODEL_INITIALIZING 09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write 240 seconds
+R08_MODEL_INITIALIZING 09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write 270 seconds
+R08_MODEL_INITIALIZING 09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write 300 seconds
+R08_MODEL_INITIALIZING 09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write 330 seconds
+R08_MODEL_INITIALIZING 09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write 360 seconds
+R08_MODEL_INITIALIZING 09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write 390 seconds
+R08_MODEL_READY 09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write 406.47
+Traceback (most recent call last):
+  File "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_018/run_capture.py", line 154, in <module>
+    if __name__=='__main__':main()
+  File "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_018/run_capture.py", line 151, in main
+    tracee(args)
+  File "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_018/run_capture.py", line 92, in tracee
+    require(rc==0,'full batch8 workload failed')
+  File "/public/home/accl15ptg7/r08_continuation_001_NFS_bulk/raw/runtime_tools/revision_018/r08_native.py", line 23, in require
+    if not condition:raise ValueError(message)
+ValueError: full batch8 workload failed
+[31mHIP_PROF [2026-09-08 23:39:19.777251] [824791] [ERROR]: exited with status: 1
+[m
+HIP_PROF:on Tue Sep  8 23:29:41 2026
+HIP_PROF:process id '824790'
+HIP_PROF:db file '/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_003/capture.db'
+HIP_PROF:out put file '/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_003/capture'
+HIP_PROF:profiling ' /usr/bin/python3 -B /public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_018/run_capture.py tracee --pass-root /public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_003 --segment 09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write'
+HIP_PROF:process begin
+HIP_PROF:process end run total cost:578(s)
+HIP_PROF:finish

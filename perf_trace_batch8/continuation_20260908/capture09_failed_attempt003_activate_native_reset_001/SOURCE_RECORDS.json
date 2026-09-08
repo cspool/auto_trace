@@ -1,0 +1,57 @@
+[
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/capture09_warmup_reset_retry_001.json",
+    "size": 5460,
+    "sha256": "232af5d0fc21b406330ca31281fcc0679e5e0b4e2aedacab691b845a24e0aa85"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_003/RAW_CAPTURE_FAILURE.json",
+    "size": 2106,
+    "sha256": "13c3ed57bddb6fbf6d101ef7786de82757d526d5d4a0295bd5bc428dd2e2c8c7"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_003/raw_inventory_at_exit.json",
+    "size": 11341,
+    "sha256": "318d8d9538e997dc1f7abd5cb334d4a0e94a4edd66476571a6a38a573f05a0e5"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_003/control/PRE_MEASURED_NATIVE_PMC_HEALTH.json",
+    "size": 1091,
+    "sha256": "9deb279bcfc2f7943910f3093b1d0fd87b0141e30d96e74e0a0872718b9f9910"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_003/control/tracee_process_cleanup.json",
+    "size": 280,
+    "sha256": "51230ee81e82ef53657df86885f0a81ab38c904a1b2a619e04ee2f93d05fd96e"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_003/control/pmc_gate_events/warmup_start.rank0.pid827205.json",
+    "size": 1112,
+    "sha256": "2a6895cef90c527e261e8f27b637737d2da95c5d5526c6369088efdd2a531fd5"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_003/control/pmc_gate_events/warmup_start.rank1.pid827210.json",
+    "size": 1112,
+    "sha256": "ee65eadfec3df825b9a0912cbc8f032e69eaa61d428675f6325f69326acf7d09"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_003/logs/hipprof.log",
+    "size": 3582,
+    "sha256": "b9231880fd1c040a054fb73756e1dc991e78013e70f943bfb6dd247dae387315"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_003/logs/service.log",
+    "size": 49044,
+    "sha256": "c18a2679e0de93cd3ef793be1b3049c74cc1e4c03cddda7b5490f1cf66a72b49"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_003/logs/workload.log",
+    "size": 786,
+    "sha256": "ef65f33d5b132ac2cb64dd07427455a0ab0454c05012022039d23825a8be3fbe"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/runtime_capture_gate_012.json",
+    "size": 7475,
+    "sha256": "2df2d921faa895614fd4cff97cc545fc3c964e050efb614938ce52e0ca1fe203"
+  }
+]
