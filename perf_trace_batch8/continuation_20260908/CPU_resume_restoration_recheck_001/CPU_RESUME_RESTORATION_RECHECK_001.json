@@ -1,0 +1,87 @@
+{
+  "status": "complete",
+  "utc": "2026-09-08T21:31:48.935195+00:00",
+  "restoration_complete_receipt": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/release_restoration_001/COMPLETE.json",
+    "size": 73269,
+    "sha256": "7bdafa0bd4bc83635fbbbfc1e67f24f7d2686f6c202f06b91c6d1029099d0829"
+  },
+  "capture_count": 12,
+  "raw_file_count": 53,
+  "raw_bytes": 77001580022,
+  "all_original_source_SHA256_rechecked": true,
+  "segments": [
+    {
+      "segment_id": "01__gqa6_pmc",
+      "files": 3,
+      "bytes": 4417429389
+    },
+    {
+      "segment_id": "02__gqa6_pmc_read",
+      "files": 3,
+      "bytes": 4415691180
+    },
+    {
+      "segment_id": "03__gqa6_pmc_write",
+      "files": 3,
+      "bytes": 4418053288
+    },
+    {
+      "segment_id": "04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc",
+      "files": 6,
+      "bytes": 7841751606
+    },
+    {
+      "segment_id": "05_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_read",
+      "files": 6,
+      "bytes": 7915953062
+    },
+    {
+      "segment_id": "06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write",
+      "files": 6,
+      "bytes": 7960773281
+    },
+    {
+      "segment_id": "07_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc",
+      "files": 3,
+      "bytes": 4413265764
+    },
+    {
+      "segment_id": "08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read",
+      "files": 3,
+      "bytes": 4412532905
+    },
+    {
+      "segment_id": "09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write",
+      "files": 5,
+      "bytes": 8011147487
+    },
+    {
+      "segment_id": "10_chunk_fwd_kernel_o_pmc",
+      "files": 5,
+      "bytes": 7731988998
+    },
+    {
+      "segment_id": "11_chunk_fwd_kernel_o_pmc_read",
+      "files": 5,
+      "bytes": 7732710888
+    },
+    {
+      "segment_id": "12_chunk_fwd_kernel_o_pmc_write",
+      "files": 5,
+      "bytes": 7730282174
+    }
+  ],
+  "no_capture_or_restore_reexecution": true,
+  "source_bytes_changed": false,
+  "validator_CPU_gate": {
+    "path": "/public/home/accl15ptg7/run_R08_R10/outer_source_path_optimization_gate_001/COMPLETE.json",
+    "size": 2441,
+    "sha256": "15ecb4e4e11b184585d3e5db5b9bec9d27972cc3fde2239d6d4add5fbdd95c85"
+  },
+  "code": {
+    "path": "/public/home/accl15ptg7/run_R08_R10/verify_completed_R08_restoration_001.py",
+    "size": 4087,
+    "sha256": "17079e7d87273fa9940277b50f0c968919acce563476f6c905b52bde9675048f"
+  }
+}
