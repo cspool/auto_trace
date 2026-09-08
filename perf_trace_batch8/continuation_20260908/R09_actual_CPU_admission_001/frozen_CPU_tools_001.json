@@ -1,0 +1,45 @@
+{
+  "status": "complete",
+  "runtime_goal": "R09",
+  "tools": [
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/continuation_001/tools/revision_001/audit_analysis.py",
+      "size": 21458,
+      "sha256": "752848b4dddb78ee9b1af4f3dafb3409cb36ee8f74253f3a82ccfb5750ea2d1e"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/continuation_001/tools/revision_001/audit_completion.py",
+      "size": 3218,
+      "sha256": "2c584eb304cdfdaa4a36d964816a3c144faba2a64c8edfaa2c97096460e4b52a"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/continuation_001/tools/revision_001/build_analysis.py",
+      "size": 26415,
+      "sha256": "aa57fb6dde47cbb0018a64918f3f74184f8297f400892626623483d5daef9afd"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/continuation_001/tools/revision_001/cpu_stage_common.py",
+      "size": 11820,
+      "sha256": "31516c5538ee11ac91d37793c74bfa76ada1f9a01e036887dc33985a5e2abc58"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/continuation_001/tools/revision_001/seal_r09.py",
+      "size": 3560,
+      "sha256": "479f8c4624c1d533234dfe4d8794780e39544f3316f8319eae230c38d93adb96"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/continuation_001/tools/revision_001/stage_common.py",
+      "size": 4864,
+      "sha256": "596fdfef88f9675df098efb9364ac39c4aa1173ba2169ef3d856a694bbd5bf6f"
+    }
+  ],
+  "syntax_validated": true,
+  "device_and_model_imports_performed": false,
+  "outer_preparation": {
+    "path": "/public/home/accl15ptg7/run_R08_R10/prepare_stage_assignments_004.py",
+    "size": 17519,
+    "sha256": "cd6ed416173ce699ecb157d618b555217549c39c80491fe0c7b847a50331bff0"
+  },
+  "synthetic_browser_fixture": null,
+  "runtime_validation_still_required": true
+}
