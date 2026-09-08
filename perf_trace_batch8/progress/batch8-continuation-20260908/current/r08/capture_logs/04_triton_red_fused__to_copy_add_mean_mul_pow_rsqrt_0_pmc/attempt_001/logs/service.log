@@ -297,3 +297,24 @@ INFO 09-08 17:34:58 [utils.py:250] Waiting for API servers to complete ...
 (ApiServer_1 pid=354925) INFO:     Application startup complete.
 (ApiServer_0 pid=354924) INFO:     127.0.0.1:33754 - "GET /v1/models HTTP/1.1" 200 OK
 (ApiServer_1 pid=354925) INFO:     127.0.0.1:33772 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(ApiServer_0 pid=354924) INFO:     127.0.0.1:33768 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(EngineCore_DP0 pid=354922) INFO 09-08 17:43:00 [core.py:1201] Shutdown initiated (timeout=0)
+(EngineCore_DP0 pid=354922) INFO 09-08 17:43:00 [core.py:1224] Shutdown complete
+(Worker pid=356356) INFO 09-08 17:43:00 [multiproc_executor.py:759] Parent process exited, terminating worker queues
+INFO 09-08 17:43:00 [utils.py:289] Received KeyboardInterrupt, shutting down API servers...
+(ApiServer_1 pid=354925) INFO:     Shutting down
+(Worker pid=356352) WARNING 09-08 17:43:00 [multiproc_executor.py:866] WorkerProc was terminated
+(Worker pid=356356) INFO 09-08 17:43:00 [multiproc_executor.py:854] WorkerProc shutting down.
+(EngineCore_DP1 pid=354923) INFO 09-08 17:43:00 [core.py:1201] Shutdown initiated (timeout=0)
+(EngineCore_DP1 pid=354923) INFO 09-08 17:43:00 [core.py:1224] Shutdown complete
+(Worker pid=356352) INFO 09-08 17:43:00 [multiproc_executor.py:759] Parent process exited, terminating worker queues
+(ApiServer_0 pid=354924) INFO 09-08 17:43:00 [launcher.py:137] Shutting down FastAPI HTTP server.
+(ApiServer_0 pid=354924) INFO:     Shutting down
+(ApiServer_1 pid=354925) WARNING 09-08 17:43:00 [launcher.py:131] port 8001 is used by process psutil.Process(pid=354924, name='VLLM::APIServer_0', status='running') launched with command:
+(ApiServer_1 pid=354925) WARNING 09-08 17:43:00 [launcher.py:131] VLLM::APIServer_0                                                                                                                   
+(ApiServer_1 pid=354925) INFO 09-08 17:43:00 [launcher.py:137] Shutting down FastAPI HTTP server.
+(ApiServer_1 pid=354925) INFO:     Shutting down
+(ApiServer_0 pid=354924) INFO:     Waiting for application shutdown.
+(ApiServer_0 pid=354924) INFO:     Application shutdown complete.
+(ApiServer_1 pid=354925) INFO:     Waiting for application shutdown.
+(ApiServer_1 pid=354925) INFO:     Application shutdown complete.

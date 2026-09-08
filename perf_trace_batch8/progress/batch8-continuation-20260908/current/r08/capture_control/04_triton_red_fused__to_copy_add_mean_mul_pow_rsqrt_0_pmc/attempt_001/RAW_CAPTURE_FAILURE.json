@@ -1,0 +1,25 @@
+{
+  "failure_type": "FileNotFoundError",
+  "measurement_completion_claimed": false,
+  "native_health": {
+    "checked_realtime_ns": 1788860580766933263,
+    "elapsed_seconds": 10.024384110991377,
+    "pid": 356356,
+    "rank": 0,
+    "reason": "empty native PMC worker file before measured requests",
+    "status": "failed",
+    "workers": []
+  },
+  "profiler_cleanup": {
+    "leader_pid": 353988,
+    "remaining_group_members_before_final_cleanup": [],
+    "returncode": 0
+  },
+  "raw_inventory": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc/attempt_001/raw_inventory_at_exit.json",
+    "sha256": "249b7185a85ccf18c423742521774b5222f0b1b665ff946dc845d133191a9bcf",
+    "size": 10464
+  },
+  "reason": "[Errno 2] No such file or directory: '/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc/attempt_001/control/tracee_workload_complete.json'",
+  "status": "failed_not_accepted"
+}
