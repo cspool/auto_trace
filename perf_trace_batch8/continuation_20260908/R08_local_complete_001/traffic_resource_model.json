@@ -1,0 +1,31 @@
+{
+  "audited_model": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/model/resource_model_001/traffic_resource_model.json",
+    "sha256": "0a50e565909e66a8d0ce4570af2dbeedef472ad208cdc7d89b9193bfad929665",
+    "size": 20215
+  },
+  "family_accounting": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/model/resource_model_001/family_accounting.json",
+    "sha256": "b4b08127b378f5939d362690f3add285d3a03234330079b9e424740e463ec2b0",
+    "size": 8403251
+  },
+  "independent_audit": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/model/resource_model_001/RESOURCE_MODEL_INDEPENDENT_AUDIT.json",
+    "sha256": "a841859754a9ceca7894e15e024bd6657ab90a9f6a7642cf666854aa43c01444",
+    "size": 775
+  },
+  "lineage_id": "batch8-dp2-fresh-003",
+  "metric_rows": 177408,
+  "replay_timing_used_as_latency": false,
+  "runtime_goal": "R08",
+  "runtime_run_id": "batch8-dp2-fresh-003",
+  "schema_version": 1,
+  "static_bytes_are_measured_traffic": false,
+  "status": "complete",
+  "trace_profile_sha256": "3b4c952063f48ae662b48b5ce9d8fd76e0ac4d74e170bdb1839ae8b1aaa23cce",
+  "traffic_resource_attachment": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/model/resource_model_001/traffic_resource_attachment.csv",
+    "sha256": "254c2a34c8ef4b100f0f1a3281f58af335730f15c6b44adfc61f36d276bc3440",
+    "size": 266289956
+  }
+}
