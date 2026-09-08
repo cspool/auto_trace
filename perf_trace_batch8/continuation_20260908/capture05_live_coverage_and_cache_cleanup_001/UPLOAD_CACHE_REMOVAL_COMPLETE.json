@@ -1,0 +1,46 @@
+{
+  "status": "complete",
+  "removed_bytes": 874112320,
+  "prepared": {
+    "path": "/public/home/accl15ptg7/run_R08_R10/publication/checkpoint_001/UPLOAD_CACHE_REMOVAL_PREPARED.json",
+    "size": 2551,
+    "sha256": "00eaff5b1f54e37468898d19f56a18b87a106e2e912462b65230c94ab4eb35db"
+  },
+  "remote_verification": {
+    "status": "complete",
+    "receipt": {
+      "path": "/public/home/accl15ptg7/run_R08_R10/publication/checkpoint_001/PUBLICATION_COMPLETE.json",
+      "size": 1770,
+      "sha256": "a0f59275b7a162adaf8ac445b8668b028c7d4c54b1f1ad4c58a50a4f64743466"
+    },
+    "release_url": "https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-continuation-checkpoint-20260908-001",
+    "remote_rechecked_utc": "2026-09-08T12:38:04.272709+00:00",
+    "assets": [
+      {
+        "name": "ASSET_MANIFEST.json",
+        "size": 674,
+        "digest": "sha256:961c8a255fd8bac81c2751477bd1430110283b10736c71891a3b2fa8a7371348",
+        "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-continuation-checkpoint-20260908-001/ASSET_MANIFEST.json"
+      },
+      {
+        "name": "FILE_MANIFEST.json",
+        "size": 34276,
+        "digest": "sha256:1fba951ac374b715f21cfb845c00b779b9a6ebe65813d19bdfa0e48f937d2f64",
+        "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-continuation-checkpoint-20260908-001/FILE_MANIFEST.json"
+      },
+      {
+        "name": "r07-cpu-r08-first-accepted-20260908.tar.zst",
+        "size": 874112320,
+        "digest": "sha256:11ab6ae8360a8c89ffbee15fa53f314242ece276bddb948f8cec255afc361bc1",
+        "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-continuation-checkpoint-20260908-001/r07-cpu-r08-first-accepted-20260908.tar.zst"
+      },
+      {
+        "name": "SHA256SUMS",
+        "size": 195,
+        "digest": "sha256:c465e505f89ea43cb5b0f5a3a04e2fe0809b33494695368022be3ea6f9261a25",
+        "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-continuation-checkpoint-20260908-001/SHA256SUMS"
+      }
+    ]
+  },
+  "no_weight_or_live_capture_changes": true
+}
