@@ -195,3 +195,5 @@ Capture 04 is published at https://github.com/cspool/auto_trace/releases/tag/per
 - 2026-09-08T18:37:25.559455+00:00: Capture 10 attempt_001 passed exact live coverage for all eight requests, each with 784 declared first-prefill and 784 first-decode targets, 12,544 total, no missing or duplicate targets. Both rank orders match R07. Original live-prefix hashes and checker code are retained. Closed native attribution and capture acceptance remain pending.
 
 2026-09-08T18:46:05.335257Z: Capture 10 attempt_001 completed all eight original measured requests, HTTP 200 and 1024 tokens each, total 8192, zero failed requests; both native rank stop events are retained. Measured replay duration 806.861 seconds is diagnostic only, not R07 observed latency. Native export and independent attribution are still required.
+
+- 2026-09-08T18:48:02.657340+00:00: Capture 10 attempt_001 completed both independent native collectors normally, return code 0, no signals, no timeout or forced group cleanup. All eight original requests completed. Original DB/CSV and collector logs remain on NFS. Lossless union verification and independent native attribution remain pending.
