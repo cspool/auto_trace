@@ -1,0 +1,26 @@
+{
+  "status": "original_eight_measured_requests_started_after_two_rank_native_health",
+  "source_records": [
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/07_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc/attempt_001/control/PRE_MEASURED_NATIVE_PMC_HEALTH.json",
+      "size": 1958,
+      "sha256": "837c89dcb88e3d193d44a68c8f6855b484310e291a1c9f36231ed76ef90a9e84"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/07_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc/attempt_001/control/capture_contract.json",
+      "size": 8616,
+      "sha256": "f9deb5f835c0ec4ad41727b0af936b65260b197356f51d8c2b9307fe8d8ac117"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/07_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc/attempt_001/control/admission_order/685797.005.json",
+      "size": 818,
+      "sha256": "45e9f141b900e55c49fbbcaef0fa5b6b4f3994e86ec425aaf7de2de5a0c1969e"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/07_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc/attempt_001/control/admission_order/685798.005.json",
+      "size": 818,
+      "sha256": "86e274714bd5dbee15d43acc56971df3edd9e7f0020909f952f58dd4448751b2"
+    }
+  ],
+  "closed_capture_accepted": false
+}
