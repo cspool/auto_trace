@@ -1,0 +1,102 @@
+{
+  "status": "complete",
+  "segment_id": "03__gqa6_pmc_write",
+  "prepared_record": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/release_restoration_001/03__gqa6_pmc_write.prepared.json",
+    "size": 2928,
+    "sha256": "1597e5f36af1abf6d943a8bffa0573237605c30386316c6d4992fccaef7fb70a"
+  },
+  "file_mappings": [
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/03__gqa6_pmc_write/attempt_003/capture.db",
+      "archive_member_path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/03__gqa6_pmc_write/attempt_003/capture.db",
+      "size": 3494690816,
+      "sha256": "9cd409a01d67583ded7da362efd0187cbc418d902751bf08eb2b0eb1297c7faa",
+      "destination_path": "/root/R08_release_restored_after_capture_001/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/03__gqa6_pmc_write/attempt_003/capture.db",
+      "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/03__gqa6_pmc_write/attempt_003/capture.db",
+      "same_bytes": true,
+      "canonical_link_verified": true,
+      "source_content_not_changed": true
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/03__gqa6_pmc_write/attempt_003/workload/r01_events/rank0/events.319441.jsonl",
+      "archive_member_path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/03__gqa6_pmc_write/attempt_003/workload/r01_events/rank0/events.319441.jsonl",
+      "size": 461932965,
+      "sha256": "a2d55dc772caf0ea85d22cf7744eeaf0df544c6c2d7c5fde01a093ea8bfc6a74",
+      "destination_path": "/root/R08_release_restored_after_capture_001/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/03__gqa6_pmc_write/attempt_003/workload/r01_events/rank0/events.319441.jsonl",
+      "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/03__gqa6_pmc_write/attempt_003/workload/r01_events/rank0/events.319441.jsonl",
+      "same_bytes": true,
+      "canonical_link_verified": true,
+      "source_content_not_changed": true
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/03__gqa6_pmc_write/attempt_003/workload/r01_events/rank1/events.319440.jsonl",
+      "archive_member_path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/03__gqa6_pmc_write/attempt_003/workload/r01_events/rank1/events.319440.jsonl",
+      "size": 461429507,
+      "sha256": "84d0aeb469b615132315b2d3b6237cf99d9dc4a3ebd8c89d9e83099f8182f05c",
+      "destination_path": "/root/R08_release_restored_after_capture_001/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/03__gqa6_pmc_write/attempt_003/workload/r01_events/rank1/events.319440.jsonl",
+      "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/03__gqa6_pmc_write/attempt_003/workload/r01_events/rank1/events.319440.jsonl",
+      "same_bytes": true,
+      "canonical_link_verified": true,
+      "source_content_not_changed": true
+    }
+  ],
+  "restored_files": [
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/03__gqa6_pmc_write/attempt_003/capture.db",
+      "archive_member_path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/03__gqa6_pmc_write/attempt_003/capture.db",
+      "size": 3494690816,
+      "sha256": "9cd409a01d67583ded7da362efd0187cbc418d902751bf08eb2b0eb1297c7faa"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/03__gqa6_pmc_write/attempt_003/workload/r01_events/rank0/events.319441.jsonl",
+      "archive_member_path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/03__gqa6_pmc_write/attempt_003/workload/r01_events/rank0/events.319441.jsonl",
+      "size": 461932965,
+      "sha256": "a2d55dc772caf0ea85d22cf7744eeaf0df544c6c2d7c5fde01a093ea8bfc6a74"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/03__gqa6_pmc_write/attempt_003/workload/r01_events/rank1/events.319440.jsonl",
+      "archive_member_path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/03__gqa6_pmc_write/attempt_003/workload/r01_events/rank1/events.319440.jsonl",
+      "size": 461429507,
+      "sha256": "84d0aeb469b615132315b2d3b6237cf99d9dc4a3ebd8c89d9e83099f8182f05c"
+    }
+  ],
+  "all_original_SHA256_verified": true,
+  "remote_backing": {
+    "status": "complete",
+    "receipt": {
+      "path": "/public/home/accl15ptg7/run_R08_R10/publication_emergency/r08_03__gqa6_pmc_write/PUBLICATION_COMPLETE.json",
+      "size": 3010,
+      "sha256": "859bc81e5ea787ba54afc09346eb320f7d94f1771fb12cfd0b57a7e7c7052460"
+    },
+    "release_url": "https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-r08-03--gqa6-pmc-write-20260908",
+    "remote_rechecked_utc": "2026-09-08T09:46:33.984803+00:00",
+    "assets": [
+      {
+        "name": "ASSET_MANIFEST.json",
+        "size": 536,
+        "digest": "sha256:4210429d45775ea10ebf9d843d8535bf211bd707ce7a6177e64c2e27c7de4d62",
+        "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-03--gqa6-pmc-write-20260908/ASSET_MANIFEST.json"
+      },
+      {
+        "name": "capture.tar.zst.part001",
+        "size": 855840073,
+        "digest": "sha256:051d2074043073fa8ea223e44f1f86d78eec4c58e5c6bde3b14aaf73775c5cd6",
+        "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-03--gqa6-pmc-write-20260908/capture.tar.zst.part001"
+      },
+      {
+        "name": "FILE_MANIFEST.json",
+        "size": 16944,
+        "digest": "sha256:171c1806dd53dd35348de7dc8343bf7008caba3b4fb7f71a5b11a2296c2bbaf5",
+        "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-03--gqa6-pmc-write-20260908/FILE_MANIFEST.json"
+      },
+      {
+        "name": "SHA256SUMS",
+        "size": 175,
+        "digest": "sha256:a969b99b2fa9a3a7897c566eacb803855e8a569322a582310a23f4713edb73d2",
+        "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-03--gqa6-pmc-write-20260908/SHA256SUMS"
+      }
+    ]
+  },
+  "completed_utc": "2026-09-08T20:49:59.170804+00:00"
+}

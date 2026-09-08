@@ -1,0 +1,102 @@
+{
+  "status": "complete",
+  "segment_id": "08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read",
+  "prepared_record": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/release_restoration_001/08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read.prepared.json",
+    "size": 3328,
+    "sha256": "911f9d3cde98e2e3ce13f69c3522e46cbaed439ed05e70dda9478ed804a5452a"
+  },
+  "file_mappings": [
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read/attempt_002/capture.db",
+      "archive_member_path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read/attempt_002/capture.db",
+      "size": 3489165312,
+      "sha256": "6be9058e20dc5bbadae95043e6e5d3a23d5e0179d3476a3ac5b0a9a2b59a5ea0",
+      "destination_path": "/root/R08_release_restored_after_capture_001/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read/attempt_002/capture.db",
+      "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read/attempt_002/capture.db",
+      "same_bytes": true,
+      "canonical_link_verified": true,
+      "source_content_not_changed": true
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read/attempt_002/workload/r01_events/rank0/events.750538.jsonl",
+      "archive_member_path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read/attempt_002/workload/r01_events/rank0/events.750538.jsonl",
+      "size": 461935862,
+      "sha256": "e0edc3aae8deecf7ce20f8f277fa2886e0545bf9ad6561c0db782bbe74dca067",
+      "destination_path": "/root/R08_release_restored_after_capture_001/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read/attempt_002/workload/r01_events/rank0/events.750538.jsonl",
+      "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read/attempt_002/workload/r01_events/rank0/events.750538.jsonl",
+      "same_bytes": true,
+      "canonical_link_verified": true,
+      "source_content_not_changed": true
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read/attempt_002/workload/r01_events/rank1/events.750535.jsonl",
+      "archive_member_path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read/attempt_002/workload/r01_events/rank1/events.750535.jsonl",
+      "size": 461431731,
+      "sha256": "11764044809ee5a3c95f990ec7a48b3d9b16b494cb214180c5da400ac0fc3eea",
+      "destination_path": "/root/R08_release_restored_after_capture_001/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read/attempt_002/workload/r01_events/rank1/events.750535.jsonl",
+      "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read/attempt_002/workload/r01_events/rank1/events.750535.jsonl",
+      "same_bytes": true,
+      "canonical_link_verified": true,
+      "source_content_not_changed": true
+    }
+  ],
+  "restored_files": [
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read/attempt_002/capture.db",
+      "archive_member_path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read/attempt_002/capture.db",
+      "size": 3489165312,
+      "sha256": "6be9058e20dc5bbadae95043e6e5d3a23d5e0179d3476a3ac5b0a9a2b59a5ea0"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read/attempt_002/workload/r01_events/rank0/events.750538.jsonl",
+      "archive_member_path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read/attempt_002/workload/r01_events/rank0/events.750538.jsonl",
+      "size": 461935862,
+      "sha256": "e0edc3aae8deecf7ce20f8f277fa2886e0545bf9ad6561c0db782bbe74dca067"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read/attempt_002/workload/r01_events/rank1/events.750535.jsonl",
+      "archive_member_path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read/attempt_002/workload/r01_events/rank1/events.750535.jsonl",
+      "size": 461431731,
+      "sha256": "11764044809ee5a3c95f990ec7a48b3d9b16b494cb214180c5da400ac0fc3eea"
+    }
+  ],
+  "all_original_SHA256_verified": true,
+  "remote_backing": {
+    "status": "complete",
+    "receipt": {
+      "path": "/public/home/accl15ptg7/run_R08_R10/publication_emergency/r08_08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read/PUBLICATION_COMPLETE.json",
+      "size": 3451,
+      "sha256": "454abdbbcfd8c5382c97fe72196ee23c9ed324da68d1b3ccda2c25da581ad92b"
+    },
+    "release_url": "https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-r08-08-chunk-gated-delta-rule-fwd-kernel-h-blockdim64-pmc-read-20260908",
+    "remote_rechecked_utc": "2026-09-08T15:07:17.434767+00:00",
+    "assets": [
+      {
+        "name": "ASSET_MANIFEST.json",
+        "size": 536,
+        "digest": "sha256:5a0fd893fcd184f6099d45ca52aa76e94a4d8efb427510301c5088a328e45051",
+        "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-08-chunk-gated-delta-rule-fwd-kernel-h-blockdim64-pmc-read-20260908/ASSET_MANIFEST.json"
+      },
+      {
+        "name": "capture.tar.zst.part001",
+        "size": 871576123,
+        "digest": "sha256:07b7f9695366d6971315ff11b26bd0ea146fd8faacf6821d9d24b23d39a4f3da",
+        "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-08-chunk-gated-delta-rule-fwd-kernel-h-blockdim64-pmc-read-20260908/capture.tar.zst.part001"
+      },
+      {
+        "name": "FILE_MANIFEST.json",
+        "size": 23785,
+        "digest": "sha256:00fd57aa4b0f714f6fedf68ef1d726c96a51b07933a2ddb580ca907b40e24fad",
+        "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-08-chunk-gated-delta-rule-fwd-kernel-h-blockdim64-pmc-read-20260908/FILE_MANIFEST.json"
+      },
+      {
+        "name": "SHA256SUMS",
+        "size": 175,
+        "digest": "sha256:9ef182ac1cd648b4b33e0d430feefe8bb455ab5746951d1f500c49a7313fe513",
+        "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-08-chunk-gated-delta-rule-fwd-kernel-h-blockdim64-pmc-read-20260908/SHA256SUMS"
+      }
+    ]
+  },
+  "completed_utc": "2026-09-08T21:01:58.752798+00:00"
+}
