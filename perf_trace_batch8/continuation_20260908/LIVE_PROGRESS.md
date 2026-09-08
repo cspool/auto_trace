@@ -17,3 +17,5 @@ R09/R10模板在检查点中标记为 prepared_not_executed，不代表相应阶
 权重存储约束：11 个权重分片的物理文件必须始终位于 `/root`。此前迁入 NFS 的做法已纠正，所有分片回迁后逐片 SHA-256 一致；`WEIGHTS_MUST_REMAIN_PHYSICAL_ROOT.json` 列出当前物理路径。之后只调整日志、trace 和已验证可从远程恢复的下载缓存，不再迁移权重到 NFS。
 
 用户追加存储要求：R08 到 R10 的全部运行产物、阶段产出和日志均须物理保存在 NFS，权重仍须物理保存在 `/root`。后续采集已暂停；当前第三项采集已关闭，正在逐文件校验并将已有 root/内存盘产物迁回 NFS。迁移记录在 `run_R08_R10/storage_policy_correction_001`。当前 NFS 主目录总配额 50 GB，已请求提高配额或提供更大的 NFS 路径；不会用 root/内存盘存放后续 R08–R10 产物来绕过这一要求。
+
+2026-09-08 09:27 UTC：R08 全部 7,630 个文件、28,025,404,918 字节已迁到物理 NFS，逐文件复制及切换后 SHA-256 校验一致。逻辑路径不变；`/root/r08_continuation_001_bulk` 现仅是指向 `/public/home/accl15ptg7/r08_continuation_001_NFS_bulk` 的目录别名。权重的物理文件仍全部位于 `/root`。当前权威状态为进度分支 `current/state/RECOVERY_STATE_NFS.json`；后续输出采用 revision_016 / analysis_005 的 NFS 路径检查，原冻结版本保留。每次新采集前检查 NFS 容量，不足即暂停。
