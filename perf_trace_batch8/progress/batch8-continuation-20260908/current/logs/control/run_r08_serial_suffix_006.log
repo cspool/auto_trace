@@ -1,1 +1,11 @@
 PHASE_START 2026-09-08T11:05:50.205716+00:00 ['/usr/bin/python3', '-B', '/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_018/run_capture.py', 'capture', '--segment', '04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc', '--attempt', 'attempt_003']
+PHASE_EXIT /public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_018/run_capture.py 0
+PHASE_START 2026-09-08T11:53:00.376331+00:00 ['/usr/bin/python3', '-B', '/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/analysis_006/normalize_capture.py', '--segment', '04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc', '--attempt', 'attempt_003', '--revision', 'revision_002']
+Traceback (most recent call last):
+  File "/public/home/accl15ptg7/run_R08_R10/run_r08_serial_suffix_006.py", line 52, in <module>
+    if __name__=='__main__':main()
+  File "/public/home/accl15ptg7/run_R08_R10/run_r08_serial_suffix_006.py", line 48, in main
+    output=ROOT/'normalized/captures'/seg/attempt/'revision_002';phase([sys.executable,'-B',str(ROOT/'tools/analysis_006/normalize_capture.py'),'--segment',seg,'--attempt',attempt,'--revision','revision_002'],SCHEDULE/(seg+'.normalize.log'));phase([sys.executable,'-B',str(ROOT/'tools/analysis_006/audit_capture.py'),'--normalization',str(output)],SCHEDULE/(seg+'.audit.log'))
+  File "/public/home/accl15ptg7/run_R08_R10/run_r08_serial_suffix_006.py", line 25, in phase
+    assert rc==0,'phase failed '+str(log);print('PHASE_EXIT',argv[2],rc,flush=True)
+AssertionError: phase failed /public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/validation/serial_scheduler_006/04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc.normalize.log
