@@ -295,3 +295,5 @@ INFO 09-08 21:13:10 [utils.py:250] Waiting for API servers to complete ...
 (ApiServer_1 pid=618886) INFO:     Application startup complete.
 (ApiServer_0 pid=618885) INFO:     Application startup complete.
 (ApiServer_0 pid=618885) INFO:     127.0.0.1:40498 - "GET /v1/models HTTP/1.1" 200 OK
+(ApiServer_0 pid=618885) INFO:     127.0.0.1:40520 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(ApiServer_1 pid=618886) INFO:     127.0.0.1:40514 - "POST /v1/chat/completions HTTP/1.1" 200 OK

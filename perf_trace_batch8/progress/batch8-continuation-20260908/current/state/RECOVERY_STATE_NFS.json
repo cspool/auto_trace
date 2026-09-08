@@ -17,11 +17,11 @@
   "accepted_capture_publisher": "/public/home/accl15ptg7/run_R08_R10/publish_accepted_captures_003.py",
   "original_NFS_session_state_superseded_by_this_emergency_record": true,
   "R09_R10_actual_execution_started": false,
-  "home_storage_available_gib": 18.79,
+  "home_storage_available_gib": 16.67,
   "weight_storage_constraint": "All physical weight bytes must stay under /root; never migrate weights to NFS again",
   "accepted_capture_publisher_session": 64243,
   "raw_storage_watchdog_session": 19126,
-  "pre_measured_two_worker_native_health": "pending",
+  "pre_measured_two_worker_native_health": "complete",
   "user_storage_policy": "/public/home/accl15ptg7/run_R08_R10/USER_STORAGE_POLICY_20260908.json",
   "migration_session": null,
   "migration_log": "/public/home/accl15ptg7/run_R08_R10/migrate_R08_all_outputs_to_NFS_001.log",
@@ -48,34 +48,62 @@
   "cpu_suffix_status": "outer waiting only; will restore all raw sources before R08 assignment",
   "complete_stage_publisher": "publish_complete_stages_002.py",
   "complete_stage_publisher_session": 46095,
-  "current_capture_phase": "original_two_warmups",
+  "current_capture_phase": "measured_batch",
   "latest_health_observation": {
-    "utc": "2026-09-08T13:14:40.718033+00:00",
+    "utc": "2026-09-08T13:24:41.652715+00:00",
     "accepted_R08": 5,
     "planned_R08": 12,
     "current_capture": "06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write/attempt_001",
-    "current_phase": "original_two_warmups",
+    "current_phase": "measured_batch",
     "native_workers": [
       {
         "rank": 0,
         "worker_pid": 620502,
-        "PMC_bytes": 75034743,
+        "PMC_bytes": 814344060,
         "worker_alive": true
       },
       {
         "rank": 1,
         "worker_pid": 620496,
-        "PMC_bytes": 62646651,
+        "PMC_bytes": 817609385,
         "worker_alive": true
       }
     ],
-    "admission_releases": [],
-    "pre_measured_health": "pending",
-    "measured_request_token_progress": {},
+    "admission_releases": [
+      {
+        "rank": 0,
+        "engine_pid": 618883,
+        "request_order": [
+          "batch8-dual-dcu-dp2-req-002-28a42990210e6f68",
+          "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786",
+          "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5",
+          "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41"
+        ]
+      },
+      {
+        "rank": 1,
+        "engine_pid": 618884,
+        "request_order": [
+          "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c",
+          "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f",
+          "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04",
+          "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3"
+        ]
+      }
+    ],
+    "pre_measured_health": "complete",
+    "measured_request_token_progress": {
+      "batch8-dual-dcu-dp2-req-002-28a42990210e6f68": 55,
+      "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786": 11,
+      "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5": 0,
+      "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c": 59,
+      "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f": 17,
+      "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04": 0
+    },
     "live_eight_request_target_coverage": null,
-    "NFS_available_GiB": 18.79,
+    "NFS_available_GiB": 16.67,
     "temporarily_evicted_bytes": 29008878525,
-    "remaining_machine_hours": 7.06,
+    "remaining_machine_hours": 6.89,
     "completed_stages": []
   },
   "runtime_health_monitor_session": 55116,

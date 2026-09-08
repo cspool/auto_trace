@@ -1,6 +1,6 @@
 {
-  "snapshot_started_utc": "2026-09-08T13:14:57.349727+00:00",
-  "snapshot_completed_utc": "2026-09-08T13:15:05.868307+00:00",
+  "snapshot_started_utc": "2026-09-08T13:24:57.692341+00:00",
+  "snapshot_completed_utc": "2026-09-08T13:25:07.355524+00:00",
   "runtime_run_id": "batch8-dp2-fresh-003",
   "r08_accepted_capture_count": 5,
   "r08_planned_capture_count": 12,
@@ -32,11 +32,11 @@
     "accepted_capture_publisher": "/public/home/accl15ptg7/run_R08_R10/publish_accepted_captures_003.py",
     "original_NFS_session_state_superseded_by_this_emergency_record": true,
     "R09_R10_actual_execution_started": false,
-    "home_storage_available_gib": 18.79,
+    "home_storage_available_gib": 16.67,
     "weight_storage_constraint": "All physical weight bytes must stay under /root; never migrate weights to NFS again",
     "accepted_capture_publisher_session": 64243,
     "raw_storage_watchdog_session": 19126,
-    "pre_measured_two_worker_native_health": "pending",
+    "pre_measured_two_worker_native_health": "complete",
     "user_storage_policy": "/public/home/accl15ptg7/run_R08_R10/USER_STORAGE_POLICY_20260908.json",
     "migration_session": null,
     "migration_log": "/public/home/accl15ptg7/run_R08_R10/migrate_R08_all_outputs_to_NFS_001.log",
@@ -63,34 +63,62 @@
     "cpu_suffix_status": "outer waiting only; will restore all raw sources before R08 assignment",
     "complete_stage_publisher": "publish_complete_stages_002.py",
     "complete_stage_publisher_session": 46095,
-    "current_capture_phase": "original_two_warmups",
+    "current_capture_phase": "measured_batch",
     "latest_health_observation": {
-      "utc": "2026-09-08T13:14:40.718033+00:00",
+      "utc": "2026-09-08T13:24:41.652715+00:00",
       "accepted_R08": 5,
       "planned_R08": 12,
       "current_capture": "06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write/attempt_001",
-      "current_phase": "original_two_warmups",
+      "current_phase": "measured_batch",
       "native_workers": [
         {
           "rank": 0,
           "worker_pid": 620502,
-          "PMC_bytes": 75034743,
+          "PMC_bytes": 814344060,
           "worker_alive": true
         },
         {
           "rank": 1,
           "worker_pid": 620496,
-          "PMC_bytes": 62646651,
+          "PMC_bytes": 817609385,
           "worker_alive": true
         }
       ],
-      "admission_releases": [],
-      "pre_measured_health": "pending",
-      "measured_request_token_progress": {},
+      "admission_releases": [
+        {
+          "rank": 0,
+          "engine_pid": 618883,
+          "request_order": [
+            "batch8-dual-dcu-dp2-req-002-28a42990210e6f68",
+            "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786",
+            "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5",
+            "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41"
+          ]
+        },
+        {
+          "rank": 1,
+          "engine_pid": 618884,
+          "request_order": [
+            "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c",
+            "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f",
+            "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04",
+            "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3"
+          ]
+        }
+      ],
+      "pre_measured_health": "complete",
+      "measured_request_token_progress": {
+        "batch8-dual-dcu-dp2-req-002-28a42990210e6f68": 55,
+        "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786": 11,
+        "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5": 0,
+        "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c": 59,
+        "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f": 17,
+        "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04": 0
+      },
       "live_eight_request_target_coverage": null,
-      "NFS_available_GiB": 18.79,
+      "NFS_available_GiB": 16.67,
       "temporarily_evicted_bytes": 29008878525,
-      "remaining_machine_hours": 7.06,
+      "remaining_machine_hours": 6.89,
       "completed_stages": []
     },
     "runtime_health_monitor_session": 55116,
@@ -911,10 +939,10 @@
       "source_path": "/public/home/accl15ptg7/run_R08_R10/remote_checkpoint_watchdog_010.log",
       "snapshot_relative_path": "logs/control/remote_checkpoint_watchdog_010.log",
       "kind": "log_snapshot",
-      "captured_bytes": 693,
-      "source_captured_prefix_sha256": "829d55705c1440d0c5adf55f301e0f44b88b0cfe76dee4cc9f68805f326134ad",
-      "snapshot_bytes": 693,
-      "snapshot_sha256": "829d55705c1440d0c5adf55f301e0f44b88b0cfe76dee4cc9f68805f326134ad",
+      "captured_bytes": 792,
+      "source_captured_prefix_sha256": "9bf71aa8b382ff74aab1f98c3d423cebea26f2ab670ce5a1d903840080062dda",
+      "snapshot_bytes": 792,
+      "snapshot_sha256": "9bf71aa8b382ff74aab1f98c3d423cebea26f2ab670ce5a1d903840080062dda",
       "redacted": false,
       "source_was_live": true
     },
@@ -1120,10 +1148,10 @@
       "source_path": "/public/home/accl15ptg7/run_R08_R10/watch_runtime_health_005.log",
       "snapshot_relative_path": "logs/control/watch_runtime_health_005.log",
       "kind": "log_snapshot",
-      "captured_bytes": 59951,
-      "source_captured_prefix_sha256": "e392ae7ffa4d783fe66ec3645f7c5b59328b8c059a51accff6732626fb9d87ec",
-      "snapshot_bytes": 59951,
-      "snapshot_sha256": "e392ae7ffa4d783fe66ec3645f7c5b59328b8c059a51accff6732626fb9d87ec",
+      "captured_bytes": 68256,
+      "source_captured_prefix_sha256": "e197493471b97a309fb1fe4d107601508c27046eaaa86e38c81eafc2df0133b9",
+      "snapshot_bytes": 68256,
+      "snapshot_sha256": "e197493471b97a309fb1fe4d107601508c27046eaaa86e38c81eafc2df0133b9",
       "redacted": false,
       "source_was_live": true
     },
@@ -2066,10 +2094,10 @@
       "source_path": "/public/home/accl15ptg7/run_R08_R10/RECOVERY_STATE_NFS.json",
       "snapshot_relative_path": "state/RECOVERY_STATE_NFS.json",
       "kind": "authoritative_execution_state",
-      "captured_bytes": 6384,
-      "source_captured_prefix_sha256": "326a82c892f5f77dfa129fb80602326a7d37ecffc1ac1dca6b13ae8968fd7cf5",
-      "snapshot_bytes": 6384,
-      "snapshot_sha256": "326a82c892f5f77dfa129fb80602326a7d37ecffc1ac1dca6b13ae8968fd7cf5",
+      "captured_bytes": 7398,
+      "source_captured_prefix_sha256": "e1a9ef52af52e8185e97e9dcf5c5458853650182ecfec173eadbce65f9f1794c",
+      "snapshot_bytes": 7398,
+      "snapshot_sha256": "e1a9ef52af52e8185e97e9dcf5c5458853650182ecfec173eadbce65f9f1794c",
       "redacted": false,
       "source_was_live": false
     },
@@ -7860,6 +7888,127 @@
       "source_was_live": false
     },
     {
+      "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write/attempt_001/control/PRE_MEASURED_NATIVE_PMC_HEALTH.json",
+      "snapshot_relative_path": "r08/capture_control/06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write/attempt_001/control/PRE_MEASURED_NATIVE_PMC_HEALTH.json",
+      "kind": "closed_or_live_control_snapshot",
+      "captured_bytes": 2000,
+      "source_captured_prefix_sha256": "1fd498c31d331f7e9678fedaf8d8e501e74f6a39c2105095cdfd6f222aa3b2e5",
+      "snapshot_bytes": 2000,
+      "snapshot_sha256": "1fd498c31d331f7e9678fedaf8d8e501e74f6a39c2105095cdfd6f222aa3b2e5",
+      "redacted": false,
+      "source_was_live": false
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write/attempt_001/control/admission_order/618883.001.json",
+      "snapshot_relative_path": "r08/capture_control/06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write/attempt_001/control/admission_order/618883.001.json",
+      "kind": "closed_or_live_control_snapshot",
+      "captured_bytes": 577,
+      "source_captured_prefix_sha256": "beb75e06af5f78582a3e5883b33d6709dc8dd9b920ae258afc955f64aba9f3ce",
+      "snapshot_bytes": 577,
+      "snapshot_sha256": "beb75e06af5f78582a3e5883b33d6709dc8dd9b920ae258afc955f64aba9f3ce",
+      "redacted": false,
+      "source_was_live": false
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write/attempt_001/control/admission_order/618883.002.json",
+      "snapshot_relative_path": "r08/capture_control/06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write/attempt_001/control/admission_order/618883.002.json",
+      "kind": "closed_or_live_control_snapshot",
+      "captured_bytes": 577,
+      "source_captured_prefix_sha256": "fc573ece0bb825a8f41f31f194f178a696f128c8a92ea3d96c886f55ea7b2181",
+      "snapshot_bytes": 577,
+      "snapshot_sha256": "fc573ece0bb825a8f41f31f194f178a696f128c8a92ea3d96c886f55ea7b2181",
+      "redacted": false,
+      "source_was_live": false
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write/attempt_001/control/admission_order/618883.003.json",
+      "snapshot_relative_path": "r08/capture_control/06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write/attempt_001/control/admission_order/618883.003.json",
+      "kind": "closed_or_live_control_snapshot",
+      "captured_bytes": 577,
+      "source_captured_prefix_sha256": "4b548e53cf225033561f1c267f61c1a83ccb84bf1669cb5ee1b5ea11f2c63a18",
+      "snapshot_bytes": 577,
+      "snapshot_sha256": "4b548e53cf225033561f1c267f61c1a83ccb84bf1669cb5ee1b5ea11f2c63a18",
+      "redacted": false,
+      "source_was_live": false
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write/attempt_001/control/admission_order/618883.004.json",
+      "snapshot_relative_path": "r08/capture_control/06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write/attempt_001/control/admission_order/618883.004.json",
+      "kind": "closed_or_live_control_snapshot",
+      "captured_bytes": 577,
+      "source_captured_prefix_sha256": "b0c5ff52b35da758f96fd81b6b9553b597b66a1b97f8b4132ea3d67f4c9301d7",
+      "snapshot_bytes": 577,
+      "snapshot_sha256": "b0c5ff52b35da758f96fd81b6b9553b597b66a1b97f8b4132ea3d67f4c9301d7",
+      "redacted": false,
+      "source_was_live": false
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write/attempt_001/control/admission_order/618883.005.json",
+      "snapshot_relative_path": "r08/capture_control/06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write/attempt_001/control/admission_order/618883.005.json",
+      "kind": "closed_or_live_control_snapshot",
+      "captured_bytes": 818,
+      "source_captured_prefix_sha256": "e12d12e8db582ab77cba960ef8ff0ec0e4fe04ddbbff7266bdc09eee9111b863",
+      "snapshot_bytes": 818,
+      "snapshot_sha256": "e12d12e8db582ab77cba960ef8ff0ec0e4fe04ddbbff7266bdc09eee9111b863",
+      "redacted": false,
+      "source_was_live": false
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write/attempt_001/control/admission_order/618884.001.json",
+      "snapshot_relative_path": "r08/capture_control/06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write/attempt_001/control/admission_order/618884.001.json",
+      "kind": "closed_or_live_control_snapshot",
+      "captured_bytes": 577,
+      "source_captured_prefix_sha256": "05345c7a2f6a6d0ab5e237054d0b49ea224fc12f45b50b5d32ecb1ea3e134d77",
+      "snapshot_bytes": 577,
+      "snapshot_sha256": "05345c7a2f6a6d0ab5e237054d0b49ea224fc12f45b50b5d32ecb1ea3e134d77",
+      "redacted": false,
+      "source_was_live": false
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write/attempt_001/control/admission_order/618884.002.json",
+      "snapshot_relative_path": "r08/capture_control/06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write/attempt_001/control/admission_order/618884.002.json",
+      "kind": "closed_or_live_control_snapshot",
+      "captured_bytes": 577,
+      "source_captured_prefix_sha256": "fd086684fdb826d8f542b2899780cc4a9f15889664d6046fef3d479f96820964",
+      "snapshot_bytes": 577,
+      "snapshot_sha256": "fd086684fdb826d8f542b2899780cc4a9f15889664d6046fef3d479f96820964",
+      "redacted": false,
+      "source_was_live": false
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write/attempt_001/control/admission_order/618884.003.json",
+      "snapshot_relative_path": "r08/capture_control/06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write/attempt_001/control/admission_order/618884.003.json",
+      "kind": "closed_or_live_control_snapshot",
+      "captured_bytes": 577,
+      "source_captured_prefix_sha256": "9108efe44a25c455f0d1b6abdf25f9abbc47843d2d9666a1ca4cfa09fe7f129e",
+      "snapshot_bytes": 577,
+      "snapshot_sha256": "9108efe44a25c455f0d1b6abdf25f9abbc47843d2d9666a1ca4cfa09fe7f129e",
+      "redacted": false,
+      "source_was_live": false
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write/attempt_001/control/admission_order/618884.004.json",
+      "snapshot_relative_path": "r08/capture_control/06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write/attempt_001/control/admission_order/618884.004.json",
+      "kind": "closed_or_live_control_snapshot",
+      "captured_bytes": 577,
+      "source_captured_prefix_sha256": "4435b10c674f3fb05a3c395719ccfacb1b90c95a60d903e70022a077f7573966",
+      "snapshot_bytes": 577,
+      "snapshot_sha256": "4435b10c674f3fb05a3c395719ccfacb1b90c95a60d903e70022a077f7573966",
+      "redacted": false,
+      "source_was_live": false
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write/attempt_001/control/admission_order/618884.005.json",
+      "snapshot_relative_path": "r08/capture_control/06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write/attempt_001/control/admission_order/618884.005.json",
+      "kind": "closed_or_live_control_snapshot",
+      "captured_bytes": 818,
+      "source_captured_prefix_sha256": "642a9146a4bcc92c77959ed5c72e91bfcf41caf2d9451eac4f480630e67ffcd9",
+      "snapshot_bytes": 818,
+      "snapshot_sha256": "642a9146a4bcc92c77959ed5c72e91bfcf41caf2d9451eac4f480630e67ffcd9",
+      "redacted": false,
+      "source_was_live": false
+    },
+    {
       "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write/attempt_001/control/capture_contract.json",
       "snapshot_relative_path": "r08/capture_control/06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write/attempt_001/control/capture_contract.json",
       "kind": "closed_or_live_control_snapshot",
@@ -7878,6 +8027,28 @@
       "source_captured_prefix_sha256": "e9001d26154317ad49a4249a32a9490961e635b50435ab281c094e8d902425de",
       "snapshot_bytes": 788,
       "snapshot_sha256": "e9001d26154317ad49a4249a32a9490961e635b50435ab281c094e8d902425de",
+      "redacted": false,
+      "source_was_live": false
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write/attempt_001/control/pmc_gate_events/start.rank0.pid620502.json",
+      "snapshot_relative_path": "r08/capture_control/06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write/attempt_001/control/pmc_gate_events/start.rank0.pid620502.json",
+      "kind": "closed_or_live_control_snapshot",
+      "captured_bytes": 1123,
+      "source_captured_prefix_sha256": "84ead9c0c8e24450205a588484da4bbed909da46f9672a08b2c1f24686496252",
+      "snapshot_bytes": 1123,
+      "snapshot_sha256": "84ead9c0c8e24450205a588484da4bbed909da46f9672a08b2c1f24686496252",
+      "redacted": false,
+      "source_was_live": false
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write/attempt_001/control/pmc_gate_events/start.rank1.pid620496.json",
+      "snapshot_relative_path": "r08/capture_control/06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write/attempt_001/control/pmc_gate_events/start.rank1.pid620496.json",
+      "kind": "closed_or_live_control_snapshot",
+      "captured_bytes": 1123,
+      "source_captured_prefix_sha256": "cc5979bbc741026ba17e4fa9d8ab1971e21cdc226b9f5dd894486868010da056",
+      "snapshot_bytes": 1123,
+      "snapshot_sha256": "cc5979bbc741026ba17e4fa9d8ab1971e21cdc226b9f5dd894486868010da056",
       "redacted": false,
       "source_was_live": false
     },
@@ -7944,6 +8115,17 @@
       "source_captured_prefix_sha256": "c986a1dca06925c11cb63bd0a77320b9070a2755a2b29e821daf6a1061dfa3b8",
       "snapshot_bytes": 93,
       "snapshot_sha256": "c986a1dca06925c11cb63bd0a77320b9070a2755a2b29e821daf6a1061dfa3b8",
+      "redacted": false,
+      "source_was_live": false
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write/attempt_001/workload/warmup_results.json",
+      "snapshot_relative_path": "r08/capture_control/06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write/attempt_001/workload/warmup_results.json",
+      "kind": "closed_or_live_control_snapshot",
+      "captured_bytes": 29976,
+      "source_captured_prefix_sha256": "0079e9061c98233bbbd0eada227e90b64ba3bddbe9af6c12f17d5dac1a4bbf04",
+      "snapshot_bytes": 29976,
+      "snapshot_sha256": "0079e9061c98233bbbd0eada227e90b64ba3bddbe9af6c12f17d5dac1a4bbf04",
       "redacted": false,
       "source_was_live": false
     },
@@ -8369,10 +8551,10 @@
       "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write/attempt_001/logs/service.log",
       "snapshot_relative_path": "r08/capture_logs/06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write/attempt_001/logs/service.log",
       "kind": "log_snapshot",
-      "captured_bytes": 46907,
-      "source_captured_prefix_sha256": "0365fcc9ea84cba2d2613a1acd544b4674e131a6e9d83b2437fb6dfe95bc9e18",
-      "snapshot_bytes": 46907,
-      "snapshot_sha256": "0365fcc9ea84cba2d2613a1acd544b4674e131a6e9d83b2437fb6dfe95bc9e18",
+      "captured_bytes": 47101,
+      "source_captured_prefix_sha256": "dacdb2d50cd5d7d6149c10fdbb1762de1b752781fbfa953adb02651272f502fa",
+      "snapshot_bytes": 47101,
+      "snapshot_sha256": "dacdb2d50cd5d7d6149c10fdbb1762de1b752781fbfa953adb02651272f502fa",
       "redacted": false,
       "source_was_live": true
     },
