@@ -10,6 +10,8 @@ https://github.com/cspool/auto_trace/tree/progress/batch8-continuation-20260908/
 第一组原始数据及R07 CPU复核已发布：
 https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-continuation-checkpoint-20260908-001
 
-`remote_checkpoint_watchdog_001.py` 是独立于业务阶段的外层Git检查点任务；`publish_accepted_captures_001.py` 会为之后每组已验收采集制作逐文件SHA-256验证的压缩分卷，上传Release并核对GitHub服务器摘要。每阶段完成后仍需另发完整阶段产物与完成审计。
+当前外层检查点与发布任务的版本、代码和会话号见进度分支 `current/emergency_root_tools/RECOVERY_STATE.json`。该记录覆盖早先的 NFS `session_state.json`。发布任务为每组已验收采集制作逐文件 SHA-256 验证的压缩分卷，上传 Release 并核对 GitHub 服务器摘要。每阶段完成后仍需另发完整阶段产物与完成审计。
 
 R09/R10模板在检查点中标记为 prepared_not_executed，不代表相应阶段执行或完成。R07原始远端采集器终态未证实，继续保留complete_recovered_offline例外，不伪造历史原生终态。
+
+权重存储约束：11 个权重分片的物理文件必须始终位于 `/root`。此前迁入 NFS 的做法已纠正，所有分片回迁后逐片 SHA-256 一致；`WEIGHTS_MUST_REMAIN_PHYSICAL_ROOT.json` 列出当前物理路径。之后只调整日志、trace 和已验证可从远程恢复的下载缓存，不再迁移权重到 NFS。
