@@ -306,3 +306,25 @@ INFO 09-08 16:59:14 [utils.py:250] Waiting for API servers to complete ...
 (ApiServer_1 pid=318329) INFO:     127.0.0.1:54478 - "POST /v1/chat/completions HTTP/1.1" 200 OK
 (ApiServer_0 pid=318328) INFO:     127.0.0.1:54498 - "POST /v1/chat/completions HTTP/1.1" 200 OK
 (ApiServer_0 pid=318328) INFO:     127.0.0.1:54492 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(ApiServer_0 pid=318328) INFO:     127.0.0.1:54470 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(EngineCore_DP0 pid=318326) INFO 09-08 17:11:48 [core.py:1201] Shutdown initiated (timeout=0)
+(Worker pid=319440) WARNING 09-08 17:11:48 [multiproc_executor.py:866] WorkerProc was terminated
+(EngineCore_DP0 pid=318326) INFO 09-08 17:11:48 [core.py:1224] Shutdown complete
+(Worker pid=319441) INFO 09-08 17:11:48 [multiproc_executor.py:759] Parent process exited, terminating worker queues
+(Worker pid=319441) INFO 09-08 17:11:48 [multiproc_executor.py:854] WorkerProc shutting down.
+INFO 09-08 17:11:48 [utils.py:289] Received KeyboardInterrupt, shutting down API servers...
+(EngineCore_DP1 pid=318327) INFO 09-08 17:11:48 [core.py:1201] Shutdown initiated (timeout=0)
+(EngineCore_DP1 pid=318327) INFO 09-08 17:11:48 [core.py:1224] Shutdown complete
+(Worker pid=319440) INFO 09-08 17:11:48 [multiproc_executor.py:759] Parent process exited, terminating worker queues
+(ApiServer_0 pid=318328) WARNING 09-08 17:11:48 [launcher.py:131] port 8001 is used by process psutil.Process(pid=318329, name='VLLM::APIServer_1', status='running') launched with command:
+(ApiServer_0 pid=318328) WARNING 09-08 17:11:48 [launcher.py:131] VLLM::APIServer_1                                                                                                                   
+(ApiServer_0 pid=318328) INFO 09-08 17:11:48 [launcher.py:137] Shutting down FastAPI HTTP server.
+(ApiServer_0 pid=318328) INFO:     Shutting down
+(ApiServer_1 pid=318329) INFO 09-08 17:11:48 [launcher.py:137] Shutting down FastAPI HTTP server.
+(ApiServer_1 pid=318329) INFO:     Shutting down
+(ApiServer_0 pid=318328) INFO:     Waiting for application shutdown.
+(ApiServer_0 pid=318328) INFO:     Application shutdown complete.
+(ApiServer_1 pid=318329) INFO:     Waiting for application shutdown.
+(ApiServer_1 pid=318329) INFO:     Application shutdown complete.
+/usr/lib/python3.10/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 2 leaked shared_memory objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '

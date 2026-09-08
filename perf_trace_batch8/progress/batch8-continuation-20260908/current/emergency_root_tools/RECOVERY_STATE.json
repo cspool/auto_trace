@@ -4,8 +4,8 @@
   "accepted_prefix_count": 2,
   "current_runtime_revision": "revision_015",
   "runtime_gate": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/runtime_capture_gate_009.json",
-  "scheduler": "serial_scheduler_003 adopting active attempt003",
-  "scheduler_session": 93841,
+  "scheduler": "paused serial_scheduler_003; current capture allowed to close before verified NFS migration",
+  "scheduler_session": null,
   "capture_session": 70349,
   "progress_watchdog_session": 11953,
   "deadline_utc": "2026-09-08T20:18:09Z",
@@ -20,6 +20,7 @@
   "home_storage_available_gib": 11,
   "weight_storage_constraint": "All physical weight bytes must stay under /root; never migrate weights to NFS again",
   "accepted_capture_publisher_session": 33430,
-  "raw_storage_watchdog_session": 29338,
-  "pre_measured_two_worker_native_health": "passed attempt003 revision015"
+  "raw_storage_watchdog_session": null,
+  "pre_measured_two_worker_native_health": "passed attempt003 revision015",
+  "user_storage_policy": "/public/home/accl15ptg7/run_R08_R10/USER_STORAGE_POLICY_20260908.json"
 }

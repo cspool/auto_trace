@@ -1,0 +1,11 @@
+{
+  "recorded_utc": "2026-09-08T09:15:45.836510+00:00",
+  "user_policy_path": "/public/home/accl15ptg7/run_R08_R10/USER_STORAGE_POLICY_20260908.json",
+  "user_policy_sha256": "dcb3735b5416946930a63dfa4181f323b90c98e0b17fd82ff98c012cc09a8458",
+  "model_and_profiler_closed_before_relocation": true,
+  "weights_must_remain_physical_root": true,
+  "source_code": {
+    "path": "/public/home/accl15ptg7/run_R08_R10/migrate_R08_all_outputs_to_NFS_001.py",
+    "sha256": "820bcf2a1826e02431980b9b35e9039549f5a9e944101e3008e0ba65afb481df"
+  }
+}
