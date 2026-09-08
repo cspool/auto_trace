@@ -1,0 +1,24 @@
+{
+  "status": "live_native_export_observation",
+  "pid": 384764,
+  "observed_realtime_ns": 1788863931249434250,
+  "io": {
+    "rchar": 10213654617,
+    "wchar": 12001507133,
+    "syscr": 503908,
+    "syscw": 681946,
+    "read_bytes": 6810533888,
+    "write_bytes": 12007059456,
+    "cancelled_write_bytes": 0
+  },
+  "native_PMC_files_being_read": [
+    {
+      "path": "/public/home/accl15ptg7/r08_continuation_001_NFS_bulk/raw/captures/04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc/attempt_002/hipprof_tmprpl_data_260908_175604_384763/input0_results_260908_175604/pmc_results_387448.txt",
+      "offset": 706080582,
+      "size": 1517243769
+    }
+  ],
+  "closed_workload_complete_eight_requests": true,
+  "native_export_completion_claimed": false,
+  "python_stack_probe": "py-spy could not determine Python version; no Python stack conclusion"
+}
