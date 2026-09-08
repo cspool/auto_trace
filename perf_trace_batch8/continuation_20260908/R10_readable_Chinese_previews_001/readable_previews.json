@@ -1,0 +1,174 @@
+{
+  "status": "complete",
+  "phase": "readable_previews",
+  "argv": [
+    "python3",
+    "-B",
+    "/public/home/accl15ptg7/run_R08_R10/capture_R10_readable_previews_001.py"
+  ],
+  "started_utc": "2026-09-08T22:32:56.019807+00:00",
+  "finished_utc": "2026-09-08T22:36:37.676221+00:00",
+  "elapsed_seconds": 221.65644781698938,
+  "leader_pid": 1196243,
+  "leader_returncode": 0,
+  "observed_descendant_identities": [
+    {
+      "pid": 1196243,
+      "ppid": 1196240,
+      "state": "R",
+      "start_ticks": 54199891
+    },
+    {
+      "pid": 1196244,
+      "ppid": 1196243,
+      "state": "S",
+      "start_ticks": 54199904
+    },
+    {
+      "pid": 1196273,
+      "ppid": 1196244,
+      "state": "D",
+      "start_ticks": 54199953
+    },
+    {
+      "pid": 1196275,
+      "ppid": 1196240,
+      "state": "Z",
+      "start_ticks": 54199962
+    },
+    {
+      "pid": 1196277,
+      "ppid": 1196240,
+      "state": "Z",
+      "start_ticks": 54199962
+    },
+    {
+      "pid": 1196376,
+      "ppid": 1196240,
+      "state": "Z",
+      "start_ticks": 54200979
+    },
+    {
+      "pid": 1196377,
+      "ppid": 1196240,
+      "state": "Z",
+      "start_ticks": 54200979
+    },
+    {
+      "pid": 1196400,
+      "ppid": 1196376,
+      "state": "S",
+      "start_ticks": 54200992
+    },
+    {
+      "pid": 1196403,
+      "ppid": 1196273,
+      "state": "S",
+      "start_ticks": 54200993
+    },
+    {
+      "pid": 1196423,
+      "ppid": 1196377,
+      "state": "S",
+      "start_ticks": 54200995
+    },
+    {
+      "pid": 1196464,
+      "ppid": 1196377,
+      "state": "Z",
+      "start_ticks": 54201013
+    },
+    {
+      "pid": 1196473,
+      "ppid": 1196377,
+      "state": "S",
+      "start_ticks": 54201015
+    },
+    {
+      "pid": 1196511,
+      "ppid": 1196377,
+      "state": "Z",
+      "start_ticks": 54201144
+    },
+    {
+      "pid": 1196520,
+      "ppid": 1196377,
+      "state": "S",
+      "start_ticks": 54201146
+    },
+    {
+      "pid": 1196535,
+      "ppid": 1196377,
+      "state": "Z",
+      "start_ticks": 54201304
+    },
+    {
+      "pid": 1196544,
+      "ppid": 1196377,
+      "state": "Z",
+      "start_ticks": 54201306
+    },
+    {
+      "pid": 1196776,
+      "ppid": 1196377,
+      "state": "Z",
+      "start_ticks": 54202856
+    },
+    {
+      "pid": 1196785,
+      "ppid": 1196377,
+      "state": "Z",
+      "start_ticks": 54202858
+    },
+    {
+      "pid": 1197106,
+      "ppid": 1196377,
+      "state": "S",
+      "start_ticks": 54205005
+    },
+    {
+      "pid": 1197115,
+      "ppid": 1196240,
+      "state": "Z",
+      "start_ticks": 54205007
+    }
+  ],
+  "observed_list_is_not_claimed_full_spawn_event_log": true,
+  "orphan_reaping": [
+    {
+      "pid": 1196275,
+      "wait_status": 0
+    },
+    {
+      "pid": 1196277,
+      "wait_status": 0
+    },
+    {
+      "pid": 1196376,
+      "wait_status": 0
+    },
+    {
+      "pid": 1196377,
+      "wait_status": 0
+    },
+    {
+      "pid": 1197115,
+      "wait_status": 15
+    }
+  ],
+  "kernel_child_subreaper_enabled": true,
+  "remaining_owned_descendants": [],
+  "all_started_processes_terminated": true,
+  "forced_cleanup": false,
+  "cpu_only_environment_device_visibility_empty": true,
+  "proxy_and_profiler_injection_removed": true,
+  "stdout_stderr": {
+    "path": "/public/home/accl15ptg7/run_R08_R10/R10_readable_previews_001/logs/readable_previews.log",
+    "size": 359,
+    "sha256": "178fa4a474e55efe571054d7cb70be4685206672594669cbd0c07f7f1d32f4a0"
+  },
+  "outer_runner": {
+    "path": "/public/home/accl15ptg7/run_R08_R10/phase_runner_002.py",
+    "sha256": "8ef5c2bcce5f30ee8192232a876b7a16fd2d5bc140ff51cfb91331cb3a26f514"
+  }
+}

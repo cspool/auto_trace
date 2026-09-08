@@ -1,0 +1,827 @@
+{
+  "status": "complete",
+  "utc": "2026-09-08T22:35:53.715328+00:00",
+  "accepted_capture_releases": 12,
+  "complete_stage_releases": 3,
+  "supplemental_failed_evidence_releases": 1,
+  "release_count": 16,
+  "asset_count": 79,
+  "all_expected_remote_assets_currently_present_with_exact_size_and_SHA256": true,
+  "read_only_remote_review": true,
+  "releases": [
+    {
+      "label": "01__gqa6_pmc",
+      "kind": "accepted_capture",
+      "url": "https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-continuation-checkpoint-20260908-001",
+      "source_receipt": {
+        "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/remote_release_offloads_001/01__gqa6_pmc.complete.json",
+        "size": 5987,
+        "sha256": "b364575e93484e1fe05bd8b6995346835144a59ec9eeb0f8a0bfd9af308b20cb"
+      },
+      "release_id": 384522332,
+      "verified_utc": "2026-09-08T22:35:50.523706+00:00",
+      "expected_asset_count": 4,
+      "every_asset_size_and_server_SHA256_matches": true,
+      "assets": [
+        {
+          "id": 550068299,
+          "name": "ASSET_MANIFEST.json",
+          "size": 674,
+          "digest": "sha256:961c8a255fd8bac81c2751477bd1430110283b10736c71891a3b2fa8a7371348",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-continuation-checkpoint-20260908-001/ASSET_MANIFEST.json"
+        },
+        {
+          "id": 550068276,
+          "name": "FILE_MANIFEST.json",
+          "size": 34276,
+          "digest": "sha256:1fba951ac374b715f21cfb845c00b779b9a6ebe65813d19bdfa0e48f937d2f64",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-continuation-checkpoint-20260908-001/FILE_MANIFEST.json"
+        },
+        {
+          "id": 550066804,
+          "name": "r07-cpu-r08-first-accepted-20260908.tar.zst",
+          "size": 874112320,
+          "digest": "sha256:11ab6ae8360a8c89ffbee15fa53f314242ece276bddb948f8cec255afc361bc1",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-continuation-checkpoint-20260908-001/r07-cpu-r08-first-accepted-20260908.tar.zst"
+        },
+        {
+          "id": 550068324,
+          "name": "SHA256SUMS",
+          "size": 195,
+          "digest": "sha256:c465e505f89ea43cb5b0f5a3a04e2fe0809b33494695368022be3ea6f9261a25",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-continuation-checkpoint-20260908-001/SHA256SUMS"
+        }
+      ]
+    },
+    {
+      "label": "02__gqa6_pmc_read",
+      "kind": "accepted_capture",
+      "url": "https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-r08-02--gqa6-pmc-read-20260908",
+      "source_receipt": {
+        "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/remote_release_offloads_001/02__gqa6_pmc_read.complete.json",
+        "size": 5991,
+        "sha256": "f32e466b14a2b153ba9ff85307344a9278417a81069bf65db6f97cf3d32d0985"
+      },
+      "release_id": 384542091,
+      "verified_utc": "2026-09-08T22:35:50.567287+00:00",
+      "expected_asset_count": 4,
+      "every_asset_size_and_server_SHA256_matches": true,
+      "assets": [
+        {
+          "id": 550109097,
+          "name": "ASSET_MANIFEST.json",
+          "size": 536,
+          "digest": "sha256:9603fec87085ca9cdbff170356b54952473fc5fbce8265f1e22e6b92fe3c0958",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-02--gqa6-pmc-read-20260908/ASSET_MANIFEST.json"
+        },
+        {
+          "id": 550107854,
+          "name": "capture.tar.zst.part001",
+          "size": 858816177,
+          "digest": "sha256:8b09dd818ceadf101793fa3bd721013645ee5f3c8c7899952314945a1b5fde95",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-02--gqa6-pmc-read-20260908/capture.tar.zst.part001"
+        },
+        {
+          "id": 550109082,
+          "name": "FILE_MANIFEST.json",
+          "size": 16569,
+          "digest": "sha256:20370cfe464642d0521ba66f1ee49905cb311ab729cdf282c72cdda57e7021fe",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-02--gqa6-pmc-read-20260908/FILE_MANIFEST.json"
+        },
+        {
+          "id": 550109109,
+          "name": "SHA256SUMS",
+          "size": 175,
+          "digest": "sha256:fef0326bd198c96db59392d84dec7ee7e705f461727f090a461ccd4961702c4b",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-02--gqa6-pmc-read-20260908/SHA256SUMS"
+        }
+      ]
+    },
+    {
+      "label": "03__gqa6_pmc_write",
+      "kind": "accepted_capture",
+      "url": "https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-r08-03--gqa6-pmc-write-20260908",
+      "source_receipt": {
+        "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/remote_release_offloads_001/03__gqa6_pmc_write.complete.json",
+        "size": 6030,
+        "sha256": "ecd8fb58727488526c1eb4f9f32d13c854b8d250fa5d7ced6dba1cb94a498294"
+      },
+      "release_id": 384597105,
+      "verified_utc": "2026-09-08T22:35:50.648341+00:00",
+      "expected_asset_count": 4,
+      "every_asset_size_and_server_SHA256_matches": true,
+      "assets": [
+        {
+          "id": 550220864,
+          "name": "ASSET_MANIFEST.json",
+          "size": 536,
+          "digest": "sha256:4210429d45775ea10ebf9d843d8535bf211bd707ce7a6177e64c2e27c7de4d62",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-03--gqa6-pmc-write-20260908/ASSET_MANIFEST.json"
+        },
+        {
+          "id": 550219534,
+          "name": "capture.tar.zst.part001",
+          "size": 855840073,
+          "digest": "sha256:051d2074043073fa8ea223e44f1f86d78eec4c58e5c6bde3b14aaf73775c5cd6",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-03--gqa6-pmc-write-20260908/capture.tar.zst.part001"
+        },
+        {
+          "id": 550220818,
+          "name": "FILE_MANIFEST.json",
+          "size": 16944,
+          "digest": "sha256:171c1806dd53dd35348de7dc8343bf7008caba3b4fb7f71a5b11a2296c2bbaf5",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-03--gqa6-pmc-write-20260908/FILE_MANIFEST.json"
+        },
+        {
+          "id": 550220889,
+          "name": "SHA256SUMS",
+          "size": 175,
+          "digest": "sha256:a969b99b2fa9a3a7897c566eacb803855e8a569322a582310a23f4713edb73d2",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-03--gqa6-pmc-write-20260908/SHA256SUMS"
+        }
+      ]
+    },
+    {
+      "label": "04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc",
+      "kind": "accepted_capture",
+      "url": "https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-r08-04-triton-red-fused--to-copy-add-mean-mul-pow-rsqrt-0-pmc-20260908",
+      "source_receipt": {
+        "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/remote_release_offloads_001/04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc.complete.json",
+        "size": 9147,
+        "sha256": "325fe88c5d9428f07679ac267ccffd678fd569e15921833e70af54e18c3f3187"
+      },
+      "release_id": 384703347,
+      "verified_utc": "2026-09-08T22:35:50.573337+00:00",
+      "expected_asset_count": 5,
+      "every_asset_size_and_server_SHA256_matches": true,
+      "assets": [
+        {
+          "id": 550438394,
+          "name": "ASSET_MANIFEST.json",
+          "size": 697,
+          "digest": "sha256:d7d20e73e381ab68b5a78428f491a689131e0ecd0271f77c9f3e7c1b329bfb30",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-04-triton-red-fused--to-copy-add-mean-mul-pow-rsqrt-0-pmc-20260908/ASSET_MANIFEST.json"
+        },
+        {
+          "id": 550436354,
+          "name": "capture.tar.zst.part001",
+          "size": 950000000,
+          "digest": "sha256:0faad5749d7b8239bc177c080e07ea22efc85e80618fa7ab2caab47d5f3c10dc",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-04-triton-red-fused--to-copy-add-mean-mul-pow-rsqrt-0-pmc-20260908/capture.tar.zst.part001"
+        },
+        {
+          "id": 550438135,
+          "name": "capture.tar.zst.part002",
+          "size": 95078336,
+          "digest": "sha256:03b30841ae50e80ef89386dd706db9baf364f595dc6794f25ca78c69c134e31b",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-04-triton-red-fused--to-copy-add-mean-mul-pow-rsqrt-0-pmc-20260908/capture.tar.zst.part002"
+        },
+        {
+          "id": 550438364,
+          "name": "FILE_MANIFEST.json",
+          "size": 23727,
+          "digest": "sha256:03abb1d0d4da50db84ea0dab29cd61de51dcfc088c4128786e46d4f7269b7bda",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-04-triton-red-fused--to-copy-add-mean-mul-pow-rsqrt-0-pmc-20260908/FILE_MANIFEST.json"
+        },
+        {
+          "id": 550438423,
+          "name": "SHA256SUMS",
+          "size": 265,
+          "digest": "sha256:2ac5d57d5d3f49759303ced5354f5426b8e9d2ded5207f9ff430c23fa967a3b9",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-04-triton-red-fused--to-copy-add-mean-mul-pow-rsqrt-0-pmc-20260908/SHA256SUMS"
+        }
+      ]
+    },
+    {
+      "label": "05_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_read",
+      "kind": "accepted_capture",
+      "url": "https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-r08-05-triton-red-fused--to-copy-add-mean-mul-pow-rsqrt-0-pmc-read-20260908",
+      "source_receipt": {
+        "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/remote_release_offloads_001/05_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_read.complete.json",
+        "size": 9277,
+        "sha256": "dc20dac95b38c67c913296d5662ecf6efe3beb64f53a46853b26bd64300d418e"
+      },
+      "release_id": 384738593,
+      "verified_utc": "2026-09-08T22:35:51.344792+00:00",
+      "expected_asset_count": 5,
+      "every_asset_size_and_server_SHA256_matches": true,
+      "assets": [
+        {
+          "id": 550525324,
+          "name": "ASSET_MANIFEST.json",
+          "size": 697,
+          "digest": "sha256:5b19f1c7fbc40ef4a8b6432762336bee35ec47d73d8aece932b2df449a04c633",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-05-triton-red-fused--to-copy-add-mean-mul-pow-rsqrt-0-pmc-read-20260908/ASSET_MANIFEST.json"
+        },
+        {
+          "id": 550522830,
+          "name": "capture.tar.zst.part001",
+          "size": 950000000,
+          "digest": "sha256:f2bd00c5944b4dc56a95b9cceacaea8c8169c2c3e2095e5ff7205c9e2560895c",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-05-triton-red-fused--to-copy-add-mean-mul-pow-rsqrt-0-pmc-read-20260908/capture.tar.zst.part001"
+        },
+        {
+          "id": 550525115,
+          "name": "capture.tar.zst.part002",
+          "size": 63887771,
+          "digest": "sha256:5512afd832f18c8839124b0ba19d31e02aabb54ef15b9feb694dd26e0a2dd9fc",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-05-triton-red-fused--to-copy-add-mean-mul-pow-rsqrt-0-pmc-read-20260908/capture.tar.zst.part002"
+        },
+        {
+          "id": 550525302,
+          "name": "FILE_MANIFEST.json",
+          "size": 24057,
+          "digest": "sha256:c0c7b3d2230199228a3315cd0f9501a51e007dd7e5a94f4c97e4ad1748c37d66",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-05-triton-red-fused--to-copy-add-mean-mul-pow-rsqrt-0-pmc-read-20260908/FILE_MANIFEST.json"
+        },
+        {
+          "id": 550525337,
+          "name": "SHA256SUMS",
+          "size": 265,
+          "digest": "sha256:1b7db13f7894db046369192fe67de2fdf24d050cf812eeda974c6248f71c18a4",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-05-triton-red-fused--to-copy-add-mean-mul-pow-rsqrt-0-pmc-read-20260908/SHA256SUMS"
+        }
+      ]
+    },
+    {
+      "label": "06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write",
+      "kind": "accepted_capture",
+      "url": "https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-r08-06-triton-red-fused--to-copy-add-mean-mul-pow-rsqrt-0-pmc-write-20260908",
+      "source_receipt": {
+        "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/remote_release_offloads_001/06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write.complete.json",
+        "size": 9303,
+        "sha256": "de97f12c4510c144ab1bef573d3cd18d256e82490713ed2a309c7a40c97db762"
+      },
+      "release_id": 384780357,
+      "verified_utc": "2026-09-08T22:35:51.316597+00:00",
+      "expected_asset_count": 5,
+      "every_asset_size_and_server_SHA256_matches": true,
+      "assets": [
+        {
+          "id": 550616672,
+          "name": "ASSET_MANIFEST.json",
+          "size": 697,
+          "digest": "sha256:e827f50e67208143caa5c8618510ede4e1822e2ec03727f193a48b416be08c93",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-06-triton-red-fused--to-copy-add-mean-mul-pow-rsqrt-0-pmc-write-20260908/ASSET_MANIFEST.json"
+        },
+        {
+          "id": 550614492,
+          "name": "capture.tar.zst.part001",
+          "size": 950000000,
+          "digest": "sha256:393cd4d9abc7889c396e4fccfe834ddbf3ad778610366eb8f2bb7d3b961f0032",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-06-triton-red-fused--to-copy-add-mean-mul-pow-rsqrt-0-pmc-write-20260908/capture.tar.zst.part001"
+        },
+        {
+          "id": 550616533,
+          "name": "capture.tar.zst.part002",
+          "size": 42805545,
+          "digest": "sha256:bd70b01f5ae87ab71a85f4742a6fef6e33f5426cd8bd68203e78d3538e8cb44d",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-06-triton-red-fused--to-copy-add-mean-mul-pow-rsqrt-0-pmc-write-20260908/capture.tar.zst.part002"
+        },
+        {
+          "id": 550616656,
+          "name": "FILE_MANIFEST.json",
+          "size": 24123,
+          "digest": "sha256:e8b069c4c04c6d4c0422d4c262d5dc2d0cbb74150a55cb21be2af3eb4094de7a",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-06-triton-red-fused--to-copy-add-mean-mul-pow-rsqrt-0-pmc-write-20260908/FILE_MANIFEST.json"
+        },
+        {
+          "id": 550616690,
+          "name": "SHA256SUMS",
+          "size": 265,
+          "digest": "sha256:2c064232c2578b38eb31dcdccfbca86d43ea33b6386e375e753ff2ee68da0fa4",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-06-triton-red-fused--to-copy-add-mean-mul-pow-rsqrt-0-pmc-write-20260908/SHA256SUMS"
+        }
+      ]
+    },
+    {
+      "label": "07_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc",
+      "kind": "accepted_capture",
+      "url": "https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-r08-07-chunk-gated-delta-rule-fwd-kernel-h-blockdim64-pmc-20260908",
+      "source_receipt": {
+        "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/remote_release_offloads_001/07_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc.complete.json",
+        "size": 6696,
+        "sha256": "06fd775e6cc2e7b890f9118d36074fd86ee2cf9c446e32a69e89a1ddf9d2679a"
+      },
+      "release_id": 384799575,
+      "verified_utc": "2026-09-08T22:35:51.739054+00:00",
+      "expected_asset_count": 4,
+      "every_asset_size_and_server_SHA256_matches": true,
+      "assets": [
+        {
+          "id": 550655131,
+          "name": "ASSET_MANIFEST.json",
+          "size": 536,
+          "digest": "sha256:32347b57bc844988cc94787c37a30493c7ffdde171736bebe115c1cd7772fe4a",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-07-chunk-gated-delta-rule-fwd-kernel-h-blockdim64-pmc-20260908/ASSET_MANIFEST.json"
+        },
+        {
+          "id": 550653245,
+          "name": "capture.tar.zst.part001",
+          "size": 881558091,
+          "digest": "sha256:c82b950fb271075dafe83855903a5f962c75439102d588c5660b27e76ab65386",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-07-chunk-gated-delta-rule-fwd-kernel-h-blockdim64-pmc-20260908/capture.tar.zst.part001"
+        },
+        {
+          "id": 550655110,
+          "name": "FILE_MANIFEST.json",
+          "size": 23455,
+          "digest": "sha256:be85436dcd1ae0760f31716c2ce8ae6700cdd404d7ebe5f3c56f017dbe4c29ef",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-07-chunk-gated-delta-rule-fwd-kernel-h-blockdim64-pmc-20260908/FILE_MANIFEST.json"
+        },
+        {
+          "id": 550655142,
+          "name": "SHA256SUMS",
+          "size": 175,
+          "digest": "sha256:758dc21ef55b58812f28744faf5fe52e5f4c6ac0a04124bdc8c12340ac12fab6",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-07-chunk-gated-delta-rule-fwd-kernel-h-blockdim64-pmc-20260908/SHA256SUMS"
+        }
+      ]
+    },
+    {
+      "label": "08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read",
+      "kind": "accepted_capture",
+      "url": "https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-r08-08-chunk-gated-delta-rule-fwd-kernel-h-blockdim64-pmc-read-20260908",
+      "source_receipt": {
+        "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/remote_release_offloads_001/08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read.complete.json",
+        "size": 6791,
+        "sha256": "260033c54b9b1286a3fdfc36950f1f5f910fa4107674f0b72762551e7b3ce5fa"
+      },
+      "release_id": 384836813,
+      "verified_utc": "2026-09-08T22:35:51.808449+00:00",
+      "expected_asset_count": 4,
+      "every_asset_size_and_server_SHA256_matches": true,
+      "assets": [
+        {
+          "id": 550727888,
+          "name": "ASSET_MANIFEST.json",
+          "size": 536,
+          "digest": "sha256:5a0fd893fcd184f6099d45ca52aa76e94a4d8efb427510301c5088a328e45051",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-08-chunk-gated-delta-rule-fwd-kernel-h-blockdim64-pmc-read-20260908/ASSET_MANIFEST.json"
+        },
+        {
+          "id": 550725430,
+          "name": "capture.tar.zst.part001",
+          "size": 871576123,
+          "digest": "sha256:07b7f9695366d6971315ff11b26bd0ea146fd8faacf6821d9d24b23d39a4f3da",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-08-chunk-gated-delta-rule-fwd-kernel-h-blockdim64-pmc-read-20260908/capture.tar.zst.part001"
+        },
+        {
+          "id": 550727870,
+          "name": "FILE_MANIFEST.json",
+          "size": 23785,
+          "digest": "sha256:00fd57aa4b0f714f6fedf68ef1d726c96a51b07933a2ddb580ca907b40e24fad",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-08-chunk-gated-delta-rule-fwd-kernel-h-blockdim64-pmc-read-20260908/FILE_MANIFEST.json"
+        },
+        {
+          "id": 550727909,
+          "name": "SHA256SUMS",
+          "size": 175,
+          "digest": "sha256:9ef182ac1cd648b4b33e0d430feefe8bb455ab5746951d1f500c49a7313fe513",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-08-chunk-gated-delta-rule-fwd-kernel-h-blockdim64-pmc-read-20260908/SHA256SUMS"
+        }
+      ]
+    },
+    {
+      "label": "09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write",
+      "kind": "accepted_capture",
+      "url": "https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-r08-09-chunk-gated-delta-rule-fwd-kernel-h-blockdim64-pmc-write-20260908",
+      "source_receipt": {
+        "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/remote_release_offloads_001/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write.complete.json",
+        "size": 8478,
+        "sha256": "e3fb03374b0275518a06ed3752bf03278654969c5cc445a0e994a81367fc9782"
+      },
+      "release_id": 384963585,
+      "verified_utc": "2026-09-08T22:35:52.235941+00:00",
+      "expected_asset_count": 5,
+      "every_asset_size_and_server_SHA256_matches": true,
+      "assets": [
+        {
+          "id": 551050083,
+          "name": "ASSET_MANIFEST.json",
+          "size": 698,
+          "digest": "sha256:8c5976ef21b711895c079497ba6d4954acb9382394505bf8cdc0f601780293bc",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-09-chunk-gated-delta-rule-fwd-kernel-h-blockdim64-pmc-write-20260908/ASSET_MANIFEST.json"
+        },
+        {
+          "id": 551046165,
+          "name": "capture.tar.zst.part001",
+          "size": 950000000,
+          "digest": "sha256:ca4e1b0cb5bf1e264919934b3662287ede495065b866dadfef0445fab5e849ad",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-09-chunk-gated-delta-rule-fwd-kernel-h-blockdim64-pmc-write-20260908/capture.tar.zst.part001"
+        },
+        {
+          "id": 551048383,
+          "name": "capture.tar.zst.part002",
+          "size": 756021737,
+          "digest": "sha256:3656b872b312c79ee2d89f99815eb04d088a0017636b937f139afccf3858df47",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-09-chunk-gated-delta-rule-fwd-kernel-h-blockdim64-pmc-write-20260908/capture.tar.zst.part002"
+        },
+        {
+          "id": 551050053,
+          "name": "FILE_MANIFEST.json",
+          "size": 29218,
+          "digest": "sha256:e84ace9b8fd5849c7a83a9d4aaf2a21f46246654f63c658fdabd81937ba31568",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-09-chunk-gated-delta-rule-fwd-kernel-h-blockdim64-pmc-write-20260908/FILE_MANIFEST.json"
+        },
+        {
+          "id": 551050119,
+          "name": "SHA256SUMS",
+          "size": 265,
+          "digest": "sha256:f262ebab35fe7dc67ba26241b5a2b5e0be227eccb7ab54161a1c028c56f93a37",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-09-chunk-gated-delta-rule-fwd-kernel-h-blockdim64-pmc-write-20260908/SHA256SUMS"
+        }
+      ]
+    },
+    {
+      "label": "10_chunk_fwd_kernel_o_pmc",
+      "kind": "accepted_capture",
+      "url": "https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-r08-10-chunk-fwd-kernel-o-pmc-20260908",
+      "source_receipt": {
+        "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/remote_release_offloads_001/10_chunk_fwd_kernel_o_pmc.complete.json",
+        "size": 7662,
+        "sha256": "30306d8bbc92434be2bacdf4ea5fd80730382c8b3e7e1b79dd44f7a10750aefe"
+      },
+      "release_id": 384993123,
+      "verified_utc": "2026-09-08T22:35:52.124762+00:00",
+      "expected_asset_count": 5,
+      "every_asset_size_and_server_SHA256_matches": true,
+      "assets": [
+        {
+          "id": 551125213,
+          "name": "ASSET_MANIFEST.json",
+          "size": 698,
+          "digest": "sha256:b6a3a25353e67f01fc242c3f63b4431a2584eb176c64e2eff2be8d680fbe196f",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-10-chunk-fwd-kernel-o-pmc-20260908/ASSET_MANIFEST.json"
+        },
+        {
+          "id": 551121635,
+          "name": "capture.tar.zst.part001",
+          "size": 950000000,
+          "digest": "sha256:87a72cd0e8101489581f749be96480c7010c0c8139b3a2455294ef30d805e8ee",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-10-chunk-fwd-kernel-o-pmc-20260908/capture.tar.zst.part001"
+        },
+        {
+          "id": 551123525,
+          "name": "capture.tar.zst.part002",
+          "size": 701543692,
+          "digest": "sha256:ffe87b18388c76b6b9115bb9450282e73778a65398486ef10ec587608550b36d",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-10-chunk-fwd-kernel-o-pmc-20260908/capture.tar.zst.part002"
+        },
+        {
+          "id": 551125191,
+          "name": "FILE_MANIFEST.json",
+          "size": 26464,
+          "digest": "sha256:941ea2edd19e678534da6404e4c2b6e8fcf4fe87a14157d05840a642ecd1c3e3",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-10-chunk-fwd-kernel-o-pmc-20260908/FILE_MANIFEST.json"
+        },
+        {
+          "id": 551125232,
+          "name": "SHA256SUMS",
+          "size": 265,
+          "digest": "sha256:81bf11b706485ac667cb96bdd3789219bff775a86b89f7978a23ef5a45a1d26c",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-10-chunk-fwd-kernel-o-pmc-20260908/SHA256SUMS"
+        }
+      ]
+    },
+    {
+      "label": "11_chunk_fwd_kernel_o_pmc_read",
+      "kind": "accepted_capture",
+      "url": "https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-r08-11-chunk-fwd-kernel-o-pmc-read-20260908",
+      "source_receipt": {
+        "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/remote_release_offloads_001/11_chunk_fwd_kernel_o_pmc_read.complete.json",
+        "size": 7786,
+        "sha256": "2cfd0bb4fe1d0aa3d48d864f22d01ad28d90bc6c3c83b3626540d99208108d1c"
+      },
+      "release_id": 385020615,
+      "verified_utc": "2026-09-08T22:35:52.863673+00:00",
+      "expected_asset_count": 5,
+      "every_asset_size_and_server_SHA256_matches": true,
+      "assets": [
+        {
+          "id": 551199543,
+          "name": "ASSET_MANIFEST.json",
+          "size": 698,
+          "digest": "sha256:52adb39029ff4cabe86fbce42867a08835f0bffd7da686fb331d2e5d2121795d",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-11-chunk-fwd-kernel-o-pmc-read-20260908/ASSET_MANIFEST.json"
+        },
+        {
+          "id": 551196219,
+          "name": "capture.tar.zst.part001",
+          "size": 950000000,
+          "digest": "sha256:21b7807bc020a21e8d61037cb6475ecf84eb997b928a4b58170939dbf01f0851",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-11-chunk-fwd-kernel-o-pmc-read-20260908/capture.tar.zst.part001"
+        },
+        {
+          "id": 551198107,
+          "name": "capture.tar.zst.part002",
+          "size": 697555227,
+          "digest": "sha256:9a3a1f988bc72a37c07432591acaeaefb11a759361d4b97eeb2f1b4b9fc32fa6",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-11-chunk-fwd-kernel-o-pmc-read-20260908/capture.tar.zst.part002"
+        },
+        {
+          "id": 551199525,
+          "name": "FILE_MANIFEST.json",
+          "size": 26893,
+          "digest": "sha256:f89c5a18b91193197280631b56297e5c31a3e7fef18fb54c9b272b131675d1c7",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-11-chunk-fwd-kernel-o-pmc-read-20260908/FILE_MANIFEST.json"
+        },
+        {
+          "id": 551199576,
+          "name": "SHA256SUMS",
+          "size": 265,
+          "digest": "sha256:128cfdead60c32d787dcb861b91de90e7398590cbf22f9de25b83d71272b2464",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-11-chunk-fwd-kernel-o-pmc-read-20260908/SHA256SUMS"
+        }
+      ]
+    },
+    {
+      "label": "12_chunk_fwd_kernel_o_pmc_write",
+      "kind": "accepted_capture",
+      "url": "https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-r08-12-chunk-fwd-kernel-o-pmc-write-20260908",
+      "source_receipt": {
+        "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/remote_release_offloads_001/12_chunk_fwd_kernel_o_pmc_write.complete.json",
+        "size": 7810,
+        "sha256": "34c4e098fb883e19a760db9c3b4cd6561e63b2c07dc492f9cebea94ddbf6bf81"
+      },
+      "release_id": 385046885,
+      "verified_utc": "2026-09-08T22:35:52.628853+00:00",
+      "expected_asset_count": 5,
+      "every_asset_size_and_server_SHA256_matches": true,
+      "assets": [
+        {
+          "id": 551270153,
+          "name": "ASSET_MANIFEST.json",
+          "size": 698,
+          "digest": "sha256:fa04eda8c266e25a0b3b60b2e92edcf04639fe1fb7f3a0414ebfa55d00950772",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-12-chunk-fwd-kernel-o-pmc-write-20260908/ASSET_MANIFEST.json"
+        },
+        {
+          "id": 551266691,
+          "name": "capture.tar.zst.part001",
+          "size": 950000000,
+          "digest": "sha256:068d5cca9b29ce2eb4a0133ea4aef16122869fc1f9aaebbb7055d067d6fa2452",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-12-chunk-fwd-kernel-o-pmc-write-20260908/capture.tar.zst.part001"
+        },
+        {
+          "id": 551268827,
+          "name": "capture.tar.zst.part002",
+          "size": 695943956,
+          "digest": "sha256:dd05ef66e85b144ee0333361b3a824513ec91c954c670880bbf3b7a30d4de977",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-12-chunk-fwd-kernel-o-pmc-write-20260908/capture.tar.zst.part002"
+        },
+        {
+          "id": 551270130,
+          "name": "FILE_MANIFEST.json",
+          "size": 26974,
+          "digest": "sha256:736ba418dc07e16d8ad7ae39bd49fbf754e6211d8dcff178c16b46297c194d2b",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-12-chunk-fwd-kernel-o-pmc-write-20260908/FILE_MANIFEST.json"
+        },
+        {
+          "id": 551270163,
+          "name": "SHA256SUMS",
+          "size": 265,
+          "digest": "sha256:117682d69ccb41e00f50d59955a2caf9ff461fe986c341aadb2c94f1ede6a903",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-12-chunk-fwd-kernel-o-pmc-write-20260908/SHA256SUMS"
+        }
+      ]
+    },
+    {
+      "label": "R08",
+      "kind": "complete_stage",
+      "url": "https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-r08-complete-20260908",
+      "source_receipt": {
+        "path": "/public/home/accl15ptg7/run_R08_R10/publication/complete_R08/PUBLICATION_COMPLETE.json",
+        "size": 3921,
+        "sha256": "0d6db16f8cb54a0ee43408c05c01d2d8d9b09fc23ac542ed68266f1e6731889f"
+      },
+      "release_id": 385094096,
+      "verified_utc": "2026-09-08T22:35:53.300890+00:00",
+      "expected_asset_count": 10,
+      "every_asset_size_and_server_SHA256_matches": true,
+      "assets": [
+        {
+          "id": 551423257,
+          "name": "ASSET_MANIFEST.json",
+          "size": 1595,
+          "digest": "sha256:13153b63a4d47e62affcf3e2161329ff49a9f9e083d3f0e306422a120d01e422",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-complete-20260908/ASSET_MANIFEST.json"
+        },
+        {
+          "id": 551411150,
+          "name": "capture.tar.zst.part001",
+          "size": 950000000,
+          "digest": "sha256:091337745dcc65c92b99daa2e9b50e3c15d17906cc9430fb6ef8a22d1331e55d",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-complete-20260908/capture.tar.zst.part001"
+        },
+        {
+          "id": 551412791,
+          "name": "capture.tar.zst.part002",
+          "size": 950000000,
+          "digest": "sha256:ca69c5d8f9648afb041abc0155ebc701548051b843c75ce0501338a41ebfbd06",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-complete-20260908/capture.tar.zst.part002"
+        },
+        {
+          "id": 551414547,
+          "name": "capture.tar.zst.part003",
+          "size": 950000000,
+          "digest": "sha256:4c3d62b1e77f803e5e63e9846de77be511c1a45feee3e73921079e7025912e30",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-complete-20260908/capture.tar.zst.part003"
+        },
+        {
+          "id": 551416307,
+          "name": "capture.tar.zst.part004",
+          "size": 950000000,
+          "digest": "sha256:456d3079a70ddb2bf6707347ffd993de73dcfdcea4161305d88e03ce5c0f8c6d",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-complete-20260908/capture.tar.zst.part004"
+        },
+        {
+          "id": 551418177,
+          "name": "capture.tar.zst.part005",
+          "size": 950000000,
+          "digest": "sha256:bb5f3c226a7d2fe732b63619035b995065410f2aa123f7db93a460cdf6958c6e",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-complete-20260908/capture.tar.zst.part005"
+        },
+        {
+          "id": 551420472,
+          "name": "capture.tar.zst.part006",
+          "size": 950000000,
+          "digest": "sha256:e573bd8f5d90dc5f97414ef12b17e46f67bed8163f9ef231c714b33393e360d1",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-complete-20260908/capture.tar.zst.part006"
+        },
+        {
+          "id": 551422742,
+          "name": "capture.tar.zst.part007",
+          "size": 209506836,
+          "digest": "sha256:8f6021a00e04ff1d49c4c6d0f9ba60e3c8c652448d6d79b2ae6226971e5741b3",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-complete-20260908/capture.tar.zst.part007"
+        },
+        {
+          "id": 551423218,
+          "name": "FILE_MANIFEST.json",
+          "size": 1329547,
+          "digest": "sha256:e8de8187d920d436adf2c39debcf38bda375b037b2601f1557035ba7da6f9fe0",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-complete-20260908/FILE_MANIFEST.json"
+        },
+        {
+          "id": 551423277,
+          "name": "SHA256SUMS",
+          "size": 715,
+          "digest": "sha256:39982f1f84f73fc950b5d1e980b87081bbf028508cdcfe5692a13333feb30bce",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-complete-20260908/SHA256SUMS"
+        }
+      ]
+    },
+    {
+      "label": "R09",
+      "kind": "complete_stage",
+      "url": "https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-r09-complete-20260908",
+      "source_receipt": {
+        "path": "/public/home/accl15ptg7/run_R08_R10/publication/complete_R09/PUBLICATION_COMPLETE.json",
+        "size": 1855,
+        "sha256": "5b3583840d2b223f6cef186ff98250109a5e62e03aeed7dffe9e0be3f5d94129"
+      },
+      "release_id": 385098020,
+      "verified_utc": "2026-09-08T22:35:52.996111+00:00",
+      "expected_asset_count": 4,
+      "every_asset_size_and_server_SHA256_matches": true,
+      "assets": [
+        {
+          "id": 551424415,
+          "name": "ASSET_MANIFEST.json",
+          "size": 616,
+          "digest": "sha256:307cf7f438dae9166a63f1410a21c9a43a824a398cfec0f9f6f89c1277633523",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r09-complete-20260908/ASSET_MANIFEST.json"
+        },
+        {
+          "id": 551423808,
+          "name": "capture.tar.zst.part001",
+          "size": 234893672,
+          "digest": "sha256:466a593700a7720017b16c07766edb7435fcb90cbd67341237cbb0a780d24666",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r09-complete-20260908/capture.tar.zst.part001"
+        },
+        {
+          "id": 551424397,
+          "name": "FILE_MANIFEST.json",
+          "size": 11546,
+          "digest": "sha256:c919073f8f6739b756dd7990490cfafabac70164002c30329d3cd04cce0f8467",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r09-complete-20260908/FILE_MANIFEST.json"
+        },
+        {
+          "id": 551424432,
+          "name": "SHA256SUMS",
+          "size": 175,
+          "digest": "sha256:82d404f7d6e5db8a49174ea13d9fd25577e82d6a5171cf0cd04756ebac2d4383",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r09-complete-20260908/SHA256SUMS"
+        }
+      ]
+    },
+    {
+      "label": "R10",
+      "kind": "complete_stage",
+      "url": "https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-r10-complete-20260908",
+      "source_receipt": {
+        "path": "/public/home/accl15ptg7/run_R08_R10/publication/complete_R10/PUBLICATION_COMPLETE.json",
+        "size": 2204,
+        "sha256": "e780ecb086fb12a51f1efe659e991e9a00a2b867b496d73cf7507d1a5d952bf6"
+      },
+      "release_id": 385102740,
+      "verified_utc": "2026-09-08T22:35:53.483020+00:00",
+      "expected_asset_count": 5,
+      "every_asset_size_and_server_SHA256_matches": true,
+      "assets": [
+        {
+          "id": 551443205,
+          "name": "ASSET_MANIFEST.json",
+          "size": 780,
+          "digest": "sha256:745f6543b76d3f59c9d19f06b03fd44309ff88fa802c655437812277c7c6d1aa",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r10-complete-20260908/ASSET_MANIFEST.json"
+        },
+        {
+          "id": 551441660,
+          "name": "capture.tar.zst.part001",
+          "size": 366581053,
+          "digest": "sha256:1ead0c357dd1e299c28a45d296022360619f9f53724faabd1e9f7c66c00146f4",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r10-complete-20260908/capture.tar.zst.part001"
+        },
+        {
+          "id": 551442212,
+          "name": "FILE_MANIFEST.json",
+          "size": 12491,
+          "digest": "sha256:abacbd75bdc8d2a7e82eadc609bbd3f41e61607043fab67a3ccde77ba7da3deb",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r10-complete-20260908/FILE_MANIFEST.json"
+        },
+        {
+          "id": 551442237,
+          "name": "R10_offline_acceptance.zip",
+          "size": 394557919,
+          "digest": "sha256:633afcad6e0089feb9bb80df05da358fb83d80730505d5de49e01baa2c253f1c",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r10-complete-20260908/R10_offline_acceptance.zip"
+        },
+        {
+          "id": 551443224,
+          "name": "SHA256SUMS",
+          "size": 268,
+          "digest": "sha256:2125c97e23e461cbfba0d92a400064a65e90d87baef7e94ef972a38c11640e21",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r10-complete-20260908/SHA256SUMS"
+        }
+      ]
+    },
+    {
+      "label": "capture09_preserved_failed_attempts",
+      "kind": "supplemental_failed_capture_evidence",
+      "url": "https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-r08-capture09-prehealth-failures-20260908-001",
+      "source_receipt": {
+        "path": "/public/home/accl15ptg7/run_R08_R10/publication_emergency/r08_capture09_closed_prehealth_failures_001/PUBLICATION_COMPLETE.json",
+        "size": 2497,
+        "sha256": "66d9948a910977427a53669a38bc75ca3808ab6a21ae8d4d64fa8cf8f364a645"
+      },
+      "release_id": 384938306,
+      "verified_utc": "2026-09-08T22:35:53.714061+00:00",
+      "expected_asset_count": 5,
+      "every_asset_size_and_server_SHA256_matches": true,
+      "assets": [
+        {
+          "id": 550980338,
+          "name": "ASSET_MANIFEST.json",
+          "size": 677,
+          "digest": "sha256:0e14478578b7bdefca251d028e1fb5e01b821a71f257e86dd983781d03d9e7a6",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-capture09-prehealth-failures-20260908-001/ASSET_MANIFEST.json"
+        },
+        {
+          "id": 550978350,
+          "name": "capture.tar.zst.part001",
+          "size": 950000000,
+          "digest": "sha256:fdaa556d0043ae72e4b0d908ea03258bd9f50a0c95dc75f425ac6320c846916f",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-capture09-prehealth-failures-20260908-001/capture.tar.zst.part001"
+        },
+        {
+          "id": 550980202,
+          "name": "capture.tar.zst.part002",
+          "size": 35128071,
+          "digest": "sha256:19608d4c12ce26eb3bb6188b82ef8fc996feb16599fabf08bf8537b5d0ead608",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-capture09-prehealth-failures-20260908-001/capture.tar.zst.part002"
+        },
+        {
+          "id": 550980315,
+          "name": "FILE_MANIFEST.json",
+          "size": 391536,
+          "digest": "sha256:b5db3846fc77fa3c658a0c06fcdd65f77217bdd8514f5d6eb7274b698cc5c038",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-capture09-prehealth-failures-20260908-001/FILE_MANIFEST.json"
+        },
+        {
+          "id": 550980354,
+          "name": "SHA256SUMS",
+          "size": 265,
+          "digest": "sha256:9e9efb15ec819cb853b8392fb2a21807242fb210e038e3eeeb807782f4e1963a",
+          "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-capture09-prehealth-failures-20260908-001/SHA256SUMS"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "path": "/public/home/accl15ptg7/run_R08_R10/verify_all_remote_releases_final_001.py",
+    "size": 5429,
+    "sha256": "47e549c6b616a7d6d004ae05ed1281ae6317ddf03c77750a8a630754da567179"
+  }
+}

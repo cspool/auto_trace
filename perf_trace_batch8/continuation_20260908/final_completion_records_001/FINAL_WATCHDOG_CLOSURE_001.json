@@ -1,0 +1,14 @@
+{
+  "status": "closed",
+  "observed_utc": "2026-09-08T22:47:00.230012+00:00",
+  "matching_watchdog_processes_remaining": [],
+  "stop_markers_present": true,
+  "tool_session_exit_codes": {
+    "accepted_capture_publisher_004_session_12763": 0,
+    "runtime_health_007_session_44834": 143,
+    "remote_progress_012_session_17524": 143
+  },
+  "exit_code_source": "write_stdin completion results observed during finalization",
+  "normal_exit_claimed_for_health_and_progress_watchdogs": false,
+  "note": "Stop markers requested after stage completion. Health/progress wrapper sessions reported 143; no normal exit or precise signal origin is inferred. All business stages and publications had already completed; final snapshot is run separately."
+}

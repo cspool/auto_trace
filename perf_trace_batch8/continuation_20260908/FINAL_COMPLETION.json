@@ -1,0 +1,117 @@
+{
+  "status": "complete",
+  "verified_utc": "2026-09-08T22:47:00.230012+00:00",
+  "runtime_run_id": "batch8-dp2-fresh-003",
+  "additional_machine_time_required": false,
+  "authorized_deadline_utc": "2026-09-09T04:18:09Z",
+  "stages": {
+    "R08": {
+      "status": "complete",
+      "handoff": {
+        "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/handoffs/R08.continuation.json",
+        "size": 20870,
+        "sha256": "6d0f64acc912472645bbca489bd16ff88f58eaeb91bd733f55558e0198bfdbbd"
+      },
+      "publication_receipt": {
+        "path": "/public/home/accl15ptg7/run_R08_R10/publication/complete_R08/PUBLICATION_COMPLETE.json",
+        "size": 3921,
+        "sha256": "0d6db16f8cb54a0ee43408c05c01d2d8d9b09fc23ac542ed68266f1e6731889f"
+      },
+      "release_url": "https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-r08-complete-20260908"
+    },
+    "R09": {
+      "status": "complete",
+      "handoff": {
+        "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/handoffs/R09.continuation.json",
+        "size": 109530,
+        "sha256": "4bc3719b2de031c8c7adc993ed5d4603cb059fd3043a612b7d01ea2ec4aefe1b"
+      },
+      "publication_receipt": {
+        "path": "/public/home/accl15ptg7/run_R08_R10/publication/complete_R09/PUBLICATION_COMPLETE.json",
+        "size": 1855,
+        "sha256": "5b3583840d2b223f6cef186ff98250109a5e62e03aeed7dffe9e0be3f5d94129"
+      },
+      "release_url": "https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-r09-complete-20260908"
+    },
+    "R10": {
+      "status": "complete",
+      "handoff": {
+        "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/handoffs/R10.continuation.json",
+        "size": 68174,
+        "sha256": "747a05967354ffce2f9e6abd15d8d98f74b980bc34744ce8214fd9002e1b6624"
+      },
+      "publication_receipt": {
+        "path": "/public/home/accl15ptg7/run_R08_R10/publication/complete_R10/PUBLICATION_COMPLETE.json",
+        "size": 2204,
+        "sha256": "e780ecb086fb12a51f1efe659e991e9a00a2b867b496d73cf7507d1a5d952bf6"
+      },
+      "release_url": "https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-r10-complete-20260908"
+    }
+  },
+  "R08_accepted_captures": 12,
+  "planned_R08_captures": 12,
+  "trace_coverage": {
+    "requests": 8,
+    "DP_ranks": 2,
+    "requests_per_rank": 4,
+    "scope": "R06-declared first prefill and first decode only",
+    "prefill_targets_per_request": 784,
+    "decode_targets_per_request": 784,
+    "process_targets_per_capture": 12544,
+    "all_captures_independently_audited": true,
+    "all_1024_decode_phases_traced_claimed": false
+  },
+  "R10": {
+    "actual_offline_browser_pages_passed": 5,
+    "main_timeline_events": 59872,
+    "main_plus_context_events": 378722,
+    "external_network_attempts": 0,
+    "offline_zip": {
+      "id": 551442237,
+      "name": "R10_offline_acceptance.zip",
+      "size": 394557919,
+      "digest": "sha256:633afcad6e0089feb9bb80df05da358fb83d80730505d5de49e01baa2c253f1c",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r10-complete-20260908/R10_offline_acceptance.zip"
+    },
+    "entrypoint_after_unzip": "acceptance/index.html",
+    "Chinese_readable_preview_receipt": {
+      "path": "/public/home/accl15ptg7/run_R08_R10/R10_readable_previews_001/READABLE_PREVIEWS_COMPLETE.json",
+      "size": 4155,
+      "sha256": "6a474293ca5eae595e6d5791d5a9da5472a87c3feeffb1abd441f3659f5c9b7d"
+    }
+  },
+  "remote_review": {
+    "releases": 16,
+    "assets": 79,
+    "all_sizes_and_server_SHA256_match": true,
+    "receipt": {
+      "path": "/public/home/accl15ptg7/run_R08_R10/FINAL_REMOTE_RELEASE_VERIFICATION_001.json",
+      "size": 43865,
+      "sha256": "a01b84e8317099e40c80239642a72ae789669997097c338adc36ae00177abcf5"
+    }
+  },
+  "storage": {
+    "new_R08_R10_outputs_logs_physical_NFS": true,
+    "weight_shards_removed_after_all_captures_and_raw_publications": 11,
+    "removed_weight_bytes": 55563022432,
+    "restored_original_files": 53,
+    "restored_original_bytes": 77001580022,
+    "original_restore_root": "/root/R08_release_restored_after_capture_001",
+    "restoration_full_SHA256_verified": true,
+    "NFS_free_bytes": 9192865792,
+    "root_free_bytes": 90339000320
+  },
+  "limitations": {
+    "R07_original_native_controller_terminal_claimed": false,
+    "R07_CPU_DB_analysis_completed_seconds": 132.545,
+    "R08_replay_timing_used_as_observed_R07_latency": false,
+    "achieved_speedup_claimed": false,
+    "shape_context_mismatches_and_unavailable_metrics_explicitly_preserved": true
+  },
+  "watchdog_closure": {
+    "path": "/public/home/accl15ptg7/run_R08_R10/FINAL_WATCHDOG_CLOSURE_001.json",
+    "size": 744,
+    "sha256": "7e9445561d1fcd1f37e6fe768feb19bfed2f9b628a586f3094e70d3eb8b9d9e7"
+  },
+  "final_progress_snapshot_pending": true
+}

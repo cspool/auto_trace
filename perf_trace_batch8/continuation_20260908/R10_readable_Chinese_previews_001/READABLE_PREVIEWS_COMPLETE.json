@@ -1,0 +1,90 @@
+{
+  "status": "complete",
+  "utc": "2026-09-08T22:36:37.551533+00:00",
+  "purpose": "supplementary readable Chinese previews; original formal acceptance retained",
+  "font_installation": {
+    "path": "/public/home/accl15ptg7/run_R08_R10/R10_readable_previews_001/FONT_INSTALLATION.json",
+    "size": 711,
+    "sha256": "d7665f3ca960aee5f85387f9befad8ddc9398f2f29712ac0356a1a709e9e9f22"
+  },
+  "pages": [
+    {
+      "accepted_page": {
+        "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/acceptance/index.html",
+        "size": 4552,
+        "sha256": "ad5a497cbb98fab56026ae11ee0ceec6c67ecc80f36ff5dd193b4a6b3decfa88"
+      },
+      "readable_preview": {
+        "path": "/public/home/accl15ptg7/run_R08_R10/R10_readable_previews_001/preview_zh_index.png",
+        "size": 121674,
+        "sha256": "cac51e14711e5022f4a00a22fa6ff38b1bf71332695d63f20aab9e22f3af47bb"
+      },
+      "same_accepted_HTML_SHA256": true,
+      "page_errors": []
+    },
+    {
+      "accepted_page": {
+        "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/acceptance/E2E_PROCESS_TIMELINE.html",
+        "size": 234639,
+        "sha256": "9fa7e352dd7fabcf477edb64ed8baade4874f4747e0feb1b73f328e1362ee250"
+      },
+      "readable_preview": {
+        "path": "/public/home/accl15ptg7/run_R08_R10/R10_readable_previews_001/preview_zh_E2E_PROCESS_TIMELINE.png",
+        "size": 171302,
+        "sha256": "0d21d12f9c3521141e5f53931973c6116f9cdb233b4036ebc9c3393c85fb48ad"
+      },
+      "same_accepted_HTML_SHA256": true,
+      "page_errors": []
+    },
+    {
+      "accepted_page": {
+        "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/acceptance/E2E_PROCESS_TIMELINE_LOSSLESS.html",
+        "size": 56065528,
+        "sha256": "dea1c493eb1a58d4950f7006be63402dc24ac9ec5824f4ea4489c0577327db2a"
+      },
+      "readable_preview": {
+        "path": "/public/home/accl15ptg7/run_R08_R10/R10_readable_previews_001/preview_zh_E2E_PROCESS_TIMELINE_LOSSLESS.png",
+        "size": 193502,
+        "sha256": "ffb67008dd07a2bb46ef4a4f48a6fe66caba35089c40f77c74c73506745ac930"
+      },
+      "same_accepted_HTML_SHA256": true,
+      "page_errors": []
+    },
+    {
+      "accepted_page": {
+        "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/acceptance/HIGH_LATENCY_PROCESS_HARDWARE_TIMELINE.html",
+        "size": 117864802,
+        "sha256": "f17f5db50935da3816c0492fca26c9ba18db087fbda3aa29dad622464ffbfebe"
+      },
+      "readable_preview": {
+        "path": "/public/home/accl15ptg7/run_R08_R10/R10_readable_previews_001/preview_zh_HIGH_LATENCY_PROCESS_HARDWARE_TIMELINE.png",
+        "size": 194446,
+        "sha256": "b586b398cfe6c3aba1c48ff08adb226a92b22181d1f1fb7de3d85d0dc41ae755"
+      },
+      "same_accepted_HTML_SHA256": true,
+      "page_errors": []
+    },
+    {
+      "accepted_page": {
+        "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/acceptance/CONCURRENCY_UTILIZATION.html",
+        "size": 247604595,
+        "sha256": "154ac54a42fc7978fd3679dc4b3e95111445c51a333d7a71047de1360eb501e4"
+      },
+      "readable_preview": {
+        "path": "/public/home/accl15ptg7/run_R08_R10/R10_readable_previews_001/preview_zh_CONCURRENCY_UTILIZATION.png",
+        "size": 188651,
+        "sha256": "71be53c7ef69bf9248ed73d0aa882c270442c51d04f4cdc57cd75051b9f270c8"
+      },
+      "same_accepted_HTML_SHA256": true,
+      "page_errors": []
+    }
+  ],
+  "accepted_HTML_files_changed": false,
+  "network_attempts": [],
+  "all_browser_processes_closed_before_result": true,
+  "code": {
+    "path": "/public/home/accl15ptg7/run_R08_R10/capture_R10_readable_previews_001.py",
+    "size": 3419,
+    "sha256": "424c8183fd64cdbb33a0e5111cc2562b3aa5d1d9d35c914f9fd99b44b7eba25e"
+  }
+}

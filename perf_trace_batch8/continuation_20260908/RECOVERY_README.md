@@ -1,44 +1,38 @@
-# R08 → R10 容器丢失后的恢复入口
+# R08 → R10 最终交付与恢复入口
 
-本目录的 `RECOVERY_STATE_NFS.json` 是提交时的快照。最新自动备份在 [进度分支](https://github.com/cspool/auto_trace/tree/progress/batch8-continuation-20260908/perf_trace_batch8/progress/batch8-continuation-20260908)，每约 10 分钟推送并核验远端提交；阶段验收与发布记录另行提交主分支。恢复时比较时间戳，不以主分支旧快照判断当前采集。
+R08、R09、R10 均已完成实际执行、独立审计及完整 handoff，并发布完整阶段 Release。2026-09-08 22:35 UTC 的最终 GitHub API 复核确认 16 个 Release、79 个资产的大小与服务端 SHA256 全部匹配。无需额外机器时间。最终凭证见 [FINAL_COMPLETION.json](FINAL_COMPLETION.json)，远端复核见 [final_remote_release_verification_001](final_remote_release_verification_001)。
 
-NFS 控制目录：`/public/home/accl15ptg7/run_R08_R10`。原始 R08 运行目录：`perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001`。全部新产物、日志和控制脚本都在 NFS。`/root/r08_continuation_001_bulk` 是通往 NFS 的目录别名，不能据路径字面将它当成 root 上的可删除副本。
+## 直接查看结果
 
-## 先核对实际状态
+下载 [R10 离线报告 ZIP](https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r10-complete-20260908/R10_offline_acceptance.zip)，解压后打开 `acceptance/index.html`。ZIP 为 394,557,919 字节，SHA256 为 `633afcad6e0089feb9bb80df05da358fb83d80730505d5de49e01baa2c253f1c`。五个页面均已通过实际 Chromium 离线验收，外部网络请求为零；完整时间线支持缩放、筛选和无截断区间检查。
 
-- 核对 `RECOVERY_STATE_NFS.json`、最新进度提交及各 `*.accepted_checkpoint.json` 的时间和 SHA256。会话 ID 与 PID 仅适用于原容器。
-- 当前冻结工具为 `raw/runtime_tools/revision_021`、`tools/analysis_008`，对应 `runtime_capture_gate_014.json` 与 `independent_native_sessions_analysis_CPU_gate_001.json`；原有后台 graph 范围门禁仍保留。不得修改已冻结的运行代码、原始数据或验收凭证。
-- 2026-09-08 20:36 UTC，`run_r08_serial_suffix_013.py` 已完成全部 12 项采集及独立审计；总索引和 36 份执行/归因/审计凭证的 SHA256 复核已提交于 `all_twelve_captures_accepted_001`。每组均有 12,544 个目标 process 标记、23,660 个原生归属 kernel，全部三种 PMC 模式共 6,912 项物理 dispatch 归属；每组两张卡均覆盖完整。第十二项原始数据正常关闭，独立审计耗时 185.44 秒。GPU 采集已全部结束，无须重新执行。截至 21:55 UTC，R08 已通过独立总审计并生成完整 handoff，四个 CPU 阶段正常关闭，全部 12 组均满足八请求 trace 与选中 PMC 覆盖。完成凭证见 `R08_local_complete_001`。R09 也已于 22:08 UTC 通过全部 12 张分析表的独立审计及阶段总审计，完成凭证见 `R09_local_complete_001`。R08、R09 完整阶段 Release 均已发布并通过全部远端资产 SHA256 核验，凭证见 `R08_full_stage_publication_001`、`R09_full_stage_publication_001`。R10 已于 22:27 UTC 通过实际五页面离线浏览器验收和独立阶段总审计，并发布完整 Release；凭证见 `R10_local_complete_001` 与 `R10_full_stage_publication_001`。三个完整阶段均已完成，R10 离线 ZIP 可从完整 Release 直接下载。正在补充中文可读预览和最终远端资产复核；原始已验收 HTML 字节保持相同。
-- 只有完整执行清单、归因清单和独立审计同时存在且哈希匹配，才算一项采集完成。HTTP 成功或实时 marker 覆盖报告本身不能代替原生 DB/PMC 归因审计。
+- [R08 完整阶段 Release](https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-r08-complete-20260908)：资源分析、审计、失败证据与完整文件清单；已在各采集 Release 保存的原始文件通过精确成员清单引用。
+- [R09 完整阶段 Release](https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-r09-complete-20260908)：全部 12 张分析表、代码、日志与独立审计。
+- [R10 完整阶段 Release](https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-r10-complete-20260908)：完整阶段归档、离线 ZIP、文件及资产校验清单。
+- [中文可读预览](R10_readable_Chinese_previews_001/README.md)：补装中文字体后，用原始已验收 HTML 重新截图；五个页面字节与正式验收保持一致，原始浏览器证据未替换。
 
-## 存储与远端恢复
+## 实际覆盖与结论边界
 
-权重的 11 个物理分片必须位于 `/root/Qwen3.5-27B-verified-root-backing-20260908`，模型目录 `/root/Qwen3.5-27B` 中的对应链接应指向这些分片。丢失后若仍有 GPU 采集未完成，先按已有权重校验清单恢复到 root；不向 NFS 迁移权重。
+R08 的 12/12 组采集均通过独立原生 DB/PMC 归因审计，覆盖全部 8 个请求，DP2 两张卡各 4 个请求。按照 R06 声明的范围，每个请求首个 prefill 和首个 decode 各覆盖 784 个目标，每组共 12,544 个 process、23,660 个原生归属 kernel。这里不声称完整追踪全部 1024 个 decode 阶段。三种 PMC 模式共 6,912 项物理 dispatch 归属。
 
-各已发布采集的 `PUBLICATION_COMPLETE.json`、`FILE_MANIFEST.json`、`ASSET_MANIFEST.json` 和 `raw/runtime_tools/remote_release_offloads_001/*.complete.json` 保留了远端资产、原始成员 SHA256 及被暂时删除的本地文件。缺失且有这些完整凭证的文件属于已授权的临时回收；没有凭证的缺失文件不能按已完成处理。
+R09 完成全部 12 张分析表；R10 主时间线有 59,872 个事件，连同上下文共 378,722 个唯一事件。实际浏览器验收覆盖全部事件、八请求、1 ns 范围及 105 次精确历史状态检查。相关阶段凭证分别见 `R08_local_complete_001`、`R09_local_complete_001`、`R10_local_complete_001` 和 `R10_actual_browser_acceptance_001`。
 
-全部 12 项采集验收通过且 GPU、服务和采集进程退出后，`restore_all_R08_release_artifacts_002.py` 才可核对空间、记录并删除指定的 root 权重，拉取各 Release，恢复每个被回收的原始文件并核验其原始 SHA256。root 仅在这个阶段用作已授权的原始文件恢复空间；新阶段输出和日志仍写 NFS。恢复完成凭证为 `raw/runtime_tools/release_restoration_001/COMPLETE.json`。若恢复后的 root 文件再次随容器丢失，该工具支持按原恢复凭证重新取回相同字节，保留原凭证不变。
+R07 CPU DB 复核已在 132.545 秒内完成；旧长耗时与重复扫描及范围连接缺少索引有关。R07 原始历史原生控制器是否正常终止无法追认，所有后续材料保留此限制。只有 R07 原始时钟用于 observed 延迟；R08 重放时钟不替代它。资源 shape 上下文不一致、采样缺口及不支持的指标均保留明确状态；分析候选不等于已实现性能提升。
 
-截至 2026-09-08 21:19 UTC，全部 12 组 Release 与回收凭证已完成，53 个原始大文件（77,001,580,022 字节）已全量恢复并再次逐文件核验原始 SHA256。总完成凭证及全部分组恢复映射已提交于 `release_restoration_complete_001`。自动回收进程已停止，11 个 root 权重分片（55,563,022,432 字节）已按逐文件 SHA256 清单释放；配置文件保留。恢复后的原始文件置于 `/root/R08_release_restored_after_capture_001`，通过原规范路径链接访问；新阶段产物和日志仍物理保存在 NFS。容器丢失时可按原凭证重新恢复，不能用不存在的 root 链接冒充已恢复文件。
+## 容器丢失后的恢复
 
-## 后续阶段与最终完成条件
+主分支本目录保留阶段检查点、代码、审计、日志及发布凭证。[进度分支](https://github.com/cspool/auto_trace/tree/progress/batch8-continuation-20260908/perf_trace_batch8/progress/batch8-continuation-20260908) 保留执行期间约每 10 分钟的状态、代码与日志快照，并补交最终快照；已完成任务的周期监控现已停止。各阶段完整 Release 是大文件恢复来源。恢复时先读最终状态和 `PUBLICATION_COMPLETE.json`、`FILE_MANIFEST.json`、`ASSET_MANIFEST.json`、`SHA256SUMS`，按资产与成员的原始大小、SHA256 校验。
 
-当前 CPU 接续入口为 `run_closed_R08_to_R10_003.py`，使用 `prepare_stage_assignments_004.py`、未改动的 `stage_tool_templates_003` 和独立的 `audit_runtime_handoff_001.py`。最初外层入场核验重复重建 67 条路径映射，已在业务阶段尚未开始时保存日志并替换；新外层路径核验在 233 个真实路径与 11 个异常场景中保持相同结果，实测约快 50 倍。每个源文件仍完整核对 SHA256，每个实际目录和文件链接仍实时验证。接续先再次核对 53 份恢复原始文件，再逐一完整核验 R01–R07 前序文件。必须依次验收 R08、执行并验收 R09、执行并验收 R10；前序完整 handoff 出现前不能提前执行后序业务阶段。
+NFS 控制目录为 `/public/home/accl15ptg7/run_R08_R10`；运行目录为 `perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003`。所有新 R08–R10 产物、代码及日志物理保存在 NFS。`/root/r08_continuation_001_bulk` 是通向 NFS 的别名，不是可删除的 root 副本。`/public/share/accl15ptg7` 与 `/work1/share/accl15ptg7` 在本容器中不存在或未挂载。
 
-`publish_accepted_captures_004.py` 发布各采集，`offload_published_R08_files_002.py` 仅回收已审计且远端校验通过的大文件，`publish_complete_stages_003.py` 发布完整阶段及 R10 离线交付物。最终完成还需确认 R10 审计、完整 handoff、离线浏览器验收及全部阶段 Release 远端 SHA256 校验，不能仅凭后台进程已启动宣告结束。
+权重在 GPU 采集期间物理保留于 root。全部 12 组验收、发布并确认采集进程关闭后，按用户授权删除 11 个权重分片（55,563,022,432 字节），释放恢复空间。随后从 Release 完整恢复 53 个临时回收原始文件（77,001,580,022 字节），逐文件核验原始 SHA256，CPU 接续前再次全量核验。已授权的恢复文件位于 `/root/R08_release_restored_after_capture_001`，通过原规范路径链接访问；新阶段产物仍在 NFS。当前无需恢复权重或重新运行 GPU。
 
-八请求覆盖要求是 R06 声明的每个请求首个 prefill / decode 各 784 个目标，共 12,544 个，并在原生归因中保持 DP2 两张卡的完整覆盖。R10 主时间线应有 59,872 个事件。R07 是唯一 observed 时间来源；保留其“本地离线恢复完成，但历史原生控制器终止无法追认”的事实，不把重放时钟当成 R07 延迟。
+若原始恢复文件随容器丢失，按 `release_restoration_complete_001`、`raw/runtime_tools/release_restoration_001/COMPLETE.json` 及各分组清单恢复相同字节。`restore_all_R08_release_artifacts_002.py` 支持按已有凭证恢复；先核对原映射、空间与远端 SHA256，保留已封存验收材料，不能以失效链接冒充原始文件。
 
-已授权机器截止时间：2026-09-09 04:18:09 UTC（用户第二次追加 8 小时，见 MACHINE_TIME_EXTENSION_002.json）。第九项前五次尝试在正式测量前因一个或两个工作进程的 PMC 为空失败，失败原始数据保留于 NFS 并已[单独发布](https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-r08-capture09-prehealth-failures-20260908-001)，不计作已验收采集。runtime019 的 Stop/Start 与 runtime020 的初始关闭方式均未修复。runtime021 的第九项 attempt006 已通过实际完整模型验收：八请求、两张卡各 192 项目标、71,424 个计数器值、30,645,909 条原始 DB 记录及全部 CSV 字节均经检查；证据见 `capture09_attempt_006_accepted_001` 和[第九项 Release](https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-r08-09-chunk-gated-delta-rule-fwd-kernel-h-blockdim64-pmc-write-20260908)。底层共享采集器故障的精确内部原因仍未证明。
+## 代码与执行凭证
 
-runtime021 保留同一个 DP2/TP1 服务、原有两个预热及八个并发请求，仅为两个 GPU 工作进程分别启动原生 HIPProf 会话。每张卡的原始日志与 DB/CSV 位于 `raw/captures/<segment>/<attempt>/native_collectors/rank0` 和 `rank1`。`COLLECTOR_EXIT.json`、`control/NATIVE_COLLECTORS_CLOSED.json` 记录真实退出码与进程组关闭；不能用单个原生进程完成代替两边完成。
+采集冻结工具为 `raw/runtime_tools/revision_021` 和 `tools/analysis_008`；CPU 实际接续入口为 `run_closed_R08_to_R10_003.py`，采用 `prepare_stage_assignments_004.py` 与 `stage_tool_templates_003`。外层路径映射优化经过 233 个真实路径与 11 个异常场景校验，每份前序源文件仍完整校验 SHA256。工具模板本身不替代实际执行、独立审计及 handoff。
 
-原始两份 DB/CSV 必须完整保留在 NFS 或已校验的 Release 中；临时回收后仍按原始 SHA256 全量恢复。根目录 `capture.db` / `capture.csv` 是明确标注的无损派生合并，不是新的原生采集；`NATIVE_SESSION_UNION.json` 记录所有原始 SHA256、表行映射和 CSV 行映射。分析008独立逐行比较原始数据，并在每条归因记录中写入原始 DB/CSV 路径、SHA256 与原始 CSV 行号。不得修改原始时间戳、计数器、设备编号、PID 或关联索引。恢复全部原始文件后，仍须通过完整 R08 审计。当前采集调度器、后续 CPU 阶段、发布及进度监控均使用新期限。
+runtime021 在同一个 DP2/TP1 服务中为两个 GPU 工作进程分别使用原生 HIPProf 会话，保留原有两次预热和八个并发请求。两份原始 DB/CSV 与正常关闭凭证完整保留；合并 DB/CSV 明确标记为派生无损数据，并记录原始 SHA256 和逐行映射。第九项前五次失败及诊断也已保留并单独发布，不计为成功；底层共享采集器故障的精确内部原因仍未证明。
 
-最新空间预测见 `STORAGE_FORECAST_AFTER_CAPTURE09_001.json`，已计入两份原始 DB 和派生 DB 同时保留的额外大小。按第九项实测大小，全部大文件恢复量预计为 77.84 GB；即使后三项各增长 50%，释放已授权的权重并恢复原始文件后，root 预计仍余 77.73 GB。该估算不代替最后的实际容量门禁，也不授权提前删除权重。
-
-前十一项已临时回收 69,271,297,848 字节，共 48 个大文件，均有原始 SHA256 与 Release 恢复凭证。第十二项正在采集，权重删除、实际全量恢复及 R08–R10 整体完成均尚未发生。实际 Release 分段下载已通过小范围检查，见 `release_range_download_smoke_001`；完整资产及成员 SHA256 仍须在正式恢复时核验。
-
-两份原生采集正常关闭后，可用 `checkpoint_closed_native_sources_001.py` 先保存原始 DB/CSV 的 SHA256，避免容器在派生合并期间丢失时缺少已关闭源文件的身份凭证。第十、十一项均已将该凭证与后续合并、原始执行清单逐项核对。相关脚本和各阶段检查点位于本目录 `outer_helpers_001` 与对应 `captureNN_*` 子目录；它们本身不代替独立归因验收。
-
-若发布器报 `create release`，先检查它引用的本地 HEAD 是否已存在于远端：本次曾因 Git 推送传输停滞导致 GitHub 找不到 `target_commitish`。保留归档和采集，核验进程归属后对同一提交做有超时限制的普通推送重试，验证远端 SHA，再让发布器继续；不要因此重跑 GPU 采集或强制改写分支。
+最终监控关闭记录见 `final_completion_records_001/FINAL_WATCHDOG_CLOSURE_001.json`。健康及进度监控的外层会话报告退出码 143，因此不声称二者正常退出；所有业务阶段、浏览器和发布器已先完成，最终快照单独执行。机器授权截止时间保留为 2026-09-09 04:18:09 UTC（已包含第二次追加的 8 小时）。
