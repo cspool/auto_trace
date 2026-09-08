@@ -1,0 +1,77 @@
+[
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_020/vllm_r08_contract_shim.sh",
+    "size": 285,
+    "sha256": "667f7af193f40ef9b20a73e0b60ec68183fb90cfaabf698b59295bf56ed6119e"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_020/r08_native.py",
+    "size": 8438,
+    "sha256": "03851e8cf73e3ba9f3cc4de1b79e33d8f7cc73b8c2a1b6d05b1583ed71e7cb09"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_020/r08_memory_profile.py",
+    "size": 5356,
+    "sha256": "62fb519f3e610a77034e9e402ed7e15845ac14aaae0edd39ccf93842ad353d18"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_020/r08_native_health.py",
+    "size": 2847,
+    "sha256": "b1d04b295085593d10d5fa1b3b42579c6e9692548685b544710fc981cc835aa8"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_020/r08_process_overlay.py",
+    "size": 27675,
+    "sha256": "6e13052a3ef414919572ccecb189cf5b48922e14056317bff2d59fb81502380b"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_020/source_abi_probe.py",
+    "size": 2030,
+    "sha256": "68b83e05c8d52b55f6b42d176669cf5b1a4aa3965b674454485402fd6fb09ed6"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_020/r07_marker_contract.py",
+    "size": 3275,
+    "sha256": "2f8b80cb4e2be8f7b837c959f07ba01d7283499055ff362cd0b09f35be09c11e"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_020/r08_pmc_gate.py",
+    "size": 13259,
+    "sha256": "993503e50dcfbda66572e7d2643ba9ffb640042e335fad55d26b1265a322a35d"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_020/r08_workload_driver.py",
+    "size": 16351,
+    "sha256": "2e2b918fb3c4a46ca2337a5221ebbea2bb0b22e50b6258c9a9fd6248411ba703"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_020/launch_vllm.py",
+    "size": 927,
+    "sha256": "06ed4160d97ba5df4b70614c9bca4d402dfc87c3f9a7d005a02d02ad4e92055b"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_020/run_capture.py",
+    "size": 13806,
+    "sha256": "d28c0e90ff7d392f2c8bae316058df689e2eaa0dcfc75264b9addc3ac83a5cfd"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_020/sitecustomize.py",
+    "size": 2116,
+    "sha256": "ff1b4b6eb9a9ac717fd040dbedccb2910857120345f355614d10b827783ca144"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_020/r07_common.py",
+    "size": 65595,
+    "sha256": "2c6a4995d527f1cc71742f5293dcbbba9ff3587680b2e1cce155eada555e0046"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_020/r08_admission_order.py",
+    "size": 3947,
+    "sha256": "d4711febb2b45df05457be4710f164f424ff61c865beb4bb1eabe9d49aa0a578"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/runtime_capture_gate_013.json",
+    "size": 9144,
+    "sha256": "a5f7a5172602886f83c7cc155292d4e17cebdfc971cd414d22b3ed4f5723db77"
+  }
+]
