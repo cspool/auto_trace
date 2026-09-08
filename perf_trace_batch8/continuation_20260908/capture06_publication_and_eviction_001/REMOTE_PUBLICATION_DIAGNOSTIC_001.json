@@ -1,0 +1,36 @@
+{
+  "utc": "2026-09-08T13:58:55.491615+00:00",
+  "read_only_remote_diagnostic": [
+    {
+      "endpoint": "/git/ref/heads/main",
+      "http_status": 200,
+      "message": null,
+      "object": {
+        "sha": "000ea1b979e75777844e300a3f3ba0af0520e5ca",
+        "type": "commit",
+        "url": "https://api.github.com/repos/cspool/auto_trace/git/commits/000ea1b979e75777844e300a3f3ba0af0520e5ca"
+      },
+      "sha": null,
+      "draft": null,
+      "rate_remaining": "4996"
+    },
+    {
+      "endpoint": "/commits/33e21b6",
+      "http_status": 422,
+      "message": "No commit found for SHA: 33e21b6",
+      "object": null,
+      "sha": null,
+      "draft": null,
+      "rate_remaining": "4995"
+    },
+    {
+      "endpoint": "/releases/tags/perf-trace-batch8-r08-06-triton-red-fused--to-copy-add-mean-mul-pow-rsqrt-0-pmc-write-20260908",
+      "http_status": 404,
+      "message": "Not Found",
+      "object": null,
+      "sha": null,
+      "draft": null,
+      "rate_remaining": "4994"
+    }
+  ]
+}
