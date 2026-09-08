@@ -1,0 +1,29 @@
+{
+  "utc": "2026-09-08T15:23:36.745212+00:00",
+  "read_only_process_metadata": true,
+  "no_GPU_calls": true,
+  "workers": [
+    {
+      "pid": 809197,
+      "device_and_spawn_environment": {},
+      "profiler_and_HIP_library_mappings": [
+        "/opt/dtk-26.04-DCC2602-0317/hipprof_utils/lib/libhipprof_utils.so",
+        "/opt/dtk-26.04-DCC2602-0317/hipprof_utils/lib/libhsa_tool.so.5.2.26105.2065-3f2faa34",
+        "/opt/dtk-26.04-DCC2602-0317/hipprof_utils/lib/libunwind.so.8.2.0",
+        "/opt/dtk-26.04-DCC2602-0317/lib/libamdhip64.so.6.3.42133-1cd788f",
+        "/opt/hyhal/lib/librocprofiler-register.so.0.5.0"
+      ]
+    },
+    {
+      "pid": 809192,
+      "device_and_spawn_environment": {},
+      "profiler_and_HIP_library_mappings": [
+        "/opt/dtk-26.04-DCC2602-0317/hipprof_utils/lib/libhipprof_utils.so",
+        "/opt/dtk-26.04-DCC2602-0317/hipprof_utils/lib/libhsa_tool.so.5.2.26105.2065-3f2faa34",
+        "/opt/dtk-26.04-DCC2602-0317/hipprof_utils/lib/libunwind.so.8.2.0",
+        "/opt/dtk-26.04-DCC2602-0317/lib/libamdhip64.so.6.3.42133-1cd788f",
+        "/opt/hyhal/lib/librocprofiler-register.so.0.5.0"
+      ]
+    }
+  ]
+}

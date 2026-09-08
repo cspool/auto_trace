@@ -1,0 +1,63 @@
+{
+  "all_started_processes_terminated": true,
+  "argv": [
+    "/opt/dtk/bin/hipprof",
+    "--pmc-write",
+    "--pmc-type",
+    "3",
+    "--kernel-name",
+    "_gqa6",
+    "--hip-trace",
+    "--hiptx-trace",
+    "--trace-args",
+    "--no-export",
+    "--pmc-off",
+    "--trace-off",
+    "--follow-fork",
+    "--exit-cleanup",
+    "-d",
+    "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_fresh_exec_pmc_write_recheck_002/hipprof_tmp",
+    "-o",
+    "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_fresh_exec_pmc_write_recheck_002/capture",
+    "/usr/bin/python3",
+    "-B",
+    "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_fresh_exec_pmc_write_recheck_002/gqa6_native_probe.py",
+    "parent",
+    "direct"
+  ],
+  "files": [
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_fresh_exec_pmc_write_recheck_002/CPU_GATE.json",
+      "sha256": "5117caf1fe79a9685b0ef7892a0a30ea35c1d2aa5f8ccf38bb63da61be03a043",
+      "size": 631
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_fresh_exec_pmc_write_recheck_002/capture.csv",
+      "sha256": "8d46a2554508c0d89a9c62436a33a65d87ffd4037b350cee5f6fb6a5b448eb69",
+      "size": 9927
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_fresh_exec_pmc_write_recheck_002/capture.db",
+      "sha256": "7f089c7e228750d88f272da56621c9364570605d84f96725841f3a2a49750861",
+      "size": 77824
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_fresh_exec_pmc_write_recheck_002/collector.log",
+      "sha256": "e3d70e15967a62ccbf36f84be4d7a5a503253aac13f545f5f8cab6395e1e3f5e",
+      "size": 1405
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_fresh_exec_pmc_write_recheck_002/gqa6_native_probe.py",
+      "sha256": "534e3519f291cbb3b25d2dae2100ebc92cdc4f5c7d235313cf480a4de1e95acb",
+      "size": 1594
+    }
+  ],
+  "model_free_probe_only": true,
+  "model_initializations": 0,
+  "native_device_counts": {
+    "0": 4,
+    "1": 4
+  },
+  "rows": 8,
+  "status": "complete"
+}

@@ -1,0 +1,81 @@
+{
+  "status": "authorized_same_contract_bounded_retry",
+  "utc": "2026-09-08T15:29:40.150873+00:00",
+  "failure": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_002/RAW_CAPTURE_FAILURE.json",
+    "size": 1218,
+    "sha256": "b4824ddc0405d042122002b42e4ba14d74b4bb280a7acf2ba2a5318cf8524702"
+  },
+  "native_health": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_002/control/PRE_MEASURED_NATIVE_PMC_HEALTH.json",
+    "size": 227,
+    "sha256": "b9fd005f78d33d5faa75820b8a9aeda85d417b98df90a568f0b9104f0849ac10"
+  },
+  "tracee_cleanup": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_002/control/tracee_process_cleanup.json",
+    "size": 280,
+    "sha256": "6396e5b5767a73b8164ccecd017094b17a64d61ef58e736793eb11382c1e1a12"
+  },
+  "all_previous_attempt_owned_process_groups_verified_closed": [
+    806663,
+    806692,
+    817960
+  ],
+  "previous_worker_pids_verified_closed": [
+    809197,
+    809192
+  ],
+  "previous_measured_requests_started": false,
+  "previous_eight_accepted_captures_preserved": [
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/validation/serial_scheduler_009/01__gqa6_pmc.accepted_checkpoint.json",
+      "size": 1315,
+      "sha256": "0cde18d82b3a25411b8d4fca8854980dc618349db86885c832565b81006c0d00"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/validation/serial_scheduler_009/02__gqa6_pmc_read.accepted_checkpoint.json",
+      "size": 1335,
+      "sha256": "0a8f15b82ea281a27e75c5e8cc019f26ef101f8fad8b0e394c2b598707cb5cbc"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/validation/serial_scheduler_009/03__gqa6_pmc_write.accepted_checkpoint.json",
+      "size": 1339,
+      "sha256": "fecbc9dadc9b311f9c4780fb6eb7e4e726beaca763fb5fec76d8048d453a4501"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/validation/serial_scheduler_009/04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc.accepted_checkpoint.json",
+      "size": 2555,
+      "sha256": "2f72d96fc0d5c7fe9f7c44c5b144a3e81bcf9a9f1500d7dd37714baf8475d6fb"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/validation/serial_scheduler_009/05_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_read.accepted_checkpoint.json",
+      "size": 1516,
+      "sha256": "bd90015a059ca4360898ab9188dc3d2613b0537c69ed7c4bcfb73e7c03e4a482"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/validation/serial_scheduler_009/06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write.accepted_checkpoint.json",
+      "size": 1520,
+      "sha256": "88a6e91beca57e6507071259b594f0e16610e8c10a679e36a67cf932ad4b56c7"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/validation/serial_scheduler_009/07_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc.accepted_checkpoint.json",
+      "size": 1480,
+      "sha256": "70c14102b14a0fb8132d5b368864b15b8c2db52c2eab1b211a9558c6bbe03736"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/validation/serial_scheduler_009/08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read.accepted_checkpoint.json",
+      "size": 1500,
+      "sha256": "10518743e76e52e0841547b6e8012fdc06249f3a74d290641a688eda80a85cb6"
+    }
+  ],
+  "runtime_revision_018_unchanged": true,
+  "analysis_007_unchanged": true,
+  "new_attempt": "attempt_003",
+  "additional_warmups_or_altered_workload_within_attempt": false,
+  "deadline_authorization": {
+    "path": "/public/home/accl15ptg7/run_R08_R10/MACHINE_TIME_EXTENSION_002.json",
+    "size": 849,
+    "sha256": "fd69661ead053a8cd805f5132bd1382583ffc3b9775c5fd9e005565be0bf39b3"
+  },
+  "reason": "rank0 native PMC empty despite successful warmup native Start; preserve complete failure and retry original service initialization"
+}

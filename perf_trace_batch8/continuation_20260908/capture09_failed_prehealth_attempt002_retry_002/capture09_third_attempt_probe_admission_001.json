@@ -1,0 +1,15 @@
+{
+  "status": "complete_model_free_counter_recheck_only",
+  "probe": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_fresh_exec_pmc_write_recheck_002/RESULT.json",
+    "size": 2943,
+    "sha256": "45baac8fe1caebf9bcd428f92721c44d970776d66730e2379bfaf486c32149fd"
+  },
+  "native_retry_authorization": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/capture09_prehealth_retry_002.json",
+    "size": 5064,
+    "sha256": "cabb091db747664cc6e5e8499d1779c53e7743b92a265ca6f353624826d146d5"
+  },
+  "model_free_probe_is_not_measured_capture_evidence": true,
+  "runtime_configuration_unchanged": true
+}

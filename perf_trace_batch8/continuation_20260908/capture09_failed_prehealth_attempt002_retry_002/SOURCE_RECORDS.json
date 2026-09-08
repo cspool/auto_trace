@@ -1,0 +1,72 @@
+[
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/capture09_prehealth_retry_002.json",
+    "size": 5064,
+    "sha256": "cabb091db747664cc6e5e8499d1779c53e7743b92a265ca6f353624826d146d5"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_002/RAW_CAPTURE_FAILURE.json",
+    "size": 1218,
+    "sha256": "b4824ddc0405d042122002b42e4ba14d74b4bb280a7acf2ba2a5318cf8524702"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_002/raw_inventory_at_exit.json",
+    "size": 11340,
+    "sha256": "4640de6ad2c72154e0624c7c79309bf0c5e0b52db1677aa75b7b4754205d3af8"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_002/control/PRE_MEASURED_NATIVE_PMC_HEALTH.json",
+    "size": 227,
+    "sha256": "b9fd005f78d33d5faa75820b8a9aeda85d417b98df90a568f0b9104f0849ac10"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_002/control/tracee_process_cleanup.json",
+    "size": 280,
+    "sha256": "6396e5b5767a73b8164ccecd017094b17a64d61ef58e736793eb11382c1e1a12"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_002/control/pmc_gate_events/warmup_start.rank0.pid809197.json",
+    "size": 1112,
+    "sha256": "ce438642873517f829933505acee63b8ef864e76c4d305a54371bf65b6dc317d"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_002/control/pmc_gate_events/warmup_start.rank1.pid809192.json",
+    "size": 1112,
+    "sha256": "37c5cfc5c9365ae5ce4b139f1b327d55a039736ca1b1a7e3458f14886a5d92ff"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_002/logs/hipprof.log",
+    "size": 3582,
+    "sha256": "c93e9dcdcd42e7bc6682036f1c7352085e163fddffae595abf14e78b7cec90e4"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_002/logs/service.log",
+    "size": 48867,
+    "sha256": "2908ba3e44e9166a1aa27599e4d82a8c68292f7134853d0f76c98d9b4e02da15"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_002/logs/workload.log",
+    "size": 786,
+    "sha256": "ef65f33d5b132ac2cb64dd07427455a0ab0454c05012022039d23825a8be3fbe"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/capture09_attempt_002_empty_pmc_native_diagnostic_001.json",
+    "size": 4843,
+    "sha256": "1f40c25699a2fe15e6ea9e44084227d8c16afdf76a98e2582ac7464e11555766"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/capture09_attempt002_process_library_observation_001.json",
+    "size": 1153,
+    "sha256": "4fb92d9bac03a13c11febaf2126364b53d73cd111cefb6ddd331e540e23f0ce1"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/capture09_attempt_001_native_profiler_transition_query_001.json",
+    "size": 1541,
+    "sha256": "fe3f42b2fea4bc112e03b078ce258330eb7088a992b61ce0cce140b2d773293f"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/capture09_third_attempt_probe_admission_001.json",
+    "size": 845,
+    "sha256": "288519bc54c54e4049af2ba2696e66c99085442430ed6e760b7c4ef08462bffa"
+  }
+]
