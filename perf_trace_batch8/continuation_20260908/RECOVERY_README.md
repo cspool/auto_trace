@@ -8,7 +8,7 @@ NFS 控制目录：`/public/home/accl15ptg7/run_R08_R10`。原始 R08 运行目�
 
 - 核对 `RECOVERY_STATE_NFS.json`、最新进度提交及各 `*.accepted_checkpoint.json` 的时间和 SHA256。会话 ID 与 PID 仅适用于原容器。
 - 当前冻结工具为 `raw/runtime_tools/revision_021`、`tools/analysis_008`，对应 `runtime_capture_gate_014.json` 与 `independent_native_sessions_analysis_CPU_gate_001.json`；原有后台 graph 范围门禁仍保留。不得修改已冻结的运行代码、原始数据或验收凭证。
-- 当前外层采集调度器为 `run_r08_serial_suffix_013.py`，复用前八项验收并从第九项 attempt006 继续。重启时保留已有目录及失败记录，建立新的调度恢复版本；复用已验收项，给未完成的采集建立新 attempt，避免覆盖旧记录。已封存但 CPU 校验失败的原始采集可在新校验版本中继续分析，无须直接重新执行 GPU 采集。
+- 当前外层采集调度器为 `run_r08_serial_suffix_013.py`，启动时复用前八项验收并从第九项 attempt006 继续。第九项现已通过完整独立审计、发布与回收校验，第十项 attempt001 于 2026-09-08 18:24:15 UTC 启动。重启时保留已有目录及失败记录，建立新的调度恢复版本；复用已验收项，给未完成的采集建立新 attempt，避免覆盖旧记录。已封存但 CPU 校验失败的原始采集可在新校验版本中继续分析，无须直接重新执行 GPU 采集。
 - 只有完整执行清单、归因清单和独立审计同时存在且哈希匹配，才算一项采集完成。HTTP 成功或实时 marker 覆盖报告本身不能代替原生 DB/PMC 归因审计。
 
 ## 存储与远端恢复
@@ -27,10 +27,12 @@ CPU 后续入口为 `await_all_captures_then_cpu_002.py` → `run_closed_R08_to_
 
 八请求覆盖要求是 R06 声明的每个请求首个 prefill / decode 各 784 个目标，共 12,544 个，并在原生归因中保持 DP2 两张卡的完整覆盖。R10 主时间线应有 59,872 个事件。R07 是唯一 observed 时间来源；保留其“本地离线恢复完成，但历史原生控制器终止无法追认”的事实，不把重放时钟当成 R07 延迟。
 
-已授权机器截止时间：2026-09-09 04:18:09 UTC（用户第二次追加 8 小时，见 MACHINE_TIME_EXTENSION_002.json）。第九项前五次尝试在正式测量前因一个或两个工作进程的 PMC 为空失败，失败数据全部保留。runtime019 的 Stop/Start 与 runtime020 的初始关闭方式均未修复。独立采集会话在重叠执行、跨卡操作、multiprocessing 通信、原生标记和退出状态的短探针中通过，runtime021 现已用于 attempt006，完整模型验收仍未完成。
+已授权机器截止时间：2026-09-09 04:18:09 UTC（用户第二次追加 8 小时，见 MACHINE_TIME_EXTENSION_002.json）。第九项前五次尝试在正式测量前因一个或两个工作进程的 PMC 为空失败，失败原始数据保留于 NFS 并已[单独发布](https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-r08-capture09-prehealth-failures-20260908-001)，不计作已验收采集。runtime019 的 Stop/Start 与 runtime020 的初始关闭方式均未修复。runtime021 的第九项 attempt006 已通过实际完整模型验收：八请求、两张卡各 192 项目标、71,424 个计数器值、30,645,909 条原始 DB 记录及全部 CSV 字节均经检查；证据见 `capture09_attempt_006_accepted_001` 和[第九项 Release](https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-r08-09-chunk-gated-delta-rule-fwd-kernel-h-blockdim64-pmc-write-20260908)。底层共享采集器故障的精确内部原因仍未证明。
 
 runtime021 保留同一个 DP2/TP1 服务、原有两个预热及八个并发请求，仅为两个 GPU 工作进程分别启动原生 HIPProf 会话。每张卡的原始日志与 DB/CSV 位于 `raw/captures/<segment>/<attempt>/native_collectors/rank0` 和 `rank1`。`COLLECTOR_EXIT.json`、`control/NATIVE_COLLECTORS_CLOSED.json` 记录真实退出码与进程组关闭；不能用单个原生进程完成代替两边完成。
 
-原始两份 DB/CSV 全部保留。根目录 `capture.db` / `capture.csv` 是明确标注的无损派生合并，不是新的原生采集；`NATIVE_SESSION_UNION.json` 记录所有原始 SHA256、表行映射和 CSV 行映射。分析008独立逐行比较原始数据，并在每条归因记录中写入原始 DB/CSV 路径、SHA256 与原始 CSV 行号。不得修改原始时间戳、计数器、设备编号、PID 或关联索引。恢复全部原始文件后，仍须通过完整 R08 审计。当前采集调度器、后续 CPU 阶段、发布及进度监控均使用新期限。
+原始两份 DB/CSV 必须完整保留在 NFS 或已校验的 Release 中；临时回收后仍按原始 SHA256 全量恢复。根目录 `capture.db` / `capture.csv` 是明确标注的无损派生合并，不是新的原生采集；`NATIVE_SESSION_UNION.json` 记录所有原始 SHA256、表行映射和 CSV 行映射。分析008独立逐行比较原始数据，并在每条归因记录中写入原始 DB/CSV 路径、SHA256 与原始 CSV 行号。不得修改原始时间戳、计数器、设备编号、PID 或关联索引。恢复全部原始文件后，仍须通过完整 R08 审计。当前采集调度器、后续 CPU 阶段、发布及进度监控均使用新期限。
+
+最新空间预测见 `STORAGE_FORECAST_AFTER_CAPTURE09_001.json`，已计入两份原始 DB 和派生 DB 同时保留的额外大小。按第九项实测大小，全部大文件恢复量预计为 77.84 GB；即使后三项各增长 50%，释放已授权的权重并恢复原始文件后，root 预计仍余 77.73 GB。该估算不代替最后的实际容量门禁，也不授权提前删除权重。
 
 若发布器报 `create release`，先检查它引用的本地 HEAD 是否已存在于远端：本次曾因 Git 推送传输停滞导致 GitHub 找不到 `target_commitish`。保留归档和采集，核验进程归属后对同一提交做有超时限制的普通推送重试，验证远端 SHA，再让发布器继续；不要因此重跑 GPU 采集或强制改写分支。
