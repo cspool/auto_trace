@@ -62,7 +62,7 @@ def main():
    if free==len(ends):ends.append(int(r['end_ns']))
    else:ends[free]=int(r['end_ns'])
    lanes[kind,sid]=free
- count_expected=len(request)+len(process)+2*len(kernel);ACCEPT.mkdir(exist_ok=False);counts=collections.Counter();row_identity={};trace=ACCEPT/'E2E_PROCESS_TIMELINE.full.perfetto.json';first=True
+ count_expected=len(request)+len(process)+2*len(kernel);check(ACCEPT.is_symlink() and os.readlink(ACCEPT)==assignment['bulk_storage_paths'][str(ACCEPT)] and not any(ACCEPT.iterdir()),'exact empty assigned acceptance bulk entrypoint');counts=collections.Counter();row_identity={};trace=ACCEPT/'E2E_PROCESS_TIMELINE.full.perfetto.json';first=True
  with trace.open('x') as out:
   out.write('{"displayTimeUnit":"ns","traceEvents":[')
   for kind,table,items,copy in [('request','request_timeline',request,0),('process','process_timeline',process,0),('strict_owned_kernel','kernel_timeline',kernel,0),('gpu_queue','kernel_timeline',kernel,1)]:

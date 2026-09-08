@@ -20,3 +20,11 @@ R08_MODEL_INITIALIZING 03__gqa6_pmc_write 570 seconds
 R08_MODEL_INITIALIZING 03__gqa6_pmc_write 600 seconds
 R08_MODEL_INITIALIZING 03__gqa6_pmc_write 630 seconds
 R08_MODEL_READY 03__gqa6_pmc_write 644.81
+HIP_PROF:on Tue Sep  8 15:47:33 2026
+HIP_PROF:process id '242777'
+HIP_PROF:db file '/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/03__gqa6_pmc_write/attempt_001/capture.db'
+HIP_PROF:out put file '/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/03__gqa6_pmc_write/attempt_001/capture'
+HIP_PROF:profiling ' /usr/bin/python -B /public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/revision_013/run_capture.py tracee --pass-root /public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/03__gqa6_pmc_write/attempt_001 --segment 03__gqa6_pmc_write'
+HIP_PROF:process begin
+HIP_PROF:process end run total cost:1362(s)
+HIP_PROF:finish

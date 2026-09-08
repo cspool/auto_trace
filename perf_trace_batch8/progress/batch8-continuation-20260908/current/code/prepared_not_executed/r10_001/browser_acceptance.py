@@ -37,7 +37,7 @@ def static_check(path):
  for pat in patterns:check(not re.search(pat,code),'forbidden network code '+pat)
  check(not re.search(r'@import|url\s*\(',css,re.I),'external CSS resource')
  for link in parser.links:
-  check(':' not in link and not link.startswith('//'),'nonlocal navigation');check((path.parent/link).resolve().is_relative_to(ROOT.resolve()),'contained relative navigation')
+  check(':' not in link and not link.startswith('//'),'nonlocal navigation');check(Path(os.path.abspath(path.parent/link)).is_relative_to(ROOT),'contained relative navigation')
  return {'file':rec(path),'active_external_resources':[],'runtime_code_sha256':hashlib.sha256(code.encode()).hexdigest(),'network_patterns_rejected':patterns,'relative_navigation':parser.links}
 def timeline_checks(page,manifest):
  results={}

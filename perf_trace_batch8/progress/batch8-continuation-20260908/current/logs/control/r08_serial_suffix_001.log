@@ -11,3 +11,13 @@ PHASE_START 2026-09-08T07:47:17.299738+00:00 ['/usr/bin/python', '-B', '/public/
 PHASE_EXIT /public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/analysis_004/audit_capture.py 0
 CAPTURE_ACCEPTED 02__gqa6_pmc_read PREFIX 2
 PHASE_START 2026-09-08T07:47:32.800281+00:00 ['/usr/bin/python', '-B', '/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/revision_013/run_capture.py', 'capture', '--segment', '03__gqa6_pmc_write', '--attempt', 'attempt_001']
+PHASE_EXIT /public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/revision_013/run_capture.py 0
+PHASE_START 2026-09-08T08:11:04.441329+00:00 ['/usr/bin/python', '-B', '/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/analysis_004/normalize_capture.py', '--segment', '03__gqa6_pmc_write', '--attempt', 'attempt_001', '--revision', 'revision_002']
+Traceback (most recent call last):
+  File "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/continuation_20260908/run_r08_serial_suffix_001.py", line 60, in <module>
+    if __name__=='__main__':main()
+  File "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/continuation_20260908/run_r08_serial_suffix_001.py", line 51, in main
+    phase([sys.executable,'-B',str(ROOT/'tools/analysis_004/normalize_capture.py'),'--segment',seg,'--attempt',attempt,'--revision','revision_002'],schedule/(seg+'.normalize.log'))
+  File "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/continuation_20260908/run_r08_serial_suffix_001.py", line 28, in phase
+    assert rc==0,'phase failed: '+str(log)
+AssertionError: phase failed: /public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/validation/serial_scheduler_001/03__gqa6_pmc_write.normalize.log

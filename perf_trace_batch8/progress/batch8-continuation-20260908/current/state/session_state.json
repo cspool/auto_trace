@@ -51,5 +51,10 @@
   "remote_checkpoint_001_release": "https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-continuation-checkpoint-20260908-001",
   "r10_templates_root": "/public/home/accl15ptg7/run_R08_R10/stage_tool_templates/r10_001",
   "r10_actual_execution_started": false,
-  "memory_storage_relocation_002_session": 86638
+  "memory_storage_relocation_002_session": 86638,
+  "remote_progress_watchdog_session": 22900,
+  "accepted_capture_publisher_session": 39786,
+  "remote_progress_branch": "progress/batch8-continuation-20260908",
+  "status_refreshed_utc": "2026-09-08T08:11:29.445402+00:00",
+  "r08_second_capture_remote_publication": "https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-r08-02--gqa6-pmc-read-20260908"
 }
