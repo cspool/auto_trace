@@ -1,0 +1,112 @@
+{
+  "status": "complete_CPU_preparation_only",
+  "model_device_or_R09_R10_business_execution": false,
+  "checks": [
+    "R08_complete_schema",
+    "R08_missing_direct_hash_rejected",
+    "R08_only_three_requests_rejected",
+    "R08_one_native_rank_rejected",
+    "R08_premature_complete_rejected",
+    "R08_R07_uncertainty_erased_rejected",
+    "R08_wrong_output_hash_rejected",
+    "R09_complete_schema",
+    "R09_missing_direct_hash_rejected",
+    "R09_only_three_requests_rejected",
+    "R09_one_native_rank_rejected",
+    "R09_premature_complete_rejected",
+    "R09_R07_uncertainty_erased_rejected",
+    "R09_wrong_output_hash_rejected",
+    "R10_complete_schema",
+    "R10_missing_direct_hash_rejected",
+    "R10_only_three_requests_rejected",
+    "R10_one_native_rank_rejected",
+    "R10_premature_complete_rejected",
+    "R10_R07_uncertainty_erased_rejected",
+    "R10_wrong_output_hash_rejected",
+    "actual_file_wrong_SHA256_rejected"
+  ],
+  "R10_final_manifest_includes_independent_audit_after_audit_exit": true,
+  "frozen_before_actual_assignment_required": true,
+  "files": [
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/audit_runtime_handoff_001.py",
+      "size": 9199,
+      "sha256": "ab06b03b6fff768a7a02ab799a2486fc78d506139df16a9df3c5058cd7a16a93"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/prepare_stage_assignments_002.py",
+      "size": 15822,
+      "sha256": "af181d256cfb19eb19506d14d906fc7b8ca1e2b147c50586ab01b2ca5cab14ff"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/stage_tool_templates_003/r10_001/viewer.js",
+      "size": 19884,
+      "sha256": "373f0d11054c5b361ce1b104283ab4aed90ae7c77c7c9cdf2a8ff1ccd544cb8a"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/stage_tool_templates_003/r10_001/audit_report.py",
+      "size": 16068,
+      "sha256": "89cd12127a11d7d03b8df2e11b5777411902fc78a020595679cb601db842370f"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/stage_tool_templates_003/r10_001/seal_acceptance.py",
+      "size": 6626,
+      "sha256": "46ab0226b31a425e5b09d5cbd5ece41aa722ef252ed3863409a0aeac04fba356"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/stage_tool_templates_003/r10_001/build_report.py",
+      "size": 18762,
+      "sha256": "c7c57f1f0edf8ac5ea24c9260b4ac0af9c72b91227b0282a59c2cb15c14d19af"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/stage_tool_templates_003/r10_001/viewer.css",
+      "size": 2377,
+      "sha256": "2c7cedbe377e42f4d087c5f346c31b207d0a9413d3b484b06f706bf3f95170b6"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/stage_tool_templates_003/r10_001/browser_acceptance.py",
+      "size": 14655,
+      "sha256": "7922f50f39a83a21fe1effd451d5c62d24d77c4c52a0ba783ca4692a7346890d"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/stage_tool_templates_003/r08_closure_001/audit_r08.py",
+      "size": 5763,
+      "sha256": "adf01fbadd3434881f1c2eb5843caa4aaacba15d845ed0762c437208b90bb16f"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/stage_tool_templates_003/r08_closure_001/seal_r08.py",
+      "size": 8283,
+      "sha256": "6a3bcdc0c4f9aa72900b8522560432f7f5582f75b957a592d93ea26dc127d5da"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/stage_tool_templates_003/r09_001/audit_analysis.py",
+      "size": 21458,
+      "sha256": "752848b4dddb78ee9b1af4f3dafb3409cb36ee8f74253f3a82ccfb5750ea2d1e"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/stage_tool_templates_003/r09_001/build_analysis.py",
+      "size": 26415,
+      "sha256": "aa57fb6dde47cbb0018a64918f3f74184f8297f400892626623483d5daef9afd"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/stage_tool_templates_003/r09_001/audit_completion.py",
+      "size": 3218,
+      "sha256": "2c584eb304cdfdaa4a36d964816a3c144faba2a64c8edfaa2c97096460e4b52a"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/stage_tool_templates_003/r09_001/stage_common.py",
+      "size": 4864,
+      "sha256": "596fdfef88f9675df098efb9364ac39c4aa1173ba2169ef3d856a694bbd5bf6f"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/stage_tool_templates_003/r09_001/seal_r09.py",
+      "size": 3560,
+      "sha256": "479f8c4624c1d533234dfe4d8794780e39544f3316f8319eae230c38d93adb96"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/stage_tool_templates_003/shared_001/cpu_stage_common.py",
+      "size": 11820,
+      "sha256": "31516c5538ee11ac91d37793c74bfa76ada1f9a01e036887dc33985a5e2abc58"
+    }
+  ]
+}
