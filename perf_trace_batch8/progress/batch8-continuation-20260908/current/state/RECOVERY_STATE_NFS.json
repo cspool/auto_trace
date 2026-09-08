@@ -1,7 +1,7 @@
 {
   "runtime_run_id": "batch8-dp2-fresh-003",
   "current_capture": "09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_006",
-  "accepted_prefix_count": 8,
+  "accepted_prefix_count": 9,
   "current_runtime_revision": "revision_021",
   "runtime_gate": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/runtime_capture_gate_014.json",
   "scheduler": "serial_scheduler_013",
@@ -17,7 +17,7 @@
   "accepted_capture_publisher": "/public/home/accl15ptg7/run_R08_R10/publish_accepted_captures_004.py",
   "original_NFS_session_state_superseded_by_this_emergency_record": true,
   "R09_R10_actual_execution_started": false,
-  "home_storage_available_gib": 5.75,
+  "home_storage_available_gib": 5.17,
   "weight_storage_constraint": "All physical weight bytes must stay under /root; never migrate weights to NFS again",
   "accepted_capture_publisher_session": 12763,
   "raw_storage_watchdog_session": 94301,
@@ -48,13 +48,13 @@
   "cpu_suffix_status": "outer waiting only; will restore all raw sources before R08 assignment",
   "complete_stage_publisher": "publish_complete_stages_003.py",
   "complete_stage_publisher_session": 1983,
-  "current_capture_phase": "workload_complete_collector_export_or_raw_sealing",
+  "current_capture_phase": "accepted",
   "latest_health_observation": {
-    "utc": "2026-09-08T18:10:44.519079+00:00",
-    "accepted_R08": 8,
+    "utc": "2026-09-08T18:20:45.672278+00:00",
+    "accepted_R08": 9,
     "planned_R08": 12,
     "current_capture": "09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_006",
-    "current_phase": "workload_complete_collector_export_or_raw_sealing",
+    "current_phase": "accepted",
     "native_workers": [
       {
         "rank": 0,
@@ -99,12 +99,12 @@
     "live_eight_request_target_coverage": {
       "status": "complete_live_marker_coverage",
       "report": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/live_eight_request_checks_001/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write.attempt_006.1788889601550055959.json",
-      "closed_capture_accepted": false,
+      "closed_capture_accepted": true,
       "all_first_phase_orders_match_R07": true
     },
-    "NFS_available_GiB": 5.75,
+    "NFS_available_GiB": 5.17,
     "temporarily_evicted_bytes": 45795450475,
-    "remaining_machine_hours": 10.12,
+    "remaining_machine_hours": 9.96,
     "completed_stages": []
   },
   "runtime_health_monitor_session": 44834,
@@ -123,7 +123,7 @@
     "sha256": "ca02d6f7da1f9407e5517d68f787e0b00e61be8f4e392db75ccbccfc312ffaa3"
   },
   "previous_scheduler_session": 40553,
-  "raw_capture_complete": false,
+  "raw_capture_complete": true,
   "all_required_1408_logical_owner_multiplicities_reached_before_failure": true,
   "CPU_normalization_session": null,
   "actual_graph_scope_proof": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_graph_selected_intersection_001.json",

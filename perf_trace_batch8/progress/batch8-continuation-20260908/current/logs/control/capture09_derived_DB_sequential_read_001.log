@@ -1,0 +1,15 @@
+{"event": "READ_ONLY_SEQUENTIAL_PREFETCH_START", "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_006/capture.db", "utc": "2026-09-08T18:12:15.998950+00:00", "size": 3543883776, "does_not_replace_SQLite_or_native_audit": true}
+{"bytes_read": 268435456, "elapsed_seconds": 0.429}
+{"bytes_read": 536870912, "elapsed_seconds": 1.008}
+{"bytes_read": 805306368, "elapsed_seconds": 1.61}
+{"bytes_read": 1073741824, "elapsed_seconds": 2.023}
+{"bytes_read": 1342177280, "elapsed_seconds": 2.305}
+{"bytes_read": 1610612736, "elapsed_seconds": 2.788}
+{"bytes_read": 1879048192, "elapsed_seconds": 3.196}
+{"bytes_read": 2147483648, "elapsed_seconds": 3.496}
+{"bytes_read": 2415919104, "elapsed_seconds": 3.777}
+{"bytes_read": 2684354560, "elapsed_seconds": 4.056}
+{"bytes_read": 2952790016, "elapsed_seconds": 4.336}
+{"bytes_read": 3221225472, "elapsed_seconds": 4.617}
+{"bytes_read": 3489660928, "elapsed_seconds": 4.896}
+{"status": "read_only_sequential_pass_complete", "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_006/capture.db", "size": 3543883776, "sha256": "bc15a83f9678f801049d37541729c306e3cd95249c8454f97325e505c7ff0965", "elapsed_seconds": 4.95329942193348, "capture_accepted": false, "SQLite_check_replaced": false}
