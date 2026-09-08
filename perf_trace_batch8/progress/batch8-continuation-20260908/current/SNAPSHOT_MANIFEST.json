@@ -1,6 +1,6 @@
 {
-  "snapshot_started_utc": "2026-09-08T19:20:47.339148+00:00",
-  "snapshot_completed_utc": "2026-09-08T19:21:02.862791+00:00",
+  "snapshot_started_utc": "2026-09-08T19:30:47.292146+00:00",
+  "snapshot_completed_utc": "2026-09-08T19:31:02.149964+00:00",
   "runtime_run_id": "batch8-dp2-fresh-003",
   "r08_accepted_capture_count": 10,
   "r08_planned_capture_count": 12,
@@ -37,7 +37,7 @@
     "accepted_capture_publisher": "/public/home/accl15ptg7/run_R08_R10/publish_accepted_captures_004.py",
     "original_NFS_session_state_superseded_by_this_emergency_record": true,
     "R09_R10_actual_execution_started": false,
-    "home_storage_available_gib": 11.54,
+    "home_storage_available_gib": 9.46,
     "weight_storage_constraint": "All physical weight bytes must stay under /root; never migrate weights to NFS again",
     "accepted_capture_publisher_session": 12763,
     "raw_storage_watchdog_session": 94301,
@@ -70,7 +70,7 @@
     "complete_stage_publisher_session": 1983,
     "current_capture_phase": "measured_batch",
     "latest_health_observation": {
-      "utc": "2026-09-08T19:20:54.188244+00:00",
+      "utc": "2026-09-08T19:30:57.373056+00:00",
       "accepted_R08": 10,
       "planned_R08": 12,
       "current_capture": "11_chunk_fwd_kernel_o_pmc_read/attempt_001",
@@ -79,13 +79,13 @@
         {
           "rank": 0,
           "worker_pid": 1029916,
-          "PMC_bytes": 69027101,
+          "PMC_bytes": 80884126,
           "worker_alive": true
         },
         {
           "rank": 1,
           "worker_pid": 1029918,
-          "PMC_bytes": 70608430,
+          "PMC_bytes": 81791819,
           "worker_alive": true
         }
       ],
@@ -113,18 +113,19 @@
       ],
       "pre_measured_health": "complete",
       "measured_request_token_progress": {
-        "batch8-dual-dcu-dp2-req-002-28a42990210e6f68": 81,
-        "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786": 37,
-        "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5": 0,
-        "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c": 84,
-        "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f": 42,
-        "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3": 0,
-        "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04": 2
+        "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5": 1023,
+        "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41": 982,
+        "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3": 995
       },
-      "live_eight_request_target_coverage": null,
-      "NFS_available_GiB": 11.54,
+      "live_eight_request_target_coverage": {
+        "status": "complete_live_marker_coverage",
+        "report": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/live_eight_request_checks_001/11_chunk_fwd_kernel_o_pmc_read.attempt_001.1788895376253352087.json",
+        "closed_capture_accepted": false,
+        "all_first_phase_orders_match_R07": true
+      },
+      "NFS_available_GiB": 9.46,
       "temporarily_evicted_bytes": 61538586960,
-      "remaining_machine_hours": 8.95,
+      "remaining_machine_hours": 8.79,
       "completed_stages": []
     },
     "runtime_health_monitor_session": 44834,
@@ -1453,10 +1454,10 @@
       "source_path": "/public/home/accl15ptg7/run_R08_R10/remote_checkpoint_watchdog_011.log",
       "snapshot_relative_path": "logs/control/remote_checkpoint_watchdog_011.log",
       "kind": "log_snapshot",
-      "captured_bytes": 2575,
-      "source_captured_prefix_sha256": "9379291112f345c3ff5957dd0ebcb0eeedcdeeb3f532ddc9130c2d449f57a42f",
-      "snapshot_bytes": 2575,
-      "snapshot_sha256": "9379291112f345c3ff5957dd0ebcb0eeedcdeeb3f532ddc9130c2d449f57a42f",
+      "captured_bytes": 2675,
+      "source_captured_prefix_sha256": "2812abce6a38b64a27ce9df48437175802e00a5111c33b9282be4ace36deb052",
+      "snapshot_bytes": 2675,
+      "snapshot_sha256": "2812abce6a38b64a27ce9df48437175802e00a5111c33b9282be4ace36deb052",
       "redacted": false,
       "source_was_live": true
     },
@@ -1750,10 +1751,10 @@
       "source_path": "/public/home/accl15ptg7/run_R08_R10/watch_runtime_health_007.log",
       "snapshot_relative_path": "logs/control/watch_runtime_health_007.log",
       "kind": "log_snapshot",
-      "captured_bytes": 144480,
-      "source_captured_prefix_sha256": "94f178b5c39d62a688d90c03012af4f8d193c56c4ab4b5f7273fc2cedfab193d",
-      "snapshot_bytes": 144480,
-      "snapshot_sha256": "94f178b5c39d62a688d90c03012af4f8d193c56c4ab4b5f7273fc2cedfab193d",
+      "captured_bytes": 162161,
+      "source_captured_prefix_sha256": "29ffb6cc6a0bfd1305e85dfb45a3b5633fd78ce5b488fb1c0cbc8a263f0f326f",
+      "snapshot_bytes": 162161,
+      "snapshot_sha256": "29ffb6cc6a0bfd1305e85dfb45a3b5633fd78ce5b488fb1c0cbc8a263f0f326f",
       "redacted": false,
       "source_was_live": true
     },
@@ -3554,10 +3555,10 @@
       "source_path": "/public/home/accl15ptg7/run_R08_R10/RECOVERY_STATE_NFS.json",
       "snapshot_relative_path": "state/RECOVERY_STATE_NFS.json",
       "kind": "authoritative_execution_state",
-      "captured_bytes": 10083,
-      "source_captured_prefix_sha256": "dc4b1e0af02deb9ede5202ad483dfdd56dd6c64403127ac7dc074e5d1ef97740",
-      "snapshot_bytes": 10083,
-      "snapshot_sha256": "dc4b1e0af02deb9ede5202ad483dfdd56dd6c64403127ac7dc074e5d1ef97740",
+      "captured_bytes": 10735,
+      "source_captured_prefix_sha256": "e349d51db78ef74e532de9eef1687f07e97545955cc6002ebcd9d3a4605511c2",
+      "snapshot_bytes": 10735,
+      "snapshot_sha256": "e349d51db78ef74e532de9eef1687f07e97545955cc6002ebcd9d3a4605511c2",
       "redacted": false,
       "source_was_live": false
     },
@@ -14213,10 +14214,10 @@
       "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/11_chunk_fwd_kernel_o_pmc_read/attempt_001/logs/service.log",
       "snapshot_relative_path": "r08/capture_logs/11_chunk_fwd_kernel_o_pmc_read/attempt_001/logs/service.log",
       "kind": "log_snapshot",
-      "captured_bytes": 28387,
-      "source_captured_prefix_sha256": "028aafd29bac859d0d185a6243b6e7e7e219eadb6e23209b1e4146ad83b6562e",
-      "snapshot_bytes": 28387,
-      "snapshot_sha256": "028aafd29bac859d0d185a6243b6e7e7e219eadb6e23209b1e4146ad83b6562e",
+      "captured_bytes": 28877,
+      "source_captured_prefix_sha256": "9d6ac46a9587de9f48061bfe93719f9e77fb0b52be5874ea5ded1ba98b864e91",
+      "snapshot_bytes": 28877,
+      "snapshot_sha256": "9d6ac46a9587de9f48061bfe93719f9e77fb0b52be5874ea5ded1ba98b864e91",
       "redacted": false,
       "source_was_live": true
     },
@@ -15687,6 +15688,17 @@
       "source_captured_prefix_sha256": "58e51164740e0bbe86e8dfad19b12d6f005d27533575be6ceedbe589cc51472c",
       "snapshot_bytes": 8244,
       "snapshot_sha256": "58e51164740e0bbe86e8dfad19b12d6f005d27533575be6ceedbe589cc51472c",
+      "redacted": false,
+      "source_was_live": false
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/live_eight_request_checks_001/11_chunk_fwd_kernel_o_pmc_read.attempt_001.1788895376253352087.json",
+      "snapshot_relative_path": "r08/emergency_runtime/live_eight_request_checks_001/11_chunk_fwd_kernel_o_pmc_read.attempt_001.1788895376253352087.json",
+      "kind": "frozen_runtime_tool_or_gate",
+      "captured_bytes": 8263,
+      "source_captured_prefix_sha256": "d593abcecbf65743624f64ce5a48d139e90852faca8f5165038ee2f7092c02ae",
+      "snapshot_bytes": 8263,
+      "snapshot_sha256": "d593abcecbf65743624f64ce5a48d139e90852faca8f5165038ee2f7092c02ae",
       "redacted": false,
       "source_was_live": false
     },

@@ -17,7 +17,7 @@
   "accepted_capture_publisher": "/public/home/accl15ptg7/run_R08_R10/publish_accepted_captures_004.py",
   "original_NFS_session_state_superseded_by_this_emergency_record": true,
   "R09_R10_actual_execution_started": false,
-  "home_storage_available_gib": 11.85,
+  "home_storage_available_gib": 9.67,
   "weight_storage_constraint": "All physical weight bytes must stay under /root; never migrate weights to NFS again",
   "accepted_capture_publisher_session": 12763,
   "raw_storage_watchdog_session": 94301,
@@ -50,7 +50,7 @@
   "complete_stage_publisher_session": 1983,
   "current_capture_phase": "measured_batch",
   "latest_health_observation": {
-    "utc": "2026-09-08T19:19:54.083955+00:00",
+    "utc": "2026-09-08T19:29:57.205783+00:00",
     "accepted_R08": 10,
     "planned_R08": 12,
     "current_capture": "11_chunk_fwd_kernel_o_pmc_read/attempt_001",
@@ -59,13 +59,13 @@
       {
         "rank": 0,
         "worker_pid": 1029916,
-        "PMC_bytes": 57180824,
+        "PMC_bytes": 80884126,
         "worker_alive": true
       },
       {
         "rank": 1,
         "worker_pid": 1029918,
-        "PMC_bytes": 59193163,
+        "PMC_bytes": 81791819,
         "worker_alive": true
       }
     ],
@@ -93,15 +93,24 @@
     ],
     "pre_measured_health": "complete",
     "measured_request_token_progress": {
-      "batch8-dual-dcu-dp2-req-002-28a42990210e6f68": 36,
-      "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786": 0,
-      "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c": 41,
-      "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f": 0
+      "batch8-dual-dcu-dp2-req-002-28a42990210e6f68": 1000,
+      "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786": 956,
+      "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5": 916,
+      "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41": 875,
+      "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c": 1017,
+      "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f": 975,
+      "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3": 891,
+      "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04": 935
     },
-    "live_eight_request_target_coverage": null,
-    "NFS_available_GiB": 11.85,
+    "live_eight_request_target_coverage": {
+      "status": "complete_live_marker_coverage",
+      "report": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/live_eight_request_checks_001/11_chunk_fwd_kernel_o_pmc_read.attempt_001.1788895376253352087.json",
+      "closed_capture_accepted": false,
+      "all_first_phase_orders_match_R07": true
+    },
+    "NFS_available_GiB": 9.67,
     "temporarily_evicted_bytes": 61538586960,
-    "remaining_machine_hours": 8.97,
+    "remaining_machine_hours": 8.8,
     "completed_stages": []
   },
   "runtime_health_monitor_session": 44834,

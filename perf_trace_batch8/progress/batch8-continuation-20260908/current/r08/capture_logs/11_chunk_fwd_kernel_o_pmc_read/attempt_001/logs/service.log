@@ -196,3 +196,8 @@ INFO 09-09 03:16:04 [utils.py:250] Waiting for API servers to complete ...
 (ApiServer_0 pid=1028387) INFO:     Application startup complete.
 (ApiServer_1 pid=1028388) INFO:     127.0.0.1:47644 - "POST /v1/chat/completions HTTP/1.1" 200 OK
 (ApiServer_0 pid=1028387) INFO:     127.0.0.1:47642 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(ApiServer_0 pid=1028387) INFO:     127.0.0.1:43354 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(ApiServer_1 pid=1028388) INFO:     127.0.0.1:43368 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(ApiServer_1 pid=1028388) INFO:     127.0.0.1:43392 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(ApiServer_0 pid=1028387) INFO:     127.0.0.1:43378 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(ApiServer_1 pid=1028388) INFO:     127.0.0.1:43428 - "POST /v1/chat/completions HTTP/1.1" 200 OK
