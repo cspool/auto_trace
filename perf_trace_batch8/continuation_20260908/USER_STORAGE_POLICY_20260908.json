@@ -1,0 +1,8 @@
+{
+  "recorded_utc": "2026-09-08T09:12:44.841644+00:00",
+  "user_instruction": "R08到结束的运行产物 阶段产出 日志都应该保存在NFS 而权重应该保存在root",
+  "weights_physical_root_required": true,
+  "R08_R09_R10_all_runtime_artifacts_stage_outputs_logs_physical_NFS_required": true,
+  "new_suffix_capture_launches_paused_until_NFS_migration_complete": true,
+  "active_attempt_finish_before_closed_file_relocation": true
+}
