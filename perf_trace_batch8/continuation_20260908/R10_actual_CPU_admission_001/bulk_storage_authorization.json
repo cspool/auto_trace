@@ -1,0 +1,13 @@
+{
+  "runtime_goal": "R10",
+  "runtime_run_id": "batch8-dp2-fresh-003",
+  "paths": {
+    "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/acceptance": "/public/home/accl15ptg7/run_R08_R10/R10_acceptance_payload_001"
+  },
+  "NFS_filesystem_device": 47,
+  "user_storage_policy": {
+    "path": "/public/home/accl15ptg7/run_R08_R10/USER_RELEASE_OFFLOAD_POLICY_20260908.json",
+    "size": 1076,
+    "sha256": "dc1d59ac481d2d149057271321d6f0f4643542bbfda0282e7b162e3e6ff75e0b"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "status": "complete",
+  "runtime_goal": "R10",
+  "tools": [
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/tools/revision_001/audit_report.py",
+      "size": 16068,
+      "sha256": "89cd12127a11d7d03b8df2e11b5777411902fc78a020595679cb601db842370f"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/tools/revision_001/browser_acceptance.py",
+      "size": 14655,
+      "sha256": "7922f50f39a83a21fe1effd451d5c62d24d77c4c52a0ba783ca4692a7346890d"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/tools/revision_001/build_report.py",
+      "size": 18762,
+      "sha256": "c7c57f1f0edf8ac5ea24c9260b4ac0af9c72b91227b0282a59c2cb15c14d19af"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/tools/revision_001/cpu_stage_common.py",
+      "size": 11820,
+      "sha256": "31516c5538ee11ac91d37793c74bfa76ada1f9a01e036887dc33985a5e2abc58"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/tools/revision_001/seal_acceptance.py",
+      "size": 6626,
+      "sha256": "46ab0226b31a425e5b09d5cbd5ece41aa722ef252ed3863409a0aeac04fba356"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/tools/revision_001/viewer.css",
+      "size": 2377,
+      "sha256": "2c7cedbe377e42f4d087c5f346c31b207d0a9413d3b484b06f706bf3f95170b6"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/tools/revision_001/viewer.js",
+      "size": 19884,
+      "sha256": "373f0d11054c5b361ce1b104283ab4aed90ae7c77c7c9cdf2a8ff1ccd544cb8a"
+    }
+  ],
+  "syntax_validated": true,
+  "device_and_model_imports_performed": false,
+  "outer_preparation": {
+    "path": "/public/home/accl15ptg7/run_R08_R10/prepare_stage_assignments_004.py",
+    "size": 17519,
+    "sha256": "cd6ed416173ce699ecb157d618b555217549c39c80491fe0c7b847a50331bff0"
+  },
+  "synthetic_browser_fixture": {
+    "path": "/public/home/accl15ptg7/run_R08_R10/emergency_tools/cpu_viewer_fixture_001/CPU_BROWSER_FIXTURE_AUDIT.json",
+    "size": 4752,
+    "sha256": "a37652daffa3413cff61e5b5ab77fcc0e85b1ae1545622e14ce99ae63a65672c"
+  },
+  "runtime_validation_still_required": true
+}
