@@ -8,7 +8,7 @@ NFS 控制目录：`/public/home/accl15ptg7/run_R08_R10`。原始 R08 运行目�
 
 - 核对 `RECOVERY_STATE_NFS.json`、最新进度提交及各 `*.accepted_checkpoint.json` 的时间和 SHA256。会话 ID 与 PID 仅适用于原容器。
 - 当前冻结工具为 `raw/runtime_tools/revision_018`、`tools/analysis_007`，对应 `runtime_capture_gate_011.json` 与 `background_graph_analysis_CPU_gate_001.json`。不得修改已冻结的运行代码、原始数据或验收凭证。
-- 当前外层采集调度器为 `run_r08_serial_suffix_007.py`。重启时保留已有目录及失败记录，建立新的调度恢复版本；复用已验收项，给未完成的采集建立新 attempt，避免覆盖旧记录。已封存但 CPU 校验失败的原始采集可在新校验版本中继续分析，无须直接重新执行 GPU 采集。
+- 当前外层采集调度器为 `run_r08_serial_suffix_008.py`，复用前七项验收并从第八项 attempt002 继续。重启时保留已有目录及失败记录，建立新的调度恢复版本；复用已验收项，给未完成的采集建立新 attempt，避免覆盖旧记录。已封存但 CPU 校验失败的原始采集可在新校验版本中继续分析，无须直接重新执行 GPU 采集。
 - 只有完整执行清单、归因清单和独立审计同时存在且哈希匹配，才算一项采集完成。HTTP 成功或实时 marker 覆盖报告本身不能代替原生 DB/PMC 归因审计。
 
 ## 存储与远端恢复
