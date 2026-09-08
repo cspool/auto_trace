@@ -1,0 +1,32 @@
+{
+  "status": "complete",
+  "workers": [
+    {
+      "rank": 0,
+      "native_device": 0,
+      "pid": 982062,
+      "worker_identity_path": "/public/home/accl15ptg7/r08_continuation_001_NFS_bulk/raw/captures/10_chunk_fwd_kernel_o_pmc/attempt_001/workload/r01_events/rank0/events.982062.jsonl",
+      "native_raw_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/10_chunk_fwd_kernel_o_pmc/attempt_001/native_collectors/rank0/hipprof_tmprpl_data_260909_022601_981830/input0_results_260909_022601/pmc_results_982062.txt",
+      "observed_native_bytes": 36171680,
+      "examined_prefix_bytes": 65536,
+      "examined_prefix_sha256": "405d82d614f5b47823f7b8cf6d3e9abf0fc5fc492190c2e4a8e96a075a9beb80",
+      "native_dispatch_headers_in_prefix": 13
+    },
+    {
+      "rank": 1,
+      "native_device": 1,
+      "pid": 982060,
+      "worker_identity_path": "/public/home/accl15ptg7/r08_continuation_001_NFS_bulk/raw/captures/10_chunk_fwd_kernel_o_pmc/attempt_001/workload/r01_events/rank1/events.982060.jsonl",
+      "native_raw_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/10_chunk_fwd_kernel_o_pmc/attempt_001/native_collectors/rank1/hipprof_tmprpl_data_260909_022601_981843/input0_results_260909_022601/pmc_results_982060.txt",
+      "observed_native_bytes": 36820438,
+      "examined_prefix_bytes": 65536,
+      "examined_prefix_sha256": "83b208d735026bf857a5c2ea7914cfe09e9972df41d7fa5e4c72d6adb7715f08",
+      "native_dispatch_headers_in_prefix": 13
+    }
+  ],
+  "measured_requests_started": false,
+  "read_only_native_file_gate": true,
+  "no_native_calls_no_added_workload": true,
+  "elapsed_seconds": 0.008644863963127136,
+  "checked_realtime_ns": 1788892358467377545
+}
