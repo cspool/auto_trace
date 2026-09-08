@@ -1,0 +1,42 @@
+{
+  "status": "complete_actual_remote_range_smoke",
+  "utc": "2026-09-08T19:08:13.942345+00:00",
+  "weights_changed": false,
+  "restoration_started": false,
+  "ranges": [
+    {
+      "requested_start": 0,
+      "requested_end": 65535,
+      "HTTP_status": 206,
+      "content_range": "bytes 0-65535/950000000",
+      "content_length": "65536",
+      "received_bytes": 65536,
+      "received_range_sha256": "9bdd6be8637c3bcdb4f0e5cc84fb156872c1b1d1356f98b0beb1abd8d3d83bcd"
+    },
+    {
+      "requested_start": 65536,
+      "requested_end": 131071,
+      "HTTP_status": 206,
+      "content_range": "bytes 65536-131071/950000000",
+      "content_length": "65536",
+      "received_bytes": 65536,
+      "received_range_sha256": "ed1d46ce39b8f2988d490ae3f1b6a94a0b30cbe4623d5478004400016f3ab8de"
+    },
+    {
+      "requested_start": 949934464,
+      "requested_end": 949999999,
+      "HTTP_status": 206,
+      "content_range": "bytes 949934464-949999999/950000000",
+      "content_length": "65536",
+      "received_bytes": 65536,
+      "received_range_sha256": "83e1cf58ae0d48d44b9ffda7d9d52837de38fb01a8fa44fc65684cbb39f36f3f"
+    }
+  ],
+  "source_release_url": "https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-r08-09-chunk-gated-delta-rule-fwd-kernel-h-blockdim64-pmc-write-20260908",
+  "asset_name": "capture.tar.zst.part001",
+  "asset_size": 950000000,
+  "published_asset_digest": "sha256:ca4e1b0cb5bf1e264919934b3662287ede495065b866dadfef0445fab5e849ad",
+  "origin_HTTP_status": 206,
+  "source_receipt_sha256": "e3fb03374b0275518a06ed3752bf03278654969c5cc445a0e994a81367fc9782",
+  "original_full_asset_SHA_verification_still_required_during_restore": true
+}
