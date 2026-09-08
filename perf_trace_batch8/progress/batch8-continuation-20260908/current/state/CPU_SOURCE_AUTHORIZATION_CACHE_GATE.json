@@ -1,0 +1,17 @@
+{
+  "status": "complete",
+  "production_common": {
+    "path": "/public/home/accl15ptg7/run_R08_R10/stage_tool_templates_002/shared_001/cpu_stage_common.py",
+    "size": 11526,
+    "sha256": "33cafd97713597d73fa18c9db376a0f436c59e27a5a6c16ca4dcdd935d5f0b7d"
+  },
+  "path_validations": 300,
+  "elapsed_seconds": 0.7206288439920172,
+  "authorization_cache": {
+    "memory_mappings": "CacheInfo(hits=0, misses=1, maxsize=1, currsize=1)",
+    "directory_mappings": "CacheInfo(hits=299, misses=1, maxsize=1, currsize=1)",
+    "storage_mappings": "CacheInfo(hits=299, misses=1, maxsize=1, currsize=1)"
+  },
+  "every_source_byte_hash_still_required_by_verify": true,
+  "native_queries": 0
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "utc": "2026-09-08T09:56:04.225683+00:00",
+  "user_authorization": [
+    "建议一种策略 你可以将已经完成的部分发布到release 然后完成剩余的部分 等R08所有部分都已经完成 可以将权重移除 并拉取所有产物进行R08的校验",
+    "已经发布的部分可以暂时移除 因为可以随时从release恢复"
+  ],
+  "during_capture": {
+    "weights": "physical /root",
+    "outputs_logs": "physical NFS",
+    "evict_only_after": "complete audited segment, closed processes, complete published release, current server sizes/SHA256 verified and local files SHA256 match published member manifest"
+  },
+  "after_all_12_R08_GPU_captures_accepted": {
+    "weights_removal_authorized": true,
+    "root_restoration_workspace": "assistant stated interpretation of user-proposed weights-removal strategy",
+    "restore_all_evicted_bytes_before_R08_final_validation": true,
+    "verify_original_file_sha256": true
+  },
+  "local_metadata_logs_and_recovery_manifests": "keep NFS and push remote",
+  "status": "active"
+}

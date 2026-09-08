@@ -1,0 +1,16 @@
+{
+  "status": "complete",
+  "production_restore_source": {
+    "path": "/public/home/accl15ptg7/run_R08_R10/restore_all_R08_release_artifacts_001.py",
+    "size": 12213,
+    "sha256": "e8a1d636894e72b014ad69295318f71235fe47d431be34c0737d0fff3367e4a4"
+  },
+  "exact_binary_member_roundtrip": true,
+  "canonical_symlink_binding": true,
+  "completed_restart_idempotent": true,
+  "wrong_SHA256_rejected": true,
+  "native_device_calls": 0,
+  "network_calls": 0,
+  "actual_weights_removed": false,
+  "actual_R08_capture_files_restored": false
+}

@@ -7,7 +7,7 @@
   "scheduler": "serial_scheduler_005",
   "scheduler_session": 22554,
   "capture_session": null,
-  "progress_watchdog_session": 71994,
+  "progress_watchdog_session": null,
   "deadline_utc": "2026-09-08T20:18:09Z",
   "home_quota_reported_bytes": 53687091200,
   "home_writes_currently_fail_ENOSPC": false,
@@ -40,5 +40,8 @@
   "evicted_accepted_capture_count": 3,
   "evicted_bytes": 13251173857,
   "weights_must_remain_until_all_12_R08_captures_accepted": true,
-  "R08_final_validation_restore_policy": "Restore every temporarily evicted artifact and verify original SHA256 before final R08 validation; after all 12 GPU captures, user authorizes deleting root weights to provide restoration workspace."
+  "R08_final_validation_restore_policy": "Restore every temporarily evicted artifact and verify original SHA256 before final R08 validation; after all 12 GPU captures, user authorizes deleting root weights to provide restoration workspace.",
+  "progress_watchdog": "remote_checkpoint_watchdog_008.py",
+  "postcapture_restoration_code": "/public/home/accl15ptg7/run_R08_R10/restore_all_R08_release_artifacts_001.py",
+  "postcapture_restoration_status": "CPU synthetic gate complete; actual restoration and weight removal not started"
 }
