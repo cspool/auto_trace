@@ -50,7 +50,7 @@
   "complete_stage_publisher_session": 46095,
   "current_capture_phase": "raw_complete_attribution_or_audit_pending",
   "latest_health_observation": {
-    "utc": "2026-09-08T10:43:22.524921+00:00",
+    "utc": "2026-09-08T10:53:23.459822+00:00",
     "accepted_R08": 3,
     "planned_R08": 12,
     "current_capture": "04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc/attempt_002",
@@ -77,7 +77,7 @@
     "live_eight_request_target_coverage": null,
     "NFS_available_GiB": 19.61,
     "temporarily_evicted_bytes": 13251173857,
-    "remaining_machine_hours": 9.58,
+    "remaining_machine_hours": 9.41,
     "completed_stages": []
   },
   "runtime_health_monitor_session": 19549,

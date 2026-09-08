@@ -1,0 +1,10 @@
+NATIVE_PROCESS_ROWS 04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc 0 6272
+NATIVE_PROCESS_ROWS 04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc 1 12544
+Traceback (most recent call last):
+  File "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/analysis_005/normalize_capture.py", line 195, in <module>
+    if __name__=='__main__':main()
+  File "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/analysis_005/normalize_capture.py", line 117, in main
+    require(len(actual)==len(expected),'exact R07/replay literal subsequence multiplicity '+source_id)
+  File "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_016/r08_native.py", line 23, in require
+    if not condition:raise ValueError(message)
+ValueError: exact R07/replay literal subsequence multiplicity r06-target-01f7e32209fdf1307f653e3c
