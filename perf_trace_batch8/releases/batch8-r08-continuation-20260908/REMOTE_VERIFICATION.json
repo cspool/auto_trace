@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "release": "perf-trace-batch8-r08-continuation-inputs-20260908",
+  "url": "https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-r08-continuation-inputs-20260908",
+  "published_at": "2026-09-08T03:56:40Z",
+  "asset_count": 7,
+  "total_bytes": 20734685,
+  "snapshot_members_verified": 92,
+  "verification": "Complete snapshot extraction and member hashes; GitHub uploaded state, size and server SHA-256 for every asset; public URL readback.",
+  "assets": [
+    {
+      "name": "r08-continuation-sources-inputs-control-20260908.tar.gz",
+      "size": 20543621,
+      "sha256": "2458f86ba5cf2bb835a23cd6c469ed6ee8519dc36694b06fa4340824d5084937",
+      "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-continuation-inputs-20260908/r08-continuation-sources-inputs-control-20260908.tar.gz"
+    },
+    {
+      "name": "CONTROL_SHA256SUMS",
+      "size": 433,
+      "sha256": "cd1599aa9155d6da55d7470a5edf64fb207cba43850f96c59ae5e5d7bbb2da69",
+      "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-continuation-inputs-20260908/CONTROL_SHA256SUMS"
+    },
+    {
+      "name": "MIGRATION_READINESS.json",
+      "size": 1706,
+      "sha256": "c58879d1a75d5ae4e04b0fceffadee32da410c02e3dc8e89af13307156fe8e47",
+      "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-continuation-inputs-20260908/MIGRATION_READINESS.json"
+    },
+    {
+      "name": "README.md",
+      "size": 5993,
+      "sha256": "26aa2e1c95da47faceedb9a467fd0c78db66ea2ee5f1b1b2b459138b0726b678",
+      "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-continuation-inputs-20260908/README.md"
+    },
+    {
+      "name": "RELEASE_CATALOG.json",
+      "size": 145051,
+      "sha256": "39f03e216f705dd747e3827fb2af9d6e140658066226fb8f96e435766c22bf8a",
+      "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-continuation-inputs-20260908/RELEASE_CATALOG.json"
+    },
+    {
+      "name": "SNAPSHOT_ARCHIVE_SHA256",
+      "size": 122,
+      "sha256": "59aa002eb16403bfeb9eaf4ae7b1683cd0e16219e1ea9a869c1962b05e1dbb42",
+      "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-continuation-inputs-20260908/SNAPSHOT_ARCHIVE_SHA256"
+    },
+    {
+      "name": "SNAPSHOT_MANIFEST.json",
+      "size": 37759,
+      "sha256": "c59d68ae9439660d9ad6f854aea63551cc2f06857726ba4e880373afb2ba741a",
+      "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-continuation-inputs-20260908/SNAPSHOT_MANIFEST.json"
+    }
+  ]
+}
