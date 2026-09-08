@@ -1,0 +1,131 @@
+{
+  "stages": [
+    {
+      "stage": "R04",
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/continuation_20260908/predecessor_validations/R04.json",
+      "size": 104501674,
+      "sha256": "661e109dcca67b2fdf0b0328dc2a6a428db02d7f0bf2373bdbe80aafdfb97acd",
+      "summary": {
+        "artifact_manifest_sha256": "bb3ab2c39d0b1c52ea1d0ff6355c58d34fa2df5f84bc29e04f9cb6fb1767730c",
+        "device_or_model_access_performed": false,
+        "entry_count": 136521,
+        "logical_bytes": 12889554069,
+        "original_handoff_sha256": "403af982ff2f70f89fce2cfda59074a9b014a32e95c53e9e05e292dc843e6719",
+        "predecessor_bytes_modified": false,
+        "resolver_sha256": "0e1e8ad6d35a19be637928024260b7a5dcb063668f13b0692372fc2f2cdf306c",
+        "runtime_run_id": "batch8-dp2-fresh-003",
+        "schema_version": 1,
+        "stage": "R04",
+        "status": "complete",
+        "tool_sha256": "cf9c7c96a1458023f9dc7e08fffcb5776c0ab318766e7d241cb1a9bc9f66440a"
+      },
+      "large_member_list_release_asset_planned": true
+    },
+    {
+      "stage": "R05",
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/continuation_20260908/predecessor_validations/R05.json",
+      "size": 37189,
+      "sha256": "f52736ed3e0e27bb29be15dbb78961cd6d1363ab04dbb2064b09d77088cf613a",
+      "summary": {
+        "artifact_manifest_sha256": "ee8aa843f85d4cbe5d02e3c7aa0cd54c36faa155fa050218cfb3101254366325",
+        "device_or_model_access_performed": false,
+        "entry_count": 69,
+        "logical_bytes": 126760327,
+        "original_handoff_sha256": "db08474f64a999428287388a949762274716df125132cbccbabe3ec23c1aec66",
+        "predecessor_bytes_modified": false,
+        "resolver_sha256": "0e1e8ad6d35a19be637928024260b7a5dcb063668f13b0692372fc2f2cdf306c",
+        "runtime_run_id": "batch8-dp2-fresh-003",
+        "schema_version": 1,
+        "stage": "R05",
+        "status": "complete",
+        "tool_sha256": "cf9c7c96a1458023f9dc7e08fffcb5776c0ab318766e7d241cb1a9bc9f66440a"
+      },
+      "large_member_list_release_asset_planned": true
+    },
+    {
+      "stage": "R01",
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/continuation_20260908/predecessor_validations/R01.json",
+      "size": 36927,
+      "sha256": "4a1d349d8dda01b41e70807cf55881c44b043fdc1037aef2d494ddfaa64fbd35",
+      "summary": {
+        "artifact_manifest_sha256": "be394f98cc18892c176d444ed08247d411ed7a911d248e6aded28352f8a69d56",
+        "device_or_model_access_performed": false,
+        "entry_count": 73,
+        "logical_bytes": 26539531348,
+        "original_handoff_sha256": "f28cb9274151c5b08f15964e9645cbcaa41b90fb6f867607472028e993b774d6",
+        "predecessor_bytes_modified": false,
+        "resolver_sha256": "0e1e8ad6d35a19be637928024260b7a5dcb063668f13b0692372fc2f2cdf306c",
+        "runtime_run_id": "batch8-dp2-fresh-003",
+        "schema_version": 1,
+        "stage": "R01",
+        "status": "complete",
+        "tool_sha256": "cf9c7c96a1458023f9dc7e08fffcb5776c0ab318766e7d241cb1a9bc9f66440a"
+      },
+      "large_member_list_release_asset_planned": true
+    },
+    {
+      "stage": "R06",
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/continuation_20260908/predecessor_validations/R06.json",
+      "size": 105629,
+      "sha256": "c4eb8c0fc3861defe6ca94d3e73fd8229396249b6da22dda5f2dcdc1caf434ae",
+      "summary": {
+        "artifact_manifest_sha256": "c5b8a21eb164478e4c5ad67d0e0bd828d337cb070588616deba4a3a2e0455f0d",
+        "device_or_model_access_performed": false,
+        "entry_count": 152,
+        "logical_bytes": 101324398,
+        "original_handoff_sha256": "0da6d692f1d69194ab02f4de0993c7aaca2381793eeb61ce33ffeb52ec058976",
+        "predecessor_bytes_modified": false,
+        "resolver_sha256": "0e1e8ad6d35a19be637928024260b7a5dcb063668f13b0692372fc2f2cdf306c",
+        "runtime_run_id": "batch8-dp2-fresh-003",
+        "schema_version": 1,
+        "stage": "R06",
+        "status": "complete",
+        "tool_sha256": "cf9c7c96a1458023f9dc7e08fffcb5776c0ab318766e7d241cb1a9bc9f66440a"
+      },
+      "large_member_list_release_asset_planned": true
+    },
+    {
+      "stage": "R02",
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/continuation_20260908/predecessor_validations/R02.json",
+      "size": 891544,
+      "sha256": "802cf20166df6f8bc66b13e42b59d2f830b563094a5e52094ab2187c377979a6",
+      "summary": {
+        "artifact_manifest_sha256": "0bd7fb447cb51ae63f54d957fd703b9c0018196a7913f01ff414f5fbdeab1487",
+        "device_or_model_access_performed": false,
+        "entry_count": 1437,
+        "logical_bytes": 41768229,
+        "original_handoff_sha256": "9c1b908430fe9757935d029e8f423192652f21675aeffd77bc6a0f5d48d2e7e6",
+        "predecessor_bytes_modified": false,
+        "resolver_sha256": "0e1e8ad6d35a19be637928024260b7a5dcb063668f13b0692372fc2f2cdf306c",
+        "runtime_run_id": "batch8-dp2-fresh-003",
+        "schema_version": 1,
+        "stage": "R02",
+        "status": "complete",
+        "tool_sha256": "cf9c7c96a1458023f9dc7e08fffcb5776c0ab318766e7d241cb1a9bc9f66440a"
+      },
+      "large_member_list_release_asset_planned": true
+    },
+    {
+      "stage": "R03",
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/continuation_20260908/predecessor_validations/R03.json",
+      "size": 11898959,
+      "sha256": "6a8ec7d2fe059900baa7d0b4f08e0c5488eec2e527ef1ef811397ccbd5cbfafb",
+      "summary": {
+        "artifact_manifest_sha256": "9b49cddeb1a2823becb6bd1a8e191fea4180aa7fa2d2adc0ef9dfc23e693aed1",
+        "device_or_model_access_performed": false,
+        "entry_count": 17182,
+        "logical_bytes": 24770989137,
+        "original_handoff_sha256": "f7e6066bd72272cee9e96d2ac31596bd20f01841157bda4d0c2eb56092f99885",
+        "predecessor_bytes_modified": false,
+        "resolver_sha256": "0e1e8ad6d35a19be637928024260b7a5dcb063668f13b0692372fc2f2cdf306c",
+        "runtime_run_id": "batch8-dp2-fresh-003",
+        "schema_version": 1,
+        "stage": "R03",
+        "status": "complete",
+        "tool_sha256": "cf9c7c96a1458023f9dc7e08fffcb5776c0ab318766e7d241cb1a9bc9f66440a"
+      },
+      "large_member_list_release_asset_planned": true
+    }
+  ],
+  "release_publication_status": "pending"
+}

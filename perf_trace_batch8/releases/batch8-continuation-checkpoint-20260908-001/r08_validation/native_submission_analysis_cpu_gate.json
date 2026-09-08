@@ -1,0 +1,46 @@
+{
+  "status": "complete",
+  "production_lookup_positive_and_negative_fixtures": true,
+  "native_complete_available_row_diagnostic": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/validation/pmc_submission_native_correlation_diagnostic_001.json",
+    "size": 358727,
+    "sha256": "35da7dd9283f290859945e02a75e85885df13c09dea042b3a325726809198f33"
+  },
+  "all_3360_raw_available_rows_have_unique_exact_native_API_submission_owner": true,
+  "GPU_clock_pair_drift_not_used_as_fuzzy_match": true,
+  "rules": "PMC CPU submission inside same PID/TID unique direct HIP API; exactly one HIPOPS _Index; exact full literal and device; strict marker and corrected R06 logical identity; no tolerance or nearest neighbor",
+  "model_initializations": 0,
+  "device_queries": 0,
+  "frozen_tools": [
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/analysis_004/audit_resource_model.py",
+      "size": 10649,
+      "sha256": "2f93deaff827ea0729cad279903e9fa7ef7cd70bd8a29f5f12f80c7e4dff85f1"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/analysis_004/build_fx_model.py",
+      "size": 7171,
+      "sha256": "f0ad6fa4919d1bcc03c9f6b94d516843c6f912f7b448039291100b625295214a"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/analysis_004/normalize_capture.py",
+      "size": 19429,
+      "sha256": "5245598d2c76655e23e23ceeffe40f8f896b21f9d28425cf68ba7b01dd18ba32"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/analysis_004/audit_capture.py",
+      "size": 11006,
+      "sha256": "7d668fa1e600b76b291856943194eaa5bf24b519bd7ba2b7525d092bea6966a5"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/analysis_004/metric_rules.py",
+      "size": 5074,
+      "sha256": "2fdbc537abb7d5ae54ec849fd3aa88cd8092c77ba5b667ea0f5097141b45bc5e"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/analysis_004/build_resource_model.py",
+      "size": 10560,
+      "sha256": "b24d800194c5fa08c0ab4b3e7c7d158b4111e0f971dd2c4c00edba70a9366f67"
+    }
+  ]
+}

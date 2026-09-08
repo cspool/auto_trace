@@ -1,0 +1,57 @@
+[
+  {
+    "file": "process_ranges.csv",
+    "sha256": "591bd9b338b21c21d65536139a7b3ebe815021d4f70a6fad770bafb825cf9029",
+    "rows": 12544,
+    "native_rows_exact": true,
+    "fields": {
+      "begin_ns": "BeginNs",
+      "end_ns": "EndNs",
+      "hiptx_range_index": "_Index",
+      "pid": "pid",
+      "tid": "tid"
+    },
+    "tables": {
+      "HIPTX_173_18_25_2_296734_1788408919": 6272,
+      "HIPTX_173_18_25_2_296762_1788408920": 6272
+    },
+    "seconds": 0.4302507219836116
+  },
+  {
+    "file": "hip_runtime_calls.csv",
+    "sha256": "69a5a47bd2e6083cf63c0c6335175316292084b2b3877007ce4fb11f5cea54c7",
+    "rows": 316802,
+    "native_rows_exact": true,
+    "fields": {
+      "begin_ns": "BeginNs",
+      "end_ns": "EndNs",
+      "hip_runtime_index": "_Index",
+      "pid": "pid",
+      "tid": "tid"
+    },
+    "tables": {
+      "HIP_173_18_25_2_296734_1788408919": 158401,
+      "HIP_173_18_25_2_296762_1788408920": 158401
+    },
+    "seconds": 8.201650987030007
+  },
+  {
+    "file": "strict_owned_kernels.csv",
+    "sha256": "aaa51fa3ce337cff07cf8a005a15ffaa229dbe77223d4c76b3b2caa4e45da030",
+    "rows": 23660,
+    "native_rows_exact": true,
+    "fields": {
+      "begin_ns": "BeginNs",
+      "end_ns": "EndNs",
+      "native_device_index": "_Index",
+      "pid": "pid",
+      "native_device": "dev_id",
+      "queue_id": "queue_id"
+    },
+    "tables": {
+      "HIPOPS_173_18_25_2_296734_1788408919": 11830,
+      "HIPOPS_173_18_25_2_296762_1788408920": 11830
+    },
+    "seconds": 0.7588850490283221
+  }
+]

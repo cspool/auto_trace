@@ -1,0 +1,81 @@
+{
+  "status": "complete",
+  "cpu_only": true,
+  "source_sha256": "0ea77cdac40926182c4e04fc29e687e62df9b2cac50296c7e399817c583690b0",
+  "source_immutable": true,
+  "source_quick_check_seconds": 10.899945929006208,
+  "native_row_checks": [
+    {
+      "file": "process_ranges.csv",
+      "sha256": "591bd9b338b21c21d65536139a7b3ebe815021d4f70a6fad770bafb825cf9029",
+      "rows": 12544,
+      "native_rows_exact": true,
+      "fields": {
+        "begin_ns": "BeginNs",
+        "end_ns": "EndNs",
+        "hiptx_range_index": "_Index",
+        "pid": "pid",
+        "tid": "tid"
+      },
+      "tables": {
+        "HIPTX_173_18_25_2_296734_1788408919": 6272,
+        "HIPTX_173_18_25_2_296762_1788408920": 6272
+      },
+      "seconds": 0.4302507219836116
+    },
+    {
+      "file": "hip_runtime_calls.csv",
+      "sha256": "69a5a47bd2e6083cf63c0c6335175316292084b2b3877007ce4fb11f5cea54c7",
+      "rows": 316802,
+      "native_rows_exact": true,
+      "fields": {
+        "begin_ns": "BeginNs",
+        "end_ns": "EndNs",
+        "hip_runtime_index": "_Index",
+        "pid": "pid",
+        "tid": "tid"
+      },
+      "tables": {
+        "HIP_173_18_25_2_296734_1788408919": 158401,
+        "HIP_173_18_25_2_296762_1788408920": 158401
+      },
+      "seconds": 8.201650987030007
+    },
+    {
+      "file": "strict_owned_kernels.csv",
+      "sha256": "aaa51fa3ce337cff07cf8a005a15ffaa229dbe77223d4c76b3b2caa4e45da030",
+      "rows": 23660,
+      "native_rows_exact": true,
+      "fields": {
+        "begin_ns": "BeginNs",
+        "end_ns": "EndNs",
+        "native_device_index": "_Index",
+        "pid": "pid",
+        "native_device": "dev_id",
+        "queue_id": "queue_id"
+      },
+      "tables": {
+        "HIPOPS_173_18_25_2_296734_1788408919": 11830,
+        "HIPOPS_173_18_25_2_296762_1788408920": 11830
+      },
+      "seconds": 0.7588850490283221
+    }
+  ],
+  "prepare_argv": [
+    "/usr/bin/python",
+    "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/releases/batch8-dp2-fresh-003-r07-attempt043-offline-recovery/prepare_attempt043_offline_db.py",
+    "--source-db",
+    "/dev/shm/r07_cpu_validation_001/capture.source.db",
+    "--prepared-db",
+    "/dev/shm/r07_cpu_validation_001/capture.prepared.db",
+    "--manifest",
+    "/public/home/accl15ptg7/run_R08_R10/r07_cpu_validation_001/prepare_manifest.json"
+  ],
+  "prepare_tool_sha256": "b1fc32f5043c6991f7f6ae7fdc8f023d234a1c43c12a3d6f000fe298662644ac",
+  "prepare_wall_seconds": 132.5449802109506,
+  "prepare_manifest_sha256": "b60b52c3e8522fd92ad39972c3452b203bfb7a370f853b8414c98b5ea4d95f19",
+  "elapsed_seconds_including_download": 698.6319158019614,
+  "native_gpu_capture_rerun": false,
+  "native_pftrace_export_rerun": false,
+  "conclusion": "Published source database is structurally valid and every consumed process/runtime/kernel native row matches. CPU derived-table reconstruction completes within bounded timeout on this host. Historical collector termination remains unclaimed."
+}

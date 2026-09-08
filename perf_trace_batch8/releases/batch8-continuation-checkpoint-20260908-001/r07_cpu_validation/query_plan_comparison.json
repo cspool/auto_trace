@@ -1,0 +1,331 @@
+{
+  "read_only": true,
+  "query_executed": false,
+  "indexes": [
+    [
+      "HSA_173_18_25_2_295655_1788408859_idx",
+      "HSA_173_18_25_2_295655_1788408859",
+      "CREATE INDEX HSA_173_18_25_2_295655_1788408859_idx on HSA_173_18_25_2_295655_1788408859 (_Index)"
+    ],
+    [
+      "HSA_173_18_25_2_295655_1788408859_beginns",
+      "HSA_173_18_25_2_295655_1788408859",
+      "CREATE INDEX HSA_173_18_25_2_295655_1788408859_beginns ON HSA_173_18_25_2_295655_1788408859 (BeginNs)"
+    ],
+    [
+      "HSA_173_18_25_2_295972_1788408889_idx",
+      "HSA_173_18_25_2_295972_1788408889",
+      "CREATE INDEX HSA_173_18_25_2_295972_1788408889_idx on HSA_173_18_25_2_295972_1788408889 (_Index)"
+    ],
+    [
+      "HSA_173_18_25_2_295972_1788408889_beginns",
+      "HSA_173_18_25_2_295972_1788408889",
+      "CREATE INDEX HSA_173_18_25_2_295972_1788408889_beginns ON HSA_173_18_25_2_295972_1788408889 (BeginNs)"
+    ],
+    [
+      "HSA_173_18_25_2_295973_1788408889_idx",
+      "HSA_173_18_25_2_295973_1788408889",
+      "CREATE INDEX HSA_173_18_25_2_295973_1788408889_idx on HSA_173_18_25_2_295973_1788408889 (_Index)"
+    ],
+    [
+      "HSA_173_18_25_2_295973_1788408889_beginns",
+      "HSA_173_18_25_2_295973_1788408889",
+      "CREATE INDEX HSA_173_18_25_2_295973_1788408889_beginns ON HSA_173_18_25_2_295973_1788408889 (BeginNs)"
+    ],
+    [
+      "HSA_173_18_25_2_295976_1788408889_idx",
+      "HSA_173_18_25_2_295976_1788408889",
+      "CREATE INDEX HSA_173_18_25_2_295976_1788408889_idx on HSA_173_18_25_2_295976_1788408889 (_Index)"
+    ],
+    [
+      "HSA_173_18_25_2_295976_1788408889_beginns",
+      "HSA_173_18_25_2_295976_1788408889",
+      "CREATE INDEX HSA_173_18_25_2_295976_1788408889_beginns ON HSA_173_18_25_2_295976_1788408889 (BeginNs)"
+    ],
+    [
+      "HSA_173_18_25_2_295977_1788408889_idx",
+      "HSA_173_18_25_2_295977_1788408889",
+      "CREATE INDEX HSA_173_18_25_2_295977_1788408889_idx on HSA_173_18_25_2_295977_1788408889 (_Index)"
+    ],
+    [
+      "HSA_173_18_25_2_295977_1788408889_beginns",
+      "HSA_173_18_25_2_295977_1788408889",
+      "CREATE INDEX HSA_173_18_25_2_295977_1788408889_beginns ON HSA_173_18_25_2_295977_1788408889 (BeginNs)"
+    ],
+    [
+      "HSA_173_18_25_2_295978_1788408889_idx",
+      "HSA_173_18_25_2_295978_1788408889",
+      "CREATE INDEX HSA_173_18_25_2_295978_1788408889_idx on HSA_173_18_25_2_295978_1788408889 (_Index)"
+    ],
+    [
+      "HSA_173_18_25_2_295978_1788408889_beginns",
+      "HSA_173_18_25_2_295978_1788408889",
+      "CREATE INDEX HSA_173_18_25_2_295978_1788408889_beginns ON HSA_173_18_25_2_295978_1788408889 (BeginNs)"
+    ],
+    [
+      "HSA_173_18_25_2_295979_1788408889_idx",
+      "HSA_173_18_25_2_295979_1788408889",
+      "CREATE INDEX HSA_173_18_25_2_295979_1788408889_idx on HSA_173_18_25_2_295979_1788408889 (_Index)"
+    ],
+    [
+      "HSA_173_18_25_2_295979_1788408889_beginns",
+      "HSA_173_18_25_2_295979_1788408889",
+      "CREATE INDEX HSA_173_18_25_2_295979_1788408889_beginns ON HSA_173_18_25_2_295979_1788408889 (BeginNs)"
+    ],
+    [
+      "HIP_173_18_25_2_296734_1788408919_idx",
+      "HIP_173_18_25_2_296734_1788408919",
+      "CREATE INDEX HIP_173_18_25_2_296734_1788408919_idx on HIP_173_18_25_2_296734_1788408919 (_Index)"
+    ],
+    [
+      "HIP_173_18_25_2_296734_1788408919_beginns",
+      "HIP_173_18_25_2_296734_1788408919",
+      "CREATE INDEX HIP_173_18_25_2_296734_1788408919_beginns ON HIP_173_18_25_2_296734_1788408919 (BeginNs)"
+    ],
+    [
+      "HIPOPS_173_18_25_2_296734_1788408919_idx",
+      "HIPOPS_173_18_25_2_296734_1788408919",
+      "CREATE INDEX HIPOPS_173_18_25_2_296734_1788408919_idx on HIPOPS_173_18_25_2_296734_1788408919 (_Index)"
+    ],
+    [
+      "HIPCOPY_173_18_25_2_296734_1788408919_idx",
+      "HIPCOPY_173_18_25_2_296734_1788408919",
+      "CREATE INDEX HIPCOPY_173_18_25_2_296734_1788408919_idx on HIPCOPY_173_18_25_2_296734_1788408919 (_Index)"
+    ],
+    [
+      "HIPTX_173_18_25_2_296734_1788408919_idx",
+      "HIPTX_173_18_25_2_296734_1788408919",
+      "CREATE INDEX HIPTX_173_18_25_2_296734_1788408919_idx on HIPTX_173_18_25_2_296734_1788408919 (_Index)"
+    ],
+    [
+      "HIPTX_173_18_25_2_296734_1788408919_beginns",
+      "HIPTX_173_18_25_2_296734_1788408919",
+      "CREATE INDEX HIPTX_173_18_25_2_296734_1788408919_beginns ON HIPTX_173_18_25_2_296734_1788408919 (BeginNs)"
+    ],
+    [
+      "HSA_173_18_25_2_296734_1788408919_idx",
+      "HSA_173_18_25_2_296734_1788408919",
+      "CREATE INDEX HSA_173_18_25_2_296734_1788408919_idx on HSA_173_18_25_2_296734_1788408919 (_Index)"
+    ],
+    [
+      "HSA_173_18_25_2_296734_1788408919_beginns",
+      "HSA_173_18_25_2_296734_1788408919",
+      "CREATE INDEX HSA_173_18_25_2_296734_1788408919_beginns ON HSA_173_18_25_2_296734_1788408919 (BeginNs)"
+    ],
+    [
+      "HIP_173_18_25_2_296762_1788408920_idx",
+      "HIP_173_18_25_2_296762_1788408920",
+      "CREATE INDEX HIP_173_18_25_2_296762_1788408920_idx on HIP_173_18_25_2_296762_1788408920 (_Index)"
+    ],
+    [
+      "HIP_173_18_25_2_296762_1788408920_beginns",
+      "HIP_173_18_25_2_296762_1788408920",
+      "CREATE INDEX HIP_173_18_25_2_296762_1788408920_beginns ON HIP_173_18_25_2_296762_1788408920 (BeginNs)"
+    ],
+    [
+      "HIPOPS_173_18_25_2_296762_1788408920_idx",
+      "HIPOPS_173_18_25_2_296762_1788408920",
+      "CREATE INDEX HIPOPS_173_18_25_2_296762_1788408920_idx on HIPOPS_173_18_25_2_296762_1788408920 (_Index)"
+    ],
+    [
+      "HIPCOPY_173_18_25_2_296762_1788408920_idx",
+      "HIPCOPY_173_18_25_2_296762_1788408920",
+      "CREATE INDEX HIPCOPY_173_18_25_2_296762_1788408920_idx on HIPCOPY_173_18_25_2_296762_1788408920 (_Index)"
+    ],
+    [
+      "HIPTX_173_18_25_2_296762_1788408920_idx",
+      "HIPTX_173_18_25_2_296762_1788408920",
+      "CREATE INDEX HIPTX_173_18_25_2_296762_1788408920_idx on HIPTX_173_18_25_2_296762_1788408920 (_Index)"
+    ],
+    [
+      "HIPTX_173_18_25_2_296762_1788408920_beginns",
+      "HIPTX_173_18_25_2_296762_1788408920",
+      "CREATE INDEX HIPTX_173_18_25_2_296762_1788408920_beginns ON HIPTX_173_18_25_2_296762_1788408920 (BeginNs)"
+    ],
+    [
+      "HSA_173_18_25_2_296762_1788408920_idx",
+      "HSA_173_18_25_2_296762_1788408920",
+      "CREATE INDEX HSA_173_18_25_2_296762_1788408920_idx on HSA_173_18_25_2_296762_1788408920 (_Index)"
+    ],
+    [
+      "HSA_173_18_25_2_296762_1788408920_beginns",
+      "HSA_173_18_25_2_296762_1788408920",
+      "CREATE INDEX HSA_173_18_25_2_296762_1788408920_beginns ON HSA_173_18_25_2_296762_1788408920 (BeginNs)"
+    ],
+    [
+      "HSA_173_18_25_2_297595_1788408962_idx",
+      "HSA_173_18_25_2_297595_1788408962",
+      "CREATE INDEX HSA_173_18_25_2_297595_1788408962_idx on HSA_173_18_25_2_297595_1788408962 (_Index)"
+    ],
+    [
+      "HSA_173_18_25_2_297595_1788408962_beginns",
+      "HSA_173_18_25_2_297595_1788408962",
+      "CREATE INDEX HSA_173_18_25_2_297595_1788408962_beginns ON HSA_173_18_25_2_297595_1788408962 (BeginNs)"
+    ],
+    [
+      "HSA_173_18_25_2_297602_1788408961_idx",
+      "HSA_173_18_25_2_297602_1788408961",
+      "CREATE INDEX HSA_173_18_25_2_297602_1788408961_idx on HSA_173_18_25_2_297602_1788408961 (_Index)"
+    ],
+    [
+      "HSA_173_18_25_2_297602_1788408961_beginns",
+      "HSA_173_18_25_2_297602_1788408961",
+      "CREATE INDEX HSA_173_18_25_2_297602_1788408961_beginns ON HSA_173_18_25_2_297602_1788408961 (BeginNs)"
+    ],
+    [
+      "HSA_173_18_25_2_297613_1788408961_idx",
+      "HSA_173_18_25_2_297613_1788408961",
+      "CREATE INDEX HSA_173_18_25_2_297613_1788408961_idx on HSA_173_18_25_2_297613_1788408961 (_Index)"
+    ],
+    [
+      "HSA_173_18_25_2_297613_1788408961_beginns",
+      "HSA_173_18_25_2_297613_1788408961",
+      "CREATE INDEX HSA_173_18_25_2_297613_1788408961_beginns ON HSA_173_18_25_2_297613_1788408961 (BeginNs)"
+    ],
+    [
+      "HSA_173_18_25_2_297718_1788408966_idx",
+      "HSA_173_18_25_2_297718_1788408966",
+      "CREATE INDEX HSA_173_18_25_2_297718_1788408966_idx on HSA_173_18_25_2_297718_1788408966 (_Index)"
+    ],
+    [
+      "HSA_173_18_25_2_297718_1788408966_beginns",
+      "HSA_173_18_25_2_297718_1788408966",
+      "CREATE INDEX HSA_173_18_25_2_297718_1788408966_beginns ON HSA_173_18_25_2_297718_1788408966 (BeginNs)"
+    ],
+    [
+      "HSA_173_18_25_2_297725_1788408965_idx",
+      "HSA_173_18_25_2_297725_1788408965",
+      "CREATE INDEX HSA_173_18_25_2_297725_1788408965_idx on HSA_173_18_25_2_297725_1788408965 (_Index)"
+    ],
+    [
+      "HSA_173_18_25_2_297725_1788408965_beginns",
+      "HSA_173_18_25_2_297725_1788408965",
+      "CREATE INDEX HSA_173_18_25_2_297725_1788408965_beginns ON HSA_173_18_25_2_297725_1788408965 (BeginNs)"
+    ],
+    [
+      "HSA_173_18_25_2_297736_1788408966_idx",
+      "HSA_173_18_25_2_297736_1788408966",
+      "CREATE INDEX HSA_173_18_25_2_297736_1788408966_idx on HSA_173_18_25_2_297736_1788408966 (_Index)"
+    ],
+    [
+      "HSA_173_18_25_2_297736_1788408966_beginns",
+      "HSA_173_18_25_2_297736_1788408966",
+      "CREATE INDEX HSA_173_18_25_2_297736_1788408966_beginns ON HSA_173_18_25_2_297736_1788408966 (BeginNs)"
+    ]
+  ],
+  "plans": [
+    {
+      "worker": "173_18_25_2_296734_1788408919",
+      "query": "SELECT MIN(t1.BeginNs),MAX(t1.EndNs),t1.dev_id,t1.queue_id,t2.message,t1.pid,t1.tid,t2._Index,MIN(t1._Index),SUM(t1.DurationNs),group_concat(t1._Index) FROM (SELECT db1.BeginNs,db1.EndNs,db1.dev_id,db1.queue_id,db1.pid,db2.tid,db1._Index,db1.DurationNs FROM HIPOPS_173_18_25_2_296734_1788408919 AS db1 JOIN HIP_173_18_25_2_296734_1788408919 AS db2 ON db1._Index=db2._Index) AS t1 INNER JOIN HIPTX_173_18_25_2_296734_1788408919 AS t2 ON t1._Index BETWEEN t2.begin_Index AND t2.end_Index AND t1.tid=t2.tid GROUP BY t2.BeginNs,t1.dev_id,t1.queue_id,t2.message",
+      "query_plan": [
+        [
+          10,
+          0,
+          0,
+          "SCAN t2 USING INDEX HIPTX_173_18_25_2_296734_1788408919_beginns"
+        ],
+        [
+          22,
+          0,
+          0,
+          "SEARCH db2 USING AUTOMATIC COVERING INDEX (tid=?)"
+        ],
+        [
+          28,
+          0,
+          0,
+          "SEARCH db1 USING INDEX HIPOPS_173_18_25_2_296734_1788408919_idx (_Index=?)"
+        ],
+        [
+          40,
+          0,
+          0,
+          "USE TEMP B-TREE FOR GROUP BY"
+        ]
+      ],
+      "prepared_query_plan": [
+        [
+          10,
+          0,
+          0,
+          "SCAN t2 USING INDEX HIPTX_173_18_25_2_296734_1788408919_beginns"
+        ],
+        [
+          13,
+          0,
+          0,
+          "SEARCH db1 USING INDEX HIPOPS_173_18_25_2_296734_1788408919_idx (_Index>? AND _Index<?)"
+        ],
+        [
+          23,
+          0,
+          0,
+          "SEARCH db2 USING COVERING INDEX HIP_173_18_25_2_296734_1788408919_tid_idx (tid=? AND _Index=?)"
+        ],
+        [
+          31,
+          0,
+          0,
+          "USE TEMP B-TREE FOR GROUP BY"
+        ]
+      ]
+    },
+    {
+      "worker": "173_18_25_2_296762_1788408920",
+      "query": "SELECT MIN(t1.BeginNs),MAX(t1.EndNs),t1.dev_id,t1.queue_id,t2.message,t1.pid,t1.tid,t2._Index,MIN(t1._Index),SUM(t1.DurationNs),group_concat(t1._Index) FROM (SELECT db1.BeginNs,db1.EndNs,db1.dev_id,db1.queue_id,db1.pid,db2.tid,db1._Index,db1.DurationNs FROM HIPOPS_173_18_25_2_296762_1788408920 AS db1 JOIN HIP_173_18_25_2_296762_1788408920 AS db2 ON db1._Index=db2._Index) AS t1 INNER JOIN HIPTX_173_18_25_2_296762_1788408920 AS t2 ON t1._Index BETWEEN t2.begin_Index AND t2.end_Index AND t1.tid=t2.tid GROUP BY t2.BeginNs,t1.dev_id,t1.queue_id,t2.message",
+      "query_plan": [
+        [
+          10,
+          0,
+          0,
+          "SCAN t2 USING INDEX HIPTX_173_18_25_2_296762_1788408920_beginns"
+        ],
+        [
+          22,
+          0,
+          0,
+          "SEARCH db2 USING AUTOMATIC COVERING INDEX (tid=?)"
+        ],
+        [
+          28,
+          0,
+          0,
+          "SEARCH db1 USING INDEX HIPOPS_173_18_25_2_296762_1788408920_idx (_Index=?)"
+        ],
+        [
+          40,
+          0,
+          0,
+          "USE TEMP B-TREE FOR GROUP BY"
+        ]
+      ],
+      "prepared_query_plan": [
+        [
+          10,
+          0,
+          0,
+          "SCAN t2 USING INDEX HIPTX_173_18_25_2_296762_1788408920_beginns"
+        ],
+        [
+          13,
+          0,
+          0,
+          "SEARCH db1 USING INDEX HIPOPS_173_18_25_2_296762_1788408920_idx (_Index>? AND _Index<?)"
+        ],
+        [
+          23,
+          0,
+          0,
+          "SEARCH db2 USING COVERING INDEX HIP_173_18_25_2_296762_1788408920_tid_idx (tid=? AND _Index=?)"
+        ],
+        [
+          31,
+          0,
+          0,
+          "USE TEMP B-TREE FOR GROUP BY"
+        ]
+      ]
+    }
+  ],
+  "prior_inspection_failure": "SQLite LIKE underscore matched HIPCOPY; corrected to Python exact HIP_ prefix, no DB mutation."
+}

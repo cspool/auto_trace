@@ -1,0 +1,34 @@
+{
+  "scope": "Resume batch8-dp2-fresh-003 from R07 Attempt 43 offline recovery; perform new R08 PMC collection, R09 twelve-table analysis, R10 lossless offline acceptance bundle",
+  "deadline_utc": "2026-09-08T12:18:09Z",
+  "predecessor_policy": "Preserve original handoff and artifact bytes. Admit R07 status complete_recovered_offline through a separate hash-verified adapter; never relabel original process lifecycle.",
+  "path_policy": "Explicit old-project to current-project rebinding, with original path and hash retained in all consumed-source records.",
+  "workload": {
+    "requests": 8,
+    "selection": "ordered first eight original records",
+    "warmups": 2,
+    "output_tokens_each": 1024,
+    "max_concurrency": 8,
+    "temperature": 0,
+    "ignore_eos": true,
+    "devices": [
+      0,
+      1
+    ],
+    "dp": 2,
+    "tp": 1
+  },
+  "gates": [
+    "Weight shard count/size/hash and historical model config match; vLLM source commit and installed ABI recorded",
+    "R01-R06 original handoffs, manifests and consumed artifacts verified; R07 recovered handoff and complete trace/alignment/dependency sidecar independently checked",
+    "CPU-only R08 predevice gate including production path, R02 root, token transport and recovery-admission regressions",
+    "Separate current device/PMC capability preflight, empirical kernel filter test and both-rank/device readiness",
+    "R06 inventory of 89 families and selected 32 all accounted for; immutable capture plan; full workload preserved for each replay",
+    "New R08 raw PMC with native HIPTX/runtime/dispatch ownership, exact literal attribution and all selected-family terminal states verified",
+    "R08 replay clocks never replace or add to R07 observed times; traffic/resource quantities carry evidence class/formula/unit/availability",
+    "R08 handoff accepted before R09 starts; R09 full twelve-table analysis and independent conservation audit",
+    "R09 handoff accepted before R10 starts; R10 self-contained HTML, lossless timeline/Perfetto, report, manifests and offline browser/content audit",
+    "All current-stage model/profiler subprocesses exited; immutable original evidence retained; final requirement-by-requirement completion audit"
+  ],
+  "status": "preparing_migration_and_runtime"
+}

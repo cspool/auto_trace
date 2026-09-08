@@ -1,0 +1,25 @@
+{
+  "version": "0.18.1+das.dtk2604",
+  "extensions": [
+    {
+      "path": "/usr/local/lib/python3.10/dist-packages/vllm/_C.abi3.so",
+      "size": 69218720,
+      "sha256": "4b5ea2564c05a096972d906d3c4f6ee6ea87e09384f272003bd33112f6d18fd2"
+    },
+    {
+      "path": "/usr/local/lib/python3.10/dist-packages/vllm/_rocm_C.abi3.so",
+      "size": 37388896,
+      "sha256": "2906f3042b347a37971b5cf110cf24697a506fa19e7840072394f942267ddd2b"
+    },
+    {
+      "path": "/usr/local/lib/python3.10/dist-packages/vllm/_moe_C.abi3.so",
+      "size": 14606208,
+      "sha256": "353e220dc06e1c7c28e059197bfa0fc80f830a219fe4c7f395b382606987e074"
+    },
+    {
+      "path": "/usr/local/lib/python3.10/dist-packages/vllm/cumem_allocator.abi3.so",
+      "size": 112496,
+      "sha256": "e42b6f573793642c4f43b4e61bb27ae3acce9fc3cc99a16db3f39f27435192f4"
+    }
+  ]
+}

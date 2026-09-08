@@ -1,0 +1,315 @@
+{
+  "admission_tool_sha256": "72291d6d70a1f35fabb63624e5f23dc45f2f1c1158be94a1cec94baa347d7ab1",
+  "coverage": {
+    "dependency_edges": 32492,
+    "kernel_counts_by_rank": {
+      "0": 11830,
+      "1": 11830
+    },
+    "kernels": 23660,
+    "live_gaps": 800,
+    "live_samples": 2491806,
+    "processes": 12544,
+    "request_phases": 16,
+    "requests": 8,
+    "runtime_calls": 316802,
+    "targets": 13568
+  },
+  "lineage_id": "batch8-dp2-fresh-003",
+  "model_or_device_access_performed": false,
+  "native_controller_lifecycle_completion_claimed": false,
+  "native_durable_nfs_completion_claimed": false,
+  "negative_admission_regressions": [
+    "status",
+    "coverage_target_met",
+    "lineage_id",
+    "native_controller_lifecycle_completion_claimed"
+  ],
+  "original_artifacts_modified": false,
+  "original_handoff_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/handoffs/R07.recovered.json",
+  "original_handoff_sha256": "437e753f5dbdea8e9b0a6009ede6eebed0a61c76a26683cad6b6618f9c374b10",
+  "original_handoff_status": "complete_recovered_offline",
+  "r08_full_predevice_gate_complete": false,
+  "recovery_admission_does_not_replace_R01_R06_artifact_validation": true,
+  "resolver_sha256": "d86b6cc9d44389dc32225c1c9c9378e6661169b20be72cda30208e4e66de2ab4",
+  "runtime_run_id": "batch8-dp2-fresh-003",
+  "schema_version": 1,
+  "status": "admitted_recovered_r07",
+  "verified_sources": [
+    {
+      "local_path": "/public/home/accl15ptg7/run_R08_R10/snapshot/recovery_index/handoffs/R01.json",
+      "role": "R01_original_handoff",
+      "sha256": "f28cb9274151c5b08f15964e9645cbcaa41b90fb6f867607472028e993b774d6"
+    },
+    {
+      "local_path": "/public/home/accl15ptg7/run_R08_R10/snapshot/recovery_index/handoffs/R02.json",
+      "role": "R02_original_handoff",
+      "sha256": "9c1b908430fe9757935d029e8f423192652f21675aeffd77bc6a0f5d48d2e7e6"
+    },
+    {
+      "local_path": "/public/home/accl15ptg7/run_R08_R10/snapshot/recovery_index/handoffs/R03.json",
+      "role": "R03_original_handoff",
+      "sha256": "f7e6066bd72272cee9e96d2ac31596bd20f01841157bda4d0c2eb56092f99885"
+    },
+    {
+      "local_path": "/public/home/accl15ptg7/run_R08_R10/snapshot/recovery_index/handoffs/R04.json",
+      "role": "R04_original_handoff",
+      "sha256": "403af982ff2f70f89fce2cfda59074a9b014a32e95c53e9e05e292dc843e6719"
+    },
+    {
+      "local_path": "/public/home/accl15ptg7/run_R08_R10/snapshot/recovery_index/handoffs/R05.json",
+      "role": "R05_original_handoff",
+      "sha256": "db08474f64a999428287388a949762274716df125132cbccbabe3ec23c1aec66"
+    },
+    {
+      "local_path": "/public/home/accl15ptg7/run_R08_R10/snapshot/recovery_index/handoffs/R06.json",
+      "role": "R06_original_handoff",
+      "sha256": "0da6d692f1d69194ab02f4de0993c7aaca2381793eeb61ce33ffeb52ec058976"
+    },
+    {
+      "local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/recovery/db43_offline_recovery/R07_RECOVERY_ARTIFACT_MANIFEST.json",
+      "original_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/recovery/db43_offline_recovery/R07_RECOVERY_ARTIFACT_MANIFEST.json",
+      "resolved_local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/recovery/db43_offline_recovery/R07_RECOVERY_ARTIFACT_MANIFEST.json",
+      "sha256": "bc1f6242219f28ac9c70184dc30a983aec632b030b4bc27ebff80c0b873bd370",
+      "size": 3939
+    },
+    {
+      "local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/recovery/db43_offline_recovery/R07_RECOVERY_COMPLETION_AUDIT.json",
+      "original_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/recovery/db43_offline_recovery/R07_RECOVERY_COMPLETION_AUDIT.json",
+      "resolved_local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/recovery/db43_offline_recovery/R07_RECOVERY_COMPLETION_AUDIT.json",
+      "sha256": "20f730932ab23ed8751ab0c03e79859135716931319731cf4049c09fc68be8ab",
+      "size": 3660
+    },
+    {
+      "local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/recovery/db43_offline_recovery/R07_RECOVERY_SOURCE_LINEAGE.json",
+      "original_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/recovery/db43_offline_recovery/R07_RECOVERY_SOURCE_LINEAGE.json",
+      "resolved_local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/recovery/db43_offline_recovery/R07_RECOVERY_SOURCE_LINEAGE.json",
+      "sha256": "f741ef2094e7a2e2706d3ad354b1f9c9315bd1959c79df1a70e4c8d5212711ee",
+      "size": 7807
+    },
+    {
+      "local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/contract/r07_bound_target_sidecar.json",
+      "original_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/contract/r07_bound_target_sidecar.json",
+      "resolved_local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/contract/r07_bound_target_sidecar.json",
+      "sha256": "a912cd5f4f47bde82b1d0853b546ad82fb9b1ee719994716512cbf3bce278ea5",
+      "size": 77816576
+    },
+    {
+      "local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/attempt043_db_recovery/manifests/RECOVERY_STATUS.json",
+      "original_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/attempt043_db_recovery/manifests/RECOVERY_STATUS.json",
+      "resolved_local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/attempt043_db_recovery/manifests/RECOVERY_STATUS.json",
+      "sha256": "05453b96b62ef27576916bedcad78d7086e4f7bd8373093d4c7babac61468e3a",
+      "size": 1037
+    },
+    {
+      "local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/dependency/fresh_run_dependency_adapter.json",
+      "original_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/dependency/fresh_run_dependency_adapter.json",
+      "resolved_local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/dependency/fresh_run_dependency_adapter.json",
+      "sha256": "2e4996fa154422dc609f0cfd9db7433d0633b6507bc8b11e8dc360b8f7a74bcd",
+      "size": 75202608
+    },
+    {
+      "local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/capture/full_request_profile_metadata.json",
+      "original_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/capture/full_request_profile_metadata.json",
+      "resolved_local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/capture/full_request_profile_metadata.json",
+      "sha256": "d8d2db3389ebae4b3fdec389f430597ea4ad5777d010b37b3895af4b779d50aa",
+      "size": 9026
+    },
+    {
+      "local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/recovery/db43_offline_recovery/RECOVERY_INDEPENDENT_AUDITS.json",
+      "original_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/recovery/db43_offline_recovery/RECOVERY_INDEPENDENT_AUDITS.json",
+      "resolved_local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/recovery/db43_offline_recovery/RECOVERY_INDEPENDENT_AUDITS.json",
+      "sha256": "e9bd6f718d5d516af9e19549ddb2f7519abd4fa29ede17bc2c601efbcf621eb8",
+      "size": 2489
+    },
+    {
+      "local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/alignment/live_utilization_summary.json",
+      "original_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/alignment/live_utilization_summary.json",
+      "resolved_local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/alignment/live_utilization_summary.json",
+      "sha256": "878f84a4f032ef1289bb39af50dda3692f9d92d757a840bd96cbc13b10d0d2f9",
+      "size": 2708
+    },
+    {
+      "local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/process_trace_summary.json",
+      "original_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/process_trace_summary.json",
+      "resolved_local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/process_trace_summary.json",
+      "sha256": "ba101e7e5a79f0b107abe915ba59626de29290c3daa1eb172dcac4e26ee4d360",
+      "size": 4765
+    },
+    {
+      "local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/capture/raw_inventory.json",
+      "original_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/capture/raw_inventory.json",
+      "resolved_local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/capture/raw_inventory.json",
+      "sha256": "407d473ebf064c9728acc74ae174e8d91d20b96af8b220a5286ea2cdd89b5b73",
+      "size": 94771
+    },
+    {
+      "local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/capture/lifecycle.json",
+      "original_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/capture/lifecycle.json",
+      "resolved_local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/capture/lifecycle.json",
+      "sha256": "b168c60c0c7a9582f2e7b20793969241ed28982cd200b5da558c7e95f2a35d47",
+      "size": 2390
+    },
+    {
+      "local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/attempt043_db_recovery/manifests/RECOVERY_STATUS.json",
+      "original_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/attempt043_db_recovery/manifests/RECOVERY_STATUS.json",
+      "resolved_local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/attempt043_db_recovery/manifests/RECOVERY_STATUS.json",
+      "sha256": "05453b96b62ef27576916bedcad78d7086e4f7bd8373093d4c7babac61468e3a",
+      "size": 1037
+    },
+    {
+      "local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/alignment/live_utilization_summary.json",
+      "original_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/alignment/live_utilization_summary.json",
+      "resolved_local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/alignment/live_utilization_summary.json",
+      "sha256": "878f84a4f032ef1289bb39af50dda3692f9d92d757a840bd96cbc13b10d0d2f9",
+      "size": 2708
+    },
+    {
+      "local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/capture/full_request_profile_metadata.json",
+      "original_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/capture/full_request_profile_metadata.json",
+      "resolved_local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/capture/full_request_profile_metadata.json",
+      "sha256": "d8d2db3389ebae4b3fdec389f430597ea4ad5777d010b37b3895af4b779d50aa",
+      "size": 9026
+    },
+    {
+      "local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/capture/lifecycle.json",
+      "original_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/capture/lifecycle.json",
+      "resolved_local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/capture/lifecycle.json",
+      "sha256": "b168c60c0c7a9582f2e7b20793969241ed28982cd200b5da558c7e95f2a35d47",
+      "size": 2390
+    },
+    {
+      "local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/capture/raw_inventory.json",
+      "original_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/capture/raw_inventory.json",
+      "resolved_local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/capture/raw_inventory.json",
+      "sha256": "407d473ebf064c9728acc74ae174e8d91d20b96af8b220a5286ea2cdd89b5b73",
+      "size": 94771
+    },
+    {
+      "local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/contract/r07_bound_target_sidecar.json",
+      "original_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/contract/r07_bound_target_sidecar.json",
+      "resolved_local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/contract/r07_bound_target_sidecar.json",
+      "sha256": "a912cd5f4f47bde82b1d0853b546ad82fb9b1ee719994716512cbf3bce278ea5",
+      "size": 77816576
+    },
+    {
+      "local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/dependency/fresh_run_dependency_adapter.json",
+      "original_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/dependency/fresh_run_dependency_adapter.json",
+      "resolved_local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/dependency/fresh_run_dependency_adapter.json",
+      "sha256": "2e4996fa154422dc609f0cfd9db7433d0633b6507bc8b11e8dc360b8f7a74bcd",
+      "size": 75202608
+    },
+    {
+      "local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/recovery/db43_offline_recovery/R07_RECOVERY_COMPLETION_AUDIT.json",
+      "original_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/recovery/db43_offline_recovery/R07_RECOVERY_COMPLETION_AUDIT.json",
+      "resolved_local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/recovery/db43_offline_recovery/R07_RECOVERY_COMPLETION_AUDIT.json",
+      "sha256": "20f730932ab23ed8751ab0c03e79859135716931319731cf4049c09fc68be8ab",
+      "size": 3660
+    },
+    {
+      "local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/recovery/db43_offline_recovery/R07_RECOVERY_SOURCE_LINEAGE.json",
+      "original_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/recovery/db43_offline_recovery/R07_RECOVERY_SOURCE_LINEAGE.json",
+      "resolved_local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/recovery/db43_offline_recovery/R07_RECOVERY_SOURCE_LINEAGE.json",
+      "sha256": "f741ef2094e7a2e2706d3ad354b1f9c9315bd1959c79df1a70e4c8d5212711ee",
+      "size": 7807
+    },
+    {
+      "local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/recovery/db43_offline_recovery/RECOVERY_INDEPENDENT_AUDITS.json",
+      "original_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/recovery/db43_offline_recovery/RECOVERY_INDEPENDENT_AUDITS.json",
+      "resolved_local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/recovery/db43_offline_recovery/RECOVERY_INDEPENDENT_AUDITS.json",
+      "sha256": "e9bd6f718d5d516af9e19549ddb2f7519abd4fa29ede17bc2c601efbcf621eb8",
+      "size": 2489
+    },
+    {
+      "local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/process_trace_summary.json",
+      "original_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/process_trace_summary.json",
+      "resolved_local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/process_trace_summary.json",
+      "sha256": "ba101e7e5a79f0b107abe915ba59626de29290c3daa1eb172dcac4e26ee4d360",
+      "size": 4765
+    },
+    {
+      "local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/forward_ranges.csv",
+      "original_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/forward_ranges.csv",
+      "resolved_local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/forward_ranges.csv",
+      "sha256": "88f3f4ff526ede132d0c0a4d71e66362e179a988b7fe62ca19d82b39bd7734c6",
+      "size": 659271
+    },
+    {
+      "local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/gpu_busy_union.csv",
+      "original_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/gpu_busy_union.csv",
+      "resolved_local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/gpu_busy_union.csv",
+      "sha256": "a6a0a024ae29eb1966cc240b87a42e95676c02f694701f5b0e9d195fcd1accdb",
+      "size": 3325452
+    },
+    {
+      "local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/hip_runtime_calls.csv",
+      "original_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/hip_runtime_calls.csv",
+      "resolved_local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/hip_runtime_calls.csv",
+      "sha256": "69a5a47bd2e6083cf63c0c6335175316292084b2b3877007ce4fb11f5cea54c7",
+      "size": 197920228
+    },
+    {
+      "local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/layer_ranges.csv",
+      "original_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/layer_ranges.csv",
+      "resolved_local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/layer_ranges.csv",
+      "sha256": "4d5cc3a481a2d8a8fd77a59f7f3c3aaefbfbeec7a50f93d959009f058657a747",
+      "size": 725511
+    },
+    {
+      "local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/process_ranges.csv",
+      "original_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/process_ranges.csv",
+      "resolved_local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/process_ranges.csv",
+      "sha256": "591bd9b338b21c21d65536139a7b3ebe815021d4f70a6fad770bafb825cf9029",
+      "size": 14219698
+    },
+    {
+      "local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/queue_stream_timeline.csv",
+      "original_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/queue_stream_timeline.csv",
+      "resolved_local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/queue_stream_timeline.csv",
+      "sha256": "aaa51fa3ce337cff07cf8a005a15ffaa229dbe77223d4c76b3b2caa4e45da030",
+      "size": 27452414
+    },
+    {
+      "local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/request_ranges.csv",
+      "original_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/request_ranges.csv",
+      "resolved_local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/request_ranges.csv",
+      "sha256": "3ba66817bd84e574bc984bfaa87c02874db7ecd35b8624d1cc9af69b9faac788",
+      "size": 495431
+    },
+    {
+      "local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/strict_owned_kernels.csv",
+      "original_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/strict_owned_kernels.csv",
+      "resolved_local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/strict_owned_kernels.csv",
+      "sha256": "aaa51fa3ce337cff07cf8a005a15ffaa229dbe77223d4c76b3b2caa4e45da030",
+      "size": 27452414
+    },
+    {
+      "local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/alignment/r07_live_utilization_aligned.csv",
+      "original_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/alignment/r07_live_utilization_aligned.csv",
+      "resolved_local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/alignment/r07_live_utilization_aligned.csv",
+      "sha256": "918f1711f5c88308c581e862adcd0577806cfefaca37d0e175be51b827855689",
+      "size": 749649669
+    },
+    {
+      "local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/alignment/r07_live_utilization_gaps.csv",
+      "original_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/alignment/r07_live_utilization_gaps.csv",
+      "resolved_local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/alignment/r07_live_utilization_gaps.csv",
+      "sha256": "638933624a3fe520199726fe612ba01bcfb2e446ba2350aec1ab52dcb611c629",
+      "size": 199080
+    },
+    {
+      "local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/alignment/r07_process_live_utilization.csv",
+      "original_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/alignment/r07_process_live_utilization.csv",
+      "resolved_local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/alignment/r07_process_live_utilization.csv",
+      "sha256": "c2ffcb1f85c3c4321fed1973a6fd7ff4e17031e1a3da2e7b56078baa172d91f3",
+      "size": 8038046
+    },
+    {
+      "local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/dependency/fresh_run_dependency_adapter.csv",
+      "original_path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/dependency/fresh_run_dependency_adapter.csv",
+      "resolved_local_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/dependency/fresh_run_dependency_adapter.csv",
+      "sha256": "f6555a76473defa2a2c13929d9d17ebdc123012bbad2349bf1e4200cc01b777e",
+      "size": 39342248
+    }
+  ]
+}
