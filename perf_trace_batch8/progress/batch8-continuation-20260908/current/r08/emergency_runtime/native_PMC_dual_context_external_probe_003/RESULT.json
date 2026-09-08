@@ -1,0 +1,106 @@
+{
+  "all_started_processes_terminated": true,
+  "argv": [
+    "/opt/dtk/bin/hipprof",
+    "--pmc-write",
+    "--pmc-type",
+    "3",
+    "--kernel-name",
+    "_gqa6",
+    "--hip-trace",
+    "--hiptx-trace",
+    "--trace-args",
+    "--no-export",
+    "--pmc-off",
+    "--trace-off",
+    "--kernel-profile-mode",
+    "1",
+    "--follow-fork",
+    "--exit-cleanup",
+    "-d",
+    "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_dual_context_external_probe_003/hipprof_tmp",
+    "-o",
+    "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_dual_context_external_probe_003/capture",
+    "/usr/bin/python3",
+    "-B",
+    "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_dual_context_external_probe_003/gqa6_visibility_probe.py",
+    "parent",
+    "direct"
+  ],
+  "each_worker_also_created_other_device_context_before_profiling": true,
+  "expected_4_per_device_observed": false,
+  "model_initializations": 0,
+  "native_device_counts": {
+    "8": 5,
+    "9": 5
+  },
+  "native_kernel_profile_mode": 1,
+  "not_R08_model_capture_evidence": true,
+  "status": "complete",
+  "visibility": [
+    {
+      "model_free": true,
+      "phase": "VISIBILITY_BEFORE_STOP.json",
+      "workers": [
+        {
+          "native_files": [],
+          "pid": 880090,
+          "rank": 0
+        },
+        {
+          "native_files": [],
+          "pid": 880091,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "model_free": true,
+      "phase": "VISIBILITY_AFTER_STOP.json",
+      "workers": [
+        {
+          "native_files": [],
+          "pid": 880090,
+          "rank": 0
+        },
+        {
+          "native_files": [],
+          "pid": 880091,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "model_free": true,
+      "phase": "VISIBILITY_AFTER_LIBC_FLUSH.json",
+      "workers": [
+        {
+          "native_files": [],
+          "pid": 880090,
+          "rank": 0
+        },
+        {
+          "native_files": [],
+          "pid": 880091,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "model_free": true,
+      "phase": "VISIBILITY_AFTER_WORKER_EXIT.json",
+      "workers": [
+        {
+          "native_files": [],
+          "pid": 880090,
+          "rank": 0
+        },
+        {
+          "native_files": [],
+          "pid": 880091,
+          "rank": 1
+        }
+      ]
+    }
+  ]
+}

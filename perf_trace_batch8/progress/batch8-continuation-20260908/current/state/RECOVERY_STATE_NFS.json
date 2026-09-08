@@ -5,7 +5,7 @@
   "current_runtime_revision": "revision_020",
   "runtime_gate": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/runtime_capture_gate_013.json",
   "scheduler": "serial_scheduler_012",
-  "scheduler_session": 40553,
+  "scheduler_session": null,
   "capture_session": null,
   "progress_watchdog_session": 65189,
   "deadline_utc": "2026-09-09T04:18:09Z",
@@ -50,7 +50,7 @@
   "complete_stage_publisher_session": 1983,
   "current_capture_phase": "failed_not_accepted",
   "latest_health_observation": {
-    "utc": "2026-09-08T16:10:21.436280+00:00",
+    "utc": "2026-09-08T16:20:22.536949+00:00",
     "accepted_R08": 8,
     "planned_R08": 12,
     "current_capture": "09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_005",
@@ -75,7 +75,7 @@
     "live_eight_request_target_coverage": null,
     "NFS_available_GiB": 13.44,
     "temporarily_evicted_bytes": 45795450475,
-    "remaining_machine_hours": 12.13,
+    "remaining_machine_hours": 11.96,
     "completed_stages": []
   },
   "runtime_health_monitor_session": 22460,
@@ -105,7 +105,7 @@
     "sha256": "a5534488686cb7f46de8957fe6d3e88d9eee943947956d46a18ff06eb26dc093"
   },
   "last_completed_capture": "08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read/attempt_002",
-  "last_failed_capture": "09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_004",
+  "last_failed_capture": "09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_005",
   "last_capture_retry_reason": "runtime019 Stop/Start alone failed; runtime020 defers native PMC and trace until original warmups; full-model validation pending",
   "retry_authorization": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/capture09_deferred_start_retry_001.json",
   "deadline_extension_authorization": "/public/home/accl15ptg7/run_R08_R10/MACHINE_TIME_EXTENSION_002.json",
@@ -115,7 +115,12 @@
   "cpu_suffix_waiter": "await_all_captures_then_cpu_002.py",
   "active_capture_scheduler_deadline_utc": "2026-09-09T04:18:09Z",
   "separate_model_free_counter_recheck": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_fresh_exec_pmc_write_recheck_002/RESULT.json",
-  "native_warmup_reset_actual_validation_status": "runtime019 failed before measured requests; runtime020 deferred-start attempt005 initializing",
+  "native_warmup_reset_actual_validation_status": "runtime019 Stop/Start and runtime020 initially-off both failed native prehealth; no measured requests in those attempts",
   "native_collection_initially_disabled_until_original_warmup": true,
-  "startup_native_trace_before_original_warmups_intentionally_omitted": true
+  "startup_native_trace_before_original_warmups_intentionally_omitted": true,
+  "native_capture_scheduler_status": "closed_failed_before_measured_requests",
+  "active_model_free_probe": "native_PMC_dual_context_external_probe_003",
+  "active_model_free_probe_session": 30172,
+  "full_model_capture_retry_waits_for_bounded_native_diagnostics": true,
+  "native_counter_bounded_reproduction": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_multi_device_context_reproduction_001.json"
 }

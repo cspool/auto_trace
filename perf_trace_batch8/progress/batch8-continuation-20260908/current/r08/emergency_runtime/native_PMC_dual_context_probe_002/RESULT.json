@@ -1,0 +1,150 @@
+{
+  "all_started_processes_terminated": true,
+  "argv": [
+    "/opt/dtk/bin/hipprof",
+    "--pmc-write",
+    "--pmc-type",
+    "3",
+    "--kernel-name",
+    "_gqa6",
+    "--hip-trace",
+    "--hiptx-trace",
+    "--trace-args",
+    "--no-export",
+    "--pmc-off",
+    "--trace-off",
+    "--follow-fork",
+    "--exit-cleanup",
+    "-d",
+    "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_dual_context_probe_002/hipprof_tmp",
+    "-o",
+    "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_dual_context_probe_002/capture",
+    "/usr/bin/python3",
+    "-B",
+    "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_dual_context_probe_002/gqa6_visibility_probe.py",
+    "parent",
+    "direct"
+  ],
+  "each_worker_also_created_other_device_context_before_profiling": true,
+  "expected_4_per_device_observed": false,
+  "model_initializations": 0,
+  "native_device_counts": {
+    "1": 4
+  },
+  "not_R08_model_capture_evidence": true,
+  "status": "complete",
+  "visibility": [
+    {
+      "model_free": true,
+      "phase": "VISIBILITY_BEFORE_STOP.json",
+      "workers": [
+        {
+          "native_files": [
+            {
+              "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_dual_context_probe_002/hipprof_tmprpl_data_260909_001250_877648/input0_results_260909_001250/pmc_results_877653.txt",
+              "prefix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "size": 0
+            }
+          ],
+          "pid": 877653,
+          "rank": 0
+        },
+        {
+          "native_files": [
+            {
+              "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_dual_context_probe_002/hipprof_tmprpl_data_260909_001250_877648/input0_results_260909_001250/pmc_results_877654.txt",
+              "prefix_sha256": "0c9ef566944c64a8ffc2d9ba05cd5ea4330c11e87315ca225bfee7ee3b381639",
+              "size": 16667
+            }
+          ],
+          "pid": 877654,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "model_free": true,
+      "phase": "VISIBILITY_AFTER_STOP.json",
+      "workers": [
+        {
+          "native_files": [
+            {
+              "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_dual_context_probe_002/hipprof_tmprpl_data_260909_001250_877648/input0_results_260909_001250/pmc_results_877653.txt",
+              "prefix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "size": 0
+            }
+          ],
+          "pid": 877653,
+          "rank": 0
+        },
+        {
+          "native_files": [
+            {
+              "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_dual_context_probe_002/hipprof_tmprpl_data_260909_001250_877648/input0_results_260909_001250/pmc_results_877654.txt",
+              "prefix_sha256": "0c9ef566944c64a8ffc2d9ba05cd5ea4330c11e87315ca225bfee7ee3b381639",
+              "size": 16667
+            }
+          ],
+          "pid": 877654,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "model_free": true,
+      "phase": "VISIBILITY_AFTER_LIBC_FLUSH.json",
+      "workers": [
+        {
+          "native_files": [
+            {
+              "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_dual_context_probe_002/hipprof_tmprpl_data_260909_001250_877648/input0_results_260909_001250/pmc_results_877653.txt",
+              "prefix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "size": 0
+            }
+          ],
+          "pid": 877653,
+          "rank": 0
+        },
+        {
+          "native_files": [
+            {
+              "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_dual_context_probe_002/hipprof_tmprpl_data_260909_001250_877648/input0_results_260909_001250/pmc_results_877654.txt",
+              "prefix_sha256": "0c9ef566944c64a8ffc2d9ba05cd5ea4330c11e87315ca225bfee7ee3b381639",
+              "size": 21832
+            }
+          ],
+          "pid": 877654,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "model_free": true,
+      "phase": "VISIBILITY_AFTER_WORKER_EXIT.json",
+      "workers": [
+        {
+          "native_files": [
+            {
+              "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_dual_context_probe_002/hipprof_tmprpl_data_260909_001250_877648/input0_results_260909_001250/pmc_results_877653.txt",
+              "prefix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "size": 0
+            }
+          ],
+          "pid": 877653,
+          "rank": 0
+        },
+        {
+          "native_files": [
+            {
+              "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_dual_context_probe_002/hipprof_tmprpl_data_260909_001250_877648/input0_results_260909_001250/pmc_results_877654.txt",
+              "prefix_sha256": "0c9ef566944c64a8ffc2d9ba05cd5ea4330c11e87315ca225bfee7ee3b381639",
+              "size": 21832
+            }
+          ],
+          "pid": 877654,
+          "rank": 1
+        }
+      ]
+    }
+  ]
+}

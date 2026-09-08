@@ -1,0 +1,16 @@
+{
+  "phase": "VISIBILITY_AFTER_LIBC_FLUSH.json",
+  "workers": [
+    {
+      "rank": 0,
+      "pid": 880090,
+      "native_files": []
+    },
+    {
+      "rank": 1,
+      "pid": 880091,
+      "native_files": []
+    }
+  ],
+  "model_free": true
+}
