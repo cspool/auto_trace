@@ -19,3 +19,13 @@ R09/R10模板在检查点中标记为 prepared_not_executed，不代表相应阶
 用户追加存储要求：R08 到 R10 的全部运行产物、阶段产出和日志均须物理保存在 NFS，权重仍须物理保存在 `/root`。后续采集已暂停；当前第三项采集已关闭，正在逐文件校验并将已有 root/内存盘产物迁回 NFS。迁移记录在 `run_R08_R10/storage_policy_correction_001`。当前 NFS 主目录总配额 50 GB，已请求提高配额或提供更大的 NFS 路径；不会用 root/内存盘存放后续 R08–R10 产物来绕过这一要求。
 
 2026-09-08 09:27 UTC：R08 全部 7,630 个文件、28,025,404,918 字节已迁到物理 NFS，逐文件复制及切换后 SHA-256 校验一致。逻辑路径不变；`/root/r08_continuation_001_bulk` 现仅是指向 `/public/home/accl15ptg7/r08_continuation_001_NFS_bulk` 的目录别名。权重的物理文件仍全部位于 `/root`。当前权威状态为进度分支 `current/state/RECOVERY_STATE_NFS.json`；后续输出采用 revision_016 / analysis_005 的 NFS 路径检查，原冻结版本保留。每次新采集前检查 NFS 容量，不足即暂停。
+
+## 2026-09-08 09:57 UTC: verified Release offload and fourth-capture retry
+
+User explicitly authorizes temporarily removing published local data and restoring it before final R08 validation. Three accepted segments are published; all nine evicted files were checked against published file SHA256 and current GitHub asset size/digest. This frees 13,251,173,857 bytes. NFS retains exact recovery manifests and logs. Original inventory and accepted audit certificates are unchanged; their large source files are temporarily absent and must be restored before final stage closure.
+
+Weights remain physical `/root` until all 12 R08 GPU captures are accepted and all workers terminate. User authorizes removing weights then to make room for restoring all R08 artifacts and performing aggregate validation. Capture outputs continue to be physical NFS.
+
+Fourth segment attempt001 failed the pre-measurement native health gate (rank0 empty PMC); the eight measured requests never started. All its known processes are terminated. Revision017 starts native collection explicitly before each of the original two warmups and retains explicit measured start, exact marker boundaries, all-eight coverage and independent attribution gates. CPU fixtures pass; actual two-worker native validation remains pending. Attempt002 started at 09:56:04 UTC. Spawn alone is not a proven remedy.
+
+Latest recovery state: `/public/home/accl15ptg7/run_R08_R10/RECOVERY_STATE_NFS.json`. Deadline remains 2026-09-08 20:18:09 UTC.
