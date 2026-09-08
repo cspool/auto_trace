@@ -17,7 +17,7 @@
   "accepted_capture_publisher": "/public/home/accl15ptg7/run_R08_R10/publish_accepted_captures_003.py",
   "original_NFS_session_state_superseded_by_this_emergency_record": true,
   "R09_R10_actual_execution_started": false,
-  "home_storage_available_gib": 18.44,
+  "home_storage_available_gib": 16.37,
   "weight_storage_constraint": "All physical weight bytes must stay under /root; never migrate weights to NFS again",
   "accepted_capture_publisher_session": 64243,
   "raw_storage_watchdog_session": 19126,
@@ -48,34 +48,60 @@
   "cpu_suffix_status": "outer waiting only; will restore all raw sources before R08 assignment",
   "complete_stage_publisher": "publish_complete_stages_002.py",
   "complete_stage_publisher_session": 46095,
-  "current_capture_phase": "original_two_warmups",
+  "current_capture_phase": "measured_batch",
   "latest_health_observation": {
-    "utc": "2026-09-08T12:24:53.936531+00:00",
+    "utc": "2026-09-08T12:34:54.879723+00:00",
     "accepted_R08": 4,
     "planned_R08": 12,
     "current_capture": "05_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_read/attempt_001",
-    "current_phase": "original_two_warmups",
+    "current_phase": "measured_batch",
     "native_workers": [
       {
         "rank": 0,
         "worker_pid": 553054,
-        "PMC_bytes": 26010123,
+        "PMC_bytes": 797669685,
         "worker_alive": true
       },
       {
         "rank": 1,
         "worker_pid": 553051,
-        "PMC_bytes": 27940691,
+        "PMC_bytes": 801085570,
         "worker_alive": true
       }
     ],
-    "admission_releases": [],
-    "pre_measured_health": "pending",
-    "measured_request_token_progress": {},
+    "admission_releases": [
+      {
+        "rank": 0,
+        "engine_pid": 551491,
+        "request_order": [
+          "batch8-dual-dcu-dp2-req-002-28a42990210e6f68",
+          "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786",
+          "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5",
+          "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41"
+        ]
+      },
+      {
+        "rank": 1,
+        "engine_pid": 551492,
+        "request_order": [
+          "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c",
+          "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f",
+          "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04",
+          "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3"
+        ]
+      }
+    ],
+    "pre_measured_health": "complete",
+    "measured_request_token_progress": {
+      "batch8-dual-dcu-dp2-req-002-28a42990210e6f68": 37,
+      "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786": 0,
+      "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c": 41,
+      "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f": 0
+    },
     "live_eight_request_target_coverage": null,
-    "NFS_available_GiB": 18.44,
+    "NFS_available_GiB": 16.37,
     "temporarily_evicted_bytes": 21092925463,
-    "remaining_machine_hours": 7.89,
+    "remaining_machine_hours": 7.72,
     "completed_stages": []
   },
   "runtime_health_monitor_session": 62429,

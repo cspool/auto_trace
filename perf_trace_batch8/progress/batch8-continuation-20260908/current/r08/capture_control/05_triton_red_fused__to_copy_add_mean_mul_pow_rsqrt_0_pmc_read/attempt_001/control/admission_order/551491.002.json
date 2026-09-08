@@ -1,0 +1,12 @@
+{
+  "operation": "measured_request_buffered",
+  "rank": 0,
+  "stable_request_id": "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786",
+  "arrival_ordinal": 2,
+  "pid": 551491,
+  "monotonic_ns": 505975075081141,
+  "realtime_ns": 1788870752180137180,
+  "contract_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/replay_admission_order_001.json",
+  "contract_sha256": "c66d9a3603f8215db32a5c3f660dc6dd78988917f41954f53e0ccaa0248acf9d",
+  "replay_diagnostic_only": true
+}
