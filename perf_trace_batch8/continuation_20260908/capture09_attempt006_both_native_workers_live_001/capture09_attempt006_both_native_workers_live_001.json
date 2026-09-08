@@ -1,0 +1,90 @@
+{
+  "status": "complete_live_native_startup_observation",
+  "utc": "2026-09-08T17:42:30.845170+00:00",
+  "workers": [
+    {
+      "rank": 0,
+      "worker_pid": 930501,
+      "native_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_006/native_collectors/rank0/hipprof_tmprpl_data_260909_013529_930288/input0_results_260909_013529/pmc_results_930501.txt",
+      "observed_size": 15720378,
+      "prefix_bytes": 65536,
+      "prefix_sha256": "363b2c225e5234a5ebc9392208826525793d0df5edd3d872b9e8c845dec05512",
+      "native_headers_checked": 12,
+      "native_PID_device_and_GRBM_payload_present": true
+    },
+    {
+      "rank": 1,
+      "worker_pid": 930503,
+      "native_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_006/native_collectors/rank1/hipprof_tmprpl_data_260909_013529_930298/input0_results_260909_013529/pmc_results_930503.txt",
+      "observed_size": 16643319,
+      "prefix_bytes": 65536,
+      "prefix_sha256": "f6d32979602c6c8fa847634ce86557970f19ed851a51dce131abc913122bb4f4",
+      "native_headers_checked": 12,
+      "native_PID_device_and_GRBM_payload_present": true
+    }
+  ],
+  "closed_capture_accepted": false,
+  "all_eight_measured_request_coverage_claimed": false,
+  "source_bindings": [
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_006/control/worker_native_collectors/rank0.json",
+      "size": 2117,
+      "sha256": "45bbbcb39ae1fcfe824f16d4dde1f2616c8052782272dbeb43804fb2582ad138"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_006/native_collectors/rank0/COLLECTOR_DESCRIPTOR.json",
+      "size": 1630,
+      "sha256": "5944d4b2e6eb10db669c6383ac564a78002eb3fbfcb24129db1c51ca1d8da363"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_006/native_collectors/rank0/COLLECTOR_WRAPPER_START.json",
+      "size": 477,
+      "sha256": "4a35a7c4b57ebc8a979819c5d494da236e001c6749035d05fe1befd42e0ba0d0"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_006/native_collectors/rank0/COLLECTOR_CHILD_START.json",
+      "size": 1207,
+      "sha256": "3efe72db7092cb4345f944edf1c3451c8240c36ac61e5372a6807ff4bd15dc3f"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_006/native_collectors/rank0/MP_WORKER_LAUNCH.json",
+      "size": 551,
+      "sha256": "5dbd82e54a5b4b9d8dae52bbc28df35405aced782262857e4a0837567658f427"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_006/native_collectors/rank0/native_input_at_worker_start.txt",
+      "size": 372,
+      "sha256": "62be1144653f607a2fd605051ba7d31cefd2fd5c405eb35bb5ad5b1869a937c7"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_006/control/worker_native_collectors/rank1.json",
+      "size": 2117,
+      "sha256": "ec13b5c69ec5bfb956007991089bdd42f689f6b6a7640e13e8153810ad2ec6cf"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_006/native_collectors/rank1/COLLECTOR_DESCRIPTOR.json",
+      "size": 1630,
+      "sha256": "d2fb97d7d0b0ff9fa071ba5be3350d0f77fe8ee89aed28f97d295c909bbde17b"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_006/native_collectors/rank1/COLLECTOR_WRAPPER_START.json",
+      "size": 477,
+      "sha256": "43e6bb8ecbc6f14d5d6d6e0328b61aa2a85f1e48862ffa7d5433dfaffbb211ae"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_006/native_collectors/rank1/COLLECTOR_CHILD_START.json",
+      "size": 1207,
+      "sha256": "4956e39a1d7478ed0ba013b549472339de366001ec2d3641f6b974d7b23c1546"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_006/native_collectors/rank1/MP_WORKER_LAUNCH.json",
+      "size": 551,
+      "sha256": "b5b4317067339ab65c42ccbc55f0d002f9e1a38a40e6b0b5274460e9affd2010"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_006/native_collectors/rank1/native_input_at_worker_start.txt",
+      "size": 372,
+      "sha256": "62be1144653f607a2fd605051ba7d31cefd2fd5c405eb35bb5ad5b1869a937c7"
+    }
+  ]
+}

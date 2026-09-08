@@ -1,0 +1,32 @@
+{
+  "collector_argv_prefix": [
+    "/opt/dtk/bin/hipprof",
+    "--pmc-write",
+    "--pmc-type",
+    "3",
+    "--kernel-name",
+    "chunk_gated_delta_rule_fwd_kernel_h_blockdim64",
+    "--hip-trace",
+    "--hiptx-trace",
+    "--trace-args",
+    "--no-export",
+    "--follow-fork",
+    "--exit-cleanup",
+    "-d",
+    "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_006/native_collectors/rank0/hipprof_tmp",
+    "-o",
+    "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_006/native_collectors/rank0/capture"
+  ],
+  "native_collection_initially_on": true,
+  "original_service_DP2_TP1_unchanged": true,
+  "output_directory": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_006/native_collectors/rank0",
+  "parent_pid": 929100,
+  "physical_device_id": 0,
+  "status": "prepared",
+  "working_directory": "/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8",
+  "wrapper": {
+    "path": "/public/home/accl15ptg7/r08_continuation_001_NFS_bulk/raw/runtime_tools/revision_021/r08_collector_python.py",
+    "sha256": "4d3d9b51a95e974f711e5514494f44e0397badbd52da9f983ce49b76940ab6e7",
+    "size": 3602
+  }
+}

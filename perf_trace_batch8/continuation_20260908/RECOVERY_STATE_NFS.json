@@ -17,7 +17,7 @@
   "accepted_capture_publisher": "/public/home/accl15ptg7/run_R08_R10/publish_accepted_captures_004.py",
   "original_NFS_session_state_superseded_by_this_emergency_record": true,
   "R09_R10_actual_execution_started": false,
-  "home_storage_available_gib": 13.43,
+  "home_storage_available_gib": 12.03,
   "weight_storage_constraint": "All physical weight bytes must stay under /root; never migrate weights to NFS again",
   "accepted_capture_publisher_session": 12763,
   "raw_storage_watchdog_session": 94301,
@@ -48,21 +48,34 @@
   "cpu_suffix_status": "outer waiting only; will restore all raw sources before R08 assignment",
   "complete_stage_publisher": "publish_complete_stages_003.py",
   "complete_stage_publisher_session": 1983,
-  "current_capture_phase": "model_initialization",
+  "current_capture_phase": "original_two_warmups",
   "latest_health_observation": {
-    "utc": "2026-09-08T17:36:38.557844+00:00",
+    "utc": "2026-09-08T17:41:39.212143+00:00",
     "accepted_R08": 8,
     "planned_R08": 12,
     "current_capture": "09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_006",
-    "current_phase": "model_initialization",
-    "native_workers": [],
+    "current_phase": "original_two_warmups",
+    "native_workers": [
+      {
+        "rank": 0,
+        "worker_pid": 930501,
+        "PMC_bytes": 15297527,
+        "worker_alive": true
+      },
+      {
+        "rank": 1,
+        "worker_pid": 930503,
+        "PMC_bytes": 16209360,
+        "worker_alive": true
+      }
+    ],
     "admission_releases": [],
     "pre_measured_health": "pending",
     "measured_request_token_progress": {},
     "live_eight_request_target_coverage": null,
-    "NFS_available_GiB": 13.43,
+    "NFS_available_GiB": 12.03,
     "temporarily_evicted_bytes": 45795450475,
-    "remaining_machine_hours": 10.69,
+    "remaining_machine_hours": 10.61,
     "completed_stages": []
   },
   "runtime_health_monitor_session": 44834,
