@@ -1,0 +1,26 @@
+{
+  "status": "authorized_same_raw_offline_tool_repair",
+  "original_raw_capture": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc/attempt_003/execution_manifest.json",
+    "size": 8498,
+    "sha256": "198b6952387d56ac888f371083775a283183bb1f3589cae8c7c4b8170de65222"
+  },
+  "failed_normalization_log": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/validation/serial_scheduler_006/04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc.normalize.log",
+    "size": 1051,
+    "sha256": "d4a4f01f98d60c6875ad65899cc91a62d517c195afcafb450d0e92a631c447d4"
+  },
+  "analysis_CPU_gate": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/validation/background_graph_analysis_CPU_gate_001.json",
+    "size": 4110,
+    "sha256": "cdc04afb9c73de0b2b953a89dda35783713c20bdbd3223d3bfe1bb1bcd43d631"
+  },
+  "selected_graph_scope_probe": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_graph_selected_intersection_001.json",
+    "size": 383,
+    "sha256": "e05f086741c5495bd36a6898cf6e97d0adb7716df4fd137dcde9099a064c2348"
+  },
+  "no_GPU_recapture_performed_or_required": true,
+  "new_normalized_revision": "revision_003",
+  "acceptance_requires_independent_audit_complete": true
+}

@@ -1,0 +1,75 @@
+{
+  "R07_observed_clock_modified": false,
+  "accepted_rows": 1408,
+  "all_attributes_replay_projected": true,
+  "background_native_graph_classification": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/normalized/captures/04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc/attempt_003/revision_003/background_native_graph_classification.json",
+    "sha256": "53e6b37ac187216f84e73bec822caf4c40538f784439820da5d8c6d11653c6f4",
+    "size": 875
+  },
+  "capture": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc/attempt_003/execution_manifest.json",
+    "sha256": "198b6952387d56ac888f371083775a283183bb1f3589cae8c7c4b8170de65222",
+    "size": 8498
+  },
+  "counter_count": 186,
+  "counter_mode": "pmc",
+  "current_bound_targets": 13568,
+  "current_process_markers": 12544,
+  "dispatch_attributes": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/normalized/captures/04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc/attempt_003/revision_003/dispatch_attributes.jsonl",
+    "sha256": "35fd45755163d8b4f6442595ddc3cc2b93a19f47f1b7edebfe150c20c88e688e",
+    "size": 11693789
+  },
+  "dispatch_attributes_csv": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/normalized/captures/04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc/attempt_003/revision_003/dispatch_attributes.csv",
+    "sha256": "dbfd5d0b8056e82e7db12a9a5ef5415eb29c928f52a24bda2fc484e25c6f28ab",
+    "size": 3930769
+  },
+  "elapsed_seconds": 79.12316044501495,
+  "excluded_rows": 584295,
+  "excluded_rows_file": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/normalized/captures/04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc/attempt_003/revision_003/excluded_pmc_rows.jsonl",
+    "sha256": "5e9e2b1ef5ff25076fc6087170b7840d7e1aefddc0b0bced8e3ee07342826532",
+    "size": 272094029
+  },
+  "full_native_chain_proven": true,
+  "logical_family_ids": [
+    "r08-plan-005-d1859c2e3239",
+    "r08-plan-011-76325622b9e1",
+    "r08-plan-013-1c58b86f5b35",
+    "r08-plan-016-9daee993ecf9",
+    "r08-plan-017-c03ca00ed001",
+    "r08-plan-031-c5a691cab435"
+  ],
+  "mapped_R07_kernel_count": 1408,
+  "missing_selected_counter_cells": 0,
+  "native_correlation_method": "native PMC CPU submission timestamp inside unique same-PID/TID exact-literal native HIP launch with CONFIG conversion and no tolerance; one HIPOPS per native API _Index, same device; deepest exact HIPTX process -> logical R06 target -> R07 kernel subsequence; GPU timestamp equality retained as diagnostic only",
+  "native_device_counts": {
+    "0": 704,
+    "1": 704
+  },
+  "native_owned_kernel_count": 23660,
+  "normalizer": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/analysis_007/normalize_capture.py",
+    "sha256": "8bcec1b8e7f63b27d031ec19e0f6f904d2ebad29552bccf4c53fb7b9b100f7a7",
+    "size": 22119
+  },
+  "owner_multiplicity": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/normalized/captures/04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc/attempt_003/revision_003/logical_owner_multiplicity.json",
+    "sha256": "811ec18425deae9f75a94cd837bf9628dc46cd484a4469ffa13b79d47e258838",
+    "size": 636547
+  },
+  "rank_counts": {
+    "0": 704,
+    "1": 704
+  },
+  "raw_pmc_rows": 585703,
+  "runtime_run_id": "batch8-dp2-fresh-003",
+  "runtime_shape_match_counts": {
+    "True": 1408
+  },
+  "segment_id": "04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc",
+  "selected_owner_count": 1408,
+  "status": "complete"
+}
