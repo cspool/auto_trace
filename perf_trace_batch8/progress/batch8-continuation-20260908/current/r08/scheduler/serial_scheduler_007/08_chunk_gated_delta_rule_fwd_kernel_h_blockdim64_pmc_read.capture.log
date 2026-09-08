@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_018/run_capture.py", line 154, in <module>
+    if __name__=='__main__':main()
+  File "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_018/run_capture.py", line 152, in main
+    else:capture(args)
+  File "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_018/run_capture.py", line 135, in capture
+    workload=read(root/'control/tracee_workload_complete.json');require(workload['status']=='complete','sealed full workload proof')
+  File "/public/home/accl15ptg7/r08_continuation_001_NFS_bulk/raw/runtime_tools/revision_018/r08_native.py", line 31, in read
+    def read(path):return json.loads(Path(path).read_text())
+  File "/usr/lib/python3.10/pathlib.py", line 1134, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+  File "/usr/lib/python3.10/pathlib.py", line 1119, in open
+    return self._accessor.open(self, mode, buffering, encoding, errors,
+FileNotFoundError: [Errno 2] No such file or directory: '/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read/attempt_001/control/tracee_workload_complete.json'
