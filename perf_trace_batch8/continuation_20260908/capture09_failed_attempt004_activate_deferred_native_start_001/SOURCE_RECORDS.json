@@ -1,0 +1,57 @@
+[
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/capture09_deferred_start_retry_001.json",
+    "size": 5487,
+    "sha256": "e937e5e63a265e80b7c4b07c8f4a2d06919dc4922fb82a011f03933954034517"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_004/RAW_CAPTURE_FAILURE.json",
+    "size": 1219,
+    "sha256": "25f86924b2b072e438de012f69975edd13b3100a79f2e07d776590016174998f"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_004/raw_inventory_at_exit.json",
+    "size": 11340,
+    "sha256": "52dc24d6d2c0eb51a29249148912e7b87ea5be126f2f63ce8a97616a03f19317"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_004/control/PRE_MEASURED_NATIVE_PMC_HEALTH.json",
+    "size": 228,
+    "sha256": "e1527693bf48c04752c027cf79587937c72a5284d2c01cacf98a9ba9c4694a79"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_004/control/tracee_process_cleanup.json",
+    "size": 280,
+    "sha256": "69706224272fb91a65c1ab0914197d2dae4fa860a42d3ee10966f2c9f2b481ff"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_004/control/pmc_gate_events/warmup_start.rank0.pid843717.json",
+    "size": 1397,
+    "sha256": "336a1e2016f58591d05df90cd9e992d72556e021827a9b2572b3f7d8e5b8ccf2"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_004/control/pmc_gate_events/warmup_start.rank1.pid843714.json",
+    "size": 1397,
+    "sha256": "fcaad2417c65f6200ebdec9eda7252d77e8270342a8b8b1811fd4e2cc35f6663"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_004/logs/hipprof.log",
+    "size": 3582,
+    "sha256": "272b026d8f887f9da3a5ee90d99b7e4daf3f136f3b85951ee1905412bfe3dfe3"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_004/logs/service.log",
+    "size": 48817,
+    "sha256": "06274412c7c6ea75e3c0ae96c81ff578452dcb95e6ea3fac3b13b30690b1a8c6"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_004/logs/workload.log",
+    "size": 786,
+    "sha256": "73c3790b7b6bbe94b5f620ff9eb635ff9c0d051d49301667d4f6ba749bfa929a"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/runtime_capture_gate_013.json",
+    "size": 9144,
+    "sha256": "a5f7a5172602886f83c7cc155292d4e17cebdfc971cd414d22b3ed4f5723db77"
+  }
+]
