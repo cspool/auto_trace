@@ -1,0 +1,25 @@
+{
+  "failure_type": "FileNotFoundError",
+  "measurement_completion_claimed": false,
+  "native_health": {
+    "checked_realtime_ns": 1788881118279606649,
+    "elapsed_seconds": 10.02126704400871,
+    "pid": 809197,
+    "rank": 0,
+    "reason": "empty native PMC worker file before measured requests",
+    "status": "failed",
+    "workers": []
+  },
+  "profiler_cleanup": {
+    "leader_pid": 806663,
+    "remaining_group_members_before_final_cleanup": [],
+    "returncode": 0
+  },
+  "raw_inventory": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_002/raw_inventory_at_exit.json",
+    "sha256": "4640de6ad2c72154e0624c7c79309bf0c5e0b52db1677aa75b7b4754205d3af8",
+    "size": 11340
+  },
+  "reason": "[Errno 2] No such file or directory: '/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_002/control/tracee_workload_complete.json'",
+  "status": "failed_not_accepted"
+}

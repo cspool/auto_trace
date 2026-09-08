@@ -1,0 +1,50 @@
+{
+  "status": "complete_read_only_native_args_query",
+  "utc": "2026-09-08T15:28:09.076241+00:00",
+  "database": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_001/capture.db",
+    "sha256": "b8e36f368a9d8f7163e2f042f0fdcfb8fe7f2d3e1874a25e88520562f95b8a67",
+    "size": 894996480
+  },
+  "elapsed_seconds": 0.8593395050265826,
+  "rows": [
+    {
+      "table": "HIP_173_10_105_2_790371_1788879885",
+      "native_profiler_calls": []
+    },
+    {
+      "table": "HIP_173_10_105_2_791263_1788879948",
+      "native_profiler_calls": []
+    },
+    {
+      "table": "HIP_173_10_105_2_791262_1788879948",
+      "native_profiler_calls": []
+    },
+    {
+      "table": "HIP_173_10_105_2_791261_1788879948",
+      "native_profiler_calls": []
+    },
+    {
+      "table": "HIP_173_10_105_2_791258_1788879948",
+      "native_profiler_calls": []
+    },
+    {
+      "table": "HIP_173_10_105_2_791257_1788879949",
+      "native_profiler_calls": []
+    },
+    {
+      "table": "HIP_173_10_105_2_791264_1788879949",
+      "native_profiler_calls": []
+    },
+    {
+      "table": "HIP_173_10_105_2_792835_1788880002",
+      "native_profiler_calls": []
+    },
+    {
+      "table": "HIP_173_10_105_2_792842_1788880002",
+      "native_profiler_calls": []
+    }
+  ],
+  "absence_of_rows_does_not_prove_absence_of_untraced_profiler_APIs": true,
+  "original_data_modified": false
+}

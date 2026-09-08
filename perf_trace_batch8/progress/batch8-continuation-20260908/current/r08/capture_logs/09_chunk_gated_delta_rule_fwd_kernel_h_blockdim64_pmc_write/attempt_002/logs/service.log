@@ -172,3 +172,148 @@ R08_PMC_GATE_READY attempt=batch8-dp2-fresh-003-R08-09_chunk_gated_delta_rule_fw
 (Worker pid=809197)   output = F.scaled_dot_product_attention(
 (Worker pid=809197) INFO 09-08 23:20:23 [backends.py:988] Using cache directory: /public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_cache/vllm/torch_compile_cache/7737b31bfa/rank_0_0/backbone for vLLM's torch.compile
 (Worker pid=809197) INFO 09-08 23:20:23 [backends.py:1048] Dynamo bytecode transform time: 6.94 s
+(Worker pid=809197) INFO 09-08 23:20:58 [backends.py:284] Directly load the compiled graph(s) for compile range (4096, 4096) from the cache, took 33.215 s
+(Worker pid=809192) INFO 09-08 23:20:58 [decorators.py:296] Directly load AOT compilation from path /public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_cache/vllm/torch_compile_cache/torch_aot_compile/3742d5fd0f486b9bb06d370adf48f7bfafddeab604203c8f9fcb5c838d4bb4b1/rank_0_1/model
+(Worker pid=809197) INFO 09-08 23:20:58 [backends.py:284] Directly load the compiled graph(s) for compile range (1, 4096) from the cache, took 33.312 s
+(Worker pid=809197) INFO 09-08 23:20:58 [monitor.py:48] torch.compile took 42.08 s in total
+(Worker pid=809197) INFO 09-08 23:20:58 [decorators.py:296] Directly load AOT compilation from path /public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_cache/vllm/torch_compile_cache/torch_aot_compile/3742d5fd0f486b9bb06d370adf48f7bfafddeab604203c8f9fcb5c838d4bb4b1/rank_0_0/model
+(Worker pid=809197) /public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/model_executor/layers/fla/ops/utils.py:113: UserWarning: Input tensor shape suggests potential format mismatch: seq_len (16) < num_heads (48). This may indicate the inputs were passed in head-first format [B, H, T, ...] when head_first=False was specified. Please verify your input tensor format matches the expected shape [B, T, H, ...].
+(Worker pid=809197)   return fn(*contiguous_args, **contiguous_kwargs)
+(Worker pid=809192) /public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/model_executor/layers/fla/ops/utils.py:113: UserWarning: Input tensor shape suggests potential format mismatch: seq_len (16) < num_heads (48). This may indicate the inputs were passed in head-first format [B, H, T, ...] when head_first=False was specified. Please verify your input tensor format matches the expected shape [B, T, H, ...].
+(Worker pid=809192)   return fn(*contiguous_args, **contiguous_kwargs)
+(EngineCore_DP1 pid=807659) INFO 09-08 23:21:03 [shm_broadcast.py:681] No available shared memory broadcast block found in 60 seconds. This typically happens when some processes are hanging or doing some time-consuming work (e.g. compilation, weight/kv cache quantization).
+(EngineCore_DP0 pid=807658) INFO 09-08 23:21:03 [shm_broadcast.py:681] No available shared memory broadcast block found in 60 seconds. This typically happens when some processes are hanging or doing some time-consuming work (e.g. compilation, weight/kv cache quantization).
+(Worker pid=809192) /public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/model_executor/layers/fla/ops/utils.py:113: UserWarning: Input tensor shape suggests potential format mismatch: seq_len (32) < num_heads (48). This may indicate the inputs were passed in head-first format [B, H, T, ...] when head_first=False was specified. Please verify your input tensor format matches the expected shape [B, T, H, ...].
+(Worker pid=809192)   return fn(*contiguous_args, **contiguous_kwargs)
+(Worker pid=809197) /public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/model_executor/layers/fla/ops/utils.py:113: UserWarning: Input tensor shape suggests potential format mismatch: seq_len (32) < num_heads (48). This may indicate the inputs were passed in head-first format [B, H, T, ...] when head_first=False was specified. Please verify your input tensor format matches the expected shape [B, T, H, ...].
+(Worker pid=809197)   return fn(*contiguous_args, **contiguous_kwargs)
+(Worker pid=809197) INFO 09-08 23:21:45 [monitor.py:76] Initial profiling/warmup run took 46.80 s
+(Worker pid=809197) INFO 09-08 23:21:46 [gpu_worker.py:456] Available KV cache memory: 6.74 GiB
+(Worker pid=809197) R01_KV_TARGET_RESTORATION dp_rank=0 observed_tokens=27440 target_tokens=28224 observed_bytes=7237795328 target_bytes=7398752256 restoration_bytes=160956928 remaining_reserve_bytes=2936536576 status=ready
+(EngineCore_DP0 pid=807658) INFO 09-08 23:21:46 [kv_cache_utils.py:1316] GPU KV cache size: 28,224 tokens
+(EngineCore_DP0 pid=807658) INFO 09-08 23:21:46 [kv_cache_utils.py:1321] Maximum concurrency for 262,144 tokens per request: 0.43x
+(Worker pid=809192) R01_KV_TARGET_RESTORATION dp_rank=1 observed_tokens=27440 target_tokens=28224 observed_bytes=7221018112 target_bytes=7398752256 restoration_bytes=177734144 remaining_reserve_bytes=2919759360 status=ready
+(EngineCore_DP1 pid=807659) INFO 09-08 23:21:46 [kv_cache_utils.py:1316] GPU KV cache size: 28,224 tokens
+(EngineCore_DP1 pid=807659) INFO 09-08 23:21:46 [kv_cache_utils.py:1321] Maximum concurrency for 262,144 tokens per request: 0.43x
+(Worker pid=809192) VLLM_ROCM_TUNABLEOP_PRE_CAPTURE dp_rank=1 physical_device=1 profile=gfx936_qwen3_5_27b_bf16_tn_m4096 profile_sha256=169c7b11a0340d9e22405327b5e5667b2aa9e9e8d899bd59e10ca4fb7fb52030 results=5 validators=5 enabled=true tuning=false record_untuned=false status=ready
+(Worker pid=809192) INFO 09-08 23:21:46 [gpu_worker.py:598] Compile and warming up model for size 4096
+(Worker pid=809197) VLLM_ROCM_TUNABLEOP_PRE_CAPTURE dp_rank=0 physical_device=0 profile=gfx936_qwen3_5_27b_bf16_tn_m4096 profile_sha256=169c7b11a0340d9e22405327b5e5667b2aa9e9e8d899bd59e10ca4fb7fb52030 results=5 validators=5 enabled=true tuning=false record_untuned=false status=ready
+(Worker pid=809197) INFO 09-08 23:21:46 [gpu_worker.py:598] Compile and warming up model for size 4096
+(Worker pid=809197) Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):   0%|          | 0/5 [00:00<?, ?it/s](Worker pid=809192) Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):   0%|          | 0/5 [00:00<?, ?it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  20%|██        | 1/5 [00:01<00:04,  1.05s/it]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  20%|██        | 1/5 [00:01<00:05,  1.46s/it]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  40%|████      | 2/5 [00:02<00:03,  1.04s/it]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  40%|████      | 2/5 [00:02<00:04,  1.47s/it]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  60%|██████    | 3/5 [00:03<00:02,  1.04s/it]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  80%|████████  | 4/5 [00:04<00:01,  1.03s/it]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  60%|██████    | 3/5 [00:04<00:02,  1.47s/it]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE): 100%|██████████| 5/5 [00:05<00:00,  1.05s/it]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE): 100%|██████████| 5/5 [00:05<00:00,  1.05s/it]
+(Worker pid=809197) Capturing CUDA graphs (decode, FULL):   0%|          | 0/5 [00:00<?, ?it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  80%|████████  | 4/5 [00:05<00:01,  1.47s/it]Capturing CUDA graphs (decode, FULL):  20%|██        | 1/5 [00:00<00:03,  1.13it/s]Capturing CUDA graphs (decode, FULL):  40%|████      | 2/5 [00:01<00:02,  1.14it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE): 100%|██████████| 5/5 [00:07<00:00,  1.49s/it]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE): 100%|██████████| 5/5 [00:07<00:00,  1.48s/it]
+(Worker pid=809192) Capturing CUDA graphs (decode, FULL):   0%|          | 0/5 [00:00<?, ?it/s]Capturing CUDA graphs (decode, FULL):  60%|██████    | 3/5 [00:02<00:01,  1.21it/s]Capturing CUDA graphs (decode, FULL):  80%|████████  | 4/5 [00:03<00:00,  1.24it/s]Capturing CUDA graphs (decode, FULL):  20%|██        | 1/5 [00:01<00:04,  1.15s/it]Capturing CUDA graphs (decode, FULL): 100%|██████████| 5/5 [00:04<00:00,  1.23it/s]Capturing CUDA graphs (decode, FULL): 100%|██████████| 5/5 [00:04<00:00,  1.21it/s]
+Capturing CUDA graphs (decode, FULL):  40%|████      | 2/5 [00:02<00:03,  1.14s/it](Worker pid=809197) INFO 09-08 23:21:57 [gpu_model_runner.py:5758] Graph capturing finished in 10 secs, took 0.29 GiB
+(EngineCore_DP0 pid=807658) INFO 09-08 23:21:58 [core.py:281] init engine (profile, create kv cache, warmup model) took 115.40 seconds
+Capturing CUDA graphs (decode, FULL):  60%|██████    | 3/5 [00:03<00:02,  1.09s/it]Capturing CUDA graphs (decode, FULL):  80%|████████  | 4/5 [00:04<00:01,  1.03s/it]Capturing CUDA graphs (decode, FULL): 100%|██████████| 5/5 [00:05<00:00,  1.06s/it]Capturing CUDA graphs (decode, FULL): 100%|██████████| 5/5 [00:05<00:00,  1.07s/it]
+(EngineCore_DP0 pid=807658) `Qwen2VLImageProcessorFast` is deprecated. The `Fast` suffix for image processors has been removed; use `Qwen2VLImageProcessor` instead.
+(EngineCore_DP1 pid=807659) INFO 09-08 23:22:02 [core.py:281] init engine (profile, create kv cache, warmup model) took 119.14 seconds
+(EngineCore_DP1 pid=807659) `Qwen2VLImageProcessorFast` is deprecated. The `Fast` suffix for image processors has been removed; use `Qwen2VLImageProcessor` instead.
+(EngineCore_DP0 pid=807658) The `use_fast` parameter is deprecated and will be removed in a future version. Use `backend="torchvision"` instead of `use_fast=True`, or `backend="pil"` instead of `use_fast=False`.
+(EngineCore_DP1 pid=807659) The `use_fast` parameter is deprecated and will be removed in a future version. Use `backend="torchvision"` instead of `use_fast=True`, or `backend="pil"` instead of `use_fast=False`.
+INFO 09-08 23:22:15 [coordinator.py:205] All engine subscriptions received by DP coordinator
+(EngineCore_DP1 pid=807659) INFO 09-08 23:22:15 [vllm.py:775] Asynchronous scheduling is enabled.
+(EngineCore_DP0 pid=807658) INFO 09-08 23:22:15 [vllm.py:775] Asynchronous scheduling is enabled.
+(ApiServer_0 pid=807660) WARNING 09-08 23:22:15 [loggers.py:1271] AsyncLLM created with api_server_count more than 1; disabling stats logging to avoid incomplete stats.
+(ApiServer_1 pid=807661) WARNING 09-08 23:22:15 [loggers.py:1271] AsyncLLM created with api_server_count more than 1; disabling stats logging to avoid incomplete stats.
+INFO 09-08 23:22:15 [utils.py:250] Waiting for API servers to complete ...
+(ApiServer_0 pid=807660) INFO 09-08 23:22:15 [api_server.py:576] Supported tasks: ['generate']
+(ApiServer_1 pid=807661) INFO 09-08 23:22:15 [api_server.py:576] Supported tasks: ['generate']
+(ApiServer_1 pid=807661) INFO 09-08 23:22:16 [parser_manager.py:202] "auto" tool choice has been enabled.
+(ApiServer_0 pid=807660) INFO 09-08 23:22:16 [parser_manager.py:202] "auto" tool choice has been enabled.
+(ApiServer_1 pid=807661) WARNING 09-08 23:22:16 [model.py:1376] Default vLLM sampling parameters have been overridden by the model's `generation_config.json`: `{'temperature': 0.6, 'top_k': 20, 'top_p': 0.95}`. If this is not intended, please relaunch vLLM instance with `--generation-config vllm`.
+(ApiServer_0 pid=807660) WARNING 09-08 23:22:16 [model.py:1376] Default vLLM sampling parameters have been overridden by the model's `generation_config.json`: `{'temperature': 0.6, 'top_k': 20, 'top_p': 0.95}`. If this is not intended, please relaunch vLLM instance with `--generation-config vllm`.
+(ApiServer_0 pid=807660) INFO 09-08 23:22:16 [parser_manager.py:202] "auto" tool choice has been enabled.
+(ApiServer_1 pid=807661) INFO 09-08 23:22:16 [parser_manager.py:202] "auto" tool choice has been enabled.
+(ApiServer_0 pid=807660) INFO 09-08 23:22:16 [parser_manager.py:202] "auto" tool choice has been enabled.
+(ApiServer_1 pid=807661) INFO 09-08 23:22:16 [parser_manager.py:202] "auto" tool choice has been enabled.
+(ApiServer_1 pid=807661) INFO 09-08 23:22:18 [hf.py:320] Detected the chat template content format to be 'string'. You can set `--chat-template-content-format` to override this.
+(ApiServer_0 pid=807660) INFO 09-08 23:22:19 [hf.py:320] Detected the chat template content format to be 'string'. You can set `--chat-template-content-format` to override this.
+(ApiServer_1 pid=807661) INFO 09-08 23:22:28 [base.py:216] Multi-modal warmup completed in 9.417s
+(ApiServer_1 pid=807661) INFO 09-08 23:22:28 [parser_manager.py:202] "auto" tool choice has been enabled.
+(ApiServer_1 pid=807661) INFO 09-08 23:22:28 [api_server.py:580] Starting vLLM server on http://0.0.0.0:8001
+(ApiServer_1 pid=807661) INFO 09-08 23:22:28 [launcher.py:37] Available routes are:
+(ApiServer_1 pid=807661) INFO 09-08 23:22:28 [launcher.py:46] Route: /openapi.json, Methods: GET, HEAD
+(ApiServer_1 pid=807661) INFO 09-08 23:22:28 [launcher.py:46] Route: /docs, Methods: GET, HEAD
+(ApiServer_1 pid=807661) INFO 09-08 23:22:28 [launcher.py:46] Route: /docs/oauth2-redirect, Methods: GET, HEAD
+(ApiServer_1 pid=807661) INFO 09-08 23:22:28 [launcher.py:46] Route: /redoc, Methods: GET, HEAD
+(ApiServer_1 pid=807661) INFO 09-08 23:22:28 [launcher.py:46] Route: /tokenize, Methods: POST
+(ApiServer_1 pid=807661) INFO 09-08 23:22:28 [launcher.py:46] Route: /detokenize, Methods: POST
+(ApiServer_1 pid=807661) INFO 09-08 23:22:28 [launcher.py:46] Route: /load, Methods: GET
+(ApiServer_1 pid=807661) INFO 09-08 23:22:28 [launcher.py:46] Route: /version, Methods: GET
+(ApiServer_1 pid=807661) INFO 09-08 23:22:28 [launcher.py:46] Route: /health, Methods: GET
+(ApiServer_1 pid=807661) INFO 09-08 23:22:28 [launcher.py:46] Route: /metrics, Methods: GET
+(ApiServer_1 pid=807661) INFO 09-08 23:22:28 [launcher.py:46] Route: /v1/models, Methods: GET
+(ApiServer_1 pid=807661) INFO 09-08 23:22:28 [launcher.py:46] Route: /ping, Methods: GET
+(ApiServer_1 pid=807661) INFO 09-08 23:22:28 [launcher.py:46] Route: /ping, Methods: POST
+(ApiServer_1 pid=807661) INFO 09-08 23:22:28 [launcher.py:46] Route: /invocations, Methods: POST
+(ApiServer_1 pid=807661) INFO 09-08 23:22:28 [launcher.py:46] Route: /v1/chat/completions, Methods: POST
+(ApiServer_1 pid=807661) INFO 09-08 23:22:28 [launcher.py:46] Route: /v1/responses, Methods: POST
+(ApiServer_1 pid=807661) INFO 09-08 23:22:28 [launcher.py:46] Route: /v1/responses/{response_id}, Methods: GET
+(ApiServer_1 pid=807661) INFO 09-08 23:22:28 [launcher.py:46] Route: /v1/responses/{response_id}/cancel, Methods: POST
+(ApiServer_1 pid=807661) INFO 09-08 23:22:28 [launcher.py:46] Route: /v1/completions, Methods: POST
+(ApiServer_1 pid=807661) INFO 09-08 23:22:28 [launcher.py:46] Route: /v1/messages, Methods: POST
+(ApiServer_1 pid=807661) INFO 09-08 23:22:28 [launcher.py:46] Route: /v1/messages/count_tokens, Methods: POST
+(ApiServer_1 pid=807661) INFO 09-08 23:22:28 [launcher.py:46] Route: /inference/v1/generate, Methods: POST
+(ApiServer_1 pid=807661) INFO 09-08 23:22:28 [launcher.py:46] Route: /scale_elastic_ep, Methods: POST
+(ApiServer_1 pid=807661) INFO 09-08 23:22:28 [launcher.py:46] Route: /is_scaling_elastic_ep, Methods: POST
+(ApiServer_1 pid=807661) INFO 09-08 23:22:28 [launcher.py:46] Route: /v1/chat/completions/render, Methods: POST
+(ApiServer_1 pid=807661) INFO 09-08 23:22:28 [launcher.py:46] Route: /v1/completions/render, Methods: POST
+(ApiServer_1 pid=807661) INFO:     Started server process [807661]
+(ApiServer_1 pid=807661) INFO:     Waiting for application startup.
+(ApiServer_1 pid=807661) INFO:     Application startup complete.
+(ApiServer_1 pid=807661) INFO:     127.0.0.1:58066 - "GET /v1/models HTTP/1.1" 200 OK
+(ApiServer_0 pid=807660) INFO 09-08 23:22:30 [base.py:216] Multi-modal warmup completed in 10.867s
+(ApiServer_0 pid=807660) INFO 09-08 23:22:30 [parser_manager.py:202] "auto" tool choice has been enabled.
+(ApiServer_0 pid=807660) INFO 09-08 23:22:30 [api_server.py:580] Starting vLLM server on http://0.0.0.0:8001
+(ApiServer_0 pid=807660) INFO 09-08 23:22:30 [launcher.py:37] Available routes are:
+(ApiServer_0 pid=807660) INFO 09-08 23:22:30 [launcher.py:46] Route: /openapi.json, Methods: GET, HEAD
+(ApiServer_0 pid=807660) INFO 09-08 23:22:30 [launcher.py:46] Route: /docs, Methods: GET, HEAD
+(ApiServer_0 pid=807660) INFO 09-08 23:22:30 [launcher.py:46] Route: /docs/oauth2-redirect, Methods: GET, HEAD
+(ApiServer_0 pid=807660) INFO 09-08 23:22:30 [launcher.py:46] Route: /redoc, Methods: GET, HEAD
+(ApiServer_0 pid=807660) INFO 09-08 23:22:30 [launcher.py:46] Route: /tokenize, Methods: POST
+(ApiServer_0 pid=807660) INFO 09-08 23:22:30 [launcher.py:46] Route: /detokenize, Methods: POST
+(ApiServer_0 pid=807660) INFO 09-08 23:22:30 [launcher.py:46] Route: /load, Methods: GET
+(ApiServer_0 pid=807660) INFO 09-08 23:22:30 [launcher.py:46] Route: /version, Methods: GET
+(ApiServer_0 pid=807660) INFO 09-08 23:22:30 [launcher.py:46] Route: /health, Methods: GET
+(ApiServer_0 pid=807660) INFO 09-08 23:22:30 [launcher.py:46] Route: /metrics, Methods: GET
+(ApiServer_0 pid=807660) INFO 09-08 23:22:30 [launcher.py:46] Route: /v1/models, Methods: GET
+(ApiServer_0 pid=807660) INFO 09-08 23:22:30 [launcher.py:46] Route: /ping, Methods: GET
+(ApiServer_0 pid=807660) INFO 09-08 23:22:30 [launcher.py:46] Route: /ping, Methods: POST
+(ApiServer_0 pid=807660) INFO 09-08 23:22:30 [launcher.py:46] Route: /invocations, Methods: POST
+(ApiServer_0 pid=807660) INFO 09-08 23:22:30 [launcher.py:46] Route: /v1/chat/completions, Methods: POST
+(ApiServer_0 pid=807660) INFO 09-08 23:22:30 [launcher.py:46] Route: /v1/responses, Methods: POST
+(ApiServer_0 pid=807660) INFO 09-08 23:22:30 [launcher.py:46] Route: /v1/responses/{response_id}, Methods: GET
+(ApiServer_0 pid=807660) INFO 09-08 23:22:30 [launcher.py:46] Route: /v1/responses/{response_id}/cancel, Methods: POST
+(ApiServer_0 pid=807660) INFO 09-08 23:22:30 [launcher.py:46] Route: /v1/completions, Methods: POST
+(ApiServer_0 pid=807660) INFO 09-08 23:22:30 [launcher.py:46] Route: /v1/messages, Methods: POST
+(ApiServer_0 pid=807660) INFO 09-08 23:22:30 [launcher.py:46] Route: /v1/messages/count_tokens, Methods: POST
+(ApiServer_0 pid=807660) INFO 09-08 23:22:30 [launcher.py:46] Route: /inference/v1/generate, Methods: POST
+(ApiServer_0 pid=807660) INFO 09-08 23:22:30 [launcher.py:46] Route: /scale_elastic_ep, Methods: POST
+(ApiServer_0 pid=807660) INFO 09-08 23:22:30 [launcher.py:46] Route: /is_scaling_elastic_ep, Methods: POST
+(ApiServer_0 pid=807660) INFO 09-08 23:22:30 [launcher.py:46] Route: /v1/chat/completions/render, Methods: POST
+(ApiServer_0 pid=807660) INFO 09-08 23:22:30 [launcher.py:46] Route: /v1/completions/render, Methods: POST
+(ApiServer_0 pid=807660) INFO:     Started server process [807660]
+(ApiServer_0 pid=807660) INFO:     Waiting for application startup.
+(ApiServer_0 pid=807660) INFO:     Application startup complete.
+(ApiServer_1 pid=807661) INFO:     127.0.0.1:58078 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(ApiServer_1 pid=807661) INFO:     127.0.0.1:58082 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(Worker pid=809192) WARNING 09-08 23:25:18 [multiproc_executor.py:866] WorkerProc was terminated
+(EngineCore_DP1 pid=807659) INFO 09-08 23:25:18 [core.py:1201] Shutdown initiated (timeout=0)
+(Worker pid=809197) WARNING 09-08 23:25:18 [multiproc_executor.py:866] WorkerProc was terminated
+(EngineCore_DP0 pid=807658) INFO 09-08 23:25:18 [core.py:1201] Shutdown initiated (timeout=0)
+(EngineCore_DP1 pid=807659) INFO 09-08 23:25:18 [core.py:1224] Shutdown complete
+(EngineCore_DP0 pid=807658) INFO 09-08 23:25:18 [core.py:1224] Shutdown complete
+(ApiServer_0 pid=807660) INFO:     Shutting down
+(Worker pid=809197) INFO 09-08 23:25:18 [multiproc_executor.py:759] Parent process exited, terminating worker queues
+(Worker pid=809192) INFO 09-08 23:25:18 [multiproc_executor.py:759] Parent process exited, terminating worker queues
+INFO 09-08 23:25:18 [utils.py:289] Received KeyboardInterrupt, shutting down API servers...
+(ApiServer_1 pid=807661) INFO 09-08 23:25:18 [launcher.py:137] Shutting down FastAPI HTTP server.
+(ApiServer_1 pid=807661) INFO:     Shutting down
+(ApiServer_0 pid=807660) WARNING 09-08 23:25:18 [launcher.py:131] port 8001 is used by process psutil.Process(pid=807661, name='VLLM::APIServer_1', status='sleeping') launched with command:
+(ApiServer_0 pid=807660) WARNING 09-08 23:25:18 [launcher.py:131] VLLM::APIServer_1                                                                                                                   
+(ApiServer_0 pid=807660) INFO 09-08 23:25:18 [launcher.py:137] Shutting down FastAPI HTTP server.
+(ApiServer_0 pid=807660) INFO:     Shutting down
+(ApiServer_1 pid=807661) INFO:     Waiting for application shutdown.
+(ApiServer_1 pid=807661) INFO:     Application shutdown complete.
+(ApiServer_0 pid=807660) INFO:     Waiting for application shutdown.
+(ApiServer_0 pid=807660) INFO:     Application shutdown complete.
