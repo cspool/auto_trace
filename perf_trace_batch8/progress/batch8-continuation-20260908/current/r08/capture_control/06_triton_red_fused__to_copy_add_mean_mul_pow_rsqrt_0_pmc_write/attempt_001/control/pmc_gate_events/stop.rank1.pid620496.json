@@ -1,0 +1,42 @@
+{
+  "control_backend": "native_initially_on_explicit_warmup_and_measured_start_terminal_stop",
+  "device_transition": {
+    "finished_monotonic_ns": 510234746447330,
+    "operation": "hipSetDevice",
+    "pid": 620496,
+    "started_monotonic_ns": 510234746328430,
+    "status": 0,
+    "tid": 642602
+  },
+  "dp_rank": 1,
+  "initial_profiler_stop_monotonic_ns": 508184251762217,
+  "legacy_initial_stop_field_is_logical_guard_only": true,
+  "monotonic_ns": 510234773401457,
+  "native_collection_initially_on": true,
+  "operation": "stop",
+  "physical_device_id": 1,
+  "pid": 620496,
+  "profiler_transition": {
+    "finished_monotonic_ns": 510234773324917,
+    "operation": "hipProfilerStop",
+    "pid": 620496,
+    "started_monotonic_ns": 510234773304777,
+    "status": 0,
+    "tid": 642602
+  },
+  "realtime_ns": 1788875011878457256,
+  "reason": "measured_batch_complete_control_file",
+  "runtime_attempt_id": "batch8-dp2-fresh-003-R08-06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write-attempt_001",
+  "schema_version": 1,
+  "segment_id": "06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write",
+  "status": "complete",
+  "synchronize_transition": {
+    "finished_monotonic_ns": 510234746477520,
+    "operation": "hipDeviceSynchronize",
+    "pid": 620496,
+    "started_monotonic_ns": 510234746457330,
+    "status": 0,
+    "tid": 642602
+  },
+  "tid": 642602
+}
