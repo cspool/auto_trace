@@ -1,0 +1,36 @@
+{
+  "pid": 747872,
+  "source": {
+    "path": "/public/home/accl15ptg7/run_R08_R10/run_r08_serial_suffix_008.py",
+    "size": 5663,
+    "sha256": "16734c135c2936cc4aee01480f5ceebcf88febf51da745be0db3d1317992e3ec"
+  },
+  "deadline_utc": "2026-09-08T20:18:09Z",
+  "deadline_authorization": {
+    "path": "/public/home/accl15ptg7/run_R08_R10/MACHINE_TIME_EXTENSION_001.json",
+    "size": 727,
+    "sha256": "b725c7ee9c96a7fac49d7d28ac3a5116fd18ae58d95119608db574c8b5074e5b"
+  },
+  "previous_scheduler": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/validation/serial_scheduler_007/START.json",
+    "size": 1921,
+    "sha256": "375f266a7027f7506245632690af9811f2815ae44656a98e3489b3c47889bb22"
+  },
+  "resume_reason": "reuse seven audited captures; retry capture08 after rank1 native pre-measured health failure without changing runtime or workload",
+  "native_prehealth_retry_authorization": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/capture08_prehealth_retry_001.json",
+    "size": 1847,
+    "sha256": "b40d21b72607d90641f18647041add3b5fab14dd5c1ff3d6d9a2bb518224a6e8"
+  },
+  "NFS_storage_authorization": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/authorization/NFS_output_storage_authorization_001.json",
+    "size": 2790,
+    "sha256": "095a893828fe5ae8396804131170f957af3e0e58f748b6f62a20e6e83d33de30"
+  },
+  "user_storage_policy": {
+    "path": "/public/home/accl15ptg7/run_R08_R10/USER_STORAGE_POLICY_20260908.json",
+    "size": 446,
+    "sha256": "dcb3735b5416946930a63dfa4181f323b90c98e0b17fd82ff98c012cc09a8458"
+  },
+  "scope": "R08 captures and CPU attribution; no R09/R10 business execution"
+}

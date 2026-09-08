@@ -1,0 +1,31 @@
+{
+  "status": "authorized_same_contract_bounded_retry",
+  "utc": "2026-09-08T14:37:00.404676+00:00",
+  "failure": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read/attempt_001/RAW_CAPTURE_FAILURE.json",
+    "size": 2104,
+    "sha256": "ccbed75f4d30a4a254724ce411bb700f95e6e16fa205ce2b0d5e125f2bcbc7aa"
+  },
+  "native_health": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read/attempt_001/control/PRE_MEASURED_NATIVE_PMC_HEALTH.json",
+    "size": 1091,
+    "sha256": "1fc392b4bd46daaaea7dbe53bcf392742d73ba564ae4b569845bdb37afd564f9"
+  },
+  "tracee_cleanup": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read/attempt_001/control/tracee_process_cleanup.json",
+    "size": 280,
+    "sha256": "978e83fa839a2bf3df745e9b13e5ca0938201860db80427a6771e0b30b524b87"
+  },
+  "all_previous_attempt_owned_process_groups_verified_closed": [
+    728475,
+    728496,
+    740909
+  ],
+  "previous_measured_requests_started": false,
+  "previous_seven_accepted_captures_preserved": true,
+  "runtime_revision_018_unchanged": true,
+  "analysis_007_unchanged": true,
+  "new_attempt": "attempt_002",
+  "additional_warmups_or_altered_workload_within_attempt": false,
+  "reason": "rank1 native PMC remained empty despite successful warmup hipProfilerStart; retain failure and retry fresh service initialization under the existing native health gate"
+}
