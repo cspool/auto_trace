@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "status": "verified_ready_for_temporary_release_backing",
+  "segment_id": "11_chunk_fwd_kernel_o_pmc_read",
+  "accepted_item": {
+    "segment_id": "11_chunk_fwd_kernel_o_pmc_read",
+    "capture_attempt": "attempt_001",
+    "execution_manifest": {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/11_chunk_fwd_kernel_o_pmc_read/attempt_001/execution_manifest.json",
+      "size": 10814,
+      "sha256": "0c1106c6d271e7fe63a794e934e934c028bcf1c15fd70b719b2cccf5813a6ed5"
+    },
+    "normalization_manifest": {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/normalized/captures/11_chunk_fwd_kernel_o_pmc_read/attempt_001/revision_002/NORMALIZATION_COMPLETE.json",
+      "size": 4332,
+      "sha256": "562e33cd6c6746e2eb76a2b47afac4987203d8cd56550f5c6fef73cd13a74aff"
+    },
+    "independent_audit": {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/normalized/captures/11_chunk_fwd_kernel_o_pmc_read/attempt_001/revision_002/INDEPENDENT_AUDIT.json",
+      "size": 1216,
+      "sha256": "afd38ae8c82e543a333f4a66cd126031240815404a9b6a8fd8d454fce5a57c6c"
+    }
+  },
+  "original_execution_and_raw_inventory_unchanged": true,
+  "user_authorization": "\u5df2\u7ecf\u53d1\u5e03\u7684\u90e8\u5206\u53ef\u4ee5\u6682\u65f6\u79fb\u9664 \u56e0\u4e3a\u53ef\u4ee5\u968f\u65f6\u4ecerelease\u6062\u590d\uff1b\u5168\u90e8R08\u91c7\u96c6\u5b8c\u6210\u540e\u79fb\u9664\u6743\u91cd\u5e76\u6062\u590d\u6240\u6709\u4ea7\u7269\u8fdb\u884cR08\u6821\u9a8c",
+  "remote_verification": {
+    "status": "complete",
+    "receipt": {
+      "path": "/public/home/accl15ptg7/run_R08_R10/publication_emergency/r08_11_chunk_fwd_kernel_o_pmc_read/PUBLICATION_COMPLETE.json",
+      "size": 3537,
+      "sha256": "b0961b70d1b80b6d4f0fee4ec2d37847b4e19404f1cd0fe8e0102c66c29a9772"
+    },
+    "release_url": "https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-r08-11-chunk-fwd-kernel-o-pmc-read-20260908",
+    "remote_rechecked_utc": "2026-09-08T19:54:57.193271+00:00",
+    "assets": [
+      {
+        "name": "ASSET_MANIFEST.json",
+        "size": 698,
+        "digest": "sha256:52adb39029ff4cabe86fbce42867a08835f0bffd7da686fb331d2e5d2121795d",
+        "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-11-chunk-fwd-kernel-o-pmc-read-20260908/ASSET_MANIFEST.json"
+      },
+      {
+        "name": "capture.tar.zst.part001",
+        "size": 950000000,
+        "digest": "sha256:21b7807bc020a21e8d61037cb6475ecf84eb997b928a4b58170939dbf01f0851",
+        "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-11-chunk-fwd-kernel-o-pmc-read-20260908/capture.tar.zst.part001"
+      },
+      {
+        "name": "capture.tar.zst.part002",
+        "size": 697555227,
+        "digest": "sha256:9a3a1f988bc72a37c07432591acaeaefb11a759361d4b97eeb2f1b4b9fc32fa6",
+        "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-11-chunk-fwd-kernel-o-pmc-read-20260908/capture.tar.zst.part002"
+      },
+      {
+        "name": "FILE_MANIFEST.json",
+        "size": 26893,
+        "digest": "sha256:f89c5a18b91193197280631b56297e5c31a3e7fef18fb54c9b272b131675d1c7",
+        "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-11-chunk-fwd-kernel-o-pmc-read-20260908/FILE_MANIFEST.json"
+      },
+      {
+        "name": "SHA256SUMS",
+        "size": 265,
+        "digest": "sha256:128cfdead60c32d787dcb861b91de90e7398590cbf22f9de25b83d71272b2464",
+        "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-11-chunk-fwd-kernel-o-pmc-read-20260908/SHA256SUMS"
+      }
+    ]
+  },
+  "published_file_manifest": {
+    "path": "/public/home/accl15ptg7/run_R08_R10/publication_emergency/r08_11_chunk_fwd_kernel_o_pmc_read/FILE_MANIFEST.json",
+    "size": 26893,
+    "sha256": "f89c5a18b91193197280631b56297e5c31a3e7fef18fb54c9b272b131675d1c7"
+  },
+  "temporarily_evicted_files": [
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/11_chunk_fwd_kernel_o_pmc_read/attempt_001/capture.db",
+      "archive_member_path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/11_chunk_fwd_kernel_o_pmc_read/attempt_001/capture.db",
+      "size": 3403972608,
+      "sha256": "ab9b7adf1e3e739b2fe4ec422f5ffbe21ca0bca50652d51a167e89b248e251b8"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/11_chunk_fwd_kernel_o_pmc_read/attempt_001/workload/r01_events/rank1/events.1029918.jsonl",
+      "archive_member_path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/11_chunk_fwd_kernel_o_pmc_read/attempt_001/workload/r01_events/rank1/events.1029918.jsonl",
+      "size": 462117804,
+      "sha256": "2119f69ee3d1858fb3db9b139c56829a6432ba2ec1f230c1a46a057c910e3fed"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/11_chunk_fwd_kernel_o_pmc_read/attempt_001/workload/r01_events/rank0/events.1029916.jsonl",
+      "archive_member_path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/11_chunk_fwd_kernel_o_pmc_read/attempt_001/workload/r01_events/rank0/events.1029916.jsonl",
+      "size": 462623292,
+      "sha256": "f8fc1fa01e17d3ebf703d4302cc4eca4ad5542590ee1c9f756cd90ff9650cca8"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/11_chunk_fwd_kernel_o_pmc_read/attempt_001/native_collectors/rank1/capture.db",
+      "archive_member_path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/11_chunk_fwd_kernel_o_pmc_read/attempt_001/native_collectors/rank1/capture.db",
+      "size": 1707307008,
+      "sha256": "56d90ec0d174c670a3499dad0569bd953c14469e15d25c958f52099c8e00e4f4"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/11_chunk_fwd_kernel_o_pmc_read/attempt_001/native_collectors/rank0/capture.db",
+      "archive_member_path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/11_chunk_fwd_kernel_o_pmc_read/attempt_001/native_collectors/rank0/capture.db",
+      "size": 1696690176,
+      "sha256": "033ff10ce002b0049642a0e16a53bc9fe522795b070ab4c04069c34bf0d3e010"
+    }
+  ],
+  "original_data_restoration_required_before_R08_final_validation": true,
+  "weight_deletion_performed": false,
+  "NFS_metadata_and_logs_retained": true
+}

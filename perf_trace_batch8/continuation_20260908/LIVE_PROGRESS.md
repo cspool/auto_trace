@@ -227,3 +227,7 @@ Capture 04 is published at https://github.com/cspool/auto_trace/releases/tag/per
 - 2026-09-08T19:47:48.438851+00:00: Capture 11 attempt_001 sealed raw capture in 2249.127 seconds. Lossless union audit compared all 29550732 original native rows and all original CSV body bytes. Execution identities match the earlier closed native source seal. All collectors are closed; native attribution and independent acceptance remain separate pending steps.
 
 - 2026-09-08T19:51:32.413490+00:00: 11_chunk_fwd_kernel_o_pmc_read attempt_001 accepted after closed native attribution and independent audit; 384 exact dispatches, ranks {"0": 192, "1": 192}, 71424 counter values independently recomputed. Raw Release publication/offload status is tracked separately.
+
+- 2026-09-08T19:57:24.604356+00:00: 11_chunk_fwd_kernel_o_pmc_read Release published with server asset size/SHA256 verified: https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-r08-11-chunk-fwd-kernel-o-pmc-read-20260908. Authorized local large-file eviction completed for 7732710888 bytes. Original member manifests and restoration receipts retained on NFS and checkpointed here.
+
+- 2026-09-08T19:57:24.699867+00:00: Capture 12 attempt_001 started under frozen runtime021/analysis008 with model weights at /root/Qwen3.5-27B and new outputs on NFS. Immutable startup controls are preserved. Startup does not establish warmup health, eight-request trace coverage, or capture acceptance.
