@@ -24,8 +24,11 @@ def package(stage,out):
  for name in ['FILE_MANIFEST.json','SHA256SUMS','R10_offline_acceptance.zip']:
   (out/name).unlink(missing_ok=True)
  files={Path(x['path']) for x in manifest['files']};files|={hpath,Path(h['artifact_manifest']['path']),Path(h['completion_audit']['path'])};files|={Path(x['path']) for x in h['phase_lifecycle']+h['closed_logs']};files=sorted(files);nfs=os.stat(CONTROL).st_dev
- for p in files:assert p.stat().st_dev==nfs,'every stage archive source physically NFS'
- records=[{'path':str(p.relative_to(PROJECT)),**{k:v for k,v in rec(p).items() if k!='path'}} for p in files];save(out/'FILE_MANIFEST.json',{'status':'complete_closed_stage','runtime_goal':stage,'runtime_run_id':'batch8-dp2-fresh-003','handoff':rec(hpath),'completion_audit':h['completion_audit'],'files':records,'weights_included':False,'all_stage_data_and_logs_physically_NFS':True,'original_R07_native_controller_terminal_claimed':False,'upstream_artifacts_remain_in_prior_same_run_releases':True})
+ restoration=read(RUN/'artifacts/R08/continuation_001/raw/runtime_tools/release_restoration_001/COMPLETE.json');restored={x['source_path']:x for x in restoration['file_mappings']}
+ for p in files:
+  if p.stat().st_dev!=nfs:
+   assert str(p) in restored and p.resolve()==Path(restored[str(p)]['destination_path']) and sha(p)==restored[str(p)]['sha256'],'only exact user-authorized restored R08 source files may be physical root'
+ records=[{'path':str(p.relative_to(PROJECT)),**{k:v for k,v in rec(p).items() if k!='path'}} for p in files];save(out/'FILE_MANIFEST.json',{'status':'complete_closed_stage','runtime_goal':stage,'runtime_run_id':'batch8-dp2-fresh-003','handoff':rec(hpath),'completion_audit':h['completion_audit'],'files':records,'weights_included':False,'all_new_stage_outputs_and_logs_physically_NFS':True,'original_R08_raw_restoration':rec(RUN/'artifacts/R08/continuation_001/raw/runtime_tools/release_restoration_001/COMPLETE.json'),'original_R07_native_controller_terminal_claimed':False,'upstream_artifacts_remain_in_prior_same_run_releases':True})
  writer=SplitWriter(out)
  try:
   with zstandard.ZstdCompressor(level=3,threads=4).stream_writer(writer,closefd=False) as compressed:
@@ -59,7 +62,7 @@ def package(stage,out):
 def publish(stage,out,manifest):
  base='https://api.github.com/repos/cspool/auto_trace';tag='perf-trace-batch8-'+stage.lower()+'-complete-20260908';p=subprocess.run(['git','credential','fill'],input='protocol=https\nhost=github.com\n\n',text=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE,timeout=30,env={**os.environ,'GIT_TERMINAL_PROMPT':'0'});assert p.returncode==0;token=dict(x.split('=',1) for x in p.stdout.splitlines() if '=' in x)['password'];api=requests.Session();api.headers.update({'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json'});r=api.get(base+'/releases/tags/'+tag,timeout=45)
  if r.status_code==404:
-  body=stage+' 已完成并通过独立审计。包含本阶段原始数据/阶段产物、冻结代码、关闭后的日志、来源与完成审计。\n\n权重保存在物理 /root；R08 至 R10 的产物、日志和发布缓存均在物理 NFS。所有八个请求均须通过完整声明目标覆盖检查；R07 原始采集器终态未证实的历史例外保持不变。\n\n按 ASSET_MANIFEST 顺序拼接 capture.tar.zst 分卷后解包，按 FILE_MANIFEST 核验每个文件。'
+  body=stage+' 已完成并通过独立审计。包含本阶段原始数据/阶段产物、冻结代码、关闭后的日志、来源与完成审计。\n\n权重在全部 R08 GPU 采集期间保存在物理 /root；全部采集完成后按用户授权移除，为恢复已发布的原始产物提供校验空间。所有临时移除的文件已恢复并核对原始 SHA256；新阶段产物、日志和发布缓存均在物理 NFS。所有八个请求均须通过完整声明目标覆盖检查；R07 原始采集器终态未证实的历史例外保持不变。\n\n按 ASSET_MANIFEST 顺序拼接 capture.tar.zst 分卷后解包，按 FILE_MANIFEST 核验每个文件。'
   if stage=='R10':body+='\n\n人工查看：下载 R10_offline_acceptance.zip，完整解压后离线打开 acceptance/index.html。全部 59,872 个主显示事件、原始利用率和上下文保留；无抽样。'
   r=api.post(base+'/releases',json={'tag_name':tag,'target_commitish':subprocess.check_output(['git','-C',str(PROJECT),'rev-parse','HEAD'],text=True).strip(),'name':stage+' complete · Batch8 DP2 · 2026-09-08','body':body,'draft':True,'prerelease':False},timeout=45);assert r.status_code==201
  else:assert r.status_code==200
@@ -78,7 +81,7 @@ def publish(stage,out,manifest):
  # Raw data and stage outputs remain on NFS. Only upload copies are removed.
  for p in paths:
   if p.name.startswith('capture.tar.zst.part') or p.suffix=='.zip':p.unlink()
- save(out/'LOCAL_UPLOAD_CACHE_CLEANUP.json',{'status':'complete','only_server_SHA256_verified_upload_copies_removed':True,'all_original_stage_data_outputs_logs_retained_on_NFS':True})
+ save(out/'LOCAL_UPLOAD_CACHE_CLEANUP.json',{'status':'complete','only_server_SHA256_verified_upload_copies_removed':True,'all_original_stage_data_outputs_logs_retained_under_verified_storage_authorizations':True})
 
 def main():
  while time.time()<DEADLINE:

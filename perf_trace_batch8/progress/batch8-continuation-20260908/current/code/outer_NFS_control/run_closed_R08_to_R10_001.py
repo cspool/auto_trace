@@ -9,6 +9,7 @@ def phase(root,name,tool,*extra):
  run([PY,'-B',str(CONTROL/'phase_runner_002.py'),'--stage-root',str(root),'--phase',name,'--timeout',str(int(max(1,DEADLINE-120-time.time()))),'--',PY,'-B',str(tool),*extra])
 def main():
  r08=RUN/'artifacts/R08/continuation_001';index=r08/'normalized/accepted_captures.json';assert index.exists() and json.loads(index.read_text())['status']=='complete','all twelve captures must be accepted first'
+ run([PY,'-B',str(CONTROL/'restore_all_R08_release_artifacts_001.py')])
  # R08 owns resource construction and closure; R09 is never assigned early.
  run([PY,'-B',str(CONTROL/'prepare_stage_assignments_001.py'),'assign','R08']);phase(r08,'resource_model',r08/'tools/analysis_005/build_resource_model.py');phase(r08,'resource_audit',r08/'tools/analysis_005/audit_resource_model.py');phase(r08,'seal',r08/'tools/closure_001/seal_r08.py');phase(r08,'completion_audit',r08/'tools/closure_001/audit_r08.py');run([PY,'-B',str(CONTROL/'prepare_stage_assignments_001.py'),'handoff','R08'])
  for stage,phases in [('R09',[('analysis','build_analysis.py'),('table_audit','audit_analysis.py'),('seal','seal_r09.py'),('completion_audit','audit_completion.py')]),('R10',[('render','build_report.py'),('browser','browser_acceptance.py'),('seal','seal_acceptance.py'),('completion_audit','audit_report.py')])]:

@@ -1,6 +1,7 @@
 """Immutable CPU closure primitives. Exact listed relocation, no implicit escapes."""
 from pathlib import Path
 import os,json,hashlib,subprocess,datetime,collections
+from functools import lru_cache
 ROOT=Path(__file__).parents[2];PROJECT=Path('/public/home/accl15ptg7/auto_trace');CONTROL=Path('/public/home/accl15ptg7/run_R08_R10');RUN=PROJECT/'perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003';RUN_ID='batch8-dp2-fresh-003';OLD=Path('/public/home/tangyu408/Qwen_DCU_Worker_0');PROFILE='3b4c952063f48ae662b48b5ce9d8fd76e0ac4d74e170bdb1839ae8b1aaa23cce'
 ANCHORS={'vllm/model_executor/models/qwen3_5.py':'f3c0479dbc37a8794c4d6b1c4c01906ae341b3276ed43e588c17d92b1ddb94d6','vllm/model_executor/models/qwen3_next.py':'5a14b14a40fcf6382f9a20be4ca0f850b2b19b2840a3c57488821f0952d96053','vllm/v1/worker/gpu_model_runner.py':'d63424d3cbe81bfaa2c0967a5c81b8c980c2d76bc7eb3b2f8fe2a079af825bce','vllm/utils/nvtx_pytorch_hooks.py':'e9711444f33242ce1864d6a32d051bbf0ba0b37b5f17965de6e5dbba0c0c75ff','vllm/compilation/wrapper.py':'b4dca93456e945ce8231e9a954792c8f687d5d48b427ed38bfb96011015d4090','scripts/serve_cscc_dp2.sh':'233bb2ce6fee3654bc870e37e65b7ecf4de6874cb6c7fd1a6bd5687a40783699','scripts/bench_cscc_multi_request.sh':'9b5e02116911729e901077866389e448c0e4a055e8bb901ed160dcdc7664a595','scripts/cscc_gfx936_env.sh':'58d483450c23e9c4fa87fb981b5e63cf4babf5e8d230fe93e400563596dfc18a','docs/cscc/DP2_MULTI_REQUEST.md':'f83ebea84fd570908be0df58255eca371ad4c28c4dc9d70ec3db0401b1143569'}
 def check(v,m):
@@ -16,6 +17,7 @@ def now():return datetime.datetime.now(datetime.timezone.utc).isoformat()
 def save(p,x):
  p=Path(p);check(p.is_relative_to(ROOT) and '..' not in p.parts,'assigned CPU output root');p.parent.mkdir(parents=True,exist_ok=True)
  with p.open('x') as f:json.dump(x,f,indent=2,ensure_ascii=False,sort_keys=True);f.write('\n');f.flush();os.fsync(f.fileno())
+@lru_cache(maxsize=1)
 def memory_mappings():
  mappings={};records=[]
  for suffix in ['', '_002']:
@@ -29,6 +31,7 @@ def localize(value):
  expanded=Path('/perf_trace_batch8_r01_r06')/RUN_ID/'expanded_artifacts'
  if p.is_relative_to(expanded):return RUN/'artifacts'/p.relative_to(expanded)
  return p if p.is_absolute() else PROJECT/p
+@lru_cache(maxsize=1)
 def directory_mappings():
  maps={RUN/'artifacts'/('R%02d'%i):Path('/dev/shm/r08_continuation_predecessors/artifacts')/('R%02d'%i) for i in range(1,7)}
  for stage in ['R08','R09','R10']:
@@ -42,6 +45,7 @@ def directory_mappings():
   x=read(nfs);check(x['status']=='complete' and sha(x['migration_proof']['path'])==x['migration_proof']['sha256'],'NFS correction exact proof');alias=x['original_directory_alias'];maps[Path(alias['path'])]=Path(alias['destination'])
  return maps
 
+@lru_cache(maxsize=1)
 def storage_mappings():
  original,records=memory_mappings();maps={p:{**v,'destination_path':v['resolved_destination']} for p,v in original.items()}
  recovery=RUN/'artifacts/R08/continuation_001/raw/runtime_tools/storage_recovery_002/STORAGE_RECOVERY_COMPLETE.json';x=read(recovery);check(x['status']=='complete' and x['all_canonical_paths_resolve_identical_bytes'],'completed exact quota recovery');records.append(rec(recovery))
@@ -61,6 +65,13 @@ def storage_mappings():
   nfs=RUN/'artifacts/R08/continuation_001/authorization/NFS_output_storage_authorization_001.json'
   if nfs.exists():
    auth=read(nfs);check(sha(auth['file_manifest']['path'])==auth['file_manifest']['sha256'],'verified NFS source tree manifest');records.extend([rec(nfs),auth['file_manifest']]);maps={key:value for key,value in maps.items() if not key.is_relative_to(RUN/'artifacts/R08/continuation_001')}
+ restoration=RUN/'artifacts/R08/continuation_001/raw/runtime_tools/release_restoration_001/COMPLETE.json'
+ if restoration.exists():
+  x=read(restoration);check(x['status']=='complete' and x['all_twelve_capture_parts_restored'] and x['all_evicted_raw_files_original_SHA256_verified'],'all Release-backed raw files restored before closure')
+  check(sha(x['accepted_index']['path'])==x['accepted_index']['sha256'],'restored accepted index immutable');check(sha(x['weight_removal']['path'])==x['weight_removal']['sha256'],'conditional weight removal proof');check(sha(x['user_policy']['path'])==x['user_policy']['sha256'],'explicit user Release storage authorization');records.extend([rec(restoration),x['weight_removal'],x['user_policy']])
+  for receipt in x['segment_receipts']:check(sha(receipt['path'])==receipt['sha256'],'per-segment restoration receipt');records.append(receipt)
+  for item in x['file_mappings']:
+   key=Path(item['source_path']);dest=Path(item['destination_path']);check(key.is_relative_to(RUN/'artifacts/R08/continuation_001/raw/captures') and dest.is_relative_to(Path('/root/R08_release_restored_after_capture_001')) and '..' not in dest.parts,'exact restored raw source and dedicated root destination');check(key not in maps and item['same_bytes'] and item['source_content_not_changed'] and item['canonical_link_verified'],'unique exact restored member');maps[key]=item
  return maps,records
 
 def validate_path(value):
