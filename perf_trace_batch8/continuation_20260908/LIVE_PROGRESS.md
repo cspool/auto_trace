@@ -101,3 +101,5 @@ Capture 04 is published at https://github.com/cspool/auto_trace/releases/tag/per
 2026-09-08 13:22 UTC: Capture 06 passed the original two-warmup native health gate on rank 0 worker 620502 and rank 1 worker 620496. Both original four-request admission orders match R07, and the original eight-request measured workload has begun. This start checkpoint is not a trace or attribution acceptance.
 
 2026-09-08 13:27 UTC: Capture 06 live marker audit passed all 16 request/first-phase sets, 784 exact targets each and 12544 total, with no missing, unexpected, or duplicate targets; both ranks and all first-phase request orders match R07. All eight requests are generating. This live prefix check does not replace closed native DB/PMC attribution.
+
+2026-09-08T13:43:31.801878Z: Capture 06 attempt_001 completed all eight original measured requests, HTTP 200 and 1024 tokens each, total 8192, zero failed requests; both native rank stop events are retained. Measured replay duration 1306.412 seconds is diagnostic only, not R07 observed latency. Native export and independent attribution are still required.
