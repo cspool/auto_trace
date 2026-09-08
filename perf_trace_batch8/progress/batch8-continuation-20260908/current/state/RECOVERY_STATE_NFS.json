@@ -43,14 +43,14 @@
   "R08_final_validation_restore_policy": "Restore every temporarily evicted artifact and verify original SHA256 before final R08 validation; after all 12 GPU captures, user authorizes deleting root weights to provide restoration workspace.",
   "progress_watchdog": "/public/home/accl15ptg7/run_R08_R10/remote_checkpoint_watchdog_012.py",
   "postcapture_restoration_code": "/public/home/accl15ptg7/run_R08_R10/restore_all_R08_release_artifacts_002.py",
-  "postcapture_restoration_status": "complete: all 12 groups, 53 original files, 77,001,580,022 bytes restored; full original SHA256 rehash complete",
-  "cpu_suffix_waiter_session": 74875,
-  "cpu_suffix_status": "R08 actual assignment/predecessor verification started after complete raw restoration",
+  "postcapture_restoration_status": "complete all 12 groups and 53 original files; additional full original SHA recheck underway for outer CPU resume",
+  "cpu_suffix_waiter_session": null,
+  "cpu_suffix_status": "new outer CPU003 active; source path optimization CPU gate complete; frozen business tools unchanged",
   "complete_stage_publisher": "publish_complete_stages_003.py",
   "complete_stage_publisher_session": 1983,
   "current_capture_phase": "accepted",
   "latest_health_observation": {
-    "utc": "2026-09-08T21:21:12.400724+00:00",
+    "utc": "2026-09-08T21:31:13.857102+00:00",
     "accepted_R08": 12,
     "planned_R08": 12,
     "current_capture": "12_chunk_fwd_kernel_o_pmc_write/attempt_001",
@@ -104,7 +104,7 @@
     },
     "NFS_available_GiB": 12.28,
     "temporarily_evicted_bytes": 77001580022,
-    "remaining_machine_hours": 6.95,
+    "remaining_machine_hours": 6.78,
     "completed_stages": []
   },
   "runtime_health_monitor_session": 44834,
@@ -115,7 +115,7 @@
     "sha256": "08270bf9427d843763f74fb066cb9acdbaf00c2af96c6844b5d8dcceccebd513"
   },
   "prepared_stage_templates": "stage_tool_templates_003",
-  "outer_stage_assignment_code": "prepare_stage_assignments_003.py",
+  "outer_stage_assignment_code": "/public/home/accl15ptg7/run_R08_R10/prepare_stage_assignments_004.py",
   "independent_handoff_gate": "audit_runtime_handoff_001.py",
   "runtime_admission_checkpoint": {
     "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/admission_order_runtime_checkpoint_001.json",
@@ -141,7 +141,7 @@
   "outer_extension_status": "all_extended_observers_active",
   "active_capture_scheduler_conservative_deadline_utc": null,
   "raw_storage_watchdog": "/public/home/accl15ptg7/run_R08_R10/offload_published_R08_files_002.py",
-  "cpu_suffix_waiter": "await_all_captures_then_cpu_002.py",
+  "cpu_suffix_waiter": "closed; see outer_source_path_optimization_activated_001",
   "active_capture_scheduler_deadline_utc": "2026-09-09T04:18:09Z",
   "separate_model_free_counter_recheck": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_fresh_exec_pmc_write_recheck_002/RESULT.json",
   "native_warmup_reset_actual_validation_status": "runtime021 actual captures09-11 accepted with both original warmups unchanged; native collection initially on and independent per GPU worker",
@@ -165,5 +165,8 @@
   "progress_watchdog_documented_deadline_matches_actual_deadline": true,
   "restored_capture_count": 12,
   "restored_bytes": 77001580022,
-  "restored_file_count": 53
+  "restored_file_count": 53,
+  "active_cpu_suffix_code": "/public/home/accl15ptg7/run_R08_R10/run_closed_R08_to_R10_003.py",
+  "active_cpu_suffix_session": 61412,
+  "outer_path_validator_gate": "/public/home/accl15ptg7/run_R08_R10/outer_source_path_optimization_gate_001/COMPLETE.json"
 }

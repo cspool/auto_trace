@@ -88,3 +88,13 @@ OUTER_CPU_SUFFIX_EXIT ['/usr/bin/python3', '-B', '/public/home/accl15ptg7/run_R0
 OUTER_CPU_SUFFIX_START ['/usr/bin/python3', '-B', '/public/home/accl15ptg7/run_R08_R10/prepare_stage_assignments_003.py', 'assign', 'R08']
 PREFIX_FULL_MANIFEST_REHASHED R08 R01 73
 PREFIX_FULL_MANIFEST_REHASHED R08 R02 1437
+PREFIX_FULL_MANIFEST_REHASHED R08 R03 17182
+Traceback (most recent call last):
+  File "/public/home/accl15ptg7/run_R08_R10/run_closed_R08_to_R10_002.py", line 20, in <module>
+    if __name__=='__main__':main()
+  File "/public/home/accl15ptg7/run_R08_R10/run_closed_R08_to_R10_002.py", line 14, in main
+    run([PY,'-B',str(CONTROL/'prepare_stage_assignments_003.py'),'assign','R08']);phase(r08,'resource_model',r08/'tools/analysis_006/build_resource_model.py');phase(r08,'resource_audit',r08/'tools/analysis_006/audit_resource_model.py');phase(r08,'seal',r08/'tools/closure_001/seal_r08.py');phase(r08,'completion_audit',r08/'tools/closure_001/audit_r08.py');run([PY,'-B',str(CONTROL/'prepare_stage_assignments_003.py'),'handoff','R08'])
+  File "/public/home/accl15ptg7/run_R08_R10/run_closed_R08_to_R10_002.py", line 7, in run
+    assert time.time()<DEADLINE-120,'machine time reserve';print('OUTER_CPU_SUFFIX_START',argv,flush=True);p=subprocess.run(argv,timeout=max(1,DEADLINE-120-time.time()));assert p.returncode==0,'preserve failed phase without promotion';print('OUTER_CPU_SUFFIX_EXIT',argv,flush=True)
+AssertionError: preserve failed phase without promotion
+OUTER_CPU_SUFFIX_EXIT 1
