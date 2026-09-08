@@ -17,7 +17,7 @@
   "accepted_capture_publisher": "/public/home/accl15ptg7/run_R08_R10/publish_accepted_captures_004.py",
   "original_NFS_session_state_superseded_by_this_emergency_record": true,
   "R09_R10_actual_execution_started": true,
-  "home_storage_available_gib": 8.59,
+  "home_storage_available_gib": 8.56,
   "weight_storage_constraint": "All physical weight bytes must stay under /root; never migrate weights to NFS again",
   "accepted_capture_publisher_session": 12763,
   "raw_storage_watchdog_session": 94301,
@@ -50,7 +50,7 @@
   "complete_stage_publisher_session": 1983,
   "current_capture_phase": "accepted",
   "latest_health_observation": {
-    "utc": "2026-09-08T22:20:25.185895+00:00",
+    "utc": "2026-09-08T22:30:26.812624+00:00",
     "accepted_R08": 12,
     "planned_R08": 12,
     "current_capture": "12_chunk_fwd_kernel_o_pmc_write/attempt_001",
@@ -102,12 +102,13 @@
       "closed_capture_accepted": true,
       "all_first_phase_orders_match_R07": true
     },
-    "NFS_available_GiB": 8.59,
+    "NFS_available_GiB": 8.56,
     "temporarily_evicted_bytes": 77001580022,
-    "remaining_machine_hours": 5.96,
+    "remaining_machine_hours": 5.8,
     "completed_stages": [
       "R08",
-      "R09"
+      "R09",
+      "R10"
     ]
   },
   "runtime_health_monitor_session": 44834,

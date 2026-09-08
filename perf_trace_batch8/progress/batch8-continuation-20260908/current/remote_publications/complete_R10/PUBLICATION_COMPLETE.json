@@ -1,0 +1,49 @@
+{
+  "status": "published",
+  "runtime_goal": "R10",
+  "tag": "perf-trace-batch8-r10-complete-20260908",
+  "url": "https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-r10-complete-20260908",
+  "all_server_asset_sha256_match": true,
+  "handoff": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/handoffs/R10.continuation.json",
+    "size": 68174,
+    "sha256": "747a05967354ffce2f9e6abd15d8d98f74b980bc34744ce8214fd9002e1b6624"
+  },
+  "assets": [
+    {
+      "id": 551443205,
+      "name": "ASSET_MANIFEST.json",
+      "size": 780,
+      "digest": "sha256:745f6543b76d3f59c9d19f06b03fd44309ff88fa802c655437812277c7c6d1aa",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r10-complete-20260908/ASSET_MANIFEST.json"
+    },
+    {
+      "id": 551441660,
+      "name": "capture.tar.zst.part001",
+      "size": 366581053,
+      "digest": "sha256:1ead0c357dd1e299c28a45d296022360619f9f53724faabd1e9f7c66c00146f4",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r10-complete-20260908/capture.tar.zst.part001"
+    },
+    {
+      "id": 551442212,
+      "name": "FILE_MANIFEST.json",
+      "size": 12491,
+      "digest": "sha256:abacbd75bdc8d2a7e82eadc609bbd3f41e61607043fab67a3ccde77ba7da3deb",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r10-complete-20260908/FILE_MANIFEST.json"
+    },
+    {
+      "id": 551442237,
+      "name": "R10_offline_acceptance.zip",
+      "size": 394557919,
+      "digest": "sha256:633afcad6e0089feb9bb80df05da358fb83d80730505d5de49e01baa2c253f1c",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r10-complete-20260908/R10_offline_acceptance.zip"
+    },
+    {
+      "id": 551443224,
+      "name": "SHA256SUMS",
+      "size": 268,
+      "digest": "sha256:2125c97e23e461cbfba0d92a400064a65e90d87baef7e94ef972a38c11640e21",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r10-complete-20260908/SHA256SUMS"
+    }
+  ]
+}
