@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/public/home/accl15ptg7/run_R08_R10/probe_native_graph_selected_intersection_001.py", line 14, in <module>
+    if x['canonical_target_id'] in bound:markers[x['range_name']]=bound[x['canonical_target_id']]
+KeyError: 'canonical_target_id'

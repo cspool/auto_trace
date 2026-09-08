@@ -1,0 +1,350 @@
+NATIVE_PROCESS_ROWS 04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc 0 6272
+NATIVE_PROCESS_ROWS 04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc 1 12544
+{
+  "status": "CPU_diagnostic_complete_not_accepted",
+  "error": "native direct launch API",
+  "current_process_markers": 12544,
+  "current_owned_kernels": 23660,
+  "all_required_logical_owner_multiplicities_already_passed": true,
+  "required_eligible_dispatches": 1408,
+  "pending_logical_owners": 1408,
+  "exact_literal_API_histogram": {
+    "hipModuleLaunchKernel": 57835,
+    "hipGraphLaunch": 527868
+  },
+  "original_raw_bytes_unmodified": true,
+  "elapsed_seconds": 70.25864176999312,
+  "diagnostic_normalization_revision": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/normalized/captures/04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc/attempt_003/diagnostic_003"
+}
+NON_DIRECT_RECORDS 527868 [
+  {
+    "pid": 471808,
+    "op": {
+      "native_rowid": 137575,
+      "BeginNs": 1788866031692816264,
+      "EndNs": 1788866031692821544,
+      "dev_id": 0,
+      "queue_id": "0",
+      "Name": "40",
+      "pid": 471808,
+      "tid": 0,
+      "_Index": 2348063,
+      "DurationNs": 5280,
+      "PARS": "",
+      "accum_id": -1
+    },
+    "HIP": {
+      "native_rowid": 2348063,
+      "BeginNs": 1788866031690558770,
+      "EndNs": 1788866032054494874,
+      "pid": 471808,
+      "tid": 471808,
+      "Name": 263,
+      "args": "hipGraphLaunch(graphExec=0x556fc321c980, stream=0)",
+      "_Index": 2348063,
+      "State": 0,
+      "DurationNs": 363936104,
+      "ExtIndex": 0
+    },
+    "API": "hipGraphLaunch",
+    "native_ops_with_same_Index": 945,
+    "required_selected_dispatch": false
+  },
+  {
+    "pid": 471808,
+    "op": {
+      "native_rowid": 137585,
+      "BeginNs": 1788866031696240743,
+      "EndNs": 1788866031696247463,
+      "dev_id": 0,
+      "queue_id": "0",
+      "Name": "40",
+      "pid": 471808,
+      "tid": 0,
+      "_Index": 2348063,
+      "DurationNs": 6720,
+      "PARS": "",
+      "accum_id": -1
+    },
+    "HIP": {
+      "native_rowid": 2348063,
+      "BeginNs": 1788866031690558770,
+      "EndNs": 1788866032054494874,
+      "pid": 471808,
+      "tid": 471808,
+      "Name": 263,
+      "args": "hipGraphLaunch(graphExec=0x556fc321c980, stream=0)",
+      "_Index": 2348063,
+      "State": 0,
+      "DurationNs": 363936104,
+      "ExtIndex": 0
+    },
+    "API": "hipGraphLaunch",
+    "native_ops_with_same_Index": 945,
+    "required_selected_dispatch": false
+  },
+  {
+    "pid": 471808,
+    "op": {
+      "native_rowid": 137589,
+      "BeginNs": 1788866031698568742,
+      "EndNs": 1788866031698574982,
+      "dev_id": 0,
+      "queue_id": "0",
+      "Name": "40",
+      "pid": 471808,
+      "tid": 0,
+      "_Index": 2348063,
+      "DurationNs": 6240,
+      "PARS": "",
+      "accum_id": -1
+    },
+    "HIP": {
+      "native_rowid": 2348063,
+      "BeginNs": 1788866031690558770,
+      "EndNs": 1788866032054494874,
+      "pid": 471808,
+      "tid": 471808,
+      "Name": 263,
+      "args": "hipGraphLaunch(graphExec=0x556fc321c980, stream=0)",
+      "_Index": 2348063,
+      "State": 0,
+      "DurationNs": 363936104,
+      "ExtIndex": 0
+    },
+    "API": "hipGraphLaunch",
+    "native_ops_with_same_Index": 945,
+    "required_selected_dispatch": false
+  },
+  {
+    "pid": 471808,
+    "op": {
+      "native_rowid": 137599,
+      "BeginNs": 1788866031701413862,
+      "EndNs": 1788866031701420422,
+      "dev_id": 0,
+      "queue_id": "0",
+      "Name": "40",
+      "pid": 471808,
+      "tid": 0,
+      "_Index": 2348063,
+      "DurationNs": 6560,
+      "PARS": "",
+      "accum_id": -1
+    },
+    "HIP": {
+      "native_rowid": 2348063,
+      "BeginNs": 1788866031690558770,
+      "EndNs": 1788866032054494874,
+      "pid": 471808,
+      "tid": 471808,
+      "Name": 263,
+      "args": "hipGraphLaunch(graphExec=0x556fc321c980, stream=0)",
+      "_Index": 2348063,
+      "State": 0,
+      "DurationNs": 363936104,
+      "ExtIndex": 0
+    },
+    "API": "hipGraphLaunch",
+    "native_ops_with_same_Index": 945,
+    "required_selected_dispatch": false
+  },
+  {
+    "pid": 471808,
+    "op": {
+      "native_rowid": 137603,
+      "BeginNs": 1788866031703886980,
+      "EndNs": 1788866031703893540,
+      "dev_id": 0,
+      "queue_id": "0",
+      "Name": "40",
+      "pid": 471808,
+      "tid": 0,
+      "_Index": 2348063,
+      "DurationNs": 6560,
+      "PARS": "",
+      "accum_id": -1
+    },
+    "HIP": {
+      "native_rowid": 2348063,
+      "BeginNs": 1788866031690558770,
+      "EndNs": 1788866032054494874,
+      "pid": 471808,
+      "tid": 471808,
+      "Name": 263,
+      "args": "hipGraphLaunch(graphExec=0x556fc321c980, stream=0)",
+      "_Index": 2348063,
+      "State": 0,
+      "DurationNs": 363936104,
+      "ExtIndex": 0
+    },
+    "API": "hipGraphLaunch",
+    "native_ops_with_same_Index": 945,
+    "required_selected_dispatch": false
+  },
+  {
+    "pid": 471808,
+    "op": {
+      "native_rowid": 137613,
+      "BeginNs": 1788866031707199299,
+      "EndNs": 1788866031707205859,
+      "dev_id": 0,
+      "queue_id": "0",
+      "Name": "40",
+      "pid": 471808,
+      "tid": 0,
+      "_Index": 2348063,
+      "DurationNs": 6560,
+      "PARS": "",
+      "accum_id": -1
+    },
+    "HIP": {
+      "native_rowid": 2348063,
+      "BeginNs": 1788866031690558770,
+      "EndNs": 1788866032054494874,
+      "pid": 471808,
+      "tid": 471808,
+      "Name": 263,
+      "args": "hipGraphLaunch(graphExec=0x556fc321c980, stream=0)",
+      "_Index": 2348063,
+      "State": 0,
+      "DurationNs": 363936104,
+      "ExtIndex": 0
+    },
+    "API": "hipGraphLaunch",
+    "native_ops_with_same_Index": 945,
+    "required_selected_dispatch": false
+  },
+  {
+    "pid": 471808,
+    "op": {
+      "native_rowid": 137617,
+      "BeginNs": 1788866031709487778,
+      "EndNs": 1788866031709494178,
+      "dev_id": 0,
+      "queue_id": "0",
+      "Name": "40",
+      "pid": 471808,
+      "tid": 0,
+      "_Index": 2348063,
+      "DurationNs": 6400,
+      "PARS": "",
+      "accum_id": -1
+    },
+    "HIP": {
+      "native_rowid": 2348063,
+      "BeginNs": 1788866031690558770,
+      "EndNs": 1788866032054494874,
+      "pid": 471808,
+      "tid": 471808,
+      "Name": 263,
+      "args": "hipGraphLaunch(graphExec=0x556fc321c980, stream=0)",
+      "_Index": 2348063,
+      "State": 0,
+      "DurationNs": 363936104,
+      "ExtIndex": 0
+    },
+    "API": "hipGraphLaunch",
+    "native_ops_with_same_Index": 945,
+    "required_selected_dispatch": false
+  },
+  {
+    "pid": 471808,
+    "op": {
+      "native_rowid": 137630,
+      "BeginNs": 1788866031712653057,
+      "EndNs": 1788866031712659457,
+      "dev_id": 0,
+      "queue_id": "0",
+      "Name": "40",
+      "pid": 471808,
+      "tid": 0,
+      "_Index": 2348063,
+      "DurationNs": 6400,
+      "PARS": "",
+      "accum_id": -1
+    },
+    "HIP": {
+      "native_rowid": 2348063,
+      "BeginNs": 1788866031690558770,
+      "EndNs": 1788866032054494874,
+      "pid": 471808,
+      "tid": 471808,
+      "Name": 263,
+      "args": "hipGraphLaunch(graphExec=0x556fc321c980, stream=0)",
+      "_Index": 2348063,
+      "State": 0,
+      "DurationNs": 363936104,
+      "ExtIndex": 0
+    },
+    "API": "hipGraphLaunch",
+    "native_ops_with_same_Index": 945,
+    "required_selected_dispatch": false
+  },
+  {
+    "pid": 471808,
+    "op": {
+      "native_rowid": 137634,
+      "BeginNs": 1788866031714928256,
+      "EndNs": 1788866031714934656,
+      "dev_id": 0,
+      "queue_id": "0",
+      "Name": "40",
+      "pid": 471808,
+      "tid": 0,
+      "_Index": 2348063,
+      "DurationNs": 6400,
+      "PARS": "",
+      "accum_id": -1
+    },
+    "HIP": {
+      "native_rowid": 2348063,
+      "BeginNs": 1788866031690558770,
+      "EndNs": 1788866032054494874,
+      "pid": 471808,
+      "tid": 471808,
+      "Name": 263,
+      "args": "hipGraphLaunch(graphExec=0x556fc321c980, stream=0)",
+      "_Index": 2348063,
+      "State": 0,
+      "DurationNs": 363936104,
+      "ExtIndex": 0
+    },
+    "API": "hipGraphLaunch",
+    "native_ops_with_same_Index": 945,
+    "required_selected_dispatch": false
+  },
+  {
+    "pid": 471808,
+    "op": {
+      "native_rowid": 137644,
+      "BeginNs": 1788866031717882175,
+      "EndNs": 1788866031717888575,
+      "dev_id": 0,
+      "queue_id": "0",
+      "Name": "40",
+      "pid": 471808,
+      "tid": 0,
+      "_Index": 2348063,
+      "DurationNs": 6400,
+      "PARS": "",
+      "accum_id": -1
+    },
+    "HIP": {
+      "native_rowid": 2348063,
+      "BeginNs": 1788866031690558770,
+      "EndNs": 1788866032054494874,
+      "pid": 471808,
+      "tid": 471808,
+      "Name": 263,
+      "args": "hipGraphLaunch(graphExec=0x556fc321c980, stream=0)",
+      "_Index": 2348063,
+      "State": 0,
+      "DurationNs": 363936104,
+      "ExtIndex": 0
+    },
+    "API": "hipGraphLaunch",
+    "native_ops_with_same_Index": 945,
+    "required_selected_dispatch": false
+  }
+]
