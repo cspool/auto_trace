@@ -194,3 +194,5 @@ INFO 09-09 01:40:21 [utils.py:250] Waiting for API servers to complete ...
 (ApiServer_0 pid=929102) INFO:     Started server process [929102]
 (ApiServer_0 pid=929102) INFO:     Waiting for application startup.
 (ApiServer_0 pid=929102) INFO:     Application startup complete.
+(ApiServer_1 pid=929103) INFO:     127.0.0.1:42870 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(ApiServer_1 pid=929103) INFO:     127.0.0.1:42868 - "POST /v1/chat/completions HTTP/1.1" 200 OK

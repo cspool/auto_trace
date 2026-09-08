@@ -17,11 +17,11 @@
   "accepted_capture_publisher": "/public/home/accl15ptg7/run_R08_R10/publish_accepted_captures_004.py",
   "original_NFS_session_state_superseded_by_this_emergency_record": true,
   "R09_R10_actual_execution_started": false,
-  "home_storage_available_gib": 12.21,
+  "home_storage_available_gib": 10.88,
   "weight_storage_constraint": "All physical weight bytes must stay under /root; never migrate weights to NFS again",
   "accepted_capture_publisher_session": 12763,
   "raw_storage_watchdog_session": 94301,
-  "pre_measured_two_worker_native_health": "pending",
+  "pre_measured_two_worker_native_health": "complete",
   "user_storage_policy": "/public/home/accl15ptg7/run_R08_R10/USER_STORAGE_POLICY_20260908.json",
   "migration_session": null,
   "migration_log": "/public/home/accl15ptg7/run_R08_R10/migrate_R08_all_outputs_to_NFS_001.log",
@@ -48,34 +48,69 @@
   "cpu_suffix_status": "outer waiting only; will restore all raw sources before R08 assignment",
   "complete_stage_publisher": "publish_complete_stages_003.py",
   "complete_stage_publisher_session": 1983,
-  "current_capture_phase": "original_two_warmups",
+  "current_capture_phase": "measured_batch",
   "latest_health_observation": {
-    "utc": "2026-09-08T17:40:39.107545+00:00",
+    "utc": "2026-09-08T17:50:42.116211+00:00",
     "accepted_R08": 8,
     "planned_R08": 12,
     "current_capture": "09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_006",
-    "current_phase": "original_two_warmups",
+    "current_phase": "measured_batch",
     "native_workers": [
       {
         "rank": 0,
         "worker_pid": 930501,
-        "PMC_bytes": 4684503,
+        "PMC_bytes": 61649717,
         "worker_alive": true
       },
       {
         "rank": 1,
         "worker_pid": 930503,
-        "PMC_bytes": 4880187,
+        "PMC_bytes": 62011015,
         "worker_alive": true
       }
     ],
-    "admission_releases": [],
-    "pre_measured_health": "pending",
-    "measured_request_token_progress": {},
-    "live_eight_request_target_coverage": null,
-    "NFS_available_GiB": 12.21,
+    "admission_releases": [
+      {
+        "rank": 0,
+        "engine_pid": 929100,
+        "request_order": [
+          "batch8-dual-dcu-dp2-req-002-28a42990210e6f68",
+          "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786",
+          "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5",
+          "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41"
+        ]
+      },
+      {
+        "rank": 1,
+        "engine_pid": 929101,
+        "request_order": [
+          "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c",
+          "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f",
+          "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04",
+          "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3"
+        ]
+      }
+    ],
+    "pre_measured_health": "complete",
+    "measured_request_token_progress": {
+      "batch8-dual-dcu-dp2-req-002-28a42990210e6f68": 610,
+      "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786": 566,
+      "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5": 526,
+      "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41": 485,
+      "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c": 614,
+      "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f": 572,
+      "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3": 488,
+      "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04": 532
+    },
+    "live_eight_request_target_coverage": {
+      "status": "complete_live_marker_coverage",
+      "report": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/live_eight_request_checks_001/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write.attempt_006.1788889601550055959.json",
+      "closed_capture_accepted": false,
+      "all_first_phase_orders_match_R07": true
+    },
+    "NFS_available_GiB": 10.88,
     "temporarily_evicted_bytes": 45795450475,
-    "remaining_machine_hours": 10.62,
+    "remaining_machine_hours": 10.46,
     "completed_stages": []
   },
   "runtime_health_monitor_session": 44834,
