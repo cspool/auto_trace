@@ -275,3 +275,5 @@ Capture 04 is published at https://github.com/cspool/auto_trace/releases/tag/per
 - 2026-09-08T21:32:46.182164+00:00: CPU resume prerequisite completed: all 53 restored original raw files across 12 captures independently rehashed again (77,001,580,022 bytes); every exact authorized file mapping validated. Optimized full predecessor validation is now running with unchanged frozen business tools.
 
 - 2026-09-08T21:35:05.137745+00:00: Actual R08 CPU admission complete after all restored originals: 155475 ordered predecessor business file records fully rehashed (65852812265 logical bytes), including 136,521 R04 entries and the R07 recovered-offline exception. Resource model construction started under the closed CPU phase runner. R08 stage completion remains pending.
+
+- 2026-09-08T21:36:22.126835+00:00: Actual R08 resource model construction and independent resource audit completed normally. Closed phase lifecycle records, logs, resource model manifest and independent audit checkpointed; full resource data remain physical NFS for the complete R08 Release. R08 sealing and completion audit now running.

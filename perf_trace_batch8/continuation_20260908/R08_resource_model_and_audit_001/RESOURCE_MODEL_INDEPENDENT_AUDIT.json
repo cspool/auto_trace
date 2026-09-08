@@ -1,0 +1,23 @@
+{
+  "FX_templates_independently_recomputed": 100,
+  "R07_process_links": 12544,
+  "auditor_sha256": "2f93deaff827ea0729cad279903e9fa7ef7cd70bd8a29f5f12f80c7e4dff85f1",
+  "elapsed_seconds": 17.531788842985407,
+  "families": 89,
+  "independent_audit": true,
+  "metric_rows": 177408,
+  "model_manifest_sha256": "0a50e565909e66a8d0ce4570af2dbeedef472ad208cdc7d89b9193bfad929665",
+  "native_metric_rows": 64512,
+  "physical_attribute_rows": 6912,
+  "physical_sharing_conserved": true,
+  "replay_time_used_as_latency": false,
+  "runtime_shape_match_counts": {
+    "False": 288,
+    "True": 6624
+  },
+  "selected_families": 32,
+  "selected_logical_targets": 7936,
+  "static_or_unavailable_metric_rows": 112896,
+  "status": "complete",
+  "unit_formula_value_and_null_checks": true
+}
