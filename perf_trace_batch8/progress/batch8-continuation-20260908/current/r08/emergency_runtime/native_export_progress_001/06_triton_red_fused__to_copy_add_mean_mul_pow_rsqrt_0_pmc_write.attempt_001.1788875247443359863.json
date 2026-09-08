@@ -1,0 +1,49 @@
+{
+  "utc": "2026-09-08T13:47:27.443092+00:00",
+  "segment_id": "06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write",
+  "attempt": "attempt_001",
+  "status": "scoped_native_export_observation",
+  "processes": [
+    {
+      "pid": 617822,
+      "process_state": "S",
+      "user_cpu_ticks": 0,
+      "system_cpu_ticks": 0,
+      "io": {
+        "rchar": 16644,
+        "wchar": 376,
+        "syscr": 27,
+        "syscw": 4,
+        "read_bytes": 17027072,
+        "write_bytes": 4096,
+        "cancelled_write_bytes": 0
+      },
+      "PMC_input_file_positions": []
+    },
+    {
+      "pid": 617823,
+      "process_state": "R",
+      "user_cpu_ticks": 28396,
+      "system_cpu_ticks": 1078,
+      "io": {
+        "rchar": 15634224380,
+        "wchar": 17840760956,
+        "syscr": 536583,
+        "syscw": 1771610,
+        "read_bytes": 64170369024,
+        "write_bytes": 22160637952,
+        "cancelled_write_bytes": 0
+      },
+      "PMC_input_file_positions": [
+        {
+          "file": "/public/home/accl15ptg7/r08_continuation_001_NFS_bulk/raw/captures/06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write/attempt_001/hipprof_tmprpl_data_260908_210631_617822/input0_results_260908_210631/pmc_results_620502.txt",
+          "offset": 1458415741,
+          "file_size": 1576083045
+        }
+      ]
+    }
+  ],
+  "database_was_not_opened": true,
+  "model_or_device_actions": 0,
+  "native_export_complete": false
+}
