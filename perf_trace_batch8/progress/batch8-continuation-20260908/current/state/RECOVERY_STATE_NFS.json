@@ -17,11 +17,11 @@
   "accepted_capture_publisher": "/public/home/accl15ptg7/run_R08_R10/publish_accepted_captures_003.py",
   "original_NFS_session_state_superseded_by_this_emergency_record": true,
   "R09_R10_actual_execution_started": false,
-  "home_storage_available_gib": 16.37,
+  "home_storage_available_gib": 15.23,
   "weight_storage_constraint": "All physical weight bytes must stay under /root; never migrate weights to NFS again",
   "accepted_capture_publisher_session": 64243,
   "raw_storage_watchdog_session": 19126,
-  "pre_measured_two_worker_native_health": "revision018 both ranks passed, original eight measured requests released in R07 observed admission order",
+  "pre_measured_two_worker_native_health": "complete",
   "user_storage_policy": "/public/home/accl15ptg7/run_R08_R10/USER_STORAGE_POLICY_20260908.json",
   "migration_session": null,
   "migration_log": "/public/home/accl15ptg7/run_R08_R10/migrate_R08_all_outputs_to_NFS_001.log",
@@ -37,8 +37,8 @@
   "additional_NFS_mount_requires_external_platform_action": true,
   "NFS_lossless_DB_ratio_validation": "real 3.49 GB closed DB compressed to 821.7 MB, full decompressed SHA256 verified; original DB still retained; archive activation awaits full resolver validation",
   "temporary_release_eviction_enabled": true,
-  "evicted_accepted_capture_count": 3,
-  "evicted_bytes": 13251173857,
+  "evicted_accepted_capture_count": 4,
+  "evicted_bytes": 21092925463,
   "weights_must_remain_until_all_12_R08_captures_accepted": true,
   "R08_final_validation_restore_policy": "Restore every temporarily evicted artifact and verify original SHA256 before final R08 validation; after all 12 GPU captures, user authorizes deleting root weights to provide restoration workspace.",
   "progress_watchdog": "remote_checkpoint_watchdog_010.py",
@@ -50,7 +50,7 @@
   "complete_stage_publisher_session": 46095,
   "current_capture_phase": "measured_batch",
   "latest_health_observation": {
-    "utc": "2026-09-08T12:34:54.879723+00:00",
+    "utc": "2026-09-08T12:44:37.658042+00:00",
     "accepted_R08": 4,
     "planned_R08": 12,
     "current_capture": "05_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_read/attempt_001",
@@ -59,13 +59,13 @@
       {
         "rank": 0,
         "worker_pid": 553054,
-        "PMC_bytes": 797669685,
+        "PMC_bytes": 1148761369,
         "worker_alive": true
       },
       {
         "rank": 1,
         "worker_pid": 553051,
-        "PMC_bytes": 801085570,
+        "PMC_bytes": 1148433363,
         "worker_alive": true
       }
     ],
@@ -93,19 +93,28 @@
     ],
     "pre_measured_health": "complete",
     "measured_request_token_progress": {
-      "batch8-dual-dcu-dp2-req-002-28a42990210e6f68": 37,
-      "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786": 0,
-      "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c": 41,
-      "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f": 0
+      "batch8-dual-dcu-dp2-req-002-28a42990210e6f68": 544,
+      "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786": 500,
+      "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5": 460,
+      "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41": 419,
+      "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c": 543,
+      "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f": 501,
+      "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3": 417,
+      "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04": 461
     },
-    "live_eight_request_target_coverage": null,
-    "NFS_available_GiB": 16.37,
+    "live_eight_request_target_coverage": {
+      "status": "complete_live_marker_coverage",
+      "report": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/live_eight_request_checks_001/05_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_read.attempt_001.1788871056909248950.json",
+      "closed_capture_accepted": false,
+      "all_first_phase_orders_match_R07": true
+    },
+    "NFS_available_GiB": 15.23,
     "temporarily_evicted_bytes": 21092925463,
-    "remaining_machine_hours": 7.72,
+    "remaining_machine_hours": 7.56,
     "completed_stages": []
   },
-  "runtime_health_monitor_session": 62429,
-  "runtime_health_monitor": "watch_runtime_health_004.py",
+  "runtime_health_monitor_session": 55116,
+  "runtime_health_monitor": "watch_runtime_health_005.py",
   "previous_attempt_failure_diagnostic": {
     "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/capture04_multiplicity_diagnostic_001.json",
     "size": 60156,
