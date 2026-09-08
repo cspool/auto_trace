@@ -1,0 +1,42 @@
+{
+  "control_backend": "native_initially_on_explicit_warmup_and_measured_start_terminal_stop",
+  "device_transition": {
+    "finished_monotonic_ns": 528388318744655,
+    "operation": "hipSetDevice",
+    "pid": 982060,
+    "started_monotonic_ns": 528388318632865,
+    "status": 0,
+    "tid": 993143
+  },
+  "dp_rank": 1,
+  "initial_profiler_stop_monotonic_ns": 527246659224185,
+  "legacy_initial_stop_field_is_logical_guard_only": true,
+  "monotonic_ns": 528388348292755,
+  "native_collection_initially_on": true,
+  "operation": "stop",
+  "physical_device_id": 1,
+  "pid": 982060,
+  "profiler_transition": {
+    "finished_monotonic_ns": 528388348211605,
+    "operation": "hipProfilerStop",
+    "pid": 982060,
+    "started_monotonic_ns": 528388348190085,
+    "status": 0,
+    "tid": 993143
+  },
+  "realtime_ns": 1788893165453348724,
+  "reason": "measured_batch_complete_control_file",
+  "runtime_attempt_id": "batch8-dp2-fresh-003-R08-10_chunk_fwd_kernel_o_pmc-attempt_001",
+  "schema_version": 1,
+  "segment_id": "10_chunk_fwd_kernel_o_pmc",
+  "status": "complete",
+  "synchronize_transition": {
+    "finished_monotonic_ns": 528388318836465,
+    "operation": "hipDeviceSynchronize",
+    "pid": 982060,
+    "started_monotonic_ns": 528388318757175,
+    "status": 0,
+    "tid": 993143
+  },
+  "tid": 993143
+}
