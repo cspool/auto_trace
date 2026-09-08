@@ -253,3 +253,5 @@ Capture 04 is published at https://github.com/cspool/auto_trace/releases/tag/per
 - 2026-09-08T20:41:19.242625+00:00: 12_chunk_fwd_kernel_o_pmc_write Release published with server asset size/SHA256 verified: https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-r08-12-chunk-fwd-kernel-o-pmc-write-20260908. Authorized local large-file eviction completed for 7730282174 bytes. Original member manifests and restoration receipts retained on NFS and checkpointed here.
 
 - 2026-09-08T20:44:02.713535+00:00: All 12 accepted raw Releases and offload receipts are complete. The offloader stopped normally. Weight removal prepared after full capture closure and capacity verification; 11 exact root shard identities recorded before removal. Full restoration remains pending.
+
+- 2026-09-08T20:45:22.182604+00:00: Restoration checkpoint weights_removed: root weights were removed only after all 12 GPU captures and publications closed; 0/12 capture groups have original-SHA restoration receipts (0 bytes). Stage completion is tracked separately.

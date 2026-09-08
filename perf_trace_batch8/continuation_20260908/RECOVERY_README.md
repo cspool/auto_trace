@@ -19,6 +19,8 @@ NFS 控制目录：`/public/home/accl15ptg7/run_R08_R10`。原始 R08 运行目�
 
 全部 12 项采集验收通过且 GPU、服务和采集进程退出后，`restore_all_R08_release_artifacts_002.py` 才可核对空间、记录并删除指定的 root 权重，拉取各 Release，恢复每个被回收的原始文件并核验其原始 SHA256。root 仅在这个阶段用作已授权的原始文件恢复空间；新阶段输出和日志仍写 NFS。恢复完成凭证为 `raw/runtime_tools/release_restoration_001/COMPLETE.json`。若恢复后的 root 文件再次随容器丢失，该工具支持按原恢复凭证重新取回相同字节，保留原凭证不变。
 
+截至 2026-09-08 20:45 UTC，全部 12 组 Release 与回收凭证已完成。原始大文件恢复总量为 77,001,580,022 字节；自动回收进程已停止，11 个 root 权重分片（55,563,022,432 字节）已按逐文件 SHA256 清单释放。第一组正在下载恢复，完整删除凭证见 `release_restoration_weights_removed_001`。权重不再是后续 CPU 阶段的前置依赖；需要恢复的全部原始产物均有已校验 Release。
+
 ## 后续阶段与最终完成条件
 
 CPU 后续入口为 `await_all_captures_then_cpu_002.py` → `run_closed_R08_to_R10_002.py`，使用 `prepare_stage_assignments_003.py`、`stage_tool_templates_003` 和独立的 `audit_runtime_handoff_001.py`。必须依次恢复并验收 R08、执行并验收 R09、执行并验收 R10；前序完整 handoff 出现前不能提前执行后序业务阶段。
