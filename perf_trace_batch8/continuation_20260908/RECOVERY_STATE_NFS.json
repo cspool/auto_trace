@@ -163,7 +163,7 @@
   "native_session_layout": "two_independent_native_GPU_worker_collectors_same_single_DP2_service",
   "native_collection_initially_disabled": false,
   "native_collection_initially_on": true,
-  "last_reviewed_main_commit": "2110c9df5b27297afc70e824487c3ebccdf27e37",
+  "last_reviewed_main_commit": "5dd5b008269764f9cef90a846c94c1bc89258377",
   "weight_removal_complete": true,
   "weight_shards_remaining": 0,
   "progress_watchdog_documented_deadline_matches_actual_deadline": true,
@@ -198,7 +198,7 @@
   "core_workflow_complete": true,
   "supplementary_readable_previews_status": "complete: five unchanged accepted HTML pages, zero external requests",
   "status": "complete",
-  "final_reviewed_utc": "2026-09-08T22:47:00.230012+00:00",
+  "final_reviewed_utc": "2026-09-08T22:49:01.399179+00:00",
   "additional_machine_time_required": false,
   "current_unrestored_evicted_file_count": 0,
   "R10_full_stage_publication_status": "complete, all 5 exact expected remote asset digests verified; upload cache removed",
@@ -209,6 +209,15 @@
   "completed_watchdogs_stopped": true,
   "watchdog_closure_receipt": "/public/home/accl15ptg7/run_R08_R10/FINAL_WATCHDOG_CLOSURE_001.json",
   "final_completion_record": "/public/home/accl15ptg7/run_R08_R10/FINAL_COMPLETION.json",
-  "final_progress_snapshot_status": "pending final one-shot push",
-  "root_storage_available_gib": 84.13
+  "final_progress_snapshot_status": "pushed and remote commit verified",
+  "root_storage_available_gib": 84.13,
+  "final_progress_snapshot_receipt": {
+    "status": "pushed",
+    "utc": "2026-09-08T22:48:16.532659+00:00",
+    "commit": "8ca7875c2c158d53ef5a6b69a68697957260217e",
+    "branch": "progress/batch8-continuation-20260908",
+    "accepted_R08": 12,
+    "url": "https://github.com/cspool/auto_trace/tree/progress/batch8-continuation-20260908/perf_trace_batch8/progress/batch8-continuation-20260908",
+    "source_snapshot_manifest_sha256": "8d2ce26119bb7a62790531229258778970b573eb992ce404c8a5d9bc8979f87b"
+  }
 }

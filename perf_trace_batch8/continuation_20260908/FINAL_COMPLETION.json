@@ -113,5 +113,16 @@
     "size": 744,
     "sha256": "7e9445561d1fcd1f37e6fe768feb19bfed2f9b628a586f3094e70d3eb8b9d9e7"
   },
-  "final_progress_snapshot_pending": true
+  "final_progress_snapshot_pending": false,
+  "final_progress_snapshot": {
+    "status": "pushed",
+    "utc": "2026-09-08T22:48:16.532659+00:00",
+    "commit": "8ca7875c2c158d53ef5a6b69a68697957260217e",
+    "branch": "progress/batch8-continuation-20260908",
+    "accepted_R08": 12,
+    "url": "https://github.com/cspool/auto_trace/tree/progress/batch8-continuation-20260908/perf_trace_batch8/progress/batch8-continuation-20260908",
+    "source_snapshot_manifest_sha256": "8d2ce26119bb7a62790531229258778970b573eb992ce404c8a5d9bc8979f87b"
+  },
+  "all_required_execution_audit_publication_and_recovery_work_complete": true,
+  "finalized_utc": "2026-09-08T22:49:01.399179+00:00"
 }
