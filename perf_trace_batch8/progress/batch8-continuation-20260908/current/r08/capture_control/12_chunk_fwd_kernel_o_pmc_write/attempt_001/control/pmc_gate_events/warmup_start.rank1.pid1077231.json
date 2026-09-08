@@ -1,0 +1,31 @@
+{
+  "added_model_executions": 0,
+  "added_requests": 0,
+  "canonical_measured_window_started": false,
+  "control_backend": "native_initially_on_explicit_warmup_and_measured_start_terminal_stop",
+  "dp_rank": 1,
+  "initial_profiler_stop_monotonic_ns": 532711609710618,
+  "legacy_initial_stop_field_is_logical_guard_only": true,
+  "monotonic_ns": 532939460523680,
+  "native_collection_initially_on": true,
+  "operation": "warmup_native_start",
+  "participant_request_ids": [
+    "r08-pmc-warmup-002-batch8-dual-dcu-dp2-req-002-28a42990210e6f68"
+  ],
+  "physical_device_id": 1,
+  "pid": 1077231,
+  "profiler_transition": {
+    "finished_monotonic_ns": 532939460442619,
+    "operation": "hipProfilerStart",
+    "pid": 1077231,
+    "started_monotonic_ns": 532939458727115,
+    "status": 0,
+    "tid": 1077231
+  },
+  "realtime_ns": 1788897716565580489,
+  "runtime_attempt_id": "batch8-dp2-fresh-003-R08-12_chunk_fwd_kernel_o_pmc_write-attempt_001",
+  "schema_version": 1,
+  "segment_id": "12_chunk_fwd_kernel_o_pmc_write",
+  "status": "complete",
+  "tid": 1077231
+}
