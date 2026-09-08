@@ -1,0 +1,25 @@
+{
+  "both_collectors_active": true,
+  "workers": [
+    {
+      "files": [
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_independent_overlap_probe_020/rank0/hipprof_tmprpl_data_260909_010117_908967/input0_results_260909_010117/pmc_results_908974.txt",
+          "size": 16683
+        }
+      ],
+      "pid": 908974,
+      "rank": 0
+    },
+    {
+      "files": [
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_independent_overlap_probe_020/rank1/hipprof_tmprpl_data_260909_010117_908968/input0_results_260909_010117/pmc_results_908976.txt",
+          "size": 16704
+        }
+      ],
+      "pid": 908976,
+      "rank": 1
+    }
+  ]
+}

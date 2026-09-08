@@ -1,0 +1,28 @@
+{
+  "phase": "VISIBILITY_AFTER_LIBC_FLUSH.json",
+  "workers": [
+    {
+      "rank": 0,
+      "pid": 900589,
+      "native_files": [
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_ROCR_masked_probe_014/hipprof_tmprpl_data_260909_004923_900584/input0_results_260909_004923/pmc_results_900589.txt",
+          "size": 0,
+          "prefix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ]
+    },
+    {
+      "rank": 1,
+      "pid": 900590,
+      "native_files": [
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_ROCR_masked_probe_014/hipprof_tmprpl_data_260909_004923_900584/input0_results_260909_004923/pmc_results_900590.txt",
+          "size": 21906,
+          "prefix_sha256": "078920070b87713c4493e8d7235bd446ce221e321af7171590b7925b53bca869"
+        }
+      ]
+    }
+  ],
+  "model_free": true
+}

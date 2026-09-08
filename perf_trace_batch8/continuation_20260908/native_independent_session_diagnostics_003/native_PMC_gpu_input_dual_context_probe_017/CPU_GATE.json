@@ -1,0 +1,22 @@
+{
+  "four_measured_gqa6_dispatches_per_device_only": true,
+  "model_initializations": 0,
+  "native_counter_mode": "pmc_write",
+  "not_R08_model_measurement_evidence": true,
+  "prior_failed_capture": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_005/RAW_CAPTURE_FAILURE.json",
+    "sha256": "05a7eddbe9eb04f8e6608bb1eb755d000081e8cfe406d3c5bb2f3dc9debc6683",
+    "size": 935
+  },
+  "prior_groups_verified_closed": [
+    858588,
+    858597,
+    869171
+  ],
+  "script": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_gpu_input_dual_context_probe_017/gqa6_visibility_probe.py",
+    "sha256": "29bb8ed2fc668654ff4031c6db6872a53edb94e032f68d723155c9eeb9abd9dd",
+    "size": 4116
+  },
+  "status": "complete"
+}
