@@ -7,7 +7,7 @@
   "scheduler": "serial_scheduler_013",
   "scheduler_session": 1095,
   "capture_session": 1095,
-  "progress_watchdog_session": 65189,
+  "progress_watchdog_session": 17524,
   "deadline_utc": "2026-09-09T04:18:09Z",
   "home_quota_reported_bytes": 53687091200,
   "home_writes_currently_fail_ENOSPC": false,
@@ -17,7 +17,7 @@
   "accepted_capture_publisher": "/public/home/accl15ptg7/run_R08_R10/publish_accepted_captures_004.py",
   "original_NFS_session_state_superseded_by_this_emergency_record": true,
   "R09_R10_actual_execution_started": false,
-  "home_storage_available_gib": 12.06,
+  "home_storage_available_gib": 11.82,
   "weight_storage_constraint": "All physical weight bytes must stay under /root; never migrate weights to NFS again",
   "accepted_capture_publisher_session": 12763,
   "raw_storage_watchdog_session": 94301,
@@ -41,7 +41,7 @@
   "evicted_bytes": 77001580022,
   "weights_must_remain_until_all_12_R08_captures_accepted": true,
   "R08_final_validation_restore_policy": "Restore every temporarily evicted artifact and verify original SHA256 before final R08 validation; after all 12 GPU captures, user authorizes deleting root weights to provide restoration workspace.",
-  "progress_watchdog": "remote_checkpoint_watchdog_011.py",
+  "progress_watchdog": "/public/home/accl15ptg7/run_R08_R10/remote_checkpoint_watchdog_012.py",
   "postcapture_restoration_code": "/public/home/accl15ptg7/run_R08_R10/restore_all_R08_release_artifacts_002.py",
   "postcapture_restoration_status": "all 12 raw Releases verified; all 11 root weight shards removed with full SHA receipts; actual Release download and original SHA restoration running",
   "cpu_suffix_waiter_session": 74875,
@@ -50,7 +50,7 @@
   "complete_stage_publisher_session": 1983,
   "current_capture_phase": "accepted",
   "latest_health_observation": {
-    "utc": "2026-09-08T20:45:07.775514+00:00",
+    "utc": "2026-09-08T20:51:08.471884+00:00",
     "accepted_R08": 12,
     "planned_R08": 12,
     "current_capture": "12_chunk_fwd_kernel_o_pmc_write/attempt_001",
@@ -86,9 +86,9 @@
       "closed_capture_accepted": true,
       "all_first_phase_orders_match_R07": true
     },
-    "NFS_available_GiB": 12.06,
+    "NFS_available_GiB": 11.82,
     "temporarily_evicted_bytes": 77001580022,
-    "remaining_machine_hours": 7.55,
+    "remaining_machine_hours": 7.45,
     "completed_stages": []
   },
   "runtime_health_monitor_session": 44834,
@@ -145,5 +145,6 @@
   "native_collection_initially_on": true,
   "last_reviewed_main_commit": "7cd579ee486c17ca7db0c9661a71710f463ce216",
   "weight_removal_complete": true,
-  "weight_shards_remaining": 0
+  "weight_shards_remaining": 0,
+  "progress_watchdog_documented_deadline_matches_actual_deadline": true
 }
