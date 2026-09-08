@@ -1,0 +1,15 @@
+{
+  "status": "active",
+  "utc": "2026-09-08T21:30:42.149939+00:00",
+  "session_id": 61412,
+  "outer_process": {
+    "pid": 1153809,
+    "start_ticks": "53821430"
+  },
+  "outer_code": "/public/home/accl15ptg7/run_R08_R10/run_closed_R08_to_R10_003.py",
+  "assignment_code": "/public/home/accl15ptg7/run_R08_R10/prepare_stage_assignments_004.py",
+  "frozen_business_templates": "stage_tool_templates_003",
+  "frozen_business_tools_unchanged": true,
+  "first_action": "rehash all 53 restored originals before resuming optimized prefix admission",
+  "old_slow_outer_chain_closed": true
+}

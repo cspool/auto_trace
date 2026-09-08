@@ -23,7 +23,7 @@ NFS 控制目录：`/public/home/accl15ptg7/run_R08_R10`。原始 R08 运行目�
 
 ## 后续阶段与最终完成条件
 
-CPU 后续入口为 `await_all_captures_then_cpu_002.py` → `run_closed_R08_to_R10_002.py`，使用 `prepare_stage_assignments_003.py`、`stage_tool_templates_003` 和独立的 `audit_runtime_handoff_001.py`。必须依次恢复并验收 R08、执行并验收 R09、执行并验收 R10；前序完整 handoff 出现前不能提前执行后序业务阶段。
+当前 CPU 接续入口为 `run_closed_R08_to_R10_003.py`，使用 `prepare_stage_assignments_004.py`、未改动的 `stage_tool_templates_003` 和独立的 `audit_runtime_handoff_001.py`。最初外层入场核验重复重建 67 条路径映射，已在业务阶段尚未开始时保存日志并替换；新外层路径核验在 233 个真实路径与 11 个异常场景中保持相同结果，实测约快 50 倍。每个源文件仍完整核对 SHA256，每个实际目录和文件链接仍实时验证。接续先再次核对 53 份恢复原始文件，再逐一完整核验 R01–R07 前序文件。必须依次验收 R08、执行并验收 R09、执行并验收 R10；前序完整 handoff 出现前不能提前执行后序业务阶段。
 
 `publish_accepted_captures_004.py` 发布各采集，`offload_published_R08_files_002.py` 仅回收已审计且远端校验通过的大文件，`publish_complete_stages_003.py` 发布完整阶段及 R10 离线交付物。最终完成还需确认 R10 审计、完整 handoff、离线浏览器验收及全部阶段 Release 远端 SHA256 校验，不能仅凭后台进程已启动宣告结束。
 
