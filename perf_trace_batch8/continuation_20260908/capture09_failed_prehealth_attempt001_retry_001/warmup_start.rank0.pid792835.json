@@ -1,0 +1,31 @@
+{
+  "added_model_executions": 0,
+  "added_requests": 0,
+  "canonical_measured_window_started": false,
+  "control_backend": "native_initially_on_explicit_warmup_and_measured_start_terminal_stop",
+  "dp_rank": 0,
+  "initial_profiler_stop_monotonic_ns": 515269987674671,
+  "legacy_initial_stop_field_is_logical_guard_only": true,
+  "monotonic_ns": 515507257294209,
+  "native_collection_initially_on": true,
+  "operation": "warmup_native_start",
+  "participant_request_ids": [
+    "r08-pmc-warmup-001-batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c"
+  ],
+  "physical_device_id": 0,
+  "pid": 792835,
+  "profiler_transition": {
+    "finished_monotonic_ns": 515507257207549,
+    "operation": "hipProfilerStart",
+    "pid": 792835,
+    "started_monotonic_ns": 515507255428723,
+    "status": 0,
+    "tid": 792835
+  },
+  "realtime_ns": 1788880284362351298,
+  "runtime_attempt_id": "batch8-dp2-fresh-003-R08-09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write-attempt_001",
+  "schema_version": 1,
+  "segment_id": "09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write",
+  "status": "complete",
+  "tid": 792835
+}

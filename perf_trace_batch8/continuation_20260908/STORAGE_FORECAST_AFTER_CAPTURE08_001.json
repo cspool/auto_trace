@@ -1,0 +1,17 @@
+{
+  "status": "metadata_only_capacity_estimate_not_restore_authorization",
+  "utc": "2026-09-08T15:08:59.538706+00:00",
+  "published_evicted_captures": 8,
+  "published_evicted_bytes": 45795450475,
+  "remaining_capture_count": 4,
+  "estimated_additional_raw_bytes_per_capture": 4413265764,
+  "estimated_total_raw_restoration_bytes": 63448513531,
+  "root_free_bytes_now": 111272796160,
+  "NFS_free_bytes_now": 18944622592,
+  "physical_root_weight_bytes_retained": 55563022432,
+  "estimated_aggregate_free_after_weight_removal_and_restoration_before_new_stage_outputs": 122331927653,
+  "restorer_hard_gate_minimum_aggregate_reserve_bytes": 21474836480,
+  "assumption": "Remaining chunk kernels have similar raw-file sizes to accepted captures07/08. Future capture retry data and stage output growth are not included; actual restoration rechecks exact sizes and free space after all12 accepted captures.",
+  "weights_deleted": false,
+  "GPU_capture_interrupted": false
+}
