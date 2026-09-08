@@ -1,0 +1,26 @@
+{
+  "accepted_dispatches": 1408,
+  "all_graph_dispatches_outside_selected_scopes": true,
+  "auditor_sha256": "2c2baf5bf9964b9d96ca0586de6a6808e312434dbbeec67c9f133725421088d1",
+  "background_graph_native_dispatches_independently_classified": 527868,
+  "counter_values_recomputed": 261888,
+  "elapsed_seconds": 48.217334091023076,
+  "exact_native_chain": true,
+  "excluded_dispatches": 584151,
+  "independent_audit": true,
+  "normalization_manifest_sha256": "82e5d1e1277876758658c7c10f1c5ed6401c1c0eb889f5bd3aef44183ce90662",
+  "rank_native_device_counts": {
+    "0": 704,
+    "1": 704
+  },
+  "raw_database_sha256": "6cc2bb00130940b80b52776f7ef6c42b52292c4b2fbbe698df8dd3de4912d394",
+  "raw_partition_conserved": true,
+  "raw_pmc_sha256": "97074b1b539386f19b6b2917a53cea9d580fd3a012f2d8fd557e7db9958194da",
+  "replay_timing_used_as_latency": false,
+  "runtime_shape_match_counts": {
+    "True": 1408
+  },
+  "same_R06_R07_logical_ownership": true,
+  "segment_id": "06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write",
+  "status": "complete"
+}
