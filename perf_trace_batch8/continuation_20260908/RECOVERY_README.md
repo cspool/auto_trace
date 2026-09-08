@@ -8,7 +8,7 @@ NFS 控制目录：`/public/home/accl15ptg7/run_R08_R10`。原始 R08 运行目�
 
 - 核对 `RECOVERY_STATE_NFS.json`、最新进度提交及各 `*.accepted_checkpoint.json` 的时间和 SHA256。会话 ID 与 PID 仅适用于原容器。
 - 当前冻结工具为 `raw/runtime_tools/revision_021`、`tools/analysis_008`，对应 `runtime_capture_gate_014.json` 与 `independent_native_sessions_analysis_CPU_gate_001.json`；原有后台 graph 范围门禁仍保留。不得修改已冻结的运行代码、原始数据或验收凭证。
-- 当前外层采集调度器为 `run_r08_serial_suffix_013.py`，启动时复用前八项验收并从第九项 attempt006 继续。截至 2026-09-08 19:55 UTC，前十一项已全部通过独立审计、发布与回收校验，最后一项 `12_chunk_fwd_kernel_o_pmc_write/attempt_001` 于 19:55:19 UTC 启动。重启时保留已有目录及失败记录，建立新的调度恢复版本；复用已验收项，给未完成的采集建立新 attempt，避免覆盖旧记录。已封存但 CPU 校验失败的原始采集可在新校验版本中继续分析，无须直接重新执行 GPU 采集。
+- 2026-09-08 20:36 UTC，`run_r08_serial_suffix_013.py` 已完成全部 12 项采集及独立审计；总索引和 36 份执行/归因/审计凭证的 SHA256 复核已提交于 `all_twelve_captures_accepted_001`。每组均有 12,544 个目标 process 标记、23,660 个原生归属 kernel，全部三种 PMC 模式共 6,912 项物理 dispatch 归属；每组两张卡均覆盖完整。第十二项原始数据正常关闭，独立审计耗时 185.44 秒。GPU 采集已全部结束，无须重新执行。当前外层恢复入口已启动，等待最后一项发布及回收凭证后，按下述策略恢复全部原始文件；R08 总阶段、R09、R10 尚未完成。
 - 只有完整执行清单、归因清单和独立审计同时存在且哈希匹配，才算一项采集完成。HTTP 成功或实时 marker 覆盖报告本身不能代替原生 DB/PMC 归因审计。
 
 ## 存储与远端恢复
