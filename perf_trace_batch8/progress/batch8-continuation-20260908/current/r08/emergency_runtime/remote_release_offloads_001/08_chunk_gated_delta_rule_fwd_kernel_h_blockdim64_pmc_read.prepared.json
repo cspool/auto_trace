@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "status": "verified_ready_for_temporary_release_backing",
+  "segment_id": "08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read",
+  "accepted_item": {
+    "segment_id": "08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read",
+    "capture_attempt": "attempt_002",
+    "execution_manifest": {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read/attempt_002/execution_manifest.json",
+      "size": 8517,
+      "sha256": "a11273bc7eacced22dd3743eefc66a9c5e0d681609e3dc80855c991c42e4407d"
+    },
+    "normalization_manifest": {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/normalized/captures/08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read/attempt_002/revision_002/NORMALIZATION_COMPLETE.json",
+      "size": 4034,
+      "sha256": "d959489e90a14f3142647765d24e1d8e1d7b38633d0f698ff0bc100124ee92da"
+    },
+    "independent_audit": {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/normalized/captures/08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read/attempt_002/revision_002/INDEPENDENT_AUDIT.json",
+      "size": 1040,
+      "sha256": "67fbf7364dd23db622734c72bfd6ab1f47b2b094399256656d1a9e5d96b19832"
+    }
+  },
+  "original_execution_and_raw_inventory_unchanged": true,
+  "user_authorization": "\u5df2\u7ecf\u53d1\u5e03\u7684\u90e8\u5206\u53ef\u4ee5\u6682\u65f6\u79fb\u9664 \u56e0\u4e3a\u53ef\u4ee5\u968f\u65f6\u4ecerelease\u6062\u590d\uff1b\u5168\u90e8R08\u91c7\u96c6\u5b8c\u6210\u540e\u79fb\u9664\u6743\u91cd\u5e76\u6062\u590d\u6240\u6709\u4ea7\u7269\u8fdb\u884cR08\u6821\u9a8c",
+  "remote_verification": {
+    "status": "complete",
+    "receipt": {
+      "path": "/public/home/accl15ptg7/run_R08_R10/publication_emergency/r08_08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read/PUBLICATION_COMPLETE.json",
+      "size": 3451,
+      "sha256": "454abdbbcfd8c5382c97fe72196ee23c9ed324da68d1b3ccda2c25da581ad92b"
+    },
+    "release_url": "https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-r08-08-chunk-gated-delta-rule-fwd-kernel-h-blockdim64-pmc-read-20260908",
+    "remote_rechecked_utc": "2026-09-08T15:07:17.434767+00:00",
+    "assets": [
+      {
+        "name": "ASSET_MANIFEST.json",
+        "size": 536,
+        "digest": "sha256:5a0fd893fcd184f6099d45ca52aa76e94a4d8efb427510301c5088a328e45051",
+        "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-08-chunk-gated-delta-rule-fwd-kernel-h-blockdim64-pmc-read-20260908/ASSET_MANIFEST.json"
+      },
+      {
+        "name": "capture.tar.zst.part001",
+        "size": 871576123,
+        "digest": "sha256:07b7f9695366d6971315ff11b26bd0ea146fd8faacf6821d9d24b23d39a4f3da",
+        "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-08-chunk-gated-delta-rule-fwd-kernel-h-blockdim64-pmc-read-20260908/capture.tar.zst.part001"
+      },
+      {
+        "name": "FILE_MANIFEST.json",
+        "size": 23785,
+        "digest": "sha256:00fd57aa4b0f714f6fedf68ef1d726c96a51b07933a2ddb580ca907b40e24fad",
+        "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-08-chunk-gated-delta-rule-fwd-kernel-h-blockdim64-pmc-read-20260908/FILE_MANIFEST.json"
+      },
+      {
+        "name": "SHA256SUMS",
+        "size": 175,
+        "digest": "sha256:9ef182ac1cd648b4b33e0d430feefe8bb455ab5746951d1f500c49a7313fe513",
+        "url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-08-chunk-gated-delta-rule-fwd-kernel-h-blockdim64-pmc-read-20260908/SHA256SUMS"
+      }
+    ]
+  },
+  "published_file_manifest": {
+    "path": "/public/home/accl15ptg7/run_R08_R10/publication_emergency/r08_08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read/FILE_MANIFEST.json",
+    "size": 23785,
+    "sha256": "00fd57aa4b0f714f6fedf68ef1d726c96a51b07933a2ddb580ca907b40e24fad"
+  },
+  "temporarily_evicted_files": [
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read/attempt_002/capture.db",
+      "archive_member_path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read/attempt_002/capture.db",
+      "size": 3489165312,
+      "sha256": "6be9058e20dc5bbadae95043e6e5d3a23d5e0179d3476a3ac5b0a9a2b59a5ea0"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read/attempt_002/workload/r01_events/rank0/events.750538.jsonl",
+      "archive_member_path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read/attempt_002/workload/r01_events/rank0/events.750538.jsonl",
+      "size": 461935862,
+      "sha256": "e0edc3aae8deecf7ce20f8f277fa2886e0545bf9ad6561c0db782bbe74dca067"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read/attempt_002/workload/r01_events/rank1/events.750535.jsonl",
+      "archive_member_path": "perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read/attempt_002/workload/r01_events/rank1/events.750535.jsonl",
+      "size": 461431731,
+      "sha256": "11764044809ee5a3c95f990ec7a48b3d9b16b494cb214180c5da400ac0fc3eea"
+    }
+  ],
+  "original_data_restoration_required_before_R08_final_validation": true,
+  "weight_deletion_performed": false,
+  "NFS_metadata_and_logs_retained": true
+}

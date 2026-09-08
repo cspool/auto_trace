@@ -1,0 +1,70 @@
+{
+  "R07_observed_clock_modified": false,
+  "accepted_rows": 384,
+  "all_attributes_replay_projected": true,
+  "background_native_graph_classification": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/normalized/captures/08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read/attempt_002/revision_002/background_native_graph_classification.json",
+    "sha256": "e31245dc82e9fb4fd18fbfc10c2ba01d2c80c9f636a24bc03ed004d96f545187",
+    "size": 823
+  },
+  "capture": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read/attempt_002/execution_manifest.json",
+    "sha256": "a11273bc7eacced22dd3743eefc66a9c5e0d681609e3dc80855c991c42e4407d",
+    "size": 8517
+  },
+  "counter_count": 186,
+  "counter_mode": "pmc_read",
+  "current_bound_targets": 13568,
+  "current_process_markers": 12544,
+  "dispatch_attributes": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/normalized/captures/08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read/attempt_002/revision_002/dispatch_attributes.jsonl",
+    "sha256": "84bd34eb558a32b99c4bf80a51c1cfa18bf0e725ee3e95f8adce65723eb87e86",
+    "size": 3213263
+  },
+  "dispatch_attributes_csv": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/normalized/captures/08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read/attempt_002/revision_002/dispatch_attributes.csv",
+    "sha256": "623422f70ddcdfdd26f3a2d006b2047ba3f9a385a37c035fc348d2227755e0d0",
+    "size": 1026115
+  },
+  "elapsed_seconds": 21.284963576006703,
+  "excluded_rows": 21312,
+  "excluded_rows_file": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/normalized/captures/08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read/attempt_002/revision_002/excluded_pmc_rows.jsonl",
+    "sha256": "1469c6ca25a0bfba564fb418926d0cc34cf41691a5b414a066cb58203ea49706",
+    "size": 9960664
+  },
+  "full_native_chain_proven": true,
+  "logical_family_ids": [
+    "r08-plan-007-83695e88a5dc"
+  ],
+  "mapped_R07_kernel_count": 384,
+  "missing_selected_counter_cells": 0,
+  "native_correlation_method": "native PMC CPU submission timestamp inside unique same-PID/TID exact-literal native HIP launch with CONFIG conversion and no tolerance; one HIPOPS per native API _Index, same device; deepest exact HIPTX process -> logical R06 target -> R07 kernel subsequence; GPU timestamp equality retained as diagnostic only",
+  "native_device_counts": {
+    "0": 192,
+    "1": 192
+  },
+  "native_owned_kernel_count": 23660,
+  "normalizer": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/analysis_007/normalize_capture.py",
+    "sha256": "8bcec1b8e7f63b27d031ec19e0f6f904d2ebad29552bccf4c53fb7b9b100f7a7",
+    "size": 22119
+  },
+  "owner_multiplicity": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/normalized/captures/08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read/attempt_002/revision_002/logical_owner_multiplicity.json",
+    "sha256": "b0c840b47b41a05c0d92a0dd3597d72badf863bec77fc6b2fc59d13ae70d40a9",
+    "size": 173187
+  },
+  "rank_counts": {
+    "0": 192,
+    "1": 192
+  },
+  "raw_pmc_rows": 21696,
+  "runtime_run_id": "batch8-dp2-fresh-003",
+  "runtime_shape_match_counts": {
+    "True": 384
+  },
+  "segment_id": "08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read",
+  "selected_owner_count": 384,
+  "status": "complete"
+}

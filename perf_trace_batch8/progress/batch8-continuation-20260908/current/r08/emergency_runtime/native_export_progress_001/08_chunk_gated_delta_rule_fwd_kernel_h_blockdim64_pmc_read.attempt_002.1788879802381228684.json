@@ -1,0 +1,43 @@
+{
+  "utc": "2026-09-08T15:03:22.380834+00:00",
+  "segment_id": "08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read",
+  "attempt": "attempt_002",
+  "status": "scoped_native_export_observation",
+  "processes": [
+    {
+      "pid": 747917,
+      "process_state": "S",
+      "user_cpu_ticks": 0,
+      "system_cpu_ticks": 0,
+      "io": {
+        "rchar": 16644,
+        "wchar": 371,
+        "syscr": 27,
+        "syscw": 4,
+        "read_bytes": 16982016,
+        "write_bytes": 4096,
+        "cancelled_write_bytes": 0
+      },
+      "PMC_input_file_positions": []
+    },
+    {
+      "pid": 747918,
+      "process_state": "R",
+      "user_cpu_ticks": 11413,
+      "system_cpu_ticks": 823,
+      "io": {
+        "rchar": 12679174488,
+        "wchar": 10020159684,
+        "syscr": 1457162,
+        "syscw": 1515556,
+        "read_bytes": 62748020736,
+        "write_bytes": 11753619456,
+        "cancelled_write_bytes": 321474560
+      },
+      "PMC_input_file_positions": []
+    }
+  ],
+  "database_was_not_opened": true,
+  "model_or_device_actions": 0,
+  "native_export_complete": false
+}
