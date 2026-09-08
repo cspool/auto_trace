@@ -17,7 +17,7 @@
   "accepted_capture_publisher": "/public/home/accl15ptg7/run_R08_R10/publish_accepted_captures_004.py",
   "original_NFS_session_state_superseded_by_this_emergency_record": true,
   "R09_R10_actual_execution_started": false,
-  "home_storage_available_gib": 7.79,
+  "home_storage_available_gib": 5.75,
   "weight_storage_constraint": "All physical weight bytes must stay under /root; never migrate weights to NFS again",
   "accepted_capture_publisher_session": 12763,
   "raw_storage_watchdog_session": 94301,
@@ -50,7 +50,7 @@
   "complete_stage_publisher_session": 1983,
   "current_capture_phase": "workload_complete_collector_export_or_raw_sealing",
   "latest_health_observation": {
-    "utc": "2026-09-08T18:00:43.364543+00:00",
+    "utc": "2026-09-08T18:10:44.519079+00:00",
     "accepted_R08": 8,
     "planned_R08": 12,
     "current_capture": "09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_006",
@@ -102,9 +102,9 @@
       "closed_capture_accepted": false,
       "all_first_phase_orders_match_R07": true
     },
-    "NFS_available_GiB": 7.79,
+    "NFS_available_GiB": 5.75,
     "temporarily_evicted_bytes": 45795450475,
-    "remaining_machine_hours": 10.29,
+    "remaining_machine_hours": 10.12,
     "completed_stages": []
   },
   "runtime_health_monitor_session": 44834,
@@ -144,10 +144,10 @@
   "cpu_suffix_waiter": "await_all_captures_then_cpu_002.py",
   "active_capture_scheduler_deadline_utc": "2026-09-09T04:18:09Z",
   "separate_model_free_counter_recheck": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_fresh_exec_pmc_write_recheck_002/RESULT.json",
-  "native_warmup_reset_actual_validation_status": "runtime021 independent-session full model test active; prior018/019/020 failure data preserved",
+  "native_warmup_reset_actual_validation_status": "runtime021 full original workload and both normal native collector exits verified; prior018/019/020 failures remain separate",
   "native_collection_initially_disabled_until_original_warmup": false,
   "startup_native_trace_before_original_warmups_intentionally_omitted": false,
-  "native_capture_scheduler_status": "running_full_model_attempt006",
+  "native_capture_scheduler_status": "running_capture09_attempt006_CPU_native_union_verification",
   "active_model_free_probe": null,
   "active_model_free_probe_session": null,
   "full_model_capture_retry_waits_for_bounded_native_diagnostics": false,
@@ -155,9 +155,9 @@
   "native_counter_root_cause_proven": false,
   "native_counter_diagnostic_correction": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/continuation_20260908/native_counter_probe_reproducibility_correction_001/OBSERVATION_AND_LIMITS.json",
   "unactivated_gpu_input_candidate_rejected": true,
-  "independent_profiler_session_validation": "model-free overlapping two-worker capture passed; full DP2 service integration not implemented",
+  "independent_profiler_session_validation": "actual full model capture09 attempt006 completed both original warmups and all eight measured requests with complete live 12544 target coverage; both native collectors exited 0 without forced cleanup; lossless union and independent native attribution pending",
   "native_session_layout": "two_independent_native_GPU_worker_collectors_same_single_DP2_service",
   "native_collection_initially_disabled": false,
   "native_collection_initially_on": true,
-  "last_reviewed_main_commit": "93ef05868f54c581a072825bfebe165509b3bda8"
+  "last_reviewed_main_commit": "4834bb972096b452a599404e70d794c7928e0d1b"
 }
