@@ -1,0 +1,57 @@
+{
+  "native_collectors": {
+    "all_started_native_groups_terminated": true,
+    "collectors": [
+      {
+        "forced_group_cleanup": false,
+        "process_group": 1029702,
+        "rank": 0,
+        "remaining_live_group_members": [],
+        "status": "complete",
+        "unit": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/11_chunk_fwd_kernel_o_pmc_read/attempt_001/native_collectors/rank0",
+        "wrapper_exit": {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/11_chunk_fwd_kernel_o_pmc_read/attempt_001/native_collectors/rank0/COLLECTOR_EXIT.json",
+          "sha256": "05d46f7b430064626c0dda727c20d754df4ee6a91014349d83215e225eef36de",
+          "size": 601
+        },
+        "wrapper_start": {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/11_chunk_fwd_kernel_o_pmc_read/attempt_001/native_collectors/rank0/COLLECTOR_WRAPPER_START.json",
+          "sha256": "1ef93a1e1efc6a186fecce16d512823a8a82dccebc1b9a1473705cae5cd3a947",
+          "size": 450
+        }
+      },
+      {
+        "forced_group_cleanup": false,
+        "process_group": 1029717,
+        "rank": 1,
+        "remaining_live_group_members": [],
+        "status": "complete",
+        "unit": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/11_chunk_fwd_kernel_o_pmc_read/attempt_001/native_collectors/rank1",
+        "wrapper_exit": {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/11_chunk_fwd_kernel_o_pmc_read/attempt_001/native_collectors/rank1/COLLECTOR_EXIT.json",
+          "sha256": "40a9eeb946c0ba311641ad3168fd860ca435af4b9f9435c8a773fab24ed05129",
+          "size": 601
+        },
+        "wrapper_start": {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/11_chunk_fwd_kernel_o_pmc_read/attempt_001/native_collectors/rank1/COLLECTOR_WRAPPER_START.json",
+          "sha256": "fdc40eb35d79476a652789eb09d1caee2e4dca9a6ee22e6f3b64eb9ea4b5d803",
+          "size": 450
+        }
+      }
+    ],
+    "complete_requires_both_native_returncodes_zero": true,
+    "status": "complete"
+  },
+  "service": {
+    "leader_pid": 1027615,
+    "remaining_group_members_before_final_cleanup": [
+      1028381
+    ],
+    "returncode": 0
+  },
+  "workload": {
+    "leader_pid": 1038301,
+    "remaining_group_members_before_final_cleanup": [],
+    "returncode": 0
+  }
+}
