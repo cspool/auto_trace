@@ -1,0 +1,24 @@
+{
+  "status": "accepted",
+  "item": {
+    "segment_id": "12_chunk_fwd_kernel_o_pmc_write",
+    "capture_attempt": "attempt_001",
+    "execution_manifest": {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/12_chunk_fwd_kernel_o_pmc_write/attempt_001/execution_manifest.json",
+      "size": 10841,
+      "sha256": "db30c15f50880aa8bab052e669f6f21df577db171eb43b18b6d0c839377f1c36"
+    },
+    "normalization_manifest": {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/normalized/captures/12_chunk_fwd_kernel_o_pmc_write/attempt_001/revision_002/NORMALIZATION_COMPLETE.json",
+      "size": 4340,
+      "sha256": "303a58404b4e39af180d160d479ef60e9b99496e90054713774a06448bccf442"
+    },
+    "independent_audit": {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/normalized/captures/12_chunk_fwd_kernel_o_pmc_write/attempt_001/revision_002/INDEPENDENT_AUDIT.json",
+      "size": 1217,
+      "sha256": "1fcf6e423d5c256dfcd8a0a0648f0044cb047d7410ae07c511bcbed2a9e5d462"
+    }
+  },
+  "accepted_prefix_count": 12,
+  "complete_plan_count": 12
+}

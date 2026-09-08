@@ -1,0 +1,29 @@
+{
+  "accepted_dispatches": 384,
+  "all_graph_dispatches_outside_selected_scopes": true,
+  "auditor_sha256": "e59dd412fea24df6972ad37387c25cbc35568caa287dcb030e8712e01ce42cf2",
+  "background_graph_native_dispatches_independently_classified": 0,
+  "counter_values_recomputed": 71424,
+  "elapsed_seconds": 185.43943184101954,
+  "exact_native_chain": true,
+  "excluded_dispatches": 29182,
+  "independent_audit": true,
+  "native_session_union_sha256": "7328b9819f042afd3a0104c151b87249dea42da1741e6975a80d617d9fb261d9",
+  "normalization_manifest_sha256": "303a58404b4e39af180d160d479ef60e9b99496e90054713774a06448bccf442",
+  "original_native_session_count": 2,
+  "original_native_session_union_independently_rechecked": true,
+  "rank_native_device_counts": {
+    "0": 192,
+    "1": 192
+  },
+  "raw_database_sha256": "5c448dfac242e6080c3cde8f32038542208a124a505faff2ccf735743f061a38",
+  "raw_partition_conserved": true,
+  "raw_pmc_sha256": "78d296ddb432a20e4d589a88411380a5c7eb3d4742967f840025d341cafa6570",
+  "replay_timing_used_as_latency": false,
+  "runtime_shape_match_counts": {
+    "True": 384
+  },
+  "same_R06_R07_logical_ownership": true,
+  "segment_id": "12_chunk_fwd_kernel_o_pmc_write",
+  "status": "complete"
+}

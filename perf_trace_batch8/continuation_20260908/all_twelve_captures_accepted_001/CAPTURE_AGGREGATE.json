@@ -1,0 +1,161 @@
+{
+  "status": "all_twelve_captures_accepted_pending_restoration_and_stage_audit",
+  "utc": "2026-09-08T20:36:29.509048+00:00",
+  "accepted_capture_count": 12,
+  "accepted_physical_dispatches": 6912,
+  "captures": [
+    {
+      "segment_id": "01__gqa6_pmc",
+      "attempt": "attempt_005",
+      "accepted_dispatches": 128,
+      "current_process_markers": 12544,
+      "native_owned_kernel_count": 23660,
+      "rank_native_device_counts": {
+        "0": 64,
+        "1": 64
+      },
+      "counter_values_recomputed": 23808
+    },
+    {
+      "segment_id": "02__gqa6_pmc_read",
+      "attempt": "attempt_001",
+      "accepted_dispatches": 128,
+      "current_process_markers": 12544,
+      "native_owned_kernel_count": 23660,
+      "rank_native_device_counts": {
+        "0": 64,
+        "1": 64
+      },
+      "counter_values_recomputed": 23808
+    },
+    {
+      "segment_id": "03__gqa6_pmc_write",
+      "attempt": "attempt_003",
+      "accepted_dispatches": 128,
+      "current_process_markers": 12544,
+      "native_owned_kernel_count": 23660,
+      "rank_native_device_counts": {
+        "0": 64,
+        "1": 64
+      },
+      "counter_values_recomputed": 23808
+    },
+    {
+      "segment_id": "04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc",
+      "attempt": "attempt_003",
+      "accepted_dispatches": 1408,
+      "current_process_markers": 12544,
+      "native_owned_kernel_count": 23660,
+      "rank_native_device_counts": {
+        "0": 704,
+        "1": 704
+      },
+      "counter_values_recomputed": 261888
+    },
+    {
+      "segment_id": "05_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_read",
+      "attempt": "attempt_001",
+      "accepted_dispatches": 1408,
+      "current_process_markers": 12544,
+      "native_owned_kernel_count": 23660,
+      "rank_native_device_counts": {
+        "0": 704,
+        "1": 704
+      },
+      "counter_values_recomputed": 261888
+    },
+    {
+      "segment_id": "06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write",
+      "attempt": "attempt_001",
+      "accepted_dispatches": 1408,
+      "current_process_markers": 12544,
+      "native_owned_kernel_count": 23660,
+      "rank_native_device_counts": {
+        "0": 704,
+        "1": 704
+      },
+      "counter_values_recomputed": 261888
+    },
+    {
+      "segment_id": "07_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc",
+      "attempt": "attempt_001",
+      "accepted_dispatches": 384,
+      "current_process_markers": 12544,
+      "native_owned_kernel_count": 23660,
+      "rank_native_device_counts": {
+        "0": 192,
+        "1": 192
+      },
+      "counter_values_recomputed": 71424
+    },
+    {
+      "segment_id": "08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read",
+      "attempt": "attempt_002",
+      "accepted_dispatches": 384,
+      "current_process_markers": 12544,
+      "native_owned_kernel_count": 23660,
+      "rank_native_device_counts": {
+        "0": 192,
+        "1": 192
+      },
+      "counter_values_recomputed": 71424
+    },
+    {
+      "segment_id": "09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write",
+      "attempt": "attempt_006",
+      "accepted_dispatches": 384,
+      "current_process_markers": 12544,
+      "native_owned_kernel_count": 23660,
+      "rank_native_device_counts": {
+        "0": 192,
+        "1": 192
+      },
+      "counter_values_recomputed": 71424
+    },
+    {
+      "segment_id": "10_chunk_fwd_kernel_o_pmc",
+      "attempt": "attempt_001",
+      "accepted_dispatches": 384,
+      "current_process_markers": 12544,
+      "native_owned_kernel_count": 23660,
+      "rank_native_device_counts": {
+        "0": 192,
+        "1": 192
+      },
+      "counter_values_recomputed": 71424
+    },
+    {
+      "segment_id": "11_chunk_fwd_kernel_o_pmc_read",
+      "attempt": "attempt_001",
+      "accepted_dispatches": 384,
+      "current_process_markers": 12544,
+      "native_owned_kernel_count": 23660,
+      "rank_native_device_counts": {
+        "0": 192,
+        "1": 192
+      },
+      "counter_values_recomputed": 71424
+    },
+    {
+      "segment_id": "12_chunk_fwd_kernel_o_pmc_write",
+      "attempt": "attempt_001",
+      "accepted_dispatches": 384,
+      "current_process_markers": 12544,
+      "native_owned_kernel_count": 23660,
+      "rank_native_device_counts": {
+        "0": 192,
+        "1": 192
+      },
+      "counter_values_recomputed": 71424
+    }
+  ],
+  "R08_stage_complete": false,
+  "required_next_steps": [
+    "verify all raw Release assets",
+    "restore all original raw file identities",
+    "R08 resource model and completion audit",
+    "R09",
+    "R10",
+    "stage publications"
+  ]
+}
