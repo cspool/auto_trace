@@ -1,0 +1,29 @@
+{
+  "status": "extended_outer_observers_activated",
+  "utc": "2026-09-08T15:00:43.540561+00:00",
+  "deadline_utc": "2026-09-09T04:18:09Z",
+  "authorization_sha256": "fd69661ead053a8cd805f5132bd1382583ffc3b9775c5fd9e005565be0bf39b3",
+  "old_observers_verified_closed": [
+    579748,
+    542665,
+    353638,
+    379289,
+    413651,
+    402521
+  ],
+  "GPU_capture_scheduler_preserved": 747872,
+  "new_sessions": {
+    "scheduler_session": 64069,
+    "capture_session": null,
+    "progress_watchdog_session": null,
+    "accepted_capture_publisher_session": 12763,
+    "raw_storage_watchdog_session": 94301,
+    "migration_session": null,
+    "cpu_suffix_waiter_session": 74875,
+    "complete_stage_publisher_session": 1983,
+    "runtime_health_monitor_session": 22460,
+    "previous_scheduler_session": 81206,
+    "CPU_normalization_session": null
+  },
+  "progress_restart_pending": true
+}

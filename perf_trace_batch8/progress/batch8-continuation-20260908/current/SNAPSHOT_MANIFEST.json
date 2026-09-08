@@ -1,6 +1,6 @@
 {
-  "snapshot_started_utc": "2026-09-08T14:54:58.448878+00:00",
-  "snapshot_completed_utc": "2026-09-08T14:55:07.456388+00:00",
+  "snapshot_started_utc": "2026-09-08T15:00:44.034805+00:00",
+  "snapshot_completed_utc": "2026-09-08T15:00:52.140325+00:00",
   "runtime_run_id": "batch8-dp2-fresh-003",
   "r08_accepted_capture_count": 7,
   "r08_planned_capture_count": 12,
@@ -13,7 +13,7 @@
     "06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write",
     "07_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc"
   ],
-  "deadline_utc": "2026-09-08T20:18:09Z",
+  "deadline_utc": "2026-09-09T04:18:09Z",
   "remote_progress_branch": "progress/batch8-continuation-20260908",
   "current_execution_state": {
     "runtime_run_id": "batch8-dp2-fresh-003",
@@ -24,20 +24,20 @@
     "scheduler": "serial_scheduler_008",
     "scheduler_session": 64069,
     "capture_session": null,
-    "progress_watchdog_session": 86889,
-    "deadline_utc": "2026-09-08T20:18:09Z",
+    "progress_watchdog_session": null,
+    "deadline_utc": "2026-09-09T04:18:09Z",
     "home_quota_reported_bytes": 53687091200,
     "home_writes_currently_fail_ENOSPC": false,
     "root_mapped_capture_and_normalization_storage_still_writable": false,
     "progress_worktree": "/public/home/accl15ptg7/run_R08_R10/remote_progress_worktree_004",
     "progress_remote_branch": "progress/batch8-continuation-20260908",
-    "accepted_capture_publisher": "/public/home/accl15ptg7/run_R08_R10/publish_accepted_captures_003.py",
+    "accepted_capture_publisher": "/public/home/accl15ptg7/run_R08_R10/publish_accepted_captures_004.py",
     "original_NFS_session_state_superseded_by_this_emergency_record": true,
     "R09_R10_actual_execution_started": false,
-    "home_storage_available_gib": 15.63,
+    "home_storage_available_gib": 14.72,
     "weight_storage_constraint": "All physical weight bytes must stay under /root; never migrate weights to NFS again",
-    "accepted_capture_publisher_session": 64243,
-    "raw_storage_watchdog_session": 19126,
+    "accepted_capture_publisher_session": 12763,
+    "raw_storage_watchdog_session": 94301,
     "pre_measured_two_worker_native_health": "complete",
     "user_storage_policy": "/public/home/accl15ptg7/run_R08_R10/USER_STORAGE_POLICY_20260908.json",
     "migration_session": null,
@@ -58,16 +58,16 @@
     "evicted_bytes": 41382917570,
     "weights_must_remain_until_all_12_R08_captures_accepted": true,
     "R08_final_validation_restore_policy": "Restore every temporarily evicted artifact and verify original SHA256 before final R08 validation; after all 12 GPU captures, user authorizes deleting root weights to provide restoration workspace.",
-    "progress_watchdog": "remote_checkpoint_watchdog_010.py",
-    "postcapture_restoration_code": "/public/home/accl15ptg7/run_R08_R10/restore_all_R08_release_artifacts_001.py",
+    "progress_watchdog": "remote_checkpoint_watchdog_011.py",
+    "postcapture_restoration_code": "/public/home/accl15ptg7/run_R08_R10/restore_all_R08_release_artifacts_002.py",
     "postcapture_restoration_status": "CPU synthetic gate complete; actual restoration and weight removal not started",
-    "cpu_suffix_waiter_session": 14512,
+    "cpu_suffix_waiter_session": 74875,
     "cpu_suffix_status": "outer waiting only; will restore all raw sources before R08 assignment",
-    "complete_stage_publisher": "publish_complete_stages_002.py",
-    "complete_stage_publisher_session": 46095,
+    "complete_stage_publisher": "publish_complete_stages_003.py",
+    "complete_stage_publisher_session": 1983,
     "current_capture_phase": "measured_batch",
     "latest_health_observation": {
-      "utc": "2026-09-08T14:54:55.764149+00:00",
+      "utc": "2026-09-08T15:00:13.353851+00:00",
       "accepted_R08": 7,
       "planned_R08": 12,
       "current_capture": "08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read/attempt_002",
@@ -110,14 +110,14 @@
       ],
       "pre_measured_health": "complete",
       "measured_request_token_progress": {
-        "batch8-dual-dcu-dp2-req-002-28a42990210e6f68": 469,
-        "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786": 425,
-        "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5": 385,
-        "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41": 344,
-        "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c": 482,
-        "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f": 440,
-        "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3": 356,
-        "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04": 400
+        "batch8-dual-dcu-dp2-req-002-28a42990210e6f68": 945,
+        "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786": 901,
+        "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5": 861,
+        "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41": 820,
+        "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c": 962,
+        "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f": 920,
+        "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3": 836,
+        "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04": 880
       },
       "live_eight_request_target_coverage": {
         "status": "complete_live_marker_coverage",
@@ -125,20 +125,20 @@
         "closed_capture_accepted": false,
         "all_first_phase_orders_match_R07": true
       },
-      "NFS_available_GiB": 15.63,
+      "NFS_available_GiB": 14.72,
       "temporarily_evicted_bytes": 41382917570,
-      "remaining_machine_hours": 5.39,
+      "remaining_machine_hours": 13.3,
       "completed_stages": []
     },
-    "runtime_health_monitor_session": 55116,
-    "runtime_health_monitor": "watch_runtime_health_005.py",
+    "runtime_health_monitor_session": 22460,
+    "runtime_health_monitor": "watch_runtime_health_006.py",
     "previous_attempt_failure_diagnostic": {
       "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/capture04_multiplicity_diagnostic_001.json",
       "size": 60156,
       "sha256": "08270bf9427d843763f74fb066cb9acdbaf00c2af96c6844b5d8dcceccebd513"
     },
     "prepared_stage_templates": "stage_tool_templates_003",
-    "outer_stage_assignment_code": "prepare_stage_assignments_002.py",
+    "outer_stage_assignment_code": "prepare_stage_assignments_003.py",
     "independent_handoff_gate": "audit_runtime_handoff_001.py",
     "runtime_admission_checkpoint": {
       "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/admission_order_runtime_checkpoint_001.json",
@@ -159,7 +159,12 @@
     "last_completed_capture": "04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc/attempt_003",
     "last_failed_capture": "08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read/attempt_001",
     "last_capture_retry_reason": "rank1 native PMC prehealth empty; original eight measured requests not started; same frozen runtime retry attempt002",
-    "retry_authorization": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/capture08_prehealth_retry_001.json"
+    "retry_authorization": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/capture08_prehealth_retry_001.json",
+    "deadline_extension_authorization": "/public/home/accl15ptg7/run_R08_R10/MACHINE_TIME_EXTENSION_002.json",
+    "outer_extension_status": "extended_observers_activated_progress_restart_pending",
+    "active_capture_scheduler_conservative_deadline_utc": "2026-09-08T20:18:09Z",
+    "raw_storage_watchdog": "/public/home/accl15ptg7/run_R08_R10/offload_published_R08_files_002.py",
+    "cpu_suffix_waiter": "await_all_captures_then_cpu_002.py"
   },
   "logs_are_point_in_time_snapshots": true,
   "active_sqlite_databases_not_claimed_transactionally_complete": true,
@@ -202,6 +207,17 @@
     {
       "source_path": "/public/home/accl15ptg7/run_R08_R10/await_all_captures_then_cpu_001.log",
       "snapshot_relative_path": "logs/control/await_all_captures_then_cpu_001.log",
+      "kind": "log_snapshot",
+      "captured_bytes": 0,
+      "source_captured_prefix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "snapshot_bytes": 0,
+      "snapshot_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redacted": false,
+      "source_was_live": true
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/run_R08_R10/await_all_captures_then_cpu_002.log",
+      "snapshot_relative_path": "logs/control/await_all_captures_then_cpu_002.log",
       "kind": "log_snapshot",
       "captured_bytes": 0,
       "source_captured_prefix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
@@ -409,6 +425,17 @@
       "source_was_live": true
     },
     {
+      "source_path": "/public/home/accl15ptg7/run_R08_R10/offload_published_R08_files_002.log",
+      "snapshot_relative_path": "logs/control/offload_published_R08_files_002.log",
+      "kind": "log_snapshot",
+      "captured_bytes": 0,
+      "source_captured_prefix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "snapshot_bytes": 0,
+      "snapshot_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redacted": false,
+      "source_was_live": true
+    },
+    {
       "source_path": "/public/home/accl15ptg7/run_R08_R10/package_checkpoint_001.log",
       "snapshot_relative_path": "logs/control/package_checkpoint_001.log",
       "kind": "log_snapshot",
@@ -574,6 +601,17 @@
       "source_was_live": true
     },
     {
+      "source_path": "/public/home/accl15ptg7/run_R08_R10/publish_accepted_captures_004.log",
+      "snapshot_relative_path": "logs/control/publish_accepted_captures_004.log",
+      "kind": "log_snapshot",
+      "captured_bytes": 0,
+      "source_captured_prefix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "snapshot_bytes": 0,
+      "snapshot_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redacted": false,
+      "source_was_live": true
+    },
+    {
       "source_path": "/public/home/accl15ptg7/run_R08_R10/publish_checkpoint_001.log",
       "snapshot_relative_path": "logs/control/publish_checkpoint_001.log",
       "kind": "log_snapshot",
@@ -598,6 +636,17 @@
     {
       "source_path": "/public/home/accl15ptg7/run_R08_R10/publish_complete_stages_002.log",
       "snapshot_relative_path": "logs/control/publish_complete_stages_002.log",
+      "kind": "log_snapshot",
+      "captured_bytes": 0,
+      "source_captured_prefix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "snapshot_bytes": 0,
+      "snapshot_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redacted": false,
+      "source_was_live": true
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/run_R08_R10/publish_complete_stages_003.log",
+      "snapshot_relative_path": "logs/control/publish_complete_stages_003.log",
       "kind": "log_snapshot",
       "captured_bytes": 0,
       "source_captured_prefix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
@@ -973,10 +1022,21 @@
       "source_path": "/public/home/accl15ptg7/run_R08_R10/remote_checkpoint_watchdog_010.log",
       "snapshot_relative_path": "logs/control/remote_checkpoint_watchdog_010.log",
       "kind": "log_snapshot",
-      "captured_bytes": 1683,
-      "source_captured_prefix_sha256": "1b6145784b1a62e14c9ee01ac134e6e0c58dac8873ebe6dad718b83e4524fcdf",
-      "snapshot_bytes": 1683,
-      "snapshot_sha256": "1b6145784b1a62e14c9ee01ac134e6e0c58dac8873ebe6dad718b83e4524fcdf",
+      "captured_bytes": 1782,
+      "source_captured_prefix_sha256": "f9edd7a3e7fe1c0bca10be8c9ce611a083c9399d20afdd8e4e687ef626ee43c2",
+      "snapshot_bytes": 1782,
+      "snapshot_sha256": "f9edd7a3e7fe1c0bca10be8c9ce611a083c9399d20afdd8e4e687ef626ee43c2",
+      "redacted": false,
+      "source_was_live": true
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/run_R08_R10/remote_checkpoint_watchdog_011.log",
+      "snapshot_relative_path": "logs/control/remote_checkpoint_watchdog_011.log",
+      "kind": "log_snapshot",
+      "captured_bytes": 0,
+      "source_captured_prefix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "snapshot_bytes": 0,
+      "snapshot_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "redacted": false,
       "source_was_live": true
     },
@@ -1193,10 +1253,21 @@
       "source_path": "/public/home/accl15ptg7/run_R08_R10/watch_runtime_health_005.log",
       "snapshot_relative_path": "logs/control/watch_runtime_health_005.log",
       "kind": "log_snapshot",
-      "captured_bytes": 185204,
-      "source_captured_prefix_sha256": "8cfa24f2117fc71702b3267dc2330b4a17b413178de6b74fd14987aaf3934fc1",
-      "snapshot_bytes": 185204,
-      "snapshot_sha256": "8cfa24f2117fc71702b3267dc2330b4a17b413178de6b74fd14987aaf3934fc1",
+      "captured_bytes": 192808,
+      "source_captured_prefix_sha256": "e110097a60a4aa639f583b56cc98e52e1ce4f42a644d0c65a62275aed5c74cdc",
+      "snapshot_bytes": 192808,
+      "snapshot_sha256": "e110097a60a4aa639f583b56cc98e52e1ce4f42a644d0c65a62275aed5c74cdc",
+      "redacted": false,
+      "source_was_live": true
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/run_R08_R10/watch_runtime_health_006.log",
+      "snapshot_relative_path": "logs/control/watch_runtime_health_006.log",
+      "kind": "log_snapshot",
+      "captured_bytes": 1901,
+      "source_captured_prefix_sha256": "d3bd0519eccc576776487a6d928bcf15f481aab96a3eee9918682fa6629f24b7",
+      "snapshot_bytes": 1901,
+      "snapshot_sha256": "d3bd0519eccc576776487a6d928bcf15f481aab96a3eee9918682fa6629f24b7",
       "redacted": false,
       "source_was_live": true
     },
@@ -1245,6 +1316,17 @@
       "source_was_live": true
     },
     {
+      "source_path": "/public/home/accl15ptg7/run_R08_R10/apply_machine_extension_002.py",
+      "snapshot_relative_path": "code/outer_NFS_control/apply_machine_extension_002.py",
+      "kind": "outer_scheduler_code",
+      "captured_bytes": 6254,
+      "source_captured_prefix_sha256": "c94619a6df464439d91f78fca8cecf6ac5d10258cf30433d7ba0c1cb35a7f17b",
+      "snapshot_bytes": 6254,
+      "snapshot_sha256": "c94619a6df464439d91f78fca8cecf6ac5d10258cf30433d7ba0c1cb35a7f17b",
+      "redacted": false,
+      "source_was_live": false
+    },
+    {
       "source_path": "/public/home/accl15ptg7/run_R08_R10/archive_closed_R08_databases_NFS_001.py",
       "snapshot_relative_path": "code/outer_NFS_control/archive_closed_R08_databases_NFS_001.py",
       "kind": "outer_scheduler_code",
@@ -1274,6 +1356,17 @@
       "source_captured_prefix_sha256": "5657168130c5aecdeb40a9ad4a117e5579d526a3366d68b817aa41a049669e48",
       "snapshot_bytes": 1108,
       "snapshot_sha256": "5657168130c5aecdeb40a9ad4a117e5579d526a3366d68b817aa41a049669e48",
+      "redacted": false,
+      "source_was_live": false
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/run_R08_R10/await_all_captures_then_cpu_002.py",
+      "snapshot_relative_path": "code/outer_NFS_control/await_all_captures_then_cpu_002.py",
+      "kind": "outer_scheduler_code",
+      "captured_bytes": 1108,
+      "source_captured_prefix_sha256": "09b2bbbc764e588f73d7d723a90b0aeb685d7eb702d703a4058dcaa21cbf04a5",
+      "snapshot_bytes": 1108,
+      "snapshot_sha256": "09b2bbbc764e588f73d7d723a90b0aeb685d7eb702d703a4058dcaa21cbf04a5",
       "redacted": false,
       "source_was_live": false
     },
@@ -1487,6 +1580,17 @@
       "source_was_live": false
     },
     {
+      "source_path": "/public/home/accl15ptg7/run_R08_R10/offload_published_R08_files_002.py",
+      "snapshot_relative_path": "code/outer_NFS_control/offload_published_R08_files_002.py",
+      "kind": "outer_scheduler_code",
+      "captured_bytes": 5088,
+      "source_captured_prefix_sha256": "3a2a16c82d17a2087fab5bb042a7986736c2d04556492f92eec0066547560455",
+      "snapshot_bytes": 5088,
+      "snapshot_sha256": "3a2a16c82d17a2087fab5bb042a7986736c2d04556492f92eec0066547560455",
+      "redacted": false,
+      "source_was_live": false
+    },
+    {
       "source_path": "/public/home/accl15ptg7/run_R08_R10/package_checkpoint_001.py",
       "snapshot_relative_path": "code/outer_NFS_control/package_checkpoint_001.py",
       "kind": "outer_scheduler_code",
@@ -1586,6 +1690,17 @@
       "source_was_live": false
     },
     {
+      "source_path": "/public/home/accl15ptg7/run_R08_R10/prepare_stage_assignments_003.py",
+      "snapshot_relative_path": "code/outer_NFS_control/prepare_stage_assignments_003.py",
+      "kind": "outer_scheduler_code",
+      "captured_bytes": 15822,
+      "source_captured_prefix_sha256": "c7bc03508cdae1085a48dccbf76908914fbd76cb659ab0f2b0957d0489748efc",
+      "snapshot_bytes": 15822,
+      "snapshot_sha256": "c7bc03508cdae1085a48dccbf76908914fbd76cb659ab0f2b0957d0489748efc",
+      "redacted": false,
+      "source_was_live": false
+    },
+    {
       "source_path": "/public/home/accl15ptg7/run_R08_R10/prepare_terminal_handoff_tools_001.py",
       "snapshot_relative_path": "code/outer_NFS_control/prepare_terminal_handoff_tools_001.py",
       "kind": "outer_scheduler_code",
@@ -1652,6 +1767,17 @@
       "source_was_live": false
     },
     {
+      "source_path": "/public/home/accl15ptg7/run_R08_R10/publish_accepted_captures_004.py",
+      "snapshot_relative_path": "code/outer_NFS_control/publish_accepted_captures_004.py",
+      "kind": "outer_scheduler_code",
+      "captured_bytes": 10525,
+      "source_captured_prefix_sha256": "5169bc59d9f22c3e274f97a75c4c9aba38c5865d4e142f0bf7d0d42276b8a44f",
+      "snapshot_bytes": 10525,
+      "snapshot_sha256": "5169bc59d9f22c3e274f97a75c4c9aba38c5865d4e142f0bf7d0d42276b8a44f",
+      "redacted": false,
+      "source_was_live": false
+    },
+    {
       "source_path": "/public/home/accl15ptg7/run_R08_R10/publish_complete_stages_001.py",
       "snapshot_relative_path": "code/outer_NFS_control/publish_complete_stages_001.py",
       "kind": "outer_scheduler_code",
@@ -1670,6 +1796,17 @@
       "source_captured_prefix_sha256": "0d762f222ecf025ebc833e65d790187b9030bda1eea6a90bebc1beab27d99d61",
       "snapshot_bytes": 12409,
       "snapshot_sha256": "0d762f222ecf025ebc833e65d790187b9030bda1eea6a90bebc1beab27d99d61",
+      "redacted": false,
+      "source_was_live": false
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/run_R08_R10/publish_complete_stages_003.py",
+      "snapshot_relative_path": "code/outer_NFS_control/publish_complete_stages_003.py",
+      "kind": "outer_scheduler_code",
+      "captured_bytes": 12472,
+      "source_captured_prefix_sha256": "4890e89b680a94433cc1c4db2e9795619dde1b0588490500b126921036c5d0d7",
+      "snapshot_bytes": 12472,
+      "snapshot_sha256": "4890e89b680a94433cc1c4db2e9795619dde1b0588490500b126921036c5d0d7",
       "redacted": false,
       "source_was_live": false
     },
@@ -1784,6 +1921,17 @@
       "source_was_live": false
     },
     {
+      "source_path": "/public/home/accl15ptg7/run_R08_R10/remote_checkpoint_watchdog_011.py",
+      "snapshot_relative_path": "code/outer_NFS_control/remote_checkpoint_watchdog_011.py",
+      "kind": "outer_scheduler_code",
+      "captured_bytes": 11687,
+      "source_captured_prefix_sha256": "accc19fa3eea2040d731ed37f0bc2b59fd77a5fab2068ee5d321a2b961b18e82",
+      "snapshot_bytes": 11687,
+      "snapshot_sha256": "accc19fa3eea2040d731ed37f0bc2b59fd77a5fab2068ee5d321a2b961b18e82",
+      "redacted": false,
+      "source_was_live": false
+    },
+    {
       "source_path": "/public/home/accl15ptg7/run_R08_R10/remove_verified_first_release_upload_cache_001.py",
       "snapshot_relative_path": "code/outer_NFS_control/remove_verified_first_release_upload_cache_001.py",
       "kind": "outer_scheduler_code",
@@ -1806,6 +1954,17 @@
       "source_was_live": false
     },
     {
+      "source_path": "/public/home/accl15ptg7/run_R08_R10/restore_all_R08_release_artifacts_002.py",
+      "snapshot_relative_path": "code/outer_NFS_control/restore_all_R08_release_artifacts_002.py",
+      "kind": "outer_scheduler_code",
+      "captured_bytes": 12975,
+      "source_captured_prefix_sha256": "d4d924de31bb440f2461b137d12815e9e136ff363c9117ff45cf0788a1a47076",
+      "snapshot_bytes": 12975,
+      "snapshot_sha256": "d4d924de31bb440f2461b137d12815e9e136ff363c9117ff45cf0788a1a47076",
+      "redacted": false,
+      "source_was_live": false
+    },
+    {
       "source_path": "/public/home/accl15ptg7/run_R08_R10/restore_predecessors.py",
       "snapshot_relative_path": "code/outer_NFS_control/restore_predecessors.py",
       "kind": "outer_scheduler_code",
@@ -1824,6 +1983,17 @@
       "source_captured_prefix_sha256": "3ed012f59b38c25beadc15e22d7e581748d79e16d5a3272489690458eb996772",
       "snapshot_bytes": 2443,
       "snapshot_sha256": "3ed012f59b38c25beadc15e22d7e581748d79e16d5a3272489690458eb996772",
+      "redacted": false,
+      "source_was_live": false
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/run_R08_R10/run_closed_R08_to_R10_002.py",
+      "snapshot_relative_path": "code/outer_NFS_control/run_closed_R08_to_R10_002.py",
+      "kind": "outer_scheduler_code",
+      "captured_bytes": 2443,
+      "source_captured_prefix_sha256": "c4faa65cfb835a6def7dbf4dea9b2595bae98290e440878b654eca320b00fc4c",
+      "snapshot_bytes": 2443,
+      "snapshot_sha256": "c4faa65cfb835a6def7dbf4dea9b2595bae98290e440878b654eca320b00fc4c",
       "redacted": false,
       "source_was_live": false
     },
@@ -1967,6 +2137,17 @@
       "source_captured_prefix_sha256": "d9f58ee15a0281cedab2fc08c4211a201611c635f6eeefd714c24f3af16f22e3",
       "snapshot_bytes": 6084,
       "snapshot_sha256": "d9f58ee15a0281cedab2fc08c4211a201611c635f6eeefd714c24f3af16f22e3",
+      "redacted": false,
+      "source_was_live": false
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/run_R08_R10/watch_runtime_health_006.py",
+      "snapshot_relative_path": "code/outer_NFS_control/watch_runtime_health_006.py",
+      "kind": "outer_scheduler_code",
+      "captured_bytes": 6084,
+      "source_captured_prefix_sha256": "586f6e37fa72060fea472ded1650baee4b6aa48f7c9e11db9cb4eadc6cd0f0db",
+      "snapshot_bytes": 6084,
+      "snapshot_sha256": "586f6e37fa72060fea472ded1650baee4b6aa48f7c9e11db9cb4eadc6cd0f0db",
       "redacted": false,
       "source_was_live": false
     },
@@ -2194,10 +2375,10 @@
       "source_path": "/public/home/accl15ptg7/run_R08_R10/RECOVERY_STATE_NFS.json",
       "snapshot_relative_path": "state/RECOVERY_STATE_NFS.json",
       "kind": "authoritative_execution_state",
-      "captured_bytes": 8419,
-      "source_captured_prefix_sha256": "8de00cae6c2ec4fdbe72853519798d651a557bd12d8d2703df7b605cdaa3c8c8",
-      "snapshot_bytes": 8419,
-      "snapshot_sha256": "8de00cae6c2ec4fdbe72853519798d651a557bd12d8d2703df7b605cdaa3c8c8",
+      "captured_bytes": 8852,
+      "source_captured_prefix_sha256": "bac1e4b9dd9ef20e9eaf21737c625b456216cd8039b0b99e55dc1f93c693edf2",
+      "snapshot_bytes": 8852,
+      "snapshot_sha256": "bac1e4b9dd9ef20e9eaf21737c625b456216cd8039b0b99e55dc1f93c693edf2",
       "redacted": false,
       "source_was_live": false
     },
@@ -4321,6 +4502,39 @@
       "source_captured_prefix_sha256": "b725c7ee9c96a7fac49d7d28ac3a5116fd18ae58d95119608db574c8b5074e5b",
       "snapshot_bytes": 727,
       "snapshot_sha256": "b725c7ee9c96a7fac49d7d28ac3a5116fd18ae58d95119608db574c8b5074e5b",
+      "redacted": false,
+      "source_was_live": false
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/run_R08_R10/MACHINE_TIME_EXTENSION_002.json",
+      "snapshot_relative_path": "state/MACHINE_TIME_EXTENSION_002.json",
+      "kind": "state_checkpoint",
+      "captured_bytes": 849,
+      "source_captured_prefix_sha256": "fd69661ead053a8cd805f5132bd1382583ffc3b9775c5fd9e005565be0bf39b3",
+      "snapshot_bytes": 849,
+      "snapshot_sha256": "fd69661ead053a8cd805f5132bd1382583ffc3b9775c5fd9e005565be0bf39b3",
+      "redacted": false,
+      "source_was_live": false
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/run_R08_R10/MACHINE_TIME_EXTENSION_APPLIED_002.json",
+      "snapshot_relative_path": "state/MACHINE_TIME_EXTENSION_APPLIED_002.json",
+      "kind": "state_checkpoint",
+      "captured_bytes": 25752,
+      "source_captured_prefix_sha256": "26061e8f8c2de925e50df5c7c55a25d504b94e21b557666dd33b7840260c4e43",
+      "snapshot_bytes": 25752,
+      "snapshot_sha256": "26061e8f8c2de925e50df5c7c55a25d504b94e21b557666dd33b7840260c4e43",
+      "redacted": false,
+      "source_was_live": false
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/run_R08_R10/MACHINE_TIME_EXTENSION_ACTIVATED_002.json",
+      "snapshot_relative_path": "state/MACHINE_TIME_EXTENSION_ACTIVATED_002.json",
+      "kind": "state_checkpoint",
+      "captured_bytes": 886,
+      "source_captured_prefix_sha256": "ceeac66198b25196150d854e9bd2c3793b98affb39170e84d814084eb5968a5b",
+      "snapshot_bytes": 886,
+      "snapshot_sha256": "ceeac66198b25196150d854e9bd2c3793b98affb39170e84d814084eb5968a5b",
       "redacted": false,
       "source_was_live": false
     },

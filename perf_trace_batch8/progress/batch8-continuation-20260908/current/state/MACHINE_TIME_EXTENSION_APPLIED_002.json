@@ -1,0 +1,143 @@
+{
+  "status": "prepared_outer_deadline_extension",
+  "authorization": {
+    "path": "/public/home/accl15ptg7/run_R08_R10/MACHINE_TIME_EXTENSION_002.json",
+    "size": 849,
+    "sha256": "fd69661ead053a8cd805f5132bd1382583ffc3b9775c5fd9e005565be0bf39b3"
+  },
+  "changes": [
+    {
+      "old": {
+        "path": "/public/home/accl15ptg7/run_R08_R10/watch_runtime_health_005.py",
+        "size": 6084,
+        "sha256": "d9f58ee15a0281cedab2fc08c4211a201611c635f6eeefd714c24f3af16f22e3"
+      },
+      "new": {
+        "path": "/public/home/accl15ptg7/run_R08_R10/watch_runtime_health_006.py",
+        "size": 6084,
+        "sha256": "586f6e37fa72060fea472ded1650baee4b6aa48f7c9e11db9cb4eadc6cd0f0db"
+      },
+      "syntax_validated": true,
+      "diff": "--- watch_runtime_health_005.py\n+++ watch_runtime_health_006.py\n@@ -1,7 +1,7 @@\n \"\"\"Read-only capture observations plus durable outer recovery state, every minute.\"\"\"\n from pathlib import Path\n import json,time,os,datetime,subprocess,sys\n-C=Path('/public/home/accl15ptg7/run_R08_R10');R=Path('/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001');RUN=R.parents[2];DEADLINE=datetime.datetime.fromisoformat('2026-09-08T20:18:09+00:00').timestamp()\n+C=Path('/public/home/accl15ptg7/run_R08_R10');R=Path('/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001');RUN=R.parents[2];DEADLINE=datetime.datetime.fromisoformat('2026-09-09T04:18:09+00:00').timestamp()\n def read(p):return json.loads(Path(p).read_text())\n def observe():\n  accepted={}\n"
+    },
+    {
+      "old": {
+        "path": "/public/home/accl15ptg7/run_R08_R10/remote_checkpoint_watchdog_010.py",
+        "size": 11567,
+        "sha256": "05124a9073e537ac2b149ca736d170bc67a2a729621dbe4caf844c3bd12b25dd"
+      },
+      "new": {
+        "path": "/public/home/accl15ptg7/run_R08_R10/remote_checkpoint_watchdog_011.py",
+        "size": 11687,
+        "sha256": "accc19fa3eea2040d731ed37f0bc2b59fd77a5fab2068ee5d321a2b961b18e82"
+      },
+      "syntax_validated": true,
+      "diff": "--- remote_checkpoint_watchdog_010.py\n+++ remote_checkpoint_watchdog_011.py\n@@ -2,7 +2,7 @@\n from pathlib import Path\n import os,json,hashlib,subprocess,time,datetime,shutil,re,sys,traceback\n CONTROL=Path('/public/home/accl15ptg7/run_R08_R10');PROJECT=Path('/public/home/accl15ptg7/auto_trace');R08=PROJECT/'perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001';WORKTREE=Path('/public/home/accl15ptg7/run_R08_R10/remote_progress_worktree_004');REL=Path('perf_trace_batch8/progress/batch8-continuation-20260908');DEST=WORKTREE/REL\n-BRANCH='progress/batch8-continuation-20260908';DEADLINE=datetime.datetime.fromisoformat('2026-09-08T20:18:09+00:00').timestamp()\n+BRANCH='progress/batch8-continuation-20260908';DEADLINE=datetime.datetime.fromisoformat('2026-09-09T04:18:09+00:00').timestamp()\n def now():return datetime.datetime.now(datetime.timezone.utc).isoformat()\n def sha_bytes(b):return hashlib.sha256(b).hexdigest()\n def git(*args):\n@@ -59,7 +59,7 @@\n  for p in sorted((CONTROL/'stage_tool_templates').rglob('*')):\n   if p.suffix in ['.py','.js','.css','.json','.md']:copy(p,Path('code/prepared_not_executed')/p.relative_to(CONTROL/'stage_tool_templates'),'unfrozen_template_code')\n  for p in sorted((PROJECT/'perf_trace_batch8/continuation_20260908').glob('*.py')):copy(p,Path('code/outer_continuation')/p.name,'outer_scheduler_code')\n- names=['session_state.json','MACHINE_TIME_EXTENSION_001.json','WEIGHTS_COMPLETE.json','WEIGHT_STORAGE_RELOCATION_COMPLETE.json','MEMORY_STORAGE_RELOCATION_AUTHORIZATION.json','MEMORY_STORAGE_RELOCATION_COMPLETE.json','MEMORY_STORAGE_RELOCATION_AUTHORIZATION_002.json','MEMORY_STORAGE_RELOCATION_COMPLETE_002.json','R07_CPU_DB_REVIEW.md']\n+ names=['session_state.json','MACHINE_TIME_EXTENSION_001.json','MACHINE_TIME_EXTENSION_002.json','MACHINE_TIME_EXTENSION_APPLIED_002.json','MACHINE_TIME_EXTENSION_ACTIVATED_002.json','WEIGHTS_COMPLETE.json','WEIGHT_STORAGE_RELOCATION_COMPLETE.json','MEMORY_STORAGE_RELOCATION_AUTHORIZATION.json','MEMORY_STORAGE_RELOCATION_COMPLETE.json','MEMORY_STORAGE_RELOCATION_AUTHORIZATION_002.json','MEMORY_STORAGE_RELOCATION_COMPLETE_002.json','R07_CPU_DB_REVIEW.md']\n  for name in names:copy(CONTROL/name,Path('state')/name,'state_checkpoint')\n  accepted=[]\n  for schedule in sorted((R08/'validation').glob('serial_scheduler_*'))+sorted((R08/'raw/runtime_tools').glob('serial_scheduler_*')):\n@@ -98,7 +98,7 @@\n     q=Path(item[key]['path']);copy(q,Path('r08/accepted')/item['segment_id']/q.name,'accepted_capture_checkpoint')\n  for p in [Path('/dev/shm/DOWNLOAD_CACHE_CLEANUP_001.json')]:copy(p,Path('emergency_root_tools')/p.name,'verified_redundant_download_cache_cleanup')\n  \n- state={'snapshot_started_utc':begun,'snapshot_completed_utc':now(),'runtime_run_id':'batch8-dp2-fresh-003','r08_accepted_capture_count':len(accepted),'r08_planned_capture_count':12,'r08_accepted_segments':[x['segment_id'] for x in accepted],'deadline_utc':'2026-09-08T20:18:09Z','remote_progress_branch':BRANCH,'current_execution_state':json.loads((CONTROL/'RECOVERY_STATE_NFS.json').read_text()),'logs_are_point_in_time_snapshots':True,'active_sqlite_databases_not_claimed_transactionally_complete':True,'accepted_raw_artifacts_published_separately_with_sha256':True,'outer_publisher_not_R09_or_R10_business_execution':True,'files':records}\n+ state={'snapshot_started_utc':begun,'snapshot_completed_utc':now(),'runtime_run_id':'batch8-dp2-fresh-003','r08_accepted_capture_count':len(accepted),'r08_planned_capture_count':12,'r08_accepted_segments':[x['segment_id'] for x in accepted],'deadline_utc':'2026-09-09T04:18:09Z','remote_progress_branch':BRANCH,'current_execution_state':json.loads((CONTROL/'RECOVERY_STATE_NFS.json').read_text()),'logs_are_point_in_time_snapshots':True,'active_sqlite_databases_not_claimed_transactionally_complete':True,'accepted_raw_artifacts_published_separately_with_sha256':True,'outer_publisher_not_R09_or_R10_business_execution':True,'files':records}\n  (tmp/'SNAPSHOT_MANIFEST.json').write_text(json.dumps(state,indent=2,ensure_ascii=False)+'\\n');current=DEST/'current'\n  if current.exists():shutil.rmtree(current)\n  tmp.rename(current)\n"
+    },
+    {
+      "old": {
+        "path": "/public/home/accl15ptg7/run_R08_R10/publish_accepted_captures_003.py",
+        "size": 10525,
+        "sha256": "e5f2653817787ebe21de36e43ff80ad4d20129ad7fd7c1cfd948d6802b95e114"
+      },
+      "new": {
+        "path": "/public/home/accl15ptg7/run_R08_R10/publish_accepted_captures_004.py",
+        "size": 10525,
+        "sha256": "5169bc59d9f22c3e274f97a75c4c9aba38c5865d4e142f0bf7d0d42276b8a44f"
+      },
+      "syntax_validated": true,
+      "diff": "--- publish_accepted_captures_003.py\n+++ publish_accepted_captures_004.py\n@@ -1,7 +1,7 @@\n \"\"\"Outer publisher: seal each accepted native capture, upload immutable split assets.\"\"\"\n from pathlib import Path\n import os,sys,json,hashlib,tarfile,zstandard,time,datetime,requests,subprocess,io\n-CONTROL=Path('/public/home/accl15ptg7/run_R08_R10');PROJECT=Path('/public/home/accl15ptg7/auto_trace');ROOT=PROJECT/'perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001';DEADLINE=datetime.datetime.fromisoformat('2026-09-08T20:18:09+00:00').timestamp()\n+CONTROL=Path('/public/home/accl15ptg7/run_R08_R10');PROJECT=Path('/public/home/accl15ptg7/auto_trace');ROOT=PROJECT/'perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001';DEADLINE=datetime.datetime.fromisoformat('2026-09-09T04:18:09+00:00').timestamp()\n def read(p):return json.loads(Path(p).read_text())\n def sha(p):\n  h=hashlib.sha256()\n"
+    },
+    {
+      "old": {
+        "path": "/public/home/accl15ptg7/run_R08_R10/offload_published_R08_files_001.py",
+        "size": 5088,
+        "sha256": "90463ac628eb8c544f84e1f883d3ea75b4309ebd9c0ff22ec676a63a661e753e"
+      },
+      "new": {
+        "path": "/public/home/accl15ptg7/run_R08_R10/offload_published_R08_files_002.py",
+        "size": 5088,
+        "sha256": "3a2a16c82d17a2087fab5bb042a7986736c2d04556492f92eec0066547560455"
+      },
+      "syntax_validated": true,
+      "diff": "--- offload_published_R08_files_001.py\n+++ offload_published_R08_files_002.py\n@@ -1,7 +1,7 @@\n \"\"\"User-authorized temporary local eviction after verified complete Release publication.\"\"\"\n from pathlib import Path\n import json,os,hashlib,requests,subprocess,time,datetime\n-CONTROL=Path('/public/home/accl15ptg7/run_R08_R10');PROJECT=Path('/public/home/accl15ptg7/auto_trace');ROOT=PROJECT/'perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001';OUT=ROOT/'raw/runtime_tools/remote_release_offloads_001';OUT.mkdir(exist_ok=True);DEADLINE=datetime.datetime.fromisoformat('2026-09-08T20:18:09+00:00').timestamp()\n+CONTROL=Path('/public/home/accl15ptg7/run_R08_R10');PROJECT=Path('/public/home/accl15ptg7/auto_trace');ROOT=PROJECT/'perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001';OUT=ROOT/'raw/runtime_tools/remote_release_offloads_001';OUT.mkdir(exist_ok=True);DEADLINE=datetime.datetime.fromisoformat('2026-09-09T04:18:09+00:00').timestamp()\n def read(p):return json.loads(Path(p).read_text())\n def sha(p):\n  h=hashlib.sha256()\n"
+    },
+    {
+      "old": {
+        "path": "/public/home/accl15ptg7/run_R08_R10/await_all_captures_then_cpu_001.py",
+        "size": 1108,
+        "sha256": "5657168130c5aecdeb40a9ad4a117e5579d526a3366d68b817aa41a049669e48"
+      },
+      "new": {
+        "path": "/public/home/accl15ptg7/run_R08_R10/await_all_captures_then_cpu_002.py",
+        "size": 1108,
+        "sha256": "09b2bbbc764e588f73d7d723a90b0aeb685d7eb702d703a4058dcaa21cbf04a5"
+      },
+      "syntax_validated": true,
+      "diff": "--- await_all_captures_then_cpu_001.py\n+++ await_all_captures_then_cpu_002.py\n@@ -1,14 +1,14 @@\n \"\"\"Outer wait only; successor assignments remain impossible before full capture gate.\"\"\"\n from pathlib import Path\n import datetime,time,json,subprocess,sys,os\n-C=Path('/public/home/accl15ptg7/run_R08_R10');R=Path('/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001');deadline=datetime.datetime.fromisoformat('2026-09-08T20:18:09+00:00').timestamp();index=R/'normalized/accepted_captures.json'\n+C=Path('/public/home/accl15ptg7/run_R08_R10');R=Path('/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001');deadline=datetime.datetime.fromisoformat('2026-09-09T04:18:09+00:00').timestamp();index=R/'normalized/accepted_captures.json'\n while time.time()<deadline-1800:\n  if index.exists():\n   try:x=json.loads(index.read_text())\n   except json.JSONDecodeError:time.sleep(2);continue\n   assert x['status']=='complete' and len(x['captures'])==12\n   print('ALL_CAPTURE_INDEX_OBSERVED_STARTING_OUTER_RESTORATION_THEN_CPU',flush=True)\n-  result=subprocess.run([sys.executable,'-u','-B',str(C/'run_closed_R08_to_R10_001.py')]);print('OUTER_CPU_SUFFIX_EXIT',result.returncode,flush=True);raise SystemExit(result.returncode)\n+  result=subprocess.run([sys.executable,'-u','-B',str(C/'run_closed_R08_to_R10_002.py')]);print('OUTER_CPU_SUFFIX_EXIT',result.returncode,flush=True);raise SystemExit(result.returncode)\n  if (C/'STOP_CPU_SUFFIX_WAITER').exists():raise SystemExit(0)\n  time.sleep(20)\n raise RuntimeError('machine deadline leaves insufficient CPU suffix reserve')\n"
+    },
+    {
+      "old": {
+        "path": "/public/home/accl15ptg7/run_R08_R10/run_closed_R08_to_R10_001.py",
+        "size": 2443,
+        "sha256": "3ed012f59b38c25beadc15e22d7e581748d79e16d5a3272489690458eb996772"
+      },
+      "new": {
+        "path": "/public/home/accl15ptg7/run_R08_R10/run_closed_R08_to_R10_002.py",
+        "size": 2443,
+        "sha256": "c4faa65cfb835a6def7dbf4dea9b2595bae98290e440878b654eca320b00fc4c"
+      },
+      "syntax_validated": true,
+      "diff": "--- run_closed_R08_to_R10_001.py\n+++ run_closed_R08_to_R10_002.py\n@@ -1,7 +1,7 @@\n \"\"\"Outer serial CPU suffix. Execute only after complete R08 capture checkpoint.\"\"\"\n from pathlib import Path\n import subprocess,time,json,sys,os,datetime\n-CONTROL=Path('/public/home/accl15ptg7/run_R08_R10');RUN=Path('/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003');DEADLINE=datetime.datetime.fromisoformat('2026-09-08T20:18:09+00:00').timestamp();PY=sys.executable\n+CONTROL=Path('/public/home/accl15ptg7/run_R08_R10');RUN=Path('/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003');DEADLINE=datetime.datetime.fromisoformat('2026-09-09T04:18:09+00:00').timestamp();PY=sys.executable\n \n def run(argv):\n  assert time.time()<DEADLINE-120,'machine time reserve';print('OUTER_CPU_SUFFIX_START',argv,flush=True);p=subprocess.run(argv,timeout=max(1,DEADLINE-120-time.time()));assert p.returncode==0,'preserve failed phase without promotion';print('OUTER_CPU_SUFFIX_EXIT',argv,flush=True)\n@@ -9,12 +9,12 @@\n  run([PY,'-B',str(CONTROL/'phase_runner_002.py'),'--stage-root',str(root),'--phase',name,'--timeout',str(int(max(1,DEADLINE-120-time.time()))),'--',PY,'-B',str(tool),*extra])\n def main():\n  r08=RUN/'artifacts/R08/continuation_001';index=r08/'normalized/accepted_captures.json';assert index.exists() and json.loads(index.read_text())['status']=='complete','all twelve captures must be accepted first'\n- run([PY,'-B',str(CONTROL/'restore_all_R08_release_artifacts_001.py')])\n+ run([PY,'-B',str(CONTROL/'restore_all_R08_release_artifacts_002.py')])\n  # R08 owns resource construction and closure; R09 is never assigned early.\n- run([PY,'-B',str(CONTROL/'prepare_stage_assignments_002.py'),'assign','R08']);phase(r08,'resource_model',r08/'tools/analysis_006/build_resource_model.py');phase(r08,'resource_audit',r08/'tools/analysis_006/audit_resource_model.py');phase(r08,'seal',r08/'tools/closure_001/seal_r08.py');phase(r08,'completion_audit',r08/'tools/closure_001/audit_r08.py');run([PY,'-B',str(CONTROL/'prepare_stage_assignments_002.py'),'handoff','R08'])\n+ run([PY,'-B',str(CONTROL/'prepare_stage_assignments_003.py'),'assign','R08']);phase(r08,'resource_model',r08/'tools/analysis_006/build_resource_model.py');phase(r08,'resource_audit',r08/'tools/analysis_006/audit_resource_model.py');phase(r08,'seal',r08/'tools/closure_001/seal_r08.py');phase(r08,'completion_audit',r08/'tools/closure_001/audit_r08.py');run([PY,'-B',str(CONTROL/'prepare_stage_assignments_003.py'),'handoff','R08'])\n  for stage,phases in [('R09',[('analysis','build_analysis.py'),('table_audit','audit_analysis.py'),('seal','seal_r09.py'),('completion_audit','audit_completion.py')]),('R10',[('render','build_report.py'),('browser','browser_acceptance.py'),('seal','seal_acceptance.py'),('completion_audit','audit_report.py')])]:\n-  run([PY,'-B',str(CONTROL/'prepare_stage_assignments_002.py'),'assign',stage]);root=RUN/'artifacts'/stage/'continuation_001'\n+  run([PY,'-B',str(CONTROL/'prepare_stage_assignments_003.py'),'assign',stage]);root=RUN/'artifacts'/stage/'continuation_001'\n   for name,tool in phases:phase(root,name,root/'tools/revision_001'/tool)\n-  run([PY,'-B',str(CONTROL/'prepare_stage_assignments_002.py'),'handoff',stage])\n+  run([PY,'-B',str(CONTROL/'prepare_stage_assignments_003.py'),'handoff',stage])\n  print('R08_R09_R10_LOCAL_COMPLETE_REQUIRES_FINAL_PUBLICATION_VERIFICATION',flush=True)\n if __name__=='__main__':main()\n"
+    },
+    {
+      "old": {
+        "path": "/public/home/accl15ptg7/run_R08_R10/prepare_stage_assignments_002.py",
+        "size": 15822,
+        "sha256": "af181d256cfb19eb19506d14d906fc7b8ca1e2b147c50586ab01b2ca5cab14ff"
+      },
+      "new": {
+        "path": "/public/home/accl15ptg7/run_R08_R10/prepare_stage_assignments_003.py",
+        "size": 15822,
+        "sha256": "c7bc03508cdae1085a48dccbf76908914fbd76cb659ab0f2b0957d0489748efc"
+      },
+      "syntax_validated": true,
+      "diff": "--- prepare_stage_assignments_002.py\n+++ prepare_stage_assignments_003.py\n@@ -1,7 +1,7 @@\n \"\"\"Outer assignments and immutable handoffs; actual successor only after closure.\"\"\"\n from pathlib import Path\n import os,json,hashlib,shutil,sys,subprocess,datetime,importlib.util\n-CONTROL=Path('/public/home/accl15ptg7/run_R08_R10');PROJECT=Path('/public/home/accl15ptg7/auto_trace');RUN=PROJECT/'perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003';RUN_ID='batch8-dp2-fresh-003';TEMPLATES=CONTROL/'stage_tool_templates_003';DEADLINE='2026-09-08T20:18:09Z'\n+CONTROL=Path('/public/home/accl15ptg7/run_R08_R10');PROJECT=Path('/public/home/accl15ptg7/auto_trace');RUN=PROJECT/'perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003';RUN_ID='batch8-dp2-fresh-003';TEMPLATES=CONTROL/'stage_tool_templates_003';DEADLINE='2026-09-09T04:18:09Z'\n spec=importlib.util.spec_from_file_location('outer_cpu_common',TEMPLATES/'shared_001/cpu_stage_common.py');common=importlib.util.module_from_spec(spec);spec.loader.exec_module(common)\n def sha(p):return common.sha(p)\n def rec(p):return common.rec(Path(p))\n@@ -69,7 +69,7 @@\n  for p in [CONTROL/'r07_additional_inputs/clock_anchors.json',*list((CONTROL/'r07_additional_inputs').rglob('capture/workload/request_results.json')),r08/'validation/batch8_observed_coverage_gate_001.json']:consumed.append(rec(p))\n  if stage in ['R09','R10']:\n   for p in [r08/'model/resource_model_001/traffic_resource_attachment.csv',r08/'model/traffic_resource_model.json',r08/'R08_COMPLETION_AUDIT.json',r08/'lineage/R08_SOURCE_LINEAGE.json']:consumed.append(rec(p))\n- nfspolicy=CONTROL/'USER_RELEASE_OFFLOAD_POLICY_20260908.json';assignment={'schema_version':1,'status':'assigned','runtime_goal':stage,'runtime_run_id':RUN_ID,'trace_profile_sha256':common.PROFILE,'target':common.target_state(),'artifact_root':str(root),'handoff_output':str(handoff_path(stage)),'predecessor_stages':['R%02d'%i for i in range(1,int(stage[1:]))],'predecessor_handoffs':hs,'predecessor_transitive_validation':transitive,'cumulative_runtime_ledger':rec(ledgerpath),'selected_request':selection,'workload':workload,'topology':topology,'consumed_sources':consumed,'frozen_tool_history':history,'deadline_utc':DEADLINE,'deadline_extension_authorization':rec(CONTROL/'MACHINE_TIME_EXTENSION_001.json'),'storage_policy':rec(nfspolicy),'NFS_filesystem_device':os.stat(CONTROL).st_dev,'all_new_stage_outputs_and_logs_physical_NFS_required':True,'original_R08_raw_restored_files_may_be_exactly_mapped_to_root_after_all_GPU_captures':True,'weights_were_physical_root_during_all_GPU_captures':True,'release_restoration':rec(r08/'raw/runtime_tools/release_restoration_001/COMPLETE.json'),'assigned_utc':now()}\n+ nfspolicy=CONTROL/'USER_RELEASE_OFFLOAD_POLICY_20260908.json';assignment={'schema_version':1,'status':'assigned','runtime_goal':stage,'runtime_run_id':RUN_ID,'trace_profile_sha256':common.PROFILE,'target':common.target_state(),'artifact_root':str(root),'handoff_output':str(handoff_path(stage)),'predecessor_stages':['R%02d'%i for i in range(1,int(stage[1:]))],'predecessor_handoffs':hs,'predecessor_transitive_validation':transitive,'cumulative_runtime_ledger':rec(ledgerpath),'selected_request':selection,'workload':workload,'topology':topology,'consumed_sources':consumed,'frozen_tool_history':history,'deadline_utc':DEADLINE,'deadline_extension_authorization':rec(CONTROL/'MACHINE_TIME_EXTENSION_002.json'),'storage_policy':rec(nfspolicy),'NFS_filesystem_device':os.stat(CONTROL).st_dev,'all_new_stage_outputs_and_logs_physical_NFS_required':True,'original_R08_raw_restored_files_may_be_exactly_mapped_to_root_after_all_GPU_captures':True,'weights_were_physical_root_during_all_GPU_captures':True,'release_restoration':rec(r08/'raw/runtime_tools/release_restoration_001/COMPLETE.json'),'assigned_utc':now()}\n  if stage=='R10':\n   r09=RUN/'artifacts/R09/continuation_001';analysispath=r09/'analysis/fresh_e2e_analysis.accepted.json';assignment.update(r09_handoff=rec(handoff_path('R09')),r09_analysis=rec(analysispath));assignment['consumed_sources'] += [rec(analysispath),*read(analysispath)['tables']];dest=CONTROL/'R10_acceptance_payload_001';assert not dest.exists() and not (root/'acceptance').exists();dest.mkdir();(root/'acceptance').symlink_to(dest,target_is_directory=True);assignment['bulk_storage_paths']={str(root/'acceptance'):str(dest)};save(root/'authorization/bulk_storage_authorization.json',{'runtime_goal':'R10','runtime_run_id':RUN_ID,'paths':assignment['bulk_storage_paths'],'NFS_filesystem_device':os.stat(CONTROL).st_dev,'user_storage_policy':rec(nfspolicy)})\n  save(output,assignment);print('OUTER_STAGE_ASSIGNED',stage,flush=True);return root,tools\n"
+    },
+    {
+      "old": {
+        "path": "/public/home/accl15ptg7/run_R08_R10/restore_all_R08_release_artifacts_001.py",
+        "size": 12914,
+        "sha256": "360ec1566bab7a441df1d69aca5b6ebc8e075daafd5238e12c53e2f67b558351"
+      },
+      "new": {
+        "path": "/public/home/accl15ptg7/run_R08_R10/restore_all_R08_release_artifacts_002.py",
+        "size": 12975,
+        "sha256": "d4d924de31bb440f2461b137d12815e9e136ff363c9117ff45cf0788a1a47076"
+      },
+      "syntax_validated": true,
+      "diff": "--- restore_all_R08_release_artifacts_001.py\n+++ restore_all_R08_release_artifacts_002.py\n@@ -1,7 +1,7 @@\n \"\"\"Outer restoration after all twelve accepted GPU captures; never a GPU phase.\"\"\"\n from pathlib import Path\n import json,os,sys,time,hashlib,subprocess,requests,re,tarfile,zstandard,datetime,importlib.util\n-C=Path('/public/home/accl15ptg7/run_R08_R10');P=Path('/public/home/accl15ptg7/auto_trace');R=P/'perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001';O=R/'raw/runtime_tools/release_restoration_001';DEST=Path('/root/R08_release_restored_after_capture_001');DEADLINE=datetime.datetime.fromisoformat('2026-09-08T20:18:09+00:00').timestamp()\n+C=Path('/public/home/accl15ptg7/run_R08_R10');P=Path('/public/home/accl15ptg7/auto_trace');R=P/'perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001';O=R/'raw/runtime_tools/release_restoration_001';DEST=Path('/root/R08_release_restored_after_capture_001');DEADLINE=datetime.datetime.fromisoformat('2026-09-09T04:18:09+00:00').timestamp()\n def read(p):return json.loads(Path(p).read_text())\n def sha(p):\n  h=hashlib.sha256()\n@@ -46,7 +46,7 @@\n    if not p.name.isdigit():continue\n    try:a=(p/'cmdline').read_bytes().split(b'\\0')\n    except OSError:continue\n-   if str(C/'offload_published_R08_files_001.py').encode() in a:live.append(p.name)\n+   if any(str(C/name).encode() in a for name in ['offload_published_R08_files_001.py','offload_published_R08_files_002.py']):live.append(p.name)\n   if not live:break\n   time.sleep(1)\n  assert not live,'offloader must exit before restoration'\n"
+    },
+    {
+      "old": {
+        "path": "/public/home/accl15ptg7/run_R08_R10/publish_complete_stages_002.py",
+        "size": 12409,
+        "sha256": "0d762f222ecf025ebc833e65d790187b9030bda1eea6a90bebc1beab27d99d61"
+      },
+      "new": {
+        "path": "/public/home/accl15ptg7/run_R08_R10/publish_complete_stages_003.py",
+        "size": 12472,
+        "sha256": "4890e89b680a94433cc1c4db2e9795619dde1b0588490500b126921036c5d0d7"
+      },
+      "syntax_validated": true,
+      "diff": "--- publish_complete_stages_002.py\n+++ publish_complete_stages_003.py\n@@ -1,7 +1,7 @@\n \"\"\"Outer NFS publisher for complete, closed R08/R09/R10 stages.\"\"\"\n from pathlib import Path\n import json,hashlib,tarfile,time,os,sys,subprocess,datetime,zstandard,requests,zipfile\n-CONTROL=Path('/public/home/accl15ptg7/run_R08_R10');PROJECT=Path('/public/home/accl15ptg7/auto_trace');RUN=PROJECT/'perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003';DEADLINE=datetime.datetime.fromisoformat('2026-09-08T20:18:09+00:00').timestamp()\n+CONTROL=Path('/public/home/accl15ptg7/run_R08_R10');PROJECT=Path('/public/home/accl15ptg7/auto_trace');RUN=PROJECT/'perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003';DEADLINE=datetime.datetime.fromisoformat('2026-09-09T04:18:09+00:00').timestamp()\n def read(p):return json.loads(Path(p).read_text())\n def sha(p):\n  h=hashlib.sha256()\n@@ -108,5 +108,6 @@\n     publish(stage,out,package(stage,out))\n    if all((CONTROL/'publication'/('complete_'+s)/'PUBLICATION_COMPLETE.json').exists() for s in ['R08','R09','R10']):return\n   except Exception as error:print('CLOSED_STAGE_PUBLICATION_RETRY',type(error).__name__,str(error) if isinstance(error,AssertionError) else '',flush=True)\n+  if (CONTROL/'STOP_COMPLETE_STAGE_PUBLISHER').exists():return\n   time.sleep(30)\n if __name__=='__main__':main()\n"
+    }
+  ],
+  "frozen_runtime_and_analysis_tools_modified": false,
+  "GPU_processes_signalled": false,
+  "active_capture_scheduler": "run_r08_serial_suffix_008.py",
+  "active_capture_scheduler_retains_earlier_conservative_deadline_utc": "2026-09-08T20:18:09Z",
+  "reason": "Do not interrupt the active capture. Existing serial capture scheduler is expected to finish remaining captures before its conservative bound; any required successor will use extension002. All unstarted CPU stages and outer observers use the extended bound.",
+  "prior_CPU_algorithm_gates_preserved": true,
+  "new_actual_stage_execution_not_claimed": true
+}
