@@ -1,0 +1,15 @@
+{
+  "status": "authorized_by_user",
+  "recorded_utc": "2026-09-08T08:00:57.877936+00:00",
+  "user_instruction": "我为你延长了8个小时 但你需要按照随时可能丢失容器的方式去 及时的提交过程 进度 阶段产物 日志等信息到远程仓库",
+  "original_started_utc": "2026-09-08T04:18:09Z",
+  "previous_deadline_utc": "2026-09-08T12:18:09Z",
+  "additional_seconds": 28800,
+  "deadline_utc": "2026-09-08T20:18:09Z",
+  "checkpoint_policy": {
+    "progress_code_logs_push_interval_seconds": 600,
+    "accepted_capture_raw_release": "immediately after accepted checkpoint",
+    "stage_release": "after each complete R08 R09 R10 stage"
+  },
+  "existing_frozen_stage_assignments_not_rewritten": true
+}
