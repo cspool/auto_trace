@@ -1,0 +1,42 @@
+{
+  "status": "published",
+  "tag": "perf-trace-batch8-continuation-checkpoint-20260908-001",
+  "url": "https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-continuation-checkpoint-20260908-001",
+  "id": 384522332,
+  "commit": "b5c9882ae077338943e605e06b78473b9a9479ed",
+  "all_server_asset_sha256_match": true,
+  "assets": [
+    {
+      "id": 550066804,
+      "name": "r07-cpu-r08-first-accepted-20260908.tar.zst",
+      "size": 874112320,
+      "state": "uploaded",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-continuation-checkpoint-20260908-001/r07-cpu-r08-first-accepted-20260908.tar.zst",
+      "digest": "sha256:11ab6ae8360a8c89ffbee15fa53f314242ece276bddb948f8cec255afc361bc1"
+    },
+    {
+      "id": 550068276,
+      "name": "FILE_MANIFEST.json",
+      "size": 34276,
+      "state": "uploaded",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-continuation-checkpoint-20260908-001/FILE_MANIFEST.json",
+      "digest": "sha256:1fba951ac374b715f21cfb845c00b779b9a6ebe65813d19bdfa0e48f937d2f64"
+    },
+    {
+      "id": 550068299,
+      "name": "ASSET_MANIFEST.json",
+      "size": 674,
+      "state": "uploaded",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-continuation-checkpoint-20260908-001/ASSET_MANIFEST.json",
+      "digest": "sha256:961c8a255fd8bac81c2751477bd1430110283b10736c71891a3b2fa8a7371348"
+    },
+    {
+      "id": 550068324,
+      "name": "SHA256SUMS",
+      "size": 195,
+      "state": "uploaded",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-continuation-checkpoint-20260908-001/SHA256SUMS",
+      "digest": "sha256:c465e505f89ea43cb5b0f5a3a04e2fe0809b33494695368022be3ea6f9261a25"
+    }
+  ]
+}
