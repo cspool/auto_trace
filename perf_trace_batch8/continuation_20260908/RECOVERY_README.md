@@ -8,7 +8,7 @@ NFS 控制目录：`/public/home/accl15ptg7/run_R08_R10`。原始 R08 运行目�
 
 - 核对 `RECOVERY_STATE_NFS.json`、最新进度提交及各 `*.accepted_checkpoint.json` 的时间和 SHA256。会话 ID 与 PID 仅适用于原容器。
 - 当前冻结工具为 `raw/runtime_tools/revision_021`、`tools/analysis_008`，对应 `runtime_capture_gate_014.json` 与 `independent_native_sessions_analysis_CPU_gate_001.json`；原有后台 graph 范围门禁仍保留。不得修改已冻结的运行代码、原始数据或验收凭证。
-- 2026-09-08 20:36 UTC，`run_r08_serial_suffix_013.py` 已完成全部 12 项采集及独立审计；总索引和 36 份执行/归因/审计凭证的 SHA256 复核已提交于 `all_twelve_captures_accepted_001`。每组均有 12,544 个目标 process 标记、23,660 个原生归属 kernel，全部三种 PMC 模式共 6,912 项物理 dispatch 归属；每组两张卡均覆盖完整。第十二项原始数据正常关闭，独立审计耗时 185.44 秒。GPU 采集已全部结束，无须重新执行。当前外层恢复入口已启动，等待最后一项发布及回收凭证后，按下述策略恢复全部原始文件；R08 总阶段、R09、R10 尚未完成。
+- 2026-09-08 20:36 UTC，`run_r08_serial_suffix_013.py` 已完成全部 12 项采集及独立审计；总索引和 36 份执行/归因/审计凭证的 SHA256 复核已提交于 `all_twelve_captures_accepted_001`。每组均有 12,544 个目标 process 标记、23,660 个原生归属 kernel，全部三种 PMC 模式共 6,912 项物理 dispatch 归属；每组两张卡均覆盖完整。第十二项原始数据正常关闭，独立审计耗时 185.44 秒。GPU 采集已全部结束，无须重新执行。截至 21:19 UTC，全部原始文件恢复及总哈希复核完成，已启动 R08 实际阶段分配和前序凭证核验；R08 总阶段、R09、R10 尚未完成。
 - 只有完整执行清单、归因清单和独立审计同时存在且哈希匹配，才算一项采集完成。HTTP 成功或实时 marker 覆盖报告本身不能代替原生 DB/PMC 归因审计。
 
 ## 存储与远端恢复
@@ -19,7 +19,7 @@ NFS 控制目录：`/public/home/accl15ptg7/run_R08_R10`。原始 R08 运行目�
 
 全部 12 项采集验收通过且 GPU、服务和采集进程退出后，`restore_all_R08_release_artifacts_002.py` 才可核对空间、记录并删除指定的 root 权重，拉取各 Release，恢复每个被回收的原始文件并核验其原始 SHA256。root 仅在这个阶段用作已授权的原始文件恢复空间；新阶段输出和日志仍写 NFS。恢复完成凭证为 `raw/runtime_tools/release_restoration_001/COMPLETE.json`。若恢复后的 root 文件再次随容器丢失，该工具支持按原恢复凭证重新取回相同字节，保留原凭证不变。
 
-截至 2026-09-08 20:45 UTC，全部 12 组 Release 与回收凭证已完成。原始大文件恢复总量为 77,001,580,022 字节；自动回收进程已停止，11 个 root 权重分片（55,563,022,432 字节）已按逐文件 SHA256 清单释放。第一组正在下载恢复，完整删除凭证见 `release_restoration_weights_removed_001`。权重不再是后续 CPU 阶段的前置依赖；需要恢复的全部原始产物均有已校验 Release。
+截至 2026-09-08 21:19 UTC，全部 12 组 Release 与回收凭证已完成，53 个原始大文件（77,001,580,022 字节）已全量恢复并再次逐文件核验原始 SHA256。总完成凭证及全部分组恢复映射已提交于 `release_restoration_complete_001`。自动回收进程已停止，11 个 root 权重分片（55,563,022,432 字节）已按逐文件 SHA256 清单释放；配置文件保留。恢复后的原始文件置于 `/root/R08_release_restored_after_capture_001`，通过原规范路径链接访问；新阶段产物和日志仍物理保存在 NFS。容器丢失时可按原凭证重新恢复，不能用不存在的 root 链接冒充已恢复文件。
 
 ## 后续阶段与最终完成条件
 

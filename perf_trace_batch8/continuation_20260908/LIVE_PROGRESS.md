@@ -265,3 +265,5 @@ Capture 04 is published at https://github.com/cspool/auto_trace/releases/tag/per
 - 2026-09-08T21:06:18.457200+00:00: Restoration checkpoint groups_09: root weights were removed only after all 12 GPU captures and publications closed; 9/12 capture groups have original-SHA restoration receipts (53806597962 bytes). Stage completion is tracked separately.
 
 - 2026-09-08T21:17:46.956405+00:00: Restoration checkpoint groups_12: root weights were removed only after all 12 GPU captures and publications closed; 12/12 capture groups have original-SHA restoration receipts (77001580022 bytes). Stage completion is tracked separately.
+
+- 2026-09-08T21:19:38.883028+00:00: Restoration checkpoint complete: root weights were removed only after all 12 GPU captures and publications closed; 12/12 capture groups have original-SHA restoration receipts (77001580022 bytes). Stage completion is tracked separately.
