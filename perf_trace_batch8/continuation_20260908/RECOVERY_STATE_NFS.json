@@ -17,7 +17,7 @@
   "accepted_capture_publisher": "/public/home/accl15ptg7/run_R08_R10/publish_accepted_captures_004.py",
   "original_NFS_session_state_superseded_by_this_emergency_record": true,
   "R09_R10_actual_execution_started": true,
-  "home_storage_available_gib": 9.03,
+  "home_storage_available_gib": 8.55,
   "weight_storage_constraint": "All physical weight bytes must stay under /root; never migrate weights to NFS again",
   "accepted_capture_publisher_session": 12763,
   "raw_storage_watchdog_session": 94301,
@@ -45,12 +45,12 @@
   "postcapture_restoration_code": "/public/home/accl15ptg7/run_R08_R10/restore_all_R08_release_artifacts_002.py",
   "postcapture_restoration_status": "complete 12/12, 53 originals, 77,001,580,022 bytes; additional resume hash recheck complete",
   "cpu_suffix_waiter_session": null,
-  "cpu_suffix_status": "R08/R09 complete and fully published; R10 offline report rendering running",
+  "cpu_suffix_status": "R08, R09 and R10 complete; all three complete-stage Releases published and server hashes verified",
   "complete_stage_publisher": "publish_complete_stages_003.py",
   "complete_stage_publisher_session": 1983,
   "current_capture_phase": "accepted",
   "latest_health_observation": {
-    "utc": "2026-09-08T22:18:24.859017+00:00",
+    "utc": "2026-09-08T22:33:27.267558+00:00",
     "accepted_R08": 12,
     "planned_R08": 12,
     "current_capture": "12_chunk_fwd_kernel_o_pmc_write/attempt_001",
@@ -102,12 +102,13 @@
       "closed_capture_accepted": true,
       "all_first_phase_orders_match_R07": true
     },
-    "NFS_available_GiB": 9.03,
+    "NFS_available_GiB": 8.55,
     "temporarily_evicted_bytes": 77001580022,
-    "remaining_machine_hours": 6.0,
+    "remaining_machine_hours": 5.74,
     "completed_stages": [
       "R08",
-      "R09"
+      "R09",
+      "R10"
     ]
   },
   "runtime_health_monitor_session": 44834,
@@ -174,8 +175,8 @@
   "outer_path_validator_gate": "/public/home/accl15ptg7/run_R08_R10/outer_source_path_optimization_gate_001/COMPLETE.json",
   "R08_actual_CPU_assignment_complete": true,
   "R08_predecessor_source_records_rehashed": 155475,
-  "current_CPU_stage": "R10",
-  "current_CPU_phase": "render",
+  "current_CPU_stage": "all_core_stages_complete",
+  "current_CPU_phase": "final_remote_review_and_readable_previews",
   "CPU_phase_status_reviewed_utc": "2026-09-08T21:55:26.354316+00:00",
   "R08_pre_audit_manifest_file_count": 2492,
   "R08_pre_audit_manifest_logical_bytes": 110357706295,
@@ -186,10 +187,14 @@
   "R09_actual_complete_handoff": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/handoffs/R09.continuation.json",
   "R09_full_eight_request_coverage_verified": true,
   "R10_actual_CPU_assignment_complete": true,
-  "R10_actual_browser_acceptance_complete": false,
+  "R10_actual_browser_acceptance_complete": true,
   "R09_full_stage_publication_status": "complete, all expected remote asset digests verified; upload cache removed",
   "full_stage_Releases_verified": [
     "R08",
-    "R09"
-  ]
+    "R09",
+    "R10"
+  ],
+  "R10_actual_complete_handoff": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/handoffs/R10.continuation.json",
+  "core_workflow_complete": true,
+  "supplementary_readable_previews_status": "running after installing a Chinese font; accepted HTML bytes unchanged"
 }

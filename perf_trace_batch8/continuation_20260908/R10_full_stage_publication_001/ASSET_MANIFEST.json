@@ -1,0 +1,25 @@
+{
+  "status": "verified_ready_for_release",
+  "runtime_goal": "R10",
+  "member_count": 40,
+  "previously_published_raw_file_count": 0,
+  "member_bytes": 915285833,
+  "archive_codec": "zstd one concatenated tar stream; concatenate capture.tar.zst parts in order before extraction",
+  "assets": [
+    {
+      "name": "capture.tar.zst.part001",
+      "size": 366581053,
+      "sha256": "1ead0c357dd1e299c28a45d296022360619f9f53724faabd1e9f7c66c00146f4"
+    },
+    {
+      "name": "FILE_MANIFEST.json",
+      "size": 12491,
+      "sha256": "abacbd75bdc8d2a7e82eadc609bbd3f41e61607043fab67a3ccde77ba7da3deb"
+    },
+    {
+      "name": "R10_offline_acceptance.zip",
+      "size": 394557919,
+      "sha256": "633afcad6e0089feb9bb80df05da358fb83d80730505d5de49e01baa2c253f1c"
+    }
+  ]
+}

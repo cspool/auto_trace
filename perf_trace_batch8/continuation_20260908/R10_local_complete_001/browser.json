@@ -1,0 +1,174 @@
+{
+  "status": "complete",
+  "phase": "browser",
+  "argv": [
+    "/usr/bin/python3",
+    "-B",
+    "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/tools/revision_001/browser_acceptance.py"
+  ],
+  "started_utc": "2026-09-08T22:18:47.380443+00:00",
+  "finished_utc": "2026-09-08T22:23:26.116916+00:00",
+  "elapsed_seconds": 278.73649769998156,
+  "leader_pid": 1186579,
+  "leader_returncode": 0,
+  "observed_descendant_identities": [
+    {
+      "pid": 1186579,
+      "ppid": 1186578,
+      "state": "R",
+      "start_ticks": 54115028
+    },
+    {
+      "pid": 1186611,
+      "ppid": 1186579,
+      "state": "S",
+      "start_ticks": 54115398
+    },
+    {
+      "pid": 1186643,
+      "ppid": 1186611,
+      "state": "S",
+      "start_ticks": 54115458
+    },
+    {
+      "pid": 1186645,
+      "ppid": 1186578,
+      "state": "Z",
+      "start_ticks": 54115490
+    },
+    {
+      "pid": 1186647,
+      "ppid": 1186578,
+      "state": "Z",
+      "start_ticks": 54115490
+    },
+    {
+      "pid": 1186773,
+      "ppid": 1186578,
+      "state": "Z",
+      "start_ticks": 54116507
+    },
+    {
+      "pid": 1186774,
+      "ppid": 1186578,
+      "state": "Z",
+      "start_ticks": 54116508
+    },
+    {
+      "pid": 1186794,
+      "ppid": 1186773,
+      "state": "Z",
+      "start_ticks": 54116529
+    },
+    {
+      "pid": 1186797,
+      "ppid": 1186643,
+      "state": "S",
+      "start_ticks": 54116531
+    },
+    {
+      "pid": 1186815,
+      "ppid": 1186774,
+      "state": "R",
+      "start_ticks": 54116533
+    },
+    {
+      "pid": 1186896,
+      "ppid": 1186774,
+      "state": "Z",
+      "start_ticks": 54116580
+    },
+    {
+      "pid": 1186905,
+      "ppid": 1186774,
+      "state": "S",
+      "start_ticks": 54116581
+    },
+    {
+      "pid": 1186920,
+      "ppid": 1186774,
+      "state": "R",
+      "start_ticks": 54116695
+    },
+    {
+      "pid": 1186929,
+      "ppid": 1186774,
+      "state": "R",
+      "start_ticks": 54116697
+    },
+    {
+      "pid": 1186944,
+      "ppid": 1186774,
+      "state": "Z",
+      "start_ticks": 54116840
+    },
+    {
+      "pid": 1186953,
+      "ppid": 1186774,
+      "state": "Z",
+      "start_ticks": 54116842
+    },
+    {
+      "pid": 1187860,
+      "ppid": 1186774,
+      "state": "Z",
+      "start_ticks": 54121862
+    },
+    {
+      "pid": 1187869,
+      "ppid": 1186774,
+      "state": "Z",
+      "start_ticks": 54121864
+    },
+    {
+      "pid": 1188285,
+      "ppid": 1186774,
+      "state": "S",
+      "start_ticks": 54123992
+    },
+    {
+      "pid": 1188294,
+      "ppid": 1186578,
+      "state": "Z",
+      "start_ticks": 54123995
+    }
+  ],
+  "observed_list_is_not_claimed_full_spawn_event_log": true,
+  "orphan_reaping": [
+    {
+      "pid": 1186645,
+      "wait_status": 0
+    },
+    {
+      "pid": 1186647,
+      "wait_status": 0
+    },
+    {
+      "pid": 1186773,
+      "wait_status": 0
+    },
+    {
+      "pid": 1186774,
+      "wait_status": 0
+    },
+    {
+      "pid": 1188294,
+      "wait_status": 15
+    }
+  ],
+  "kernel_child_subreaper_enabled": true,
+  "remaining_owned_descendants": [],
+  "all_started_processes_terminated": true,
+  "forced_cleanup": false,
+  "cpu_only_environment_device_visibility_empty": true,
+  "proxy_and_profiler_injection_removed": true,
+  "stdout_stderr": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/logs/browser.log",
+    "size": 293,
+    "sha256": "d19ab49d7a0f2def7742ea521b8b7c8bb012afa693c2ccc7444498f8b1130700"
+  },
+  "outer_runner": {
+    "path": "/public/home/accl15ptg7/run_R08_R10/phase_runner_002.py",
+    "sha256": "8ef5c2bcce5f30ee8192232a876b7a16fd2d5bc140ff51cfb91331cb3a26f514"
+  }
+}

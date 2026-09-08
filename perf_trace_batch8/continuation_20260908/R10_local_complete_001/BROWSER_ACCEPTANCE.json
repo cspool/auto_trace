@@ -1,0 +1,419 @@
+{
+  "status": "complete",
+  "runtime_goal": "R10",
+  "cpu_only": true,
+  "browser_binary": {
+    "path": "/root/r08_r10_browser_tools/chromium-1234/chrome-linux64/chrome",
+    "size": 290614600,
+    "sha256": "0b20b130e7edd9dd51873be867761295fe0cfad490c2b9a64f95bd3cfc08fa71"
+  },
+  "browser_version": "151.0.7922.34",
+  "browser_flags": [
+    "--disable-gpu",
+    "--disable-gpu-compositing",
+    "--disable-gpu-rasterization",
+    "--disable-background-networking",
+    "--disable-component-update",
+    "--disable-domain-reliability",
+    "--no-first-run",
+    "--no-default-browser-check",
+    "--host-resolver-rules=MAP * ~NOTFOUND",
+    "--disable-features=MediaRouter,OptimizationHints,AutofillServerCommunication",
+    "--js-flags=--max-old-space-size=32768"
+  ],
+  "network_denial": [
+    "Playwright context offline=true",
+    "route abort all non-file requests",
+    "DNS host resolver all names NOTFOUND",
+    "background-network features disabled"
+  ],
+  "network_attempt_count": 0,
+  "attempted_requests": [],
+  "all_browser_processes_closed_before_result": true,
+  "static": [
+    {
+      "file": {
+        "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/acceptance/index.html",
+        "size": 4552,
+        "sha256": "ad5a497cbb98fab56026ae11ee0ceec6c67ecc80f36ff5dd193b4a6b3decfa88"
+      },
+      "active_external_resources": [],
+      "runtime_code_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "network_patterns_rejected": [
+        "\\bfetch\\s*\\(",
+        "\\bXMLHttpRequest\\b",
+        "\\bWebSocket\\b",
+        "\\bEventSource\\b",
+        "\\bimport\\s*\\(",
+        "serviceWorker\\s*\\.\\s*register",
+        "\\bsendBeacon\\s*\\(",
+        "https?://",
+        "(?<!:)//[a-zA-Z0-9.-]+/"
+      ],
+      "relative_navigation": [
+        "E2E_PROCESS_TIMELINE.html",
+        "E2E_PROCESS_TIMELINE_LOSSLESS.html",
+        "HIGH_LATENCY_PROCESS_HARDWARE_TIMELINE.html",
+        "CONCURRENCY_UTILIZATION.html",
+        "E2E_PROCESS_TIMELINE.full.perfetto.json",
+        "full_timeline_manifest.json",
+        "offline_acceptance_manifest.json",
+        "../R10_SOURCE_LINEAGE.json",
+        "../R10_COMPLETION_AUDIT.json"
+      ]
+    },
+    {
+      "file": {
+        "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/acceptance/E2E_PROCESS_TIMELINE.html",
+        "size": 234639,
+        "sha256": "9fa7e352dd7fabcf477edb64ed8baade4874f4747e0feb1b73f328e1362ee250"
+      },
+      "active_external_resources": [],
+      "runtime_code_sha256": "373f0d11054c5b361ce1b104283ab4aed90ae7c77c7c9cdf2a8ff1ccd544cb8a",
+      "network_patterns_rejected": [
+        "\\bfetch\\s*\\(",
+        "\\bXMLHttpRequest\\b",
+        "\\bWebSocket\\b",
+        "\\bEventSource\\b",
+        "\\bimport\\s*\\(",
+        "serviceWorker\\s*\\.\\s*register",
+        "\\bsendBeacon\\s*\\(",
+        "https?://",
+        "(?<!:)//[a-zA-Z0-9.-]+/"
+      ],
+      "relative_navigation": [
+        "index.html",
+        "E2E_PROCESS_TIMELINE_LOSSLESS.html",
+        "E2E_PROCESS_TIMELINE.full.perfetto.json"
+      ]
+    },
+    {
+      "file": {
+        "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/acceptance/E2E_PROCESS_TIMELINE_LOSSLESS.html",
+        "size": 56065528,
+        "sha256": "dea1c493eb1a58d4950f7006be63402dc24ac9ec5824f4ea4489c0577327db2a"
+      },
+      "active_external_resources": [],
+      "runtime_code_sha256": "373f0d11054c5b361ce1b104283ab4aed90ae7c77c7c9cdf2a8ff1ccd544cb8a",
+      "network_patterns_rejected": [
+        "\\bfetch\\s*\\(",
+        "\\bXMLHttpRequest\\b",
+        "\\bWebSocket\\b",
+        "\\bEventSource\\b",
+        "\\bimport\\s*\\(",
+        "serviceWorker\\s*\\.\\s*register",
+        "\\bsendBeacon\\s*\\(",
+        "https?://",
+        "(?<!:)//[a-zA-Z0-9.-]+/"
+      ],
+      "relative_navigation": [
+        "index.html"
+      ]
+    },
+    {
+      "file": {
+        "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/acceptance/HIGH_LATENCY_PROCESS_HARDWARE_TIMELINE.html",
+        "size": 117864802,
+        "sha256": "f17f5db50935da3816c0492fca26c9ba18db087fbda3aa29dad622464ffbfebe"
+      },
+      "active_external_resources": [],
+      "runtime_code_sha256": "373f0d11054c5b361ce1b104283ab4aed90ae7c77c7c9cdf2a8ff1ccd544cb8a",
+      "network_patterns_rejected": [
+        "\\bfetch\\s*\\(",
+        "\\bXMLHttpRequest\\b",
+        "\\bWebSocket\\b",
+        "\\bEventSource\\b",
+        "\\bimport\\s*\\(",
+        "serviceWorker\\s*\\.\\s*register",
+        "\\bsendBeacon\\s*\\(",
+        "https?://",
+        "(?<!:)//[a-zA-Z0-9.-]+/"
+      ],
+      "relative_navigation": [
+        "index.html"
+      ]
+    },
+    {
+      "file": {
+        "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/acceptance/CONCURRENCY_UTILIZATION.html",
+        "size": 247604595,
+        "sha256": "154ac54a42fc7978fd3679dc4b3e95111445c51a333d7a71047de1360eb501e4"
+      },
+      "active_external_resources": [],
+      "runtime_code_sha256": "373f0d11054c5b361ce1b104283ab4aed90ae7c77c7c9cdf2a8ff1ccd544cb8a",
+      "network_patterns_rejected": [
+        "\\bfetch\\s*\\(",
+        "\\bXMLHttpRequest\\b",
+        "\\bWebSocket\\b",
+        "\\bEventSource\\b",
+        "\\bimport\\s*\\(",
+        "serviceWorker\\s*\\.\\s*register",
+        "\\bsendBeacon\\s*\\(",
+        "https?://",
+        "(?<!:)//[a-zA-Z0-9.-]+/"
+      ],
+      "relative_navigation": [
+        "index.html"
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "page": {
+        "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/acceptance/index.html",
+        "size": 4552,
+        "sha256": "ad5a497cbb98fab56026ae11ee0ceec6c67ecc80f36ff5dd193b4a6b3decfa88"
+      },
+      "embedded_table_counts": {},
+      "checks": {},
+      "console_errors": [],
+      "page_errors": [],
+      "external_requests": []
+    },
+    {
+      "page": {
+        "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/acceptance/E2E_PROCESS_TIMELINE.html",
+        "size": 234639,
+        "sha256": "9fa7e352dd7fabcf477edb64ed8baade4874f4747e0feb1b73f328e1362ee250"
+      },
+      "embedded_table_counts": {
+        "request_timeline": 8
+      },
+      "checks": {},
+      "console_errors": [],
+      "page_errors": [],
+      "external_requests": []
+    },
+    {
+      "page": {
+        "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/acceptance/E2E_PROCESS_TIMELINE_LOSSLESS.html",
+        "size": 56065528,
+        "sha256": "dea1c493eb1a58d4950f7006be63402dc24ac9ec5824f4ea4489c0577327db2a"
+      },
+      "embedded_table_counts": {
+        "kernel_timeline": 23660,
+        "process_timeline": 12544,
+        "request_timeline": 8
+      },
+      "checks": {
+        "full_universe": {
+          "main": 59872,
+          "context": 318850,
+          "all": 378722,
+          "unique_ids": 378722,
+          "kinds": {
+            "request": 8,
+            "forward": 1024,
+            "layer": 1024,
+            "process": 12544,
+            "HIP runtime": 316802,
+            "strict_owned_kernel": 23660,
+            "gpu_queue": 23660
+          },
+          "requests": {
+            "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c": {
+              "rank": "1",
+              "device": "1",
+              "requests": 1,
+              "processes": 1568,
+              "owner_kernels": 3188,
+              "queue_kernels": 3188
+            },
+            "batch8-dual-dcu-dp2-req-002-28a42990210e6f68": {
+              "rank": "0",
+              "device": "0",
+              "requests": 1,
+              "processes": 1568,
+              "owner_kernels": 3188,
+              "queue_kernels": 3188
+            },
+            "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f": {
+              "rank": "1",
+              "device": "1",
+              "requests": 1,
+              "processes": 1568,
+              "owner_kernels": 3380,
+              "queue_kernels": 3380
+            },
+            "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786": {
+              "rank": "0",
+              "device": "0",
+              "requests": 1,
+              "processes": 1568,
+              "owner_kernels": 3380,
+              "queue_kernels": 3380
+            },
+            "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5": {
+              "rank": "0",
+              "device": "0",
+              "requests": 1,
+              "processes": 1568,
+              "owner_kernels": 3380,
+              "queue_kernels": 3380
+            },
+            "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41": {
+              "rank": "0",
+              "device": "0",
+              "requests": 1,
+              "processes": 1568,
+              "owner_kernels": 1882,
+              "queue_kernels": 1882
+            },
+            "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3": {
+              "rank": "1",
+              "device": "1",
+              "requests": 1,
+              "processes": 1568,
+              "owner_kernels": 1882,
+              "queue_kernels": 1882
+            },
+            "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04": {
+              "rank": "1",
+              "device": "1",
+              "requests": 1,
+              "processes": 1568,
+              "owner_kernels": 3380,
+              "queue_kernels": 3380
+            }
+          },
+          "source_lookup_all_pass": true,
+          "integer_coordinates_all_pass": true,
+          "nonoverlap_lanes": true
+        },
+        "exact_history": {
+          "states": 105,
+          "span_ns": "1",
+          "back_forward_exact": true
+        },
+        "pan_zoom_reset": {
+          "exact_pan_ns": 17,
+          "pointer_anchor_zoom": true,
+          "reset": true
+        },
+        "filters_fit_locate": {
+          "filters": {
+            "process": {
+              "value": "input_rmsnorm",
+              "complete_matches": 17338
+            },
+            "event": {
+              "value": "request",
+              "complete_matches": 8
+            },
+            "layer": {
+              "value": "0",
+              "complete_matches": 49588
+            },
+            "phase": {
+              "value": "prefill",
+              "complete_matches": 211320
+            },
+            "family": {
+              "value": "input_rmsnorm",
+              "complete_matches": 15546
+            },
+            "track": {
+              "value": "request / batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c / lane 0",
+              "complete_matches": 1
+            },
+            "request_id": {
+              "value": "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c",
+              "complete_matches": 50039
+            }
+          },
+          "first_id": "request:batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c",
+          "last_id": "process:1461883c32d85341986385e69397ebe9742c5615a8a6b597301ebc319a44d3dc",
+          "complete_universe_unchanged": 378722
+        },
+        "unbounded_interval_inspection": {
+          "full_viewport_count": 378722,
+          "dom_rows_before_zoom": 378722,
+          "one_ns_overlap_count": 13,
+          "result_cap": false,
+          "density_preserves_all": true
+        },
+        "visible_pointer_and_jump_controls": {
+          "wheel": true,
+          "shift_box": true,
+          "drag_pan": true,
+          "pixel_all_intersections": true,
+          "exact_jump_one_ns": true
+        }
+      },
+      "console_errors": [],
+      "page_errors": [],
+      "external_requests": []
+    },
+    {
+      "page": {
+        "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/acceptance/HIGH_LATENCY_PROCESS_HARDWARE_TIMELINE.html",
+        "size": 117864802,
+        "sha256": "f17f5db50935da3816c0492fca26c9ba18db087fbda3aa29dad622464ffbfebe"
+      },
+      "embedded_table_counts": {
+        "high_latency_processes": 1237,
+        "kernel_timeline": 23660,
+        "process_live_utilization": 12544,
+        "process_timeline": 12544,
+        "request_timeline": 8,
+        "traffic_resource_attachment": 177408
+      },
+      "checks": {
+        "high": 1237,
+        "all_processes": 12544,
+        "metrics": 177408,
+        "high_dom": 1237
+      },
+      "console_errors": [],
+      "page_errors": [],
+      "external_requests": []
+    },
+    {
+      "page": {
+        "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/acceptance/CONCURRENCY_UTILIZATION.html",
+        "size": 247604595,
+        "sha256": "154ac54a42fc7978fd3679dc4b3e95111445c51a333d7a71047de1360eb501e4"
+      },
+      "embedded_table_counts": {
+        "kernel_concurrency": 70998,
+        "launch_gaps": 23652,
+        "live_utilization_aligned": 2492608,
+        "process_live_utilization": 12544,
+        "queue_concurrency": 70998,
+        "request_timeline": 8
+      },
+      "checks": {
+        "live": 2492608,
+        "samples": 2491806,
+        "gaps": 800,
+        "anchors": 2,
+        "kernel_segments": 70998,
+        "queue_segments": 70998,
+        "launch_gaps": 23652,
+        "process_availability": 12544
+      },
+      "console_errors": [],
+      "page_errors": [],
+      "external_requests": []
+    }
+  ],
+  "harness": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/tools/revision_001/browser_acceptance.py",
+    "size": 14655,
+    "sha256": "7922f50f39a83a21fe1effd451d5c62d24d77c4c52a0ba783ca4692a7346890d"
+  },
+  "interpreter": {
+    "path": "/usr/bin/python3.10",
+    "size": 5937768,
+    "sha256": "df23391eb5ab66f005be15f792d55766d7ce96198e9e10df2aea72aec8c686ea"
+  },
+  "argv": [
+    "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/tools/revision_001/browser_acceptance.py"
+  ],
+  "full_timeline_manifest": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/acceptance/full_timeline_manifest.json",
+    "size": 5961267,
+    "sha256": "fa7a80c4ce0a015edf66c6e9daab46f3a8e5d1c6b8c11b414c52bb36b90baf5d"
+  },
+  "elapsed_seconds": 278.49045208096504
+}

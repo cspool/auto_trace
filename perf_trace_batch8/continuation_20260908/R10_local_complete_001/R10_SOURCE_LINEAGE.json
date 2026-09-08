@@ -1,0 +1,2906 @@
+{
+  "assignment": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/authorization/assignment.json",
+    "sha256": "62217f925706bb6c7733929676bc5e6d702a9275c80d533ac06e8482540e0636",
+    "size": 60972
+  },
+  "browser_acceptance": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/validation/BROWSER_ACCEPTANCE.json",
+    "sha256": "c6e58f7f2051f2950d3d2cefe60a86fe44b72914ba7caf55d2fcf3b6f0d18b28",
+    "size": 14915
+  },
+  "browser_binary": {
+    "path": "/root/r08_r10_browser_tools/chromium-1234/chrome-linux64/chrome",
+    "sha256": "0b20b130e7edd9dd51873be867761295fe0cfad490c2b9a64f95bd3cfc08fa71",
+    "size": 290614600
+  },
+  "consumed_sources": [
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/process_ranges.csv",
+      "sha256": "591bd9b338b21c21d65536139a7b3ebe815021d4f70a6fad770bafb825cf9029",
+      "size": 14219698
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/strict_owned_kernels.csv",
+      "sha256": "aaa51fa3ce337cff07cf8a005a15ffaa229dbe77223d4c76b3b2caa4e45da030",
+      "size": 27452414
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/hip_runtime_calls.csv",
+      "sha256": "69a5a47bd2e6083cf63c0c6335175316292084b2b3877007ce4fb11f5cea54c7",
+      "size": 197920228
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/layer_ranges.csv",
+      "sha256": "4d5cc3a481a2d8a8fd77a59f7f3c3aaefbfbeec7a50f93d959009f058657a747",
+      "size": 725511
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/forward_ranges.csv",
+      "sha256": "88f3f4ff526ede132d0c0a4d71e66362e179a988b7fe62ca19d82b39bd7734c6",
+      "size": 659271
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/request_ranges.csv",
+      "sha256": "3ba66817bd84e574bc984bfaa87c02874db7ecd35b8624d1cc9af69b9faac788",
+      "size": 495431
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/alignment/r07_live_utilization_aligned.csv",
+      "sha256": "918f1711f5c88308c581e862adcd0577806cfefaca37d0e175be51b827855689",
+      "size": 749649669
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/alignment/r07_live_utilization_gaps.csv",
+      "sha256": "638933624a3fe520199726fe612ba01bcfb2e446ba2350aec1ab52dcb611c629",
+      "size": 199080
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/alignment/r07_process_live_utilization.csv",
+      "sha256": "c2ffcb1f85c3c4321fed1973a6fd7ff4e17031e1a3da2e7b56078baa172d91f3",
+      "size": 8038046
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/dependency/fresh_run_dependency_adapter.csv",
+      "sha256": "f6555a76473defa2a2c13929d9d17ebdc123012bbad2349bf1e4200cc01b777e",
+      "size": 39342248
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/contract/r07_bound_target_sidecar.json",
+      "sha256": "a912cd5f4f47bde82b1d0853b546ad82fb9b1ee719994716512cbf3bce278ea5",
+      "size": 77816576
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/r07_additional_inputs/clock_anchors.json",
+      "sha256": "6d026e7c5135ce409d8e7d0ed1d2e4600f8373d716238e9de51478edeff61ca0",
+      "size": 1142
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/r07_additional_inputs/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/capture/workload/request_results.json",
+      "sha256": "5c7c7ad97d55f31bc4794609f071b3d0ccfab6e803917cfecef247bab1689bd8",
+      "size": 115937
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/validation/batch8_observed_coverage_gate_001.json",
+      "sha256": "901e7bfebed8eb21474d0cfdc44f9253ca37e80d1c828374b641af48575eb64d",
+      "size": 36166
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/model/resource_model_001/traffic_resource_attachment.csv",
+      "sha256": "254c2a34c8ef4b100f0f1a3281f58af335730f15c6b44adfc61f36d276bc3440",
+      "size": 266289956
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/model/traffic_resource_model.json",
+      "sha256": "45e1455505863463aef6cd4a2d392d0a3ad45041f84db393883c997211664bfd",
+      "size": 1725
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/R08_COMPLETION_AUDIT.json",
+      "sha256": "820dc20dc5da89301c816496baad7c2016c2ea30b421467e9dec1fdaa7a210ed",
+      "size": 27387
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/lineage/R08_SOURCE_LINEAGE.json",
+      "sha256": "d593abbcfb562ba270391f31e04424f5cbc91e843e00df7ad7e66166fda64c6f",
+      "size": 28225
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/continuation_001/analysis/fresh_e2e_analysis.accepted.json",
+      "sha256": "983e9c6f644a7164d6a7cf01cc3bbfee6714ce62fb5b564ae59775bf4f4c7b79",
+      "size": 106542
+    },
+    {
+      "availability_counts": {
+        "available": 8
+      },
+      "coverage": {
+        "devices": [
+          "0",
+          "1"
+        ],
+        "ranks": [
+          "0",
+          "1"
+        ],
+        "requests": [
+          "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c",
+          "batch8-dual-dcu-dp2-req-002-28a42990210e6f68",
+          "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f",
+          "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786",
+          "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5",
+          "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41",
+          "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3",
+          "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04"
+        ]
+      },
+      "evidence_class_counts": {
+        "observed_r07": 8
+      },
+      "integer_time_encoding": "decimal integer nanoseconds; no float conversion",
+      "lineage_id": "batch8-dp2-fresh-003",
+      "logical_name": "request_timeline",
+      "null_encoding": "empty CSV cell; original source values preserved as strings",
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/continuation_001/tables/request_timeline.csv",
+      "row_count": 8,
+      "schema": [
+        "schema_version",
+        "runtime_run_id",
+        "lineage_id",
+        "trace_profile_sha256",
+        "request_id",
+        "rank",
+        "physical_device_id",
+        "source_record_kind",
+        "source_path",
+        "source_sha256",
+        "source_row_id",
+        "evidence_class",
+        "availability_state",
+        "availability_reason",
+        "completion_tokens",
+        "content_sha256",
+        "data_parallel_rank_requested",
+        "dispatch_ordinal",
+        "duration_ns",
+        "end_monotonic_ns",
+        "end_realtime_ns",
+        "error",
+        "final_commit_byte_length",
+        "finish_reason",
+        "generated_token_ids",
+        "generated_token_ids_sha256",
+        "http_status",
+        "internal_request_id_expected",
+        "physical_device_id_expected",
+        "pre_staged_body_byte_length",
+        "prompt_tokens",
+        "reasoning_sha256",
+        "request_body_byte_length",
+        "request_body_prestaged_before_dispatch",
+        "response_id",
+        "response_x_request_id",
+        "start_monotonic_ns",
+        "start_realtime_ns",
+        "measured_request_ordinal",
+        "begin_ns",
+        "end_ns",
+        "client_monotonic_duration_ns",
+        "clock_drift_difference_ns",
+        "observed_phase_markers",
+        "warmup"
+      ],
+      "schema_sha256": "b7e3e6e99729e4870df5786ac224098f9b6a3e720b1ca5d7f1f208a8077b8472",
+      "sha256": "791ef2cf9f22d6295e880b77cb4596f260782acf2edc6e7a8ada2d13f7785ba0",
+      "size": 1051258,
+      "sources": [
+        {
+          "path": "/public/home/accl15ptg7/run_R08_R10/r07_additional_inputs/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/capture/workload/request_results.json",
+          "sha256": "5c7c7ad97d55f31bc4794609f071b3d0ccfab6e803917cfecef247bab1689bd8",
+          "size": 115937
+        },
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/request_ranges.csv",
+          "sha256": "3ba66817bd84e574bc984bfaa87c02874db7ecd35b8624d1cc9af69b9faac788",
+          "size": 495431
+        }
+      ],
+      "stable_sort_key": [
+        "measured_request_ordinal"
+      ]
+    },
+    {
+      "availability_counts": {
+        "available": 12544
+      },
+      "coverage": {
+        "devices": [
+          "0",
+          "1"
+        ],
+        "ranks": [
+          "0",
+          "1"
+        ],
+        "requests": [
+          "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c",
+          "batch8-dual-dcu-dp2-req-002-28a42990210e6f68",
+          "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f",
+          "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786",
+          "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5",
+          "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41",
+          "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3",
+          "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04"
+        ]
+      },
+      "evidence_class_counts": {
+        "observed_r07": 12544
+      },
+      "integer_time_encoding": "decimal integer nanoseconds; no float conversion",
+      "lineage_id": "batch8-dp2-fresh-003",
+      "logical_name": "process_timeline",
+      "null_encoding": "empty CSV cell; original source values preserved as strings",
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/continuation_001/tables/process_timeline.csv",
+      "row_count": 12544,
+      "schema": [
+        "process_range_id",
+        "canonical_target_id",
+        "canonical_target_sha256",
+        "target_kind",
+        "range_name",
+        "parent_range_name",
+        "request_id",
+        "forward_id",
+        "layer_idx",
+        "layer_occurrence",
+        "layer_type",
+        "phase",
+        "q_len",
+        "kv_len",
+        "process_id",
+        "fragment_id",
+        "aggregation_key",
+        "dp_rank",
+        "native_device",
+        "pid",
+        "tid",
+        "config_key",
+        "hiptx_table",
+        "hiptx_rowid",
+        "hiptx_range_index",
+        "begin_ns",
+        "end_ns",
+        "duration_ns",
+        "begin_runtime_index",
+        "end_runtime_index",
+        "depth",
+        "explicit_no_kernel_target",
+        "strict_kernel_owner",
+        "sidecar_start_monotonic_ns",
+        "sidecar_end_monotonic_ns",
+        "sidecar_start_realtime_ns",
+        "sidecar_end_realtime_ns",
+        "sidecar_alignment_uncertainty_ns",
+        "owned_runtime_call_count",
+        "owned_kernel_count",
+        "ownership_state",
+        "evidence_class",
+        "raw_database_sha256",
+        "schema_version",
+        "runtime_run_id",
+        "lineage_id",
+        "trace_profile_sha256",
+        "rank",
+        "physical_device_id",
+        "source_record_kind",
+        "source_path",
+        "source_sha256",
+        "source_row_id",
+        "availability_state",
+        "availability_reason",
+        "source_evidence_class",
+        "measured_request_ordinal",
+        "parent_process_range_id",
+        "source_r06_target_id",
+        "runtime_bound_target",
+        "layer_forward_context",
+        "hip_runtime_context_schema",
+        "hip_runtime_context",
+        "context_source_records",
+        "coverage_scope"
+      ],
+      "schema_sha256": "0c9937d41b8d0d326ba746006b9e439b7d351f8b17d3563ceaaba99cbe1cf165",
+      "sha256": "abc86a88e8b83e78c71914d3075dd77c2f128c98e763aae8bacf5b628f44d723",
+      "size": 214353096,
+      "sources": [
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/process_ranges.csv",
+          "sha256": "591bd9b338b21c21d65536139a7b3ebe815021d4f70a6fad770bafb825cf9029",
+          "size": 14219698
+        },
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/hip_runtime_calls.csv",
+          "sha256": "69a5a47bd2e6083cf63c0c6335175316292084b2b3877007ce4fb11f5cea54c7",
+          "size": 197920228
+        },
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/layer_ranges.csv",
+          "sha256": "4d5cc3a481a2d8a8fd77a59f7f3c3aaefbfbeec7a50f93d959009f058657a747",
+          "size": 725511
+        },
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/forward_ranges.csv",
+          "sha256": "88f3f4ff526ede132d0c0a4d71e66362e179a988b7fe62ca19d82b39bd7734c6",
+          "size": 659271
+        }
+      ],
+      "stable_sort_key": [
+        "begin_ns",
+        "process_range_id"
+      ]
+    },
+    {
+      "availability_counts": {
+        "available": 23660
+      },
+      "coverage": {
+        "devices": [
+          "0",
+          "1"
+        ],
+        "ranks": [
+          "0",
+          "1"
+        ],
+        "requests": [
+          "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c",
+          "batch8-dual-dcu-dp2-req-002-28a42990210e6f68",
+          "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f",
+          "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786",
+          "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5",
+          "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41",
+          "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3",
+          "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04"
+        ]
+      },
+      "evidence_class_counts": {
+        "observed_r07": 23660
+      },
+      "integer_time_encoding": "decimal integer nanoseconds; no float conversion",
+      "lineage_id": "batch8-dp2-fresh-003",
+      "logical_name": "kernel_timeline",
+      "null_encoding": "empty CSV cell; original source values preserved as strings",
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/continuation_001/tables/kernel_timeline.csv",
+      "row_count": 23660,
+      "schema": [
+        "kernel_instance_id",
+        "owner_process_range_id",
+        "owner_canonical_target_id",
+        "request_id",
+        "forward_id",
+        "layer_idx",
+        "layer_occurrence",
+        "process_id",
+        "fragment_id",
+        "dp_rank",
+        "native_device",
+        "pid",
+        "config_key",
+        "hip_runtime_table",
+        "hip_runtime_rowid",
+        "hip_runtime_index",
+        "hip_runtime_api",
+        "native_device_table",
+        "native_device_rowid",
+        "native_device_index",
+        "begin_ns",
+        "end_ns",
+        "duration_ns",
+        "queue_id",
+        "stream_id",
+        "native_kernel_name",
+        "ownership_depth",
+        "ownership_chain",
+        "evidence_class",
+        "raw_database_sha256",
+        "schema_version",
+        "runtime_run_id",
+        "lineage_id",
+        "trace_profile_sha256",
+        "rank",
+        "physical_device_id",
+        "source_record_kind",
+        "source_path",
+        "source_sha256",
+        "source_row_id",
+        "availability_state",
+        "availability_reason",
+        "source_evidence_class",
+        "measured_request_ordinal",
+        "phase",
+        "layer_type",
+        "q_len",
+        "kv_len",
+        "runtime_call_id",
+        "launch_begin_ns",
+        "launch_end_ns",
+        "launch_duration_ns",
+        "launch_tid",
+        "r08_physical_attribute_ids",
+        "resource_join_rule",
+        "runtime_source_record"
+      ],
+      "schema_sha256": "e7fb8bd3b93a474f4077e123b8c832b1455a87a6a9d4d6a61dea5d055bd41571",
+      "sha256": "56d5ccb807550dc93748dbcc43146a74f6606cd041df6795c4df0f65b6bd257c",
+      "size": 51027444,
+      "sources": [
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/strict_owned_kernels.csv",
+          "sha256": "aaa51fa3ce337cff07cf8a005a15ffaa229dbe77223d4c76b3b2caa4e45da030",
+          "size": 27452414
+        },
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/hip_runtime_calls.csv",
+          "sha256": "69a5a47bd2e6083cf63c0c6335175316292084b2b3877007ce4fb11f5cea54c7",
+          "size": 197920228
+        },
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/model/resource_model_001/traffic_resource_attachment.csv",
+          "sha256": "254c2a34c8ef4b100f0f1a3281f58af335730f15c6b44adfc61f36d276bc3440",
+          "size": 266289956
+        }
+      ],
+      "stable_sort_key": [
+        "begin_ns",
+        "kernel_instance_id"
+      ]
+    },
+    {
+      "availability_counts": {
+        "available": 2492608
+      },
+      "coverage": {
+        "devices": [
+          "0",
+          "1"
+        ],
+        "ranks": [
+          "0",
+          "1"
+        ],
+        "requests": []
+      },
+      "evidence_class_counts": {
+        "observed_r07_clock_anchor": 2,
+        "observed_r07_live_utilization": 2492606
+      },
+      "integer_time_encoding": "decimal integer nanoseconds; no float conversion",
+      "lineage_id": "batch8-dp2-fresh-003",
+      "logical_name": "live_utilization_aligned",
+      "null_encoding": "empty CSV cell; original source values preserved as strings",
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/continuation_001/tables/live_utilization_aligned.csv",
+      "row_count": 2492608,
+      "schema": [
+        "schema_version",
+        "runtime_run_id",
+        "lineage_id",
+        "trace_profile_sha256",
+        "request_id",
+        "rank",
+        "physical_device_id",
+        "source_record_kind",
+        "source_path",
+        "source_sha256",
+        "source_row_id",
+        "evidence_class",
+        "availability_state",
+        "availability_reason",
+        "record_kind",
+        "runtime_attempt_id",
+        "sequence",
+        "dp_rank",
+        "native_device",
+        "call_begin_monotonic_ns",
+        "call_end_monotonic_ns",
+        "sample_midpoint_monotonic_ns",
+        "call_begin_realtime_ns",
+        "call_end_realtime_ns",
+        "sample_midpoint_realtime_ns",
+        "call_latency_ns",
+        "se_active_cu_pct",
+        "alignment_uncertainty_ns",
+        "rsmi_status",
+        "timing_eligible",
+        "sample_availability_state",
+        "source_raw_samples_sha256",
+        "previous_sequence",
+        "next_sequence",
+        "gap_begin_monotonic_ns",
+        "gap_end_monotonic_ns",
+        "unobserved_gap_ns",
+        "adjacent_sample_begin_delta_ns",
+        "gap_threshold_ns",
+        "source_raw_gap_intervals_sha256",
+        "anchor_name",
+        "anchor_monotonic_before_ns",
+        "anchor_monotonic_after_ns",
+        "anchor_monotonic_midpoint_ns",
+        "anchor_realtime_ns",
+        "anchor_pair_uncertainty_ns",
+        "anchor_metadata"
+      ],
+      "schema_sha256": "04cf0749ac3e09c46888362324f49b63742fedb9eb91c9a0df7116d2a49ccf0d",
+      "sha256": "24d686a0ae59e863d0b9a31cb0fc91bcb7151d3e045ab7cddd0411abc1993f5e",
+      "size": 1720836222,
+      "sources": [
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/alignment/r07_live_utilization_aligned.csv",
+          "sha256": "918f1711f5c88308c581e862adcd0577806cfefaca37d0e175be51b827855689",
+          "size": 749649669
+        },
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/alignment/r07_live_utilization_gaps.csv",
+          "sha256": "638933624a3fe520199726fe612ba01bcfb2e446ba2350aec1ab52dcb611c629",
+          "size": 199080
+        },
+        {
+          "path": "/public/home/accl15ptg7/run_R08_R10/r07_additional_inputs/clock_anchors.json",
+          "sha256": "6d026e7c5135ce409d8e7d0ed1d2e4600f8373d716238e9de51478edeff61ca0",
+          "size": 1142
+        }
+      ],
+      "stable_sort_key": [
+        "record_kind_source_order",
+        "native_device",
+        "sequence"
+      ]
+    },
+    {
+      "availability_counts": {
+        "available": 4631,
+        "unavailable_intrinsic_short_window": 7907,
+        "unavailable_sampling_gap": 6
+      },
+      "coverage": {
+        "devices": [
+          "0",
+          "1"
+        ],
+        "ranks": [
+          "0",
+          "1"
+        ],
+        "requests": [
+          "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c",
+          "batch8-dual-dcu-dp2-req-002-28a42990210e6f68",
+          "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f",
+          "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786",
+          "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5",
+          "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41",
+          "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3",
+          "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04"
+        ]
+      },
+      "evidence_class_counts": {
+        "derived_from_observed_r07": 4631,
+        "unavailable": 7913
+      },
+      "integer_time_encoding": "decimal integer nanoseconds; no float conversion",
+      "lineage_id": "batch8-dp2-fresh-003",
+      "logical_name": "process_live_utilization",
+      "null_encoding": "empty CSV cell; original source values preserved as strings",
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/continuation_001/tables/process_live_utilization.csv",
+      "row_count": 12544,
+      "schema": [
+        "process_range_id",
+        "canonical_target_id",
+        "target_kind",
+        "request_id",
+        "forward_id",
+        "layer_idx",
+        "layer_occurrence",
+        "process_id",
+        "fragment_id",
+        "dp_rank",
+        "native_device",
+        "process_begin_monotonic_ns",
+        "process_end_monotonic_ns",
+        "process_duration_monotonic_ns",
+        "process_begin_realtime_ns",
+        "process_end_realtime_ns",
+        "process_sidecar_alignment_uncertainty_ns",
+        "real_sample_count_inside",
+        "timing_eligible_sample_count",
+        "alignment_error_sample_count",
+        "intersecting_gap_count",
+        "se_active_cu_pct_mean",
+        "availability_state",
+        "source_process_ranges_sha256",
+        "source_raw_samples_sha256",
+        "source_raw_gap_intervals_sha256",
+        "source_clock_anchors_sha256",
+        "evidence_class",
+        "schema_version",
+        "runtime_run_id",
+        "lineage_id",
+        "trace_profile_sha256",
+        "rank",
+        "physical_device_id",
+        "source_record_kind",
+        "source_path",
+        "source_sha256",
+        "source_row_id",
+        "availability_reason",
+        "sample_membership_rule",
+        "sample_left_index_per_device",
+        "sample_right_exclusive_index_per_device",
+        "eligible_value_sum",
+        "intersecting_gap_source_ids",
+        "source_process_record",
+        "source_sample_record"
+      ],
+      "schema_sha256": "b7409eb218a1b3522f70cade00f1615961982729f3f7a502f66e1db67288722c",
+      "sha256": "7ed9d7bd064b57ced6568010ec3249cc245805b55b1d83f209ebe28ec6a45189",
+      "size": 22030404,
+      "sources": [
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/alignment/r07_process_live_utilization.csv",
+          "sha256": "c2ffcb1f85c3c4321fed1973a6fd7ff4e17031e1a3da2e7b56078baa172d91f3",
+          "size": 8038046
+        },
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/process_ranges.csv",
+          "sha256": "591bd9b338b21c21d65536139a7b3ebe815021d4f70a6fad770bafb825cf9029",
+          "size": 14219698
+        },
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/alignment/r07_live_utilization_aligned.csv",
+          "sha256": "918f1711f5c88308c581e862adcd0577806cfefaca37d0e175be51b827855689",
+          "size": 749649669
+        },
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/alignment/r07_live_utilization_gaps.csv",
+          "sha256": "638933624a3fe520199726fe612ba01bcfb2e446ba2350aec1ab52dcb611c629",
+          "size": 199080
+        },
+        {
+          "path": "/public/home/accl15ptg7/run_R08_R10/r07_additional_inputs/clock_anchors.json",
+          "sha256": "6d026e7c5135ce409d8e7d0ed1d2e4600f8373d716238e9de51478edeff61ca0",
+          "size": 1142
+        }
+      ],
+      "stable_sort_key": [
+        "process_begin_realtime_ns",
+        "process_range_id"
+      ]
+    },
+    {
+      "availability_counts": {
+        "available": 70998
+      },
+      "coverage": {
+        "devices": [
+          "0",
+          "1"
+        ],
+        "ranks": [
+          "0",
+          "1"
+        ],
+        "requests": [
+          "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c",
+          "batch8-dual-dcu-dp2-req-002-28a42990210e6f68",
+          "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f",
+          "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786",
+          "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5",
+          "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41",
+          "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3",
+          "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04"
+        ]
+      },
+      "evidence_class_counts": {
+        "derived_from_observed_r07": 70998
+      },
+      "integer_time_encoding": "decimal integer nanoseconds; no float conversion",
+      "lineage_id": "batch8-dp2-fresh-003",
+      "logical_name": "kernel_concurrency",
+      "null_encoding": "empty CSV cell; original source values preserved as strings",
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/continuation_001/tables/kernel_concurrency.csv",
+      "row_count": 70998,
+      "schema": [
+        "schema_version",
+        "runtime_run_id",
+        "lineage_id",
+        "trace_profile_sha256",
+        "request_id",
+        "rank",
+        "physical_device_id",
+        "source_record_kind",
+        "source_path",
+        "source_sha256",
+        "source_row_id",
+        "evidence_class",
+        "availability_state",
+        "availability_reason",
+        "segment_id",
+        "scope_type",
+        "scope_id",
+        "begin_ns",
+        "end_ns",
+        "duration_ns",
+        "active_kernel_count",
+        "active_kernel_ids",
+        "active_kernel_ids_sha256",
+        "active_queue_count",
+        "active_queue_ids",
+        "aggregation_rule",
+        "clock",
+        "algorithm_version"
+      ],
+      "schema_sha256": "54f77c8685e3d873d84e10a102d92d292f9874ea5d7f5ded3931caf5df6b7096",
+      "sha256": "dc68011f73e03733c516d8c371df34d00b376d1e33d34b0af470ce5e1531cc02",
+      "size": 63446036,
+      "sources": [
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/strict_owned_kernels.csv",
+          "sha256": "aaa51fa3ce337cff07cf8a005a15ffaa229dbe77223d4c76b3b2caa4e45da030",
+          "size": 27452414
+        }
+      ],
+      "stable_sort_key": [
+        "scope_type",
+        "scope_id",
+        "begin_ns",
+        "segment_id"
+      ]
+    },
+    {
+      "availability_counts": {
+        "available": 70998
+      },
+      "coverage": {
+        "devices": [
+          "0",
+          "1"
+        ],
+        "ranks": [
+          "0",
+          "1"
+        ],
+        "requests": [
+          "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c",
+          "batch8-dual-dcu-dp2-req-002-28a42990210e6f68",
+          "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f",
+          "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786",
+          "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5",
+          "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41",
+          "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3",
+          "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04"
+        ]
+      },
+      "evidence_class_counts": {
+        "derived_from_observed_r07": 70998
+      },
+      "integer_time_encoding": "decimal integer nanoseconds; no float conversion",
+      "lineage_id": "batch8-dp2-fresh-003",
+      "logical_name": "queue_concurrency",
+      "null_encoding": "empty CSV cell; original source values preserved as strings",
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/continuation_001/tables/queue_concurrency.csv",
+      "row_count": 70998,
+      "schema": [
+        "schema_version",
+        "runtime_run_id",
+        "lineage_id",
+        "trace_profile_sha256",
+        "request_id",
+        "rank",
+        "physical_device_id",
+        "source_record_kind",
+        "source_path",
+        "source_sha256",
+        "source_row_id",
+        "evidence_class",
+        "availability_state",
+        "availability_reason",
+        "segment_id",
+        "scope_type",
+        "scope_id",
+        "begin_ns",
+        "end_ns",
+        "duration_ns",
+        "active_kernel_count",
+        "active_kernel_ids",
+        "active_kernel_ids_sha256",
+        "active_queue_count",
+        "active_queue_ids",
+        "aggregation_rule",
+        "clock",
+        "algorithm_version",
+        "kernel_concurrency_segment_id"
+      ],
+      "schema_sha256": "46e72979613021caf7ad04e0b33a9c58bd0ba9b8145bd7392505a78c711c8bdb",
+      "sha256": "4a9f6906dc6bf7dc7ec6c8f5b1c5e01cf926639049517aef1d359155854a95f3",
+      "size": 67989938,
+      "sources": [
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/strict_owned_kernels.csv",
+          "sha256": "aaa51fa3ce337cff07cf8a005a15ffaa229dbe77223d4c76b3b2caa4e45da030",
+          "size": 27452414
+        }
+      ],
+      "stable_sort_key": [
+        "scope_type",
+        "scope_id",
+        "begin_ns",
+        "kernel_concurrency_segment_id"
+      ]
+    },
+    {
+      "availability_counts": {
+        "available": 23652
+      },
+      "coverage": {
+        "devices": [
+          "0",
+          "1"
+        ],
+        "ranks": [
+          "0",
+          "1"
+        ],
+        "requests": [
+          "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c",
+          "batch8-dual-dcu-dp2-req-002-28a42990210e6f68",
+          "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f",
+          "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786",
+          "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5",
+          "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41",
+          "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3",
+          "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04"
+        ]
+      },
+      "evidence_class_counts": {
+        "derived_from_observed_r07": 23652
+      },
+      "integer_time_encoding": "decimal integer nanoseconds; no float conversion",
+      "lineage_id": "batch8-dp2-fresh-003",
+      "logical_name": "launch_gaps",
+      "null_encoding": "empty CSV cell; original source values preserved as strings",
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/continuation_001/tables/launch_gaps.csv",
+      "row_count": 23652,
+      "schema": [
+        "schema_version",
+        "runtime_run_id",
+        "lineage_id",
+        "trace_profile_sha256",
+        "request_id",
+        "rank",
+        "physical_device_id",
+        "source_record_kind",
+        "source_path",
+        "source_sha256",
+        "source_row_id",
+        "evidence_class",
+        "availability_state",
+        "availability_reason",
+        "gap_id",
+        "queue_id",
+        "stream_id",
+        "previous_kernel_instance_id",
+        "next_kernel_instance_id",
+        "previous_runtime_call_id",
+        "next_runtime_call_id",
+        "previous_hip_runtime_index",
+        "next_hip_runtime_index",
+        "previous_end_ns",
+        "next_begin_ns",
+        "gap_ns",
+        "overlap_ns",
+        "gap_begin_ns",
+        "gap_end_ns",
+        "next_owner_process_range_id",
+        "sequence_rule",
+        "interpretation"
+      ],
+      "schema_sha256": "39c239be72dd274d226c5a912d09b229c17bb16bc837505c31db3838a673c9a8",
+      "sha256": "1a91958b44a0a02372b4b27a0c68a5b7cd8b0e08cbaa56a8f68112995f6f7859",
+      "size": 28635240,
+      "sources": [
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/strict_owned_kernels.csv",
+          "sha256": "aaa51fa3ce337cff07cf8a005a15ffaa229dbe77223d4c76b3b2caa4e45da030",
+          "size": 27452414
+        },
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/hip_runtime_calls.csv",
+          "sha256": "69a5a47bd2e6083cf63c0c6335175316292084b2b3877007ce4fb11f5cea54c7",
+          "size": 197920228
+        }
+      ],
+      "stable_sort_key": [
+        "request_id",
+        "rank",
+        "physical_device_id",
+        "queue_id",
+        "next_hip_runtime_index"
+      ]
+    },
+    {
+      "availability_counts": {
+        "available": 1237
+      },
+      "coverage": {
+        "devices": [
+          "0",
+          "1"
+        ],
+        "ranks": [
+          "0",
+          "1"
+        ],
+        "requests": [
+          "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c",
+          "batch8-dual-dcu-dp2-req-002-28a42990210e6f68",
+          "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f",
+          "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786",
+          "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5",
+          "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41",
+          "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3",
+          "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04"
+        ]
+      },
+      "evidence_class_counts": {
+        "derived_from_observed_r07": 1237
+      },
+      "integer_time_encoding": "decimal integer nanoseconds; no float conversion",
+      "lineage_id": "batch8-dp2-fresh-003",
+      "logical_name": "high_latency_processes",
+      "null_encoding": "empty CSV cell; original source values preserved as strings",
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/continuation_001/tables/high_latency_processes.csv",
+      "row_count": 1237,
+      "schema": [
+        "schema_version",
+        "runtime_run_id",
+        "lineage_id",
+        "trace_profile_sha256",
+        "request_id",
+        "rank",
+        "physical_device_id",
+        "source_record_kind",
+        "source_path",
+        "source_sha256",
+        "source_row_id",
+        "evidence_class",
+        "availability_state",
+        "availability_reason",
+        "process_range_id",
+        "duration_ns",
+        "phase",
+        "layer_type",
+        "process_id",
+        "fragment_id",
+        "peer_group_key",
+        "global_denominator",
+        "global_p95_ns",
+        "peer_denominator",
+        "peer_p95_ns",
+        "meets_global_p95",
+        "meets_peer_p95",
+        "percentile_rule",
+        "classification_rule_version"
+      ],
+      "schema_sha256": "98a689e1a62d4cf837580da8ee87b05ac8aed3cc1aa1280d6e3afffbb6fcb611",
+      "sha256": "e6e4563265c777f3044b7e18eff9b7600e72d587ca1baf0e5ed715257bf5c7f6",
+      "size": 1037956,
+      "sources": [
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/process_ranges.csv",
+          "sha256": "591bd9b338b21c21d65536139a7b3ebe815021d4f70a6fad770bafb825cf9029",
+          "size": 14219698
+        }
+      ],
+      "stable_sort_key": [
+        "process_range_id"
+      ]
+    },
+    {
+      "availability_counts": {
+        "deterministically_derived": 17664,
+        "observed": 74692
+      },
+      "coverage": {
+        "devices": [
+          "0",
+          "1"
+        ],
+        "ranks": [
+          "0",
+          "1"
+        ],
+        "requests": [
+          "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c",
+          "batch8-dual-dcu-dp2-req-002-28a42990210e6f68",
+          "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f",
+          "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786",
+          "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5",
+          "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41",
+          "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3",
+          "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04"
+        ]
+      },
+      "evidence_class_counts": {
+        "observed_r07": 92356
+      },
+      "integer_time_encoding": "decimal integer nanoseconds; no float conversion",
+      "lineage_id": "batch8-dp2-fresh-003",
+      "logical_name": "dependency_state",
+      "null_encoding": "empty CSV cell; original source values preserved as strings",
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/continuation_001/tables/dependency_state.csv",
+      "row_count": 92356,
+      "schema": [
+        "schema_version",
+        "runtime_run_id",
+        "lineage_id",
+        "trace_profile_sha256",
+        "request_id",
+        "rank",
+        "physical_device_id",
+        "source_record_kind",
+        "source_path",
+        "source_sha256",
+        "source_row_id",
+        "evidence_class",
+        "availability_state",
+        "availability_reason",
+        "record_kind",
+        "node_id",
+        "node_type",
+        "native_source_id",
+        "process_range_id",
+        "dependency_state",
+        "supporting_adapter_edge_ids",
+        "dependency_edge_id",
+        "canonical_target_id",
+        "target_kind",
+        "parent_canonical_target_id",
+        "forward_id",
+        "layer_idx",
+        "layer_occurrence",
+        "process_id",
+        "fragment_id",
+        "dp_rank",
+        "native_device",
+        "hip_runtime_call_id",
+        "hip_runtime_table",
+        "hip_runtime_rowid",
+        "hip_runtime_index",
+        "hip_runtime_api",
+        "kernel_instance_id",
+        "native_device_table",
+        "native_device_rowid",
+        "native_kernel_name",
+        "queue_id",
+        "stream_id",
+        "live_utilization_state",
+        "dependency_relation",
+        "source_process_ranges_sha256",
+        "source_runtime_calls_sha256",
+        "source_strict_owned_kernels_sha256",
+        "source_process_alignment_sha256",
+        "source_r06_targets_sha256",
+        "source_r02_identity_sha256",
+        "source_r03_identity_context_sha256",
+        "external_runtime_evidence_consumed",
+        "edge_id",
+        "from_node_id",
+        "to_node_id",
+        "owner_node_id",
+        "direction",
+        "derived_waiting_or_ready_state"
+      ],
+      "schema_sha256": "864250e0d533babebe10002c784c797de66062bae86480743e12b87a4127b4e8",
+      "sha256": "9e3a1c9174890d07fa4f799fc62f914190bce0c79898517f98455394ee930431",
+      "size": 121996860,
+      "sources": [
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/dependency/fresh_run_dependency_adapter.csv",
+          "sha256": "f6555a76473defa2a2c13929d9d17ebdc123012bbad2349bf1e4200cc01b777e",
+          "size": 39342248
+        }
+      ],
+      "stable_sort_key": [
+        "record_kind_nodes_then_edges",
+        "stable_node_or_edge_id"
+      ]
+    },
+    {
+      "availability_counts": {
+        "available": 61482,
+        "available_static_template": 90880,
+        "unavailable": 25046
+      },
+      "coverage": {
+        "devices": [
+          "0",
+          "1"
+        ],
+        "ranks": [
+          "0",
+          "1"
+        ],
+        "requests": [
+          "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c",
+          "batch8-dual-dcu-dp2-req-002-28a42990210e6f68",
+          "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f",
+          "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786",
+          "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5",
+          "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41",
+          "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3",
+          "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04"
+        ]
+      },
+      "evidence_class_counts": {
+        "derived_static": 100352,
+        "replay_projected": 64512,
+        "unavailable": 12544
+      },
+      "integer_time_encoding": "decimal integer nanoseconds; no float conversion",
+      "lineage_id": "batch8-dp2-fresh-003",
+      "logical_name": "traffic_resource_attachment",
+      "null_encoding": "empty CSV cell; original source values preserved as strings",
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/continuation_001/tables/traffic_resource_attachment.csv",
+      "row_count": 177408,
+      "schema": [
+        "schema_version",
+        "runtime_run_id",
+        "lineage_id",
+        "trace_profile_sha256",
+        "metric_id",
+        "record_kind",
+        "r07_process_range_id",
+        "r07_bound_target_id",
+        "r07_kernel_instance_id",
+        "request_id",
+        "dp_rank",
+        "native_device",
+        "logical_family_ids",
+        "physical_attribute_id",
+        "counter_mode",
+        "observed_q_len",
+        "observed_kv_len",
+        "replay_q_len",
+        "replay_kv_len",
+        "runtime_shape_match",
+        "metric_name",
+        "value",
+        "unit",
+        "formula",
+        "assumptions",
+        "aggregation_rule",
+        "rule_version",
+        "evidence_class",
+        "availability_state",
+        "availability_reason",
+        "source_path",
+        "source_sha256",
+        "source_row_id",
+        "capability_path",
+        "capability_sha256",
+        "rank",
+        "physical_device_id",
+        "source_record_kind",
+        "r08_original_source_row_id",
+        "r08_metric_source_path",
+        "r08_metric_source_sha256",
+        "observed_process_source_sha256",
+        "observed_kernel_source_sha256",
+        "join_left_id",
+        "join_right_id",
+        "join_cardinality",
+        "join_state",
+        "join_rule_version",
+        "runtime_shape_comparison_permitted"
+      ],
+      "schema_sha256": "6a54b75b9082e5fbb0e7d6766e7d3a18f20158d335cd89dbb4ed3f7e22f2e630",
+      "sha256": "b3eb81b5c865555c929b3f3a2a051537561e37c97fa01120f5def44d33ebfda9",
+      "size": 388155843,
+      "sources": [
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/model/resource_model_001/traffic_resource_attachment.csv",
+          "sha256": "254c2a34c8ef4b100f0f1a3281f58af335730f15c6b44adfc61f36d276bc3440",
+          "size": 266289956
+        },
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/process_ranges.csv",
+          "sha256": "591bd9b338b21c21d65536139a7b3ebe815021d4f70a6fad770bafb825cf9029",
+          "size": 14219698
+        },
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/strict_owned_kernels.csv",
+          "sha256": "aaa51fa3ce337cff07cf8a005a15ffaa229dbe77223d4c76b3b2caa4e45da030",
+          "size": 27452414
+        }
+      ],
+      "stable_sort_key": [
+        "metric_id"
+      ]
+    },
+    {
+      "availability_counts": {
+        "available_rule_evaluation": 12544
+      },
+      "coverage": {
+        "devices": [
+          "0",
+          "1"
+        ],
+        "ranks": [
+          "0",
+          "1"
+        ],
+        "requests": [
+          "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c",
+          "batch8-dual-dcu-dp2-req-002-28a42990210e6f68",
+          "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f",
+          "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786",
+          "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5",
+          "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41",
+          "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3",
+          "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04"
+        ]
+      },
+      "evidence_class_counts": {
+        "derived_from_observed_and_replay_projected": 12544
+      },
+      "integer_time_encoding": "decimal integer nanoseconds; no float conversion",
+      "lineage_id": "batch8-dp2-fresh-003",
+      "logical_name": "opportunity_candidates",
+      "null_encoding": "empty CSV cell; original source values preserved as strings",
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/continuation_001/tables/opportunity_candidates.csv",
+      "row_count": 12544,
+      "schema": [
+        "schema_version",
+        "runtime_run_id",
+        "lineage_id",
+        "trace_profile_sha256",
+        "request_id",
+        "rank",
+        "physical_device_id",
+        "source_record_kind",
+        "source_path",
+        "source_sha256",
+        "source_row_id",
+        "evidence_class",
+        "availability_state",
+        "availability_reason",
+        "process_range_id",
+        "candidate_state",
+        "hypothesis",
+        "duration_ns",
+        "meets_high_latency_rule",
+        "live_availability_state",
+        "live_mean_pct",
+        "live_threshold_pct",
+        "max_selected_kernel_concurrency_in_process_interval",
+        "max_adjacent_selected_kernel_gap_ns",
+        "owned_kernel_ids",
+        "dependency_edge_ids",
+        "metric_ids",
+        "replay_runtime_shape_match_metric_count",
+        "native_metric_count",
+        "blocking_reasons",
+        "contradicting_evidence",
+        "opportunity_rule_version",
+        "quantitative_cross_clock_comparison_performed",
+        "measured_or_predicted_speedup_claimed",
+        "root_cause_claimed_proven",
+        "target_change_authorized"
+      ],
+      "schema_sha256": "00f70bbd266799e256b0eb580b908be38810dcb2aeb6ab6970bcce6c2993ac88",
+      "sha256": "eb3085c0cf1dcb741e3f319f646f768ab8f57bd4b843ffb901935f04345e394b",
+      "size": 27359057,
+      "sources": [
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/process_ranges.csv",
+          "sha256": "591bd9b338b21c21d65536139a7b3ebe815021d4f70a6fad770bafb825cf9029",
+          "size": 14219698
+        },
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/alignment/r07_process_live_utilization.csv",
+          "sha256": "c2ffcb1f85c3c4321fed1973a6fd7ff4e17031e1a3da2e7b56078baa172d91f3",
+          "size": 8038046
+        },
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/dependency/fresh_run_dependency_adapter.csv",
+          "sha256": "f6555a76473defa2a2c13929d9d17ebdc123012bbad2349bf1e4200cc01b777e",
+          "size": 39342248
+        },
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/model/resource_model_001/traffic_resource_attachment.csv",
+          "sha256": "254c2a34c8ef4b100f0f1a3281f58af335730f15c6b44adfc61f36d276bc3440",
+          "size": 266289956
+        },
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/strict_owned_kernels.csv",
+          "sha256": "aaa51fa3ce337cff07cf8a005a15ffaa229dbe77223d4c76b3b2caa4e45da030",
+          "size": 27452414
+        }
+      ],
+      "stable_sort_key": [
+        "process_range_id"
+      ]
+    }
+  ],
+  "cumulative_runtime_ledger": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/contract/accepted_prefix_ledger.json",
+    "sha256": "03fbb4aa75d152e4200c058fe78a3c43dde554923e4879b72274c7f733b6dee2",
+    "size": 7957396
+  },
+  "cumulative_runtime_ledger_sha256": "03fbb4aa75d152e4200c058fe78a3c43dde554923e4879b72274c7f733b6dee2",
+  "derived_analysis_source": "R09 accepted twelve tables only",
+  "execution_boundaries": {
+    "adapt_goal_execution_performed": false,
+    "device_query_performed": false,
+    "external_network_contacted": false,
+    "gpu_dcu_execution_performed": false,
+    "model_execution_performed": false,
+    "nested_skill_execution_performed": false,
+    "pmc_collection_performed": false,
+    "predecessor_mutation_performed": false,
+    "profiler_execution_performed": false,
+    "replay_performed": false,
+    "successor_execution_performed": false,
+    "target_mutation_performed": false,
+    "trace_collection_performed": false
+  },
+  "full_timeline_manifest": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/acceptance/full_timeline_manifest.json",
+    "sha256": "fa7a80c4ce0a015edf66c6e9daab46f3a8e5d1c6b8c11b414c52bb36b90baf5d",
+    "size": 5961267
+  },
+  "interpreter": {
+    "path": "/usr/bin/python3.10",
+    "sha256": "df23391eb5ab66f005be15f792d55766d7ce96198e9e10df2aea72aec8c686ea",
+    "size": 5937768
+  },
+  "lineage_id": "batch8-dp2-fresh-003",
+  "observed_clock_source": "R07 only",
+  "offline_acceptance_manifest": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/acceptance/offline_acceptance_manifest.json",
+    "sha256": "86c04abc6df1e173cb35281e05d92433079cd08e6aa12516237ca204f7410962",
+    "size": 5878700
+  },
+  "phase_lifecycle": [
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/validation/phase_lifecycle/render.json",
+      "sha256": "cff240dff9292e6db2cba7133d3d0091e55aca94d55a019e193e2ba8c658c2f0",
+      "size": 1433
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/validation/phase_lifecycle/browser.json",
+      "sha256": "87fbe3a90d953ce5d98360b078e939f51c981349aaa90081bf42fb4932f81908",
+      "size": 3787
+    }
+  ],
+  "predecessor_handoffs": [
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/handoffs/R01.json",
+      "sha256": "f28cb9274151c5b08f15964e9645cbcaa41b90fb6f867607472028e993b774d6",
+      "size": 12370
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/handoffs/R02.json",
+      "sha256": "9c1b908430fe9757935d029e8f423192652f21675aeffd77bc6a0f5d48d2e7e6",
+      "size": 15609
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/handoffs/R03.json",
+      "sha256": "f7e6066bd72272cee9e96d2ac31596bd20f01841157bda4d0c2eb56092f99885",
+      "size": 46234
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/handoffs/R04.json",
+      "sha256": "403af982ff2f70f89fce2cfda59074a9b014a32e95c53e9e05e292dc843e6719",
+      "size": 6980912
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/handoffs/R05.json",
+      "sha256": "db08474f64a999428287388a949762274716df125132cbccbabe3ec23c1aec66",
+      "size": 12434
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/handoffs/R06.json",
+      "sha256": "0da6d692f1d69194ab02f4de0993c7aaca2381793eeb61ce33ffeb52ec058976",
+      "size": 38123
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/handoffs/R07.recovered.json",
+      "sha256": "437e753f5dbdea8e9b0a6009ede6eebed0a61c76a26683cad6b6618f9c374b10",
+      "size": 7223
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/handoffs/R08.continuation.json",
+      "sha256": "6d0f64acc912472645bbca489bd16ff88f58eaeb91bd733f55558e0198bfdbbd",
+      "size": 20870
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/handoffs/R09.continuation.json",
+      "sha256": "4bc3719b2de031c8c7adc993ed5d4603cb059fd3043a612b7d01ea2ec4aefe1b",
+      "size": 109530
+    }
+  ],
+  "predecessor_stages": [
+    "R01",
+    "R02",
+    "R03",
+    "R04",
+    "R05",
+    "R06",
+    "R07",
+    "R08",
+    "R09"
+  ],
+  "predecessor_transitive_validation": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/validation/PREDECESSOR_TRANSITIVE_VALIDATION.json",
+    "sha256": "49552bcbfad1278fdfb7b0c6709269420868ac93361a1d260fb31a3d6d04a4b7",
+    "size": 7304
+  },
+  "presentation_payload": [
+    {
+      "content_type": "text/html",
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/acceptance/index.html",
+      "role": "index.html",
+      "sha256": "ad5a497cbb98fab56026ae11ee0ceec6c67ecc80f36ff5dd193b4a6b3decfa88",
+      "size": 4552
+    },
+    {
+      "content_type": "text/html",
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/acceptance/E2E_PROCESS_TIMELINE.html",
+      "role": "E2E_PROCESS_TIMELINE.html",
+      "sha256": "9fa7e352dd7fabcf477edb64ed8baade4874f4747e0feb1b73f328e1362ee250",
+      "size": 234639
+    },
+    {
+      "content_type": "text/html",
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/acceptance/E2E_PROCESS_TIMELINE_LOSSLESS.html",
+      "role": "E2E_PROCESS_TIMELINE_LOSSLESS.html",
+      "sha256": "dea1c493eb1a58d4950f7006be63402dc24ac9ec5824f4ea4489c0577327db2a",
+      "size": 56065528
+    },
+    {
+      "content_type": "text/html",
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/acceptance/HIGH_LATENCY_PROCESS_HARDWARE_TIMELINE.html",
+      "role": "HIGH_LATENCY_PROCESS_HARDWARE_TIMELINE.html",
+      "sha256": "f17f5db50935da3816c0492fca26c9ba18db087fbda3aa29dad622464ffbfebe",
+      "size": 117864802
+    },
+    {
+      "content_type": "text/html",
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/acceptance/CONCURRENCY_UTILIZATION.html",
+      "role": "CONCURRENCY_UTILIZATION.html",
+      "sha256": "154ac54a42fc7978fd3679dc4b3e95111445c51a333d7a71047de1360eb501e4",
+      "size": 247604595
+    },
+    {
+      "content_type": "application/json",
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/acceptance/E2E_PROCESS_TIMELINE.full.perfetto.json",
+      "role": "E2E_PROCESS_TIMELINE.full.perfetto.json",
+      "sha256": "51dbd115e85f72d13d0f3debbd1d9f5acb1248da7c4da33581f40075b4da2fc9",
+      "size": 466779218
+    },
+    {
+      "content_type": "application/json",
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/acceptance/full_timeline_manifest.json",
+      "role": "full_timeline_manifest.json",
+      "sha256": "fa7a80c4ce0a015edf66c6e9daab46f3a8e5d1c6b8c11b414c52bb36b90baf5d",
+      "size": 5961267
+    }
+  ],
+  "r01_handoff_sha256": "f28cb9274151c5b08f15964e9645cbcaa41b90fb6f867607472028e993b774d6",
+  "r02_handoff_sha256": "9c1b908430fe9757935d029e8f423192652f21675aeffd77bc6a0f5d48d2e7e6",
+  "r03_handoff_sha256": "f7e6066bd72272cee9e96d2ac31596bd20f01841157bda4d0c2eb56092f99885",
+  "r04_handoff_sha256": "403af982ff2f70f89fce2cfda59074a9b014a32e95c53e9e05e292dc843e6719",
+  "r05_handoff_sha256": "db08474f64a999428287388a949762274716df125132cbccbabe3ec23c1aec66",
+  "r06_handoff_sha256": "0da6d692f1d69194ab02f4de0993c7aaca2381793eeb61ce33ffeb52ec058976",
+  "r07_handoff_sha256": "437e753f5dbdea8e9b0a6009ede6eebed0a61c76a26683cad6b6618f9c374b10",
+  "r08_handoff_sha256": "6d0f64acc912472645bbca489bd16ff88f58eaeb91bd733f55558e0198bfdbbd",
+  "r09_analysis": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/continuation_001/analysis/fresh_e2e_analysis.accepted.json",
+    "sha256": "983e9c6f644a7164d6a7cf01cc3bbfee6714ce62fb5b564ae59775bf4f4c7b79",
+    "size": 106542
+  },
+  "r09_handoff_sha256": "4bc3719b2de031c8c7adc993ed5d4603cb059fd3043a612b7d01ea2ec4aefe1b",
+  "r09_tables": [
+    {
+      "availability_counts": {
+        "available": 8
+      },
+      "coverage": {
+        "devices": [
+          "0",
+          "1"
+        ],
+        "ranks": [
+          "0",
+          "1"
+        ],
+        "requests": [
+          "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c",
+          "batch8-dual-dcu-dp2-req-002-28a42990210e6f68",
+          "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f",
+          "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786",
+          "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5",
+          "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41",
+          "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3",
+          "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04"
+        ]
+      },
+      "evidence_class_counts": {
+        "observed_r07": 8
+      },
+      "integer_time_encoding": "decimal integer nanoseconds; no float conversion",
+      "lineage_id": "batch8-dp2-fresh-003",
+      "logical_name": "request_timeline",
+      "null_encoding": "empty CSV cell; original source values preserved as strings",
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/continuation_001/tables/request_timeline.csv",
+      "row_count": 8,
+      "schema": [
+        "schema_version",
+        "runtime_run_id",
+        "lineage_id",
+        "trace_profile_sha256",
+        "request_id",
+        "rank",
+        "physical_device_id",
+        "source_record_kind",
+        "source_path",
+        "source_sha256",
+        "source_row_id",
+        "evidence_class",
+        "availability_state",
+        "availability_reason",
+        "completion_tokens",
+        "content_sha256",
+        "data_parallel_rank_requested",
+        "dispatch_ordinal",
+        "duration_ns",
+        "end_monotonic_ns",
+        "end_realtime_ns",
+        "error",
+        "final_commit_byte_length",
+        "finish_reason",
+        "generated_token_ids",
+        "generated_token_ids_sha256",
+        "http_status",
+        "internal_request_id_expected",
+        "physical_device_id_expected",
+        "pre_staged_body_byte_length",
+        "prompt_tokens",
+        "reasoning_sha256",
+        "request_body_byte_length",
+        "request_body_prestaged_before_dispatch",
+        "response_id",
+        "response_x_request_id",
+        "start_monotonic_ns",
+        "start_realtime_ns",
+        "measured_request_ordinal",
+        "begin_ns",
+        "end_ns",
+        "client_monotonic_duration_ns",
+        "clock_drift_difference_ns",
+        "observed_phase_markers",
+        "warmup"
+      ],
+      "schema_sha256": "b7e3e6e99729e4870df5786ac224098f9b6a3e720b1ca5d7f1f208a8077b8472",
+      "sha256": "791ef2cf9f22d6295e880b77cb4596f260782acf2edc6e7a8ada2d13f7785ba0",
+      "size": 1051258,
+      "sources": [
+        {
+          "path": "/public/home/accl15ptg7/run_R08_R10/r07_additional_inputs/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/capture/workload/request_results.json",
+          "sha256": "5c7c7ad97d55f31bc4794609f071b3d0ccfab6e803917cfecef247bab1689bd8",
+          "size": 115937
+        },
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/request_ranges.csv",
+          "sha256": "3ba66817bd84e574bc984bfaa87c02874db7ecd35b8624d1cc9af69b9faac788",
+          "size": 495431
+        }
+      ],
+      "stable_sort_key": [
+        "measured_request_ordinal"
+      ]
+    },
+    {
+      "availability_counts": {
+        "available": 12544
+      },
+      "coverage": {
+        "devices": [
+          "0",
+          "1"
+        ],
+        "ranks": [
+          "0",
+          "1"
+        ],
+        "requests": [
+          "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c",
+          "batch8-dual-dcu-dp2-req-002-28a42990210e6f68",
+          "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f",
+          "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786",
+          "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5",
+          "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41",
+          "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3",
+          "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04"
+        ]
+      },
+      "evidence_class_counts": {
+        "observed_r07": 12544
+      },
+      "integer_time_encoding": "decimal integer nanoseconds; no float conversion",
+      "lineage_id": "batch8-dp2-fresh-003",
+      "logical_name": "process_timeline",
+      "null_encoding": "empty CSV cell; original source values preserved as strings",
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/continuation_001/tables/process_timeline.csv",
+      "row_count": 12544,
+      "schema": [
+        "process_range_id",
+        "canonical_target_id",
+        "canonical_target_sha256",
+        "target_kind",
+        "range_name",
+        "parent_range_name",
+        "request_id",
+        "forward_id",
+        "layer_idx",
+        "layer_occurrence",
+        "layer_type",
+        "phase",
+        "q_len",
+        "kv_len",
+        "process_id",
+        "fragment_id",
+        "aggregation_key",
+        "dp_rank",
+        "native_device",
+        "pid",
+        "tid",
+        "config_key",
+        "hiptx_table",
+        "hiptx_rowid",
+        "hiptx_range_index",
+        "begin_ns",
+        "end_ns",
+        "duration_ns",
+        "begin_runtime_index",
+        "end_runtime_index",
+        "depth",
+        "explicit_no_kernel_target",
+        "strict_kernel_owner",
+        "sidecar_start_monotonic_ns",
+        "sidecar_end_monotonic_ns",
+        "sidecar_start_realtime_ns",
+        "sidecar_end_realtime_ns",
+        "sidecar_alignment_uncertainty_ns",
+        "owned_runtime_call_count",
+        "owned_kernel_count",
+        "ownership_state",
+        "evidence_class",
+        "raw_database_sha256",
+        "schema_version",
+        "runtime_run_id",
+        "lineage_id",
+        "trace_profile_sha256",
+        "rank",
+        "physical_device_id",
+        "source_record_kind",
+        "source_path",
+        "source_sha256",
+        "source_row_id",
+        "availability_state",
+        "availability_reason",
+        "source_evidence_class",
+        "measured_request_ordinal",
+        "parent_process_range_id",
+        "source_r06_target_id",
+        "runtime_bound_target",
+        "layer_forward_context",
+        "hip_runtime_context_schema",
+        "hip_runtime_context",
+        "context_source_records",
+        "coverage_scope"
+      ],
+      "schema_sha256": "0c9937d41b8d0d326ba746006b9e439b7d351f8b17d3563ceaaba99cbe1cf165",
+      "sha256": "abc86a88e8b83e78c71914d3075dd77c2f128c98e763aae8bacf5b628f44d723",
+      "size": 214353096,
+      "sources": [
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/process_ranges.csv",
+          "sha256": "591bd9b338b21c21d65536139a7b3ebe815021d4f70a6fad770bafb825cf9029",
+          "size": 14219698
+        },
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/hip_runtime_calls.csv",
+          "sha256": "69a5a47bd2e6083cf63c0c6335175316292084b2b3877007ce4fb11f5cea54c7",
+          "size": 197920228
+        },
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/layer_ranges.csv",
+          "sha256": "4d5cc3a481a2d8a8fd77a59f7f3c3aaefbfbeec7a50f93d959009f058657a747",
+          "size": 725511
+        },
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/forward_ranges.csv",
+          "sha256": "88f3f4ff526ede132d0c0a4d71e66362e179a988b7fe62ca19d82b39bd7734c6",
+          "size": 659271
+        }
+      ],
+      "stable_sort_key": [
+        "begin_ns",
+        "process_range_id"
+      ]
+    },
+    {
+      "availability_counts": {
+        "available": 23660
+      },
+      "coverage": {
+        "devices": [
+          "0",
+          "1"
+        ],
+        "ranks": [
+          "0",
+          "1"
+        ],
+        "requests": [
+          "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c",
+          "batch8-dual-dcu-dp2-req-002-28a42990210e6f68",
+          "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f",
+          "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786",
+          "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5",
+          "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41",
+          "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3",
+          "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04"
+        ]
+      },
+      "evidence_class_counts": {
+        "observed_r07": 23660
+      },
+      "integer_time_encoding": "decimal integer nanoseconds; no float conversion",
+      "lineage_id": "batch8-dp2-fresh-003",
+      "logical_name": "kernel_timeline",
+      "null_encoding": "empty CSV cell; original source values preserved as strings",
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/continuation_001/tables/kernel_timeline.csv",
+      "row_count": 23660,
+      "schema": [
+        "kernel_instance_id",
+        "owner_process_range_id",
+        "owner_canonical_target_id",
+        "request_id",
+        "forward_id",
+        "layer_idx",
+        "layer_occurrence",
+        "process_id",
+        "fragment_id",
+        "dp_rank",
+        "native_device",
+        "pid",
+        "config_key",
+        "hip_runtime_table",
+        "hip_runtime_rowid",
+        "hip_runtime_index",
+        "hip_runtime_api",
+        "native_device_table",
+        "native_device_rowid",
+        "native_device_index",
+        "begin_ns",
+        "end_ns",
+        "duration_ns",
+        "queue_id",
+        "stream_id",
+        "native_kernel_name",
+        "ownership_depth",
+        "ownership_chain",
+        "evidence_class",
+        "raw_database_sha256",
+        "schema_version",
+        "runtime_run_id",
+        "lineage_id",
+        "trace_profile_sha256",
+        "rank",
+        "physical_device_id",
+        "source_record_kind",
+        "source_path",
+        "source_sha256",
+        "source_row_id",
+        "availability_state",
+        "availability_reason",
+        "source_evidence_class",
+        "measured_request_ordinal",
+        "phase",
+        "layer_type",
+        "q_len",
+        "kv_len",
+        "runtime_call_id",
+        "launch_begin_ns",
+        "launch_end_ns",
+        "launch_duration_ns",
+        "launch_tid",
+        "r08_physical_attribute_ids",
+        "resource_join_rule",
+        "runtime_source_record"
+      ],
+      "schema_sha256": "e7fb8bd3b93a474f4077e123b8c832b1455a87a6a9d4d6a61dea5d055bd41571",
+      "sha256": "56d5ccb807550dc93748dbcc43146a74f6606cd041df6795c4df0f65b6bd257c",
+      "size": 51027444,
+      "sources": [
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/strict_owned_kernels.csv",
+          "sha256": "aaa51fa3ce337cff07cf8a005a15ffaa229dbe77223d4c76b3b2caa4e45da030",
+          "size": 27452414
+        },
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/hip_runtime_calls.csv",
+          "sha256": "69a5a47bd2e6083cf63c0c6335175316292084b2b3877007ce4fb11f5cea54c7",
+          "size": 197920228
+        },
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/model/resource_model_001/traffic_resource_attachment.csv",
+          "sha256": "254c2a34c8ef4b100f0f1a3281f58af335730f15c6b44adfc61f36d276bc3440",
+          "size": 266289956
+        }
+      ],
+      "stable_sort_key": [
+        "begin_ns",
+        "kernel_instance_id"
+      ]
+    },
+    {
+      "availability_counts": {
+        "available": 2492608
+      },
+      "coverage": {
+        "devices": [
+          "0",
+          "1"
+        ],
+        "ranks": [
+          "0",
+          "1"
+        ],
+        "requests": []
+      },
+      "evidence_class_counts": {
+        "observed_r07_clock_anchor": 2,
+        "observed_r07_live_utilization": 2492606
+      },
+      "integer_time_encoding": "decimal integer nanoseconds; no float conversion",
+      "lineage_id": "batch8-dp2-fresh-003",
+      "logical_name": "live_utilization_aligned",
+      "null_encoding": "empty CSV cell; original source values preserved as strings",
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/continuation_001/tables/live_utilization_aligned.csv",
+      "row_count": 2492608,
+      "schema": [
+        "schema_version",
+        "runtime_run_id",
+        "lineage_id",
+        "trace_profile_sha256",
+        "request_id",
+        "rank",
+        "physical_device_id",
+        "source_record_kind",
+        "source_path",
+        "source_sha256",
+        "source_row_id",
+        "evidence_class",
+        "availability_state",
+        "availability_reason",
+        "record_kind",
+        "runtime_attempt_id",
+        "sequence",
+        "dp_rank",
+        "native_device",
+        "call_begin_monotonic_ns",
+        "call_end_monotonic_ns",
+        "sample_midpoint_monotonic_ns",
+        "call_begin_realtime_ns",
+        "call_end_realtime_ns",
+        "sample_midpoint_realtime_ns",
+        "call_latency_ns",
+        "se_active_cu_pct",
+        "alignment_uncertainty_ns",
+        "rsmi_status",
+        "timing_eligible",
+        "sample_availability_state",
+        "source_raw_samples_sha256",
+        "previous_sequence",
+        "next_sequence",
+        "gap_begin_monotonic_ns",
+        "gap_end_monotonic_ns",
+        "unobserved_gap_ns",
+        "adjacent_sample_begin_delta_ns",
+        "gap_threshold_ns",
+        "source_raw_gap_intervals_sha256",
+        "anchor_name",
+        "anchor_monotonic_before_ns",
+        "anchor_monotonic_after_ns",
+        "anchor_monotonic_midpoint_ns",
+        "anchor_realtime_ns",
+        "anchor_pair_uncertainty_ns",
+        "anchor_metadata"
+      ],
+      "schema_sha256": "04cf0749ac3e09c46888362324f49b63742fedb9eb91c9a0df7116d2a49ccf0d",
+      "sha256": "24d686a0ae59e863d0b9a31cb0fc91bcb7151d3e045ab7cddd0411abc1993f5e",
+      "size": 1720836222,
+      "sources": [
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/alignment/r07_live_utilization_aligned.csv",
+          "sha256": "918f1711f5c88308c581e862adcd0577806cfefaca37d0e175be51b827855689",
+          "size": 749649669
+        },
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/alignment/r07_live_utilization_gaps.csv",
+          "sha256": "638933624a3fe520199726fe612ba01bcfb2e446ba2350aec1ab52dcb611c629",
+          "size": 199080
+        },
+        {
+          "path": "/public/home/accl15ptg7/run_R08_R10/r07_additional_inputs/clock_anchors.json",
+          "sha256": "6d026e7c5135ce409d8e7d0ed1d2e4600f8373d716238e9de51478edeff61ca0",
+          "size": 1142
+        }
+      ],
+      "stable_sort_key": [
+        "record_kind_source_order",
+        "native_device",
+        "sequence"
+      ]
+    },
+    {
+      "availability_counts": {
+        "available": 4631,
+        "unavailable_intrinsic_short_window": 7907,
+        "unavailable_sampling_gap": 6
+      },
+      "coverage": {
+        "devices": [
+          "0",
+          "1"
+        ],
+        "ranks": [
+          "0",
+          "1"
+        ],
+        "requests": [
+          "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c",
+          "batch8-dual-dcu-dp2-req-002-28a42990210e6f68",
+          "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f",
+          "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786",
+          "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5",
+          "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41",
+          "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3",
+          "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04"
+        ]
+      },
+      "evidence_class_counts": {
+        "derived_from_observed_r07": 4631,
+        "unavailable": 7913
+      },
+      "integer_time_encoding": "decimal integer nanoseconds; no float conversion",
+      "lineage_id": "batch8-dp2-fresh-003",
+      "logical_name": "process_live_utilization",
+      "null_encoding": "empty CSV cell; original source values preserved as strings",
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/continuation_001/tables/process_live_utilization.csv",
+      "row_count": 12544,
+      "schema": [
+        "process_range_id",
+        "canonical_target_id",
+        "target_kind",
+        "request_id",
+        "forward_id",
+        "layer_idx",
+        "layer_occurrence",
+        "process_id",
+        "fragment_id",
+        "dp_rank",
+        "native_device",
+        "process_begin_monotonic_ns",
+        "process_end_monotonic_ns",
+        "process_duration_monotonic_ns",
+        "process_begin_realtime_ns",
+        "process_end_realtime_ns",
+        "process_sidecar_alignment_uncertainty_ns",
+        "real_sample_count_inside",
+        "timing_eligible_sample_count",
+        "alignment_error_sample_count",
+        "intersecting_gap_count",
+        "se_active_cu_pct_mean",
+        "availability_state",
+        "source_process_ranges_sha256",
+        "source_raw_samples_sha256",
+        "source_raw_gap_intervals_sha256",
+        "source_clock_anchors_sha256",
+        "evidence_class",
+        "schema_version",
+        "runtime_run_id",
+        "lineage_id",
+        "trace_profile_sha256",
+        "rank",
+        "physical_device_id",
+        "source_record_kind",
+        "source_path",
+        "source_sha256",
+        "source_row_id",
+        "availability_reason",
+        "sample_membership_rule",
+        "sample_left_index_per_device",
+        "sample_right_exclusive_index_per_device",
+        "eligible_value_sum",
+        "intersecting_gap_source_ids",
+        "source_process_record",
+        "source_sample_record"
+      ],
+      "schema_sha256": "b7409eb218a1b3522f70cade00f1615961982729f3f7a502f66e1db67288722c",
+      "sha256": "7ed9d7bd064b57ced6568010ec3249cc245805b55b1d83f209ebe28ec6a45189",
+      "size": 22030404,
+      "sources": [
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/alignment/r07_process_live_utilization.csv",
+          "sha256": "c2ffcb1f85c3c4321fed1973a6fd7ff4e17031e1a3da2e7b56078baa172d91f3",
+          "size": 8038046
+        },
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/process_ranges.csv",
+          "sha256": "591bd9b338b21c21d65536139a7b3ebe815021d4f70a6fad770bafb825cf9029",
+          "size": 14219698
+        },
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/alignment/r07_live_utilization_aligned.csv",
+          "sha256": "918f1711f5c88308c581e862adcd0577806cfefaca37d0e175be51b827855689",
+          "size": 749649669
+        },
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/alignment/r07_live_utilization_gaps.csv",
+          "sha256": "638933624a3fe520199726fe612ba01bcfb2e446ba2350aec1ab52dcb611c629",
+          "size": 199080
+        },
+        {
+          "path": "/public/home/accl15ptg7/run_R08_R10/r07_additional_inputs/clock_anchors.json",
+          "sha256": "6d026e7c5135ce409d8e7d0ed1d2e4600f8373d716238e9de51478edeff61ca0",
+          "size": 1142
+        }
+      ],
+      "stable_sort_key": [
+        "process_begin_realtime_ns",
+        "process_range_id"
+      ]
+    },
+    {
+      "availability_counts": {
+        "available": 70998
+      },
+      "coverage": {
+        "devices": [
+          "0",
+          "1"
+        ],
+        "ranks": [
+          "0",
+          "1"
+        ],
+        "requests": [
+          "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c",
+          "batch8-dual-dcu-dp2-req-002-28a42990210e6f68",
+          "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f",
+          "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786",
+          "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5",
+          "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41",
+          "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3",
+          "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04"
+        ]
+      },
+      "evidence_class_counts": {
+        "derived_from_observed_r07": 70998
+      },
+      "integer_time_encoding": "decimal integer nanoseconds; no float conversion",
+      "lineage_id": "batch8-dp2-fresh-003",
+      "logical_name": "kernel_concurrency",
+      "null_encoding": "empty CSV cell; original source values preserved as strings",
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/continuation_001/tables/kernel_concurrency.csv",
+      "row_count": 70998,
+      "schema": [
+        "schema_version",
+        "runtime_run_id",
+        "lineage_id",
+        "trace_profile_sha256",
+        "request_id",
+        "rank",
+        "physical_device_id",
+        "source_record_kind",
+        "source_path",
+        "source_sha256",
+        "source_row_id",
+        "evidence_class",
+        "availability_state",
+        "availability_reason",
+        "segment_id",
+        "scope_type",
+        "scope_id",
+        "begin_ns",
+        "end_ns",
+        "duration_ns",
+        "active_kernel_count",
+        "active_kernel_ids",
+        "active_kernel_ids_sha256",
+        "active_queue_count",
+        "active_queue_ids",
+        "aggregation_rule",
+        "clock",
+        "algorithm_version"
+      ],
+      "schema_sha256": "54f77c8685e3d873d84e10a102d92d292f9874ea5d7f5ded3931caf5df6b7096",
+      "sha256": "dc68011f73e03733c516d8c371df34d00b376d1e33d34b0af470ce5e1531cc02",
+      "size": 63446036,
+      "sources": [
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/strict_owned_kernels.csv",
+          "sha256": "aaa51fa3ce337cff07cf8a005a15ffaa229dbe77223d4c76b3b2caa4e45da030",
+          "size": 27452414
+        }
+      ],
+      "stable_sort_key": [
+        "scope_type",
+        "scope_id",
+        "begin_ns",
+        "segment_id"
+      ]
+    },
+    {
+      "availability_counts": {
+        "available": 70998
+      },
+      "coverage": {
+        "devices": [
+          "0",
+          "1"
+        ],
+        "ranks": [
+          "0",
+          "1"
+        ],
+        "requests": [
+          "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c",
+          "batch8-dual-dcu-dp2-req-002-28a42990210e6f68",
+          "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f",
+          "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786",
+          "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5",
+          "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41",
+          "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3",
+          "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04"
+        ]
+      },
+      "evidence_class_counts": {
+        "derived_from_observed_r07": 70998
+      },
+      "integer_time_encoding": "decimal integer nanoseconds; no float conversion",
+      "lineage_id": "batch8-dp2-fresh-003",
+      "logical_name": "queue_concurrency",
+      "null_encoding": "empty CSV cell; original source values preserved as strings",
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/continuation_001/tables/queue_concurrency.csv",
+      "row_count": 70998,
+      "schema": [
+        "schema_version",
+        "runtime_run_id",
+        "lineage_id",
+        "trace_profile_sha256",
+        "request_id",
+        "rank",
+        "physical_device_id",
+        "source_record_kind",
+        "source_path",
+        "source_sha256",
+        "source_row_id",
+        "evidence_class",
+        "availability_state",
+        "availability_reason",
+        "segment_id",
+        "scope_type",
+        "scope_id",
+        "begin_ns",
+        "end_ns",
+        "duration_ns",
+        "active_kernel_count",
+        "active_kernel_ids",
+        "active_kernel_ids_sha256",
+        "active_queue_count",
+        "active_queue_ids",
+        "aggregation_rule",
+        "clock",
+        "algorithm_version",
+        "kernel_concurrency_segment_id"
+      ],
+      "schema_sha256": "46e72979613021caf7ad04e0b33a9c58bd0ba9b8145bd7392505a78c711c8bdb",
+      "sha256": "4a9f6906dc6bf7dc7ec6c8f5b1c5e01cf926639049517aef1d359155854a95f3",
+      "size": 67989938,
+      "sources": [
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/strict_owned_kernels.csv",
+          "sha256": "aaa51fa3ce337cff07cf8a005a15ffaa229dbe77223d4c76b3b2caa4e45da030",
+          "size": 27452414
+        }
+      ],
+      "stable_sort_key": [
+        "scope_type",
+        "scope_id",
+        "begin_ns",
+        "kernel_concurrency_segment_id"
+      ]
+    },
+    {
+      "availability_counts": {
+        "available": 23652
+      },
+      "coverage": {
+        "devices": [
+          "0",
+          "1"
+        ],
+        "ranks": [
+          "0",
+          "1"
+        ],
+        "requests": [
+          "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c",
+          "batch8-dual-dcu-dp2-req-002-28a42990210e6f68",
+          "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f",
+          "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786",
+          "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5",
+          "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41",
+          "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3",
+          "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04"
+        ]
+      },
+      "evidence_class_counts": {
+        "derived_from_observed_r07": 23652
+      },
+      "integer_time_encoding": "decimal integer nanoseconds; no float conversion",
+      "lineage_id": "batch8-dp2-fresh-003",
+      "logical_name": "launch_gaps",
+      "null_encoding": "empty CSV cell; original source values preserved as strings",
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/continuation_001/tables/launch_gaps.csv",
+      "row_count": 23652,
+      "schema": [
+        "schema_version",
+        "runtime_run_id",
+        "lineage_id",
+        "trace_profile_sha256",
+        "request_id",
+        "rank",
+        "physical_device_id",
+        "source_record_kind",
+        "source_path",
+        "source_sha256",
+        "source_row_id",
+        "evidence_class",
+        "availability_state",
+        "availability_reason",
+        "gap_id",
+        "queue_id",
+        "stream_id",
+        "previous_kernel_instance_id",
+        "next_kernel_instance_id",
+        "previous_runtime_call_id",
+        "next_runtime_call_id",
+        "previous_hip_runtime_index",
+        "next_hip_runtime_index",
+        "previous_end_ns",
+        "next_begin_ns",
+        "gap_ns",
+        "overlap_ns",
+        "gap_begin_ns",
+        "gap_end_ns",
+        "next_owner_process_range_id",
+        "sequence_rule",
+        "interpretation"
+      ],
+      "schema_sha256": "39c239be72dd274d226c5a912d09b229c17bb16bc837505c31db3838a673c9a8",
+      "sha256": "1a91958b44a0a02372b4b27a0c68a5b7cd8b0e08cbaa56a8f68112995f6f7859",
+      "size": 28635240,
+      "sources": [
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/strict_owned_kernels.csv",
+          "sha256": "aaa51fa3ce337cff07cf8a005a15ffaa229dbe77223d4c76b3b2caa4e45da030",
+          "size": 27452414
+        },
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/hip_runtime_calls.csv",
+          "sha256": "69a5a47bd2e6083cf63c0c6335175316292084b2b3877007ce4fb11f5cea54c7",
+          "size": 197920228
+        }
+      ],
+      "stable_sort_key": [
+        "request_id",
+        "rank",
+        "physical_device_id",
+        "queue_id",
+        "next_hip_runtime_index"
+      ]
+    },
+    {
+      "availability_counts": {
+        "available": 1237
+      },
+      "coverage": {
+        "devices": [
+          "0",
+          "1"
+        ],
+        "ranks": [
+          "0",
+          "1"
+        ],
+        "requests": [
+          "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c",
+          "batch8-dual-dcu-dp2-req-002-28a42990210e6f68",
+          "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f",
+          "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786",
+          "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5",
+          "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41",
+          "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3",
+          "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04"
+        ]
+      },
+      "evidence_class_counts": {
+        "derived_from_observed_r07": 1237
+      },
+      "integer_time_encoding": "decimal integer nanoseconds; no float conversion",
+      "lineage_id": "batch8-dp2-fresh-003",
+      "logical_name": "high_latency_processes",
+      "null_encoding": "empty CSV cell; original source values preserved as strings",
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/continuation_001/tables/high_latency_processes.csv",
+      "row_count": 1237,
+      "schema": [
+        "schema_version",
+        "runtime_run_id",
+        "lineage_id",
+        "trace_profile_sha256",
+        "request_id",
+        "rank",
+        "physical_device_id",
+        "source_record_kind",
+        "source_path",
+        "source_sha256",
+        "source_row_id",
+        "evidence_class",
+        "availability_state",
+        "availability_reason",
+        "process_range_id",
+        "duration_ns",
+        "phase",
+        "layer_type",
+        "process_id",
+        "fragment_id",
+        "peer_group_key",
+        "global_denominator",
+        "global_p95_ns",
+        "peer_denominator",
+        "peer_p95_ns",
+        "meets_global_p95",
+        "meets_peer_p95",
+        "percentile_rule",
+        "classification_rule_version"
+      ],
+      "schema_sha256": "98a689e1a62d4cf837580da8ee87b05ac8aed3cc1aa1280d6e3afffbb6fcb611",
+      "sha256": "e6e4563265c777f3044b7e18eff9b7600e72d587ca1baf0e5ed715257bf5c7f6",
+      "size": 1037956,
+      "sources": [
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/process_ranges.csv",
+          "sha256": "591bd9b338b21c21d65536139a7b3ebe815021d4f70a6fad770bafb825cf9029",
+          "size": 14219698
+        }
+      ],
+      "stable_sort_key": [
+        "process_range_id"
+      ]
+    },
+    {
+      "availability_counts": {
+        "deterministically_derived": 17664,
+        "observed": 74692
+      },
+      "coverage": {
+        "devices": [
+          "0",
+          "1"
+        ],
+        "ranks": [
+          "0",
+          "1"
+        ],
+        "requests": [
+          "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c",
+          "batch8-dual-dcu-dp2-req-002-28a42990210e6f68",
+          "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f",
+          "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786",
+          "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5",
+          "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41",
+          "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3",
+          "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04"
+        ]
+      },
+      "evidence_class_counts": {
+        "observed_r07": 92356
+      },
+      "integer_time_encoding": "decimal integer nanoseconds; no float conversion",
+      "lineage_id": "batch8-dp2-fresh-003",
+      "logical_name": "dependency_state",
+      "null_encoding": "empty CSV cell; original source values preserved as strings",
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/continuation_001/tables/dependency_state.csv",
+      "row_count": 92356,
+      "schema": [
+        "schema_version",
+        "runtime_run_id",
+        "lineage_id",
+        "trace_profile_sha256",
+        "request_id",
+        "rank",
+        "physical_device_id",
+        "source_record_kind",
+        "source_path",
+        "source_sha256",
+        "source_row_id",
+        "evidence_class",
+        "availability_state",
+        "availability_reason",
+        "record_kind",
+        "node_id",
+        "node_type",
+        "native_source_id",
+        "process_range_id",
+        "dependency_state",
+        "supporting_adapter_edge_ids",
+        "dependency_edge_id",
+        "canonical_target_id",
+        "target_kind",
+        "parent_canonical_target_id",
+        "forward_id",
+        "layer_idx",
+        "layer_occurrence",
+        "process_id",
+        "fragment_id",
+        "dp_rank",
+        "native_device",
+        "hip_runtime_call_id",
+        "hip_runtime_table",
+        "hip_runtime_rowid",
+        "hip_runtime_index",
+        "hip_runtime_api",
+        "kernel_instance_id",
+        "native_device_table",
+        "native_device_rowid",
+        "native_kernel_name",
+        "queue_id",
+        "stream_id",
+        "live_utilization_state",
+        "dependency_relation",
+        "source_process_ranges_sha256",
+        "source_runtime_calls_sha256",
+        "source_strict_owned_kernels_sha256",
+        "source_process_alignment_sha256",
+        "source_r06_targets_sha256",
+        "source_r02_identity_sha256",
+        "source_r03_identity_context_sha256",
+        "external_runtime_evidence_consumed",
+        "edge_id",
+        "from_node_id",
+        "to_node_id",
+        "owner_node_id",
+        "direction",
+        "derived_waiting_or_ready_state"
+      ],
+      "schema_sha256": "864250e0d533babebe10002c784c797de66062bae86480743e12b87a4127b4e8",
+      "sha256": "9e3a1c9174890d07fa4f799fc62f914190bce0c79898517f98455394ee930431",
+      "size": 121996860,
+      "sources": [
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/dependency/fresh_run_dependency_adapter.csv",
+          "sha256": "f6555a76473defa2a2c13929d9d17ebdc123012bbad2349bf1e4200cc01b777e",
+          "size": 39342248
+        }
+      ],
+      "stable_sort_key": [
+        "record_kind_nodes_then_edges",
+        "stable_node_or_edge_id"
+      ]
+    },
+    {
+      "availability_counts": {
+        "available": 61482,
+        "available_static_template": 90880,
+        "unavailable": 25046
+      },
+      "coverage": {
+        "devices": [
+          "0",
+          "1"
+        ],
+        "ranks": [
+          "0",
+          "1"
+        ],
+        "requests": [
+          "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c",
+          "batch8-dual-dcu-dp2-req-002-28a42990210e6f68",
+          "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f",
+          "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786",
+          "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5",
+          "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41",
+          "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3",
+          "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04"
+        ]
+      },
+      "evidence_class_counts": {
+        "derived_static": 100352,
+        "replay_projected": 64512,
+        "unavailable": 12544
+      },
+      "integer_time_encoding": "decimal integer nanoseconds; no float conversion",
+      "lineage_id": "batch8-dp2-fresh-003",
+      "logical_name": "traffic_resource_attachment",
+      "null_encoding": "empty CSV cell; original source values preserved as strings",
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/continuation_001/tables/traffic_resource_attachment.csv",
+      "row_count": 177408,
+      "schema": [
+        "schema_version",
+        "runtime_run_id",
+        "lineage_id",
+        "trace_profile_sha256",
+        "metric_id",
+        "record_kind",
+        "r07_process_range_id",
+        "r07_bound_target_id",
+        "r07_kernel_instance_id",
+        "request_id",
+        "dp_rank",
+        "native_device",
+        "logical_family_ids",
+        "physical_attribute_id",
+        "counter_mode",
+        "observed_q_len",
+        "observed_kv_len",
+        "replay_q_len",
+        "replay_kv_len",
+        "runtime_shape_match",
+        "metric_name",
+        "value",
+        "unit",
+        "formula",
+        "assumptions",
+        "aggregation_rule",
+        "rule_version",
+        "evidence_class",
+        "availability_state",
+        "availability_reason",
+        "source_path",
+        "source_sha256",
+        "source_row_id",
+        "capability_path",
+        "capability_sha256",
+        "rank",
+        "physical_device_id",
+        "source_record_kind",
+        "r08_original_source_row_id",
+        "r08_metric_source_path",
+        "r08_metric_source_sha256",
+        "observed_process_source_sha256",
+        "observed_kernel_source_sha256",
+        "join_left_id",
+        "join_right_id",
+        "join_cardinality",
+        "join_state",
+        "join_rule_version",
+        "runtime_shape_comparison_permitted"
+      ],
+      "schema_sha256": "6a54b75b9082e5fbb0e7d6766e7d3a18f20158d335cd89dbb4ed3f7e22f2e630",
+      "sha256": "b3eb81b5c865555c929b3f3a2a051537561e37c97fa01120f5def44d33ebfda9",
+      "size": 388155843,
+      "sources": [
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/model/resource_model_001/traffic_resource_attachment.csv",
+          "sha256": "254c2a34c8ef4b100f0f1a3281f58af335730f15c6b44adfc61f36d276bc3440",
+          "size": 266289956
+        },
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/process_ranges.csv",
+          "sha256": "591bd9b338b21c21d65536139a7b3ebe815021d4f70a6fad770bafb825cf9029",
+          "size": 14219698
+        },
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/strict_owned_kernels.csv",
+          "sha256": "aaa51fa3ce337cff07cf8a005a15ffaa229dbe77223d4c76b3b2caa4e45da030",
+          "size": 27452414
+        }
+      ],
+      "stable_sort_key": [
+        "metric_id"
+      ]
+    },
+    {
+      "availability_counts": {
+        "available_rule_evaluation": 12544
+      },
+      "coverage": {
+        "devices": [
+          "0",
+          "1"
+        ],
+        "ranks": [
+          "0",
+          "1"
+        ],
+        "requests": [
+          "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c",
+          "batch8-dual-dcu-dp2-req-002-28a42990210e6f68",
+          "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f",
+          "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786",
+          "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5",
+          "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41",
+          "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3",
+          "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04"
+        ]
+      },
+      "evidence_class_counts": {
+        "derived_from_observed_and_replay_projected": 12544
+      },
+      "integer_time_encoding": "decimal integer nanoseconds; no float conversion",
+      "lineage_id": "batch8-dp2-fresh-003",
+      "logical_name": "opportunity_candidates",
+      "null_encoding": "empty CSV cell; original source values preserved as strings",
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/continuation_001/tables/opportunity_candidates.csv",
+      "row_count": 12544,
+      "schema": [
+        "schema_version",
+        "runtime_run_id",
+        "lineage_id",
+        "trace_profile_sha256",
+        "request_id",
+        "rank",
+        "physical_device_id",
+        "source_record_kind",
+        "source_path",
+        "source_sha256",
+        "source_row_id",
+        "evidence_class",
+        "availability_state",
+        "availability_reason",
+        "process_range_id",
+        "candidate_state",
+        "hypothesis",
+        "duration_ns",
+        "meets_high_latency_rule",
+        "live_availability_state",
+        "live_mean_pct",
+        "live_threshold_pct",
+        "max_selected_kernel_concurrency_in_process_interval",
+        "max_adjacent_selected_kernel_gap_ns",
+        "owned_kernel_ids",
+        "dependency_edge_ids",
+        "metric_ids",
+        "replay_runtime_shape_match_metric_count",
+        "native_metric_count",
+        "blocking_reasons",
+        "contradicting_evidence",
+        "opportunity_rule_version",
+        "quantitative_cross_clock_comparison_performed",
+        "measured_or_predicted_speedup_claimed",
+        "root_cause_claimed_proven",
+        "target_change_authorized"
+      ],
+      "schema_sha256": "00f70bbd266799e256b0eb580b908be38810dcb2aeb6ab6970bcce6c2993ac88",
+      "sha256": "eb3085c0cf1dcb741e3f319f646f768ab8f57bd4b843ffb901935f04345e394b",
+      "size": 27359057,
+      "sources": [
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/process_ranges.csv",
+          "sha256": "591bd9b338b21c21d65536139a7b3ebe815021d4f70a6fad770bafb825cf9029",
+          "size": 14219698
+        },
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/alignment/r07_process_live_utilization.csv",
+          "sha256": "c2ffcb1f85c3c4321fed1973a6fd7ff4e17031e1a3da2e7b56078baa172d91f3",
+          "size": 8038046
+        },
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/dependency/fresh_run_dependency_adapter.csv",
+          "sha256": "f6555a76473defa2a2c13929d9d17ebdc123012bbad2349bf1e4200cc01b777e",
+          "size": 39342248
+        },
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/model/resource_model_001/traffic_resource_attachment.csv",
+          "sha256": "254c2a34c8ef4b100f0f1a3281f58af335730f15c6b44adfc61f36d276bc3440",
+          "size": 266289956
+        },
+        {
+          "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R07/resume-042/trace/strict_owned_kernels.csv",
+          "sha256": "aaa51fa3ce337cff07cf8a005a15ffaa229dbe77223d4c76b3b2caa4e45da030",
+          "size": 27452414
+        }
+      ],
+      "stable_sort_key": [
+        "process_range_id"
+      ]
+    }
+  ],
+  "remote_publishing_owned_by_separate_outer_scheduler": true,
+  "renderer_tools": [
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/tools/revision_001/audit_report.py",
+      "sha256": "89cd12127a11d7d03b8df2e11b5777411902fc78a020595679cb601db842370f",
+      "size": 16068
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/tools/revision_001/browser_acceptance.py",
+      "sha256": "7922f50f39a83a21fe1effd451d5c62d24d77c4c52a0ba783ca4692a7346890d",
+      "size": 14655
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/tools/revision_001/build_report.py",
+      "sha256": "c7c57f1f0edf8ac5ea24c9260b4ac0af9c72b91227b0282a59c2cb15c14d19af",
+      "size": 18762
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/tools/revision_001/cpu_stage_common.py",
+      "sha256": "31516c5538ee11ac91d37793c74bfa76ada1f9a01e036887dc33985a5e2abc58",
+      "size": 11820
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/tools/revision_001/seal_acceptance.py",
+      "sha256": "46ab0226b31a425e5b09d5cbd5ece41aa722ef252ed3863409a0aeac04fba356",
+      "size": 6626
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/tools/revision_001/viewer.css",
+      "sha256": "2c7cedbe377e42f4d087c5f346c31b207d0a9413d3b484b06f706bf3f95170b6",
+      "size": 2377
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/tools/revision_001/viewer.js",
+      "sha256": "373f0d11054c5b361ce1b104283ab4aed90ae7c77c7c9cdf2a8ff1ccd544cb8a",
+      "size": 19884
+    }
+  ],
+  "replay_attribute_source": "R08 audited native per-dispatch replay_projected attributes; observed shape differences block direct comparison",
+  "replay_timing_used_as_latency": false,
+  "runtime_branch": "workflow01-10-fresh-e2e",
+  "runtime_goal": "R10",
+  "runtime_run_id": "batch8-dp2-fresh-003",
+  "same_run_R07_recovery_exception_preserved": true,
+  "schema_version": 1,
+  "sealed_utc": "2026-09-08T22:23:27.892391+00:00",
+  "sealer": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/tools/revision_001/seal_acceptance.py",
+    "sha256": "46ab0226b31a425e5b09d5cbd5ece41aa722ef252ed3863409a0aeac04fba356",
+    "size": 6626
+  },
+  "selected_request": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R01/contract/request_selection.json",
+    "sha256": "dc8b848a360d977d1c30adcace393459bce536aa2278ff997d6c71b9e94be280",
+    "size": 4943
+  },
+  "source_revision_history": [
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/validation/frozen_CPU_tools_001.json",
+      "sha256": "2013cf16ed8964c7742b16b21705f11e822a7e0b9e68a30a48ab2fd2889fbd70",
+      "size": 2803
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/tools/revision_001/audit_report.py",
+      "sha256": "89cd12127a11d7d03b8df2e11b5777411902fc78a020595679cb601db842370f",
+      "size": 16068
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/tools/revision_001/browser_acceptance.py",
+      "sha256": "7922f50f39a83a21fe1effd451d5c62d24d77c4c52a0ba783ca4692a7346890d",
+      "size": 14655
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/tools/revision_001/build_report.py",
+      "sha256": "c7c57f1f0edf8ac5ea24c9260b4ac0af9c72b91227b0282a59c2cb15c14d19af",
+      "size": 18762
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/tools/revision_001/cpu_stage_common.py",
+      "sha256": "31516c5538ee11ac91d37793c74bfa76ada1f9a01e036887dc33985a5e2abc58",
+      "size": 11820
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/tools/revision_001/seal_acceptance.py",
+      "sha256": "46ab0226b31a425e5b09d5cbd5ece41aa722ef252ed3863409a0aeac04fba356",
+      "size": 6626
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/tools/revision_001/viewer.css",
+      "sha256": "2c7cedbe377e42f4d087c5f346c31b207d0a9413d3b484b06f706bf3f95170b6",
+      "size": 2377
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/tools/revision_001/viewer.js",
+      "sha256": "373f0d11054c5b361ce1b104283ab4aed90ae7c77c7c9cdf2a8ff1ccd544cb8a",
+      "size": 19884
+    }
+  ],
+  "target": {
+    "branch": "repro-gqa-page784-k5120-batch8-final",
+    "clean": true,
+    "commit": "2b4b2119ae3cc2c4c626dc5690ef9593c1477f66",
+    "root": "/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8",
+    "source_anchors": [
+      {
+        "path": "/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/model_executor/models/qwen3_5.py",
+        "sha256": "f3c0479dbc37a8794c4d6b1c4c01906ae341b3276ed43e588c17d92b1ddb94d6",
+        "size": 32845
+      },
+      {
+        "path": "/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/model_executor/models/qwen3_next.py",
+        "sha256": "5a14b14a40fcf6382f9a20be4ca0f850b2b19b2840a3c57488821f0952d96053",
+        "size": 67330
+      },
+      {
+        "path": "/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/v1/worker/gpu_model_runner.py",
+        "sha256": "d63424d3cbe81bfaa2c0967a5c81b8c980c2d76bc7eb3b2f8fe2a079af825bce",
+        "size": 295740
+      },
+      {
+        "path": "/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/utils/nvtx_pytorch_hooks.py",
+        "sha256": "e9711444f33242ce1864d6a32d051bbf0ba0b37b5f17965de6e5dbba0c0c75ff",
+        "size": 10538
+      },
+      {
+        "path": "/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/compilation/wrapper.py",
+        "sha256": "b4dca93456e945ce8231e9a954792c8f687d5d48b427ed38bfb96011015d4090",
+        "size": 14038
+      },
+      {
+        "path": "/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/scripts/serve_cscc_dp2.sh",
+        "sha256": "233bb2ce6fee3654bc870e37e65b7ecf4de6874cb6c7fd1a6bd5687a40783699",
+        "size": 1965
+      },
+      {
+        "path": "/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/scripts/bench_cscc_multi_request.sh",
+        "sha256": "9b5e02116911729e901077866389e448c0e4a055e8bb901ed160dcdc7664a595",
+        "size": 5820
+      },
+      {
+        "path": "/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/scripts/cscc_gfx936_env.sh",
+        "sha256": "58d483450c23e9c4fa87fb981b5e63cf4babf5e8d230fe93e400563596dfc18a",
+        "size": 641
+      },
+      {
+        "path": "/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/docs/cscc/DP2_MULTI_REQUEST.md",
+        "sha256": "f83ebea84fd570908be0df58255eca371ad4c28c4dc9d70ec3db0401b1143569",
+        "size": 14363
+      }
+    ]
+  },
+  "topology": {
+    "dp": 2,
+    "rank_to_physical_device": {
+      "0": 0,
+      "1": 1
+    },
+    "tp": 1
+  },
+  "trace_profile_sha256": "3b4c952063f48ae662b48b5ce9d8fd76e0ac4d74e170bdb1839ae8b1aaa23cce",
+  "workload": {
+    "dp": 2,
+    "ignore_eos": true,
+    "max_concurrency": 8,
+    "output_tokens_each": 1024,
+    "requests": 8,
+    "selection": "ordered first eight original records",
+    "temperature": 0,
+    "tp": 1,
+    "warmups": 2
+  }
+}
