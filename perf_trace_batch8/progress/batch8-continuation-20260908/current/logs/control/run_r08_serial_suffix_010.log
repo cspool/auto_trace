@@ -1,1 +1,9 @@
 PHASE_START 2026-09-08T15:29:40.469755+00:00 ['/usr/bin/python3', '-B', '/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_018/run_capture.py', 'capture', '--segment', '09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write', '--attempt', 'attempt_003']
+Traceback (most recent call last):
+  File "/public/home/accl15ptg7/run_R08_R10/run_r08_serial_suffix_010.py", line 52, in <module>
+    if __name__=='__main__':main()
+  File "/public/home/accl15ptg7/run_R08_R10/run_r08_serial_suffix_010.py", line 45, in main
+    phase([sys.executable,'-B',str(RUNTIME/'run_capture.py'),'capture','--segment',seg,'--attempt',attempt],SCHEDULE/(seg+'.capture.log'))
+  File "/public/home/accl15ptg7/run_R08_R10/run_r08_serial_suffix_010.py", line 25, in phase
+    assert rc==0,'phase failed '+str(log);print('PHASE_EXIT',argv[2],rc,flush=True)
+AssertionError: phase failed /public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/validation/serial_scheduler_010/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write.capture.log

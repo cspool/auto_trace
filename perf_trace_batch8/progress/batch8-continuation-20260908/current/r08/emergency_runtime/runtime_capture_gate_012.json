@@ -1,0 +1,124 @@
+{
+  "status": "complete",
+  "utc": "2026-09-08T15:37:46.555325+00:00",
+  "runtime_revision": "revision_019",
+  "previous_runtime_gate": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/runtime_capture_gate_011.json",
+    "size": 6453,
+    "sha256": "1877caa360bbfe044923b89341f5a6b6ac54ca1c452f0925e1e366a640ffed15"
+  },
+  "frozen_tools": [
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_019/launch_vllm.py",
+      "size": 927,
+      "sha256": "06ed4160d97ba5df4b70614c9bca4d402dfc87c3f9a7d005a02d02ad4e92055b"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_019/r07_common.py",
+      "size": 65595,
+      "sha256": "2c6a4995d527f1cc71742f5293dcbbba9ff3587680b2e1cce155eada555e0046"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_019/r07_marker_contract.py",
+      "size": 3275,
+      "sha256": "2f8b80cb4e2be8f7b837c959f07ba01d7283499055ff362cd0b09f35be09c11e"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_019/r08_admission_order.py",
+      "size": 3947,
+      "sha256": "d4711febb2b45df05457be4710f164f424ff61c865beb4bb1eabe9d49aa0a578"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_019/r08_memory_profile.py",
+      "size": 5356,
+      "sha256": "62fb519f3e610a77034e9e402ed7e15845ac14aaae0edd39ccf93842ad353d18"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_019/r08_native.py",
+      "size": 8438,
+      "sha256": "03851e8cf73e3ba9f3cc4de1b79e33d8f7cc73b8c2a1b6d05b1583ed71e7cb09"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_019/r08_native_health.py",
+      "size": 2847,
+      "sha256": "b1d04b295085593d10d5fa1b3b42579c6e9692548685b544710fc981cc835aa8"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_019/r08_pmc_gate.py",
+      "size": 13209,
+      "sha256": "dcd014f752e409cda6c0cb85a183751c9f31d2c83f84d8d7d4274ce06f6ed912"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_019/r08_process_overlay.py",
+      "size": 27675,
+      "sha256": "6e13052a3ef414919572ccecb189cf5b48922e14056317bff2d59fb81502380b"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_019/r08_workload_driver.py",
+      "size": 16351,
+      "sha256": "2e2b918fb3c4a46ca2337a5221ebbea2bb0b22e50b6258c9a9fd6248411ba703"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_019/run_capture.py",
+      "size": 13807,
+      "sha256": "200eaf6224014d3802a872d06f617277c2970ea0352704dea7b94a63511b3736"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_019/sitecustomize.py",
+      "size": 2116,
+      "sha256": "ff1b4b6eb9a9ac717fd040dbedccb2910857120345f355614d10b827783ca144"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_019/source_abi_probe.py",
+      "size": 2030,
+      "sha256": "68b83e05c8d52b55f6b42d176669cf5b1a4aa3965b674454485402fd6fb09ed6"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/revision_019/vllm_r08_contract_shim.sh",
+      "size": 285,
+      "sha256": "be302b8edf43e48bf1384929afd66f9e44b758bd5d3ee98fba79b4ca463667d2"
+    }
+  ],
+  "outer_preparation": {
+    "path": "/public/home/accl15ptg7/run_R08_R10/prepare_explicit_warmup_reset_019.py",
+    "size": 7473,
+    "sha256": "725a6e930ebfc4181755a120defcf6e9eeb3b6e10f629722131dbc193aa91146"
+  },
+  "hypothesis": "A real per-worker native off-to-on transition after full model initialization may reinitialize counter collection where Start alone leaves an empty PMC file. Short model-free Stop/Start probing passed on both devices, but full-model root cause and repair remain unproven.",
+  "root_cause_proven": false,
+  "actual_full_model_validation_required": true,
+  "candidate_not_activated_by_this_preparation": true,
+  "prior_closed_failure_retry_evidence": [
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/capture09_prehealth_retry_001.json",
+      "size": 5065,
+      "sha256": "1a60000aa9955354184cb3c7d705cc6e57fc41be8401a4ead3d862650ff63420"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/capture09_prehealth_retry_002.json",
+      "size": 5064,
+      "sha256": "cabb091db747664cc6e5e8499d1779c53e7743b92a265ca6f353624826d146d5"
+    }
+  ],
+  "model_free_probe": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_fresh_exec_pmc_write_recheck_002/RESULT.json",
+    "size": 2943,
+    "sha256": "45baac8fe1caebf9bcd428f92721c44d970776d66730e2379bfaf486c32149fd"
+  },
+  "CPU_fixture": {
+    "native_device_calls": 0,
+    "both_ranks_native_Stop_Start_once_before_original_warmup": true,
+    "existing_measured_Start_unchanged": true,
+    "wrong_rank_rejected_before_native_calls": true,
+    "unrelated_and_malformed_IDs_ignored": true,
+    "native_Stop_failure_prevents_Start_and_activation": true
+  },
+  "original_two_warmups_and_eight_measured_requests_unchanged": true,
+  "no_added_model_requests_or_model_executions": true,
+  "exact_R01_R07_marker_boundaries_unchanged": true,
+  "observed_R07_admission_order_unchanged": true,
+  "pre_measured_two_worker_native_health_still_required": true,
+  "full_eight_request_and_native_attribution_audits_still_required": true,
+  "capture_plan_sha256": "78b987be5b0b763c4260ce56f6bba759675bfbcce5989a5e368aa7549d1b1e9e",
+  "active_capture_interrupted": false
+}
