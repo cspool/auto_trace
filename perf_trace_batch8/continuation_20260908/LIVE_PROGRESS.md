@@ -55,3 +55,9 @@ R08 remains **3/12 accepted**. Capture 04 attempt 002 completed all eight 1,024-
 Analysis 006 adds connection-local SQLite mmap/pager caching only. The actual closed 3.49 GB NFS DB passed quick_check in 4.19 seconds with unchanged size/mtime; attribution rules and independent audit formulas are unchanged. Both normalizer and independent auditor use the new read cache.
 
 The first three published captures have 9 large files temporarily evicted (13,251,173,857 bytes). Exact original-file manifests, GitHub server asset digests and per-segment recovery records are retained in NFS and remote checkpoints. Weights remain physically under /root until all twelve captures are accepted; every evicted original byte must be restored and SHA256 verified before final R08 closure. R09/R10 business execution has not begun.
+
+## 2026-09-08 11:15 UTC — terminal sealing preparation
+
+Capture 04 attempt 003 finished model initialization in 414.46 seconds. Both worker warmup hipProfilerStart calls returned status 0 and both native PMC streams are growing. Final pre-measured two-worker health and actual eight-request kernel attribution are still pending.
+
+Prepared stage templates 003 and outer assignment 002 add direct required R01–R09 prefix/output hashes and explicit per-stage execution fields, checked by an independent scheduler validator before any handoff is written. Twenty-two CPU preparation checks cover valid schemas plus missing-hash, three-request, single-device, unclosed-process, altered-output-hash and erased-R07-uncertainty rejection. The R10 preaudit manifest is immutable and separate; its final artifact manifest is written after the independent audit and includes all ten mandatory deliverables. This is tool preparation only; no R09/R10 business execution or terminal acceptance is claimed.
