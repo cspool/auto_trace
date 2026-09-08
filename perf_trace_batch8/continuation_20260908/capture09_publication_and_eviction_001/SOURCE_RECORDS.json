@@ -1,0 +1,37 @@
+[
+  {
+    "path": "/public/home/accl15ptg7/run_R08_R10/publication_emergency/r08_09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/FILE_MANIFEST.json",
+    "size": 29218,
+    "sha256": "e84ace9b8fd5849c7a83a9d4aaf2a21f46246654f63c658fdabd81937ba31568"
+  },
+  {
+    "path": "/public/home/accl15ptg7/run_R08_R10/publication_emergency/r08_09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/PUBLICATION_COMPLETE.json",
+    "size": 3885,
+    "sha256": "78c1c134a96adab73f89b0492fb381067c8d1df4e1e4dd2a6811bbecf5f8773a"
+  },
+  {
+    "path": "/public/home/accl15ptg7/run_R08_R10/publication_emergency/r08_09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/ASSET_MANIFEST.json",
+    "size": 698,
+    "sha256": "8c5976ef21b711895c079497ba6d4954acb9382394505bf8cdc0f601780293bc"
+  },
+  {
+    "path": "/public/home/accl15ptg7/run_R08_R10/publication_emergency/r08_09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/SHA256SUMS",
+    "size": 265,
+    "sha256": "f262ebab35fe7dc67ba26241b5a2b5e0be227eccb7ab54161a1c028c56f93a37"
+  },
+  {
+    "path": "/public/home/accl15ptg7/run_R08_R10/publication_emergency/r08_09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/LOCAL_UPLOAD_CACHE_CLEANUP.json",
+    "size": 4191,
+    "sha256": "3c4b335fc5ff37652c5f5717149eb39a7e0692fc7995659ed0735269dc9841b4"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/remote_release_offloads_001/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write.prepared.json",
+    "size": 8029,
+    "sha256": "0e40ed830ec7bbf732b4c904fa44c36c1197c5bc21deb9c1be17cae4089966fe"
+  },
+  {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/remote_release_offloads_001/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write.complete.json",
+    "size": 8478,
+    "sha256": "e3fb03374b0275518a06ed3752bf03278654969c5cc445a0e994a81367fc9782"
+  }
+]
