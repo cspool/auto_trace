@@ -11,10 +11,10 @@ def main():
  r08=RUN/'artifacts/R08/continuation_001';index=r08/'normalized/accepted_captures.json';assert index.exists() and json.loads(index.read_text())['status']=='complete','all twelve captures must be accepted first'
  run([PY,'-B',str(CONTROL/'restore_all_R08_release_artifacts_001.py')])
  # R08 owns resource construction and closure; R09 is never assigned early.
- run([PY,'-B',str(CONTROL/'prepare_stage_assignments_001.py'),'assign','R08']);phase(r08,'resource_model',r08/'tools/analysis_005/build_resource_model.py');phase(r08,'resource_audit',r08/'tools/analysis_005/audit_resource_model.py');phase(r08,'seal',r08/'tools/closure_001/seal_r08.py');phase(r08,'completion_audit',r08/'tools/closure_001/audit_r08.py');run([PY,'-B',str(CONTROL/'prepare_stage_assignments_001.py'),'handoff','R08'])
+ run([PY,'-B',str(CONTROL/'prepare_stage_assignments_002.py'),'assign','R08']);phase(r08,'resource_model',r08/'tools/analysis_006/build_resource_model.py');phase(r08,'resource_audit',r08/'tools/analysis_006/audit_resource_model.py');phase(r08,'seal',r08/'tools/closure_001/seal_r08.py');phase(r08,'completion_audit',r08/'tools/closure_001/audit_r08.py');run([PY,'-B',str(CONTROL/'prepare_stage_assignments_002.py'),'handoff','R08'])
  for stage,phases in [('R09',[('analysis','build_analysis.py'),('table_audit','audit_analysis.py'),('seal','seal_r09.py'),('completion_audit','audit_completion.py')]),('R10',[('render','build_report.py'),('browser','browser_acceptance.py'),('seal','seal_acceptance.py'),('completion_audit','audit_report.py')])]:
-  run([PY,'-B',str(CONTROL/'prepare_stage_assignments_001.py'),'assign',stage]);root=RUN/'artifacts'/stage/'continuation_001'
+  run([PY,'-B',str(CONTROL/'prepare_stage_assignments_002.py'),'assign',stage]);root=RUN/'artifacts'/stage/'continuation_001'
   for name,tool in phases:phase(root,name,root/'tools/revision_001'/tool)
-  run([PY,'-B',str(CONTROL/'prepare_stage_assignments_001.py'),'handoff',stage])
+  run([PY,'-B',str(CONTROL/'prepare_stage_assignments_002.py'),'handoff',stage])
  print('R08_R09_R10_LOCAL_COMPLETE_REQUIRES_FINAL_PUBLICATION_VERIFICATION',flush=True)
 if __name__=='__main__':main()

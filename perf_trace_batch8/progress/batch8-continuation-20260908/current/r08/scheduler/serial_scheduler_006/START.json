@@ -1,0 +1,36 @@
+{
+  "pid": 468759,
+  "source": {
+    "path": "/public/home/accl15ptg7/run_R08_R10/run_r08_serial_suffix_006.py",
+    "size": 5676,
+    "sha256": "1f6f50a70ddf6051d9df707476e01c8ce3d254e8621c80c296848745c09b8faf"
+  },
+  "deadline_utc": "2026-09-08T20:18:09Z",
+  "deadline_authorization": {
+    "path": "/public/home/accl15ptg7/run_R08_R10/MACHINE_TIME_EXTENSION_001.json",
+    "size": 727,
+    "sha256": "b725c7ee9c96a7fac49d7d28ac3a5116fd18ae58d95119608db574c8b5074e5b"
+  },
+  "previous_scheduler": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/validation/serial_scheduler_005/START.json",
+    "size": 1918,
+    "sha256": "655c7273d9b68376cedf370c86b73ee3f55159c0b71700d1ece056a614b80737"
+  },
+  "resume_reason": "reuse three accepted published captures; fourth native raw valid but non-equivalent kernel ownership; replay R07 observed per-rank scheduler admission order",
+  "native_retry_authorization": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/capture04_retry_authorization_003.json",
+    "size": 2067,
+    "sha256": "d871697ad139ff333aff1527cdd06c3b682eeb7ba2caf8caada705094f3bf6d2"
+  },
+  "NFS_storage_authorization": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/authorization/NFS_output_storage_authorization_001.json",
+    "size": 2790,
+    "sha256": "095a893828fe5ae8396804131170f957af3e0e58f748b6f62a20e6e83d33de30"
+  },
+  "user_storage_policy": {
+    "path": "/public/home/accl15ptg7/run_R08_R10/USER_STORAGE_POLICY_20260908.json",
+    "size": 446,
+    "sha256": "dcb3735b5416946930a63dfa4181f323b90c98e0b17fd82ff98c012cc09a8458"
+  },
+  "scope": "R08 captures and CPU attribution; no R09/R10 business execution"
+}

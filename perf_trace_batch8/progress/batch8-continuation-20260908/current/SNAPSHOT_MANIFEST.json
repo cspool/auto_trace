@@ -1,6 +1,6 @@
 {
-  "snapshot_started_utc": "2026-09-08T11:04:06.843934+00:00",
-  "snapshot_completed_utc": "2026-09-08T11:04:12.115466+00:00",
+  "snapshot_started_utc": "2026-09-08T11:14:06.923158+00:00",
+  "snapshot_completed_utc": "2026-09-08T11:14:13.290397+00:00",
   "runtime_run_id": "batch8-dp2-fresh-003",
   "r08_accepted_capture_count": 3,
   "r08_planned_capture_count": 12,
@@ -13,12 +13,12 @@
   "remote_progress_branch": "progress/batch8-continuation-20260908",
   "current_execution_state": {
     "runtime_run_id": "batch8-dp2-fresh-003",
-    "current_capture": "04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc/attempt_002",
+    "current_capture": "04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc/attempt_003",
     "accepted_prefix_count": 3,
-    "current_runtime_revision": "revision_017",
-    "runtime_gate": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/runtime_capture_gate_010.json",
-    "scheduler": "serial_scheduler_005",
-    "scheduler_session": 22554,
+    "current_runtime_revision": "revision_018",
+    "runtime_gate": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/runtime_capture_gate_011.json",
+    "scheduler": "serial_scheduler_006",
+    "scheduler_session": 25805,
     "capture_session": null,
     "progress_watchdog_session": 12688,
     "deadline_utc": "2026-09-08T20:18:09Z",
@@ -30,19 +30,19 @@
     "accepted_capture_publisher": "/public/home/accl15ptg7/run_R08_R10/publish_accepted_captures_003.py",
     "original_NFS_session_state_superseded_by_this_emergency_record": true,
     "R09_R10_actual_execution_started": false,
-    "home_storage_available_gib": 19.61,
+    "home_storage_available_gib": 19.26,
     "weight_storage_constraint": "All physical weight bytes must stay under /root; never migrate weights to NFS again",
     "accepted_capture_publisher_session": 64243,
     "raw_storage_watchdog_session": 19126,
-    "pre_measured_two_worker_native_health": "revision017: both explicit warmup hipProfilerStart status0; both native PMC files growing; final premeasured check still pending",
+    "pre_measured_two_worker_native_health": "pending new attempt",
     "user_storage_policy": "/public/home/accl15ptg7/run_R08_R10/USER_STORAGE_POLICY_20260908.json",
     "migration_session": null,
     "migration_log": "/public/home/accl15ptg7/run_R08_R10/migrate_R08_all_outputs_to_NFS_001.log",
     "authoritative_state_path": "/public/home/accl15ptg7/run_R08_R10/RECOVERY_STATE_NFS.json",
-    "current_analysis_revision": "analysis_005",
+    "current_analysis_revision": "analysis_006",
     "migration_complete": "/public/home/accl15ptg7/run_R08_R10/storage_policy_correction_001/COMPLETE.json",
     "all_R08_R10_artifacts_outputs_logs_must_remain_physical_NFS": true,
-    "new_capture_minimum_NFS_free_reserve_gib": 8,
+    "new_capture_minimum_NFS_free_reserve_gib": 10,
     "additional_storage_paths_checked": {
       "/public/share/accl15ptg7": "not present or mounted in current container",
       "/work1/share/accl15ptg7": "not present; /work1 itself absent"
@@ -61,40 +61,42 @@
     "cpu_suffix_status": "outer waiting only; will restore all raw sources before R08 assignment",
     "complete_stage_publisher": "publish_complete_stages_002.py",
     "complete_stage_publisher_session": 46095,
-    "current_capture_phase": "raw_complete_attribution_or_audit_pending",
+    "current_capture_phase": "original_two_warmups",
     "latest_health_observation": {
-      "utc": "2026-09-08T11:03:24.586341+00:00",
+      "utc": "2026-09-08T11:13:25.570994+00:00",
       "accepted_R08": 3,
       "planned_R08": 12,
-      "current_capture": "04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc/attempt_002",
-      "current_phase": "raw_complete_attribution_or_audit_pending",
+      "current_capture": "04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc/attempt_003",
+      "current_phase": "original_two_warmups",
       "native_workers": [
         {
           "rank": 0,
-          "worker_pid": 387442,
-          "PMC_bytes": 0,
-          "worker_alive": false
+          "worker_pid": 471808,
+          "PMC_bytes": 23594689,
+          "worker_alive": true
         },
         {
           "rank": 1,
-          "worker_pid": 387448,
-          "PMC_bytes": 0,
-          "worker_alive": false
+          "worker_pid": 471801,
+          "PMC_bytes": 24401277,
+          "worker_alive": true
         }
       ],
-      "pre_measured_health": "complete",
-      "measured_request_token_progress": {
-        "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786": 1023,
-        "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04": 1023
-      },
+      "pre_measured_health": "pending",
+      "measured_request_token_progress": {},
       "live_eight_request_target_coverage": null,
-      "NFS_available_GiB": 19.61,
+      "NFS_available_GiB": 19.26,
       "temporarily_evicted_bytes": 13251173857,
-      "remaining_machine_hours": 9.25,
+      "remaining_machine_hours": 9.08,
       "completed_stages": []
     },
     "runtime_health_monitor_session": 19549,
-    "runtime_health_monitor": "watch_runtime_health_003.py"
+    "runtime_health_monitor": "watch_runtime_health_003.py",
+    "previous_attempt_failure_diagnostic": {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/capture04_multiplicity_diagnostic_001.json",
+      "size": 60156,
+      "sha256": "08270bf9427d843763f74fb066cb9acdbaf00c2af96c6844b5d8dcceccebd513"
+    }
   },
   "logs_are_point_in_time_snapshots": true,
   "active_sqlite_databases_not_claimed_transactionally_complete": true,
@@ -776,10 +778,10 @@
       "source_path": "/public/home/accl15ptg7/run_R08_R10/remote_checkpoint_watchdog_008.log",
       "snapshot_relative_path": "logs/control/remote_checkpoint_watchdog_008.log",
       "kind": "log_snapshot",
-      "captured_bytes": 594,
-      "source_captured_prefix_sha256": "44d1a46f92f005c5084d4810138cea1d7aadfcedcc7506688863eeef7dbb4b4c",
-      "snapshot_bytes": 594,
-      "snapshot_sha256": "44d1a46f92f005c5084d4810138cea1d7aadfcedcc7506688863eeef7dbb4b4c",
+      "captured_bytes": 693,
+      "source_captured_prefix_sha256": "4d2a4dc171438ded8f55a143436b74a9f3038c7e10a8cf12c1b8ebe1422c6579",
+      "snapshot_bytes": 693,
+      "snapshot_sha256": "4d2a4dc171438ded8f55a143436b74a9f3038c7e10a8cf12c1b8ebe1422c6579",
       "redacted": false,
       "source_was_live": true
     },
@@ -802,6 +804,17 @@
       "source_captured_prefix_sha256": "943ff7ae57b833de14d482a41518a316d20909dfeb4bc082b62879848f1c439a",
       "snapshot_bytes": 2033,
       "snapshot_sha256": "943ff7ae57b833de14d482a41518a316d20909dfeb4bc082b62879848f1c439a",
+      "redacted": false,
+      "source_was_live": true
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/run_R08_R10/run_r08_serial_suffix_006.log",
+      "snapshot_relative_path": "logs/control/run_r08_serial_suffix_006.log",
+      "kind": "log_snapshot",
+      "captured_bytes": 371,
+      "source_captured_prefix_sha256": "6e962391c2e9ab62ffc01ef9b0ff348573360b9d2b8934cbca2d1601bd029ef0",
+      "snapshot_bytes": 371,
+      "snapshot_sha256": "6e962391c2e9ab62ffc01ef9b0ff348573360b9d2b8934cbca2d1601bd029ef0",
       "redacted": false,
       "source_was_live": true
     },
@@ -930,10 +943,10 @@
       "source_path": "/public/home/accl15ptg7/run_R08_R10/watch_runtime_health_003.log",
       "snapshot_relative_path": "logs/control/watch_runtime_health_003.log",
       "kind": "log_snapshot",
-      "captured_bytes": 32089,
-      "source_captured_prefix_sha256": "2f582cf179b1871ace4a8e5cb8e764c355b9a16c7c337aef5cf5bde7b6fb15df",
-      "snapshot_bytes": 32089,
-      "snapshot_sha256": "2f582cf179b1871ace4a8e5cb8e764c355b9a16c7c337aef5cf5bde7b6fb15df",
+      "captured_bytes": 37837,
+      "source_captured_prefix_sha256": "eff1e69dd8492aba17baccb04a13b9b069e81b888009cb994945e619dba539fd",
+      "snapshot_bytes": 37837,
+      "snapshot_sha256": "eff1e69dd8492aba17baccb04a13b9b069e81b888009cb994945e619dba539fd",
       "redacted": false,
       "source_was_live": true
     },
@@ -989,6 +1002,17 @@
       "source_captured_prefix_sha256": "6946a41dbc4cbd1a1058df8b0340dd93080cfda9e46f9b6b350af3b1a63b460c",
       "snapshot_bytes": 5313,
       "snapshot_sha256": "6946a41dbc4cbd1a1058df8b0340dd93080cfda9e46f9b6b350af3b1a63b460c",
+      "redacted": false,
+      "source_was_live": false
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/run_R08_R10/audit_runtime_handoff_001.py",
+      "snapshot_relative_path": "code/outer_NFS_control/audit_runtime_handoff_001.py",
+      "kind": "outer_scheduler_code",
+      "captured_bytes": 9199,
+      "source_captured_prefix_sha256": "ab06b03b6fff768a7a02ab799a2486fc78d506139df16a9df3c5058cd7a16a93",
+      "snapshot_bytes": 9199,
+      "snapshot_sha256": "ab06b03b6fff768a7a02ab799a2486fc78d506139df16a9df3c5058cd7a16a93",
       "redacted": false,
       "source_was_live": false
     },
@@ -1202,6 +1226,28 @@
       "source_was_live": false
     },
     {
+      "source_path": "/public/home/accl15ptg7/run_R08_R10/prepare_stage_assignments_002.py",
+      "snapshot_relative_path": "code/outer_NFS_control/prepare_stage_assignments_002.py",
+      "kind": "outer_scheduler_code",
+      "captured_bytes": 15822,
+      "source_captured_prefix_sha256": "af181d256cfb19eb19506d14d906fc7b8ca1e2b147c50586ab01b2ca5cab14ff",
+      "snapshot_bytes": 15822,
+      "snapshot_sha256": "af181d256cfb19eb19506d14d906fc7b8ca1e2b147c50586ab01b2ca5cab14ff",
+      "redacted": false,
+      "source_was_live": false
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/run_R08_R10/prepare_terminal_handoff_tools_001.py",
+      "snapshot_relative_path": "code/outer_NFS_control/prepare_terminal_handoff_tools_001.py",
+      "kind": "outer_scheduler_code",
+      "captured_bytes": 7941,
+      "source_captured_prefix_sha256": "9e9543d4fcae6de196840b295e238a63e470cfb5250b413477a80ec5968ec06d",
+      "snapshot_bytes": 7941,
+      "snapshot_sha256": "9e9543d4fcae6de196840b295e238a63e470cfb5250b413477a80ec5968ec06d",
+      "redacted": false,
+      "source_was_live": false
+    },
+    {
       "source_path": "/public/home/accl15ptg7/run_R08_R10/probe_NFS_SQLite_mmap_001.py",
       "snapshot_relative_path": "code/outer_NFS_control/probe_NFS_SQLite_mmap_001.py",
       "kind": "outer_scheduler_code",
@@ -1360,9 +1406,9 @@
       "snapshot_relative_path": "code/outer_NFS_control/run_closed_R08_to_R10_001.py",
       "kind": "outer_scheduler_code",
       "captured_bytes": 2443,
-      "source_captured_prefix_sha256": "85329d98512836bfab3ea29211f6af280ab6b103e088733a2c9aa69d80a71c7a",
+      "source_captured_prefix_sha256": "3ed012f59b38c25beadc15e22d7e581748d79e16d5a3272489690458eb996772",
       "snapshot_bytes": 2443,
-      "snapshot_sha256": "85329d98512836bfab3ea29211f6af280ab6b103e088733a2c9aa69d80a71c7a",
+      "snapshot_sha256": "3ed012f59b38c25beadc15e22d7e581748d79e16d5a3272489690458eb996772",
       "redacted": false,
       "source_was_live": false
     },
@@ -1385,6 +1431,17 @@
       "source_captured_prefix_sha256": "f82154b3d3f5646a4a84a48c29c75419e7a2ad2693cebe2252a6c598de48a87f",
       "snapshot_bytes": 5447,
       "snapshot_sha256": "f82154b3d3f5646a4a84a48c29c75419e7a2ad2693cebe2252a6c598de48a87f",
+      "redacted": false,
+      "source_was_live": false
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/run_R08_R10/run_r08_serial_suffix_006.py",
+      "snapshot_relative_path": "code/outer_NFS_control/run_r08_serial_suffix_006.py",
+      "kind": "outer_scheduler_code",
+      "captured_bytes": 5676,
+      "source_captured_prefix_sha256": "1f6f50a70ddf6051d9df707476e01c8ce3d254e8621c80c296848745c09b8faf",
+      "snapshot_bytes": 5676,
+      "snapshot_sha256": "1f6f50a70ddf6051d9df707476e01c8ce3d254e8621c80c296848745c09b8faf",
       "redacted": false,
       "source_was_live": false
     },
@@ -1678,10 +1735,10 @@
       "source_path": "/public/home/accl15ptg7/run_R08_R10/RECOVERY_STATE_NFS.json",
       "snapshot_relative_path": "state/RECOVERY_STATE_NFS.json",
       "kind": "authoritative_execution_state",
-      "captured_bytes": 4709,
-      "source_captured_prefix_sha256": "69843c7815ed3fa6e5da6fc4a3e855160d2983ff365a883d0f0b7fd23512a1c4",
-      "snapshot_bytes": 4709,
-      "snapshot_sha256": "69843c7815ed3fa6e5da6fc4a3e855160d2983ff365a883d0f0b7fd23512a1c4",
+      "captured_bytes": 4807,
+      "source_captured_prefix_sha256": "8be20415dc38b0a69a2f4ba44f7f333bb44c986a0971be866ead77ee897cc908",
+      "snapshot_bytes": 4807,
+      "snapshot_sha256": "8be20415dc38b0a69a2f4ba44f7f333bb44c986a0971be866ead77ee897cc908",
       "redacted": false,
       "source_was_live": false
     },
@@ -4117,6 +4174,61 @@
       "source_was_live": false
     },
     {
+      "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/validation/serial_scheduler_006/01__gqa6_pmc.accepted_checkpoint.json",
+      "snapshot_relative_path": "r08/scheduler/serial_scheduler_006/01__gqa6_pmc.accepted_checkpoint.json",
+      "kind": "closed_checkpoint",
+      "captured_bytes": 1315,
+      "source_captured_prefix_sha256": "0cde18d82b3a25411b8d4fca8854980dc618349db86885c832565b81006c0d00",
+      "snapshot_bytes": 1315,
+      "snapshot_sha256": "0cde18d82b3a25411b8d4fca8854980dc618349db86885c832565b81006c0d00",
+      "redacted": false,
+      "source_was_live": false
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/validation/serial_scheduler_006/02__gqa6_pmc_read.accepted_checkpoint.json",
+      "snapshot_relative_path": "r08/scheduler/serial_scheduler_006/02__gqa6_pmc_read.accepted_checkpoint.json",
+      "kind": "closed_checkpoint",
+      "captured_bytes": 1335,
+      "source_captured_prefix_sha256": "0a8f15b82ea281a27e75c5e8cc019f26ef101f8fad8b0e394c2b598707cb5cbc",
+      "snapshot_bytes": 1335,
+      "snapshot_sha256": "0a8f15b82ea281a27e75c5e8cc019f26ef101f8fad8b0e394c2b598707cb5cbc",
+      "redacted": false,
+      "source_was_live": false
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/validation/serial_scheduler_006/03__gqa6_pmc_write.accepted_checkpoint.json",
+      "snapshot_relative_path": "r08/scheduler/serial_scheduler_006/03__gqa6_pmc_write.accepted_checkpoint.json",
+      "kind": "closed_checkpoint",
+      "captured_bytes": 1339,
+      "source_captured_prefix_sha256": "fecbc9dadc9b311f9c4780fb6eb7e4e726beaca763fb5fec76d8048d453a4501",
+      "snapshot_bytes": 1339,
+      "snapshot_sha256": "fecbc9dadc9b311f9c4780fb6eb7e4e726beaca763fb5fec76d8048d453a4501",
+      "redacted": false,
+      "source_was_live": false
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/validation/serial_scheduler_006/04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc.capture.log",
+      "snapshot_relative_path": "r08/scheduler/serial_scheduler_006/04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc.capture.log",
+      "kind": "log_snapshot",
+      "captured_bytes": 0,
+      "source_captured_prefix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "snapshot_bytes": 0,
+      "snapshot_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redacted": false,
+      "source_was_live": true
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/validation/serial_scheduler_006/START.json",
+      "snapshot_relative_path": "r08/scheduler/serial_scheduler_006/START.json",
+      "kind": "closed_checkpoint",
+      "captured_bytes": 1965,
+      "source_captured_prefix_sha256": "45dab356ba928c36c40e73676726035fe6e9cdd9448ead167ddd98a106e893d1",
+      "snapshot_bytes": 1965,
+      "snapshot_sha256": "45dab356ba928c36c40e73676726035fe6e9cdd9448ead167ddd98a106e893d1",
+      "redacted": false,
+      "source_was_live": false
+    },
+    {
       "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/serial_scheduler_002/01__gqa6_pmc.accepted_checkpoint.json",
       "snapshot_relative_path": "r08/scheduler/serial_scheduler_002/01__gqa6_pmc.accepted_checkpoint.json",
       "kind": "closed_checkpoint",
@@ -6317,6 +6429,94 @@
       "source_was_live": false
     },
     {
+      "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc/attempt_003/control/capture_contract.json",
+      "snapshot_relative_path": "r08/capture_control/04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc/attempt_003/control/capture_contract.json",
+      "kind": "closed_or_live_control_snapshot",
+      "captured_bytes": 8823,
+      "source_captured_prefix_sha256": "93d0144f4a91b24e018074a52d67340b55f43d8ca918bf0bfb0288f419bf2310",
+      "snapshot_bytes": 8823,
+      "snapshot_sha256": "93d0144f4a91b24e018074a52d67340b55f43d8ca918bf0bfb0288f419bf2310",
+      "redacted": false,
+      "source_was_live": false
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc/attempt_003/control/live_collector_exec.json",
+      "snapshot_relative_path": "r08/capture_control/04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc/attempt_003/control/live_collector_exec.json",
+      "kind": "closed_or_live_control_snapshot",
+      "captured_bytes": 776,
+      "source_captured_prefix_sha256": "b71fcd7ba48637262c48558a4a244511690cb939cf2c99a39b328667a5b5860b",
+      "snapshot_bytes": 776,
+      "snapshot_sha256": "b71fcd7ba48637262c48558a4a244511690cb939cf2c99a39b328667a5b5860b",
+      "redacted": false,
+      "source_was_live": false
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc/attempt_003/control/pmc_gate_events/warmup_start.rank0.pid471808.json",
+      "snapshot_relative_path": "r08/capture_control/04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc/attempt_003/control/pmc_gate_events/warmup_start.rank0.pid471808.json",
+      "kind": "closed_or_live_control_snapshot",
+      "captured_bytes": 1108,
+      "source_captured_prefix_sha256": "805fa66b8081ab933d9ec9cb8bcb6767ef751b98593965bf64c1e9a5c4716806",
+      "snapshot_bytes": 1108,
+      "snapshot_sha256": "805fa66b8081ab933d9ec9cb8bcb6767ef751b98593965bf64c1e9a5c4716806",
+      "redacted": false,
+      "source_was_live": false
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc/attempt_003/control/pmc_gate_events/warmup_start.rank1.pid471801.json",
+      "snapshot_relative_path": "r08/capture_control/04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc/attempt_003/control/pmc_gate_events/warmup_start.rank1.pid471801.json",
+      "kind": "closed_or_live_control_snapshot",
+      "captured_bytes": 1108,
+      "source_captured_prefix_sha256": "78ecc9e9dfea954a9df23db31d51d29bc8627b504b669f38f831836a88c5790d",
+      "snapshot_bytes": 1108,
+      "snapshot_sha256": "78ecc9e9dfea954a9df23db31d51d29bc8627b504b669f38f831836a88c5790d",
+      "redacted": false,
+      "source_was_live": false
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc/attempt_003/control/profiler_identity.json",
+      "snapshot_relative_path": "r08/capture_control/04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc/attempt_003/control/profiler_identity.json",
+      "kind": "closed_or_live_control_snapshot",
+      "captured_bytes": 47,
+      "source_captured_prefix_sha256": "e8bf7d8437f3676c2fbb5ac8bc0607c4578119c2fd2daaba88cc9f40a713bc5a",
+      "snapshot_bytes": 47,
+      "snapshot_sha256": "e8bf7d8437f3676c2fbb5ac8bc0607c4578119c2fd2daaba88cc9f40a713bc5a",
+      "redacted": false,
+      "source_was_live": false
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc/attempt_003/control/runtime_cwd_binding.json",
+      "snapshot_relative_path": "r08/capture_control/04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc/attempt_003/control/runtime_cwd_binding.json",
+      "kind": "closed_or_live_control_snapshot",
+      "captured_bytes": 538,
+      "source_captured_prefix_sha256": "ab11722b5ebcbaf5a38c3ead04f52cdfe4701ddb19c9f319a39f65e01afdbda7",
+      "snapshot_bytes": 538,
+      "snapshot_sha256": "ab11722b5ebcbaf5a38c3ead04f52cdfe4701ddb19c9f319a39f65e01afdbda7",
+      "redacted": false,
+      "source_was_live": false
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc/attempt_003/control/runtime_environment.json",
+      "snapshot_relative_path": "r08/capture_control/04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc/attempt_003/control/runtime_environment.json",
+      "kind": "closed_or_live_control_snapshot",
+      "captured_bytes": 4823,
+      "source_captured_prefix_sha256": "a094e9cb5f59d47a6c2281089e37b624461c59a6fbbd67c793a5a161a09be21c",
+      "snapshot_bytes": 4823,
+      "snapshot_sha256": "a094e9cb5f59d47a6c2281089e37b624461c59a6fbbd67c793a5a161a09be21c",
+      "redacted": false,
+      "source_was_live": false
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc/attempt_003/control/service_identity.json",
+      "snapshot_relative_path": "r08/capture_control/04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc/attempt_003/control/service_identity.json",
+      "kind": "closed_or_live_control_snapshot",
+      "captured_bytes": 93,
+      "source_captured_prefix_sha256": "a82bb6685a0b436491846379a742a388db240ec3ca153cca5a83131411a82bf3",
+      "snapshot_bytes": 93,
+      "snapshot_sha256": "a82bb6685a0b436491846379a742a388db240ec3ca153cca5a83131411a82bf3",
+      "redacted": false,
+      "source_was_live": false
+    },
+    {
       "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/01__gqa6_pmc/attempt_001/logs/hipprof.log",
       "snapshot_relative_path": "r08/capture_logs/01__gqa6_pmc/attempt_001/logs/hipprof.log",
       "kind": "log_snapshot",
@@ -6654,6 +6854,39 @@
       "source_captured_prefix_sha256": "477c4e0836d64404a039e5a4eacd8963b287729bfa6f9b489e596da491af36be",
       "snapshot_bytes": 100,
       "snapshot_sha256": "477c4e0836d64404a039e5a4eacd8963b287729bfa6f9b489e596da491af36be",
+      "redacted": false,
+      "source_was_live": true
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc/attempt_003/logs/hipprof.log",
+      "snapshot_relative_path": "r08/capture_logs/04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc/attempt_003/logs/hipprof.log",
+      "kind": "log_snapshot",
+      "captured_bytes": 1287,
+      "source_captured_prefix_sha256": "531c2fd6de90cdda6d9f28107e62c2ba7fd50a9045b086294f34cb6884d9769d",
+      "snapshot_bytes": 1287,
+      "snapshot_sha256": "531c2fd6de90cdda6d9f28107e62c2ba7fd50a9045b086294f34cb6884d9769d",
+      "redacted": false,
+      "source_was_live": true
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc/attempt_003/logs/service.log",
+      "snapshot_relative_path": "r08/capture_logs/04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc/attempt_003/logs/service.log",
+      "kind": "log_snapshot",
+      "captured_bytes": 46745,
+      "source_captured_prefix_sha256": "c96122be3b4b154e4f81071f60a0395803dcef0daa3c594997ea1275cc3c7967",
+      "snapshot_bytes": 46745,
+      "snapshot_sha256": "c96122be3b4b154e4f81071f60a0395803dcef0daa3c594997ea1275cc3c7967",
+      "redacted": false,
+      "source_was_live": true
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc/attempt_003/logs/workload.log",
+      "snapshot_relative_path": "r08/capture_logs/04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc/attempt_003/logs/workload.log",
+      "kind": "log_snapshot",
+      "captured_bytes": 0,
+      "source_captured_prefix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "snapshot_bytes": 0,
+      "snapshot_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "redacted": false,
       "source_was_live": true
     },
@@ -7424,6 +7657,17 @@
       "source_captured_prefix_sha256": "08270bf9427d843763f74fb066cb9acdbaf00c2af96c6844b5d8dcceccebd513",
       "snapshot_bytes": 60156,
       "snapshot_sha256": "08270bf9427d843763f74fb066cb9acdbaf00c2af96c6844b5d8dcceccebd513",
+      "redacted": false,
+      "source_was_live": false
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/capture04_retry_authorization_003.json",
+      "snapshot_relative_path": "r08/emergency_runtime/capture04_retry_authorization_003.json",
+      "kind": "frozen_runtime_tool_or_gate",
+      "captured_bytes": 2067,
+      "source_captured_prefix_sha256": "d871697ad139ff333aff1527cdd06c3b682eeb7ba2caf8caada705094f3bf6d2",
+      "snapshot_bytes": 2067,
+      "snapshot_sha256": "d871697ad139ff333aff1527cdd06c3b682eeb7ba2caf8caada705094f3bf6d2",
       "redacted": false,
       "source_was_live": false
     },

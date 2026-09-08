@@ -1,11 +1,11 @@
 {
   "runtime_run_id": "batch8-dp2-fresh-003",
-  "current_capture": "04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc/attempt_002",
+  "current_capture": "04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc/attempt_003",
   "accepted_prefix_count": 3,
-  "current_runtime_revision": "revision_017",
-  "runtime_gate": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/runtime_capture_gate_010.json",
-  "scheduler": "serial_scheduler_005",
-  "scheduler_session": 22554,
+  "current_runtime_revision": "revision_018",
+  "runtime_gate": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/runtime_capture_gate_011.json",
+  "scheduler": "serial_scheduler_006",
+  "scheduler_session": 25805,
   "capture_session": null,
   "progress_watchdog_session": 12688,
   "deadline_utc": "2026-09-08T20:18:09Z",
@@ -17,19 +17,19 @@
   "accepted_capture_publisher": "/public/home/accl15ptg7/run_R08_R10/publish_accepted_captures_003.py",
   "original_NFS_session_state_superseded_by_this_emergency_record": true,
   "R09_R10_actual_execution_started": false,
-  "home_storage_available_gib": 19.61,
+  "home_storage_available_gib": 19.26,
   "weight_storage_constraint": "All physical weight bytes must stay under /root; never migrate weights to NFS again",
   "accepted_capture_publisher_session": 64243,
   "raw_storage_watchdog_session": 19126,
-  "pre_measured_two_worker_native_health": "revision017: both explicit warmup hipProfilerStart status0; both native PMC files growing; final premeasured check still pending",
+  "pre_measured_two_worker_native_health": "pending new attempt",
   "user_storage_policy": "/public/home/accl15ptg7/run_R08_R10/USER_STORAGE_POLICY_20260908.json",
   "migration_session": null,
   "migration_log": "/public/home/accl15ptg7/run_R08_R10/migrate_R08_all_outputs_to_NFS_001.log",
   "authoritative_state_path": "/public/home/accl15ptg7/run_R08_R10/RECOVERY_STATE_NFS.json",
-  "current_analysis_revision": "analysis_005",
+  "current_analysis_revision": "analysis_006",
   "migration_complete": "/public/home/accl15ptg7/run_R08_R10/storage_policy_correction_001/COMPLETE.json",
   "all_R08_R10_artifacts_outputs_logs_must_remain_physical_NFS": true,
-  "new_capture_minimum_NFS_free_reserve_gib": 8,
+  "new_capture_minimum_NFS_free_reserve_gib": 10,
   "additional_storage_paths_checked": {
     "/public/share/accl15ptg7": "not present or mounted in current container",
     "/work1/share/accl15ptg7": "not present; /work1 itself absent"
@@ -48,38 +48,40 @@
   "cpu_suffix_status": "outer waiting only; will restore all raw sources before R08 assignment",
   "complete_stage_publisher": "publish_complete_stages_002.py",
   "complete_stage_publisher_session": 46095,
-  "current_capture_phase": "raw_complete_attribution_or_audit_pending",
+  "current_capture_phase": "original_two_warmups",
   "latest_health_observation": {
-    "utc": "2026-09-08T11:03:24.586341+00:00",
+    "utc": "2026-09-08T11:13:25.570994+00:00",
     "accepted_R08": 3,
     "planned_R08": 12,
-    "current_capture": "04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc/attempt_002",
-    "current_phase": "raw_complete_attribution_or_audit_pending",
+    "current_capture": "04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc/attempt_003",
+    "current_phase": "original_two_warmups",
     "native_workers": [
       {
         "rank": 0,
-        "worker_pid": 387442,
-        "PMC_bytes": 0,
-        "worker_alive": false
+        "worker_pid": 471808,
+        "PMC_bytes": 23594689,
+        "worker_alive": true
       },
       {
         "rank": 1,
-        "worker_pid": 387448,
-        "PMC_bytes": 0,
-        "worker_alive": false
+        "worker_pid": 471801,
+        "PMC_bytes": 24401277,
+        "worker_alive": true
       }
     ],
-    "pre_measured_health": "complete",
-    "measured_request_token_progress": {
-      "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786": 1023,
-      "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04": 1023
-    },
+    "pre_measured_health": "pending",
+    "measured_request_token_progress": {},
     "live_eight_request_target_coverage": null,
-    "NFS_available_GiB": 19.61,
+    "NFS_available_GiB": 19.26,
     "temporarily_evicted_bytes": 13251173857,
-    "remaining_machine_hours": 9.25,
+    "remaining_machine_hours": 9.08,
     "completed_stages": []
   },
   "runtime_health_monitor_session": 19549,
-  "runtime_health_monitor": "watch_runtime_health_003.py"
+  "runtime_health_monitor": "watch_runtime_health_003.py",
+  "previous_attempt_failure_diagnostic": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/capture04_multiplicity_diagnostic_001.json",
+    "size": 60156,
+    "sha256": "08270bf9427d843763f74fb066cb9acdbaf00c2af96c6844b5d8dcceccebd513"
+  }
 }
