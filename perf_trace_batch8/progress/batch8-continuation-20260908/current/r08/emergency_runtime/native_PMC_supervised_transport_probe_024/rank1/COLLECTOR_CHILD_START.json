@@ -1,0 +1,35 @@
+{
+  "argv": [
+    "/opt/dtk/bin/hipprof",
+    "--pmc-write",
+    "--pmc-type",
+    "3",
+    "--kernel-name",
+    "_gqa6",
+    "--hip-trace",
+    "--hiptx-trace",
+    "--trace-args",
+    "--no-export",
+    "--follow-fork",
+    "--exit-cleanup",
+    "-d",
+    "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_supervised_transport_probe_024/rank1/hipprof_tmp",
+    "-o",
+    "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_supervised_transport_probe_024/rank1/capture",
+    "/usr/bin/python",
+    "-B",
+    "-c",
+    "from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=4, pipe_handle=11)",
+    "--multiprocessing-fork"
+  ],
+  "bootstrap_file_descriptors_preserved": [
+    4,
+    7,
+    10,
+    11
+  ],
+  "physical_device_id": 1,
+  "pid": 918857,
+  "started_realtime_ns": 1788887801941803525,
+  "wrapper_pid": 918836
+}
