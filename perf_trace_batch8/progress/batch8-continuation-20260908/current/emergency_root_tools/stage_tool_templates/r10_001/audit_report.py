@@ -2,6 +2,7 @@
 from pathlib import Path
 from decimal import Decimal
 import csv,json,hashlib,collections,gzip,base64,itertools,time,sys,re
+csv.field_size_limit(2**63-1)
 ROOT=Path(__file__).parents[2];ACCEPT=ROOT/'acceptance'
 NAMES=['request_timeline','process_timeline','kernel_timeline','live_utilization_aligned','process_live_utilization','kernel_concurrency','queue_concurrency','launch_gaps','high_latency_processes','dependency_state','traffic_resource_attachment','opportunity_candidates']
 def check(v,m):

@@ -1,0 +1,198 @@
+{
+  "fixture_only": true,
+  "origin_ns": "1788855000000000123",
+  "expected_event_count": 2072,
+  "batch8_coverage": {
+    "coverage": [
+      {
+        "request_id": "synthetic-request-0",
+        "process_targets": 2,
+        "strict_owned_kernels": 128,
+        "phases": [
+          {
+            "phase": "prefill",
+            "observed_process_targets": 1
+          },
+          {
+            "phase": "decode",
+            "observed_process_targets": 1
+          }
+        ]
+      },
+      {
+        "request_id": "synthetic-request-1",
+        "process_targets": 2,
+        "strict_owned_kernels": 128,
+        "phases": [
+          {
+            "phase": "prefill",
+            "observed_process_targets": 1
+          },
+          {
+            "phase": "decode",
+            "observed_process_targets": 1
+          }
+        ]
+      },
+      {
+        "request_id": "synthetic-request-2",
+        "process_targets": 2,
+        "strict_owned_kernels": 128,
+        "phases": [
+          {
+            "phase": "prefill",
+            "observed_process_targets": 1
+          },
+          {
+            "phase": "decode",
+            "observed_process_targets": 1
+          }
+        ]
+      },
+      {
+        "request_id": "synthetic-request-3",
+        "process_targets": 2,
+        "strict_owned_kernels": 128,
+        "phases": [
+          {
+            "phase": "prefill",
+            "observed_process_targets": 1
+          },
+          {
+            "phase": "decode",
+            "observed_process_targets": 1
+          }
+        ]
+      },
+      {
+        "request_id": "synthetic-request-4",
+        "process_targets": 2,
+        "strict_owned_kernels": 128,
+        "phases": [
+          {
+            "phase": "prefill",
+            "observed_process_targets": 1
+          },
+          {
+            "phase": "decode",
+            "observed_process_targets": 1
+          }
+        ]
+      },
+      {
+        "request_id": "synthetic-request-5",
+        "process_targets": 2,
+        "strict_owned_kernels": 128,
+        "phases": [
+          {
+            "phase": "prefill",
+            "observed_process_targets": 1
+          },
+          {
+            "phase": "decode",
+            "observed_process_targets": 1
+          }
+        ]
+      },
+      {
+        "request_id": "synthetic-request-6",
+        "process_targets": 2,
+        "strict_owned_kernels": 128,
+        "phases": [
+          {
+            "phase": "prefill",
+            "observed_process_targets": 1
+          },
+          {
+            "phase": "decode",
+            "observed_process_targets": 1
+          }
+        ]
+      },
+      {
+        "request_id": "synthetic-request-7",
+        "process_targets": 2,
+        "strict_owned_kernels": 128,
+        "phases": [
+          {
+            "phase": "prefill",
+            "observed_process_targets": 1
+          },
+          {
+            "phase": "decode",
+            "observed_process_targets": 1
+          }
+        ]
+      }
+    ]
+  },
+  "source_tables": [
+    {
+      "logical_name": "request_timeline",
+      "path": "/root/r08_emergency_tools/cpu_viewer_fixture_001/request_timeline.csv",
+      "size": 750,
+      "sha256": "da23d9622db7f8809ba439a8ea16927b0e4f289861900138c94d69b282442b8c",
+      "schema": [
+        "request_id",
+        "rank",
+        "physical_device_id",
+        "completion_tokens",
+        "begin_ns",
+        "end_ns",
+        "duration_ns",
+        "fixture_only"
+      ],
+      "row_count": 8
+    },
+    {
+      "logical_name": "process_timeline",
+      "path": "/root/r08_emergency_tools/cpu_viewer_fixture_001/process_timeline.csv",
+      "size": 94926,
+      "sha256": "fb443782db1d84b8852f9de20695113139a5a0e9586bd9b5fa40a1e585b13345",
+      "schema": [
+        "request_id",
+        "rank",
+        "physical_device_id",
+        "process_range_id",
+        "begin_ns",
+        "end_ns",
+        "duration_ns",
+        "process_id",
+        "fragment_id",
+        "phase",
+        "layer_idx",
+        "layer_forward_context",
+        "hip_runtime_context_schema",
+        "hip_runtime_context",
+        "fixture_only"
+      ],
+      "row_count": 16
+    },
+    {
+      "logical_name": "kernel_timeline",
+      "path": "/root/r08_emergency_tools/cpu_viewer_fixture_001/kernel_timeline.csv",
+      "size": 201763,
+      "sha256": "434bde5d83fd60552fc2fc2df9129e76be35ee7ad65b43ac60e5f9071bab6564",
+      "schema": [
+        "request_id",
+        "rank",
+        "physical_device_id",
+        "kernel_instance_id",
+        "owner_process_range_id",
+        "begin_ns",
+        "end_ns",
+        "duration_ns",
+        "native_kernel_name",
+        "queue_id",
+        "stream_id",
+        "process_id",
+        "fragment_id",
+        "phase",
+        "layer_idx",
+        "fixture_only"
+      ],
+      "row_count": 1024
+    }
+  ],
+  "model_device_runtime_evidence_consumed": false
+}

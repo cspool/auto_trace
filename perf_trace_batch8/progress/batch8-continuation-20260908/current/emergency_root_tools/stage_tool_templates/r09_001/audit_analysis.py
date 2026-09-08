@@ -1,6 +1,7 @@
 """Independent CPU audit. No import of the analysis builder or its rules."""
 from pathlib import Path
 import csv,json,hashlib,collections,math,bisect,array,time,sys
+csv.field_size_limit(2**63-1)
 ROOT=Path(__file__).parents[2]
 NAMES=['request_timeline','process_timeline','kernel_timeline','live_utilization_aligned','process_live_utilization','kernel_concurrency','queue_concurrency','launch_gaps','high_latency_processes','dependency_state','traffic_resource_attachment','opportunity_candidates']
 def check(x,m):

@@ -68,7 +68,7 @@ def main():
  browser_path=Path('/root/r08_r10_browser_tools');check(browser_path.exists(),'browser installed before R10 assignment');os.environ['PLAYWRIGHT_BROWSERS_PATH']=str(browser_path)
  flags=['--disable-background-networking','--disable-component-update','--disable-domain-reliability','--no-first-run','--no-default-browser-check','--host-resolver-rules=MAP * ~NOTFOUND','--disable-features=MediaRouter,OptimizationHints,AutofillServerCommunication','--js-flags=--max-old-space-size=32768']
  with sync_playwright() as p:
-  executable=Path(p.chromium.executable_path);browser=p.chromium.launch(headless=True,args=flags);binary=rec(executable);version=browser.version
+  executable=Path(p.chromium.executable_path);browser=p.chromium.launch(executable_path=str(executable),headless=True,args=flags);binary=rec(executable);version=browser.version
   try:
    for filename in ['index.html']+PAGES:
     context=browser.new_context(offline=True,viewport={'width':1440,'height':1000});page=context.new_page();errors=[]

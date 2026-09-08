@@ -1,6 +1,7 @@
 """CPU-only, explicit continuation lineage and immutable output primitives."""
 from pathlib import Path
 import csv,json,hashlib,os,subprocess
+csv.field_size_limit(2**63-1)
 ROOT=Path(__file__).parents[2]
 PROJECT=Path('/public/home/accl15ptg7/auto_trace')
 RUN=PROJECT/'perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003'

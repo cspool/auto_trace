@@ -1,0 +1,541 @@
+{
+  "status": "complete",
+  "recorded_utc": "2026-09-08T08:42:20.764261+00:00",
+  "file_relocations": [
+    {
+      "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/01__gqa6_pmc/attempt_003/capture.db",
+      "destination_path": "/dev/shm/r08_quota_recovery_002/01__gqa6_pmc/attempt_003/capture.db",
+      "size": 2596814848,
+      "sha256": "de1eb4e085398af04ef8e87e474dd0a79de8c1754ff80c9d933522b887638a13",
+      "role": "01__gqa6_pmc_attempt_003",
+      "same_bytes": true,
+      "source_content_not_changed": true,
+      "canonical_link_restored": true
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/01__gqa6_pmc/attempt_004/capture.db",
+      "destination_path": "/dev/shm/r08_quota_recovery_002/01__gqa6_pmc/attempt_004/capture.db",
+      "size": 3533828096,
+      "sha256": "7607cb24d9468d102cfe874dc62e0e0b4e7270d425a22eb157da861f7bfba564",
+      "role": "01__gqa6_pmc_attempt_004",
+      "same_bytes": true,
+      "source_content_not_changed": true,
+      "canonical_link_restored": true
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/03__gqa6_pmc_write/attempt_001/capture.db",
+      "destination_path": "/dev/shm/r08_quota_recovery_002/03__gqa6_pmc_write/attempt_001/capture.db",
+      "size": 3524657152,
+      "sha256": "9fb344fe8815dbb3d19133cc4185cced4cbbcc929ab81c98097651297ecdb340",
+      "role": "03__gqa6_pmc_write_attempt_001",
+      "same_bytes": true,
+      "source_content_not_changed": true,
+      "canonical_link_restored": true
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/verified-memory-backing-20260908/r07_cpu_validation_001/capture.source.db",
+      "destination_path": "/dev/shm/r08_quota_recovery_002/r07_cpu_validation_001/capture.source.db",
+      "size": 8958377984,
+      "sha256": "0ea77cdac40926182c4e04fc29e687e62df9b2cac50296c7e399817c583690b0",
+      "role": "r07_capture_source_db",
+      "same_bytes": true,
+      "source_content_not_changed": true,
+      "canonical_link_restored": true
+    },
+    {
+      "source_path": "/public/home/accl15ptg7/verified-memory-backing-20260908/r07_cpu_validation_001/capture.prepared.db",
+      "destination_path": "/dev/shm/r08_quota_recovery_002/r07_cpu_validation_001/capture.prepared.db",
+      "size": 9443573760,
+      "sha256": "14a1e21b4bf5a0b29b11a62c4d000cac4979aa5af4ddc687f614bdab4f3179cd",
+      "role": "r07_capture_prepared_db",
+      "same_bytes": true,
+      "source_content_not_changed": true,
+      "canonical_link_restored": true
+    }
+  ],
+  "weights_returned_to_physical_root_disk": true,
+  "model_logical_path_unchanged": true,
+  "removed_only_verified_remote_download_caches": [
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-000",
+      "size": 33554432,
+      "sha256": "d0b9e98c430b3b3bffe1e4f3421f3cec107f9ce45ee7ea19634928bf434184d6",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-001",
+      "size": 33554432,
+      "sha256": "d82452c490f38d549bd93f648c300eb7bb2be6fe9296af451133630bdb206f32",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-002",
+      "size": 33554432,
+      "sha256": "961f0acbe53aef698b6dea13ebc77edf937c8c455a86671ab92ce34c4debc891",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-003",
+      "size": 33554432,
+      "sha256": "1a6eaa919bcc5aaade1db00d86dff873087e73665533a194b549d39a9aa1734d",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-004",
+      "size": 33554432,
+      "sha256": "8153d257fc353c6e275ae5f4db3d2bf8a087624ecdf2b425ae772cee79256bb0",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-005",
+      "size": 33554432,
+      "sha256": "1113215ebce922b90089e7e62a91cd1a3e60f04cf3c8963b58a70ba37725cf9a",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-006",
+      "size": 33554432,
+      "sha256": "c267d4ca7cf124a826412e08fe7d371fb0288d093af6883767c02cc79a375749",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-007",
+      "size": 33554432,
+      "sha256": "f4406e4b6aefc1659fe3ccd95112d18245847db385094d21d1bf1c0084beae1a",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-008",
+      "size": 33554432,
+      "sha256": "83a50fb4a2e5b6edf465207467ae8433d7f66e8ccaa155672b627bb2ae91ff5c",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-009",
+      "size": 33554432,
+      "sha256": "bff4ad629b1a061568fded1ff58342b03974a906dfce5117a98cebc8505fadbc",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-010",
+      "size": 33554432,
+      "sha256": "7a27ba92f40cfe20d194270122f126426a23426473b2d323400eeaa3db99f145",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-011",
+      "size": 33554432,
+      "sha256": "46740f0acb5b074f13da8a8bee1bc6d85e137a7a777bbfee93638ac5873ac42c",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-012",
+      "size": 33554432,
+      "sha256": "076e81bf86c2870be424551a729f5f010e256bb10a6061b3fb36d3828a31d888",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-013",
+      "size": 33554432,
+      "sha256": "4d3092752f3e108d3cd9df3d67c317d10ffa953207253dd84bb97d59cbf31408",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-014",
+      "size": 33554432,
+      "sha256": "868da71308df11b2c33cc359065bd398064a584a26239ec5dc4ec3fb234eecbb",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-015",
+      "size": 33554432,
+      "sha256": "3f5cdffa845a30fa541dc8325d1065abe3e4838fbab157ec5ff304fb9b093cf9",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-016",
+      "size": 33554432,
+      "sha256": "2712811f6ebbdf5e3d61a3ee60691460289f5c6677e224bd038e36d6d8e2b9b6",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-017",
+      "size": 33554432,
+      "sha256": "260b6aa1464a320452455ecfbdc7c68363bd841f7756339c21bb16e767d6044b",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-018",
+      "size": 33554432,
+      "sha256": "693850a491918ca89fd86be8331b60ec4e5cfeb04ccfbcce4510cd767ea6fe8e",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-019",
+      "size": 33554432,
+      "sha256": "4a66fb4eaaba8b0b25471f327cb1aa0df6a0b21dddd9d0c4952d71fdc108be56",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-020",
+      "size": 33554432,
+      "sha256": "b058fb7b792270759509f06f9807ebde14835ef21844f04109443c03c33d33f5",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-021",
+      "size": 33554432,
+      "sha256": "2e4a0370a272444491ee8adf10db5d1110382981877c323eafb658f13d431140",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-022",
+      "size": 33554432,
+      "sha256": "6942c3d460cd1008668e9a0d503527b137a247ac4a94c87e686b6462331d8793",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-023",
+      "size": 33554432,
+      "sha256": "e35d8d2b9d8d139e53e5f7d8deea9adeac5c869137239e2397482fef627f98eb",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-024",
+      "size": 33554432,
+      "sha256": "98220642e7dfe6d7b76c39a6b609f0679c9863273c7eb14fe30d61ade86f2b72",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-025",
+      "size": 33554432,
+      "sha256": "60b3845466afe65d2b1452dfc07fe232628c863a9a2140f21d7a78850b67c094",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-026",
+      "size": 33554432,
+      "sha256": "c7dd2bc8164f039ee8db3d07c5a685a96ab642028f84355df48956c9b6a243fc",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-027",
+      "size": 33554432,
+      "sha256": "1cbe347e3b9274f3a3ec42ecf0d69f32cb6573d6c89189adf2ea98bf11452730",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-028",
+      "size": 33554432,
+      "sha256": "b2a7cea1ac40ec0b3cfafda00178338748f1b12fe78f631539ed061b9ac35a9d",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-029",
+      "size": 33554432,
+      "sha256": "7299908b3c0e8a8dcbdb350bc7e5d30cb6a61b37614d528acf3f0e2e32cff2fa",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-030",
+      "size": 33554432,
+      "sha256": "161f5313e0082fb8d76a8d79c94706ca477b72d0682c1b01cb66e6f12f9c5215",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-031",
+      "size": 33554432,
+      "sha256": "78358d1b495d366eb5da12ded2b51e5c16cef82826735fa7cf2fb3f2c12f3da1",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-032",
+      "size": 33554432,
+      "sha256": "75ade13fae82dbca1bff37eb77a73c07abd75ecb8ebceb6acc5bd47af49064cf",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-033",
+      "size": 33554432,
+      "sha256": "7cf1ed7dfd766c17effadfbde9d4e1d6fb7d2357b60b9eae37c6290691288128",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-034",
+      "size": 33554432,
+      "sha256": "04d4e8063825259874caf21bfe5d418e88b01f758b09351f6e21158bcf393664",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-035",
+      "size": 33554432,
+      "sha256": "1bdb4b836f76325a8e7483945641d50da29469a021bee82d9dbe7ed48becf3b9",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-036",
+      "size": 33554432,
+      "sha256": "343a8818338e453179473cd12c39feb4709d23bc9d723411000cd0832d5917b6",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-037",
+      "size": 33554432,
+      "sha256": "9e105f256b72bef0fd5621c0874c4339d8fb13a1c8858b30e031bc65050914e9",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-038",
+      "size": 33554432,
+      "sha256": "ce2e1a9351b00be0c96b4a8e53f452421d3d11f440639b580066d46da9df6577",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-039",
+      "size": 33554432,
+      "sha256": "430ee920eb8899f8ab53f7db07009bd458e74b1fddd36346104be9150ad77839",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-040",
+      "size": 33554432,
+      "sha256": "d144e6bcedbf1aacc64f81d112a37b10a12bea7ea60483eead56d06aedd6c94d",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-041",
+      "size": 33554432,
+      "sha256": "616c225c8efc1fcb9157463e172adad833ac9985224ae4ab87a416f9bc9eb3fc",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-042",
+      "size": 33554432,
+      "sha256": "0b7743c81b9040bf7e3c427830e1dcf7fbb3202d6b2d9eb703d5c669e7e5d055",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-043",
+      "size": 33554432,
+      "sha256": "28047877b1bea948b997a5d99773113685ee23dd3bca3f857653a1c037fefd6c",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-044",
+      "size": 33554432,
+      "sha256": "eed00fded52a040df6f374722681a64242a01e719be5cf747418f61cde5adb46",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-045",
+      "size": 33554432,
+      "sha256": "bf0e6625eebababfc9f2c29b97766af8bea58819ada3433b5930d21a8763d674",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-046",
+      "size": 33554432,
+      "sha256": "caa672ae509ebf7b6da1c3d385c64bc7a8733dbdce8a18289054b940107a6090",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-047",
+      "size": 33554432,
+      "sha256": "48f540c24a64fbf2e787cafed613610578d9fe9e0e6417f191cbb15eedccadbf",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-048",
+      "size": 33554432,
+      "sha256": "fca3e0dc64ff2337164b21131d1391ea1a84aa44b18d01dfd00381a0dcb8f2a2",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-049",
+      "size": 33554432,
+      "sha256": "c6f261674e51dce7dfb2aa9ab988b309b49428ee7e79555ea377a0deabf61725",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-050",
+      "size": 33554432,
+      "sha256": "a7fa7d3b4bb63c4d57f39a1d9880a039fafe3f1dbaaf74c0b78226243b7871bb",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-051",
+      "size": 33554432,
+      "sha256": "f0fc5da585e8e3d4602d1c0b50287c5c81cd32c96a801ebb8932d63ff60df4a7",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-052",
+      "size": 33554432,
+      "sha256": "05ccbb3b5e86f867634830bc153c8dd6efeb21e61120a439d72d82323e19fc62",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-053",
+      "size": 33554432,
+      "sha256": "5bad8fe5128047c1ed063c6148de07f905ffa88e66bf9509cf3ecf8c8738c79c",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-054",
+      "size": 33554432,
+      "sha256": "5c3f6017003e7cbd9a637058abd30c5d32da923ac3b95b3414c85fb6b67132e7",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-055",
+      "size": 33554432,
+      "sha256": "d2402507dd889478d8fefd7061464fd092c93628724abe4c1f50f0285bba6aaa",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-056",
+      "size": 33554432,
+      "sha256": "9c5057ad833dd52567d45ee1aca614fc534fb50f63c2f9089fbf09c1755d0e26",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-057",
+      "size": 33554432,
+      "sha256": "fc222a28930f67fa3157d88b9fcc1cbae58fcbbd8c672d050a0dd619c6667d1c",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-058",
+      "size": 33554432,
+      "sha256": "436700dbcb453b8b551fdd83e65e71f8d8ff1fddbdb15db128d57a9bfc4dbc29",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-059",
+      "size": 33554432,
+      "sha256": "d9a6d67c2f4ad77cf32f6a41359c82547e56181cb71fff368f5ee622a231841a",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-060",
+      "size": 33554432,
+      "sha256": "ee584e6c829d03965101abcca51319448323344a82eef1f57582329cfc984a36",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-061",
+      "size": 33554432,
+      "sha256": "d5ba960b90b17994b6914c6daf480c2af6b376e6b33638c61692a3950d593240",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-062",
+      "size": 33554432,
+      "sha256": "548b6a330bbd6531af86937bc0f7abdf6b6a38f3ea424dbce32772b422e7207a",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-063",
+      "size": 33554432,
+      "sha256": "4801f44c92213509abcf5d016b56c1f78096a2dadff5121b399f381213636b39",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-064",
+      "size": 33554432,
+      "sha256": "bcba7e317d1bd9a1d2307e0beffccc9d31994f730286fbfd18a1529e25a667fe",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-065",
+      "size": 33554432,
+      "sha256": "a503eb7a61b78e1f52c0ff77782fe617182e93812dbc72d1bc3670d6ad71e73b",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-066",
+      "size": 33554432,
+      "sha256": "c22637d18ca41cadc8c3be8f6b927dc23e71a4194767c160acf4037ffa792700",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-067",
+      "size": 33554432,
+      "sha256": "16d5d05a9c9a87a81fd5d7521b1cbd1a4f67d4cc388ae3733e6f1309e9b39895",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-068",
+      "size": 33554432,
+      "sha256": "32aa4c1aa169f35b771ebe96c835441a2ef979f208789c798ad3aa7467f77db1",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-069",
+      "size": 33554432,
+      "sha256": "9aa6d46b00aad549193399116343b527171757fe9d273aab72bbbe166365ba82",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-070",
+      "size": 33554432,
+      "sha256": "57f177b6802275b4aa146fcb5ba040f6d22dbbe8796d24ab8391c587942f1657",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-071",
+      "size": 33554432,
+      "sha256": "ea693856a612ab288f535be1f9d75f55463967809f97a130a84c7708bac5cba0",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829/r04-r06-full-32m.tar.gz.part-072",
+      "size": 33554432,
+      "sha256": "890653f0d35329853ae33563d2683a185bb2be7064b56f2a84fe5734cb2ca6fa",
+      "remote_release_tag": "perf-trace-batch8-r04-r06-batch8-dp2-fresh-003-20260829"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r07-attempt043-open-writer-db-20260904/r07-attempt043-open-writer-capture.db.gz.part-000",
+      "size": 1073741824,
+      "sha256": "5891a1edc34e672985e6430285fa4599fc240b2f80825f7073048d3192c42c85",
+      "remote_release_tag": "perf-trace-batch8-r07-attempt043-open-writer-db-20260904"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r07-attempt043-open-writer-db-20260904/r07-attempt043-open-writer-capture.db.gz.part-001",
+      "size": 1073741824,
+      "sha256": "81022dbf14489aa7ad0fe709c5a66c317e096c0e3972e0c24696cf304720b139",
+      "remote_release_tag": "perf-trace-batch8-r07-attempt043-open-writer-db-20260904"
+    },
+    {
+      "path": "/public/home/accl15ptg7/run_R08_R10/downloads/perf-trace-batch8-r07-attempt043-open-writer-db-20260904/r07-attempt043-open-writer-capture.db.gz.part-002",
+      "size": 251268311,
+      "sha256": "f8913ff9870e8e96f05d6000b74c1955bd3a930085ea4f44b7c727071322911a",
+      "remote_release_tag": "perf-trace-batch8-r07-attempt043-open-writer-db-20260904"
+    }
+  ],
+  "all_canonical_paths_resolve_identical_bytes": true,
+  "storage_report_home": [
+    1048576,
+    1048576,
+    51200,
+    0,
+    0,
+    9223372036854775807,
+    9223372034826509008,
+    9223372034826509008,
+    4096,
+    255
+  ],
+  "storage_report_root": [
+    4096,
+    4096,
+    114317626,
+    7318437,
+    1493042,
+    29114368,
+    27156402,
+    27156402,
+    4096,
+    255
+  ]
+}

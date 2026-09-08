@@ -1,6 +1,7 @@
 """Render complete accepted R09 data into local, self-contained R10 pages."""
 from pathlib import Path
 import csv,json,hashlib,gzip,base64,html,time,sys,collections,os
+csv.field_size_limit(2**63-1)
 ROOT=Path(__file__).parents[2];ACCEPT=ROOT/'acceptance';TOOLS=Path(__file__).parent
 NAMES=['request_timeline','process_timeline','kernel_timeline','live_utilization_aligned','process_live_utilization','kernel_concurrency','queue_concurrency','launch_gaps','high_latency_processes','dependency_state','traffic_resource_attachment','opportunity_candidates']
 def check(x,m):
