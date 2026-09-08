@@ -1,0 +1,45 @@
+{
+  "status": "complete",
+  "phase": "completion_audit",
+  "argv": [
+    "/usr/bin/python3",
+    "-B",
+    "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/continuation_001/tools/revision_001/audit_completion.py"
+  ],
+  "started_utc": "2026-09-08T22:07:59.650264+00:00",
+  "finished_utc": "2026-09-08T22:08:03.510465+00:00",
+  "elapsed_seconds": 3.860233144951053,
+  "leader_pid": 1179298,
+  "leader_returncode": 0,
+  "observed_descendant_identities": [
+    {
+      "pid": 1179298,
+      "ppid": 1179297,
+      "state": "R",
+      "start_ticks": 54050254
+    },
+    {
+      "pid": 1179301,
+      "ppid": 1179298,
+      "state": "D",
+      "start_ticks": 54050260
+    }
+  ],
+  "observed_list_is_not_claimed_full_spawn_event_log": true,
+  "orphan_reaping": [],
+  "kernel_child_subreaper_enabled": true,
+  "remaining_owned_descendants": [],
+  "all_started_processes_terminated": true,
+  "forced_cleanup": false,
+  "cpu_only_environment_device_visibility_empty": true,
+  "proxy_and_profiler_injection_removed": true,
+  "stdout_stderr": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/continuation_001/logs/completion_audit.log",
+    "size": 30,
+    "sha256": "6ffe6890b5c38ce09c4bfe6cb0343d7bac7624e033c86557f7bdf3e33c149088"
+  },
+  "outer_runner": {
+    "path": "/public/home/accl15ptg7/run_R08_R10/phase_runner_002.py",
+    "sha256": "8ef5c2bcce5f30ee8192232a876b7a16fd2d5bc140ff51cfb91331cb3a26f514"
+  }
+}

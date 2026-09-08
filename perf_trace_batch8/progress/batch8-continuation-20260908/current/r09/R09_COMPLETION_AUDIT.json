@@ -1,0 +1,64 @@
+{
+  "R07_original_native_controller_terminal_claimed": false,
+  "all_eight_request_phase_process_kernel_coverage_verified": true,
+  "artifact_manifest": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/continuation_001/artifact_manifest.json",
+    "sha256": "b2bb2cd002778cd29bd701fdedfdd12f2b049eec09be8fff8b1960da8b5a8266",
+    "size": 8914
+  },
+  "auditor": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/continuation_001/tools/revision_001/audit_completion.py",
+    "sha256": "2c584eb304cdfdaa4a36d964816a3c144faba2a64c8edfaa2c97096460e4b52a",
+    "size": 3218
+  },
+  "builder_imported": false,
+  "completed_utc": "2026-09-08T22:08:03.490107+00:00",
+  "coverage_target_met": true,
+  "cpu_only": true,
+  "cumulative_runtime_ledger_sha256": "ab832fb680dcc2d18fe25e6ddc01af5d075ccb57c98c6aae587a2b7786c4a1eb",
+  "evidence_status": "complete",
+  "execution_status": "complete",
+  "full_request_analysis": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/continuation_001/analysis/fresh_e2e_analysis.accepted.json",
+    "sha256": "983e9c6f644a7164d6a7cf01cc3bbfee6714ce62fb5b564ae59775bf4f4c7b79",
+    "size": 106542
+  },
+  "independent_audit": true,
+  "lineage_id": "batch8-dp2-fresh-003",
+  "next_authorization_required": false,
+  "r01_handoff_sha256": "f28cb9274151c5b08f15964e9645cbcaa41b90fb6f867607472028e993b774d6",
+  "r02_handoff_sha256": "9c1b908430fe9757935d029e8f423192652f21675aeffd77bc6a0f5d48d2e7e6",
+  "r03_handoff_sha256": "f7e6066bd72272cee9e96d2ac31596bd20f01841157bda4d0c2eb56092f99885",
+  "r04_handoff_sha256": "403af982ff2f70f89fce2cfda59074a9b014a32e95c53e9e05e292dc843e6719",
+  "r05_handoff_sha256": "db08474f64a999428287388a949762274716df125132cbccbabe3ec23c1aec66",
+  "r06_handoff_sha256": "0da6d692f1d69194ab02f4de0993c7aaca2381793eeb61ce33ffeb52ec058976",
+  "r07_handoff_sha256": "437e753f5dbdea8e9b0a6009ede6eebed0a61c76a26683cad6b6618f9c374b10",
+  "r08_handoff_sha256": "6d0f64acc912472645bbca489bd16ff88f58eaeb91bd733f55558e0198bfdbbd",
+  "replay_timing_used_as_latency": false,
+  "row_universes": {
+    "dependency_edges": 32492,
+    "dependency_nodes": 59864,
+    "live_anchors": 2,
+    "live_gaps": 800,
+    "live_samples": 2491806,
+    "processes": 12544,
+    "requests": 8,
+    "runtime_context_rows": 316802,
+    "strict_owned_kernels": 23660
+  },
+  "runtime_goal": "R09",
+  "runtime_run_id": "batch8-dp2-fresh-003",
+  "schema_version": 1,
+  "source_lineage": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/continuation_001/R09_SOURCE_LINEAGE.json",
+    "sha256": "e610738ced8bf3106eb6cfbef5751e4862e6b068b2e0e37f2d17a169a8a598ae",
+    "size": 61496
+  },
+  "status": "complete",
+  "table_audit": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/continuation_001/validation/R09_TABLE_INDEPENDENT_AUDIT.json",
+    "sha256": "b548a0cd30b7339481d190687ca06ab0325782d905ef9c991464bed31edd5989",
+    "size": 3538
+  },
+  "trace_profile_sha256": "3b4c952063f48ae662b48b5ce9d8fd76e0ac4d74e170bdb1839ae8b1aaa23cce"
+}

@@ -1,0 +1,13 @@
+R09_TABLE request_timeline 8
+R09_TABLE process_timeline 12544
+R09_TABLE kernel_timeline 23660
+R09_TABLE live_utilization_aligned 2492608
+R09_TABLE process_live_utilization 12544
+R09_TABLE kernel_concurrency 70998
+R09_TABLE queue_concurrency 70998
+R09_TABLE launch_gaps 23652
+R09_TABLE high_latency_processes 1237
+R09_TABLE dependency_state 92356
+R09_TABLE traffic_resource_attachment 177408
+R09_TABLE opportunity_candidates 12544
+R09_CANDIDATE_TABLES_COMPLETE 183.38
