@@ -1,0 +1,42 @@
+{
+  "control_backend": "native_initially_on_explicit_warmup_and_measured_start_terminal_stop",
+  "device_transition": {
+    "finished_monotonic_ns": 514972221082132,
+    "operation": "hipSetDevice",
+    "pid": 750538,
+    "started_monotonic_ns": 514972220952972,
+    "status": 0,
+    "tid": 765066
+  },
+  "dp_rank": 0,
+  "initial_profiler_stop_monotonic_ns": 513614281110444,
+  "legacy_initial_stop_field_is_logical_guard_only": true,
+  "monotonic_ns": 514972243147175,
+  "native_collection_initially_on": true,
+  "operation": "stop",
+  "physical_device_id": 0,
+  "pid": 750538,
+  "profiler_transition": {
+    "finished_monotonic_ns": 514972243081695,
+    "operation": "hipProfilerStop",
+    "pid": 750538,
+    "started_monotonic_ns": 514972243065035,
+    "status": 0,
+    "tid": 765066
+  },
+  "realtime_ns": 1788879749348202954,
+  "reason": "measured_batch_complete_control_file",
+  "runtime_attempt_id": "batch8-dp2-fresh-003-R08-08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read-attempt_002",
+  "schema_version": 1,
+  "segment_id": "08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read",
+  "status": "complete",
+  "synchronize_transition": {
+    "finished_monotonic_ns": 514972221098902,
+    "operation": "hipDeviceSynchronize",
+    "pid": 750538,
+    "started_monotonic_ns": 514972221087772,
+    "status": 0,
+    "tid": 765066
+  },
+  "tid": 765066
+}

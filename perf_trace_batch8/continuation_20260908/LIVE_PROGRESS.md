@@ -127,3 +127,5 @@ Capture 04 is published at https://github.com/cspool/auto_trace/releases/tag/per
 - 2026-09-08T14:58:55.546023+00:00: User authorized another 8 h; deadline is now 2026-09-09 04:18:09 UTC. Seven captures accepted/published/offloaded; capture08 attempt002 has both-rank native prehealth and all-eight declared first-phase trace coverage, measured generation ongoing. Outer deadline versions prepared without modifying active GPU or frozen tools.
 
 - 2026-09-08T15:01:11.809474+00:00: Extension002 outer observers active (health006, progress011, capture publisher004, offloader002, CPU waiter002, stage publisher003). Capture08 attempt002 live marker audit covers all 12,544 declared first-phase targets for eight requests with exact R07 phase orders; native closed attribution remains pending.
+
+2026-09-08T15:02:29.223203Z: Capture 08 attempt_002 completed all eight original measured requests, HTTP 200 and 1024 tokens each, total 8192, zero failed requests; both native rank stop events are retained. Measured replay duration 946.873 seconds is diagnostic only, not R07 observed latency. Native export and independent attribution are still required.
