@@ -17,7 +17,7 @@
   "accepted_capture_publisher": "/public/home/accl15ptg7/run_R08_R10/publish_accepted_captures_003.py",
   "original_NFS_session_state_superseded_by_this_emergency_record": true,
   "R09_R10_actual_execution_started": false,
-  "home_storage_available_gib": 15.23,
+  "home_storage_available_gib": 13.04,
   "weight_storage_constraint": "All physical weight bytes must stay under /root; never migrate weights to NFS again",
   "accepted_capture_publisher_session": 64243,
   "raw_storage_watchdog_session": 19126,
@@ -48,24 +48,24 @@
   "cpu_suffix_status": "outer waiting only; will restore all raw sources before R08 assignment",
   "complete_stage_publisher": "publish_complete_stages_002.py",
   "complete_stage_publisher_session": 46095,
-  "current_capture_phase": "measured_batch",
+  "current_capture_phase": "workload_complete_collector_export_or_raw_sealing",
   "latest_health_observation": {
-    "utc": "2026-09-08T12:44:37.658042+00:00",
+    "utc": "2026-09-08T12:54:38.673759+00:00",
     "accepted_R08": 4,
     "planned_R08": 12,
     "current_capture": "05_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_read/attempt_001",
-    "current_phase": "measured_batch",
+    "current_phase": "workload_complete_collector_export_or_raw_sealing",
     "native_workers": [
       {
         "rank": 0,
         "worker_pid": 553054,
-        "PMC_bytes": 1148761369,
+        "PMC_bytes": 1564696609,
         "worker_alive": true
       },
       {
         "rank": 1,
         "worker_pid": 553051,
-        "PMC_bytes": 1148433363,
+        "PMC_bytes": 1566236500,
         "worker_alive": true
       }
     ],
@@ -93,14 +93,8 @@
     ],
     "pre_measured_health": "complete",
     "measured_request_token_progress": {
-      "batch8-dual-dcu-dp2-req-002-28a42990210e6f68": 544,
-      "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786": 500,
-      "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5": 460,
-      "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41": 419,
-      "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c": 543,
-      "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f": 501,
-      "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3": 417,
-      "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04": 461
+      "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41": 1023,
+      "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3": 1023
     },
     "live_eight_request_target_coverage": {
       "status": "complete_live_marker_coverage",
@@ -108,9 +102,9 @@
       "closed_capture_accepted": false,
       "all_first_phase_orders_match_R07": true
     },
-    "NFS_available_GiB": 15.23,
+    "NFS_available_GiB": 13.04,
     "temporarily_evicted_bytes": 21092925463,
-    "remaining_machine_hours": 7.56,
+    "remaining_machine_hours": 7.39,
     "completed_stages": []
   },
   "runtime_health_monitor_session": 55116,
