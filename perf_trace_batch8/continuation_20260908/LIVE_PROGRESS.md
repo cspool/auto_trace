@@ -235,3 +235,5 @@ Capture 04 is published at https://github.com/cspool/auto_trace/releases/tag/per
 - 2026-09-08T20:04:35.749635+00:00: 12_chunk_fwd_kernel_o_pmc_write attempt_001 passed both-device native prehealth and released the original four requests per rank in exact observed R07 admission order. Warmup native reset recorded on ranks []. Complete live marker and closed native attribution audits are still required.
 
 - 2026-09-08T20:08:51.012141+00:00: Capture 12 attempt_001 passed exact live coverage for all eight requests, each with 784 declared first-prefill and 784 first-decode targets, 12,544 total, no missing or duplicate targets. Both rank orders match R07. Original live-prefix hashes and checker code are retained. Closed native attribution and capture acceptance remain pending.
+
+2026-09-08T20:17:16.283804Z: Capture 12 attempt_001 completed all eight original measured requests, HTTP 200 and 1024 tokens each, total 8192, zero failed requests; both native rank stop events are retained. Measured replay duration 808.111 seconds is diagnostic only, not R07 observed latency. Native export and independent attribution are still required.
