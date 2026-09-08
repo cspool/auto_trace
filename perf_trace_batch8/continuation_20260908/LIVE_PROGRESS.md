@@ -211,3 +211,5 @@ Capture 04 is published at https://github.com/cspool/auto_trace/releases/tag/per
 - 2026-09-08T19:09:40.498097+00:00: 10_chunk_fwd_kernel_o_pmc Release published with server asset size/SHA256 verified: https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-r08-10-chunk-fwd-kernel-o-pmc-20260908. Authorized local large-file eviction completed for 7731988998 bytes. Original member manifests and restoration receipts retained on NFS and checkpointed here.
 
 - 2026-09-08T19:11:14.536285+00:00: Capture 11 attempt_001 started under frozen runtime021/analysis008 with model weights at /root/Qwen3.5-27B and new outputs on NFS. Immutable startup controls are preserved. Startup does not establish warmup health, eight-request trace coverage, or capture acceptance.
+
+- 2026-09-08T19:19:37.000725+00:00: 11_chunk_fwd_kernel_o_pmc_read attempt_001 passed both-device native prehealth and released the original four requests per rank in exact observed R07 admission order. Warmup native reset recorded on ranks []. Complete live marker and closed native attribution audits are still required.
