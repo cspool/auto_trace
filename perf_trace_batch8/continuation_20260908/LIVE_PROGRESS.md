@@ -65,3 +65,7 @@ Prepared stage templates 003 and outer assignment 002 add direct required R01–
 ## 2026-09-08 11:22 UTC — actual two-rank admission confirmed
 
 Capture 04 attempt 003 passed pre-measured native PMC health for rank 0 / worker 471808 and rank 1 / worker 471801, with 714,706,447 and 717,798,743 native bytes respectively. All eight original measured requests started after the original two warmups. Both EngineCore admission releases match the exact R07 order; rank 1 arrived as request 8,7,1,3 and was released as recorded 1,3,8,7. Request objects and workload are unchanged. This establishes actual admission control only; full native trace/PMC attribution and capture acceptance remain pending.
+
+## 2026-09-08 11:28 UTC — all eight live target sets and first-phase order verified
+
+Capture 04 attempt 003 has all 12,544 declared process targets across the eight original measured requests, with no missing, extra or duplicate target. Each request retains 784 first-prefill and 784 first-decode targets. Both ranks’ actual first-prefill and first-decode request orders equal the recorded R07 order. This is a read-only live process-marker checkpoint, not completed native DB/PMC attribution; all eight 1,024-token requests and the final 1,408-owner Triton counter audit still must finish before acceptance.
