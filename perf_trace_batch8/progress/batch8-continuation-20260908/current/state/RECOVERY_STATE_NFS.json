@@ -17,7 +17,7 @@
   "accepted_capture_publisher": "/public/home/accl15ptg7/run_R08_R10/publish_accepted_captures_004.py",
   "original_NFS_session_state_superseded_by_this_emergency_record": true,
   "R09_R10_actual_execution_started": false,
-  "home_storage_available_gib": 12.28,
+  "home_storage_available_gib": 12.02,
   "weight_storage_constraint": "All physical weight bytes must stay under /root; never migrate weights to NFS again",
   "accepted_capture_publisher_session": 12763,
   "raw_storage_watchdog_session": 94301,
@@ -43,14 +43,14 @@
   "R08_final_validation_restore_policy": "Restore every temporarily evicted artifact and verify original SHA256 before final R08 validation; after all 12 GPU captures, user authorizes deleting root weights to provide restoration workspace.",
   "progress_watchdog": "/public/home/accl15ptg7/run_R08_R10/remote_checkpoint_watchdog_012.py",
   "postcapture_restoration_code": "/public/home/accl15ptg7/run_R08_R10/restore_all_R08_release_artifacts_002.py",
-  "postcapture_restoration_status": "complete all 12 groups and 53 original files; additional full original SHA recheck underway for outer CPU resume",
+  "postcapture_restoration_status": "complete 12/12, 53 originals, 77,001,580,022 bytes; additional resume hash recheck complete",
   "cpu_suffix_waiter_session": null,
-  "cpu_suffix_status": "new outer CPU003 active; source path optimization CPU gate complete; frozen business tools unchanged",
+  "cpu_suffix_status": "R08 actual resource_model phase running after complete full predecessor admission",
   "complete_stage_publisher": "publish_complete_stages_003.py",
   "complete_stage_publisher_session": 1983,
   "current_capture_phase": "accepted",
   "latest_health_observation": {
-    "utc": "2026-09-08T21:31:13.857102+00:00",
+    "utc": "2026-09-08T21:41:16.126238+00:00",
     "accepted_R08": 12,
     "planned_R08": 12,
     "current_capture": "12_chunk_fwd_kernel_o_pmc_write/attempt_001",
@@ -102,9 +102,9 @@
       "closed_capture_accepted": true,
       "all_first_phase_orders_match_R07": true
     },
-    "NFS_available_GiB": 12.28,
+    "NFS_available_GiB": 12.02,
     "temporarily_evicted_bytes": 77001580022,
-    "remaining_machine_hours": 6.78,
+    "remaining_machine_hours": 6.61,
     "completed_stages": []
   },
   "runtime_health_monitor_session": 44834,
@@ -168,5 +168,7 @@
   "restored_file_count": 53,
   "active_cpu_suffix_code": "/public/home/accl15ptg7/run_R08_R10/run_closed_R08_to_R10_003.py",
   "active_cpu_suffix_session": 61412,
-  "outer_path_validator_gate": "/public/home/accl15ptg7/run_R08_R10/outer_source_path_optimization_gate_001/COMPLETE.json"
+  "outer_path_validator_gate": "/public/home/accl15ptg7/run_R08_R10/outer_source_path_optimization_gate_001/COMPLETE.json",
+  "R08_actual_CPU_assignment_complete": true,
+  "R08_predecessor_source_records_rehashed": 155475
 }

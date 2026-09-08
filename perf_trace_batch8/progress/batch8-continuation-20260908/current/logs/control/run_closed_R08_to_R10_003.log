@@ -7,3 +7,26 @@ CPU_RESUME_ORIGINAL_RAW_RECHECKED 05_triton_red_fused__to_copy_add_mean_mul_pow_
 CPU_RESUME_ORIGINAL_RAW_RECHECKED 06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write 6
 CPU_RESUME_ORIGINAL_RAW_RECHECKED 07_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc 3
 CPU_RESUME_ORIGINAL_RAW_RECHECKED 08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read 3
+CPU_RESUME_ORIGINAL_RAW_RECHECKED 09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write 5
+CPU_RESUME_ORIGINAL_RAW_RECHECKED 10_chunk_fwd_kernel_o_pmc 5
+CPU_RESUME_ORIGINAL_RAW_RECHECKED 11_chunk_fwd_kernel_o_pmc_read 5
+CPU_RESUME_ORIGINAL_RAW_RECHECKED 12_chunk_fwd_kernel_o_pmc_write 5
+CPU_RESUME_ALL_RESTORED_ORIGINAL_SHA256_VERIFIED
+OUTER_CPU_SUFFIX_EXIT ['/usr/bin/python3', '-B', '/public/home/accl15ptg7/run_R08_R10/verify_completed_R08_restoration_001.py']
+OUTER_CPU_SUFFIX_START ['/usr/bin/python3', '-B', '/public/home/accl15ptg7/run_R08_R10/prepare_stage_assignments_004.py', 'assign', 'R08']
+REUSING_UNCHANGED_FROZEN_CPU_TOOLS R08
+PREFIX_FULL_MANIFEST_REHASHED R08 R01 73
+PREFIX_FULL_MANIFEST_REHASHED R08 R02 1437
+PREFIX_FULL_MANIFEST_REHASHED R08 R03 17182
+PREFIX_FULL_MANIFEST_REHASHED R08 R04 136521
+PREFIX_FULL_MANIFEST_REHASHED R08 R05 69
+PREFIX_FULL_MANIFEST_REHASHED R08 R06 152
+OUTER_STAGE_ASSIGNED R08
+OUTER_CPU_SUFFIX_EXIT ['/usr/bin/python3', '-B', '/public/home/accl15ptg7/run_R08_R10/prepare_stage_assignments_004.py', 'assign', 'R08']
+OUTER_CPU_SUFFIX_START ['/usr/bin/python3', '-B', '/public/home/accl15ptg7/run_R08_R10/phase_runner_002.py', '--stage-root', '/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001', '--phase', 'resource_model', '--timeout', '24099', '--', '/usr/bin/python3', '-B', '/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/analysis_006/build_resource_model.py']
+OUTER_PHASE_CLOSED resource_model complete 1
+OUTER_CPU_SUFFIX_EXIT ['/usr/bin/python3', '-B', '/public/home/accl15ptg7/run_R08_R10/phase_runner_002.py', '--stage-root', '/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001', '--phase', 'resource_model', '--timeout', '24099', '--', '/usr/bin/python3', '-B', '/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/analysis_006/build_resource_model.py']
+OUTER_CPU_SUFFIX_START ['/usr/bin/python3', '-B', '/public/home/accl15ptg7/run_R08_R10/phase_runner_002.py', '--stage-root', '/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001', '--phase', 'resource_audit', '--timeout', '24078', '--', '/usr/bin/python3', '-B', '/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/analysis_006/audit_resource_model.py']
+OUTER_PHASE_CLOSED resource_audit complete 1
+OUTER_CPU_SUFFIX_EXIT ['/usr/bin/python3', '-B', '/public/home/accl15ptg7/run_R08_R10/phase_runner_002.py', '--stage-root', '/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001', '--phase', 'resource_audit', '--timeout', '24078', '--', '/usr/bin/python3', '-B', '/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/analysis_006/audit_resource_model.py']
+OUTER_CPU_SUFFIX_START ['/usr/bin/python3', '-B', '/public/home/accl15ptg7/run_R08_R10/phase_runner_002.py', '--stage-root', '/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001', '--phase', 'seal', '--timeout', '24060', '--', '/usr/bin/python3', '-B', '/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/tools/closure_001/seal_r08.py']
