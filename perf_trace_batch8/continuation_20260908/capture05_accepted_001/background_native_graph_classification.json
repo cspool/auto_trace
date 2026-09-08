@@ -1,0 +1,26 @@
+{
+  "API": "hipGraphLaunch",
+  "all_outside_selected_process_index_unions": true,
+  "classification": "outside selected R06 process scopes; graph kernels are not promoted as directly correlated PMC attributes",
+  "identity_fields": [
+    "pid",
+    "HIPOPS_rowid",
+    "HIP_Index",
+    "HIP_rowid",
+    "HIP_tid",
+    "native_device",
+    "HIP_BeginNs",
+    "HIP_EndNs"
+  ],
+  "native_dispatch_count": 527868,
+  "ordered_native_identity_sha256": "8cdcf87c46d5897ef0a40295d05a7ef8897e3fa4fb6fc8d53590b70fe40c13a4",
+  "per_worker_native_dispatch_counts": {
+    "553051": 263934,
+    "553054": 263934
+  },
+  "raw_database_sha256": "1f43d6b84ebd8da8dcef3d29272e2ee2ae6b18fea0bc97b41e93aaa1018e6538",
+  "raw_native_rows_retained_unmodified": true,
+  "selected_owner_count": 1408,
+  "stable_sort": "worker PID then HIPOPS rowid",
+  "status": "complete_background_classification"
+}
