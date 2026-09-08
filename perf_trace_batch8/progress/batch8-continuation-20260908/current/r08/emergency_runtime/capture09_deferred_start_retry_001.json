@@ -1,0 +1,86 @@
+{
+  "status": "authorized_CPU_gated_deferred_native_start_same_workload_retry",
+  "utc": "2026-09-08T15:54:29.391300+00:00",
+  "failure": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_004/RAW_CAPTURE_FAILURE.json",
+    "size": 1219,
+    "sha256": "25f86924b2b072e438de012f69975edd13b3100a79f2e07d776590016174998f"
+  },
+  "native_health": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_004/control/PRE_MEASURED_NATIVE_PMC_HEALTH.json",
+    "size": 228,
+    "sha256": "e1527693bf48c04752c027cf79587937c72a5284d2c01cacf98a9ba9c4694a79"
+  },
+  "tracee_cleanup": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_004/control/tracee_process_cleanup.json",
+    "size": 280,
+    "sha256": "69706224272fb91a65c1ab0914197d2dae4fa860a42d3ee10966f2c9f2b481ff"
+  },
+  "all_previous_attempt_owned_process_groups_verified_closed": [
+    841301,
+    841309,
+    852544
+  ],
+  "previous_worker_pids_verified_closed": [
+    843714,
+    843717
+  ],
+  "previous_measured_requests_started": false,
+  "previous_eight_accepted_captures_preserved": [
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/validation/serial_scheduler_011/01__gqa6_pmc.accepted_checkpoint.json",
+      "size": 1315,
+      "sha256": "0cde18d82b3a25411b8d4fca8854980dc618349db86885c832565b81006c0d00"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/validation/serial_scheduler_011/02__gqa6_pmc_read.accepted_checkpoint.json",
+      "size": 1335,
+      "sha256": "0a8f15b82ea281a27e75c5e8cc019f26ef101f8fad8b0e394c2b598707cb5cbc"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/validation/serial_scheduler_011/03__gqa6_pmc_write.accepted_checkpoint.json",
+      "size": 1339,
+      "sha256": "fecbc9dadc9b311f9c4780fb6eb7e4e726beaca763fb5fec76d8048d453a4501"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/validation/serial_scheduler_011/04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc.accepted_checkpoint.json",
+      "size": 2555,
+      "sha256": "2f72d96fc0d5c7fe9f7c44c5b144a3e81bcf9a9f1500d7dd37714baf8475d6fb"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/validation/serial_scheduler_011/05_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_read.accepted_checkpoint.json",
+      "size": 1516,
+      "sha256": "bd90015a059ca4360898ab9188dc3d2613b0537c69ed7c4bcfb73e7c03e4a482"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/validation/serial_scheduler_011/06_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc_write.accepted_checkpoint.json",
+      "size": 1520,
+      "sha256": "88a6e91beca57e6507071259b594f0e16610e8c10a679e36a67cf932ad4b56c7"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/validation/serial_scheduler_011/07_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc.accepted_checkpoint.json",
+      "size": 1480,
+      "sha256": "70c14102b14a0fb8132d5b368864b15b8c2db52c2eab1b211a9558c6bbe03736"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/validation/serial_scheduler_011/08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read.accepted_checkpoint.json",
+      "size": 1500,
+      "sha256": "10518743e76e52e0841547b6e8012fdc06249f3a74d290641a688eda80a85cb6"
+    }
+  ],
+  "previous_runtime_revisions_018_019_preserved": true,
+  "new_runtime_revision_020_CPU_gate": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/runtime_capture_gate_013.json",
+    "size": 9144,
+    "sha256": "a5f7a5172602886f83c7cc155292d4e17cebdfc971cd414d22b3ed4f5723db77"
+  },
+  "analysis_007_unchanged": true,
+  "new_attempt": "attempt_005",
+  "additional_warmups_or_altered_workload_within_attempt": false,
+  "deadline_authorization": {
+    "path": "/public/home/accl15ptg7/run_R08_R10/MACHINE_TIME_EXTENSION_002.json",
+    "size": 849,
+    "sha256": "fd69661ead053a8cd805f5132bd1382583ffc3b9775c5fd9e005565be0bf39b3"
+  },
+  "reason": "four attempts lost one native PMC worker before measured requests; warmup Stop-Start alone failed; activate CPU-gated initial-off native collection until original warmups"
+}

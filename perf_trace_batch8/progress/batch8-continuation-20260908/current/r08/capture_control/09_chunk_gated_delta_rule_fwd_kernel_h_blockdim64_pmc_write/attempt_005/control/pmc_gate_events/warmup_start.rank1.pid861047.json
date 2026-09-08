@@ -1,0 +1,41 @@
+{
+  "added_model_executions": 0,
+  "added_requests": 0,
+  "canonical_measured_window_started": false,
+  "control_backend": "native_initially_off_warmup_stop_start_measured_start_terminal_stop",
+  "dp_rank": 1,
+  "initial_profiler_stop_monotonic_ns": 518263874098965,
+  "legacy_initial_stop_field_is_logical_guard_only": true,
+  "monotonic_ns": 518470404019941,
+  "native_collection_initially_disabled": true,
+  "native_collection_initially_on": false,
+  "native_off_to_on_reset_before_original_warmup": true,
+  "operation": "warmup_native_start",
+  "participant_request_ids": [
+    "r08-pmc-warmup-002-batch8-dual-dcu-dp2-req-002-28a42990210e6f68"
+  ],
+  "physical_device_id": 1,
+  "pid": 861047,
+  "profiler_reset_stop_transition": {
+    "finished_monotonic_ns": 518470403899151,
+    "operation": "hipProfilerStop",
+    "pid": 861047,
+    "started_monotonic_ns": 518470401792055,
+    "status": 0,
+    "tid": 861047
+  },
+  "profiler_transition": {
+    "finished_monotonic_ns": 518470403945091,
+    "operation": "hipProfilerStart",
+    "pid": 861047,
+    "started_monotonic_ns": 518470403939941,
+    "status": 0,
+    "tid": 861047
+  },
+  "realtime_ns": 1788883247509076790,
+  "runtime_attempt_id": "batch8-dp2-fresh-003-R08-09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write-attempt_005",
+  "schema_version": 1,
+  "segment_id": "09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write",
+  "status": "complete",
+  "tid": 861047
+}

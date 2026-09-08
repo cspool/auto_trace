@@ -1,0 +1,25 @@
+{
+  "status": "accepted",
+  "item": {
+    "segment_id": "01__gqa6_pmc",
+    "capture_attempt": "attempt_005",
+    "execution_manifest": {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/01__gqa6_pmc/attempt_005/execution_manifest.json",
+      "size": 8009,
+      "sha256": "ea181a0c3d25e4cf3dd2b1c05f0dc045084355f80be455a636f64d2ab6feb03b"
+    },
+    "normalization_manifest": {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/normalized/captures/01__gqa6_pmc/attempt_005/revision_002/NORMALIZATION_COMPLETE.json",
+      "size": 3311,
+      "sha256": "0ce3e5648c4b35e9e9fbec42476cdb51717c4bc5e45f1b2614c5490b3d1e5bb2"
+    },
+    "independent_audit": {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/normalized/captures/01__gqa6_pmc/attempt_005/revision_002/INDEPENDENT_AUDIT.json",
+      "size": 882,
+      "sha256": "e68dac7c9b0f23f4db770f64e50b877a838db61adae8e2fdfe9838a8673bfb2b"
+    }
+  },
+  "accepted_prefix_count": 1,
+  "complete_plan_count": 12,
+  "reused_verified_prefix": true
+}

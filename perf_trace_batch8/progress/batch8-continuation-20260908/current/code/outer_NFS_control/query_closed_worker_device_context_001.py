@@ -1,0 +1,11 @@
+from pathlib import Path
+import json,sqlite3,re,hashlib,sys,time,datetime
+R=Path('/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001');seg,attempt=sys.argv[1:3];assert '/' not in seg and '/' not in attempt;A=R/'raw/captures'/seg/attempt;assert json.loads((A/'RAW_CAPTURE_FAILURE.json').read_text())['status']=='failed_not_accepted';db=A/'capture.db';expected=next(x for x in json.loads((A/'raw_inventory_at_exit.json').read_text())['files'] if x['path']==str(db));before=db.stat();h=hashlib.sha256()
+with db.open('rb') as f:
+ for b in iter(lambda:f.read(8<<20),b''):h.update(b)
+assert h.hexdigest()==expected['sha256'];c=sqlite3.connect('file:'+str(db)+'?mode=ro&immutable=1',uri=True);c.execute('PRAGMA mmap_size=2147418112');rows=[];start=time.monotonic()
+for p in sorted((A/'control/pmc_gate_events').glob('warmup_start.*.json')):
+ w=json.loads(p.read_text());tables=[n for (n,) in c.execute("SELECT name FROM sqlite_master WHERE type='table' AND name GLOB 'HIP_[0-9]*'") if re.search('_'+str(w['pid'])+'_',n)];assert len(tables)==1;n=tables[0];calls=list(c.execute('SELECT BeginNs,EndNs,pid,tid,args,_Index FROM "'+n+'" WHERE args LIKE ? ORDER BY _Index',('hipSetDevice(%',)));rows.append({'rank':w['dp_rank'],'pid':w['pid'],'warmup_started_realtime_ns':w['realtime_ns'],'all_recorded_hipSetDevice_calls':calls,'warmup_native_transitions':w})
+c.close();after=db.stat();assert (before.st_size,before.st_mtime_ns)==(after.st_size,after.st_mtime_ns);x={'status':'complete_read_only_native_device_context_query','utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'database':expected,'workers':rows,'original_data_modified':False,'no_additional_GPU_calls':True,'native_and_control_clock_equality_not_assumed_for_close_boundaries':True,'elapsed_seconds':time.monotonic()-start};p=R/'raw/runtime_tools'/('capture'+seg[:2]+'_'+attempt+'_native_device_context_query_001.json')
+with p.open('x') as f:json.dump(x,f,indent=2);f.write('\n')
+print(json.dumps({'report':str(p),'workers':[{'rank':r['rank'],'pid':r['pid'],'warmup_realtime_ns':r['warmup_started_realtime_ns'],'device_calls':r['all_recorded_hipSetDevice_calls']} for r in rows],'elapsed_seconds':x['elapsed_seconds']}))
