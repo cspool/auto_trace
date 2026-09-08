@@ -50,7 +50,7 @@
   "complete_stage_publisher_session": 1983,
   "current_capture_phase": "failed_not_accepted",
   "latest_health_observation": {
-    "utc": "2026-09-08T16:20:22.536949+00:00",
+    "utc": "2026-09-08T16:30:23.624781+00:00",
     "accepted_R08": 8,
     "planned_R08": 12,
     "current_capture": "09_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_write/attempt_005",
@@ -75,7 +75,7 @@
     "live_eight_request_target_coverage": null,
     "NFS_available_GiB": 13.44,
     "temporarily_evicted_bytes": 45795450475,
-    "remaining_machine_hours": 11.96,
+    "remaining_machine_hours": 11.8,
     "completed_stages": []
   },
   "runtime_health_monitor_session": 22460,

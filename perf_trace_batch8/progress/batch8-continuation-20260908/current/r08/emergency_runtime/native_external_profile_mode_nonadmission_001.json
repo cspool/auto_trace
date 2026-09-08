@@ -1,0 +1,19 @@
+{
+  "status": "not_admitted_for_exact_R08_attribution",
+  "reason": "All external mode DispatchNs are zero, native per-worker PMC filenames unavailable in live snapshots, GPU IDs differ, warmup counted despite initial-off control. No counter row is promoted.",
+  "native_counter_rows": 10,
+  "raw_gpu_ids": [
+    "8",
+    "9"
+  ],
+  "all_DispatchNs_zero": true,
+  "raw_kernel_names": [
+    "_gqa6.kd"
+  ],
+  "original_probe_result": {
+    "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/native_PMC_dual_context_external_probe_003/RESULT.json",
+    "size": 2657,
+    "sha256": "ef4ca98f46686cba8d39832dd247627437fe07447486d1933b073dd2d9107fa3"
+  },
+  "no_synthetic_timestamp_or_unproven_device_mapping_created": true
+}
