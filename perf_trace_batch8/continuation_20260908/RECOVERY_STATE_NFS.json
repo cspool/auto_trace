@@ -8,7 +8,7 @@
   "scheduler_session": 64069,
   "capture_session": null,
   "progress_watchdog_session": 86889,
-  "deadline_utc": "2026-09-08T20:18:09Z",
+  "deadline_utc": "2026-09-09T04:18:09Z",
   "home_quota_reported_bytes": 53687091200,
   "home_writes_currently_fail_ENOSPC": false,
   "root_mapped_capture_and_normalization_storage_still_writable": false,
@@ -17,7 +17,7 @@
   "accepted_capture_publisher": "/public/home/accl15ptg7/run_R08_R10/publish_accepted_captures_003.py",
   "original_NFS_session_state_superseded_by_this_emergency_record": true,
   "R09_R10_actual_execution_started": false,
-  "home_storage_available_gib": 17.03,
+  "home_storage_available_gib": 15.12,
   "weight_storage_constraint": "All physical weight bytes must stay under /root; never migrate weights to NFS again",
   "accepted_capture_publisher_session": 64243,
   "raw_storage_watchdog_session": 19126,
@@ -50,7 +50,7 @@
   "complete_stage_publisher_session": 46095,
   "current_capture_phase": "measured_batch",
   "latest_health_observation": {
-    "utc": "2026-09-08T14:47:53.089198+00:00",
+    "utc": "2026-09-08T14:57:56.082644+00:00",
     "accepted_R08": 7,
     "planned_R08": 12,
     "current_capture": "08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read/attempt_002",
@@ -59,13 +59,13 @@
       {
         "rank": 0,
         "worker_pid": 750538,
-        "PMC_bytes": 27001062,
+        "PMC_bytes": 60056654,
         "worker_alive": true
       },
       {
         "rank": 1,
         "worker_pid": 750535,
-        "PMC_bytes": 27827245,
+        "PMC_bytes": 60475427,
         "worker_alive": true
       }
     ],
@@ -93,15 +93,24 @@
     ],
     "pre_measured_health": "complete",
     "measured_request_token_progress": {
-      "batch8-dual-dcu-dp2-req-002-28a42990210e6f68": 2,
-      "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786": 0,
-      "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c": 4,
-      "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f": 0
+      "batch8-dual-dcu-dp2-req-002-28a42990210e6f68": 740,
+      "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786": 696,
+      "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5": 656,
+      "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41": 615,
+      "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c": 755,
+      "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f": 713,
+      "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3": 629,
+      "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04": 673
     },
-    "live_eight_request_target_coverage": null,
-    "NFS_available_GiB": 17.03,
+    "live_eight_request_target_coverage": {
+      "status": "complete_live_marker_coverage",
+      "report": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/live_eight_request_checks_001/08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read.attempt_002.1788879115370208638.json",
+      "closed_capture_accepted": false,
+      "all_first_phase_orders_match_R07": true
+    },
+    "NFS_available_GiB": 15.12,
     "temporarily_evicted_bytes": 41382917570,
-    "remaining_machine_hours": 5.5,
+    "remaining_machine_hours": 5.34,
     "completed_stages": []
   },
   "runtime_health_monitor_session": 55116,
@@ -133,5 +142,8 @@
   "last_completed_capture": "04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc/attempt_003",
   "last_failed_capture": "08_chunk_gated_delta_rule_fwd_kernel_h_blockdim64_pmc_read/attempt_001",
   "last_capture_retry_reason": "rank1 native PMC prehealth empty; original eight measured requests not started; same frozen runtime retry attempt002",
-  "retry_authorization": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/capture08_prehealth_retry_001.json"
+  "retry_authorization": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/capture08_prehealth_retry_001.json",
+  "deadline_extension_authorization": "/public/home/accl15ptg7/run_R08_R10/MACHINE_TIME_EXTENSION_002.json",
+  "outer_extension_status": "prepared_restarting_waiting_observers",
+  "active_capture_scheduler_conservative_deadline_utc": "2026-09-08T20:18:09Z"
 }
