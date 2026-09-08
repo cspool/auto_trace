@@ -4,4 +4,4 @@
 
 恢复先读 `current/SNAPSHOT_MANIFEST.json` 和 `current/state/RECOVERY_STATE_NFS.json`（覆盖此前各版本状态），再核对 `current/r08/accepted` 与 `current/remote_publications`。只有原始数据、规范化清单和独立审计均匹配的采集才能复用；未完成采集只保留日志，不算通过。
 
-截止时间：2026-09-08 20:18:09 UTC。
+截止时间：2026-09-09 04:18:09 UTC（已包含第二次追加的 8 小时）。
