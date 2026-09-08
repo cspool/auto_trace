@@ -1,0 +1,69 @@
+{
+  "status": "published",
+  "tag": "perf-trace-batch8-r08-04-triton-red-fused--to-copy-add-mean-mul-pow-rsqrt-0-pmc-20260908",
+  "url": "https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-r08-04-triton-red-fused--to-copy-add-mean-mul-pow-rsqrt-0-pmc-20260908",
+  "id": 384703347,
+  "all_server_asset_sha256_match": true,
+  "segment_id": "04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc",
+  "accepted_item": {
+    "segment_id": "04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc",
+    "capture_attempt": "attempt_003",
+    "execution_manifest": {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/captures/04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc/attempt_003/execution_manifest.json",
+      "size": 8498,
+      "sha256": "198b6952387d56ac888f371083775a283183bb1f3589cae8c7c4b8170de65222"
+    },
+    "normalization_manifest": {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/normalized/captures/04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc/attempt_003/revision_003/NORMALIZATION_COMPLETE.json",
+      "size": 4195,
+      "sha256": "d7953e8363ca648ff67f4341a667efd6f78834583be02fb544aa05bc5ba75c6d"
+    },
+    "independent_audit": {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/normalized/captures/04_triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0_pmc/attempt_003/revision_003/INDEPENDENT_AUDIT.json",
+      "size": 1048,
+      "sha256": "a5534488686cb7f46de8957fe6d3e88d9eee943947956d46a18ff06eb26dc093"
+    }
+  },
+  "assets": [
+    {
+      "id": 550438394,
+      "name": "ASSET_MANIFEST.json",
+      "size": 697,
+      "state": "uploaded",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-04-triton-red-fused--to-copy-add-mean-mul-pow-rsqrt-0-pmc-20260908/ASSET_MANIFEST.json",
+      "digest": "sha256:d7d20e73e381ab68b5a78428f491a689131e0ecd0271f77c9f3e7c1b329bfb30"
+    },
+    {
+      "id": 550436354,
+      "name": "capture.tar.zst.part001",
+      "size": 950000000,
+      "state": "uploaded",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-04-triton-red-fused--to-copy-add-mean-mul-pow-rsqrt-0-pmc-20260908/capture.tar.zst.part001",
+      "digest": "sha256:0faad5749d7b8239bc177c080e07ea22efc85e80618fa7ab2caab47d5f3c10dc"
+    },
+    {
+      "id": 550438135,
+      "name": "capture.tar.zst.part002",
+      "size": 95078336,
+      "state": "uploaded",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-04-triton-red-fused--to-copy-add-mean-mul-pow-rsqrt-0-pmc-20260908/capture.tar.zst.part002",
+      "digest": "sha256:03b30841ae50e80ef89386dd706db9baf364f595dc6794f25ca78c69c134e31b"
+    },
+    {
+      "id": 550438364,
+      "name": "FILE_MANIFEST.json",
+      "size": 23727,
+      "state": "uploaded",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-04-triton-red-fused--to-copy-add-mean-mul-pow-rsqrt-0-pmc-20260908/FILE_MANIFEST.json",
+      "digest": "sha256:03abb1d0d4da50db84ea0dab29cd61de51dcfc088c4128786e46d4f7269b7bda"
+    },
+    {
+      "id": 550438423,
+      "name": "SHA256SUMS",
+      "size": 265,
+      "state": "uploaded",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r08-04-triton-red-fused--to-copy-add-mean-mul-pow-rsqrt-0-pmc-20260908/SHA256SUMS",
+      "digest": "sha256:2ac5d57d5d3f49759303ced5354f5426b8e9d2ded5207f9ff430c23fa967a3b9"
+    }
+  ]
+}
