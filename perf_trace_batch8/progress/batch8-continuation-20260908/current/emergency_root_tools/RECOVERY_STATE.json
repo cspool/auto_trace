@@ -1,0 +1,20 @@
+{
+  "runtime_run_id": "batch8-dp2-fresh-003",
+  "current_capture": "03__gqa6_pmc_write/attempt_002",
+  "accepted_prefix_count": 2,
+  "current_runtime_revision": "revision_014",
+  "runtime_gate": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R08/continuation_001/raw/runtime_tools/runtime_capture_gate_008.json",
+  "scheduler": "/root/r08_emergency_tools/run_r08_serial_suffix_002.py",
+  "scheduler_session": 3883,
+  "capture_session": 63645,
+  "progress_watchdog_session": 61751,
+  "deadline_utc": "2026-09-08T20:18:09Z",
+  "home_quota_reported_bytes": 53687091200,
+  "home_writes_currently_fail_ENOSPC": true,
+  "root_mapped_capture_and_normalization_storage_still_writable": true,
+  "progress_worktree": "/root/remote_progress_checkout_002",
+  "progress_remote_branch": "progress/batch8-continuation-20260908",
+  "accepted_capture_publisher": "/root/r08_emergency_tools/publish_accepted_captures_002.py",
+  "original_NFS_session_state_superseded_by_this_emergency_record": true,
+  "R09_R10_actual_execution_started": false
+}
