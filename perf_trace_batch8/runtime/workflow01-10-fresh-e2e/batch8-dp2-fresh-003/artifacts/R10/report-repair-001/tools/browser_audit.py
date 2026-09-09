@@ -29,12 +29,31 @@ try:
     if mode=='hardware':
      item['groups']=page.evaluate("RANKED.hardware.groups.map(g=>({key:g.key,score:g.score,members:g.members.map(m=>m.p.process_range_id)}))")
      assert page.locator('#high .rank-card').count()==20
+     page.add_style_tag(content='.rank-toolbar{position:static!important}')
      page.locator('#high .rank-card').first.screenshot(path=str(ROOT/'inspection/high_first_group.png'));screens.append('high_first_group.png')
      page.locator('#high .rank-card').nth(19).screenshot(path=str(ROOT/'inspection/high_twentieth_group.png'));screens.append('high_twentieth_group.png')
      members=page.locator('#high .rank-card').first.locator('select');assert members.locator('option').count()>1;members.select_option('1');assert page.locator('#high .rank-card').first.locator('canvas').count()>=1;item['member_switch_passed']=True
      page.evaluate("RANKED.categories.high.render(RANKED.categories.high.groups.length-1)");assert page.locator('#high .rank-card').count()==1;assert page.locator('#high .rank-card').first.get_attribute('data-rank')==str(len(item['groups']));item['tail_group_reachable']=True
      page.locator('#high .rank-toolbar select').first.select_option('all');assert page.locator('#high .rank-card').count()==len(item['groups']);item['all_groups_reachable']=True
+     item['band_endpoints']=page.evaluate("[...new Map(RANKED.bands.flatMap(b=>b.entries.map(i=>[i.id,{id:i.id,begin_ns:absolute(i.b),end_ns:absolute(i.e),rank:String(i.rank)}]))).values()]")
      page.locator('#high .rank-toolbar select').first.select_option('20')
+     first=page.locator('#high .rank-card').first
+     first.get_by_role('button',name='切换为单轴',exact=True).click()
+     assert not page.evaluate("RANKED.bands.find(b=>document.contains(b.element)).paired")
+     first.get_by_role('button',name='切换为起止双轴（梯形）',exact=True).click()
+     item['paired_axis_and_true_duration_axis_toggle_passed']=True
+     first.get_by_role('button',name='取消时间折叠',exact=True).click()
+     assert not page.evaluate("RANKED.bands.find(b=>document.contains(b.element)).folded")
+     first.get_by_role('button',name='启用时间折叠',exact=True).click()
+     item['fold_inverse_checks']=page.evaluate("RANKED.bands.filter(b=>document.contains(b.element)).every(b=>b.entries.every(i=>Math.abs(b.inverse(b.project(i.b))-i.b)<.01&&Math.abs(b.inverse(b.project(i.e))-i.e)<.01))")
+     assert item['fold_inverse_checks']
+     item['folds']=page.evaluate("RANKED.bands.filter(b=>document.contains(b.element)).map(b=>({cap:b.cap,source_ids:b.entries.map(i=>i.id),folds:b.folds.map(f=>({begin_ns:absolute(f.b),end_ns:absolute(f.e),display_weight:f.weight}))}))")
+     first.get_by_role('button',name='展开逐行（36 px / 实例）',exact=True).click()
+     assert page.evaluate("RANKED.bands.findLast(b=>document.contains(b.element)&&b.expanded).rowHeight")==36
+     first.get_by_role('button',name='折回全组概览',exact=True).click()
+     picked=page.evaluate("(()=>{const b=RANKED.bands.find(b=>document.contains(b.element));return b.pick(b.entries.length-1).index;})()")
+     assert first.locator('select').input_value()==str(picked)
+     item['band_expand_and_instance_selection_passed']=True
      pg=page.locator('#highRows .pager-search');tail=page.evaluate('HARDWARE.high.at(-1).process_range_id');pg.fill(tail);pg.dispatch_event('change');assert page.locator('#highRows tbody tr').count()==1;pg.fill('');pg.dispatch_event('change');item['full_table_tail_search_passed']=True
     else:
      item.update(page.evaluate("({sampleCounts:RANKED.concurrency.sampleCounts,gapCount:RANKED.concurrency.gapCount,anchorCount:RANKED.concurrency.anchorCount,availableCount:RANKED.concurrency.availableCount,gapEndpointChecks:RANKED.gapEndpointChecks,groups:Object.fromEntries(Object.entries(RANKED.categories).map(([k,c])=>[k,c.groups.map(g=>({key:g.key,score:g.score,members:g.members.map(m=>m.p?.process_range_id||m.process_range_id||m.row?.source_row_id||m.gap_id)}))]))})"))
@@ -46,8 +65,10 @@ try:
       if cat=='unknown':
        page.evaluate("RANKED.categories.unknown.render(0)");button=page.locator('#unknown .rank-card').first.get_by_role('button',name='查看原始缺口与时钟锚点');button.click();assert 'anchor_pair_uncertainty_ns' in page.locator('#details').inner_text();item['gap_evidence_inspection_passed']=True
      page.get_by_role('button',name='原始利用率',exact=True).click()
+     item['band_endpoints']=page.evaluate("[...new Map(RANKED.bands.flatMap(b=>b.entries.map(i=>[i.id,{id:i.id,begin_ns:absolute(i.b),end_ns:absolute(i.e),rank:String(i.rank)}]))).values()]")
+     assert len(item['band_endpoints'])==12544
     # Real controls: use current connected chart, exact 1 ns and zoom restore.
-    item['chart_checks']=page.evaluate("""()=>{const c=RANKED.charts.findLast(c=>c.geometry.length&&document.contains(c.geometry[0]?.lane?document.querySelector('#rankedRoot'):null));const b=c.initial[0],e=c.initial[1];c.setView(b,b+1);if(c.view[1]-c.view[0]!==1)throw Error('1 ns failure');c.setView(b,e);const before=c.view.slice();c.zoom(.5);if(c.view[1]-c.view[0]>=before[1]-before[0])throw Error('zoom failure');c.setView(b,e);return {one_ns:true,zoom:true,rows_76px:true};}""")
+    item['chart_checks']=page.evaluate("""()=>{const c=RANKED.charts.findLast(c=>c.geometry.length&&document.contains(c.geometry[0]?.lane?document.querySelector('#rankedRoot'):null));const b=c.initial[0],e=c.initial[1];c.setView(b,b+1);if(c.view[1]-c.view[0]!==1)throw Error('1 ns failure');c.setView(b,e);const before=c.view.slice();c.zoom(.5);if(c.view[1]-c.view[0]>=before[1]-before[0])throw Error('zoom failure');c.setView(b,e);return {one_ns:true,zoom:true,source_interval_preserved:c.lanes.every(l=>l.points||l.items.every(i=>i.e>=i.b))};}""")
     item['canvases']=page.locator('#rankedRoot canvas').evaluate_all('(cs)=>cs.map(c=>({width:c.clientWidth,height:c.clientHeight}))');assert all(c['height']>=200 and c['width']>=1040 for c in item['canvases'])
     results[mode]=item;context.close()
   finally:browser.close()

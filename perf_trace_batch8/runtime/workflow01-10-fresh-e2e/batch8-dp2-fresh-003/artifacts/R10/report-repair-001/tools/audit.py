@@ -40,6 +40,17 @@ def main():
  for h in high:assert int(h['duration_ns'])==int(proc[h['process_range_id']]['end_ns'])-int(proc[h['process_range_id']]['begin_ns'])
  expected_high=expected(high,lambda x:x['peer_group_key'],lambda xs:sum(int(x['duration_ns']) for x in xs),lambda x:x['process_range_id'],lambda x:(-int(x['duration_ns']),x['process_range_id']))
  assert expected_high==browser['results']['hardware']['groups']
+ endpoints=browser['results']['hardware']['band_endpoints'];assert len(endpoints)==len(high)
+ for i in endpoints:
+  p=proc[i['id']];assert i['begin_ns']==p['begin_ns'] and i['end_ns']==p['end_ns'] and i['rank']==p['rank']
+ plmap={p['process_range_id']:p for p in pl}
+ for i in browser['results']['concurrency']['band_endpoints']:
+  p=plmap[i['id']];assert i['begin_ns']==p['process_begin_realtime_ns'] and i['end_ns']==p['process_end_realtime_ns'] and i['rank']==p['rank']
+ checks['trapezoid_horizontal_lines_match_all_source_process_endpoints']=True
+ assert browser['results']['hardware']['fold_inverse_checks']
+ for group in browser['results']['hardware']['folds']:
+  pp=[proc[i] for i in group['source_ids']];dd=sorted(int(p['end_ns'])-int(p['begin_ns']) for p in pp);cap=max(1,2*dd[len(dd)//2]);assert cap==group['cap'];bounds=sorted({int(p[k]) for p in pp for k in ['begin_ns','end_ns']});ff=[{'begin_ns':str(b),'end_ns':str(e),'display_weight':cap} for b,e in zip(bounds,bounds[1:]) if e-b>cap];assert ff==group['folds']
+ checks['folded_intervals_caps_and_inverse_coordinate_mapping_verified']=True
  available=[p for p in pl if p['availability_state']=='available'];phase=lambda p:'prefill' if '-prefill-' in p['forward_id'] else 'decode';dur=lambda p:int(p['process_end_realtime_ns'])-int(p['process_begin_realtime_ns'])
  for p in available:assert int(p['timing_eligible_sample_count'])>=3 and p['se_active_cu_pct_mean']!='' and int(p['intersecting_gap_count'])==0
  expected_raw=expected(available,lambda p:json.dumps([phase(p),p['process_id'],p['fragment_id']],separators=(',',':')),lambda xs:max(map(dur,xs)),lambda p:p['process_range_id'],lambda p:(-dur(p),p['process_range_id']))
