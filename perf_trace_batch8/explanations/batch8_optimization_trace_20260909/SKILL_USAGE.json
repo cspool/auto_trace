@@ -30,19 +30,23 @@
   "source_tables_and_report_audit": "REPORT_AUDIT.json",
   "pdf_audit": "PDF_AUDIT.json",
   "latest_revision": {
-    "revision": 3,
+    "revision": 4,
     "user_requested_changes": [
-      "restore actual time axes with large information rectangles",
-      "explain actual dual-device scheduling design; fixed 4+4 is only a trace illustration",
-      "include OOM occurrence, handling and validation"
+      "increase figure 2 height and vertical spacing between local batch levels"
     ],
-    "client_display_cap_s": 260,
-    "marker_display_scale": 12,
-    "scheduling_axis": "actual seconds; raw (time,B) anchors; information rectangle left edges at actual launch time",
+    "figure_size_in": [
+      32,
+      40
+    ],
+    "batch_tick_spacing_pt": 290,
+    "minimum_adjacent_batch_rectangle_band_gap_pt": 46.4,
+    "information_rectangle_height_pt": 104.4,
+    "time_axis_and_sample_coordinates_preserved": true,
     "scheduling_figure_audit": "SCHEDULING_FIGURE_AUDIT.json",
-    "scheduling_design_and_oom_evidence": "data/scheduling_design.json",
-    "changed_figures_and_HTML_PDF_inspected": true,
-    "historical_oom_original_failure_logs_available": false,
-    "historical_oom_repository_record_hash_verified": true
+    "HTML_full_figure_and_tall_PDF_page_visually_inspected": true,
+    "PDF_scheduling_page_size_mm": [
+      420,
+      560
+    ]
   }
 }

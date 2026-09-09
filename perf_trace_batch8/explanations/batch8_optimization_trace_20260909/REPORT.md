@@ -70,7 +70,7 @@ on_each_request(request):
 
 每张卡最早处理一个长请求的 prefill；后续请求开始 prefill 时，已有请求可以同时推进 decode。因此同一个物理 batch 中会出现 prefill 和 decode 混合。R01 的记录名虽然是 decode，但此时 rank 1 的 GQA 启动已经处理两个序列；后面的 R03 decode 记录对应三个序列。这正是“请求自己的阶段”和“整张卡当前 batch”之间的关系。
 
-<figure class="report-figure"><img src="figures/scheduling_local_batch.svg" alt="图 S：恢复真实秒数横轴，每卡一幅时间图。圆点给出准确的启动时刻与单卡 B；大信息矩形的左边界与该时刻对齐，直接显示请求阶段、时间和 kernel 配置。矩形宽度固定为 43 显示秒，仅用于放大标注，右边界不代表执行结束。"><figcaption>图 S：恢复真实秒数横轴，每卡一幅时间图。圆点给出准确的启动时刻与单卡 B；大信息矩形的左边界与该时刻对齐，直接显示请求阶段、时间和 kernel 配置。矩形宽度固定为 43 显示秒，仅用于放大标注，右边界不代表执行结束。</figcaption></figure>
+<figure class="report-figure scheduling-figure"><img src="figures/scheduling_local_batch.svg" alt="图 S：恢复真实秒数横轴，每卡一幅加高时间图，B1–B4 的标注分别位于独立的纵向区间。圆点给出准确的启动时刻与单卡 B；大信息矩形的左边界与该时刻对齐，直接显示请求阶段、时间和 kernel 配置。矩形宽度固定为 43 显示秒，仅用于放大标注，右边界不代表执行结束。"><figcaption>图 S：恢复真实秒数横轴，每卡一幅加高时间图，B1–B4 的标注分别位于独立的纵向区间。圆点给出准确的启动时刻与单卡 B；大信息矩形的左边界与该时刻对齐，直接显示请求阶段、时间和 kernel 配置。矩形宽度固定为 43 显示秒，仅用于放大标注，右边界不代表执行结束。</figcaption></figure>
 
 | 卡 | 请求 / 阶段 | 启动位置（s） | 单卡 B | 实际路径 / 配置 |
 | --- | --- | --- | --- | --- |

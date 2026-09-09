@@ -11,7 +11,9 @@ pct=lambda n:f'{n*100:.2f}%'
 parts=[]
 def add(x):parts.append(x.strip()+'\n')
 def table(head,rows):return '\n'.join(['| '+' | '.join(head)+' |','| '+' | '.join(['---']*len(head))+' |']+['| '+' | '.join(str(v) for v in r)+' |' for r in rows])
-def fig(name,caption):return f'<figure class="report-figure"><img src="figures/{name}.svg" alt="{caption}"><figcaption>{caption}</figcaption></figure>'
+def fig(name,caption):
+ css_class="report-figure scheduling-figure" if name=="scheduling_local_batch" else "report-figure"
+ return f'<figure class="{css_class}"><img src="figures/{name}.svg" alt="{caption}"><figcaption>{caption}</figcaption></figure>'
 add('''# Batch8 双卡调度设计与 OOM 处理：可视化分析报告
 
 **实际设计由三层组成：前端按请求负载把八并发分发到两个完整模型副本；每卡独立 continuous batching，用按输入长度分档的 prefill token 预算控制显存峰值；kernel 再按实际单卡 batch 选择配置。** 选卡沿用官方 DP 负载均衡，优化重点是每卡的工作集控制、Graph 内存保护和适配 local batch 的算子路径。
@@ -79,7 +81,7 @@ add('''## 2. 同一张卡上的 batch 怎样从 1 增至 4
 
 每张卡最早处理一个长请求的 prefill；后续请求开始 prefill 时，已有请求可以同时推进 decode。因此同一个物理 batch 中会出现 prefill 和 decode 混合。R01 的记录名虽然是 decode，但此时 rank 1 的 GQA 启动已经处理两个序列；后面的 R03 decode 记录对应三个序列。这正是“请求自己的阶段”和“整张卡当前 batch”之间的关系。
 ''')
-add(fig('scheduling_local_batch','图 S：恢复真实秒数横轴，每卡一幅时间图。圆点给出准确的启动时刻与单卡 B；大信息矩形的左边界与该时刻对齐，直接显示请求阶段、时间和 kernel 配置。矩形宽度固定为 43 显示秒，仅用于放大标注，右边界不代表执行结束。'))
+add(fig('scheduling_local_batch','图 S：恢复真实秒数横轴，每卡一幅加高时间图，B1–B4 的标注分别位于独立的纵向区间。圆点给出准确的启动时刻与单卡 B；大信息矩形的左边界与该时刻对齐，直接显示请求阶段、时间和 kernel 配置。矩形宽度固定为 43 显示秒，仅用于放大标注，右边界不代表执行结束。'))
 add(table(['卡','请求 / 阶段','启动位置（s）','单卡 B','实际路径 / 配置'],[[x['rank'],f'R{x["request"]:02d} '+x['phase'],f'{x["client_relative_s"]:.3f}',x['local_batch_sequences'],'GQA BM'+str(x['GQA_BLOCK_M']) if x['GQA_BLOCK_M'] else 'packed B4 / 64 threads'] for x in s['launch_samples']]))
 add('''上述位置是相对最早客户端开始时间的原始 R07 启动时刻，用 16 个声明阶段的代表启动展示本例；完整 23,660 个 kernel 仍保留在数据表中。图 S 的横轴保留真实时间距离；prefill 标注放在圆点上方、decode 标注放在下方，以便放大矩形后仍能看清相邻启动。
 
@@ -266,6 +268,7 @@ def inline_svg(m):
 render=re.sub(r'<img src="(figures/[^"]+\.svg)" alt="([^"]*)">',inline_svg,render)
 # Source links remain relative in the portable bundle; the report itself has no network dependency.
 css='''*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f2f5f9;color:#172336;font:17px/1.85 "Noto Sans CJK SC",system-ui,sans-serif}main{max-width:1440px;margin:0 auto;padding:42px 54px;background:white}h1{font-size:36px;line-height:1.35;max-width:1100px;color:#132640}h2{font-size:27px;margin-top:58px;padding-top:20px;border-top:2px solid #dae5ef}h3{font-size:22px}a{color:#126599}p{max-width:1200px}code{font-size:.92em;background:#edf2f7;padding:2px 5px;border-radius:3px}pre{overflow:auto;white-space:pre;line-height:1.7;background:#f2f6fa;padding:24px;border:1px solid #d2dfea;border-radius:8px;font:16px/1.75 ui-monospace,monospace}pre strong{color:#005d8b;background:#d9edf8;padding:2px 0}table{border-collapse:collapse;width:100%;font-size:15px;margin:24px 0}th{background:#e8f0f7;text-align:left}td,th{padding:10px 12px;border:1px solid #d4dee9}tr:nth-child(even){background:#f8fafc}.report-figure{margin:35px -24px}.svg-scroll{overflow:auto;border:1px solid #d4dee9;border-radius:6px;background:#fff}.svg-scroll svg{display:block;width:100%;height:auto;min-width:1000px}figcaption{font-size:15px;color:#53677d;padding:10px 20px}.lookup{background:#ecf4fa;border:1px solid #bad1e3;padding:26px;border-radius:9px;margin:40px 0}select,button{font:inherit;padding:6px 12px;border:1px solid #8babc3;border-radius:4px;background:white}#details{overflow-wrap:anywhere}.meta{font-size:14px;color:#526a80}.tag{display:inline-block;background:#dceef7;color:#185273;border-radius:5px;padding:3px 10px;margin-right:10px}.footer{border-top:2px solid #d2dfea;padding-top:20px;font-size:14px;color:#53677d}@media(max-width:700px){main{padding:22px 18px}h1{font-size:27px}table{font-size:12px}.report-figure{margin:22px 0}.svg-scroll svg{min-width:1100px}}@media print{@page{size:A3 landscape;margin:12mm}html{scroll-behavior:auto}body{background:white;font-size:14px;line-height:1.7}main{max-width:none;padding:0}h1{font-size:30px}h2{font-size:23px;break-after:avoid}h3{break-after:avoid}p,table,pre{max-width:none}table{font-size:12px}tr{break-inside:avoid}.report-figure{margin:0;break-before:page;break-after:page}.svg-scroll{border:0;overflow:visible}.svg-scroll svg{min-width:0;width:100%;max-height:245mm}figcaption{font-size:12px;padding:3mm 0}.lookup{display:none}pre{font-size:13px;break-inside:avoid}.footer{font-size:11px}}'''
+css+='''@media print{@page scheduling{size:420mm 560mm;margin:12mm}.scheduling-figure{page:scheduling}.scheduling-figure .svg-scroll svg{max-height:none}}'''
 options=''.join(f'<option value="{r["measured_request_ordinal"]}">R{int(r["measured_request_ordinal"]):02d} / rank {r["rank"]}</option>' for r in a['requests'])
 lookup='<section class="lookup"><h2>按请求定位本例记录</h2><label for="request-select">选择请求 </label><select id="request-select">'+options+'</select><div id="details"></div></section>'
 js='''const samples=JSON.parse(document.getElementById('schedule-data').textContent);const select=document.getElementById('request-select');function show(){const rows=samples.filter(x=>x.request===Number(select.value));const root=document.getElementById('details');root.replaceChildren();for(const x of rows){const p=document.createElement('p');p.textContent=`${x.phase} · rank ${x.rank} · ${x.client_relative_s.toFixed(6)} s · local B=${x.local_batch_sequences} · grid=(${x.grid.join(',')}) · threads=${x.threads_per_block}`;const pre=document.createElement('pre');pre.textContent=`kernel: ${x.native_kernel_name}\\nkernel_instance_id: ${x.kernel_instance_id}\\n原始 begin_ns: ${x.launch_begin_ns}\\n${x.batch_inference_rule}`;root.append(p,pre)}}select.addEventListener('change',show);show();window.REPORT_READY=true;'''
@@ -278,9 +281,9 @@ page='<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewpo
 重点：实际逐请求负载选卡、每卡 continuous batching、按长度分档的 prefill 预算与 OOM 处理；固定 4+4 trace 展示调度和 kernel 的时间线。
 
 - 在线阅读：[完整中文报告](REPORT.md)。
-- 本地交互阅读：[下载独立 HTML](https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-dp2-scheduling-report-20260909-v3/REPORT.html) 后用浏览器打开；图表和交互数据已内嵌。
-- 打印阅读：[下载 PDF](https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-dp2-scheduling-report-20260909-v3/Batch8_DP2_Scheduling_Report.pdf)。
-- 完整产物：[v3 Release 与 ZIP](https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-dp2-scheduling-report-20260909-v3)。
+- 本地交互阅读：[下载独立 HTML](https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-dp2-scheduling-report-20260909-v4/REPORT.html) 后用浏览器打开；图表和交互数据已内嵌。
+- 打印阅读：[下载 PDF](https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-dp2-scheduling-report-20260909-v4/Batch8_DP2_Scheduling_Report.pdf)。
+- 完整产物：[v4 Release 与 ZIP](https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-dp2-scheduling-report-20260909-v4)。
 - 原始 R10 交互时间线：[下载 ZIP](https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r10-complete-20260908/R10_offline_acceptance.zip)，解压后打开 `acceptance/index.html`。
 
 采用仓库 [build-optimization-trace-report](../../../perf_trace/skills/build-optimization-trace-report/SKILL.md) skill。使用固定例子，全部 8 请求均有完整声明范围内的 trace。全量 kernel / process / request 表、原始 HIP launch 参数、输入 SHA256、源码快照、生成器和审计均随报告保存。

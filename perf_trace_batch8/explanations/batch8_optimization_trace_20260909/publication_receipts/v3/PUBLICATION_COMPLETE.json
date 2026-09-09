@@ -1,0 +1,41 @@
+{
+  "status": "published",
+  "utc": "2026-09-09T02:16:04.934301+00:00",
+  "release_url": "https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-dp2-scheduling-report-20260909-v3",
+  "git_commit": "41c5149e82f95400c522a6369215aea9b3afcebd",
+  "all_expected_asset_sizes_and_server_SHA256_verified": true,
+  "assets": [
+    {
+      "name": "Batch8_DP2_Scheduling_Report.zip",
+      "size": 15659126,
+      "digest": "sha256:f4521d2e7ea2c6346d9b4e50f3462a82c229426479b08cbf35fb0178e3de62c1",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-dp2-scheduling-report-20260909-v3/Batch8_DP2_Scheduling_Report.zip"
+    },
+    {
+      "name": "REPORT.html",
+      "size": 244936,
+      "digest": "sha256:ca9677151d2dbccab66d59e428839fbc83198a423d865cdc5cf8b980697a299c",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-dp2-scheduling-report-20260909-v3/REPORT.html"
+    },
+    {
+      "name": "Batch8_DP2_Scheduling_Report.pdf",
+      "size": 1476728,
+      "digest": "sha256:462f8287d1cb54989bb381e6e706f25050001aeffbe2f7ee7b36e66b0f5300f0",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-dp2-scheduling-report-20260909-v3/Batch8_DP2_Scheduling_Report.pdf"
+    },
+    {
+      "name": "FILE_MANIFEST.json",
+      "size": 15566,
+      "digest": "sha256:e53dca41ed2b52d5e902044a593c0ff445e8939340dd404299d9407273479c39",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-dp2-scheduling-report-20260909-v3/FILE_MANIFEST.json"
+    },
+    {
+      "name": "SHA256SUMS",
+      "size": 361,
+      "digest": "sha256:7f09a7dc98e6fa191be58ef39fb240e544020d3d6b3bb6436d18e2e0018970ad",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-dp2-scheduling-report-20260909-v3/SHA256SUMS"
+    }
+  ],
+  "archive_member_count": 96,
+  "archive_members_SHA256_verified": true
+}

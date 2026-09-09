@@ -3,7 +3,7 @@
 from pathlib import Path
 import json,hashlib,subprocess,urllib.request,urllib.parse,urllib.error,os,zipfile,datetime,time
 O=Path(__file__).resolve().parent;P=O.parents[2];DIST=O/'dist';DIST.mkdir(exist_ok=True)
-REPO='cspool/auto_trace';TAG='perf-trace-batch8-dp2-scheduling-report-20260909-v3'
+REPO='cspool/auto_trace';TAG='perf-trace-batch8-dp2-scheduling-report-20260909-v4'
 def sha(p):
  h=hashlib.sha256()
  with p.open('rb') as f:
@@ -35,8 +35,8 @@ try:release=api(base+'/releases/tags/'+TAG)
 except urllib.error.HTTPError as e:
  if e.code!=404:raise RuntimeError('Release lookup HTTP '+str(e.code)) from None
  body='使用固定、已验收的 Batch8 DP2 trace 解释 8 个请求如何分配到两张卡，各卡如何形成 B1–B4 动态 batch，以及 512-token 长 prefill 预算怎样影响 kernel 路径。\n\n下载 PDF 可直接阅读；REPORT.html 为独立离线图文报告，含八请求定位控件；ZIP 包含全部报告、图表、原始归属表、源码快照、生成代码及审计。\n\n已核对全部 23,660 个唯一 kernel 和两个 rank 的 4+4 请求覆盖，实际离线 Chromium 检查通过。图表使用原始观测时间；组成占比不作为加速比。'
- body='v3：以实际调度设计为主线，解释官方 DP 负载选卡、各卡 continuous batching、长度分档预算、Graph 保护与 OOM 消融。图 2 恢复真实秒数横轴及 (time,B) 采样点，并用放大矩形展示每次启动信息。固定 4+4 trace 仅作为调度示意。历史 OOM 数字来自仓库 2026-08-11 记录，实际代码和本次 trace 分别核对。\n\n'+body
- release=api(base+'/releases','POST',{'tag_name':TAG,'target_commitish':head,'name':'Batch8 双卡调度设计与 OOM 处理：时间线报告 v3','body':body,'draft':False,'prerelease':False})
+ body='v4：图 2 增加高度，B1–B4 纵向间距扩大到约 3.2 倍，信息矩形保持原有可读尺寸，相邻 B 档的矩形之间有清楚空隙。PDF 为图 2 使用加高页面，保留调整后的间距。实际调度设计、OOM 处理和真实时间坐标延续 v3。\n\n'+body
+ release=api(base+'/releases','POST',{'tag_name':TAG,'target_commitish':head,'name':'Batch8 双卡调度设计与 OOM 处理：时间线报告 v4（加高图 2）','body':body,'draft':False,'prerelease':False})
 existing={a['name']:a for a in release['assets']}
 for p in assets:
  digest='sha256:'+sha(p)

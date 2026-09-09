@@ -1,6 +1,6 @@
 {
   "status": "complete",
-  "utc": "2026-09-09T02:12:50.306259+00:00",
+  "utc": "2026-09-09T02:25:59.786311+00:00",
   "builder_imported": false,
   "original_R09_raw_table_reconciled": true,
   "checks": {
@@ -12,6 +12,7 @@
     "figure_bounds_physical_heights_and_per_unit_top5": true,
     "eight_client_folds_and_16_enlarged_markers_keep_raw_times": true,
     "16_large_time_plot_rectangles_keep_actual_seconds_and_batch_anchors": true,
+    "different_batch_levels_have_separate_vertical_rectangle_bands": true,
     "actual_design_sources_and_illustrative_dispatch_verified": true,
     "historical_oom_document_evidence_separated_from_current_trace": true,
     "actual_offline_browser_opened": true,
@@ -34,24 +35,24 @@
   },
   "report_html": {
     "path": "REPORT.html",
-    "size": 244936,
-    "sha256": "ca9677151d2dbccab66d59e428839fbc83198a423d865cdc5cf8b980697a299c"
+    "size": 244406,
+    "sha256": "68c3164505912074efd6212ccfacc7fa29d409392b7be5904814750b2ae1f68b"
   },
   "report_markdown": {
     "path": "REPORT.md",
-    "size": 26407,
-    "sha256": "5046e18b8e332229c599d9ef2363deb7bff94ca813fc0776c47085115a97174b"
+    "size": 26543,
+    "sha256": "6ab0695bc23cf2458ecacc11d6b16b241ba2ed86ab9390b2dd5cd0ac5d25c89e"
   },
   "pdf": {
     "path": "Batch8_DP2_Scheduling_Report.pdf",
-    "size": 1476728,
-    "sha256": "462f8287d1cb54989bb381e6e706f25050001aeffbe2f7ee7b36e66b0f5300f0"
+    "size": 1479470,
+    "sha256": "e7c5d3785e0f4839225cfd6d0165e9683de2d6d0a0a827d339e14aa9a370bb0b"
   },
   "browser_screenshots": [
     {
       "path": "validation/report_lookup.png",
-      "size": 187320,
-      "sha256": "d09ebc6e98b726324de54bd1daae4aa3b91f99715d8cc93e49dc9bef0375b9cc"
+      "size": 187708,
+      "sha256": "a470efc49d66cbcf4793679e622739aac136aafbe07ddb1599026b0b453ac250"
     },
     {
       "path": "validation/report_opening.png",
@@ -60,8 +61,13 @@
     },
     {
       "path": "validation/report_scheduling.png",
-      "size": 232721,
-      "sha256": "789786516a07b3f94f5038765f5f67692b2d9342d68e04ba02930c5431899aff"
+      "size": 93127,
+      "sha256": "17958881ecd12526e1fe45f854158a72e53fe0212393d1fbfd0fbeaa8e3c7a2d"
+    },
+    {
+      "path": "validation/report_scheduling_full.png",
+      "size": 189340,
+      "sha256": "efd336c718f58732506ebb0f315b199c2b5169a8395d61523c3aa5dc5431bc0b"
     },
     {
       "path": "validation/report_timeline.png",
@@ -76,8 +82,8 @@
   },
   "scheduling_figure_audit": {
     "path": "SCHEDULING_FIGURE_AUDIT.json",
-    "size": 12331,
-    "sha256": "e87298307033b344da2758b6a8a748d03284370df9b7d34ca6d870c93c37a314"
+    "size": 12796,
+    "sha256": "205edbedd6b9d4bba081e4615d884743ce3a5652055af7e441b7542b11d37063"
   },
   "design_evidence": {
     "path": "data/scheduling_design.json",

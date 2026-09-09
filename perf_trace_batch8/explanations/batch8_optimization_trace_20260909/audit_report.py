@@ -73,6 +73,7 @@ for rank in (0,1):
  cards=sorted((q for q in sf['samples'] if q['rank']==rank),key=lambda q:q['order'])
  expected=sorted((q for q in s['launch_samples'] if q['rank']==rank),key=lambda q:q['launch_begin_ns'])
  panel=next(v for v in sf['panels'] if v['rank']==rank);assert panel['xticks']==list(range(0,226,25))
+ assert panel['yticks']==[1,2,3,4] and panel['ytick_spacing_pt']>=280 and panel['minimum_adjacent_B_band_gap_pt']>=40
  assert len(cards)==8
  for i,(card,sample) in enumerate(zip(cards,expected)):
   for key in ['request','phase','kernel_instance_id','launch_begin_ns','client_relative_s','local_batch_sequences','grid','threads_per_block','GQA_BLOCK_M']:assert card[key]==sample[key]
@@ -82,8 +83,12 @@ for rank in (0,1):
   assert x0==sample['client_relative_s'] and abs((x1-x0)-43)<1e-9
   for prior in cards[:i]:
    px0,py0,px1,py1=prior['bounds'];assert not (max(x0,px0)<min(x1,px1) and max(y0,py0)<min(y1,py1))
+   if prior['local_batch_sequences']!=card['local_batch_sequences']:
+    lower,upper=sorted([prior,card],key=lambda v:v['local_batch_sequences'])
+    assert upper['bounds'][1]-lower['bounds'][3]>=.16-1e-9
 checks['eight_client_folds_and_16_enlarged_markers_keep_raw_times']=True
 checks['16_large_time_plot_rectangles_keep_actual_seconds_and_batch_anchors']=True
+checks['different_batch_levels_have_separate_vertical_rectangle_bands']=True
 policy=json.loads((D/'scheduling_design.json').read_text());assert policy['status']=='complete'
 for record in policy['sources']:assert sha(O/record['path'])==record['sha256']
 rr_source=next(x for x in a['sources'] if x['path'].endswith('/request_timeline.csv'));assert sha(Path(rr_source['path']))==rr_source['sha256']
@@ -122,6 +127,7 @@ with sync_playwright() as p:
  page.select_option('#request-select','5');page.evaluate('window.scrollTo(0,0)');page.screenshot(path=str(B/'report_opening.png'))
  page.locator('figure').nth(0).scroll_into_view_if_needed();page.screenshot(path=str(B/'report_timeline.png'))
  page.locator('figure').nth(1).scroll_into_view_if_needed();page.screenshot(path=str(B/'report_scheduling.png'))
+ page.locator('.scheduling-figure').screenshot(path=str(B/'report_scheduling_full.png'))
  page.locator('#request-select').scroll_into_view_if_needed();page.screenshot(path=str(B/'report_lookup.png'))
  # Declared SVG data rectangles are already numerically audited. Check actual browser dimensions and offline links.
  sizes=page.locator('.svg-scroll svg').evaluate_all('(els)=>els.map(e=>({width:e.getBoundingClientRect().width,height:e.getBoundingClientRect().height}))');assert all(z['width']>=1000 and z['height']>100 for z in sizes)

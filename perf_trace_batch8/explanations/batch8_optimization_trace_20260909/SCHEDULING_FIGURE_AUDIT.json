@@ -1,10 +1,16 @@
 {
   "status": "complete",
-  "layout": "two time plots, one per DP rank; enlarged information rectangles anchored at actual launch times",
+  "layout": "two tall time plots, one per DP rank; separate vertical bands for each local B",
+  "figure_size_in": [
+    32,
+    40
+  ],
   "x_axis": "actual seconds since earliest client start",
   "y_axis": "actual launch-local B at the dot",
   "rectangle_display_width_s": 43,
-  "rectangle_display_height_B": 1.15,
+  "rectangle_display_height_B": 0.36,
+  "anchor_gap_B": 0.06,
+  "minimum_adjacent_B_band_gap_B": 0.16000000000000003,
   "rectangle_width_is_measured_duration": false,
   "samples": [
     {
@@ -25,16 +31,16 @@
       "GQA_BLOCK_M": 64,
       "bounds": [
         0.571977974,
-        1.1,
+        1.06,
         43.571977974,
-        2.25
+        1.42
       ],
       "anchor": [
         0.571977974,
         1
       ],
       "width_pt": 371.01037037037037,
-      "height_pt": 104.77083138063557,
+      "height_pt": 104.39999999999999,
       "all_text_inside_rectangle": true
     },
     {
@@ -55,16 +61,16 @@
       "GQA_BLOCK_M": 16,
       "bounds": [
         48.648956968,
-        2.1,
+        2.06,
         91.648956968,
-        3.25
+        2.42
       ],
       "anchor": [
         48.648956968,
         2
       ],
       "width_pt": 371.01037037037025,
-      "height_pt": 104.77083138063557,
+      "height_pt": 104.39999999999999,
       "all_text_inside_rectangle": true
     },
     {
@@ -85,16 +91,16 @@
       "GQA_BLOCK_M": 16,
       "bounds": [
         51.635941067,
-        0.75,
+        1.58,
         94.635941067,
-        1.9
+        1.94
       ],
       "anchor": [
         51.635941067,
         2
       ],
       "width_pt": 371.0103703703705,
-      "height_pt": 104.77083138063557,
+      "height_pt": 104.39999999999999,
       "all_text_inside_rectangle": true
     },
     {
@@ -115,16 +121,16 @@
       "GQA_BLOCK_M": 32,
       "bounds": [
         98.478634621,
-        3.1,
+        3.06,
         141.478634621,
-        4.25
+        3.42
       ],
       "anchor": [
         98.478634621,
         3
       ],
       "width_pt": 371.01037037037037,
-      "height_pt": 104.77083138063541,
+      "height_pt": 104.39999999999999,
       "all_text_inside_rectangle": true
     },
     {
@@ -145,16 +151,16 @@
       "GQA_BLOCK_M": 32,
       "bounds": [
         101.159376275,
-        1.75,
+        2.58,
         144.159376275,
-        2.9
+        2.94
       ],
       "anchor": [
         101.159376275,
         3
       ],
       "width_pt": 371.01037037037037,
-      "height_pt": 104.77083138063541,
+      "height_pt": 104.39999999999999,
       "all_text_inside_rectangle": true
     },
     {
@@ -175,16 +181,16 @@
       "GQA_BLOCK_M": 32,
       "bounds": [
         142.833499671,
-        4.1,
+        4.06,
         185.833499671,
-        5.25
+        4.42
       ],
       "anchor": [
         142.833499671,
         4
       ],
       "width_pt": 371.0103703703705,
-      "height_pt": 104.77083138063557,
+      "height_pt": 104.39999999999999,
       "all_text_inside_rectangle": true
     },
     {
@@ -205,16 +211,16 @@
       "GQA_BLOCK_M": 32,
       "bounds": [
         145.631194106,
-        2.75,
+        3.58,
         188.631194106,
-        3.9
+        3.94
       ],
       "anchor": [
         145.631194106,
         4
       ],
       "width_pt": 371.01037037037037,
-      "height_pt": 104.77083138063541,
+      "height_pt": 104.39999999999999,
       "all_text_inside_rectangle": true
     },
     {
@@ -235,16 +241,16 @@
       "GQA_BLOCK_M": null,
       "bounds": [
         190.929684145,
-        2.75,
+        3.58,
         233.929684145,
-        3.9
+        3.94
       ],
       "anchor": [
         190.929684145,
         4
       ],
       "width_pt": 371.0103703703705,
-      "height_pt": 104.77083138063541,
+      "height_pt": 104.39999999999999,
       "all_text_inside_rectangle": true
     },
     {
@@ -265,16 +271,16 @@
       "GQA_BLOCK_M": 64,
       "bounds": [
         0.486496618,
-        1.1,
+        1.06,
         43.486496618,
-        2.25
+        1.42
       ],
       "anchor": [
         0.486496618,
         1
       ],
       "width_pt": 371.01037037037037,
-      "height_pt": 104.7708313806355,
+      "height_pt": 104.39999999999992,
       "all_text_inside_rectangle": true
     },
     {
@@ -295,16 +301,16 @@
       "GQA_BLOCK_M": 16,
       "bounds": [
         44.113219033,
-        2.1,
+        2.06,
         87.11321903300001,
-        3.25
+        2.42
       ],
       "anchor": [
         44.113219033,
         2
       ],
       "width_pt": 371.0103703703704,
-      "height_pt": 104.7708313806355,
+      "height_pt": 104.39999999999992,
       "all_text_inside_rectangle": true
     },
     {
@@ -325,16 +331,16 @@
       "GQA_BLOCK_M": 16,
       "bounds": [
         46.798894514,
-        0.75,
+        1.58,
         89.798894514,
-        1.9
+        1.94
       ],
       "anchor": [
         46.798894514,
         2
       ],
       "width_pt": 371.01037037037037,
-      "height_pt": 104.7708313806355,
+      "height_pt": 104.39999999999999,
       "all_text_inside_rectangle": true
     },
     {
@@ -355,16 +361,16 @@
       "GQA_BLOCK_M": 32,
       "bounds": [
         93.556688617,
-        3.1,
+        3.06,
         136.55668861700002,
-        4.25
+        3.42
       ],
       "anchor": [
         93.556688617,
         3
       ],
       "width_pt": 371.0103703703705,
-      "height_pt": 104.7708313806355,
+      "height_pt": 104.39999999999999,
       "all_text_inside_rectangle": true
     },
     {
@@ -385,16 +391,16 @@
       "GQA_BLOCK_M": 32,
       "bounds": [
         96.359404025,
-        1.75,
+        2.58,
         139.359404025,
-        2.9
+        2.94
       ],
       "anchor": [
         96.359404025,
         3
       ],
       "width_pt": 371.01037037037037,
-      "height_pt": 104.7708313806355,
+      "height_pt": 104.39999999999999,
       "all_text_inside_rectangle": true
     },
     {
@@ -415,16 +421,16 @@
       "GQA_BLOCK_M": 32,
       "bounds": [
         137.509930684,
-        4.1,
+        4.06,
         180.509930684,
-        5.25
+        4.42
       ],
       "anchor": [
         137.509930684,
         4
       ],
       "width_pt": 371.0103703703705,
-      "height_pt": 104.7708313806355,
+      "height_pt": 104.40000000000016,
       "all_text_inside_rectangle": true
     },
     {
@@ -445,16 +451,16 @@
       "GQA_BLOCK_M": 32,
       "bounds": [
         140.408174744,
-        2.75,
+        3.58,
         183.408174744,
-        3.9
+        3.94
       ],
       "anchor": [
         140.408174744,
         4
       ],
       "width_pt": 371.0103703703705,
-      "height_pt": 104.7708313806355,
+      "height_pt": 104.39999999999999,
       "all_text_inside_rectangle": true
     },
     {
@@ -475,16 +481,16 @@
       "GQA_BLOCK_M": null,
       "bounds": [
         187.402470349,
-        2.75,
+        3.58,
         230.402470349,
-        3.9
+        3.94
       ],
       "anchor": [
         187.402470349,
         4
       ],
       "width_pt": 371.0103703703705,
-      "height_pt": 104.7708313806355,
+      "height_pt": 104.39999999999999,
       "all_text_inside_rectangle": true
     }
   ],
@@ -496,8 +502,8 @@
         239.0
       ],
       "ylim": [
-        0.65,
-        5.35
+        0.5,
+        4.5
       ],
       "xticks": [
         0.0,
@@ -511,6 +517,14 @@
         200.0,
         225.0
       ],
+      "yticks": [
+        1.0,
+        2.0,
+        3.0,
+        4.0
+      ],
+      "ytick_spacing_pt": 289.99999999999994,
+      "minimum_adjacent_B_band_gap_pt": 46.4,
       "rectangles_do_not_overlap": true
     },
     {
@@ -520,8 +534,8 @@
         239.0
       ],
       "ylim": [
-        0.65,
-        5.35
+        0.5,
+        4.5
       ],
       "xticks": [
         0.0,
@@ -535,6 +549,14 @@
         200.0,
         225.0
       ],
+      "yticks": [
+        1.0,
+        2.0,
+        3.0,
+        4.0
+      ],
+      "ytick_spacing_pt": 290.0,
+      "minimum_adjacent_B_band_gap_pt": 46.400000000000006,
       "rectangles_do_not_overlap": true
     }
   ],
