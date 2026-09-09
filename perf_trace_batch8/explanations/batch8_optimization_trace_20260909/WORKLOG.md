@@ -22,3 +22,5 @@
 - 2026-09-09T02:06:17.302915+00:00: 用户要求图 S 恢复真实时间轴并保持大信息矩形，补充 8 请求最初选卡步骤及 OOM 出现与处理。开始 v3 修订；v2 发布回执已归档。历史 OOM 依据目标仓库 2026-08-11 消融记录，其原始失败日志目录当前不可访问，报告将与本次固定 trace 的成功记录分别注明。
 
 - 2026-09-09T02:15:16.231593+00:00: 按用户进一步澄清，报告改以实际调度设计为主线：沿用官方 DP 请求负载选卡（4×waiting+running、本地计数更新、同分扫描），各卡独立 continuous batching，长度三档 prefill、Graph cap16 与 chunk_o 调优保护；4+4 trace 仅作执行示意。图 S 恢复两个真实秒数时间图，16 个大信息矩形与原始 (time,B) 圆点对齐且互不遮挡。新增 4 个历史 OOM 场景及 6 行消融结果，注明仓库记录来源和原始失败日志当前不可访问。独立审计通过 23,660 个 kernel、16 个标注、8 请求和设计源码哈希；HTML 离线正常，17 页 PDF 无文字越界，已视觉检查调度图、报告开头和 OOM 章节。首次图 S 审计 JSON 输出遇到 NumPy int64 序列化错误，修正为普通数值后通过，失败日志保留于 scheduling_revision3_attempt001.log。
+
+- 2026-09-09T02:16:37.772589+00:00: v3 完整报告提交 `41c5149e82f95400c522a6369215aea9b3afcebd` 已 push 并确认远端 main 一致。v3 Release 的 HTML、17 页 PDF、ZIP、清单及 SHA256SUMS 共五个资产已全部上传，大小与服务端 SHA256 均核对通过；ZIP 96 个成员通过逐项校验。发布日志和回执继续提交到远程仓库。地址：https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-dp2-scheduling-report-20260909-v3。
