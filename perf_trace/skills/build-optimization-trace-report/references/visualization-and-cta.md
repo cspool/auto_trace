@@ -11,16 +11,18 @@ display_length  = min(actual_duration x scale, display_limit)
 ```
 
 Use actual values for labels, totals, ratios and placement claims. A transformed
-display axis must say that it is a display scale. Do not print ordinary numeric
-ticks that invite readers to treat a capped or folded coordinate as physical
-time. If a panel preserves actual start positions but enlarges only widths,
-say so explicitly.
+display axis must say that it is a display scale. Ordinary time ticks may
+locate unmodified start-time anchors; enlarged or capped right edges must be
+identified as display boundaries. Do not label a cumulative transformed axis
+or a capped endpoint as actual elapsed/completion time.
 
 ## Minimum rectangles and folds
 
-Choose one declared scale per panel/orientation so the smallest meaningful
-event is readable. Scale other rectangles in that panel proportionally. When a
-scaled rectangle exceeds the display limit:
+Choose one declared scale per semantic event role and orientation so the
+smallest meaningful event is readable. Use the same rule across comparable
+events. A long client envelope and short selected process markers may use
+different rules if both are stated on the figure. When a scaled rectangle
+exceeds the display limit:
 
 1. draw two blocks with the same style;
 2. join them with a zigzag/break mark;
@@ -28,6 +30,62 @@ scaled rectangle exceeds the display limit:
 4. exclude the gap and displayed area from all arithmetic.
 
 A fold means “longer than the visible cap,” not “idle time” or two executions.
+
+When a long background/client interval crowds short markers, cap and fold that
+interval, then allocate the recovered width to the markers. Keep original
+starts and raw durations. Make the break visible and place it away from
+selected markers where possible; retain the full interval's duration label.
+
+## Scheduling time plots and information rectangles
+
+Keep the requested time axis. Do not replace a time plot with equal-width
+ordinal cards merely to make information larger. Retain numeric time ticks,
+the actual spacing between observed starts, and a separate plot per device
+when this makes the scheduling path readable.
+
+For an instantaneous launch sample, draw an exact `(time, local batch)` anchor
+and attach a large information rectangle. Its left edge may align to the
+actual timestamp; use a dot/leader to identify the measured batch coordinate.
+State that its width/height are annotation sizes, not execution duration or a
+range of batch values. Such callouts need no invented duration or duration
+Top-K ranking: preserve every selected sample and its ID in the data.
+
+Place the request, phase, local B, raw timestamp and kernel configuration in
+the rectangles, with horizontal text on a few separate lines. Increase the
+annotation area and canvas until the main information is readable. A colored
+area percentage is not an acceptance target and must not displace time
+semantics or required spacing. Do not interpolate unobserved scheduler state
+between discrete samples.
+
+## Vertical spacing and export
+
+For plots with above/below callouts around each batch level, give adjacent B
+levels separate vertical bands. Rectangles at different horizontal positions
+can still look crowded if their vertical bands overlap. Check both ordinary
+rectangle intersection and separation along Y between different B levels.
+
+Measure geometry in physical points after axes layout. Increase the canvas
+height and tick spacing while keeping the information rectangles at a readable
+physical height; stretching every rectangle with the axis preserves the
+crowding. With uniform tick spacing and symmetric callouts:
+
+```text
+H = axis height in points / displayed Y range
+h = rectangle height in Y units
+g = anchor-to-rectangle gap in Y units
+physical rectangle height = h * H
+adjacent-level clearance = (1 - 2 * (g + h)) * H
+```
+
+Choose positive, visibly useful clearance and verify actual text bounding
+boxes. The [Batch8 v4 profile](batch8-scheduling-figure-reference.md) supplies
+one measured example; recompute geometry for a different layout.
+
+Inspect the complete tall figure in the actual browser, not only the visible
+viewport, and inspect its PDF page. A global CSS `max-height` or fit-to-page
+rule must not undo the increased spacing or shrink all labels. Use a suitable
+tall PDF page or separate device panels across pages while preserving readable
+scale. Record the actual exported page dimensions and check text/page bounds.
 
 ## Numeric labels
 

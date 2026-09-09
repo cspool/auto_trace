@@ -12,15 +12,22 @@ Turn an accepted runtime trace into a compact report centered on one question:
 result visible?** Add process and CTA detail only to make that result
 understandable. Do not lead with generic `what/why` prose.
 
+When the requested subject is scheduling design, lead with the implemented
+request-routing and per-device scheduling policy, then use the trace to
+illustrate its execution. A fixed trace is a valid illustration; its request
+split is not the scheduling algorithm or a guarantee for future workloads.
+
 Read [references/report-contract.md](references/report-contract.md) before
 writing the report. Read
 [references/visualization-and-cta.md](references/visualization-and-cta.md) when
 the report contains timeline rectangles, folded shapes, numeric labels,
 process character art, or CTA arithmetic. Read
 [references/current-figure-reference.md](references/current-figure-reference.md)
-before creating or revising A–D-style figures; use it as the default visual
-size, typography, axis and content baseline unless the user requests a
-different presentation.
+before creating or revising timeline figures; it selects the applicable visual
+baseline. For multi-device scheduling timelines, also read
+[references/batch8-scheduling-figure-reference.md](references/batch8-scheduling-figure-reference.md),
+which links the revised folded overview and tall time plots. Preserve the
+user's requested time axes and spacing when adapting either reference.
 
 ## Evidence Inputs
 
@@ -89,6 +96,12 @@ A useful, non-mandatory layout is:
 - one representative layer/process zoom showing the optimized kernels in
   execution order.
 
+For scheduling, add per-device time plots with exact launch-time anchors and
+readable information rectangles. Enlarging those rectangles must not replace
+the time axis with an equally spaced card grid. Keep separate batch-level
+bands visibly apart by increasing plot height while preserving readable
+physical rectangle sizes; the references give the geometry and export rules.
+
 Place each figure next to its own explanation. Preserve actual timestamps and
 durations as data. If short rectangles are enlarged, treat that geometry as a
 display transform and label it. Use a broken two-block rectangle for capped
@@ -101,8 +114,10 @@ not merely its data-coordinate constants. Keep axes, titles, legends,
 annotations and rectangle labels at their declared hierarchy. Every axis must
 name its quantity, unit and coordinate transform; every complete rectangle,
 including both blocks of a folded rectangle, must remain inside the displayed
-axis interval. After rendering, inspect both each panel and the combined image
-at normal reading size.
+axis interval. Distinguish measured-duration rectangles from fixed-size sample
+annotations. After rendering, inspect individual panels, the combined image,
+and the actual HTML/PDF at normal reading size. PDF sizing must preserve an
+intentionally taller plot rather than silently shrinking it back down.
 
 The existing example
 `perf_trace/explanations/single_batch_optimization_timeline/build_timeline.py`
@@ -149,6 +164,11 @@ Check the report against the checklist in
 figures from source data rather than editing generated SVG/PNG by hand. Link
 the trace, process evidence, generator and output figures with relative paths
 when they will move together.
+
+For design reports, verify the implemented policy against source and distinguish
+retained behavior, new changes, and unimplemented ideas. If OOM handling is in
+scope, include the observed failure stage/allocation, mitigation and validation,
+with historical evidence identified separately from the illustrative trace.
 
 ## Output Style
 

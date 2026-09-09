@@ -1,10 +1,17 @@
 # Current Figure Reference Profile
 
-Use the current single-batch A–D figure as the default visual baseline for an
-optimization trace report. This profile defines readable physical geometry,
-text hierarchy, axis semantics and required information. It does not make the
-example's model dimensions, event counts, display multipliers or time caps
-universal.
+Select the visual baseline by the question the figure answers:
+
+- Use the single-batch A–D profile below for composition and process/kernel
+  zoom figures.
+- For a long client overview and multi-device scheduling over time, use the
+  [Batch8 scheduling reference](batch8-scheduling-figure-reference.md). It links
+  the revised A/S pictures, generators, measured geometry and HTML/PDF audits.
+
+These profiles define readable geometry, hierarchy and coordinate semantics.
+Their model dimensions, request counts, multipliers and time caps are example
+parameters, not universal requirements. The requested presentation takes
+precedence over the baseline.
 
 ## Reference artifacts
 
@@ -88,13 +95,18 @@ Use DejaVu Sans or an equivalently legible sans-serif. The current hierarchy is:
 | Axis spine / major tick | `2.2 pt` / `2.0 pt`, tick length `8 pt` |
 | Major grid | `1.15 pt`, light gray |
 
-Keep rectangle text horizontal and single-line. Do not wrap, rotate, enlarge or
-bold it merely to force a fit. Hide a label when its rendered bounding box does
-not fit the appropriate visible block; retain the rectangle and explain the
+For A–D duration rectangles, keep each numeric label horizontal and single-line.
+Do not wrap, rotate, enlarge or bold it merely to force a fit. Hide a label when
+its rendered bounding box does not fit the appropriate visible block; retain the rectangle and explain the
 omission. Put D's kernel name/rank/duration outside the rectangle with a leader
 line and leave the rectangle interior empty. Boundary coordinates label only
 the three largest raw-duration rectangles per semantic unit unless requested
 otherwise.
+
+Scheduling sample annotations are a different role: they may contain separate
+lines for request/phase/B, actual timestamp, and kernel configuration. Follow
+the linked scheduling profile, keep these fields readable, and verify every
+line fits inside its annotation rectangle.
 
 Axis identifiers may use short vertically stacked lines to save width. In A,
 stack the category labels (for example `Strict / GPU / kernels` and
@@ -182,3 +194,8 @@ After generation:
 5. verify hidden labels are omissions for fit only, not missing events;
 6. verify every claimed measurement is readable without consulting source
    code, while detailed process and CTA explanations remain in the report.
+7. for scheduling plots, also check true time anchors, physical tick spacing
+   and clear separation of adjacent batch-level bands; mere absence of
+   two-dimensional rectangle overlap is insufficient;
+8. inspect the delivered HTML and PDF; a taller source figure must retain its
+   intended spacing and readable labels after export.

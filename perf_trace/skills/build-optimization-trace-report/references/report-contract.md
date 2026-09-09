@@ -16,6 +16,27 @@ of chapter titles. Each optimization needs one self-contained evidence unit:
 The runtime result and its visualization are the core. Process and CTA content
 must clarify the result rather than become unrelated architecture exposition.
 
+## Scheduling design illustrated by a fixed trace
+
+When scheduling is the requested subject, explain who assigns each request to
+a device, the actual load metric and update/tie rules, and how each device
+forms and budgets its own batches. Verify these against implementation source;
+distinguish retained routing, implemented optimizations and unimplemented ideas.
+Then connect this design to the time plots and kernel paths.
+
+A fixed request split such as 4+4 is an illustration, not a universal policy.
+If the capture uses explicit ranks, identify that briefly without letting the
+capture mechanism replace the explanation of the actual serving design. A
+fixed trace does not by itself require a new runtime capture for this report.
+
+When OOM handling is requested or central to the optimization, report the
+failure stage, triggering configuration/shape/allocation, mitigation and
+post-change validation. Keep historical ablations separate from current trace
+events and distinguish an original failure log from a repository account of
+that log. Link the available source and state when raw historical logs were
+not accessible. Do not turn an estimate or historical throughput result into
+a measurement of the illustrative trace.
+
 ## Measurement definitions
 
 Use explicit names and denominators:
@@ -97,8 +118,14 @@ for those 64 query/head rows.
 - Every claimed optimization has runtime hits or is explicitly reported as not
   observed.
 - Kernel matchers and ownership rules are reproducible.
-- All plotted lengths derive from raw timestamps/durations.
+- Measured-duration rectangles derive their lengths from raw timestamps or
+  durations; fixed-size sample annotations retain exact measured anchors and
+  explicitly declare their display-only dimensions.
 - Display scaling, caps and broken rectangles are disclosed.
+- Scheduling figures retain their requested time axes; large annotations do
+  not silently substitute an ordinal card layout.
+- Adjacent batch levels have readable physical spacing and separate annotation
+  bands; delivered HTML/PDF preserves the intended height and text size.
 - Top-K selection is local to each timeline/column and uses raw duration.
 - Numeric labels carry values and within-unit proportions where useful.
 - Process art emphasizes the exact optimized operation.
