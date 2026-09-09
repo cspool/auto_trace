@@ -1,0 +1,22 @@
+Traceback (most recent call last):
+  File "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/explanations/batch8_optimization_trace_20260909/audit_report.py", line 58, in <module>
+    browser=p.chromium.launch(headless=True,args=['--no-sandbox','--disable-gpu','--disable-dev-shm-usage','--disable-background-networking','--disable-component-update','--disable-default-apps','--disable-sync','--no-first-run','--host-resolver-rules=MAP * ~NOTFOUND'])
+  File "/usr/local/lib/python3.10/dist-packages/playwright/sync_api/_generated.py", line 16702, in launch
+    self._sync(
+  File "/usr/local/lib/python3.10/dist-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+  File "/usr/local/lib/python3.10/dist-packages/playwright/_impl/_browser_type.py", line 97, in launch
+    await self._channel.send(
+  File "/usr/local/lib/python3.10/dist-packages/playwright/_impl/_connection.py", line 76, in send
+    return await self._connection.wrap_api_call(
+  File "/usr/local/lib/python3.10/dist-packages/playwright/_impl/_connection.py", line 632, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.Error: BrowserType.launch: Executable doesn't exist at /root/.cache/ms-playwright/chromium_headless_shell-1234/chrome-headless-shell-linux64/chrome-headless-shell
+╔════════════════════════════════════════════════════════════╗
+║ Looks like Playwright was just installed or updated.       ║
+║ Please run the following command to download new browsers: ║
+║                                                            ║
+║     playwright install                                     ║
+║                                                            ║
+║ <3 Playwright Team                                         ║
+╚════════════════════════════════════════════════════════════╝

@@ -1,0 +1,395 @@
+{
+  "status": "complete",
+  "focus": "global batch8 -> DP2 request placement -> per-rank dynamic batching and prefill token budget",
+  "topology": {
+    "DP": 2,
+    "TP": 1,
+    "PP": 1,
+    "backend": "mp",
+    "replica_model": "full Qwen3.5-27B per device"
+  },
+  "source_records": [
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/scripts/serve_cscc_dp2.sh",
+      "sha256": "233bb2ce6fee3654bc870e37e65b7ecf4de6874cb6c7fd1a6bd5687a40783699",
+      "size": 1965
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/v1/engine/core_client.py",
+      "sha256": "d167e7bc043fbbe79820b8177551fc73337556da5c18eb66925d7d6aa7e567a6",
+      "size": 68284
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/v1/core/sched/scheduler.py",
+      "sha256": "fe517e62653de8ee23e1a3c9ea7f82b9df5a98da37d12b0ff06a880afb041f97",
+      "size": 105898
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/platforms/rocm.py",
+      "sha256": "23d2089c9ad294adc5128cea4be2b22cbdfab67724ff16daa3d10c601a8da000",
+      "size": 33685
+    }
+  ],
+  "actual_routing": "explicit requested DP rank in this accepted trace; actual native owner rank agrees for all requests",
+  "default_serving_router": "when request.data_parallel_rank is absent: argmin(4*waiting + running), local waiting increment and coordinator updates",
+  "default_router_guarantees_exact_4_plus_4": false,
+  "ranks": [
+    {
+      "rank": 0,
+      "physical_device": 0,
+      "requests": [
+        2,
+        4,
+        5,
+        6
+      ],
+      "request_count": 4,
+      "prompt_tokens": 85843,
+      "output_tokens": 4096,
+      "last_completion_client_relative_s": 744.746845666
+    },
+    {
+      "rank": 1,
+      "physical_device": 1,
+      "requests": [
+        1,
+        3,
+        7,
+        8
+      ],
+      "request_count": 4,
+      "prompt_tokens": 84781,
+      "output_tokens": 4096,
+      "last_completion_client_relative_s": 733.623821427
+    }
+  ],
+  "client_all_eight_overlap_s": 666.185438324,
+  "prompt_token_imbalance_fraction_of_mean": 0.012448424606151538,
+  "rank_last_completion_difference_s": 11.12302423899996,
+  "launch_samples": [
+    {
+      "request": 2,
+      "request_id": "batch8-dual-dcu-dp2-req-002-28a42990210e6f68",
+      "rank": 0,
+      "phase": "prefill",
+      "launch_begin_ns": 1788409245650956815,
+      "client_relative_s": 0.571977974,
+      "local_batch_sequences": 1,
+      "batch_inference_rule": "GQA gridDimZ = num_sequences",
+      "kernel_instance_id": "76ab7e0a03fc88aca0bce68e89c9e5d28374148cd9bfec06218180126df18eae",
+      "native_kernel_name": "_gqa6",
+      "grid": [
+        16,
+        12,
+        1
+      ],
+      "threads_per_block": 256,
+      "GQA_BLOCK_M": 64
+    },
+    {
+      "request": 4,
+      "request_id": "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786",
+      "rank": 0,
+      "phase": "prefill",
+      "launch_begin_ns": 1788409293727935809,
+      "client_relative_s": 48.648956968,
+      "local_batch_sequences": 2,
+      "batch_inference_rule": "GQA gridDimZ = num_sequences",
+      "kernel_instance_id": "6c7834b54fb6958d74d17af354e23d41cba68dfc70de800340d81455f0d8ed92",
+      "native_kernel_name": "_gqa6",
+      "grid": [
+        35,
+        12,
+        2
+      ],
+      "threads_per_block": 128,
+      "GQA_BLOCK_M": 16
+    },
+    {
+      "request": 2,
+      "request_id": "batch8-dual-dcu-dp2-req-002-28a42990210e6f68",
+      "rank": 0,
+      "phase": "decode",
+      "launch_begin_ns": 1788409296714919908,
+      "client_relative_s": 51.635941067,
+      "local_batch_sequences": 2,
+      "batch_inference_rule": "GQA gridDimZ = num_sequences",
+      "kernel_instance_id": "39586c00a73fa06fcf1c10b41464a522808b583abf7757377b125966f39d5b83",
+      "native_kernel_name": "_gqa6",
+      "grid": [
+        64,
+        12,
+        2
+      ],
+      "threads_per_block": 128,
+      "GQA_BLOCK_M": 16
+    },
+    {
+      "request": 5,
+      "request_id": "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5",
+      "rank": 0,
+      "phase": "prefill",
+      "launch_begin_ns": 1788409343557613462,
+      "client_relative_s": 98.478634621,
+      "local_batch_sequences": 3,
+      "batch_inference_rule": "GQA gridDimZ = num_sequences",
+      "kernel_instance_id": "c8f4a72f7972b00bc6eca132b462cb6147b53afc542c11f7f63d903144382f4e",
+      "native_kernel_name": "_gqa6",
+      "grid": [
+        21,
+        12,
+        3
+      ],
+      "threads_per_block": 128,
+      "GQA_BLOCK_M": 32
+    },
+    {
+      "request": 4,
+      "request_id": "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786",
+      "rank": 0,
+      "phase": "decode",
+      "launch_begin_ns": 1788409346238355116,
+      "client_relative_s": 101.159376275,
+      "local_batch_sequences": 3,
+      "batch_inference_rule": "GQA gridDimZ = num_sequences",
+      "kernel_instance_id": "c659be596e869b5ca66c693580b0dcb9a38cc024708b42a7c7439996bfb8a343",
+      "native_kernel_name": "_gqa6",
+      "grid": [
+        32,
+        12,
+        3
+      ],
+      "threads_per_block": 128,
+      "GQA_BLOCK_M": 32
+    },
+    {
+      "request": 6,
+      "request_id": "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41",
+      "rank": 0,
+      "phase": "prefill",
+      "launch_begin_ns": 1788409387912478512,
+      "client_relative_s": 142.833499671,
+      "local_batch_sequences": 4,
+      "batch_inference_rule": "GQA gridDimZ = num_sequences",
+      "kernel_instance_id": "4cfa20cb3d24e305d20e32346bcd9bec1991431fb2bb55995dd23fcc08e4eb19",
+      "native_kernel_name": "_gqa6",
+      "grid": [
+        20,
+        12,
+        4
+      ],
+      "threads_per_block": 128,
+      "GQA_BLOCK_M": 32
+    },
+    {
+      "request": 5,
+      "request_id": "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5",
+      "rank": 0,
+      "phase": "decode",
+      "launch_begin_ns": 1788409390710172947,
+      "client_relative_s": 145.631194106,
+      "local_batch_sequences": 4,
+      "batch_inference_rule": "GQA gridDimZ = num_sequences",
+      "kernel_instance_id": "7999d4b48acf47ac03a79ba83313d25f794b040222b4354bc625e68cf216126f",
+      "native_kernel_name": "_gqa6",
+      "grid": [
+        32,
+        12,
+        4
+      ],
+      "threads_per_block": 128,
+      "GQA_BLOCK_M": 32
+    },
+    {
+      "request": 6,
+      "request_id": "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41",
+      "rank": 0,
+      "phase": "decode",
+      "launch_begin_ns": 1788409436008662986,
+      "client_relative_s": 190.929684145,
+      "local_batch_sequences": 4,
+      "batch_inference_rule": "packed gridDimY / HV48 = local batch",
+      "kernel_instance_id": "0663a26efe48342c3be11d761494a073291ecdeef51405778ab61d8b9bad352f",
+      "native_kernel_name": "fused_recurrent_gated_delta_rule_packed_decode_kernel",
+      "grid": [
+        4,
+        192,
+        1
+      ],
+      "threads_per_block": 64,
+      "GQA_BLOCK_M": null
+    },
+    {
+      "request": 1,
+      "request_id": "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c",
+      "rank": 1,
+      "phase": "prefill",
+      "launch_begin_ns": 1788409245565475459,
+      "client_relative_s": 0.486496618,
+      "local_batch_sequences": 1,
+      "batch_inference_rule": "GQA gridDimZ = num_sequences",
+      "kernel_instance_id": "733f981bdaead44a1c96db01e17bb0f1d92cfe774c48a15ae57dd2d62b3e0b9d",
+      "native_kernel_name": "_gqa6",
+      "grid": [
+        16,
+        12,
+        1
+      ],
+      "threads_per_block": 256,
+      "GQA_BLOCK_M": 64
+    },
+    {
+      "request": 3,
+      "request_id": "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f",
+      "rank": 1,
+      "phase": "prefill",
+      "launch_begin_ns": 1788409289192197874,
+      "client_relative_s": 44.113219033,
+      "local_batch_sequences": 2,
+      "batch_inference_rule": "GQA gridDimZ = num_sequences",
+      "kernel_instance_id": "009f29edbd50bb204331ee48afa6415bd4400c2df754de8fae24a69f657410f6",
+      "native_kernel_name": "_gqa6",
+      "grid": [
+        52,
+        12,
+        2
+      ],
+      "threads_per_block": 128,
+      "GQA_BLOCK_M": 16
+    },
+    {
+      "request": 1,
+      "request_id": "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c",
+      "rank": 1,
+      "phase": "decode",
+      "launch_begin_ns": 1788409291877873355,
+      "client_relative_s": 46.798894514,
+      "local_batch_sequences": 2,
+      "batch_inference_rule": "GQA gridDimZ = num_sequences",
+      "kernel_instance_id": "ddf4f5922ba1c8b523f36cb19cf2b60f31f3cf44161ddc520132bb698757e305",
+      "native_kernel_name": "_gqa6",
+      "grid": [
+        64,
+        12,
+        2
+      ],
+      "threads_per_block": 128,
+      "GQA_BLOCK_M": 16
+    },
+    {
+      "request": 8,
+      "request_id": "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04",
+      "rank": 1,
+      "phase": "prefill",
+      "launch_begin_ns": 1788409338635667458,
+      "client_relative_s": 93.556688617,
+      "local_batch_sequences": 3,
+      "batch_inference_rule": "GQA gridDimZ = num_sequences",
+      "kernel_instance_id": "0ae04e1c4f67517f47ff31327f86c7bb3ef98245cb5222d4034707ebda36b068",
+      "native_kernel_name": "_gqa6",
+      "grid": [
+        32,
+        12,
+        3
+      ],
+      "threads_per_block": 128,
+      "GQA_BLOCK_M": 32
+    },
+    {
+      "request": 3,
+      "request_id": "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f",
+      "rank": 1,
+      "phase": "decode",
+      "launch_begin_ns": 1788409341438382866,
+      "client_relative_s": 96.359404025,
+      "local_batch_sequences": 3,
+      "batch_inference_rule": "GQA gridDimZ = num_sequences",
+      "kernel_instance_id": "97868b20d33b6c3303b92a117e9c5e54645e898c330fc8c9e4806f25ecd44399",
+      "native_kernel_name": "_gqa6",
+      "grid": [
+        32,
+        12,
+        3
+      ],
+      "threads_per_block": 128,
+      "GQA_BLOCK_M": 32
+    },
+    {
+      "request": 7,
+      "request_id": "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3",
+      "rank": 1,
+      "phase": "prefill",
+      "launch_begin_ns": 1788409382588909525,
+      "client_relative_s": 137.509930684,
+      "local_batch_sequences": 4,
+      "batch_inference_rule": "GQA gridDimZ = num_sequences",
+      "kernel_instance_id": "171c30ccda044337e4a1c6a9887f2b3c2f7199faa4a8a6c5348102156bad5321",
+      "native_kernel_name": "_gqa6",
+      "grid": [
+        21,
+        12,
+        4
+      ],
+      "threads_per_block": 128,
+      "GQA_BLOCK_M": 32
+    },
+    {
+      "request": 8,
+      "request_id": "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04",
+      "rank": 1,
+      "phase": "decode",
+      "launch_begin_ns": 1788409385487153585,
+      "client_relative_s": 140.408174744,
+      "local_batch_sequences": 4,
+      "batch_inference_rule": "GQA gridDimZ = num_sequences",
+      "kernel_instance_id": "8c721e0b2a9a28e7436881cd9863c6870ed1180d181501f9634e8ad298600e89",
+      "native_kernel_name": "_gqa6",
+      "grid": [
+        32,
+        12,
+        4
+      ],
+      "threads_per_block": 128,
+      "GQA_BLOCK_M": 32
+    },
+    {
+      "request": 7,
+      "request_id": "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3",
+      "rank": 1,
+      "phase": "decode",
+      "launch_begin_ns": 1788409432481449190,
+      "client_relative_s": 187.402470349,
+      "local_batch_sequences": 4,
+      "batch_inference_rule": "packed gridDimY / HV48 = local batch",
+      "kernel_instance_id": "16db7a4083db6126ef3b06f95119ac7a952978e2cf8d7e2660f642056c1e11da",
+      "native_kernel_name": "fused_recurrent_gated_delta_rule_packed_decode_kernel",
+      "grid": [
+        4,
+        192,
+        1
+      ],
+      "threads_per_block": 64,
+      "GQA_BLOCK_M": null
+    }
+  ],
+  "sampling_for_figure": "one earliest matched GQA or packed launch per declared request/phase; 16 markers, no state interpolation",
+  "all_raw_kernels_preserved_in": "kernels.csv",
+  "prefill_budget_policy": {
+    "max_prompt_tokens_gt_16384": 512,
+    "max_prompt_tokens_gt_8192": 1024,
+    "other_prefill": 2048,
+    "pure_decode": "does not enter prefill budget clamp"
+  },
+  "trace_prefill_q_labels": [
+    "512",
+    "512",
+    "416",
+    "232",
+    "329",
+    "192",
+    "331",
+    "506"
+  ],
+  "norm_physical_tensor_tokens": 512,
+  "baseline_DP1_comparison_performed": false
+}

@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/explanations/batch8_optimization_trace_20260909/audit_report.py", line 27, in <module>
+    v=re.search(r'\b'+name+r'=(\d+)',launch[ident]['api_arguments']);assert v and int(v[1])==int(r[name])
+AssertionError

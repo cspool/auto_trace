@@ -1,0 +1,32 @@
+{
+  "skill": "build-optimization-trace-report",
+  "application": "fixed accepted Batch8 trace explanation, focused on DP2 scheduling per user steering",
+  "formal_R10_regeneration_performed": false,
+  "accepted_R10_used_as_input": true,
+  "files": [
+    {
+      "path": "perf_trace/skills/build-optimization-trace-report/SKILL.md",
+      "sha256": "8d0c402a60cc9f2d4fb679d966204d2959fe6f5f9d5d670b8e6f9077ca3a4c1e",
+      "size": 7638
+    },
+    {
+      "path": "perf_trace/skills/build-optimization-trace-report/references/current-figure-reference.md",
+      "sha256": "dd2f15e21e928626e733988fb28b71e7095f0ea93d997460fd8b9529d6dc9ee0",
+      "size": 9156
+    },
+    {
+      "path": "perf_trace/skills/build-optimization-trace-report/references/report-contract.md",
+      "sha256": "fa357cc9986df2a988370b581f8123f3f9fa36dc154d157f66d491f5b180c48f",
+      "size": 4773
+    },
+    {
+      "path": "perf_trace/skills/build-optimization-trace-report/references/visualization-and-cta.md",
+      "sha256": "dca0c277139bae7e18f35d9573ee57041492460abc8db60fec83ca16b938bef9",
+      "size": 4722
+    }
+  ],
+  "all_panels_and_combined_visually_inspected": true,
+  "HTML_and_PDF_visually_inspected": true,
+  "source_tables_and_report_audit": "REPORT_AUDIT.json",
+  "pdf_audit": "PDF_AUDIT.json"
+}
