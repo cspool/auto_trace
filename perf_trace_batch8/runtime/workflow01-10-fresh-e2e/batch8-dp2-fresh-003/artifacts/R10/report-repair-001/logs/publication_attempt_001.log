@@ -1,0 +1,43 @@
+ZIP_MEMBERS_WRITTEN 0 164
+ZIP_MEMBERS_WRITTEN 100 164
+ZIP_ALL_MEMBER_HASHES_VERIFIED 1812223960
+UPLOAD_BEGIN R10_ranked_folded_timelines.zip 1812223960
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/urllib/request.py", line 1348, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "/usr/lib/python3.10/http/client.py", line 1283, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib/python3.10/http/client.py", line 1329, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.10/http/client.py", line 1278, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.10/http/client.py", line 1077, in _send_output
+    self.send(chunk)
+  File "/usr/lib/python3.10/http/client.py", line 999, in send
+    self.sock.sendall(data)
+  File "/usr/lib/python3.10/ssl.py", line 1266, in sendall
+    v = self.send(byte_view[count:])
+  File "/usr/lib/python3.10/ssl.py", line 1235, in send
+    return self._sslobj.write(data)
+TimeoutError: The write operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/report-repair-001/tools/publish.py", line 51, in <module>
+    else:v=api(release['upload_url'].split('{')[0]+'?name='+urllib.parse.quote(p.name),'POST',p.read_bytes(),'application/octet-stream')
+  File "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/report-repair-001/tools/publish.py", line 40, in api
+    with urllib.request.urlopen(req,timeout=600) as r:return json.load(r)
+  File "/usr/lib/python3.10/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.10/urllib/request.py", line 519, in open
+    response = self._open(req, data)
+  File "/usr/lib/python3.10/urllib/request.py", line 536, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "/usr/lib/python3.10/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.10/urllib/request.py", line 1391, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+  File "/usr/lib/python3.10/urllib/request.py", line 1351, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error The write operation timed out>
