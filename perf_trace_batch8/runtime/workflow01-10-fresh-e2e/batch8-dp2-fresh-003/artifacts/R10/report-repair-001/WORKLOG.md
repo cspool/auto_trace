@@ -20,3 +20,6 @@
 用户要求去除未追踪的 Request 后半段。已新增裁剪后的精确时间线与图前范围说明：完整客户端包络 744.746845666 s → 保留 192.957683916 s，省略末尾 551.789161750 s。每请求裁剪边界覆盖全部已纳入 Process/kernel/HIP Runtime/layer/forward；源 Request 真实结束时间保留，仅改变显示。逐请求省略时长见 REQUEST_VIEW_SCOPE.json。尾部不能拆分为计算、排队或通信，图中明确说明未追踪/未展示范围。正在进行独立端点审计和离线交互检查。
 
 尾部裁剪已通过独立 R09 上下文端点核对和离线浏览器检查：59,872 个主显示事件及全部细粒度上下文保留；仅 8 个 Request 的显示端点和默认范围改变，完整原始内嵌数据字节不变。精确纳秒跳转、请求定位和重置通过，零外部网络请求。折叠梯形最终概览已确保所有组内横线在概览范围内，展开后每行 36 px。正在封装最终 Release。
+
+
+2026-09-09：Release 已发布并通过服务端 SHA-256 校验：https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-r10-ranked-timelines-20260909-v1。可直接下载三个主要 HTML 离线打开；完整 ZIP 由 RESTORE_R10.py + PARTS_MANIFEST.json 下载 28 个分块后校验重建。发布回执见 PUBLICATION_COMPLETE.json。

@@ -1,0 +1,252 @@
+{
+  "status": "published",
+  "utc": "2026-09-09T03:44:20.947847+00:00",
+  "release_url": "https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-r10-ranked-timelines-20260909-v1",
+  "git_commit": "067e2a4df38cf8066f3be6f6ec46c4cceeee59d8",
+  "publication_method": "streamed standalone pages and checksum-verified ZIP parts",
+  "archive_sha256": "da4cefe017b5aac780b446852e45a1af1262da34c479917f2f6a488a3449ff58",
+  "archive_size": 1812223960,
+  "all_expected_server_sizes_and_SHA256_verified": true,
+  "assets": [
+    {
+      "name": "REQUEST_COVERAGE.html",
+      "size": 913175,
+      "digest": "sha256:af3a788268b3a324c5f8ea9261a6156b128eb625197c4dcc33806ea887114e3c",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r10-ranked-timelines-20260909-v1/REQUEST_COVERAGE.html"
+    },
+    {
+      "name": "REQUEST_VIEW_SCOPE.json",
+      "size": 4417,
+      "digest": "sha256:d63ce88effbdd2abd075edb796a0db06c395b42d2579302bdd65c1fe040a4f6e",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r10-ranked-timelines-20260909-v1/REQUEST_VIEW_SCOPE.json"
+    },
+    {
+      "name": "request_coverage_trimmed.png",
+      "size": 198728,
+      "digest": "sha256:6e8b9912736b36952566178a43f4877e446e491cf88061960cd55a315d6becff",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r10-ranked-timelines-20260909-v1/request_coverage_trimmed.png"
+    },
+    {
+      "name": "high_first_group.png",
+      "size": 357663,
+      "digest": "sha256:da10095d42519af6cbf67a7e4da2a7f443d67204660bf4b623f32b0b34d12a5c",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r10-ranked-timelines-20260909-v1/high_first_group.png"
+    },
+    {
+      "name": "dual_first.png",
+      "size": 303239,
+      "digest": "sha256:bd5a826d780ac5ea9eeed60b22f3053f7b28313e6d02ba8bb0233e3b79839cae",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r10-ranked-timelines-20260909-v1/dual_first.png"
+    },
+    {
+      "name": "E2E_PROCESS_TIMELINE_LOSSLESS.html",
+      "size": 56071600,
+      "digest": "sha256:2ae368d5679c09be481172150d7c5bc3411834b30ea12e283af9e47d4aa9f4a4",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r10-ranked-timelines-20260909-v1/E2E_PROCESS_TIMELINE_LOSSLESS.html"
+    },
+    {
+      "name": "HIGH_LATENCY_PROCESS_HARDWARE_TIMELINE.html",
+      "size": 117910485,
+      "digest": "sha256:a5bc4d0fa6fe8e7391a052c4f2c591cd32d43e7f36b935330b7ac3e19a417e92",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r10-ranked-timelines-20260909-v1/HIGH_LATENCY_PROCESS_HARDWARE_TIMELINE.html"
+    },
+    {
+      "name": "CONCURRENCY_UTILIZATION.html",
+      "size": 247649054,
+      "digest": "sha256:c0eb6b69ffbfd611fa46597ae69a0f62ab43d395adef4501223f89dc4798b6c6",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r10-ranked-timelines-20260909-v1/CONCURRENCY_UTILIZATION.html"
+    },
+    {
+      "name": "R10_ranked_folded_timelines.zip.part001",
+      "size": 67108864,
+      "digest": "sha256:3b73c338422d2f62c92c10ec1b2e4f148dd49ac859e551c4226ac888c603e85e",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r10-ranked-timelines-20260909-v1/R10_ranked_folded_timelines.zip.part001"
+    },
+    {
+      "name": "R10_ranked_folded_timelines.zip.part002",
+      "size": 67108864,
+      "digest": "sha256:e07ec48a32b07a1d1f65c8a90b21d4ce95e7cb9f321611cb2e6333be997d2f18",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r10-ranked-timelines-20260909-v1/R10_ranked_folded_timelines.zip.part002"
+    },
+    {
+      "name": "R10_ranked_folded_timelines.zip.part003",
+      "size": 67108864,
+      "digest": "sha256:53b5764f7b9402766dd2119fe6bcc0e3c47f5a97bd59a905ba7239f3bda246bf",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r10-ranked-timelines-20260909-v1/R10_ranked_folded_timelines.zip.part003"
+    },
+    {
+      "name": "R10_ranked_folded_timelines.zip.part004",
+      "size": 67108864,
+      "digest": "sha256:d0d6a2ee0c6e9dc2b9be03961eeaeb2c9993772a030d8a48d4f0172f816a6efd",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r10-ranked-timelines-20260909-v1/R10_ranked_folded_timelines.zip.part004"
+    },
+    {
+      "name": "R10_ranked_folded_timelines.zip.part005",
+      "size": 67108864,
+      "digest": "sha256:6438ef209570b020dc49c5a32878bbdee7449dbd8a1d5a6b2099a64f226d9ceb",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r10-ranked-timelines-20260909-v1/R10_ranked_folded_timelines.zip.part005"
+    },
+    {
+      "name": "R10_ranked_folded_timelines.zip.part006",
+      "size": 67108864,
+      "digest": "sha256:67ff299215e4db390eb7e5bea59d63c221e510a4676297d42658558b10e8e4c7",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r10-ranked-timelines-20260909-v1/R10_ranked_folded_timelines.zip.part006"
+    },
+    {
+      "name": "R10_ranked_folded_timelines.zip.part007",
+      "size": 67108864,
+      "digest": "sha256:b2e9ea85810c403a73c1717909f09e87fcc8bad36af815f6a4d32cfc655d2188",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r10-ranked-timelines-20260909-v1/R10_ranked_folded_timelines.zip.part007"
+    },
+    {
+      "name": "R10_ranked_folded_timelines.zip.part008",
+      "size": 67108864,
+      "digest": "sha256:231f29800bc3a7a27f7bf411e0545f046c6d2e347b1cbce5ddec7916f2b0a9ec",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r10-ranked-timelines-20260909-v1/R10_ranked_folded_timelines.zip.part008"
+    },
+    {
+      "name": "R10_ranked_folded_timelines.zip.part009",
+      "size": 67108864,
+      "digest": "sha256:cd2ca9446173cc234cffd6b7c008bd2d977a8f162ede9c25174b68b184e5de05",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r10-ranked-timelines-20260909-v1/R10_ranked_folded_timelines.zip.part009"
+    },
+    {
+      "name": "R10_ranked_folded_timelines.zip.part010",
+      "size": 67108864,
+      "digest": "sha256:cf543d3afdec79913096adb130d866caa5a5407525ce60717b09b17c655717e9",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r10-ranked-timelines-20260909-v1/R10_ranked_folded_timelines.zip.part010"
+    },
+    {
+      "name": "R10_ranked_folded_timelines.zip.part011",
+      "size": 67108864,
+      "digest": "sha256:5137b9cc01626a5e5197a644b9fb792f019af0a3153799d8874fdf6c9ed41a2c",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r10-ranked-timelines-20260909-v1/R10_ranked_folded_timelines.zip.part011"
+    },
+    {
+      "name": "R10_ranked_folded_timelines.zip.part012",
+      "size": 67108864,
+      "digest": "sha256:df3426d4e6f9e00c1b268dd43dbfcd355c23adf468b49b460944b7ef0eb3cd79",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r10-ranked-timelines-20260909-v1/R10_ranked_folded_timelines.zip.part012"
+    },
+    {
+      "name": "R10_ranked_folded_timelines.zip.part013",
+      "size": 67108864,
+      "digest": "sha256:2b8543eb7237d2aaaa838397af7557b88b670f74b5c58e363f48dfe3fb113e64",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r10-ranked-timelines-20260909-v1/R10_ranked_folded_timelines.zip.part013"
+    },
+    {
+      "name": "R10_ranked_folded_timelines.zip.part014",
+      "size": 67108864,
+      "digest": "sha256:f4272ebd465bda3b9fc4022fcea3dbcfdfc9416566df2c31a50c5871bc390baf",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r10-ranked-timelines-20260909-v1/R10_ranked_folded_timelines.zip.part014"
+    },
+    {
+      "name": "R10_ranked_folded_timelines.zip.part015",
+      "size": 67108864,
+      "digest": "sha256:87ed6199a7970d3c2b7d4fdf0550a7ad3348a664cfee4fc23933ffba143c850d",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r10-ranked-timelines-20260909-v1/R10_ranked_folded_timelines.zip.part015"
+    },
+    {
+      "name": "R10_ranked_folded_timelines.zip.part016",
+      "size": 67108864,
+      "digest": "sha256:9bd147eecd656b4a5140407417135f6d775e6ab7ba31747d4f8ff018b7545725",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r10-ranked-timelines-20260909-v1/R10_ranked_folded_timelines.zip.part016"
+    },
+    {
+      "name": "R10_ranked_folded_timelines.zip.part017",
+      "size": 67108864,
+      "digest": "sha256:b4b3bca552aef7f4a0bb06bc694fb2c931a00c39436bc643c948da9a81a2ec61",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r10-ranked-timelines-20260909-v1/R10_ranked_folded_timelines.zip.part017"
+    },
+    {
+      "name": "R10_ranked_folded_timelines.zip.part018",
+      "size": 67108864,
+      "digest": "sha256:f22dbad934b0488d8016cd92f83c1d917aad3d8d8a91c1c570f9d1837070ce8a",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r10-ranked-timelines-20260909-v1/R10_ranked_folded_timelines.zip.part018"
+    },
+    {
+      "name": "R10_ranked_folded_timelines.zip.part019",
+      "size": 67108864,
+      "digest": "sha256:fb82c02fe5fb0f8dbc18955e0346a4535363f0084dfe6fd15efb9154e58d5745",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r10-ranked-timelines-20260909-v1/R10_ranked_folded_timelines.zip.part019"
+    },
+    {
+      "name": "R10_ranked_folded_timelines.zip.part020",
+      "size": 67108864,
+      "digest": "sha256:62b4e6d75da52731e0a394645b70dbeeeb84f1773a951c7d8d634cfde46d2b3a",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r10-ranked-timelines-20260909-v1/R10_ranked_folded_timelines.zip.part020"
+    },
+    {
+      "name": "R10_ranked_folded_timelines.zip.part021",
+      "size": 67108864,
+      "digest": "sha256:dc23f61d47cf8676943123454753652ea2622ee31e73b89af3e44c11531e65f3",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r10-ranked-timelines-20260909-v1/R10_ranked_folded_timelines.zip.part021"
+    },
+    {
+      "name": "R10_ranked_folded_timelines.zip.part022",
+      "size": 67108864,
+      "digest": "sha256:23542ca454c082d92b588fded98e73f4127095df6d39c2629b80f154daa0767a",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r10-ranked-timelines-20260909-v1/R10_ranked_folded_timelines.zip.part022"
+    },
+    {
+      "name": "R10_ranked_folded_timelines.zip.part023",
+      "size": 67108864,
+      "digest": "sha256:c296f4425cd1239534f19a9349a70112d70d522c74b367f01daec1d79da6b67f",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r10-ranked-timelines-20260909-v1/R10_ranked_folded_timelines.zip.part023"
+    },
+    {
+      "name": "R10_ranked_folded_timelines.zip.part024",
+      "size": 67108864,
+      "digest": "sha256:2fe8a7e4dd5ece06627cc638d0e593f8be439cd4bbf917a9136b7ac2c10da3c8",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r10-ranked-timelines-20260909-v1/R10_ranked_folded_timelines.zip.part024"
+    },
+    {
+      "name": "R10_ranked_folded_timelines.zip.part025",
+      "size": 67108864,
+      "digest": "sha256:86f4ccff12df78de1edc6857a851452ae6efa32680c43b793d1ed33dbb29273a",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r10-ranked-timelines-20260909-v1/R10_ranked_folded_timelines.zip.part025"
+    },
+    {
+      "name": "R10_ranked_folded_timelines.zip.part026",
+      "size": 67108864,
+      "digest": "sha256:8c434e58508c3511201f1bb3d4a3fb17d7e38e170463149757ccefd7b79a042f",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r10-ranked-timelines-20260909-v1/R10_ranked_folded_timelines.zip.part026"
+    },
+    {
+      "name": "R10_ranked_folded_timelines.zip.part027",
+      "size": 67108864,
+      "digest": "sha256:3f1e97428ae354831c486372775356f182e7101869c62965a65033d8989bbbc3",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r10-ranked-timelines-20260909-v1/R10_ranked_folded_timelines.zip.part027"
+    },
+    {
+      "name": "R10_ranked_folded_timelines.zip.part028",
+      "size": 284632,
+      "digest": "sha256:a1b0529afc02ac836eefcc2d2c7eeb09d737f8c8a6669e16f47207029b9a6d60",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r10-ranked-timelines-20260909-v1/R10_ranked_folded_timelines.zip.part028"
+    },
+    {
+      "name": "PARTS_MANIFEST.json",
+      "size": 5345,
+      "digest": "sha256:bb87998a25510f0c665ad76536531e7770a8bf643d4dff649cdbcbfb0d2e3b53",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r10-ranked-timelines-20260909-v1/PARTS_MANIFEST.json"
+    },
+    {
+      "name": "RESTORE_R10.py",
+      "size": 1311,
+      "digest": "sha256:3b64fa305dd269648601643be72fb4bf1588b89a8073053eb6e599c629a3ccb0",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r10-ranked-timelines-20260909-v1/RESTORE_R10.py"
+    },
+    {
+      "name": "FILE_MANIFEST.json",
+      "size": 29792,
+      "digest": "sha256:5975249b2c38d4dda5c121739d13efc6ee7bc813a3b368554ce00af050713d6c",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r10-ranked-timelines-20260909-v1/FILE_MANIFEST.json"
+    },
+    {
+      "name": "SHA256SUMS_SPLIT",
+      "size": 3967,
+      "digest": "sha256:c5767112e111cfdb947602419710b5b5ee8ed4ba6cb266e341a8d216529d1004",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r10-ranked-timelines-20260909-v1/SHA256SUMS_SPLIT"
+    }
+  ]
+}

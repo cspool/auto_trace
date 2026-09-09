@@ -32,3 +32,6 @@
 ## 复现生成顺序
 
 在同一封存来源下的新候选目录运行：`tools/build.py` → `tools/explain_request_coverage.py` → `tools/trim_request_tails.py` → `tools/browser_audit.py` → `tools/audit_request_trim.py` → `tools/audit.py`。先保留旧候选再生成，不能覆写已封存原始 R10。
+
+
+2026-09-09：Release 已发布并通过服务端 SHA-256 校验：https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-r10-ranked-timelines-20260909-v1。可直接下载三个主要 HTML 离线打开；完整 ZIP 由 RESTORE_R10.py + PARTS_MANIFEST.json 下载 28 个分块后校验重建。发布回执见 PUBLICATION_COMPLETE.json。
