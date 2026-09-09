@@ -1,0 +1,291 @@
+{
+  "abi_extensions": [
+    {
+      "binding_policy": "append_to_pinned_target_vllm_package_path",
+      "path": "/usr/local/lib/python3.10/dist-packages/vllm/_C.abi3.so",
+      "sha256": "118fb1923b09fd6acd4516f22fbcdf72229d4e63bb444b1956d8d4ed88dcc23b",
+      "size": 192068992
+    },
+    {
+      "binding_policy": "append_to_pinned_target_vllm_package_path",
+      "path": "/usr/local/lib/python3.10/dist-packages/vllm/_rocm_C.abi3.so",
+      "sha256": "da7d4bfc1abb241b0476b5bfe36cab1c99a801a73aee601b915d6f299b5f78d5",
+      "size": 84362008
+    }
+  ],
+  "abi_package_dir": "/usr/local/lib/python3.10/dist-packages/vllm",
+  "abi_policy": "append_only_hash_pinned_installed_vllm_rocm_extensions",
+  "files": [
+    {
+      "module_ast_sha256": "10dd3b60f0b69d35ddbb3a5ed65b9fc626d5e8ed5e7a6dd5f31b7cc0990d2532",
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/pra2026-bh408-gqa-page784-k5120-batch8/vllm/model_executor/models/qwen3_5.py",
+      "sha256": "f3c0479dbc37a8794c4d6b1c4c01906ae341b3276ed43e588c17d92b1ddb94d6",
+      "size": 32845,
+      "symbols": [
+        {
+          "ast_sha256": "fce52d367c3a78cc758d057affcfa9aa74c214a3035460b9fc5fc2b298566317",
+          "end_line": 217,
+          "source_segment_sha256": "3339bd3db0ad77b360a6aa70681885b3b1a2526ff73b97ca65b92a44d575551f",
+          "start_line": 168,
+          "symbol": "Qwen3_5GatedDeltaNet.forward"
+        },
+        {
+          "ast_sha256": "546be9bd2d05b515d8824753ff3242f0aaf70c2a1122e22f4c571a18b9a55863",
+          "end_line": 298,
+          "source_segment_sha256": "5277463b21fb51da9fedf7f19a8998c739a92bf8b4ed323ee4c5e5dd56f631e8",
+          "start_line": 220,
+          "symbol": "Qwen3_5DecoderLayer"
+        }
+      ],
+      "target_relative_path": "vllm/model_executor/models/qwen3_5.py"
+    },
+    {
+      "module_ast_sha256": "8585687f17f36c0edafda61e94b5c17eee000af966107122c3642e56bc48758a",
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/pra2026-bh408-gqa-page784-k5120-batch8/vllm/model_executor/models/qwen3_next.py",
+      "sha256": "5a14b14a40fcf6382f9a20be4ca0f850b2b19b2840a3c57488821f0952d96053",
+      "size": 67330,
+      "symbols": [
+        {
+          "ast_sha256": "272b82436ad15aa16e742b75764edda8d192050304d4f6e328fca9c9a7a12c21",
+          "end_line": 1220,
+          "source_segment_sha256": "894365cbce49f54012de6b5e6c70261c272a19b5305b8187dd97f8011c085e12",
+          "start_line": 1185,
+          "symbol": "Qwen3NextAttention.forward"
+        },
+        {
+          "ast_sha256": "026b8b0a38fdded50bc3cd5ffdd8f8d40bf8e24fd452c5a308db7bdc8b5b0f7a",
+          "end_line": 1362,
+          "source_segment_sha256": "52fd3ddab169b7f0688b0ef6a598504684cbbe7ea1fe9531a6be4c848f8012ab",
+          "start_line": 1305,
+          "symbol": "Qwen3NextDecoderLayer.forward"
+        }
+      ],
+      "target_relative_path": "vllm/model_executor/models/qwen3_next.py"
+    },
+    {
+      "module_ast_sha256": "f37a69a7a5f57149cd60ec595206f806a6fc1ef32873d7a7bb0ebd9e72e99dc3",
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/pra2026-bh408-gqa-page784-k5120-batch8/vllm/model_executor/models/qwen2_moe.py",
+      "sha256": "58899ae017336a4ea00e37788788969e17a6178c113961486acca9e6569f4a8f",
+      "size": 23264,
+      "symbols": [
+        {
+          "ast_sha256": "6130a079083da2ef60d9bab17857ec3c901643e132121870411a227e24ed4fac",
+          "end_line": 116,
+          "source_segment_sha256": "889971f50ba71848baae513016f898391b6cacee7251f0798e84342df25f8eee",
+          "start_line": 108,
+          "symbol": "Qwen2MoeMLP.forward"
+        }
+      ],
+      "target_relative_path": "vllm/model_executor/models/qwen2_moe.py"
+    },
+    {
+      "module_ast_sha256": "2b49484eac1d582b98eec379460ea8df3526d339745a744300b240d878646132",
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/pra2026-bh408-gqa-page784-k5120-batch8/vllm/v1/worker/gpu_model_runner.py",
+      "sha256": "d63424d3cbe81bfaa2c0967a5c81b8c980c2d76bc7eb3b2f8fe2a079af825bce",
+      "size": 295740,
+      "symbols": [
+        {
+          "ast_sha256": "39008594cd3f119c9c8931eff32e760f967cfe6e282f91172260b08482f42423",
+          "end_line": 1329,
+          "source_segment_sha256": "ad861b61bcf528816e2d79a062ad92fa37b10621214ec852fc66af0511f08579",
+          "start_line": 1026,
+          "symbol": "GPUModelRunner._update_states"
+        },
+        {
+          "ast_sha256": "cef3390047992952ebfc7990fcc2bf0ce257eddf935ae6f3899c1df047b86951",
+          "end_line": 3300,
+          "source_segment_sha256": "195bbbc2450830515da48a9db7e16efc7ccad681dd0151c81c06b80f297682fe",
+          "start_line": 3270,
+          "symbol": "GPUModelRunner._model_forward"
+        },
+        {
+          "ast_sha256": "ec1e9eb3827f703561dcdc808f3c0ba5013f7beb1969be9e69caf844dbcd6ce8",
+          "end_line": 3879,
+          "source_segment_sha256": "b4e0330bfa934a5ae61df86f4c2b7951b68da41770f71fe01966f096b9070a62",
+          "start_line": 3549,
+          "symbol": "GPUModelRunner.execute_model"
+        }
+      ],
+      "target_relative_path": "vllm/v1/worker/gpu_model_runner.py"
+    },
+    {
+      "module_ast_sha256": "c2fe757664aa45cbd9fe66cf979de01d229bfe74820d061ca8d7d427af7dfde5",
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/pra2026-bh408-gqa-page784-k5120-batch8/vllm/v1/core/sched/scheduler.py",
+      "sha256": "fe517e62653de8ee23e1a3c9ea7f82b9df5a98da37d12b0ff06a880afb041f97",
+      "size": 105898,
+      "symbols": [
+        {
+          "ast_sha256": "69d1125a698f9760daf3d2c241617263760cb360868ef14a9f889005a912fde4",
+          "end_line": 952,
+          "source_segment_sha256": "7d01ec457e41a7ffe69d7d568e7b2ed355966cd365e0872c37b2a4905b94ccaf",
+          "start_line": 347,
+          "symbol": "Scheduler.schedule"
+        }
+      ],
+      "target_relative_path": "vllm/v1/core/sched/scheduler.py"
+    },
+    {
+      "module_ast_sha256": "aada4c9fc1aa40ffb3c876707ec9881620d2491b8b771864f8e8910d68607e4b",
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/pra2026-bh408-gqa-page784-k5120-batch8/vllm/config/scheduler.py",
+      "sha256": "74451b04e063be354df1796b610bb5ef3c783c1631105f50c85669afccfceb0b",
+      "size": 12671,
+      "symbols": [
+        {
+          "ast_sha256": "a735229afa5f9da58cb4fbd1b5366a9e68e4b263edd658148edf48ddceb960bd",
+          "end_line": 300,
+          "source_segment_sha256": "cea519c8f7499b16b991e7c7818493f869c6d4ffbef7d556262ca10e043763c4",
+          "start_line": 26,
+          "symbol": "SchedulerConfig"
+        }
+      ],
+      "target_relative_path": "vllm/config/scheduler.py"
+    },
+    {
+      "module_ast_sha256": "88fea9de1b1a27da969190246d2c9396942fb7bba6f1123d56ac559bb2b85bd5",
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/pra2026-bh408-gqa-page784-k5120-batch8/vllm/engine/arg_utils.py",
+      "sha256": "eeb7c00dd34c76671ec67a2c618b2cb3302ef00265ebb204e71052cd8841f755",
+      "size": 96146,
+      "symbols": [
+        {
+          "ast_sha256": "a9da73c37847ed701561da2347727f71b73f0a15d452a6c569236f0855ae1f23",
+          "end_line": 1334,
+          "source_segment_sha256": "9af2c18b6282ad4d65cf348ef857bb1f28e117496e83154cf1d49081898ad7fe",
+          "start_line": 662,
+          "symbol": "EngineArgs.add_cli_args"
+        }
+      ],
+      "target_relative_path": "vllm/engine/arg_utils.py"
+    },
+    {
+      "module_ast_sha256": "d02e9c0121866f6240b240dd2f915a3139c839b67745aa5b9a8557086db39741",
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/pra2026-bh408-gqa-page784-k5120-batch8/vllm/utils/nvtx_pytorch_hooks.py",
+      "sha256": "e9711444f33242ce1864d6a32d051bbf0ba0b37b5f17965de6e5dbba0c0c75ff",
+      "size": 10538,
+      "symbols": [],
+      "target_relative_path": "vllm/utils/nvtx_pytorch_hooks.py"
+    },
+    {
+      "module_ast_sha256": "cfda76ce7266973f077cca46bd75cb68411bd84fa02714be7fed79979aaf624e",
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/pra2026-bh408-gqa-page784-k5120-batch8/vllm/compilation/wrapper.py",
+      "sha256": "b4dca93456e945ce8231e9a954792c8f687d5d48b427ed38bfb96011015d4090",
+      "size": 14038,
+      "symbols": [],
+      "target_relative_path": "vllm/compilation/wrapper.py"
+    },
+    {
+      "module_ast_sha256": "6b57a71a7e35fc79a42a83633ac832608bc9749f999868e3c7f27ad3d04004e0",
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/pra2026-bh408-gqa-page784-k5120-batch8/vllm/entrypoints/openai/engine/serving.py",
+      "sha256": "b776705b40c1775d84e52b6dab9caa89ce09e287061b8a0ab0a8a0a02305c67e",
+      "size": 44158,
+      "symbols": [
+        {
+          "ast_sha256": "c9f6bb153cfea1d51d235a398566ebe8503f01e3268c8cb55273acdc4fac8adf",
+          "end_line": 1101,
+          "source_segment_sha256": "4e36992320bdf41afe31013143406be3f93bfef7efe01503c13cdc8402439ca3",
+          "start_line": 1089,
+          "symbol": "OpenAIServing._get_data_parallel_rank"
+        }
+      ],
+      "target_relative_path": "vllm/entrypoints/openai/engine/serving.py"
+    },
+    {
+      "module_ast_sha256": "8f0a700612acce458af9aab62fd1b13789d568e7d0f9c6b263c220ced8c47355",
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/pra2026-bh408-gqa-page784-k5120-batch8/vllm/v1/engine/async_llm.py",
+      "sha256": "667f623167b960a9c5f6e4a28103eb2f6c782fe3b73603798bc9ae81fe27413f",
+      "size": 42405,
+      "symbols": [
+        {
+          "ast_sha256": "d01ac50888bb30d0efde4f161d593b3d526be8759feea9624ca9b6a8de980f82",
+          "end_line": 208,
+          "source_segment_sha256": "e7880ed1c23b1da749b2f1c23d8881c69aeeabf3f56e50f2942616b9849e619a",
+          "start_line": 74,
+          "symbol": "AsyncLLM.__init__"
+        },
+        {
+          "ast_sha256": "05ac9cb91313e8d458a740fe3916c4ecf6565fdda2c46f325f0c8480f846b285",
+          "end_line": 420,
+          "source_segment_sha256": "2eee47f30bbea841f95207e638bae75684fc5914b474979ff2786a3254e9bed6",
+          "start_line": 405,
+          "symbol": "AsyncLLM._add_request"
+        },
+        {
+          "ast_sha256": "c6732996d253ffd38566139260275edbcd0adf9ad572871ad90aed589faaa732",
+          "end_line": 767,
+          "source_segment_sha256": "618f0dfb6cd94eab6a1aaaf967a8dcdcb8def96caa2bf087957eff52baa0b82a",
+          "start_line": 726,
+          "symbol": "AsyncLLM.pause_generation"
+        },
+        {
+          "ast_sha256": "3f22859420ecbd70d51edcfaa467d6af59b3ece70286dab0a8baf5445a1df60c",
+          "end_line": 771,
+          "source_segment_sha256": "40d643523ad4f44c048a1ea2600756f32aae2c3baf5459139bbb46e0f0ac0584",
+          "start_line": 769,
+          "symbol": "AsyncLLM.resume_generation"
+        }
+      ],
+      "target_relative_path": "vllm/v1/engine/async_llm.py"
+    },
+    {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/pra2026-bh408-gqa-page784-k5120-batch8/scripts/serve_cscc_dp2.sh",
+      "sha256": "233bb2ce6fee3654bc870e37e65b7ecf4de6874cb6c7fd1a6bd5687a40783699",
+      "size": 1965,
+      "symbols": [],
+      "target_relative_path": "scripts/serve_cscc_dp2.sh"
+    },
+    {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/pra2026-bh408-gqa-page784-k5120-batch8/scripts/bench_cscc_multi_request.sh",
+      "sha256": "9b5e02116911729e901077866389e448c0e4a055e8bb901ed160dcdc7664a595",
+      "size": 5820,
+      "symbols": [],
+      "target_relative_path": "scripts/bench_cscc_multi_request.sh"
+    },
+    {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/pra2026-bh408-gqa-page784-k5120-batch8/scripts/cscc_gfx936_env.sh",
+      "sha256": "58d483450c23e9c4fa87fb981b5e63cf4babf5e8d230fe93e400563596dfc18a",
+      "size": 641,
+      "symbols": [],
+      "target_relative_path": "scripts/cscc_gfx936_env.sh"
+    },
+    {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/pra2026-bh408-gqa-page784-k5120-batch8/docs/cscc/DP2_MULTI_REQUEST.md",
+      "sha256": "f83ebea84fd570908be0df58255eca371ad4c28c4dc9d70ec3db0401b1143569",
+      "size": 14363,
+      "symbols": [],
+      "target_relative_path": "docs/cscc/DP2_MULTI_REQUEST.md"
+    }
+  ],
+  "module_ast_sha256": {
+    "vllm/compilation/wrapper.py": "cfda76ce7266973f077cca46bd75cb68411bd84fa02714be7fed79979aaf624e",
+    "vllm/config/scheduler.py": "aada4c9fc1aa40ffb3c876707ec9881620d2491b8b771864f8e8910d68607e4b",
+    "vllm/engine/arg_utils.py": "88fea9de1b1a27da969190246d2c9396942fb7bba6f1123d56ac559bb2b85bd5",
+    "vllm/entrypoints/openai/engine/serving.py": "6b57a71a7e35fc79a42a83633ac832608bc9749f999868e3c7f27ad3d04004e0",
+    "vllm/model_executor/models/qwen2_moe.py": "f37a69a7a5f57149cd60ec595206f806a6fc1ef32873d7a7bb0ebd9e72e99dc3",
+    "vllm/model_executor/models/qwen3_5.py": "10dd3b60f0b69d35ddbb3a5ed65b9fc626d5e8ed5e7a6dd5f31b7cc0990d2532",
+    "vllm/model_executor/models/qwen3_next.py": "8585687f17f36c0edafda61e94b5c17eee000af966107122c3642e56bc48758a",
+    "vllm/utils/nvtx_pytorch_hooks.py": "d02e9c0121866f6240b240dd2f915a3139c839b67745aa5b9a8557086db39741",
+    "vllm/v1/core/sched/scheduler.py": "c2fe757664aa45cbd9fe66cf979de01d229bfe74820d061ca8d7d427af7dfde5",
+    "vllm/v1/engine/async_llm.py": "8f0a700612acce458af9aab62fd1b13789d568e7d0f9c6b263c220ced8c47355",
+    "vllm/v1/worker/gpu_model_runner.py": "2b49484eac1d582b98eec379460ea8df3526d339745a744300b240d878646132"
+  },
+  "native_marker_library": {
+    "path": "/opt/dtk/lib/libamdhip64.so",
+    "sha256": "619d06bcc620e605173aa9bc9a57b39e0c307b56c401e68cdbc51e0f57670078",
+    "size": 12340792,
+    "symbols": [
+      "roctxRangePushA",
+      "roctxRangePop"
+    ]
+  },
+  "python_source_policy": "load_from_hash_pinned_clean_target_checkout",
+  "runtime_attempt_id": "batch8-dp2-fresh-003-R02-attempt-017",
+  "runtime_run_id": "batch8-dp2-fresh-003",
+  "same_run_r01_source_and_abi_manifest": {
+    "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R01/contract/source_and_abi_manifest.json",
+    "sha256": "340d50c12910b2abf016814c229dd6339c44d6839feb55be864289ec3813cd75"
+  },
+  "schema_version": 1,
+  "source_preserving": true,
+  "status": "complete",
+  "trace_target_git_commit": "2b4b2119ae3cc2c4c626dc5690ef9593c1477f66",
+  "trace_target_root": "/public/home/tangyu408/Qwen_DCU_Worker_0/pra2026-bh408-gqa-page784-k5120-batch8"
+}

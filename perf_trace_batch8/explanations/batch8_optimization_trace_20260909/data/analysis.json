@@ -1,0 +1,2841 @@
+{
+  "status": "analysis_complete",
+  "generated_utc": "2026-09-09T01:10:40.322898+00:00",
+  "skill": "perf_trace/skills/build-optimization-trace-report/SKILL.md",
+  "run_id": "batch8-dp2-fresh-003",
+  "target_commit": "2b4b2119ae3cc2c4c626dc5690ef9593c1477f66",
+  "evidence_scope": "complete declared R06 first-prefill/first-decode process target universe; this does not claim every process invocation across all 1024 decode steps was instrumented",
+  "observed_clock": "R07 native non-replay only; actual R07 client outcomes supply request intervals",
+  "r07_native_controller_history_exception_preserved": true,
+  "optimized_only_trace": true,
+  "baseline_comparison_performed": false,
+  "speedup_claimed": false,
+  "sources": [
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/handoffs/R09.continuation.json",
+      "size": 109530,
+      "sha256": "4bc3719b2de031c8c7adc993ed5d4603cb059fd3043a612b7d01ea2ec4aefe1b"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/continuation_001/R09_COMPLETION_AUDIT.json",
+      "size": 3376,
+      "sha256": "d4e320eb334e14d9c08229db7f755a257fff89011b13f8a6d91e0ddf92b8c370"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/continuation_001/artifact_manifest.json",
+      "size": 8914,
+      "sha256": "b2bb2cd002778cd29bd701fdedfdd12f2b049eec09be8fff8b1960da8b5a8266"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/continuation_001/R09_SOURCE_LINEAGE.json",
+      "size": 61496,
+      "sha256": "e610738ced8bf3106eb6cfbef5751e4862e6b068b2e0e37f2d17a169a8a598ae"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/handoffs/R10.continuation.json",
+      "size": 68174,
+      "sha256": "747a05967354ffce2f9e6abd15d8d98f74b980bc34744ce8214fd9002e1b6624"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/R10_COMPLETION_AUDIT.json",
+      "size": 23854,
+      "sha256": "6b1fa8e8e0480b9a02dc0f046a004b65d0b55457cf7f9d6d34367df209a7a12b"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/artifact_manifest.json",
+      "size": 12658,
+      "sha256": "da29e7296cfec34d7d301e9408e83d3a7a0b829462713f64b15810df63df6522"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/R10_SOURCE_LINEAGE.json",
+      "size": 112511,
+      "sha256": "65bdd83f6bfa42fefe8fa76f148fc1d29deb483da9ba6a9fea3f80c14568a739"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/continuation_001/analysis/fresh_e2e_analysis.accepted.json",
+      "size": 106542,
+      "sha256": "983e9c6f644a7164d6a7cf01cc3bbfee6714ce62fb5b564ae59775bf4f4c7b79"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/continuation_001/tables/request_timeline.csv",
+      "size": 1051258,
+      "sha256": "791ef2cf9f22d6295e880b77cb4596f260782acf2edc6e7a8ada2d13f7785ba0"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/continuation_001/tables/process_timeline.csv",
+      "size": 214353096,
+      "sha256": "abc86a88e8b83e78c71914d3075dd77c2f128c98e763aae8bacf5b628f44d723"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/continuation_001/tables/kernel_timeline.csv",
+      "size": 51027444,
+      "sha256": "56d5ccb807550dc93748dbcc43146a74f6606cd041df6795c4df0f65b6bd257c"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/continuation_001/tables/process_live_utilization.csv",
+      "size": 22030404,
+      "sha256": "7ed9d7bd064b57ced6568010ec3249cc245805b55b1d83f209ebe28ec6a45189"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/continuation_001/tables/high_latency_processes.csv",
+      "size": 1037956,
+      "sha256": "e6e4563265c777f3044b7e18eff9b7600e72d587ca1baf0e5ed715257bf5c7f6"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/continuation_001/tables/traffic_resource_attachment.csv",
+      "size": 388155843,
+      "sha256": "b3eb81b5c865555c929b3f3a2a051537561e37c97fa01120f5def44d33ebfda9"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/continuation_001/tables/opportunity_candidates.csv",
+      "size": 27359057,
+      "sha256": "eb3085c0cf1dcb741e3f319f646f768ab8f57bd4b843ffb901935f04345e394b"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R02/instrumentation/process_range_inventory.json",
+      "size": 459924,
+      "sha256": "c1d162a66c564d25553fef2d0d99b5d7e1e9ff0be6ba84fe6bfbbde9d9142a1a"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R02/source/source_and_ast_manifest.json",
+      "size": 14147,
+      "sha256": "87c023f2bbc1ccb66fa2f8503815a632ebc77c2bd39911c9d0f56430001bfd78"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/v1/attention/ops/rocm_aiter_unified_attention_gqa6.py",
+      "size": 4981,
+      "sha256": "7d7b42176b4ae7330b07ee03725ef8130ea4e095231f744352eb4fa76602029c"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/v1/attention/backends/rocm_aiter_unified_attn.py",
+      "size": 10563,
+      "sha256": "d95d9b77605514db19a3f5b0aed011a8ca1182baf597d5908480c2ff35ae0f99"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/model_executor/layers/fla/ops/gfx936.py",
+      "size": 2333,
+      "sha256": "0d6a108795c80c8a46c684d69f4c234207043472469213ba26552cb2284e011d"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/model_executor/layers/fla/ops/fused_recurrent.py",
+      "size": 21267,
+      "sha256": "b03b034fa42c4831f5a6d792acb5cf27691e2d17a4f0c6b0fc27af1531377042"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/model_executor/layers/fla/ops/chunk_o.py",
+      "size": 5175,
+      "sha256": "189c434f0846b6829fdc76890db76e38add6f4448b60a56f57c4edbc5acbc809"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/model_executor/models/qwen3_5.py",
+      "size": 32845,
+      "sha256": "f3c0479dbc37a8794c4d6b1c4c01906ae341b3276ed43e588c17d92b1ddb94d6"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/model_executor/models/qwen3_next.py",
+      "size": 67330,
+      "sha256": "5a14b14a40fcf6382f9a20be4ca0f850b2b19b2840a3c57488821f0952d96053"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/v1/core/sched/scheduler.py",
+      "size": 105898,
+      "sha256": "fe517e62653de8ee23e1a3c9ea7f82b9df5a98da37d12b0ff06a880afb041f97"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/vllm/platforms/rocm.py",
+      "size": 33685,
+      "sha256": "23d2089c9ad294adc5128cea4be2b22cbdfab67724ff16daa3d10c601a8da000"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/pra2026-bh408-gqa-page784-k5120-batch8/docs/cscc/BATCH8_OFFICIAL_BASE_RECOMMENDATION.md",
+      "size": 11847,
+      "sha256": "20f2f5b271d130221147f218e5bf4860870981eb3b75feb7915a0f4b86efa5ec"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/continuation_001/acceptance/E2E_PROCESS_TIMELINE.full.perfetto.json",
+      "size": 466779218,
+      "sha256": "51dbd115e85f72d13d0f3debbd1d9f5acb1248da7c4da33581f40075b4da2fc9"
+    }
+  ],
+  "total_kernels": 23660,
+  "total_processes": 12544,
+  "total_kernel_duration_ns": 3154602493,
+  "kernel_launch_metadata_present": 23660,
+  "kernel_launch_metadata_missing": 0,
+  "category_order": [
+    "MMAC GEMM",
+    "GQA6",
+    "GDN chunk/state",
+    "GDN fused norm",
+    "Packed decode",
+    "Attention fallback",
+    "RMSNorm",
+    "MLP activation",
+    "Other"
+  ],
+  "categories": {
+    "MMAC GEMM": {
+      "hits": 4256,
+      "duration_ns": 1572866994,
+      "global_kernel_share": 0.4985943545946472,
+      "requests": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "ranks": [
+        0,
+        1
+      ],
+      "units": [
+        [
+          1,
+          "decode"
+        ],
+        [
+          1,
+          "prefill"
+        ],
+        [
+          2,
+          "decode"
+        ],
+        [
+          2,
+          "prefill"
+        ],
+        [
+          3,
+          "decode"
+        ],
+        [
+          3,
+          "prefill"
+        ],
+        [
+          4,
+          "decode"
+        ],
+        [
+          4,
+          "prefill"
+        ],
+        [
+          5,
+          "decode"
+        ],
+        [
+          5,
+          "prefill"
+        ],
+        [
+          6,
+          "prefill"
+        ],
+        [
+          7,
+          "prefill"
+        ],
+        [
+          8,
+          "decode"
+        ],
+        [
+          8,
+          "prefill"
+        ]
+      ],
+      "layers": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63
+      ]
+    },
+    "GQA6": {
+      "hits": 224,
+      "duration_ns": 901614133,
+      "global_kernel_share": 0.2858091106567828,
+      "requests": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "ranks": [
+        0,
+        1
+      ],
+      "units": [
+        [
+          1,
+          "decode"
+        ],
+        [
+          1,
+          "prefill"
+        ],
+        [
+          2,
+          "decode"
+        ],
+        [
+          2,
+          "prefill"
+        ],
+        [
+          3,
+          "decode"
+        ],
+        [
+          3,
+          "prefill"
+        ],
+        [
+          4,
+          "decode"
+        ],
+        [
+          4,
+          "prefill"
+        ],
+        [
+          5,
+          "decode"
+        ],
+        [
+          5,
+          "prefill"
+        ],
+        [
+          6,
+          "prefill"
+        ],
+        [
+          7,
+          "prefill"
+        ],
+        [
+          8,
+          "decode"
+        ],
+        [
+          8,
+          "prefill"
+        ]
+      ],
+      "layers": [
+        3,
+        7,
+        11,
+        15,
+        19,
+        23,
+        27,
+        31,
+        35,
+        39,
+        43,
+        47,
+        51,
+        55,
+        59,
+        63
+      ]
+    },
+    "GDN chunk/state": {
+      "hits": 6816,
+      "duration_ns": 388483473,
+      "global_kernel_share": 0.12314815380449266,
+      "requests": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "ranks": [
+        0,
+        1
+      ],
+      "units": [
+        [
+          1,
+          "decode"
+        ],
+        [
+          1,
+          "prefill"
+        ],
+        [
+          2,
+          "decode"
+        ],
+        [
+          2,
+          "prefill"
+        ],
+        [
+          3,
+          "decode"
+        ],
+        [
+          3,
+          "prefill"
+        ],
+        [
+          4,
+          "decode"
+        ],
+        [
+          4,
+          "prefill"
+        ],
+        [
+          5,
+          "decode"
+        ],
+        [
+          5,
+          "prefill"
+        ],
+        [
+          6,
+          "decode"
+        ],
+        [
+          6,
+          "prefill"
+        ],
+        [
+          7,
+          "decode"
+        ],
+        [
+          7,
+          "prefill"
+        ],
+        [
+          8,
+          "decode"
+        ],
+        [
+          8,
+          "prefill"
+        ]
+      ],
+      "layers": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        8,
+        9,
+        10,
+        12,
+        13,
+        14,
+        16,
+        17,
+        18,
+        20,
+        21,
+        22,
+        24,
+        25,
+        26,
+        28,
+        29,
+        30,
+        32,
+        33,
+        34,
+        36,
+        37,
+        38,
+        40,
+        41,
+        42,
+        44,
+        45,
+        46,
+        48,
+        49,
+        50,
+        52,
+        53,
+        54,
+        56,
+        57,
+        58,
+        60,
+        61,
+        62
+      ]
+    },
+    "GDN fused norm": {
+      "hits": 672,
+      "duration_ns": 22983517,
+      "global_kernel_share": 0.007285709388425314,
+      "requests": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "ranks": [
+        0,
+        1
+      ],
+      "units": [
+        [
+          1,
+          "decode"
+        ],
+        [
+          1,
+          "prefill"
+        ],
+        [
+          2,
+          "decode"
+        ],
+        [
+          2,
+          "prefill"
+        ],
+        [
+          3,
+          "decode"
+        ],
+        [
+          3,
+          "prefill"
+        ],
+        [
+          4,
+          "decode"
+        ],
+        [
+          4,
+          "prefill"
+        ],
+        [
+          5,
+          "decode"
+        ],
+        [
+          5,
+          "prefill"
+        ],
+        [
+          6,
+          "prefill"
+        ],
+        [
+          7,
+          "prefill"
+        ],
+        [
+          8,
+          "decode"
+        ],
+        [
+          8,
+          "prefill"
+        ]
+      ],
+      "layers": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        8,
+        9,
+        10,
+        12,
+        13,
+        14,
+        16,
+        17,
+        18,
+        20,
+        21,
+        22,
+        24,
+        25,
+        26,
+        28,
+        29,
+        30,
+        32,
+        33,
+        34,
+        36,
+        37,
+        38,
+        40,
+        41,
+        42,
+        44,
+        45,
+        46,
+        48,
+        49,
+        50,
+        52,
+        53,
+        54,
+        56,
+        57,
+        58,
+        60,
+        61,
+        62
+      ]
+    },
+    "Packed decode": {
+      "hits": 96,
+      "duration_ns": 2522240,
+      "global_kernel_share": 0.0007995428918847304,
+      "requests": [
+        6,
+        7
+      ],
+      "ranks": [
+        0,
+        1
+      ],
+      "units": [
+        [
+          6,
+          "decode"
+        ],
+        [
+          7,
+          "decode"
+        ]
+      ],
+      "layers": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        8,
+        9,
+        10,
+        12,
+        13,
+        14,
+        16,
+        17,
+        18,
+        20,
+        21,
+        22,
+        24,
+        25,
+        26,
+        28,
+        29,
+        30,
+        32,
+        33,
+        34,
+        36,
+        37,
+        38,
+        40,
+        41,
+        42,
+        44,
+        45,
+        46,
+        48,
+        49,
+        50,
+        52,
+        53,
+        54,
+        56,
+        57,
+        58,
+        60,
+        61,
+        62
+      ]
+    },
+    "Attention fallback": {
+      "hits": 64,
+      "duration_ns": 17342559,
+      "global_kernel_share": 0.005497541778554602,
+      "requests": [
+        6,
+        7
+      ],
+      "ranks": [
+        0,
+        1
+      ],
+      "units": [
+        [
+          6,
+          "decode"
+        ],
+        [
+          7,
+          "decode"
+        ]
+      ],
+      "layers": [
+        3,
+        7,
+        11,
+        15,
+        19,
+        23,
+        27,
+        31,
+        35,
+        39,
+        43,
+        47,
+        51,
+        55,
+        59,
+        63
+      ]
+    },
+    "RMSNorm": {
+      "hits": 1792,
+      "duration_ns": 73918555,
+      "global_kernel_share": 0.023431971274993853,
+      "requests": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "ranks": [
+        0,
+        1
+      ],
+      "units": [
+        [
+          1,
+          "decode"
+        ],
+        [
+          1,
+          "prefill"
+        ],
+        [
+          2,
+          "decode"
+        ],
+        [
+          2,
+          "prefill"
+        ],
+        [
+          3,
+          "decode"
+        ],
+        [
+          3,
+          "prefill"
+        ],
+        [
+          4,
+          "decode"
+        ],
+        [
+          4,
+          "prefill"
+        ],
+        [
+          5,
+          "decode"
+        ],
+        [
+          5,
+          "prefill"
+        ],
+        [
+          6,
+          "prefill"
+        ],
+        [
+          7,
+          "prefill"
+        ],
+        [
+          8,
+          "decode"
+        ],
+        [
+          8,
+          "prefill"
+        ]
+      ],
+      "layers": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63
+      ]
+    },
+    "MLP activation": {
+      "hits": 896,
+      "duration_ns": 60950235,
+      "global_kernel_share": 0.019321050793324152,
+      "requests": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "ranks": [
+        0,
+        1
+      ],
+      "units": [
+        [
+          1,
+          "decode"
+        ],
+        [
+          1,
+          "prefill"
+        ],
+        [
+          2,
+          "decode"
+        ],
+        [
+          2,
+          "prefill"
+        ],
+        [
+          3,
+          "decode"
+        ],
+        [
+          3,
+          "prefill"
+        ],
+        [
+          4,
+          "decode"
+        ],
+        [
+          4,
+          "prefill"
+        ],
+        [
+          5,
+          "decode"
+        ],
+        [
+          5,
+          "prefill"
+        ],
+        [
+          6,
+          "prefill"
+        ],
+        [
+          7,
+          "prefill"
+        ],
+        [
+          8,
+          "decode"
+        ],
+        [
+          8,
+          "prefill"
+        ]
+      ],
+      "layers": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63
+      ]
+    },
+    "Other": {
+      "hits": 8844,
+      "duration_ns": 113920787,
+      "global_kernel_share": 0.03611256481689466,
+      "requests": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "ranks": [
+        0,
+        1
+      ],
+      "units": [
+        [
+          1,
+          "decode"
+        ],
+        [
+          1,
+          "prefill"
+        ],
+        [
+          2,
+          "decode"
+        ],
+        [
+          2,
+          "prefill"
+        ],
+        [
+          3,
+          "decode"
+        ],
+        [
+          3,
+          "prefill"
+        ],
+        [
+          4,
+          "decode"
+        ],
+        [
+          4,
+          "prefill"
+        ],
+        [
+          5,
+          "decode"
+        ],
+        [
+          5,
+          "prefill"
+        ],
+        [
+          6,
+          "decode"
+        ],
+        [
+          6,
+          "prefill"
+        ],
+        [
+          7,
+          "decode"
+        ],
+        [
+          7,
+          "prefill"
+        ],
+        [
+          8,
+          "decode"
+        ],
+        [
+          8,
+          "prefill"
+        ]
+      ],
+      "layers": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63
+      ]
+    }
+  },
+  "optimizations": {
+    "page784_GQA6_all": {
+      "hits": 224,
+      "duration_ns": 901614133,
+      "global_kernel_share": 0.2858091106567828,
+      "requests": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "ranks": [
+        0,
+        1
+      ],
+      "units": [
+        [
+          1,
+          "decode"
+        ],
+        [
+          1,
+          "prefill"
+        ],
+        [
+          2,
+          "decode"
+        ],
+        [
+          2,
+          "prefill"
+        ],
+        [
+          3,
+          "decode"
+        ],
+        [
+          3,
+          "prefill"
+        ],
+        [
+          4,
+          "decode"
+        ],
+        [
+          4,
+          "prefill"
+        ],
+        [
+          5,
+          "decode"
+        ],
+        [
+          5,
+          "prefill"
+        ],
+        [
+          6,
+          "prefill"
+        ],
+        [
+          7,
+          "prefill"
+        ],
+        [
+          8,
+          "decode"
+        ],
+        [
+          8,
+          "prefill"
+        ]
+      ],
+      "layers": [
+        3,
+        7,
+        11,
+        15,
+        19,
+        23,
+        27,
+        31,
+        35,
+        39,
+        43,
+        47,
+        51,
+        55,
+        59,
+        63
+      ],
+      "matched_owner_kernel_denominator_ns": 1041839563,
+      "matched_owner_kernel_share": 0.8654059271888104,
+      "launch_configurations": {
+        "(16, 12, 1, 256, 1, 1, 32768)": 32,
+        "(52, 12, 2, 128, 1, 1, 8192)": 16,
+        "(64, 12, 2, 128, 1, 1, 8192)": 32,
+        "(35, 12, 2, 128, 1, 1, 8192)": 16,
+        "(32, 12, 3, 128, 1, 1, 16384)": 48,
+        "(21, 12, 3, 128, 1, 1, 16384)": 16,
+        "(21, 12, 4, 128, 1, 1, 16384)": 16,
+        "(32, 12, 4, 128, 1, 1, 16384)": 32,
+        "(20, 12, 4, 128, 1, 1, 16384)": 16
+      }
+    },
+    "page784_GQA6_BM32_local_B3_B5": {
+      "hits": 128,
+      "duration_ns": 579995773,
+      "global_kernel_share": 0.1838570071148422,
+      "requests": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "ranks": [
+        0,
+        1
+      ],
+      "units": [
+        [
+          3,
+          "decode"
+        ],
+        [
+          4,
+          "decode"
+        ],
+        [
+          5,
+          "decode"
+        ],
+        [
+          5,
+          "prefill"
+        ],
+        [
+          6,
+          "prefill"
+        ],
+        [
+          7,
+          "prefill"
+        ],
+        [
+          8,
+          "decode"
+        ],
+        [
+          8,
+          "prefill"
+        ]
+      ],
+      "layers": [
+        3,
+        7,
+        11,
+        15,
+        19,
+        23,
+        27,
+        31,
+        35,
+        39,
+        43,
+        47,
+        51,
+        55,
+        59,
+        63
+      ],
+      "matched_owner_kernel_denominator_ns": 659969210,
+      "matched_owner_kernel_share": 0.8788224726423222,
+      "launch_configurations": {
+        "(32, 12, 3, 128, 1, 1, 16384)": 48,
+        "(21, 12, 3, 128, 1, 1, 16384)": 16,
+        "(21, 12, 4, 128, 1, 1, 16384)": 16,
+        "(32, 12, 4, 128, 1, 1, 16384)": 32,
+        "(20, 12, 4, 128, 1, 1, 16384)": 16
+      }
+    },
+    "strided_GDN_RMSNorm_SiLU": {
+      "hits": 672,
+      "duration_ns": 22983517,
+      "global_kernel_share": 0.007285709388425314,
+      "requests": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "ranks": [
+        0,
+        1
+      ],
+      "units": [
+        [
+          1,
+          "decode"
+        ],
+        [
+          1,
+          "prefill"
+        ],
+        [
+          2,
+          "decode"
+        ],
+        [
+          2,
+          "prefill"
+        ],
+        [
+          3,
+          "decode"
+        ],
+        [
+          3,
+          "prefill"
+        ],
+        [
+          4,
+          "decode"
+        ],
+        [
+          4,
+          "prefill"
+        ],
+        [
+          5,
+          "decode"
+        ],
+        [
+          5,
+          "prefill"
+        ],
+        [
+          6,
+          "prefill"
+        ],
+        [
+          7,
+          "prefill"
+        ],
+        [
+          8,
+          "decode"
+        ],
+        [
+          8,
+          "prefill"
+        ]
+      ],
+      "layers": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        8,
+        9,
+        10,
+        12,
+        13,
+        14,
+        16,
+        17,
+        18,
+        20,
+        21,
+        22,
+        24,
+        25,
+        26,
+        28,
+        29,
+        30,
+        32,
+        33,
+        34,
+        36,
+        37,
+        38,
+        40,
+        41,
+        42,
+        44,
+        45,
+        46,
+        48,
+        49,
+        50,
+        52,
+        53,
+        54,
+        56,
+        57,
+        58,
+        60,
+        61,
+        62
+      ],
+      "matched_owner_kernel_denominator_ns": 863296846,
+      "matched_owner_kernel_share": 0.026622959537604983,
+      "launch_configurations": {
+        "(1536, 1, 1, 256, 1, 1, 0)": 672
+      }
+    },
+    "packed_GDN_optimized_B1_B3": {
+      "hits": 0,
+      "duration_ns": 0,
+      "global_kernel_share": 0.0,
+      "requests": [],
+      "ranks": [],
+      "units": [],
+      "layers": [],
+      "matched_owner_kernel_denominator_ns": 0,
+      "matched_owner_kernel_share": null,
+      "launch_configurations": {}
+    },
+    "packed_GDN_official_B4": {
+      "hits": 96,
+      "duration_ns": 2522240,
+      "global_kernel_share": 0.0007995428918847304,
+      "requests": [
+        6,
+        7
+      ],
+      "ranks": [
+        0,
+        1
+      ],
+      "units": [
+        [
+          6,
+          "decode"
+        ],
+        [
+          7,
+          "decode"
+        ]
+      ],
+      "layers": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        8,
+        9,
+        10,
+        12,
+        13,
+        14,
+        16,
+        17,
+        18,
+        20,
+        21,
+        22,
+        24,
+        25,
+        26,
+        28,
+        29,
+        30,
+        32,
+        33,
+        34,
+        36,
+        37,
+        38,
+        40,
+        41,
+        42,
+        44,
+        45,
+        46,
+        48,
+        49,
+        50,
+        52,
+        53,
+        54,
+        56,
+        57,
+        58,
+        60,
+        61,
+        62
+      ],
+      "matched_owner_kernel_denominator_ns": 2964960,
+      "matched_owner_kernel_share": 0.8506826399007069,
+      "launch_configurations": {
+        "(4, 192, 1, 64, 1, 1, 64)": 96
+      }
+    },
+    "GDN_chunk_h": {
+      "hits": 672,
+      "duration_ns": 119513911,
+      "global_kernel_share": 0.03788556918508718,
+      "requests": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "ranks": [
+        0,
+        1
+      ],
+      "units": [
+        [
+          1,
+          "decode"
+        ],
+        [
+          1,
+          "prefill"
+        ],
+        [
+          2,
+          "decode"
+        ],
+        [
+          2,
+          "prefill"
+        ],
+        [
+          3,
+          "decode"
+        ],
+        [
+          3,
+          "prefill"
+        ],
+        [
+          4,
+          "decode"
+        ],
+        [
+          4,
+          "prefill"
+        ],
+        [
+          5,
+          "decode"
+        ],
+        [
+          5,
+          "prefill"
+        ],
+        [
+          6,
+          "prefill"
+        ],
+        [
+          7,
+          "prefill"
+        ],
+        [
+          8,
+          "decode"
+        ],
+        [
+          8,
+          "prefill"
+        ]
+      ],
+      "layers": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        8,
+        9,
+        10,
+        12,
+        13,
+        14,
+        16,
+        17,
+        18,
+        20,
+        21,
+        22,
+        24,
+        25,
+        26,
+        28,
+        29,
+        30,
+        32,
+        33,
+        34,
+        36,
+        37,
+        38,
+        40,
+        41,
+        42,
+        44,
+        45,
+        46,
+        48,
+        49,
+        50,
+        52,
+        53,
+        54,
+        56,
+        57,
+        58,
+        60,
+        61,
+        62
+      ],
+      "matched_owner_kernel_denominator_ns": 863296846,
+      "matched_owner_kernel_share": 0.13843895243421286,
+      "launch_configurations": {
+        "(2, 48, 1, 256, 1, 1, 40960)": 96,
+        "(4, 96, 1, 256, 1, 1, 36864)": 192,
+        "(4, 144, 1, 256, 1, 1, 36864)": 192,
+        "(4, 192, 1, 256, 1, 1, 36864)": 192
+      }
+    },
+    "GDN_chunk_o": {
+      "hits": 672,
+      "duration_ns": 106372147,
+      "global_kernel_share": 0.0337196674497144,
+      "requests": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "ranks": [
+        0,
+        1
+      ],
+      "units": [
+        [
+          1,
+          "decode"
+        ],
+        [
+          1,
+          "prefill"
+        ],
+        [
+          2,
+          "decode"
+        ],
+        [
+          2,
+          "prefill"
+        ],
+        [
+          3,
+          "decode"
+        ],
+        [
+          3,
+          "prefill"
+        ],
+        [
+          4,
+          "decode"
+        ],
+        [
+          4,
+          "prefill"
+        ],
+        [
+          5,
+          "decode"
+        ],
+        [
+          5,
+          "prefill"
+        ],
+        [
+          6,
+          "prefill"
+        ],
+        [
+          7,
+          "prefill"
+        ],
+        [
+          8,
+          "decode"
+        ],
+        [
+          8,
+          "prefill"
+        ]
+      ],
+      "layers": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        8,
+        9,
+        10,
+        12,
+        13,
+        14,
+        16,
+        17,
+        18,
+        20,
+        21,
+        22,
+        24,
+        25,
+        26,
+        28,
+        29,
+        30,
+        32,
+        33,
+        34,
+        36,
+        37,
+        38,
+        40,
+        41,
+        42,
+        44,
+        45,
+        46,
+        48,
+        49,
+        50,
+        52,
+        53,
+        54,
+        56,
+        57,
+        58,
+        60,
+        61,
+        62
+      ],
+      "matched_owner_kernel_denominator_ns": 863296846,
+      "matched_owner_kernel_share": 0.12321618860634642,
+      "launch_configurations": {
+        "(4, 8, 48, 128, 1, 1, 40960)": 48,
+        "(4, 8, 48, 256, 1, 1, 61440)": 48,
+        "(4, 9, 48, 128, 1, 1, 40960)": 96,
+        "(4, 9, 48, 256, 1, 1, 61440)": 96,
+        "(4, 10, 48, 128, 1, 1, 40960)": 96,
+        "(4, 10, 48, 256, 1, 1, 61440)": 144,
+        "(4, 11, 48, 128, 1, 1, 40960)": 96,
+        "(4, 11, 48, 256, 1, 1, 61440)": 48
+      }
+    },
+    "fixed_custom_GEMV": {
+      "hits": 0,
+      "duration_ns": 0,
+      "global_kernel_share": 0.0,
+      "requests": [],
+      "ranks": [],
+      "units": [],
+      "layers": [],
+      "matched_owner_kernel_denominator_ns": 0,
+      "matched_owner_kernel_share": null,
+      "launch_configurations": {}
+    }
+  },
+  "units": [
+    {
+      "request": 1,
+      "request_id": "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c",
+      "rank": 1,
+      "phase": "prefill",
+      "q_len_request_label": "512",
+      "kv_len_request_label": "0",
+      "process_count": 784,
+      "kernel_count": 1546,
+      "kernel_duration_ns": 157519496,
+      "kernel_union_ns": 157519496,
+      "selected_marker_begin_ns": 1788409245398303232,
+      "selected_marker_end_ns": 1788409248129969202,
+      "category_duration_ns": {
+        "MMAC GEMM": 112455666,
+        "GQA6": 2387358,
+        "GDN chunk/state": 25600154,
+        "GDN fused norm": 1691680,
+        "Packed decode": 0,
+        "Attention fallback": 0,
+        "RMSNorm": 5403999,
+        "MLP activation": 4435200,
+        "Other": 5545439
+      },
+      "category_share": {
+        "MMAC GEMM": 0.7139158571203148,
+        "GQA6": 0.015155952505079118,
+        "GDN chunk/state": 0.16252054285394615,
+        "GDN fused norm": 0.010739496017686598,
+        "Packed decode": 0.0,
+        "Attention fallback": 0.0,
+        "RMSNorm": 0.03430685811742313,
+        "MLP activation": 0.028156514670412608,
+        "Other": 0.03520477871513759
+      },
+      "gqa_launch_shapes": {
+        "(16, 12, 1, 256, 64)": 16
+      }
+    },
+    {
+      "request": 1,
+      "request_id": "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c",
+      "rank": 1,
+      "phase": "decode",
+      "q_len_request_label": "1",
+      "kv_len_request_label": "20576",
+      "process_count": 784,
+      "kernel_count": 1642,
+      "kernel_duration_ns": 224289250,
+      "kernel_union_ns": 224289044,
+      "selected_marker_begin_ns": 1788409291742545888,
+      "selected_marker_end_ns": 1788409294377711204,
+      "category_duration_ns": {
+        "MMAC GEMM": 112209746,
+        "GQA6": 67367674,
+        "GDN chunk/state": 26031833,
+        "GDN fused norm": 1818080,
+        "Packed decode": 0,
+        "Attention fallback": 0,
+        "RMSNorm": 5513599,
+        "MLP activation": 4356159,
+        "Other": 6992159
+      },
+      "category_share": {
+        "MMAC GEMM": 0.500290343830567,
+        "GQA6": 0.3003606904922996,
+        "GDN chunk/state": 0.11606366778612885,
+        "GDN fused norm": 0.008105961386914442,
+        "Packed decode": 0.0,
+        "Attention fallback": 0.0,
+        "RMSNorm": 0.02458253795043677,
+        "MLP activation": 0.019422058792385278,
+        "Other": 0.031174739761268094
+      },
+      "gqa_launch_shapes": {
+        "(64, 12, 2, 128, 16)": 16
+      }
+    },
+    {
+      "request": 2,
+      "request_id": "batch8-dual-dcu-dp2-req-002-28a42990210e6f68",
+      "rank": 0,
+      "phase": "prefill",
+      "q_len_request_label": "512",
+      "kv_len_request_label": "0",
+      "process_count": 784,
+      "kernel_count": 1546,
+      "kernel_duration_ns": 157875020,
+      "kernel_union_ns": 157875020,
+      "selected_marker_begin_ns": 1788409245493564499,
+      "selected_marker_end_ns": 1788409248301176394,
+      "category_duration_ns": {
+        "MMAC GEMM": 112496785,
+        "GQA6": 2386560,
+        "GDN chunk/state": 26292798,
+        "GDN fused norm": 1643999,
+        "Packed decode": 0,
+        "Attention fallback": 0,
+        "RMSNorm": 5279519,
+        "MLP activation": 4263039,
+        "Other": 5512320
+      },
+      "category_share": {
+        "MMAC GEMM": 0.7125686191520356,
+        "GQA6": 0.015116767681169574,
+        "GDN chunk/state": 0.16654185063602842,
+        "GDN fused norm": 0.0104132940094006,
+        "Packed decode": 0.0,
+        "Attention fallback": 0.0,
+        "RMSNorm": 0.03344112957198675,
+        "MLP activation": 0.02700261890703165,
+        "Other": 0.03491572004234742
+      },
+      "gqa_launch_shapes": {
+        "(16, 12, 1, 256, 64)": 16
+      }
+    },
+    {
+      "request": 2,
+      "request_id": "batch8-dual-dcu-dp2-req-002-28a42990210e6f68",
+      "rank": 0,
+      "phase": "decode",
+      "q_len_request_label": "1",
+      "kv_len_request_label": "22296",
+      "process_count": 784,
+      "kernel_count": 1642,
+      "kernel_duration_ns": 229927978,
+      "kernel_union_ns": 229927957,
+      "selected_marker_begin_ns": 1788409296563922105,
+      "selected_marker_end_ns": 1788409299265622513,
+      "category_duration_ns": {
+        "MMAC GEMM": 112398869,
+        "GQA6": 72256630,
+        "GDN chunk/state": 27045919,
+        "GDN fused norm": 1643040,
+        "Packed decode": 0,
+        "Attention fallback": 0,
+        "RMSNorm": 4976320,
+        "MLP activation": 4279360,
+        "Other": 7327840
+      },
+      "category_share": {
+        "MMAC GEMM": 0.488843810908475,
+        "GQA6": 0.31425766724221793,
+        "GDN chunk/state": 0.1176277860365475,
+        "GDN fused norm": 0.0071458898316411066,
+        "Packed decode": 0.0,
+        "Attention fallback": 0.0,
+        "RMSNorm": 0.021642951167952253,
+        "MLP activation": 0.01861174110790467,
+        "Other": 0.03187015370526157
+      },
+      "gqa_launch_shapes": {
+        "(64, 12, 2, 128, 16)": 16
+      }
+    },
+    {
+      "request": 3,
+      "request_id": "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f",
+      "rank": 1,
+      "phase": "prefill",
+      "q_len_request_label": "416",
+      "kv_len_request_label": "0",
+      "process_count": 784,
+      "kernel_count": 1738,
+      "kernel_duration_ns": 234950043,
+      "kernel_union_ns": 234950043,
+      "selected_marker_begin_ns": 1788409289017885099,
+      "selected_marker_end_ns": 1788409291606833410,
+      "category_duration_ns": {
+        "MMAC GEMM": 112395663,
+        "GQA6": 77811029,
+        "GDN chunk/state": 25659997,
+        "GDN fused norm": 1606080,
+        "Packed decode": 0,
+        "Attention fallback": 0,
+        "RMSNorm": 5235200,
+        "MLP activation": 4099518,
+        "Other": 8142556
+      },
+      "category_share": {
+        "MMAC GEMM": 0.47838111270318007,
+        "GQA6": 0.3311811651807189,
+        "GDN chunk/state": 0.10921469378066893,
+        "GDN fused norm": 0.006835836161136604,
+        "Packed decode": 0.0,
+        "Attention fallback": 0.0,
+        "RMSNorm": 0.022282183621477353,
+        "MLP activation": 0.017448466693832442,
+        "Other": 0.03465654185898574
+      },
+      "gqa_launch_shapes": {
+        "(52, 12, 2, 128, 16)": 16
+      }
+    },
+    {
+      "request": 3,
+      "request_id": "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f",
+      "rank": 1,
+      "phase": "decode",
+      "q_len_request_label": "1",
+      "kv_len_request_label": "21372",
+      "process_count": 784,
+      "kernel_count": 1642,
+      "kernel_duration_ns": 222883655,
+      "kernel_union_ns": 222883339,
+      "selected_marker_begin_ns": 1788409341294609040,
+      "selected_marker_end_ns": 1788409343965674455,
+      "category_duration_ns": {
+        "MMAC GEMM": 112448788,
+        "GQA6": 63525753,
+        "GDN chunk/state": 27766235,
+        "GDN fused norm": 1565280,
+        "Packed decode": 0,
+        "Attention fallback": 0,
+        "RMSNorm": 5407999,
+        "MLP activation": 4370080,
+        "Other": 7799520
+      },
+      "category_share": {
+        "MMAC GEMM": 0.5045178750321553,
+        "GQA6": 0.2850175487296276,
+        "GDN chunk/state": 0.12457725982643277,
+        "GDN fused norm": 0.007022856835329625,
+        "Packed decode": 0.0,
+        "Attention fallback": 0.0,
+        "RMSNorm": 0.024263775645638978,
+        "MLP activation": 0.019607000791511606,
+        "Other": 0.034993683139304226
+      },
+      "gqa_launch_shapes": {
+        "(32, 12, 3, 128, 32)": 16
+      }
+    },
+    {
+      "request": 4,
+      "request_id": "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786",
+      "rank": 0,
+      "phase": "prefill",
+      "q_len_request_label": "232",
+      "kv_len_request_label": "0",
+      "process_count": 784,
+      "kernel_count": 1738,
+      "kernel_duration_ns": 257684770,
+      "kernel_union_ns": 257684770,
+      "selected_marker_begin_ns": 1788409293560102234,
+      "selected_marker_end_ns": 1788409296424566016,
+      "category_duration_ns": {
+        "MMAC GEMM": 112428467,
+        "GQA6": 99409109,
+        "GDN chunk/state": 26260636,
+        "GDN fused norm": 1564319,
+        "Packed decode": 0,
+        "Attention fallback": 0,
+        "RMSNorm": 5122720,
+        "MLP activation": 4423200,
+        "Other": 8476319
+      },
+      "category_share": {
+        "MMAC GEMM": 0.4363023356017509,
+        "GQA6": 0.3857779759354812,
+        "GDN chunk/state": 0.1019099266130474,
+        "GDN fused norm": 0.006070669213395887,
+        "Packed decode": 0.0,
+        "Attention fallback": 0.0,
+        "RMSNorm": 0.01987979343909227,
+        "MLP activation": 0.017165158810122927,
+        "Other": 0.032894140387109416
+      },
+      "gqa_launch_shapes": {
+        "(35, 12, 2, 128, 16)": 16
+      }
+    },
+    {
+      "request": 4,
+      "request_id": "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786",
+      "rank": 0,
+      "phase": "decode",
+      "q_len_request_label": "1",
+      "kv_len_request_label": "22387",
+      "process_count": 784,
+      "kernel_count": 1642,
+      "kernel_duration_ns": 228304937,
+      "kernel_union_ns": 228304672,
+      "selected_marker_begin_ns": 1788409346102147148,
+      "selected_marker_end_ns": 1788409348628863045,
+      "category_duration_ns": {
+        "MMAC GEMM": 112256468,
+        "GQA6": 67935673,
+        "GDN chunk/state": 28875197,
+        "GDN fused norm": 1480160,
+        "Packed decode": 0,
+        "Attention fallback": 0,
+        "RMSNorm": 5280640,
+        "MLP activation": 4180320,
+        "Other": 8296479
+      },
+      "category_share": {
+        "MMAC GEMM": 0.49169531537550587,
+        "GQA6": 0.2975655011788028,
+        "GDN chunk/state": 0.12647644584225526,
+        "GDN fused norm": 0.0064832588355283795,
+        "Packed decode": 0.0,
+        "Attention fallback": 0.0,
+        "RMSNorm": 0.023129767009812844,
+        "MLP activation": 0.018310247929504916,
+        "Other": 0.03633946382858992
+      },
+      "gqa_launch_shapes": {
+        "(32, 12, 3, 128, 32)": 16
+      }
+    },
+    {
+      "request": 5,
+      "request_id": "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5",
+      "rank": 0,
+      "phase": "prefill",
+      "q_len_request_label": "329",
+      "kv_len_request_label": "0",
+      "process_count": 784,
+      "kernel_count": 1738,
+      "kernel_duration_ns": 237004937,
+      "kernel_union_ns": 237004937,
+      "selected_marker_begin_ns": 1788409343399736242,
+      "selected_marker_end_ns": 1788409345964508339,
+      "category_duration_ns": {
+        "MMAC GEMM": 112371506,
+        "GQA6": 75449593,
+        "GDN chunk/state": 28280478,
+        "GDN fused norm": 1732160,
+        "Packed decode": 0,
+        "Attention fallback": 0,
+        "RMSNorm": 5302400,
+        "MLP activation": 4395840,
+        "Other": 9472960
+      },
+      "category_share": {
+        "MMAC GEMM": 0.4741314987881455,
+        "GQA6": 0.31834608154175287,
+        "GDN chunk/state": 0.11932442571860856,
+        "GDN fused norm": 0.007308539737296696,
+        "Packed decode": 0.0,
+        "Attention fallback": 0.0,
+        "RMSNorm": 0.0223725297334207,
+        "MLP activation": 0.018547461734942677,
+        "Other": 0.03996946274583301
+      },
+      "gqa_launch_shapes": {
+        "(21, 12, 3, 128, 32)": 16
+      }
+    },
+    {
+      "request": 5,
+      "request_id": "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5",
+      "rank": 0,
+      "phase": "decode",
+      "q_len_request_label": "1",
+      "kv_len_request_label": "20537",
+      "process_count": 784,
+      "kernel_count": 1642,
+      "kernel_duration_ns": 237398217,
+      "kernel_union_ns": 237398082,
+      "selected_marker_begin_ns": 1788409390557077241,
+      "selected_marker_end_ns": 1788409393143708973,
+      "category_duration_ns": {
+        "MMAC GEMM": 112263669,
+        "GQA6": 74194072,
+        "GDN chunk/state": 30892636,
+        "GDN fused norm": 1602720,
+        "Packed decode": 0,
+        "Attention fallback": 0,
+        "RMSNorm": 5271680,
+        "MLP activation": 4481120,
+        "Other": 8692320
+      },
+      "category_share": {
+        "MMAC GEMM": 0.47289179513930385,
+        "GQA6": 0.3125300305014507,
+        "GDN chunk/state": 0.13013002536577603,
+        "GDN fused norm": 0.00675118802598252,
+        "Packed decode": 0.0,
+        "Attention fallback": 0.0,
+        "RMSNorm": 0.022206063999208554,
+        "MLP activation": 0.01887596316698537,
+        "Other": 0.03661493380129304
+      },
+      "gqa_launch_shapes": {
+        "(32, 12, 4, 128, 32)": 16
+      }
+    },
+    {
+      "request": 6,
+      "request_id": "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41",
+      "rank": 0,
+      "phase": "prefill",
+      "q_len_request_label": "192",
+      "kv_len_request_label": "0",
+      "process_count": 784,
+      "kernel_count": 1738,
+      "kernel_duration_ns": 255160611,
+      "kernel_union_ns": 255160611,
+      "selected_marker_begin_ns": 1788409387760846038,
+      "selected_marker_end_ns": 1788409390416864267,
+      "category_duration_ns": {
+        "MMAC GEMM": 112316944,
+        "GQA6": 93552471,
+        "GDN chunk/state": 28091517,
+        "GDN fused norm": 1728320,
+        "Packed decode": 0,
+        "Attention fallback": 0,
+        "RMSNorm": 5118880,
+        "MLP activation": 4211520,
+        "Other": 10140959
+      },
+      "category_share": {
+        "MMAC GEMM": 0.44018135698852046,
+        "GQA6": 0.36664150721915306,
+        "GDN chunk/state": 0.1100934697166092,
+        "GDN fused norm": 0.006773459246811413,
+        "Packed decode": 0.0,
+        "Attention fallback": 0.0,
+        "RMSNorm": 0.020061403599633175,
+        "MLP activation": 0.01650536884785873,
+        "Other": 0.039743434381413985
+      },
+      "gqa_launch_shapes": {
+        "(20, 12, 4, 128, 32)": 16
+      }
+    },
+    {
+      "request": 6,
+      "request_id": "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41",
+      "rank": 0,
+      "phase": "decode",
+      "q_len_request_label": "1",
+      "kv_len_request_label": "20623",
+      "process_count": 784,
+      "kernel_count": 144,
+      "kernel_duration_ns": 10257920,
+      "kernel_union_ns": 10257920,
+      "selected_marker_begin_ns": 1788409436003125675,
+      "selected_marker_end_ns": 1788409438033481269,
+      "category_duration_ns": {
+        "MMAC GEMM": 0,
+        "GQA6": 0,
+        "GDN chunk/state": 226560,
+        "GDN fused norm": 0,
+        "Packed decode": 1273280,
+        "Attention fallback": 8653760,
+        "RMSNorm": 0,
+        "MLP activation": 0,
+        "Other": 104320
+      },
+      "category_share": {
+        "MMAC GEMM": 0.0,
+        "GQA6": 0.0,
+        "GDN chunk/state": 0.022086348889443472,
+        "GDN fused norm": 0.0,
+        "Packed decode": 0.12412652857499376,
+        "Attention fallback": 0.8436174195158472,
+        "RMSNorm": 0.0,
+        "MLP activation": 0.0,
+        "Other": 0.010169703019715497
+      },
+      "gqa_launch_shapes": {}
+    },
+    {
+      "request": 7,
+      "request_id": "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3",
+      "rank": 1,
+      "phase": "prefill",
+      "q_len_request_label": "331",
+      "kv_len_request_label": "0",
+      "process_count": 784,
+      "kernel_count": 1738,
+      "kernel_duration_ns": 233017564,
+      "kernel_union_ns": 233017564,
+      "selected_marker_begin_ns": 1788409382444859956,
+      "selected_marker_end_ns": 1788409385193397926,
+      "category_duration_ns": {
+        "MMAC GEMM": 112277578,
+        "GQA6": 69899828,
+        "GDN chunk/state": 29608480,
+        "GDN fused norm": 1691359,
+        "Packed decode": 0,
+        "Attention fallback": 0,
+        "RMSNorm": 5245760,
+        "MLP activation": 4573439,
+        "Other": 9721120
+      },
+      "category_share": {
+        "MMAC GEMM": 0.48184169498913826,
+        "GQA6": 0.29997664897054716,
+        "GDN chunk/state": 0.12706544301527417,
+        "GDN fused norm": 0.007258504341758547,
+        "Packed decode": 0.0,
+        "Attention fallback": 0.0,
+        "RMSNorm": 0.022512294395112636,
+        "MLP activation": 0.019627014039164874,
+        "Other": 0.0417184002490044
+      },
+      "gqa_launch_shapes": {
+        "(21, 12, 4, 128, 32)": 16
+      }
+    },
+    {
+      "request": 7,
+      "request_id": "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3",
+      "rank": 1,
+      "phase": "decode",
+      "q_len_request_label": "1",
+      "kv_len_request_label": "22258",
+      "process_count": 784,
+      "kernel_count": 144,
+      "kernel_duration_ns": 10258879,
+      "kernel_union_ns": 10258879,
+      "selected_marker_begin_ns": 1788409432475300479,
+      "selected_marker_end_ns": 1788409434538678243,
+      "category_duration_ns": {
+        "MMAC GEMM": 0,
+        "GQA6": 0,
+        "GDN chunk/state": 216160,
+        "GDN fused norm": 0,
+        "Packed decode": 1248960,
+        "Attention fallback": 8688799,
+        "RMSNorm": 0,
+        "MLP activation": 0,
+        "Other": 104960
+      },
+      "category_share": {
+        "MMAC GEMM": 0.0,
+        "GQA6": 0.0,
+        "GDN chunk/state": 0.021070528271168808,
+        "GDN fused norm": 0.0,
+        "Packed decode": 0.1217442958436297,
+        "Attention fallback": 0.846954038545537,
+        "RMSNorm": 0.0,
+        "MLP activation": 0.0,
+        "Other": 0.0102311373396645
+      },
+      "gqa_launch_shapes": {}
+    },
+    {
+      "request": 8,
+      "request_id": "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04",
+      "rank": 1,
+      "phase": "prefill",
+      "q_len_request_label": "506",
+      "kv_len_request_label": "0",
+      "process_count": 784,
+      "kernel_count": 1738,
+      "kernel_duration_ns": 224320443,
+      "kernel_union_ns": 224320355,
+      "selected_marker_begin_ns": 1788409338472890261,
+      "selected_marker_end_ns": 1788409341154201975,
+      "category_duration_ns": {
+        "MMAC GEMM": 112261739,
+        "GQA6": 63755191,
+        "GDN chunk/state": 27673916,
+        "GDN fused norm": 1608160,
+        "Packed decode": 0,
+        "Attention fallback": 0,
+        "RMSNorm": 5363359,
+        "MLP activation": 4496800,
+        "Other": 9161278
+      },
+      "category_share": {
+        "MMAC GEMM": 0.5004525557218162,
+        "GQA6": 0.28421480515710285,
+        "GDN chunk/state": 0.12336778418362877,
+        "GDN fused norm": 0.007169030064727538,
+        "Packed decode": 0.0,
+        "Attention fallback": 0.0,
+        "RMSNorm": 0.023909363445756032,
+        "MLP activation": 0.020046322750887222,
+        "Other": 0.04084013867608134
+      },
+      "gqa_launch_shapes": {
+        "(32, 12, 3, 128, 32)": 16
+      }
+    },
+    {
+      "request": 8,
+      "request_id": "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04",
+      "rank": 1,
+      "phase": "decode",
+      "q_len_request_label": "1",
+      "kv_len_request_label": "20575",
+      "process_count": 784,
+      "kernel_count": 1642,
+      "kernel_duration_ns": 233748773,
+      "kernel_union_ns": 233748773,
+      "selected_marker_begin_ns": 1788409385335115158,
+      "selected_marker_end_ns": 1788409388185471621,
+      "category_duration_ns": {
+        "MMAC GEMM": 112285106,
+        "GQA6": 71683192,
+        "GDN chunk/state": 29960957,
+        "GDN fused norm": 1608160,
+        "Packed decode": 0,
+        "Attention fallback": 0,
+        "RMSNorm": 5396480,
+        "MLP activation": 4384640,
+        "Other": 8430238
+      },
+      "category_share": {
+        "MMAC GEMM": 0.48036661137896114,
+        "GQA6": 0.30666767179137233,
+        "GDN chunk/state": 0.12817588993290674,
+        "GDN fused norm": 0.006879864990777941,
+        "Packed decode": 0.0,
+        "Attention fallback": 0.0,
+        "RMSNorm": 0.023086666641026602,
+        "MLP activation": 0.018757916645834115,
+        "Other": 0.03606537861912114
+      },
+      "gqa_launch_shapes": {
+        "(32, 12, 4, 128, 32)": 16
+      }
+    }
+  ],
+  "requests": [
+    {
+      "request_id": "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c",
+      "measured_request_ordinal": "1",
+      "rank": "1",
+      "physical_device_id": "1",
+      "prompt_tokens": "20576",
+      "completion_tokens": "1024",
+      "http_status": "200",
+      "begin_ns": "1788409245078978841",
+      "end_ns": "1788409911270074537",
+      "duration_ns": "666191095696"
+    },
+    {
+      "request_id": "batch8-dual-dcu-dp2-req-002-28a42990210e6f68",
+      "measured_request_ordinal": "2",
+      "rank": "0",
+      "physical_device_id": "0",
+      "prompt_tokens": "22296",
+      "completion_tokens": "1024",
+      "http_status": "200",
+      "begin_ns": "1788409245079692955",
+      "end_ns": "1788409920759320265",
+      "duration_ns": "675679627310"
+    },
+    {
+      "request_id": "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f",
+      "measured_request_ordinal": "3",
+      "rank": "1",
+      "physical_device_id": "1",
+      "prompt_tokens": "21372",
+      "completion_tokens": "1024",
+      "http_status": "200",
+      "begin_ns": "1788409245080416569",
+      "end_ns": "1788409933628466184",
+      "duration_ns": "688548049615"
+    },
+    {
+      "request_id": "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786",
+      "measured_request_ordinal": "4",
+      "rank": "0",
+      "physical_device_id": "0",
+      "prompt_tokens": "22387",
+      "completion_tokens": "1024",
+      "http_status": "200",
+      "begin_ns": "1788409245081238974",
+      "end_ns": "1788409946738291384",
+      "duration_ns": "701657052410"
+    },
+    {
+      "request_id": "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5",
+      "measured_request_ordinal": "5",
+      "rank": "0",
+      "physical_device_id": "0",
+      "prompt_tokens": "20537",
+      "completion_tokens": "1024",
+      "http_status": "200",
+      "begin_ns": "1788409245082165879",
+      "end_ns": "1788409967714189962",
+      "duration_ns": "722632024083"
+    },
+    {
+      "request_id": "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41",
+      "measured_request_ordinal": "6",
+      "rank": "0",
+      "physical_device_id": "0",
+      "prompt_tokens": "20623",
+      "completion_tokens": "1024",
+      "http_status": "200",
+      "begin_ns": "1788409245083119704",
+      "end_ns": "1788409989825824507",
+      "duration_ns": "744742704803"
+    },
+    {
+      "request_id": "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3",
+      "measured_request_ordinal": "7",
+      "rank": "1",
+      "physical_device_id": "1",
+      "prompt_tokens": "22258",
+      "completion_tokens": "1024",
+      "http_status": "200",
+      "begin_ns": "1788409245083990199",
+      "end_ns": "1788409978702800268",
+      "duration_ns": "733618810069"
+    },
+    {
+      "request_id": "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04",
+      "measured_request_ordinal": "8",
+      "rank": "1",
+      "physical_device_id": "1",
+      "prompt_tokens": "20575",
+      "completion_tokens": "1024",
+      "http_status": "200",
+      "begin_ns": "1788409245084636213",
+      "end_ns": "1788409955160739582",
+      "duration_ns": "710076103369"
+    }
+  ],
+  "source_derived_scope_summaries": [
+    {
+      "evidence_scope": "derived R07 strict-owned selected kernel busy union; not all device activity",
+      "peak_selected_kernel_concurrency": 2,
+      "physical_device_id": "0",
+      "rank": "0",
+      "scope_id": "0",
+      "scope_type": "device",
+      "selected_kernel_union_duration_ns": 1613613969
+    },
+    {
+      "evidence_scope": "derived R07 strict-owned selected kernel busy union; not all device activity",
+      "peak_selected_kernel_concurrency": 2,
+      "physical_device_id": "1",
+      "rank": "1",
+      "scope_id": "1",
+      "scope_type": "device",
+      "selected_kernel_union_duration_ns": 1540987493
+    },
+    {
+      "evidence_scope": "derived R07 strict-owned selected kernel busy union; not all device activity",
+      "peak_selected_kernel_concurrency": 2,
+      "physical_device_id": "0",
+      "rank": "0",
+      "scope_id": "0",
+      "scope_type": "rank",
+      "selected_kernel_union_duration_ns": 1613613969
+    },
+    {
+      "evidence_scope": "derived R07 strict-owned selected kernel busy union; not all device activity",
+      "peak_selected_kernel_concurrency": 2,
+      "physical_device_id": "1",
+      "rank": "1",
+      "scope_id": "1",
+      "scope_type": "rank",
+      "selected_kernel_union_duration_ns": 1540987493
+    },
+    {
+      "evidence_scope": "derived R07 strict-owned selected kernel busy union; not all device activity",
+      "peak_selected_kernel_concurrency": 2,
+      "physical_device_id": "1",
+      "rank": "1",
+      "scope_id": "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c",
+      "scope_type": "request_rank_device",
+      "selected_kernel_union_duration_ns": 381808540
+    },
+    {
+      "evidence_scope": "derived R07 strict-owned selected kernel busy union; not all device activity",
+      "peak_selected_kernel_concurrency": 2,
+      "physical_device_id": "0",
+      "rank": "0",
+      "scope_id": "batch8-dual-dcu-dp2-req-002-28a42990210e6f68",
+      "scope_type": "request_rank_device",
+      "selected_kernel_union_duration_ns": 387802977
+    },
+    {
+      "evidence_scope": "derived R07 strict-owned selected kernel busy union; not all device activity",
+      "peak_selected_kernel_concurrency": 2,
+      "physical_device_id": "1",
+      "rank": "1",
+      "scope_id": "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f",
+      "scope_type": "request_rank_device",
+      "selected_kernel_union_duration_ns": 457833382
+    },
+    {
+      "evidence_scope": "derived R07 strict-owned selected kernel busy union; not all device activity",
+      "peak_selected_kernel_concurrency": 2,
+      "physical_device_id": "0",
+      "rank": "0",
+      "scope_id": "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786",
+      "scope_type": "request_rank_device",
+      "selected_kernel_union_duration_ns": 485989442
+    },
+    {
+      "evidence_scope": "derived R07 strict-owned selected kernel busy union; not all device activity",
+      "peak_selected_kernel_concurrency": 2,
+      "physical_device_id": "0",
+      "rank": "0",
+      "scope_id": "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5",
+      "scope_type": "request_rank_device",
+      "selected_kernel_union_duration_ns": 474403019
+    },
+    {
+      "evidence_scope": "derived R07 strict-owned selected kernel busy union; not all device activity",
+      "peak_selected_kernel_concurrency": 1,
+      "physical_device_id": "0",
+      "rank": "0",
+      "scope_id": "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41",
+      "scope_type": "request_rank_device",
+      "selected_kernel_union_duration_ns": 265418531
+    },
+    {
+      "evidence_scope": "derived R07 strict-owned selected kernel busy union; not all device activity",
+      "peak_selected_kernel_concurrency": 1,
+      "physical_device_id": "1",
+      "rank": "1",
+      "scope_id": "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3",
+      "scope_type": "request_rank_device",
+      "selected_kernel_union_duration_ns": 243276443
+    },
+    {
+      "evidence_scope": "derived R07 strict-owned selected kernel busy union; not all device activity",
+      "peak_selected_kernel_concurrency": 2,
+      "physical_device_id": "1",
+      "rank": "1",
+      "scope_id": "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04",
+      "scope_type": "request_rank_device",
+      "selected_kernel_union_duration_ns": 458069128
+    }
+  ],
+  "cross_device_concurrency_state": "unavailable_no_separate_cross_device_clock_error_bound_promoted",
+  "live_process_availability": {
+    "unavailable_intrinsic_short_window": 7907,
+    "available": 4631,
+    "unavailable_sampling_gap": 6
+  },
+  "resource_row_availability_shape": {
+    "('available', 'True')": 59130,
+    "('unavailable', '')": 22016,
+    "('available_static_template', '')": 90880,
+    "('available', 'False')": 2352,
+    "('unavailable', 'False')": 80,
+    "('unavailable', 'True')": 2950
+  },
+  "resource_physical_shape_match": {
+    "True": 6624,
+    "False": 288
+  },
+  "resource_metrics": {
+    "('dispatch_scr', 'available')": 2304,
+    "('fx_template_intermediate_bytes', 'unavailable')": 8448,
+    "('fx_template_output_known_bytes_lower_bound', 'available_static_template')": 12544,
+    "('fx_template_intermediate_known_bytes_lower_bound', 'available_static_template')": 12544,
+    "('L2CacheHit_pct', 'available')": 2304,
+    "('flat_write_wavefronts', 'available')": 2304,
+    "('SQ_INSTS_LDS', 'available')": 2304,
+    "('fx_template_parameter_known_bytes_lower_bound', 'available_static_template')": 12544,
+    "('write_requests', 'available')": 2304,
+    "('dispatch_grd', 'available')": 2304,
+    "('fx_template_output_bytes', 'available_static_template')": 11520,
+    "('L2_hit_count', 'available')": 2304,
+    "('fx_template_input_known_bytes_lower_bound', 'available_static_template')": 12544,
+    "('dispatch_sgpr', 'available')": 2304,
+    "('dispatch_wave_size', 'available')": 2304,
+    "('L2_miss_count', 'available')": 2304,
+    "('native_DRAM_write_bytes', 'available')": 1578,
+    "('fx_template_input_bytes', 'available_static_template')": 12544,
+    "('read_requests', 'available')": 2304,
+    "('GPUBusy_pct', 'available')": 2304,
+    "('dispatch_lds', 'available')": 2304,
+    "('fx_template_parameter_bytes', 'available_static_template')": 12544,
+    "('dispatch_accum_vgpr', 'available')": 2304,
+    "('SQ_INSTS_VMEM_RD', 'available')": 2304,
+    "('achieved_occupancy_pct', 'unavailable')": 2304,
+    "('fx_template_intermediate_bytes', 'available_static_template')": 4096,
+    "('VALUBusy_pct', 'available')": 2304,
+    "('exact_runtime_FLOPs', 'unavailable')": 12544,
+    "('dispatch_arch_vgpr', 'available')": 2304,
+    "('fx_template_output_bytes', 'unavailable')": 1024,
+    "('flat_read_wavefronts', 'available')": 2304,
+    "('native_DRAM_read_bytes', 'available')": 2304,
+    "('read_requests_32B', 'available')": 2304,
+    "('SQ_WAIT_INST_LDS', 'available')": 2304,
+    "('write_requests_64B', 'available')": 2304,
+    "('dispatch_wgr', 'available')": 2304,
+    "('SQ_INSTS_VMEM_WR', 'available')": 2304,
+    "('LDSBankConflict_pct', 'available')": 2304,
+    "('SQ_INSTS_VALU', 'available')": 2304,
+    "('native_DRAM_write_bytes', 'unavailable')": 726
+  },
+  "opportunity_states": {
+    "non_candidate": 11307,
+    "blocked_by_unavailable": 819,
+    "candidate": 418
+  },
+  "candidate_processes": {
+    "gdn_recurrent_core": 383,
+    "post_attention_rmsnorm": 32,
+    "kv_cache_attention": 1,
+    "input_rmsnorm": 2
+  },
+  "high_latency_processes": {
+    "output_projection": 108,
+    "gdn_recurrent_core": 615,
+    "gdn_gated_rmsnorm": 40,
+    "qkv_projection": 54,
+    "mlp": 216,
+    "rope": 14,
+    "post_attention_rmsnorm": 54,
+    "layer_output": 54,
+    "attention_output": 14,
+    "input_rmsnorm": 54,
+    "kv_cache_attention": 14
+  },
+  "high_latency_rows": 1237,
+  "global_p95_process_ns": 9933017
+}

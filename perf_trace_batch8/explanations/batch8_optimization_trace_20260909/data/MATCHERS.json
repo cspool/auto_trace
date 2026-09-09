@@ -1,0 +1,19 @@
+{
+  "ownership": "exact R09 owner_process_range_id + runtime_call_id + HIP runtime index, checked against owner HIP context; no GPU time-overlap attribution",
+  "categories": [
+    "MMAC GEMM",
+    "GQA6",
+    "GDN chunk/state",
+    "GDN fused norm",
+    "Packed decode",
+    "Attention fallback",
+    "RMSNorm",
+    "MLP activation",
+    "Other"
+  ],
+  "matcher_implementation": "analyze_trace.py::classify and matchers",
+  "phase_semantics": "request label; physical launch may contain mixed prefill/decode participants",
+  "launch_source": "R07 HIP API arguments embedded losslessly in accepted R09 process_timeline.csv",
+  "duration": "integer end_ns - begin_ns; unique kernel IDs only",
+  "denominator": "sum of strict-owned observed kernel durations in the declared unit, not wall time or rectangle area"
+}

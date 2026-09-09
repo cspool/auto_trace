@@ -1,0 +1,5 @@
+ACCEPTED_INPUT_HASHES_VERIFIED 16
+Traceback (most recent call last):
+  File "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/explanations/batch8_optimization_trace_20260909/analyze_trace.py", line 61, in <module>
+    c=context[k['runtime_call_id']];assert c[4]==k['hip_runtime_index']
+AssertionError

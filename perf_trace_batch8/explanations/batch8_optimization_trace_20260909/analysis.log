@@ -1,0 +1,67 @@
+ACCEPTED_INPUT_HASHES_VERIFIED 16
+{
+  "total_kernel_ms": 3154.602493,
+  "optimizations": {
+    "page784_GQA6_all": {
+      "hits": 224,
+      "duration_ns": 901614133,
+      "global_kernel_share": 0.2858091106567828
+    },
+    "page784_GQA6_BM32_local_B3_B5": {
+      "hits": 128,
+      "duration_ns": 579995773,
+      "global_kernel_share": 0.1838570071148422
+    },
+    "strided_GDN_RMSNorm_SiLU": {
+      "hits": 672,
+      "duration_ns": 22983517,
+      "global_kernel_share": 0.007285709388425314
+    },
+    "packed_GDN_optimized_B1_B3": {
+      "hits": 0,
+      "duration_ns": 0,
+      "global_kernel_share": 0.0
+    },
+    "packed_GDN_official_B4": {
+      "hits": 96,
+      "duration_ns": 2522240,
+      "global_kernel_share": 0.0007995428918847304
+    },
+    "GDN_chunk_h": {
+      "hits": 672,
+      "duration_ns": 119513911,
+      "global_kernel_share": 0.03788556918508718
+    },
+    "GDN_chunk_o": {
+      "hits": 672,
+      "duration_ns": 106372147,
+      "global_kernel_share": 0.0337196674497144
+    },
+    "fixed_custom_GEMV": {
+      "hits": 0,
+      "duration_ns": 0,
+      "global_kernel_share": 0.0
+    }
+  },
+  "category_percent": {
+    "MMAC GEMM": 49.85943545946472,
+    "GQA6": 28.580911065678283,
+    "GDN chunk/state": 12.314815380449266,
+    "GDN fused norm": 0.7285709388425314,
+    "Packed decode": 0.07995428918847304,
+    "Attention fallback": 0.5497541778554602,
+    "RMSNorm": 2.3431971274993852,
+    "MLP activation": 1.9321050793324153,
+    "Other": 3.611256481689466
+  },
+  "launch_metadata": 23660,
+  "candidate_states": {
+    "non_candidate": 11307,
+    "blocked_by_unavailable": 819,
+    "candidate": 418
+  },
+  "physical_shape": {
+    "True": 6624,
+    "False": 288
+  }
+}
