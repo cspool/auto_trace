@@ -1,6 +1,6 @@
 {
   "status": "complete",
-  "pdf_sha256": "e0e3d271678110baf87459a76c35985e41ceb1a61b8e73f4905fa4b97b5b1bdd",
+  "pdf_sha256": "0a6707d48874ba0e7bf36476bc37cedad371ebec8a67225802a67747a8873ea2",
   "pages": 15,
   "library_version": "1.28.2",
   "all_pages_nonempty": true,
@@ -27,9 +27,9 @@
       "page": 3,
       "width_pt": 1191.1199951171875,
       "height_pt": 841.9199829101562,
-      "text_characters": 1263,
+      "text_characters": 1360,
       "words_outside_page": 0,
-      "first_text": "0\n200\n400\n600\n800\nX: seconds since earliest client start; all rectangle edges are actual timestamps\n"
+      "first_text": "0\n50\n100\n150\n200\n250\n300\nX: DISPLAY seconds; left edges = actual starts; marker width = 12 x raw dur"
     },
     {
       "page": 4,
@@ -43,15 +43,15 @@
       "page": 5,
       "width_pt": 1191.1199951171875,
       "height_pt": 841.9199829101562,
-      "text_characters": 1292,
+      "text_characters": 1403,
       "words_outside_page": 0,
-      "first_text": "1\n2\n3\n4\nLocal sequence count B\n(at observed launches)\nR02 P | 0.572 s\nB=1 | BM64\nR04 P | 48.649 s\nB="
+      "first_text": "DCU 0 / rank 0 | R02 R04 R05 R06\n01 / R02 PREFILL\nB1\nGQA / BM64\n256 threads\n0.572 s\n02 / R04 PREFILL"
     },
     {
       "page": 6,
       "width_pt": 1191.1199951171875,
       "height_pt": 841.9199829101562,
-      "text_characters": 828,
+      "text_characters": 853,
       "words_outside_page": 0,
       "first_text": "卡\n请求 / 阶段\n启动位置（s）\n单卡 B\n实际路径 / 配置\n0\nR02 prefill\n0.572\n1\nGQA BM64\n0\nR04 prefill\n48.649\n2\nGQA BM16\n0\nR0"
     },
@@ -123,7 +123,7 @@
       "page": 15,
       "width_pt": 1191.1199951171875,
       "height_pt": 841.9199829101562,
-      "text_characters": 653,
+      "text_characters": 716,
       "words_outside_page": 0,
       "first_text": "9. 计算口径与证据索引\n每个 kernel 通过 R09 的唯一 kernel_instance_id 计一次，使用 owner_process_range_id 与 HIP runtime ind"
     }

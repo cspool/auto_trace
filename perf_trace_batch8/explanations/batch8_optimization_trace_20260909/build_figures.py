@@ -16,16 +16,17 @@ def init(name,height,ymax,title,xlabel,left=.08):
  fig=plt.figure(figsize=(32,height));ax=fig.add_axes([left,.17,.96-left,.63 if name!='D' else .70]);ax.set_ylim(-.7,ymax);ax.set_title(title,loc='left',pad=86 if name in ['B','C'] else 55,fontweight='bold');ax.set_xlabel(xlabel,labelpad=24,fontweight='semibold');ax.grid(axis='x' if name!='C' else 'y',alpha=.22,zorder=0);ax.spines[['top','right']].set_visible(False)
  fig.canvas.draw();h=56.241/72*fig.dpi/ax.bbox.height*(ax.get_ylim()[1]-ax.get_ylim()[0]);return fig,ax,h
 
-def rect(ax,panel,start,y,duration,height,color,scale=1,cap=float('inf'),vertical=False,width=1.15):
+def rect(ax,panel,start,y,duration,height,color,scale=1,cap=float('inf'),vertical=False,width=1.15,fold_edges=(.45,.55)):
  length=min(duration*scale,cap);fold=duration*scale>cap
- parts=[(0,length)] if not fold else [(0,length*.45),(length*.55,length*.45)]
+ lo,hi=fold_edges
+ parts=[(0,length)] if not fold else [(0,length*lo),(length*hi,length*(1-hi))]
  for off,l in parts:
   patch=Rectangle((y,start+off) if vertical else (start+off,y-height/2),width if vertical else l,l if vertical else height,color=color,zorder=2,linewidth=0);ax.add_patch(patch)
  if fold:
-  xx=[start+length*(.45+i*.025) for i in range(5)];yy=[y+height*(v) for v in [0,.19,-.19,.19,0]]
+  xx=[start+length*(lo+i*(hi-lo)/4) for i in range(5)];yy=[y+height*(v) for v in [0,.19,-.19,.19,0]]
   if vertical:ax.plot([y+width*.5+width*v for v in [0,.14,-.14,.14,0]],xx,color='#47515f',lw=1)
-  else:ax.plot(xx,yy,color='#47515f',lw=1)
- audit['panels'][panel]['rectangles'].append({'start':start,'display_end':start+length,'raw_duration':duration,'scale':scale,'cap':None if math.isinf(cap) else cap,'folded':fold,'vertical':vertical,'category_coordinate':y,'thickness':width if vertical else height})
+  else:ax.plot(xx,yy,color='#47515f',lw=2 if panel=='A' else 1)
+ audit['panels'][panel]['rectangles'].append({'start':start,'display_end':start+length,'raw_duration':duration,'scale':scale,'cap':None if math.isinf(cap) else cap,'folded':fold,'fold_edges':list(fold_edges) if fold else None,'visible_blocks':[[start+off,start+off+l] for off,l in parts],'vertical':vertical,'category_coordinate':y,'thickness':width if vertical else height})
  return length,fold
 
 def label_fit(fig,ax,text,x,y,block_width,block_height,fontsize=24,color='white',vertical=False):
@@ -42,23 +43,28 @@ def finish(name,fig,ax,h):
  fig.savefig(F/f'panel_{name.lower()}.svg',metadata={'Date':None});fig.savefig(F/f'panel_{name.lower()}.png',dpi=160);plt.close(fig);outputs.append(name)
  print('RENDERED',name,'rectangles',len(v['rectangles']),'height_pt',v.get('measured_rectangle_height_points'),flush=True)
 
-# A: actual client time and only the selected process windows; no stretching.
-audit['panels']['A']={'rectangles':[],'local_top5':[],'transform':'actual request-relative placement and width, seconds; scale=1; no folds'}
-fig,ax,h=init('A',13,8*1.35,'A  Eight requests: client spans and the selected first-prefill / first-decode windows','X: seconds since earliest client start; all rectangle edges are actual timestamps\nY: request / rank categories. Colored windows cover selected process markers, not the full phase.')
+# A: actual left edges; capped client spans free width for enlarged selected markers.
+audit['panels']['A']={'rectangles':[],'local_top5':[],'transform':'DISPLAY seconds; actual client-relative left edges; client width=min(raw duration,260s), fold at 225..238 display seconds relative to its start; marker width=12*raw duration; right edges are display boundaries','marker_scale':12,'client_cap_s':260}
+fig,ax,h=init('A',14,8*1.35,'A  Eight requests: folded client spans with enlarged prefill / decode markers','X: DISPLAY seconds; left edges = actual starts; marker width = 12 x raw duration\nClient width = min(raw duration, 260 s). Y: request / rank categories; labels give actual durations.')
+ax.set_xlim(0,325)
 origin=min(int(r['begin_ns']) for r in a['requests']);labels=[]
 ordered_requests=sorted(a['requests'],key=lambda r:(int(r['rank']),int(r['measured_request_ordinal'])))
 for i,r in enumerate(ordered_requests):
  y=(7-i)*1.35;num=int(r['measured_request_ordinal']);b=(int(r['begin_ns'])-origin)/1e9;dur=(int(r['end_ns'])-int(r['begin_ns']))/1e9
- rect(ax,'A',b,y,dur,h,'#dce2e9');ax.text(b+dur-8,y,f'{dur:.3f} s',ha='right',va='center',fontsize=24,color='#344154')
+ rect(ax,'A',b,y,dur,h,'#dce2e9',cap=260,fold_edges=(225/260,238/260))
+ audit['panels']['A']['rectangles'][-1].update({'request':num,'kind':'client','raw_begin_ns':int(r['begin_ns']),'raw_end_ns':int(r['end_ns'])})
  spans=[]
  for phase,col in [('prefill','#e69f00'),('decode','#2584d7')]:
-  u=next(u for u in a['units'] if u['request']==num and u['phase']==phase);s=(u['selected_marker_begin_ns']-origin)/1e9;d=(u['selected_marker_end_ns']-u['selected_marker_begin_ns'])/1e9;rect(ax,'A',s,y,d,h,col);spans.append((phase,s,d))
- ax.text(765,y+.18,f'P {spans[0][2]:.3f} s  /  D {spans[1][2]:.3f} s',va='center',fontsize=17)
- ax.text(765,y-.22,f'starts: {spans[0][1]:.3f} / {spans[1][1]:.3f} s',va='center',fontsize=15,color='#596779')
- audit['panels']['A']['local_top5'].append({'unit':num,'raw_duration_rank':['client']+[x[0] for x in sorted(spans,key=lambda z:-z[2])],'labels':'client inside; selected window durations and starts in reserved annotation area'})
+  u=next(u for u in a['units'] if u['request']==num and u['phase']==phase);s=(u['selected_marker_begin_ns']-origin)/1e9;d=(u['selected_marker_end_ns']-u['selected_marker_begin_ns'])/1e9;length,_=rect(ax,'A',s,y,d,h,col,scale=12);spans.append((phase,s,d))
+  audit['panels']['A']['rectangles'][-1].update({'request':num,'kind':phase,'raw_begin_ns':u['selected_marker_begin_ns'],'raw_end_ns':u['selected_marker_end_ns']})
+  assert label_fit(fig,ax,f'{phase[0].upper()} {d:.3f} s',s+length/2,y,length,h,21,'#172332' if phase=='prefill' else 'white')
+  ax.text(s,y+h/2+.05,f'{s:.3f} s',fontsize=15,va='bottom',color='#435167')
+ ax.text(268,y+.16,f'{dur:.3f} s',va='center',fontsize=24,color='#344154')
+ ax.text(268,y-.25,'actual client span',va='center',fontsize=16,color='#596779')
+ audit['panels']['A']['local_top5'].append({'unit':num,'raw_duration_rank':['client']+[x[0] for x in sorted(spans,key=lambda z:-z[2])],'labels':'all raw marker durations inside; actual marker starts above; client duration in reserved right annotation area'})
  labels.append(f'R{num:02d} / rank {r["rank"]}')
-ax.set_yticks([(7-i)*1.35 for i in range(8)],labels);ax.set_xlim(0,990);ax.legend(handles=[Patch(color='#dce2e9',label='Observed client span'),Patch(color='#e69f00',label='Selected prefill marker window'),Patch(color='#2584d7',label='Selected decode marker window')],loc='lower left',bbox_to_anchor=(0,1.01),ncol=3,fontsize=20,frameon=False)
-fig.text(.08,.025,'8 requests x 1024 output tokens; both ranks carry 4 requests. Uncolored client time is outside this selected process scope.\nCross-device fine-grained concurrency has no promoted clock-error bound; these intervals do not quantify accelerator utilization.',fontsize=20,color='#344154',linespacing=1.5)
+ax.set_yticks([(7-i)*1.35 for i in range(8)],labels);ax.set_xticks([0,50,100,150,200,250,300]);ax.legend(handles=[Patch(color='#dce2e9',label='Client span (two-block fold)'),Patch(color='#e69f00',label='Prefill marker (width x12)'),Patch(color='#2584d7',label='Decode marker (width x12)')],loc='lower left',bbox_to_anchor=(0,1.01),ncol=3,fontsize=20,frameon=False)
+fig.text(.08,.025,'A gray fold represents one longer client interval. Colored right edges are enlarged display boundaries, not actual completion times.\nAll 16 selected marker windows are labeled. Uncolored time is outside this process scope; folds do not indicate idle time.',fontsize=20,color='#344154',linespacing=1.5)
 finish('A',fig,ax,h)
 
 # B: local prefill composition from every selected kernel in each request.

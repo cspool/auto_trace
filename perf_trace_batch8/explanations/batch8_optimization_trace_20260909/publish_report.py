@@ -3,7 +3,7 @@
 from pathlib import Path
 import json,hashlib,subprocess,urllib.request,urllib.parse,urllib.error,os,zipfile,datetime,time
 O=Path(__file__).resolve().parent;P=O.parents[2];DIST=O/'dist';DIST.mkdir(exist_ok=True)
-REPO='cspool/auto_trace';TAG='perf-trace-batch8-dp2-scheduling-report-20260909'
+REPO='cspool/auto_trace';TAG='perf-trace-batch8-dp2-scheduling-report-20260909-v2'
 def sha(p):
  h=hashlib.sha256()
  with p.open('rb') as f:
@@ -34,7 +34,8 @@ try:release=api(base+'/releases/tags/'+TAG)
 except urllib.error.HTTPError as e:
  if e.code!=404:raise RuntimeError('Release lookup HTTP '+str(e.code)) from None
  body='使用固定、已验收的 Batch8 DP2 trace 解释 8 个请求如何分配到两张卡，各卡如何形成 B1–B4 动态 batch，以及 512-token 长 prefill 预算怎样影响 kernel 路径。\n\n下载 PDF 可直接阅读；REPORT.html 为独立离线图文报告，含八请求定位控件；ZIP 包含全部报告、图表、原始归属表、源码快照、生成代码及审计。\n\n已核对全部 23,660 个唯一 kernel 和两个 rank 的 4+4 请求覆盖，实际离线 Chromium 检查通过。图表使用原始观测时间；组成占比不作为加速比。'
- release=api(base+'/releases','POST',{'tag_name':TAG,'target_commitish':head,'name':'Batch8 双卡调度：固定 trace 可视化分析报告','body':body,'draft':False,'prerelease':False})
+ body='可读性修订 v2：第一节客户端长区间改为两块折叠矩形，Marker 宽度统一放大 12 倍并直接标注原始时长；第二节改为两行 16 个大信息矩形，按每卡实际启动顺序展示 B、时间与 kernel 配置。数据与 trace 计量不变。\n\n'+body
+ release=api(base+'/releases','POST',{'tag_name':TAG,'target_commitish':head,'name':'Batch8 双卡调度：可视化报告 v2（折叠时间轴与大信息矩形）','body':body,'draft':False,'prerelease':False})
 existing={a['name']:a for a in release['assets']}
 for p in assets:
  digest='sha256:'+sha(p)

@@ -1,6 +1,6 @@
 {
   "status": "complete",
-  "utc": "2026-09-09T01:34:16.796893+00:00",
+  "utc": "2026-09-09T01:56:31.692352+00:00",
   "builder_imported": false,
   "original_R09_raw_table_reconciled": true,
   "checks": {
@@ -10,6 +10,8 @@
     "all_16_request_phase_denominators_recomputed": true,
     "eight_request_routing_and_discrete_batch_samples": true,
     "figure_bounds_physical_heights_and_per_unit_top5": true,
+    "eight_client_folds_and_16_enlarged_markers_keep_raw_times": true,
+    "16_large_scheduling_cards_match_actual_launch_order_and_values": true,
     "actual_offline_browser_opened": true,
     "all_eight_request_selectors_exact_ns_and_ids": [
       1,
@@ -30,24 +32,24 @@
   },
   "report_html": {
     "path": "REPORT.html",
-    "size": 207368,
-    "sha256": "d05e9d7fbd9d60395ac1b96f5c63faa3b63b0204499883d2d2013dfd81527372"
+    "size": 210098,
+    "sha256": "7ad868638cfc5dbbe64d01c873816378d8eb1a7b6df73c7ef691bc983825e213"
   },
   "report_markdown": {
     "path": "REPORT.md",
-    "size": 19309,
-    "sha256": "d5b78b64b820555197d9fdbf67e7dbe4b63e7715164380f7d5516b646298ff8c"
+    "size": 19929,
+    "sha256": "025a444035e0493c78f347e796c085348545f69a3f6435ce7058076581949359"
   },
   "pdf": {
     "path": "Batch8_DP2_Scheduling_Report.pdf",
-    "size": 1254968,
-    "sha256": "e0e3d271678110baf87459a76c35985e41ceb1a61b8e73f4905fa4b97b5b1bdd"
+    "size": 1262026,
+    "sha256": "0a6707d48874ba0e7bf36476bc37cedad371ebec8a67225802a67747a8873ea2"
   },
   "browser_screenshots": [
     {
       "path": "validation/report_lookup.png",
-      "size": 174381,
-      "sha256": "8dcd2a7f6acd22d04144edd3926946beb3815ca54b5a6b31399e2f86c0e181a1"
+      "size": 185056,
+      "sha256": "a58c3aabbca50032c7430a226c2370378848795f7bebfa458b4fdea2d63571c3"
     },
     {
       "path": "validation/report_opening.png",
@@ -56,14 +58,19 @@
     },
     {
       "path": "validation/report_scheduling.png",
-      "size": 203541,
-      "sha256": "62819872175c6860b11800d9a4f526c7608694d3766edfeaa16cbf0e6250a7e3"
+      "size": 257444,
+      "sha256": "0bb4c070b68caca974d7ccc0d87dafd3d98d4f0dc6066fb6e153db6cbf4f0ddd"
+    },
+    {
+      "path": "validation/report_timeline.png",
+      "size": 220038,
+      "sha256": "2c1041dca88be9f74fc9aea5872a6030d3ee3fd9726d25026126e890be0dd58c"
     }
   ],
   "figure_audit": {
     "path": "FIGURE_AUDIT.json",
-    "size": 58137,
-    "sha256": "27b6b01c9c741ec931409279219ee0a091adae170916a60de6bd615b036d4aca"
+    "size": 88697,
+    "sha256": "b6f64e9653fe832307611afbc05f976be01ca48c3fe7da750c4a3eaa7b179bf1"
   },
   "interpreter": "/usr/bin/python3"
 }

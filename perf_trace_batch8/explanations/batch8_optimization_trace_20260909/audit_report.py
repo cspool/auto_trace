@@ -52,6 +52,33 @@ for panel,phase in [('B','prefill'),('C','decode')]:
  for item in f['panels'][panel]['local_top5']:
   u=next(u for u in a['units'] if u['phase']==phase and u['request']==item['unit']);vals=u['category_duration_ns'];expected=sorted((c for c in vals if vals[c]>0),key=lambda c:(-vals[c],c))[:5];assert expected==item['categories']
 checks['figure_bounds_physical_heights_and_per_unit_top5']=True
+origin=min(int(r['begin_ns']) for r in requests)
+ar=f['panels']['A']['rectangles'];assert len(ar)==24
+for r in ar:
+ if r['kind']=='client':
+  raw_request=next(q for q in requests if int(q['measured_request_ordinal'])==r['request'])
+  assert r['raw_begin_ns']==int(raw_request['begin_ns']) and r['raw_end_ns']==int(raw_request['end_ns'])
+  assert r['folded'] and len(r['visible_blocks'])==2 and r['cap']==260
+  assert abs(r['display_end']-r['start']-260)<1e-9
+ else:
+  u=next(u for u in a['units'] if u['request']==r['request'] and u['phase']==r['kind'])
+  assert r['raw_begin_ns']==u['selected_marker_begin_ns'] and r['raw_end_ns']==u['selected_marker_end_ns']
+  assert r['scale']==12 and not r['folded']
+  assert abs(r['display_end']-r['start']-12*(r['raw_end_ns']-r['raw_begin_ns'])/1e9)<1e-9
+ assert abs(r['start']-(r['raw_begin_ns']-origin)/1e9)<1e-9
+sf=json.loads((O/'SCHEDULING_FIGURE_AUDIT.json').read_text());assert sf['sample_count']==16 and sf['information_card_fraction_of_axes']>.75
+assert sf['information_card_fraction_of_full_figure']>.50
+assert {q['kernel_instance_id'] for q in sf['samples']}=={q['kernel_instance_id'] for q in s['launch_samples']}
+for rank in (0,1):
+ cards=sorted((q for q in sf['samples'] if q['rank']==rank),key=lambda q:q['order'])
+ expected=sorted((q for q in s['launch_samples'] if q['rank']==rank),key=lambda q:q['launch_begin_ns'])
+ assert len(cards)==8
+ for card,sample in zip(cards,expected):
+  for key in ['request','phase','kernel_instance_id','launch_begin_ns','client_relative_s','local_batch_sequences','grid','threads_per_block','GQA_BLOCK_M']:assert card[key]==sample[key]
+  assert card['all_text_inside_card'] and card['width_pt']>200 and card['height_pt']>200
+  x0,y0,x1,y1=card['bounds'];assert 0<=x0<x1<=8 and 0<=y0<y1<=2
+checks['eight_client_folds_and_16_enlarged_markers_keep_raw_times']=True
+checks['16_large_scheduling_cards_match_actual_launch_order_and_values']=True
 assert (O/'REPORT.html').read_text().count('<svg ')==5
 browser_errors=[];network=[];B=O/'validation';B.mkdir(exist_ok=True)
 with sync_playwright() as p:
@@ -63,6 +90,7 @@ with sync_playwright() as p:
  context.route('**/*',route);page=context.new_page();page.on('pageerror',lambda e:browser_errors.append(str(e)))
  page.goto((O/'REPORT.html').as_uri(),wait_until='load',timeout=60000);page.wait_for_function('window.REPORT_READY === true');page.evaluate('document.fonts.ready')
  assert page.locator('.svg-scroll svg').count()==5
+ assert page.locator('[id^="scheduling_local_batch_sample-rank"]').count()==16
  assert page.evaluate("document.fonts.check('16px \"Noto Sans CJK SC\"','双卡调度')")
  seen=[]
  for num in range(1,9):
@@ -71,6 +99,7 @@ with sync_playwright() as p:
   for x in matches:assert x['kernel_instance_id'] in text and str(x['launch_begin_ns']) in text
   seen.append(num)
  page.select_option('#request-select','5');page.evaluate('window.scrollTo(0,0)');page.screenshot(path=str(B/'report_opening.png'))
+ page.locator('figure').nth(0).scroll_into_view_if_needed();page.screenshot(path=str(B/'report_timeline.png'))
  page.locator('figure').nth(1).scroll_into_view_if_needed();page.screenshot(path=str(B/'report_scheduling.png'))
  page.locator('#request-select').scroll_into_view_if_needed();page.screenshot(path=str(B/'report_lookup.png'))
  # Declared SVG data rectangles are already numerically audited. Check actual browser dimensions and offline links.
@@ -79,6 +108,6 @@ with sync_playwright() as p:
  context.close();browser.close()
 assert not browser_errors,browser_errors;assert not network,network
 checks.update({'actual_offline_browser_opened':True,'all_eight_request_selectors_exact_ns_and_ids':seen,'five_embedded_figures_rendered':True,'Chinese_font_available':True,'page_errors':browser_errors,'external_network_attempts':network,'browser_closed':True,'pdf_generated':True})
-result={'status':'complete','utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'builder_imported':False,'original_R09_raw_table_reconciled':True,'checks':checks,'report_html':rec(O/'REPORT.html'),'report_markdown':rec(O/'REPORT.md'),'pdf':rec(O/'Batch8_DP2_Scheduling_Report.pdf'),'browser_screenshots':[rec(p) for p in sorted(B.glob('*.png'))],'figure_audit':rec(O/'FIGURE_AUDIT.json'),'interpreter':sys.executable}
+result={'status':'complete','utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'builder_imported':False,'original_R09_raw_table_reconciled':True,'checks':checks,'report_html':rec(O/'REPORT.html'),'report_markdown':rec(O/'REPORT.md'),'pdf':rec(O/'Batch8_DP2_Scheduling_Report.pdf'),'browser_screenshots':[rec(p) for p in sorted(B.glob('report_*.png'))],'figure_audit':rec(O/'FIGURE_AUDIT.json'),'interpreter':sys.executable}
 (O/'REPORT_AUDIT.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n');print('REPORT_AUDIT_COMPLETE',json.dumps({'raw_kernel_count':len(raw),'request_controls':len(seen),'network_attempts':len(network),'pdf_bytes':(O/'Batch8_DP2_Scheduling_Report.pdf').stat().st_size}),flush=True)
 print('PDF_UTILITIES',shutil.which('pdftoppm'),shutil.which('pdftotext'),shutil.which('pdfinfo'),flush=True)

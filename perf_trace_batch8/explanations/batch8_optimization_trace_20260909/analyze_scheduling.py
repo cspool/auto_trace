@@ -5,6 +5,7 @@ import json,csv,hashlib,shutil,subprocess
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
+from matplotlib.patches import Rectangle
 O=Path(__file__).resolve().parent;P=O.parents[2];T=P/'pra2026-bh408-gqa-page784-k5120-batch8';D=O/'data';F=O/'figures';F.mkdir(exist_ok=True)
 a=json.loads((D/'analysis.json').read_text());ks=list(csv.DictReader((D/'kernels.csv').open()));origin=min(int(r['begin_ns']) for r in a['requests'])
 raw=next(Path(x['path']) for x in a['sources'] if x['path'].endswith('/request_timeline.csv'))
@@ -28,18 +29,30 @@ for rel in source_rel:
 s={'status':'complete','focus':'global batch8 -> DP2 request placement -> per-rank dynamic batching and prefill token budget','topology':{'DP':2,'TP':1,'PP':1,'backend':'mp','replica_model':'full Qwen3.5-27B per device'},'source_records':source,'actual_routing':'explicit requested DP rank in this accepted trace; actual native owner rank agrees for all requests','default_serving_router':'when request.data_parallel_rank is absent: argmin(4*waiting + running), local waiting increment and coordinator updates','default_router_guarantees_exact_4_plus_4':False,'ranks':ranks,'client_all_eight_overlap_s':(min(int(r['end_ns']) for r in a['requests'])-max(int(r['begin_ns']) for r in a['requests']))/1e9,'prompt_token_imbalance_fraction_of_mean':abs(ranks[0]['prompt_tokens']-ranks[1]['prompt_tokens'])/((ranks[0]['prompt_tokens']+ranks[1]['prompt_tokens'])/2),'rank_last_completion_difference_s':abs(ranks[0]['last_completion_client_relative_s']-ranks[1]['last_completion_client_relative_s']),'launch_samples':samples,'sampling_for_figure':'one earliest matched GQA or packed launch per declared request/phase; 16 markers, no state interpolation','all_raw_kernels_preserved_in':'kernels.csv','prefill_budget_policy':{'max_prompt_tokens_gt_16384':512,'max_prompt_tokens_gt_8192':1024,'other_prefill':2048,'pure_decode':'does not enter prefill budget clamp'},'trace_prefill_q_labels':[u['q_len_request_label'] for u in a['units'] if u['phase']=='prefill'],'norm_physical_tensor_tokens':512,'baseline_DP1_comparison_performed':False}
 (D/'scheduling.json').write_text(json.dumps(s,ensure_ascii=False,indent=2)+'\n')
 plt.rcParams.update({'font.family':'DejaVu Sans','font.size':18,'svg.fonttype':'none','svg.hashsalt':'batch8-fixed-dp2-report-20260909'})
-fig,axes=plt.subplots(2,1,figsize=(32,15),sharex=True);fig.subplots_adjust(left=.07,right=.97,top=.87,bottom=.20,hspace=.55)
-for rank,ax in enumerate(axes):
- items=[x for x in samples if x['rank']==rank];ax.set_title('DCU '+str(rank)+' / DP rank '+str(rank)+'  |  requests '+', '.join('R%02d'%r for r in ranks[rank]['requests']),loc='left',fontsize=24,fontweight='bold',pad=22)
- ax.set_ylim(.55,4.95);ax.set_yticks([1,2,3,4]);ax.set_ylabel('Local sequence count B\n(at observed launches)',fontsize=20);ax.grid(alpha=.2);ax.spines[['top','right']].set_visible(False)
+fig,ax=plt.subplots(figsize=(32,10.5));fig.subplots_adjust(left=.075,right=.985,top=.84,bottom=.10)
+ax.set_xlim(0,8);ax.set_ylim(0,2);ax.axis('off')
+geometry={'status':'complete','layout':'two rank rows; eight equally sized cards per row in actual launch order','x_axis':'categorical launch ordinal within rank, not elapsed time','y_axis':'categorical DP rank / device','card_width':.94,'card_height':.82,'information_card_fraction_of_axes':.94*.82,'information_card_fraction_of_full_figure':.94*.82*(.985-.075)*(.84-.10),'samples':[]}
+for rank in [0,1]:
+ items=[x for x in samples if x['rank']==rank]
+ y=1-rank+.02
+ ax.text(-.02,y+.88,'DCU '+str(rank)+' / rank '+str(rank)+'  |  '+'  '.join('R%02d'%r for r in ranks[rank]['requests']),fontsize=24,fontweight='bold',va='bottom')
  for j,x in enumerate(items):
-  t=x['client_relative_s'];b=x['local_batch_sequences'];pref=x['phase']=='prefill';ax.plot([t,t],[.65,b],color='#cbd5e1',lw=1.4);ax.scatter(t,b,s=220,marker='o' if pref else 's',color='#e49c13' if pref else '#1d80c0',zorder=3)
-  dx=-10 if pref and j>0 else 10;dy=38 if pref else -60
-  text=f'R{x["request"]:02d} {"P" if pref else "D"} | {t:.3f} s\nB={b} | '+('BM'+str(x['GQA_BLOCK_M']) if x['GQA_BLOCK_M'] else 'packed, 64 threads')
-  ax.annotate(text,(t,b),xytext=(dx,dy),textcoords='offset points',ha='right' if dx<0 else 'left',fontsize=16,arrowprops={'arrowstyle':'-','lw':.7,'color':'#64748b'})
- ax.set_xlim(-8,220)
-axes[-1].set_xlabel('Seconds since earliest client start; actual R07 launch timestamps, discrete samples only',fontsize=21,labelpad=18)
-fig.suptitle('S  How global Batch8 becomes two independent per-device dynamic batches',x=.07,ha='left',fontsize=28,fontweight='bold')
-fig.text(.07,.055,'P / D are request phase labels. The GQA grid identifies the total sequence count in the physical mixed batch.\nBoth ranks have observed local B=1,2,3,4 launches. No line interpolates unobserved scheduler states or asserts full-step coverage.\nThe R06/R07 B4 decode launches use the official packed path; the optimized B1-B3 packed path has no observed hit.',fontsize=20,linespacing=1.5,color='#35445a')
+  left=j+.03;pref=x['phase']=='prefill';color='#fff0d0' if pref else '#dcecfb';edge='#cf8a06' if pref else '#257db7'
+  patch=Rectangle((left,y),.94,.82,facecolor=color,edgecolor=edge,lw=1.6);patch.set_gid(f'sample-rank{rank}-order{j+1}');ax.add_patch(patch)
+  center=left+.47
+  texts=[ax.text(center,y+.715,f'{j+1:02d}  /  R{x["request"]:02d}  {"PREFILL" if pref else "DECODE"}',ha='center',va='center',fontsize=24,color='#2b4055'),
+   ax.text(center,y+.49,f'B{x["local_batch_sequences"]}',ha='center',va='center',fontsize=58,fontweight='bold',color='#7b5100' if pref else '#125c92'),
+   ax.text(center,y+.29,'GQA / BM'+str(x['GQA_BLOCK_M']) if x['GQA_BLOCK_M'] else 'Packed / B4',ha='center',va='center',fontsize=26,color='#23374c'),
+   ax.text(center,y+.17,f'{x["threads_per_block"]} threads',ha='center',va='center',fontsize=23,color='#43576b'),
+   ax.text(center,y+.055,f'{x["client_relative_s"]:.3f} s',ha='center',va='center',fontsize=24,color='#23374c')]
+  fig.canvas.draw();renderer=fig.canvas.get_renderer();box=patch.get_window_extent(renderer)
+  for text in texts:
+   tb=text.get_window_extent(renderer);assert box.x0<=tb.x0 and tb.x1<=box.x1 and box.y0<=tb.y0 and tb.y1<=box.y1,('card text outside',rank,j,text.get_text())
+  geometry['samples'].append({'rank':rank,'order':j+1,'request':x['request'],'phase':x['phase'],'kernel_instance_id':x['kernel_instance_id'],'launch_begin_ns':x['launch_begin_ns'],'client_relative_s':x['client_relative_s'],'local_batch_sequences':x['local_batch_sequences'],'grid':x['grid'],'threads_per_block':x['threads_per_block'],'GQA_BLOCK_M':x['GQA_BLOCK_M'],'bounds':[left,y,left+.94,y+.82],'width_pt':box.width/fig.dpi*72,'height_pt':box.height/fig.dpi*72,'all_text_inside_card':True})
+fig.suptitle('S  How global Batch8 becomes two independent per-device dynamic batches',x=.075,y=.96,ha='left',fontsize=28,fontweight='bold')
+fig.text(.075,.89,'16 observed launches  |  two rank rows  |  read each row left to right: B1 -> B2 -> B3 -> B4',fontsize=24,color='#35445a')
+fig.text(.075,.025,'X: categorical launch order within each rank; Y: categorical DCU / rank. Card width is constant and does not encode duration.\nEach card gives the actual client-relative timestamp (seconds), request phase and launch-local B. No scheduler state is interpolated.',fontsize=20,linespacing=1.5,color='#35445a')
 fig.savefig(F/'scheduling_local_batch.svg',metadata={'Date':None});fig.savefig(F/'scheduling_local_batch.png',dpi=160);plt.close(fig)
+geometry['sample_count']=len(geometry['samples']);assert geometry['sample_count']==16
+(O/'SCHEDULING_FIGURE_AUDIT.json').write_text(json.dumps(geometry,ensure_ascii=False,indent=2)+'\n')
 print(json.dumps({'ranks':ranks,'all_eight_overlap_s':s['client_all_eight_overlap_s'],'sample_count':len(samples)},ensure_ascii=False,indent=2),flush=True)

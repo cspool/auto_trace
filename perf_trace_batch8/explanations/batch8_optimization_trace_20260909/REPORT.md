@@ -38,7 +38,7 @@
 
 源代码：[服务拓扑](source_snapshot/scripts/serve_cscc_dp2.sh)、[请求选卡](source_snapshot/vllm/v1/engine/core_client.py)。
 
-<figure class="report-figure"><img src="figures/panel_a.svg" alt="图 A：按 rank 分组的八请求客户端时间线，叠加本例选中的首个 prefill / decode process 窗口。横轴为真实秒数。"><figcaption>图 A：按 rank 分组的八请求客户端时间线，叠加本例选中的首个 prefill / decode process 窗口。横轴为真实秒数。</figcaption></figure>
+<figure class="report-figure"><img src="figures/panel_a.svg" alt="图 A：灰色客户端长区间以两块折叠矩形表示，显示宽度上限 260 秒；彩色 Marker 宽度统一放大 12 倍。所有左边界仍对应真实启动位置，矩形内标注原始时长；右边界属于显示坐标。"><figcaption>图 A：灰色客户端长区间以两块折叠矩形表示，显示宽度上限 260 秒；彩色 Marker 宽度统一放大 12 倍。所有左边界仍对应真实启动位置，矩形内标注原始时长；右边界属于显示坐标。</figcaption></figure>
 
 ## 2. 同一张卡上的 batch 怎样从 1 增至 4
 
@@ -46,7 +46,7 @@
 
 每张卡最早处理一个长请求的 prefill；后续请求开始 prefill 时，已有请求可以同时推进 decode。因此同一个物理 batch 中会出现 prefill 和 decode 混合。R01 的记录名虽然是 decode，但此时 rank 1 的 GQA 启动已经处理两个序列；后面的 R03 decode 记录对应三个序列。这正是“请求自己的阶段”和“整张卡当前 batch”之间的关系。
 
-<figure class="report-figure"><img src="figures/scheduling_local_batch.svg" alt="图 S：两卡各 8 个声明阶段的实际启动位置。P/D 是请求阶段；纵轴 B 来自原始 HIP grid。每个点可在下表按 kernel ID 复查。"><figcaption>图 S：两卡各 8 个声明阶段的实际启动位置。P/D 是请求阶段；纵轴 B 来自原始 HIP grid。每个点可在下表按 kernel ID 复查。</figcaption></figure>
+<figure class="report-figure"><img src="figures/scheduling_local_batch.svg" alt="图 S：每卡一行，8 个大信息矩形按实际启动顺序从左向右排列。每块直接显示请求阶段、单卡 B、kernel 配置、线程数与真实启动秒数；等宽矩形表示离散样本，宽度不代表时长。"><figcaption>图 S：每卡一行，8 个大信息矩形按实际启动顺序从左向右排列。每块直接显示请求阶段、单卡 B、kernel 配置、线程数与真实启动秒数；等宽矩形表示离散样本，宽度不代表时长。</figcaption></figure>
 
 | 卡 | 请求 / 阶段 | 启动位置（s） | 单卡 B | 实际路径 / 配置 |
 | --- | --- | --- | --- | --- |
@@ -67,7 +67,7 @@
 | 1 | R08 decode | 140.408 | 4 | GQA BM32 |
 | 1 | R07 decode | 187.402 | 4 | packed B4 / 64 threads |
 
-上述位置是相对最早客户端开始时间的原始 R07 启动时刻，用 16 个声明阶段的代表启动展示本例；完整 23,660 个 kernel 仍保留在数据表中。图 S 不插值推测两个点之间的调度状态。
+上述位置是相对最早客户端开始时间的原始 R07 启动时刻，用 16 个声明阶段的代表启动展示本例；完整 23,660 个 kernel 仍保留在数据表中。图 S 的横向顺序为每卡的启动序号；每个矩形都保留真实时间，不插值推测样本之间的调度状态。
 
 ## 3. 调度优化的重点：约束每卡的长 prefill 工作集
 
@@ -220,11 +220,11 @@ R09 的 418 条机会候选中，383 条位于 `gdn_recurrent_core`；这可作�
 
 每个 kernel 通过 R09 的唯一 `kernel_instance_id` 计一次，使用 `owner_process_range_id` 与 HIP runtime index 复核归属，全部 23,660 个启动参数均可在原始 process context 中找到。时长和 = Σ(end_ns−begin_ns)；组成占比的分母是该行或该列所包含的实际 kernel 时长和。嵌套 process 时长、双份显示轨道、客户端墙钟都不混入这个分母。
 
-这是一份固定优化版本的例子报告，没有同条件 DP1/旧版对照，因此给出路径、位置和组成。图 A 与图 S 使用真实时间位置；图 B/C/D 的放大、折叠只影响显示，公式写在各图中。R07 的历史原生控制器终止无法追认，其已有离线恢复说明保留；当前 R09/R10 已完成独立验收。
+这是一份固定优化版本的例子报告，没有同条件 DP1/旧版对照，因此给出路径、位置和组成。图 A 保留真实左边界，对灰色长区间折叠、彩色 Marker 放大；图 S 按每卡真实启动顺序排列等宽信息矩形，并直接标注原始时间。所有显示变换及图 B/C/D 的放大、折叠公式均写在各图中。R07 的历史原生控制器终止无法追认，其已有离线恢复说明保留；当前 R09/R10 已完成独立验收。
 
 - [报告统计与输入 SHA256](data/analysis.json)、[双卡调度数据](data/scheduling.json)、[匹配与计量规则](data/MATCHERS.json)。
 - [全量唯一 kernel 表](data/kernels.csv)、[原始 HIP 启动参数](data/observed_launches.csv)、[process 表](data/processes.csv)、[请求表](data/requests.csv)。
-- [原始 FX process 清单](data/process_range_inventory.json)、[源码快照](source_snapshot/)、[图表审计](FIGURE_AUDIT.json)。
+- [原始 FX process 清单](data/process_range_inventory.json)、[源码快照](source_snapshot/)、[图表审计](FIGURE_AUDIT.json)、[16 个信息矩形布局审计](SCHEDULING_FIGURE_AUDIT.json)。
 - [数据提取代码](analyze_trace.py)、[调度分析代码](analyze_scheduling.py)、[图表生成代码](build_figures.py)、[报告生成代码](build_report.py)。
 
 独立验收结果与本报告打包清单在交付时追加到本目录。所有新输出保存在 NFS；原有 R08–R10 封存材料保持原始字节。

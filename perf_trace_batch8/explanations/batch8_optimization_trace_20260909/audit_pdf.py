@@ -9,7 +9,7 @@ for i,page in enumerate(doc):
  outside=[w for w in words if w[0]<-1 or w[1]<-1 or w[2]>page.rect.width+1 or w[3]>page.rect.height+1];assert not outside,('clipped text outside page',i+1,outside[:2])
  records.append({'page':i+1,'width_pt':page.rect.width,'height_pt':page.rect.height,'text_characters':len(text),'words_outside_page':len(outside),'first_text':text[:100]})
  pix=page.get_pixmap(matrix=pymupdf.Matrix(.40,.40),alpha=False);im=Image.frombytes('RGB',[pix.width,pix.height],pix.samples);thumbs.append(im)
- if 'How global Batch8' in text or i==0:
+ if 'How global Batch8' in text or 'folded client spans' in text or i==0:
   page.get_pixmap(matrix=pymupdf.Matrix(1.2,1.2),alpha=False).save(V/f'pdf_page_{i+1:02d}.png')
 text='\n'.join(p.get_text() for p in doc)
 for phrase in ['双卡','512','579.996','756','256','128']:

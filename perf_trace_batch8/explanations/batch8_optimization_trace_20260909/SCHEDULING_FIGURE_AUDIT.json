@@ -1,0 +1,429 @@
+{
+  "status": "complete",
+  "layout": "two rank rows; eight equally sized cards per row in actual launch order",
+  "x_axis": "categorical launch ordinal within rank, not elapsed time",
+  "y_axis": "categorical DP rank / device",
+  "card_width": 0.94,
+  "card_height": 0.82,
+  "information_card_fraction_of_axes": 0.7707999999999999,
+  "information_card_fraction_of_full_figure": 0.5190567199999999,
+  "samples": [
+    {
+      "rank": 0,
+      "order": 1,
+      "request": 2,
+      "phase": "prefill",
+      "kernel_instance_id": "76ab7e0a03fc88aca0bce68e89c9e5d28374148cd9bfec06218180126df18eae",
+      "launch_begin_ns": 1788409245650956815,
+      "client_relative_s": 0.571977974,
+      "local_batch_sequences": 1,
+      "grid": [
+        16,
+        12,
+        1
+      ],
+      "threads_per_block": 256,
+      "GQA_BLOCK_M": 64,
+      "bounds": [
+        0.03,
+        1.02,
+        0.97,
+        1.8399999999999999
+      ],
+      "width_pt": 246.35519999999997,
+      "height_pt": 229.37039999999996,
+      "all_text_inside_card": true
+    },
+    {
+      "rank": 0,
+      "order": 2,
+      "request": 4,
+      "phase": "prefill",
+      "kernel_instance_id": "6c7834b54fb6958d74d17af354e23d41cba68dfc70de800340d81455f0d8ed92",
+      "launch_begin_ns": 1788409293727935809,
+      "client_relative_s": 48.648956968,
+      "local_batch_sequences": 2,
+      "grid": [
+        35,
+        12,
+        2
+      ],
+      "threads_per_block": 128,
+      "GQA_BLOCK_M": 16,
+      "bounds": [
+        1.03,
+        1.02,
+        1.97,
+        1.8399999999999999
+      ],
+      "width_pt": 246.35519999999997,
+      "height_pt": 229.37039999999996,
+      "all_text_inside_card": true
+    },
+    {
+      "rank": 0,
+      "order": 3,
+      "request": 2,
+      "phase": "decode",
+      "kernel_instance_id": "39586c00a73fa06fcf1c10b41464a522808b583abf7757377b125966f39d5b83",
+      "launch_begin_ns": 1788409296714919908,
+      "client_relative_s": 51.635941067,
+      "local_batch_sequences": 2,
+      "grid": [
+        64,
+        12,
+        2
+      ],
+      "threads_per_block": 128,
+      "GQA_BLOCK_M": 16,
+      "bounds": [
+        2.03,
+        1.02,
+        2.9699999999999998,
+        1.8399999999999999
+      ],
+      "width_pt": 246.35519999999997,
+      "height_pt": 229.37039999999996,
+      "all_text_inside_card": true
+    },
+    {
+      "rank": 0,
+      "order": 4,
+      "request": 5,
+      "phase": "prefill",
+      "kernel_instance_id": "c8f4a72f7972b00bc6eca132b462cb6147b53afc542c11f7f63d903144382f4e",
+      "launch_begin_ns": 1788409343557613462,
+      "client_relative_s": 98.478634621,
+      "local_batch_sequences": 3,
+      "grid": [
+        21,
+        12,
+        3
+      ],
+      "threads_per_block": 128,
+      "GQA_BLOCK_M": 32,
+      "bounds": [
+        3.03,
+        1.02,
+        3.9699999999999998,
+        1.8399999999999999
+      ],
+      "width_pt": 246.35520000000005,
+      "height_pt": 229.37039999999996,
+      "all_text_inside_card": true
+    },
+    {
+      "rank": 0,
+      "order": 5,
+      "request": 4,
+      "phase": "decode",
+      "kernel_instance_id": "c659be596e869b5ca66c693580b0dcb9a38cc024708b42a7c7439996bfb8a343",
+      "launch_begin_ns": 1788409346238355116,
+      "client_relative_s": 101.159376275,
+      "local_batch_sequences": 3,
+      "grid": [
+        32,
+        12,
+        3
+      ],
+      "threads_per_block": 128,
+      "GQA_BLOCK_M": 32,
+      "bounds": [
+        4.03,
+        1.02,
+        4.970000000000001,
+        1.8399999999999999
+      ],
+      "width_pt": 246.35520000000025,
+      "height_pt": 229.37039999999996,
+      "all_text_inside_card": true
+    },
+    {
+      "rank": 0,
+      "order": 6,
+      "request": 6,
+      "phase": "prefill",
+      "kernel_instance_id": "4cfa20cb3d24e305d20e32346bcd9bec1991431fb2bb55995dd23fcc08e4eb19",
+      "launch_begin_ns": 1788409387912478512,
+      "client_relative_s": 142.833499671,
+      "local_batch_sequences": 4,
+      "grid": [
+        20,
+        12,
+        4
+      ],
+      "threads_per_block": 128,
+      "GQA_BLOCK_M": 32,
+      "bounds": [
+        5.03,
+        1.02,
+        5.970000000000001,
+        1.8399999999999999
+      ],
+      "width_pt": 246.35520000000025,
+      "height_pt": 229.37039999999996,
+      "all_text_inside_card": true
+    },
+    {
+      "rank": 0,
+      "order": 7,
+      "request": 5,
+      "phase": "decode",
+      "kernel_instance_id": "7999d4b48acf47ac03a79ba83313d25f794b040222b4354bc625e68cf216126f",
+      "launch_begin_ns": 1788409390710172947,
+      "client_relative_s": 145.631194106,
+      "local_batch_sequences": 4,
+      "grid": [
+        32,
+        12,
+        4
+      ],
+      "threads_per_block": 128,
+      "GQA_BLOCK_M": 32,
+      "bounds": [
+        6.03,
+        1.02,
+        6.970000000000001,
+        1.8399999999999999
+      ],
+      "width_pt": 246.35520000000025,
+      "height_pt": 229.37039999999996,
+      "all_text_inside_card": true
+    },
+    {
+      "rank": 0,
+      "order": 8,
+      "request": 6,
+      "phase": "decode",
+      "kernel_instance_id": "0663a26efe48342c3be11d761494a073291ecdeef51405778ab61d8b9bad352f",
+      "launch_begin_ns": 1788409436008662986,
+      "client_relative_s": 190.929684145,
+      "local_batch_sequences": 4,
+      "grid": [
+        4,
+        192,
+        1
+      ],
+      "threads_per_block": 64,
+      "GQA_BLOCK_M": null,
+      "bounds": [
+        7.03,
+        1.02,
+        7.970000000000001,
+        1.8399999999999999
+      ],
+      "width_pt": 246.35520000000025,
+      "height_pt": 229.37039999999996,
+      "all_text_inside_card": true
+    },
+    {
+      "rank": 1,
+      "order": 1,
+      "request": 1,
+      "phase": "prefill",
+      "kernel_instance_id": "733f981bdaead44a1c96db01e17bb0f1d92cfe774c48a15ae57dd2d62b3e0b9d",
+      "launch_begin_ns": 1788409245565475459,
+      "client_relative_s": 0.486496618,
+      "local_batch_sequences": 1,
+      "grid": [
+        16,
+        12,
+        1
+      ],
+      "threads_per_block": 256,
+      "GQA_BLOCK_M": 64,
+      "bounds": [
+        0.03,
+        0.02,
+        0.97,
+        0.84
+      ],
+      "width_pt": 246.35519999999997,
+      "height_pt": 229.3704,
+      "all_text_inside_card": true
+    },
+    {
+      "rank": 1,
+      "order": 2,
+      "request": 3,
+      "phase": "prefill",
+      "kernel_instance_id": "009f29edbd50bb204331ee48afa6415bd4400c2df754de8fae24a69f657410f6",
+      "launch_begin_ns": 1788409289192197874,
+      "client_relative_s": 44.113219033,
+      "local_batch_sequences": 2,
+      "grid": [
+        52,
+        12,
+        2
+      ],
+      "threads_per_block": 128,
+      "GQA_BLOCK_M": 16,
+      "bounds": [
+        1.03,
+        0.02,
+        1.97,
+        0.84
+      ],
+      "width_pt": 246.35519999999997,
+      "height_pt": 229.3704,
+      "all_text_inside_card": true
+    },
+    {
+      "rank": 1,
+      "order": 3,
+      "request": 1,
+      "phase": "decode",
+      "kernel_instance_id": "ddf4f5922ba1c8b523f36cb19cf2b60f31f3cf44161ddc520132bb698757e305",
+      "launch_begin_ns": 1788409291877873355,
+      "client_relative_s": 46.798894514,
+      "local_batch_sequences": 2,
+      "grid": [
+        64,
+        12,
+        2
+      ],
+      "threads_per_block": 128,
+      "GQA_BLOCK_M": 16,
+      "bounds": [
+        2.03,
+        0.02,
+        2.9699999999999998,
+        0.84
+      ],
+      "width_pt": 246.35519999999997,
+      "height_pt": 229.3704,
+      "all_text_inside_card": true
+    },
+    {
+      "rank": 1,
+      "order": 4,
+      "request": 8,
+      "phase": "prefill",
+      "kernel_instance_id": "0ae04e1c4f67517f47ff31327f86c7bb3ef98245cb5222d4034707ebda36b068",
+      "launch_begin_ns": 1788409338635667458,
+      "client_relative_s": 93.556688617,
+      "local_batch_sequences": 3,
+      "grid": [
+        32,
+        12,
+        3
+      ],
+      "threads_per_block": 128,
+      "GQA_BLOCK_M": 32,
+      "bounds": [
+        3.03,
+        0.02,
+        3.9699999999999998,
+        0.84
+      ],
+      "width_pt": 246.35520000000005,
+      "height_pt": 229.3704,
+      "all_text_inside_card": true
+    },
+    {
+      "rank": 1,
+      "order": 5,
+      "request": 3,
+      "phase": "decode",
+      "kernel_instance_id": "97868b20d33b6c3303b92a117e9c5e54645e898c330fc8c9e4806f25ecd44399",
+      "launch_begin_ns": 1788409341438382866,
+      "client_relative_s": 96.359404025,
+      "local_batch_sequences": 3,
+      "grid": [
+        32,
+        12,
+        3
+      ],
+      "threads_per_block": 128,
+      "GQA_BLOCK_M": 32,
+      "bounds": [
+        4.03,
+        0.02,
+        4.970000000000001,
+        0.84
+      ],
+      "width_pt": 246.35520000000025,
+      "height_pt": 229.3704,
+      "all_text_inside_card": true
+    },
+    {
+      "rank": 1,
+      "order": 6,
+      "request": 7,
+      "phase": "prefill",
+      "kernel_instance_id": "171c30ccda044337e4a1c6a9887f2b3c2f7199faa4a8a6c5348102156bad5321",
+      "launch_begin_ns": 1788409382588909525,
+      "client_relative_s": 137.509930684,
+      "local_batch_sequences": 4,
+      "grid": [
+        21,
+        12,
+        4
+      ],
+      "threads_per_block": 128,
+      "GQA_BLOCK_M": 32,
+      "bounds": [
+        5.03,
+        0.02,
+        5.970000000000001,
+        0.84
+      ],
+      "width_pt": 246.35520000000025,
+      "height_pt": 229.3704,
+      "all_text_inside_card": true
+    },
+    {
+      "rank": 1,
+      "order": 7,
+      "request": 8,
+      "phase": "decode",
+      "kernel_instance_id": "8c721e0b2a9a28e7436881cd9863c6870ed1180d181501f9634e8ad298600e89",
+      "launch_begin_ns": 1788409385487153585,
+      "client_relative_s": 140.408174744,
+      "local_batch_sequences": 4,
+      "grid": [
+        32,
+        12,
+        4
+      ],
+      "threads_per_block": 128,
+      "GQA_BLOCK_M": 32,
+      "bounds": [
+        6.03,
+        0.02,
+        6.970000000000001,
+        0.84
+      ],
+      "width_pt": 246.35520000000025,
+      "height_pt": 229.3704,
+      "all_text_inside_card": true
+    },
+    {
+      "rank": 1,
+      "order": 8,
+      "request": 7,
+      "phase": "decode",
+      "kernel_instance_id": "16db7a4083db6126ef3b06f95119ac7a952978e2cf8d7e2660f642056c1e11da",
+      "launch_begin_ns": 1788409432481449190,
+      "client_relative_s": 187.402470349,
+      "local_batch_sequences": 4,
+      "grid": [
+        4,
+        192,
+        1
+      ],
+      "threads_per_block": 64,
+      "GQA_BLOCK_M": null,
+      "bounds": [
+        7.03,
+        0.02,
+        7.970000000000001,
+        0.84
+      ],
+      "width_pt": 246.35520000000025,
+      "height_pt": 229.3704,
+      "all_text_inside_card": true
+    }
+  ],
+  "sample_count": 16
+}

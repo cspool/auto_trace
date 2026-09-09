@@ -28,5 +28,17 @@
   "all_panels_and_combined_visually_inspected": true,
   "HTML_and_PDF_visually_inspected": true,
   "source_tables_and_report_audit": "REPORT_AUDIT.json",
-  "pdf_audit": "PDF_AUDIT.json"
+  "pdf_audit": "PDF_AUDIT.json",
+  "latest_revision": {
+    "revision": 2,
+    "user_requested_changes": [
+      "fold long client intervals and enlarge marker widths",
+      "make scheduling rectangles occupy the majority of the figure"
+    ],
+    "client_display_cap_s": 260,
+    "marker_display_scale": 12,
+    "scheduling_figure_audit": "SCHEDULING_FIGURE_AUDIT.json",
+    "changed_figures_and_combined_inspected": true,
+    "HTML_and_PDF_changed_figures_inspected": true
+  }
 }
