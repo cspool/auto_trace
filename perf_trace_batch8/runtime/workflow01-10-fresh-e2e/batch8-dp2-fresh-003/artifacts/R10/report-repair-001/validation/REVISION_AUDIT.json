@@ -1,0 +1,88 @@
+{
+  "status": "complete",
+  "kind": "presentation_revision_audit_not_new_measurement",
+  "utc": "2026-09-09T02:55:54.294069+00:00",
+  "argv": [
+    "tools/audit.py"
+  ],
+  "auditor_sha256": "20b4c4f0ebbb36e0f1c69fc6e82e0bbebdfb2b4911d490b83d95a3976001f1cf",
+  "browser_audit_sha256": "177fbebc2b58254b4d6627f87cabb988d65c81f589e781e00f34e1ab22f7887d",
+  "build_manifest_sha256": "8711fa306128355f9934158c954fe07fe4f9f0d770172841cd6c4f7d1c2547de",
+  "checks": {
+    "sealed_originals_unchanged": true,
+    "offline_browser_passed": true,
+    "complete_embedded_data_byte_identical": true,
+    "eight_request_coverage": true,
+    "all_high_latency_group_rankings_match_R09": true,
+    "all_raw_utilization_group_rankings_match_R09": true,
+    "all_dual_request_phase_busy_unions_match_R09": true,
+    "all_launch_rankings_match_R09": true,
+    "all_800_unknown_gap_rankings_and_endpoint_memberships_match_R09": true,
+    "all_source_samples_preserved": true,
+    "available_aggregates_meet_R09_gate": true,
+    "ranking_uses_no_replay_timing": true,
+    "no_cross_device_clock_bound_invented": true
+  },
+  "counts": {
+    "requests": 8,
+    "processes": 12544,
+    "kernels": 23660,
+    "high_latency": 1237,
+    "high_groups": 50,
+    "dual_groups": 16,
+    "raw_groups": 13,
+    "available_processes": 4631,
+    "raw_samples": 2491806,
+    "samples_by_device": {
+      "0": 1245903,
+      "1": 1245903
+    },
+    "unknown_gaps": 800,
+    "launch_pairs": 23652
+  },
+  "presentation_files": [
+    {
+      "path": "index.html",
+      "size": 6241,
+      "sha256": "a21009b73a0f211aa273c18a1260b1f2e55950c06c18fe0c6d3e6b22322e1747"
+    },
+    {
+      "path": "acceptance/CONCURRENCY_UTILIZATION.html",
+      "size": 247636847,
+      "sha256": "d6eee23baad8c15808822d7452aa8415031cc243ac96412e37d24f42748b134a"
+    },
+    {
+      "path": "acceptance/HIGH_LATENCY_PROCESS_HARDWARE_TIMELINE.html",
+      "size": 117898278,
+      "sha256": "0f54d13f0defe8c327eab1c1bb809302fbc1185958e6b8e6e36a6f6bb05e1b06"
+    },
+    {
+      "path": "acceptance/index.html",
+      "size": 6265,
+      "sha256": "f485a491bff5c4fc7202b53e4e0ff73df2b88aeaa19a4247bbadaa69f4b4ff28"
+    }
+  ],
+  "rankings": [
+    {
+      "path": "ranking_dual.csv",
+      "sha256": "f9ae41b890f702bc18d789cf16981463262d7921d4f6738a0435d143660ace52"
+    },
+    {
+      "path": "ranking_high.csv",
+      "sha256": "eb4379fcdc17c7bb09a216ebe496f8d299367d9da6cc73b658b0c1cd193caaff"
+    },
+    {
+      "path": "ranking_launch.csv",
+      "sha256": "e1760a158eefd60f03ca50ce6708ec8710da6cb50ceb05bc61f4015c17e73911"
+    },
+    {
+      "path": "ranking_raw.csv",
+      "sha256": "006e5fbfaa8de08ec4115bc0afe0c41210c785d9ca29b16ec2929a7dfab4f11a"
+    },
+    {
+      "path": "ranking_unknown.csv",
+      "sha256": "c15d365b3bb701d3d8995fcf091769e55386354af55c56ff748f244806c16593"
+    }
+  ],
+  "elapsed_seconds": 51.58330321311951
+}
