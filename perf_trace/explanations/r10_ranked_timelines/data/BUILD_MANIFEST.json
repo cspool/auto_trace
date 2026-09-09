@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "formal_r10_regeneration": false,
+  "original_acceptance_untouched": true,
+  "scope": {
+    "origin_ns": "1786095201793427516",
+    "original_request_end_ns": "1786095219256044373",
+    "display_end_ns": "1786095219249930556",
+    "original_span_ns": "17462616857",
+    "display_span_ns": "17456503040",
+    "omitted_tail_ns": "6113817",
+    "counts": {
+      "request": 1,
+      "layer": 1856,
+      "forward": 29,
+      "hip_runtime": 428023,
+      "process": 17168,
+      "strict_owned_kernel": 29964,
+      "gpu_queue": 29964
+    },
+    "physical_device_id": 1,
+    "traced": "retained R07: request anchors, 29 forwards with layer envelopes, HIPTX Process, HIP runtime, strictly owned HIP kernels, aligned SE samples",
+    "omission": "Request-only tail is excluded from the default display; source completion stays intact. Interior gaps remain on the true clock. No other-device evidence, full-device kernel census, or sampling call endpoints are present in this retained payload.",
+    "formal_r10_regeneration": false,
+    "original_acceptance_untouched": true
+  },
+  "stats": {
+    "counts": {
+      "request": 1,
+      "layer": 1856,
+      "forward": 29,
+      "hip_runtime": 428023,
+      "process": 17168,
+      "strict_owned_kernel": 29964,
+      "gpu_queue": 29964
+    },
+    "high_groups": 1,
+    "high_processes": 128,
+    "forward_groups": 29,
+    "raw_process_groups": 26,
+    "samples": 34782,
+    "ineligible_samples": 4,
+    "sample_intervals": 34781,
+    "launch_gaps": 47132,
+    "launch_groups": 30,
+    "kernel_peak": 2,
+    "queue_peak": 1,
+    "hardware_rows": 32,
+    "hardware_processes": 26,
+    "hardware_groups": 17,
+    "high_top20_members": 128
+  },
+  "sources": [
+    {
+      "name": "workflow01-10-fresh-e2e-dcu1-20260806-r10-offline-acceptance.tar.gz",
+      "sha256": "51150efff340cbf28d27db1066ba125873802dd7535e788ad0b2fe66a0bd04fa",
+      "size": 13618651
+    },
+    {
+      "name": "workflow01-10-fresh-e2e-dcu1-20260806-r10-replay002-all-rectangle-labels.tar.gz",
+      "sha256": "9efdb196bb528885cad857f8dc3252f49b15dbbc67fdfae7f8b1a8c2e97816de",
+      "size": 34107196
+    }
+  ],
+  "full_trace_sha256": "54388a3f168d7ad280bda6112cd85f49a2b720b4d4610c10d6a8f9ecba929133",
+  "generator_sha256": "ce165381698947a2948ee1bf3baba0a69a9d21e4b224cf5db8cb8a5419ec54f3",
+  "assets": {
+    "group_band.js": "da6b9004c9822861633c4d6cfe676183d3a37dd5b6dd283fb84a629b0f183ddd",
+    "ranked.css": "ce0a04a013eb07a29eaf32948876c0d8b5b2cffe35a2b1ce9c1211a328521854",
+    "single_batch_boot.js": "4cfbd197ea0db8bdc4b4268fcf469591d880588ed047539b511a1fb64c8ee51a",
+    "single_batch_views.js": "1c2924b45e67eee7bce35b41c80a765467587022757bba3feb48cec55561e0a8",
+    "timeline_core.js": "67d6f177bacdeca00065ff8a1877f9b4ce1531f6db67aa22cb9980ed44d04543"
+  }
+}

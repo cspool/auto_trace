@@ -1,0 +1,229 @@
+{
+  "archives": [
+    {
+      "name": "workflow01-10-fresh-e2e-dcu1-20260806-r10-offline-acceptance.tar.gz",
+      "sha256": "51150efff340cbf28d27db1066ba125873802dd7535e788ad0b2fe66a0bd04fa",
+      "size": 13618651
+    },
+    {
+      "name": "workflow01-10-fresh-e2e-dcu1-20260806-r10-replay002-all-rectangle-labels.tar.gz",
+      "sha256": "9efdb196bb528885cad857f8dc3252f49b15dbbc67fdfae7f8b1a8c2e97816de",
+      "size": 34107196
+    }
+  ],
+  "source_manifest": {
+    "schema_version": 1,
+    "status": "PASS",
+    "lineage_id": "fresh-run:workflow01-10-fresh-e2e-dcu1-20260806:pra2026-bh408@0abe1e1d-dirty8194458c-qwen35-row0-greedy32-warmup1-eager-aiterua-dcu1-fresh-e2e-20260806",
+    "self_contained_offline": true,
+    "generator": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/pra2026-bh408/scripts/perf_trace/generate_fresh_e2e_visualization.py",
+      "sha256": "ff854183bc4956b7c07bfb7272cfe0993b6a4bd25901ebdd0bea58e8af528b54"
+    },
+    "source_analysis": {
+      "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/runtime/workflow01-10-fresh-e2e/workflow01-10-fresh-e2e-dcu1-20260806/artifacts/R09/analysis/fresh_e2e_analysis.json",
+      "sha256": "8bc2961d2bac05325c58cc0a02dcf396877998df34125d88db1c68d20a0f096a"
+    },
+    "source_table_hashes": {
+      "request_timeline": "0a1c4d81082f0870f0de6d95867146892b5a79a1c6df59226de750c360ba0285",
+      "process_timeline": "1ef10d37b0bc20af473ea9d07b7c02228a3633b10d69c208b3ffc6b5636f954a",
+      "kernel_timeline": "18583a588d345ab84b8330887582b1828be828dc5b6999ca2b99d17afd9fb419",
+      "live_utilization_aligned": "48d051a8c8bd9f185a97bdf960c47726be53d2b7aab101f68f463020208dd23c",
+      "process_live_utilization": "e7b6615b9fd67cf3714c56a0784b99b8b1b1b60deb7f5bba7b676f093226bdba",
+      "kernel_concurrency": "d075940b942c1b5048b81b2b84a503b2ab65aba1c14f09daebe99af9eedcbe45",
+      "queue_concurrency": "715e2e463ea3fdbfac0bacef475cb1c51179e502546694436abdc1b024a46e46",
+      "launch_gaps": "c7d756a7392d96de95c35c2d84927d8a432145612beb10158b1d45a78c671ce0",
+      "high_latency_processes": "d4849824918f6ede862d804cb9400ee4c2eb48d1622fd45c1f1c6b6e2909514c",
+      "dependency_state": "82982d590278532a2fdc2721c2cd2723f491df3765505098251ac5f833f6a1c0",
+      "traffic_resource_attachment": "71f0b1f8b69f1d93b30294704a1e9c382d2b2d46e5ff7106571a03f8168b82ef",
+      "opportunity_candidates": "58cfdfdc5c3f7b70c2d985c9833cb298334ed9f73ffcf2271c48f4a676a757fe"
+    },
+    "row_counts": {
+      "request_timeline": 429909,
+      "process_timeline": 17168,
+      "kernel_timeline": 29964,
+      "live_utilization_aligned": 34782,
+      "process_live_utilization": 17168,
+      "kernel_concurrency": 51798,
+      "queue_concurrency": 51798,
+      "launch_gaps": 47132,
+      "high_latency_processes": 128,
+      "dependency_state": 34800,
+      "traffic_resource_attachment": 17174,
+      "opportunity_candidates": 17168
+    },
+    "outputs": {
+      "index.html": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/runtime/workflow01-10-fresh-e2e/workflow01-10-fresh-e2e-dcu1-20260806/artifacts/R10/acceptance/index.html",
+        "sha256": "a2718bafaf2e6312a2284f0a2c1222a788da12822a6b4237e5165621ee31a0f2",
+        "size_bytes": 11873
+      },
+      "E2E_PROCESS_TIMELINE.html": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/runtime/workflow01-10-fresh-e2e/workflow01-10-fresh-e2e-dcu1-20260806/artifacts/R10/acceptance/E2E_PROCESS_TIMELINE.html",
+        "sha256": "68eb4217ec75bf5ca8f092e454a9ee0300511ade07eeafc4c807148348f8f4e0",
+        "size_bytes": 165692488
+      },
+      "HIGH_LATENCY_PROCESS_HARDWARE_TIMELINE.html": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/runtime/workflow01-10-fresh-e2e/workflow01-10-fresh-e2e-dcu1-20260806/artifacts/R10/acceptance/HIGH_LATENCY_PROCESS_HARDWARE_TIMELINE.html",
+        "sha256": "0c116c06681da40f6bc990dcbf957ff0a30cf80851ca2f1f86ca0c19782c3463",
+        "size_bytes": 29865032
+      },
+      "CONCURRENCY_UTILIZATION.html": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/runtime/workflow01-10-fresh-e2e/workflow01-10-fresh-e2e-dcu1-20260806/artifacts/R10/acceptance/CONCURRENCY_UTILIZATION.html",
+        "sha256": "a5448ab2166b2dead1bb0a35bd189cf30cf8595dbf076eb7567421ef985a3045",
+        "size_bytes": 76893838
+      }
+    },
+    "companions": {
+      "E2E_PROCESS_TIMELINE.perfetto.json": {
+        "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/runtime/workflow01-10-fresh-e2e/workflow01-10-fresh-e2e-dcu1-20260806/artifacts/R10/acceptance/E2E_PROCESS_TIMELINE.perfetto.json",
+        "sha256": "9896cee9f5e367c84129fb4fc2ed5bad66cc3f3aa2c4388ef087905fd70e55ca",
+        "size_bytes": 77402,
+        "format": "Perfetto-compatible Chrome JSON candidate",
+        "classification": "structural_candidate_only",
+        "official_perfetto_parse_performed": false,
+        "event_count": 256,
+        "maximum_event_count": 256
+      }
+    },
+    "view_coverage": {
+      "track_groups": [
+        "request",
+        "forward",
+        "layer",
+        "process",
+        "hip_runtime",
+        "gpu_queue",
+        "strict_owned_kernel",
+        "live_utilization",
+        "hardware_attributes",
+        "dependency",
+        "opportunity"
+      ],
+      "filters_search_zoom": true,
+      "filter_dimensions": [
+        "process",
+        "event",
+        "layer",
+        "phase",
+        "family"
+      ],
+      "source_table_hashes_verified": true,
+      "evidence_legends_complete": true,
+      "complete_request_timeline_embedded": true,
+      "high_latency_selection_reproduced": true
+    },
+    "presentation_backend": {
+      "policy": "open_source_first_with_labeled_custom_fallback",
+      "r06_selected_backend": "custom_plotly_timeline_fallback",
+      "selected_backend": "self_contained_custom_canvas_timeline_fallback",
+      "official_perfetto_python_status": "unavailable",
+      "official_perfetto_cli_status": "unavailable",
+      "compatible_trace_classification": "normalized_perfetto_chrome_candidate_structural_only",
+      "official_parse_performed": false,
+      "presentation_capability_degradation": true,
+      "runtime_evidence_degraded": false
+    },
+    "same_run_inputs": {
+      "strict_validation": true,
+      "handoff_hashes": {
+        "R06": "788f4cf2985c66c490265cf50fd84755354ecb8c8489fb801c034da826ac435e",
+        "R07": "c38ca9fee4cdb648b48a13ec3e97b48a298b461b07f045784175716a56ff7966",
+        "R08": "043d9569c53328a64dfc1bb73273ac9084746636d445109f8668626634eb6e9f",
+        "R09": "d40cef36d462f4759fb018388b2dc9fe4ebf68b7129b3adc1dd645362d585d4c"
+      },
+      "r09_input_hashes_verified": true,
+      "evidence_references": {
+        "R06_open_source_trace_attempts": {
+          "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/runtime/workflow01-10-fresh-e2e/workflow01-10-fresh-e2e-dcu1-20260806/artifacts/R06/resume-001/workflow05_open_source_trace_attempts.json",
+          "sha256": "125c4ecbcccc14ecde190c7aa47a92cfdf34ff210d440bfba47637c18271aa46"
+        },
+        "R06_tool_capability_probe": {
+          "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/runtime/workflow01-10-fresh-e2e/workflow01-10-fresh-e2e-dcu1-20260806/artifacts/R06/resume-001/tool_capability_probe.json",
+          "sha256": "52817281b276352a230bff04373212d3ab18098d74a4480024fba34cce9f3b6d"
+        },
+        "R07_raw_queryable_trace": {
+          "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/runtime/workflow01-10-fresh-e2e/workflow01-10-fresh-e2e-dcu1-20260806/artifacts/R07/capture/r07_fresh_full_request_dcu1_20260807.hipprof.db",
+          "sha256": "dc25d777fe842c045b265f65de4ed6f0f43c4a32a75afd681ff45c66fa115430",
+          "size_bytes": 211734528
+        },
+        "R07_process_performance": {
+          "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/runtime/workflow01-10-fresh-e2e/workflow01-10-fresh-e2e-dcu1-20260806/artifacts/R07/analysis/process_performance.csv",
+          "sha256": "663ff1da38d4a1c3de36190acf338ef29a59d07225ec1f968f5df802d09dc7df",
+          "size_bytes": 13611511,
+          "row_count": 17168
+        },
+        "R07_process_gpu_timeline": {
+          "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/runtime/workflow01-10-fresh-e2e/workflow01-10-fresh-e2e-dcu1-20260806/artifacts/R07/analysis/process_gpu_timeline.csv",
+          "sha256": "4e4076079b90560ab126070577cd0b9dd18d4f7bfef99f18f39ab9960b203762",
+          "size_bytes": 32756829,
+          "row_count": 29964
+        },
+        "R07_live_samples": {
+          "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/runtime/workflow01-10-fresh-e2e/workflow01-10-fresh-e2e-dcu1-20260806/artifacts/R07/capture/live_utilization_samples.jsonl",
+          "sha256": "59d6d79c00eecb3f76109056478664bc124c52e67e07f2b458d516e44ffeb2ca",
+          "size_bytes": 20204122,
+          "row_count": 34789
+        },
+        "R08_device_capabilities": {
+          "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/runtime/workflow01-10-fresh-e2e/workflow01-10-fresh-e2e-dcu1-20260806/artifacts/R08/device_capabilities.json",
+          "sha256": "0321c1a61275a937259813628878a145478723c6d77fcb36e614a9480e1cd2cd",
+          "size_bytes": 3251
+        },
+        "R08_hardware_metrics": {
+          "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/runtime/workflow01-10-fresh-e2e/workflow01-10-fresh-e2e-dcu1-20260806/artifacts/R08/hardware_metrics_by_kernel_family.csv",
+          "sha256": "e4b29d57db4548c593946692b730955396ffa9c9b0fb6264c1930237b17dcd2c",
+          "size_bytes": 292607,
+          "rows": 32
+        },
+        "R08_traffic_resource_model": {
+          "path": "/public/home/tangyu408/Qwen_DCU_Worker_0/perf_trace/runtime/workflow01-10-fresh-e2e/workflow01-10-fresh-e2e-dcu1-20260806/artifacts/R08/traffic-resource-model/traffic_resource_model.json",
+          "sha256": "868302b966d20062e3faec894030a6f1bb0c3fcf27606392a13b880cc9b51dfe",
+          "size_bytes": 4158
+        }
+      }
+    },
+    "request_bounds": {
+      "begin_ns": 1786095201793427516,
+      "end_ns": 1786095219256044373,
+      "duration_ns": 17462616857,
+      "clock": "R07_non_replay_realtime_only"
+    },
+    "high_latency_process_count": 128,
+    "evidence_boundaries": {
+      "latency": "observed R07 non-replay same request only",
+      "live_utilization": "observed eligible RSMI SE active-CU snapshots",
+      "hardware_resources": "R08 replay-projected attributes without replay timestamps",
+      "traffic": "inferred FX-visible logical bytes, not HBM/DRAM traffic",
+      "missing": "unavailable is retained and never coerced to zero",
+      "opportunity": "seven-gate classification without speedup claim"
+    },
+    "determinism_contract": {
+      "timestamps_embedded": false,
+      "source_iteration_order": "R09 CSV row order",
+      "output_encoding": "UTF-8"
+    }
+  },
+  "scope": {
+    "origin_ns": "1786095201793427516",
+    "original_request_end_ns": "1786095219256044373",
+    "display_end_ns": "1786095219249930556",
+    "original_span_ns": "17462616857",
+    "display_span_ns": "17456503040",
+    "omitted_tail_ns": "6113817",
+    "counts": {
+      "request": 1,
+      "layer": 1856,
+      "forward": 29,
+      "hip_runtime": 428023,
+      "process": 17168,
+      "strict_owned_kernel": 29964,
+      "gpu_queue": 29964
+    },
+    "physical_device_id": 1,
+    "traced": "retained R07: request anchors, 29 forwards with layer envelopes, HIPTX Process, HIP runtime, strictly owned HIP kernels, aligned SE samples",
+    "omission": "Request-only tail is excluded from the default display; source completion stays intact. Interior gaps remain on the true clock. No other-device evidence, full-device kernel census, or sampling call endpoints are present in this retained payload.",
+    "formal_r10_regeneration": false,
+    "original_acceptance_untouched": true
+  }
+}

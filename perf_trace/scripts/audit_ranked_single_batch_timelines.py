@@ -47,6 +47,11 @@ def main(site,output,browser):
    expected.append((key,str(score),[p['process'] for p in ms]))
   expected.sort(key=lambda g:(-int(g[1]),g[0]));assert expected==[(g['key'],g['score_ns'],g['members']) for g in ranks[mode]]
  checks['all_process_group_memberships_and_rankings']=True
+ attachments=collections.defaultdict(set)
+ for a in H['attachments']:attachments[a['process_range']].add(a['matched_kernel_family'])
+ hardware_processes={p['process'] for p in processes.values() if any(h['event_id']==p['event'] and h['stage']==p['stage'] and h['matched_kernel_family'] in attachments[p['process']] for h in H['hardware'])}
+ assert hardware_processes=={p for g in ranks['hardware'] for p in g['members']}
+ checks['exact_hardware_process_associations']=True
  # Re-sweep kernel endpoints independently, including multiple kernels on one queue.
  edges=collections.defaultdict(list)
  for k in H['kernels']:edges[k['b']].append((k['queue'],1));edges[k['e']].append((k['queue'],-1))
@@ -89,18 +94,19 @@ def main(site,output,browser):
      if mode=='concurrency':
       ids=['concurrency','raw','unknown','launch'];page.locator('.rank-tab').nth(ids.index(cat)).click(timeout=60000)
      page.wait_for_timeout(150)
-     state=page.evaluate('''id=>{const c=RANKED.categories[id],b=RANKED.bands.find(b=>b.element.isConnected);let err=0;if(b)for(const p of b.entries)for(const t of [p.b,p.e])err=Math.max(err,Math.abs(b.inverse(b.project(t))-t));return {groups:c.groups.length,visible:c.visible.length,members:c.groups.reduce((s,g)=>s+g.members.length,0),fold_inverse_max_error_ns:err,band_rows:b?.entries.length};}''',cat)
+     state=page.evaluate('''id=>{const c=RANKED.categories[id],b=RANKED.bands.find(b=>c.section.contains(b.element));let err=0;if(b)for(const p of b.entries)for(const t of [p.b,p.e])err=Math.max(err,Math.abs(b.inverse(b.project(t))-t));return {groups:c.groups.length,visible:c.visible.length,members:c.groups.reduce((s,g)=>s+g.members.length,0),fold_inverse_max_error_ns:err,band_rows:b?.entries.length};}''',cat)
      assert state['visible']==min(20,state['groups']) and state['fold_inverse_max_error_ns']<0.001,state
      page.locator(f'#{cat} .rank-card').first.locator('canvas').first.screenshot(path=str(shots/f'{cat}_group.png'))
+     page.locator(f'#{cat} .rank-card').first.locator('.chart-host canvas').first.screenshot(path=str(shots/f'{cat}_detail.png'))
      # Exercise exact ns range, member selection, paired/single axes and fold reversal.
-     exact=page.evaluate('''()=>{const c=RANKED.charts.find(c=>c.element.isConnected),b=c.initial[0];c.setView(b,b+1);const v=c.view;c.setView(...c.initial);return v[1]-v[0];}''');assert exact==1
+     exact=page.evaluate('''id=>{const c=RANKED.charts.find(c=>RANKED.categories[id].section.contains(c.element)),b=c.initial[0];c.setView(b,b+1);const v=c.view;c.setView(...c.initial);return v[1]-v[0];}''',cat);assert exact==1
      band=page.locator(f'#{cat} .group-band').first
      if band.count():
       band.get_by_role('button',name='切换为单轴',exact=True).click();band.get_by_role('button',name='取消时间折叠',exact=True).click();band.get_by_role('button',name='展开逐行（36 px / 实例）',exact=True).click()
-      assert page.evaluate('RANKED.bands.find(b=>b.element.isConnected).rowHeight')==36
+      assert page.evaluate('id=>RANKED.bands.find(b=>RANKED.categories[id].section.contains(b.element)).rowHeight',cat)==36
       if state['band_rows']>300:
-       band.get_by_role('button',name='下一批实例',exact=True).click();assert page.evaluate('RANKED.bands.find(b=>b.element.isConnected).element.querySelector("canvas").height')<=11000
-      page.evaluate('''()=>{const b=RANKED.bands.find(b=>b.element.isConnected);b.pick(b.entries.length-1);}''')
+       band.get_by_role('button',name='下一批实例',exact=True).click();assert page.evaluate('id=>RANKED.bands.find(b=>RANKED.categories[id].section.contains(b.element)).element.querySelector("canvas").height',cat)<=11000
+      page.evaluate('''id=>{const b=RANKED.bands.find(b=>RANKED.categories[id].section.contains(b.element));b.pick(b.entries.length-1);}''',cat)
      if state['groups']>20:
       jump=page.locator(f'#{cat} .rank-jump');jump.select_option(str(state['groups']-1));assert page.locator(f'#{cat} .rank-card').count()==1
       assert page.locator(f'#{cat} .rank-card').get_attribute('data-rank')==str(state['groups'])

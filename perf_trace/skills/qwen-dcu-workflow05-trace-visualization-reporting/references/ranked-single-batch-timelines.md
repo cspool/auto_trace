@@ -34,6 +34,8 @@ inventing fields. Formal fresh runs still require all twelve normalized tables.
   durations; do not invent a new p95 threshold or rank replay timings. Show
   exact-owned kernels, original SE points, and hardware rows joined by exact
   event + stage + retained attachment family. A missing match is unavailable.
+  If R08 has exact-associated Process windows outside the high-latency subset,
+  give those windows a separate timeline without changing their classification.
 - Concurrency: group by forward, rank by the busy union of observed owned
   kernels within the actual forward window, and show kernel count, queue count
   and raw SE points on the same linear clock. Also expose overlap duration and

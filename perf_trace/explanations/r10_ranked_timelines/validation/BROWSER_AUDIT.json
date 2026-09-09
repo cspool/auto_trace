@@ -1,0 +1,67 @@
+{
+  "status": "complete",
+  "results": {
+    "high": {
+      "high": {
+        "groups": 1,
+        "visible": 1,
+        "members": 128,
+        "fold_inverse_max_error_ns": 0,
+        "band_rows": 128
+      },
+      "hardware": {
+        "groups": 17,
+        "visible": 17,
+        "members": 26,
+        "fold_inverse_max_error_ns": 0,
+        "band_rows": 3
+      }
+    },
+    "concurrency": {
+      "concurrency": {
+        "groups": 29,
+        "visible": 20,
+        "members": 17168,
+        "fold_inverse_max_error_ns": 0,
+        "band_rows": 592
+      },
+      "raw": {
+        "groups": 26,
+        "visible": 20,
+        "members": 17168,
+        "fold_inverse_max_error_ns": 0,
+        "band_rows": 288
+      },
+      "unknown": {
+        "groups": 34781,
+        "visible": 20,
+        "members": 69562,
+        "fold_inverse_max_error_ns": 0,
+        "band_rows": null
+      },
+      "launch": {
+        "groups": 30,
+        "visible": 20,
+        "members": 47132,
+        "fold_inverse_max_error_ns": 0,
+        "band_rows": 1392
+      }
+    },
+    "full": {
+      "count": 507005,
+      "view": [
+        0,
+        17456503040
+      ],
+      "requests": [
+        {
+          "source": "1786095219256044373",
+          "display": "1786095219249930556",
+          "end": 17456503040
+        }
+      ]
+    }
+  },
+  "errors": [],
+  "elapsed_seconds": 56.65506887435913
+}
