@@ -11,3 +11,5 @@ Request 尾部未见其他 trace 的区间为 6,113,817 ns；默认视图裁去�
 2026-09-09：首版已完成独立数据校验与浏览器检查。全部归档和 507,005 个区间保留，已 push b71b0ca。新增 R08 硬件精确关联的 26 个 Process / 17 组时间线，区分原高延迟子集；并发计数纵轴显式标注 0/1/2，零计数只画基线。最终候选正在重新构建和验收，准备发布完整离线 ZIP 及独立 HTML。
 
 2026-09-09：最终 SOURCE_AUDIT / BROWSER_AUDIT 通过，6 类视图无脚本错误；同输入重复生成的 17 个文件 SHA-256 全部相同，REPRODUCIBILITY_AUDIT 通过。原始档案与完整 trace 未改动。离线 bundle 准备封存发布。
+
+2026-09-09：Release 发布完成：https://github.com/cspool/auto_trace/releases/tag/perf-trace-r10-ranked-timelines-20260909-v1。完整离线 ZIP、3 个独立 HTML、清单及预览共 9 个资产均核对服务端 size / SHA-256。归档 SHA-256：`ad6989230f4721c61ffca41ca0c36aae614edacaa6a4a9f9bbafa9f2fcde6225`。最终发布日志与 PUBLICATION_COMPLETE.json 随代码 push。

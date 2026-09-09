@@ -69,3 +69,5 @@ python3 perf_trace/scripts/audit_ranked_single_batch_timelines.py \
 生成器、公共时间线组件和单 batch 适配器位于 `perf_trace/scripts/`；约束已更新到 `perf_trace/skills/qwen-dcu-workflow05-trace-visualization-reporting/`。Release 中包含源码、日志、审计、全部排名、原始封存归档和完整 Perfetto JSON。`FILE_MANIFEST.json` 与 `SHA256SUMS` 支持校验和恢复。
 
 此前 Batch8 的尾部裁剪、分组梯形与硬件报告也已发布：[Batch8 R10 Release](https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-r10-ranked-timelines-20260909-v1)。
+
+发布已完成，所有资产的服务端大小与 SHA-256 已核对。[发布回执](PUBLICATION_COMPLETE.json) · [归档校验和](publication_receipts/SHA256SUMS)。
