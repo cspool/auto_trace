@@ -1,7 +1,7 @@
 {
   "status": "complete",
-  "pdf_sha256": "0a6707d48874ba0e7bf36476bc37cedad371ebec8a67225802a67747a8873ea2",
-  "pages": 15,
+  "pdf_sha256": "462f8287d1cb54989bb381e6e706f25050001aeffbe2f7ee7b36e66b0f5300f0",
+  "pages": 17,
   "library_version": "1.28.2",
   "all_pages_nonempty": true,
   "all_text_word_boxes_inside_page": true,
@@ -11,17 +11,17 @@
       "page": 1,
       "width_pt": 1191.1199951171875,
       "height_pt": 841.9199829101562,
-      "text_characters": 1675,
+      "text_characters": 1743,
       "words_outside_page": 0,
-      "first_text": "固定 trace 案例\nDP2 / TP1\n8 请求 · 2 张卡\n目标提交 2b4b2119ae3c\nBatch8 如何调度到双卡：一个固定 trace 的完整案例\n这份报告用已经验收的 batch"
+      "first_text": "调度设计与 OOM 处理\nDP2 / TP1\n8 请求 · 2 张卡\n目标提交 2b4b2119ae3c\nBatch8 双卡调度设计与 OOM 处理：可视化分析报告\n实际设计由三层组成：前端按请求负载"
     },
     {
       "page": 2,
       "width_pt": 1191.1199951171875,
       "height_pt": 841.9199829101562,
-      "text_characters": 208,
+      "text_characters": 1412,
       "words_outside_page": 0,
-      "first_text": "正常服务中，若请求没有显式指定 data_parallel_rank ，DPLBAsyncMPClient.get_core_engine_for_request() 计算每个副本的 score = "
+      "first_text": "1.2 选卡之后，两个调度器独立推进\n一个请求进入选定 EngineCore 后，在该副本内推进 prefill 和 decode。每卡从自己的 waiting/running 队列选择本步工作，不必"
     },
     {
       "page": 3,
@@ -43,15 +43,15 @@
       "page": 5,
       "width_pt": 1191.1199951171875,
       "height_pt": 841.9199829101562,
-      "text_characters": 1403,
+      "text_characters": 1679,
       "words_outside_page": 0,
-      "first_text": "DCU 0 / rank 0 | R02 R04 R05 R06\n01 / R02 PREFILL\nB1\nGQA / BM64\n256 threads\n0.572 s\n02 / R04 PREFILL"
+      "first_text": "0\n25\n50\n75\n100\n125\n150\n175\n200\n225\n1\n2\n3\n4\nLocal batch B\n(at each dot)\nDCU 0 / rank 0 | R02 R04 R05 "
     },
     {
       "page": 6,
       "width_pt": 1191.1199951171875,
       "height_pt": 841.9199829101562,
-      "text_characters": 853,
+      "text_characters": 712,
       "words_outside_page": 0,
       "first_text": "卡\n请求 / 阶段\n启动位置（s）\n单卡 B\n实际路径 / 配置\n0\nR02 prefill\n0.572\n1\nGQA BM64\n0\nR04 prefill\n48.649\n2\nGQA BM16\n0\nR0"
     },
@@ -59,12 +59,28 @@
       "page": 7,
       "width_pt": 1191.1199951171875,
       "height_pt": 841.9199829101562,
-      "text_characters": 1279,
+      "text_characters": 1319,
       "words_outside_page": 0,
-      "first_text": "当前仍有 prefill 时的最大输入长度\n每卡该步 token 预算上限\n> 16,384 tokens\n512\n> 8,192 且 ≤ 16,384 tokens\n1024\n≤ 8,192 tok"
+      "first_text": "3. 控制 OOM：每卡的调度预算与内存保护\n3.1 为什么分到两卡后还要限制 prefill\nDP2 将请求和 KV 工作负载分到两个副本，每卡仍常驻一份完整权重，并承担本步 MLP、attenti"
     },
     {
       "page": 8,
+      "width_pt": 1191.1199951171875,
+      "height_pt": 841.9199829101562,
+      "text_characters": 1625,
+      "words_outside_page": 0,
+      "first_text": "失败场景\nOOM 发生位置 / 申请量\n设计中的处理\n4094-token mixed prefill/decode\ndense MLP 的 gate/up 张量 (4094,34816) BF16，"
+    },
+    {
+      "page": 9,
+      "width_pt": 1191.1199951171875,
+      "height_pt": 841.9199829101562,
+      "text_characters": 389,
+      "words_outside_page": 0,
+      "first_text": "4. 调度怎样改变 GQA 的具体执行\n本例 _gqa6 共 224 次，覆盖全部 8 个请求、14 个请求/阶段单元、两张卡和全部 16 个 full-attention 层。原始严格归属时长合计 "
+    },
+    {
+      "page": 10,
       "width_pt": 1191.1199951171875,
       "height_pt": 841.9199829101562,
       "text_characters": 1420,
@@ -72,7 +88,7 @@
       "first_text": "0\n100\n200\n300\n400\n500\n600\nX: cumulative DISPLAY milliseconds; each category length = min(3 x actual "
     },
     {
-      "page": 9,
+      "page": 11,
       "width_pt": 1191.1199951171875,
       "height_pt": 841.9199829101562,
       "text_characters": 594,
@@ -80,7 +96,7 @@
       "first_text": "在算子链中，GQA 读取当前 batch 的 Q 和分页 KV cache，完成 attention 后输出给门控与输出投影。图 D 选取本例 R05 / rank 0 / prefill / lay"
     },
     {
-      "page": 10,
+      "page": 12,
       "width_pt": 1191.1199951171875,
       "height_pt": 841.9199829101562,
       "text_characters": 1536,
@@ -88,7 +104,7 @@
       "first_text": "0\n10000\n20000\n30000\n40000\n50000\n60000\nX: microseconds since earliest selected layer-3 process marker"
     },
     {
-      "page": 11,
+      "page": 13,
       "width_pt": 1191.1199951171875,
       "height_pt": 841.9199829101562,
       "text_characters": 1059,
@@ -96,7 +112,7 @@
       "first_text": "GQA 的 CTA 数字闭合\nR05 的实际启动为 grid=(21,12,3) 、block=(128,1,1) ，即 756 个已启动 CTA。源码使用 24 个 Q heads、4 个 KV h"
     },
     {
-      "page": 12,
+      "page": 14,
       "width_pt": 1191.1199951171875,
       "height_pt": 841.9199829101562,
       "text_characters": 1495,
@@ -104,7 +120,7 @@
       "first_text": "R01\nrank 1\nR02\nrank 0\nR03\nrank 1\nR04\nrank 0\nR05\nrank 0\nR06\nrank 0\nR07\nrank 1\nR08\nrank 1\nX: request /"
     },
     {
-      "page": 13,
+      "page": 15,
       "width_pt": 1191.1199951171875,
       "height_pt": 841.9199829101562,
       "text_characters": 1846,
@@ -112,7 +128,7 @@
       "first_text": "R06/R07 单元的选中 kernel 总时长约 10.258 / 10.259 ms，其他单元约 223–237 ms。这个例子中，两种单元的物理 batch 内容不同，正适合解释路径变化；把这些"
     },
     {
-      "page": 14,
+      "page": 16,
       "width_pt": 1191.1199951171875,
       "height_pt": 841.9199829101562,
       "text_characters": 1104,
@@ -120,10 +136,10 @@
       "first_text": "7. 本例的耗时组成与后续分析方向\n互斥 kernel 类别\n命中次数\n原始时长和（ms）\n占 3,154.602493 ms\nMMAC GEMM\n4256\n1,572.867\n49.86%\nGQA6"
     },
     {
-      "page": 15,
+      "page": 17,
       "width_pt": 1191.1199951171875,
       "height_pt": 841.9199829101562,
-      "text_characters": 716,
+      "text_characters": 728,
       "words_outside_page": 0,
       "first_text": "9. 计算口径与证据索引\n每个 kernel 通过 R09 的唯一 kernel_instance_id 计一次，使用 owner_process_range_id 与 HIP runtime ind"
     }

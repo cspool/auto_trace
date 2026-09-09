@@ -1,12 +1,11 @@
 {
   "status": "complete",
-  "layout": "two rank rows; eight equally sized cards per row in actual launch order",
-  "x_axis": "categorical launch ordinal within rank, not elapsed time",
-  "y_axis": "categorical DP rank / device",
-  "card_width": 0.94,
-  "card_height": 0.82,
-  "information_card_fraction_of_axes": 0.7707999999999999,
-  "information_card_fraction_of_full_figure": 0.5190567199999999,
+  "layout": "two time plots, one per DP rank; enlarged information rectangles anchored at actual launch times",
+  "x_axis": "actual seconds since earliest client start",
+  "y_axis": "actual launch-local B at the dot",
+  "rectangle_display_width_s": 43,
+  "rectangle_display_height_B": 1.15,
+  "rectangle_width_is_measured_duration": false,
   "samples": [
     {
       "rank": 0,
@@ -25,14 +24,18 @@
       "threads_per_block": 256,
       "GQA_BLOCK_M": 64,
       "bounds": [
-        0.03,
-        1.02,
-        0.97,
-        1.8399999999999999
+        0.571977974,
+        1.1,
+        43.571977974,
+        2.25
       ],
-      "width_pt": 246.35519999999997,
-      "height_pt": 229.37039999999996,
-      "all_text_inside_card": true
+      "anchor": [
+        0.571977974,
+        1
+      ],
+      "width_pt": 371.01037037037037,
+      "height_pt": 104.77083138063557,
+      "all_text_inside_rectangle": true
     },
     {
       "rank": 0,
@@ -51,14 +54,18 @@
       "threads_per_block": 128,
       "GQA_BLOCK_M": 16,
       "bounds": [
-        1.03,
-        1.02,
-        1.97,
-        1.8399999999999999
+        48.648956968,
+        2.1,
+        91.648956968,
+        3.25
       ],
-      "width_pt": 246.35519999999997,
-      "height_pt": 229.37039999999996,
-      "all_text_inside_card": true
+      "anchor": [
+        48.648956968,
+        2
+      ],
+      "width_pt": 371.01037037037025,
+      "height_pt": 104.77083138063557,
+      "all_text_inside_rectangle": true
     },
     {
       "rank": 0,
@@ -77,14 +84,18 @@
       "threads_per_block": 128,
       "GQA_BLOCK_M": 16,
       "bounds": [
-        2.03,
-        1.02,
-        2.9699999999999998,
-        1.8399999999999999
+        51.635941067,
+        0.75,
+        94.635941067,
+        1.9
       ],
-      "width_pt": 246.35519999999997,
-      "height_pt": 229.37039999999996,
-      "all_text_inside_card": true
+      "anchor": [
+        51.635941067,
+        2
+      ],
+      "width_pt": 371.0103703703705,
+      "height_pt": 104.77083138063557,
+      "all_text_inside_rectangle": true
     },
     {
       "rank": 0,
@@ -103,14 +114,18 @@
       "threads_per_block": 128,
       "GQA_BLOCK_M": 32,
       "bounds": [
-        3.03,
-        1.02,
-        3.9699999999999998,
-        1.8399999999999999
+        98.478634621,
+        3.1,
+        141.478634621,
+        4.25
       ],
-      "width_pt": 246.35520000000005,
-      "height_pt": 229.37039999999996,
-      "all_text_inside_card": true
+      "anchor": [
+        98.478634621,
+        3
+      ],
+      "width_pt": 371.01037037037037,
+      "height_pt": 104.77083138063541,
+      "all_text_inside_rectangle": true
     },
     {
       "rank": 0,
@@ -129,14 +144,18 @@
       "threads_per_block": 128,
       "GQA_BLOCK_M": 32,
       "bounds": [
-        4.03,
-        1.02,
-        4.970000000000001,
-        1.8399999999999999
+        101.159376275,
+        1.75,
+        144.159376275,
+        2.9
       ],
-      "width_pt": 246.35520000000025,
-      "height_pt": 229.37039999999996,
-      "all_text_inside_card": true
+      "anchor": [
+        101.159376275,
+        3
+      ],
+      "width_pt": 371.01037037037037,
+      "height_pt": 104.77083138063541,
+      "all_text_inside_rectangle": true
     },
     {
       "rank": 0,
@@ -155,14 +174,18 @@
       "threads_per_block": 128,
       "GQA_BLOCK_M": 32,
       "bounds": [
-        5.03,
-        1.02,
-        5.970000000000001,
-        1.8399999999999999
+        142.833499671,
+        4.1,
+        185.833499671,
+        5.25
       ],
-      "width_pt": 246.35520000000025,
-      "height_pt": 229.37039999999996,
-      "all_text_inside_card": true
+      "anchor": [
+        142.833499671,
+        4
+      ],
+      "width_pt": 371.0103703703705,
+      "height_pt": 104.77083138063557,
+      "all_text_inside_rectangle": true
     },
     {
       "rank": 0,
@@ -181,14 +204,18 @@
       "threads_per_block": 128,
       "GQA_BLOCK_M": 32,
       "bounds": [
-        6.03,
-        1.02,
-        6.970000000000001,
-        1.8399999999999999
+        145.631194106,
+        2.75,
+        188.631194106,
+        3.9
       ],
-      "width_pt": 246.35520000000025,
-      "height_pt": 229.37039999999996,
-      "all_text_inside_card": true
+      "anchor": [
+        145.631194106,
+        4
+      ],
+      "width_pt": 371.01037037037037,
+      "height_pt": 104.77083138063541,
+      "all_text_inside_rectangle": true
     },
     {
       "rank": 0,
@@ -207,14 +234,18 @@
       "threads_per_block": 64,
       "GQA_BLOCK_M": null,
       "bounds": [
-        7.03,
-        1.02,
-        7.970000000000001,
-        1.8399999999999999
+        190.929684145,
+        2.75,
+        233.929684145,
+        3.9
       ],
-      "width_pt": 246.35520000000025,
-      "height_pt": 229.37039999999996,
-      "all_text_inside_card": true
+      "anchor": [
+        190.929684145,
+        4
+      ],
+      "width_pt": 371.0103703703705,
+      "height_pt": 104.77083138063541,
+      "all_text_inside_rectangle": true
     },
     {
       "rank": 1,
@@ -233,14 +264,18 @@
       "threads_per_block": 256,
       "GQA_BLOCK_M": 64,
       "bounds": [
-        0.03,
-        0.02,
-        0.97,
-        0.84
+        0.486496618,
+        1.1,
+        43.486496618,
+        2.25
       ],
-      "width_pt": 246.35519999999997,
-      "height_pt": 229.3704,
-      "all_text_inside_card": true
+      "anchor": [
+        0.486496618,
+        1
+      ],
+      "width_pt": 371.01037037037037,
+      "height_pt": 104.7708313806355,
+      "all_text_inside_rectangle": true
     },
     {
       "rank": 1,
@@ -259,14 +294,18 @@
       "threads_per_block": 128,
       "GQA_BLOCK_M": 16,
       "bounds": [
-        1.03,
-        0.02,
-        1.97,
-        0.84
+        44.113219033,
+        2.1,
+        87.11321903300001,
+        3.25
       ],
-      "width_pt": 246.35519999999997,
-      "height_pt": 229.3704,
-      "all_text_inside_card": true
+      "anchor": [
+        44.113219033,
+        2
+      ],
+      "width_pt": 371.0103703703704,
+      "height_pt": 104.7708313806355,
+      "all_text_inside_rectangle": true
     },
     {
       "rank": 1,
@@ -285,14 +324,18 @@
       "threads_per_block": 128,
       "GQA_BLOCK_M": 16,
       "bounds": [
-        2.03,
-        0.02,
-        2.9699999999999998,
-        0.84
+        46.798894514,
+        0.75,
+        89.798894514,
+        1.9
       ],
-      "width_pt": 246.35519999999997,
-      "height_pt": 229.3704,
-      "all_text_inside_card": true
+      "anchor": [
+        46.798894514,
+        2
+      ],
+      "width_pt": 371.01037037037037,
+      "height_pt": 104.7708313806355,
+      "all_text_inside_rectangle": true
     },
     {
       "rank": 1,
@@ -311,14 +354,18 @@
       "threads_per_block": 128,
       "GQA_BLOCK_M": 32,
       "bounds": [
-        3.03,
-        0.02,
-        3.9699999999999998,
-        0.84
+        93.556688617,
+        3.1,
+        136.55668861700002,
+        4.25
       ],
-      "width_pt": 246.35520000000005,
-      "height_pt": 229.3704,
-      "all_text_inside_card": true
+      "anchor": [
+        93.556688617,
+        3
+      ],
+      "width_pt": 371.0103703703705,
+      "height_pt": 104.7708313806355,
+      "all_text_inside_rectangle": true
     },
     {
       "rank": 1,
@@ -337,14 +384,18 @@
       "threads_per_block": 128,
       "GQA_BLOCK_M": 32,
       "bounds": [
-        4.03,
-        0.02,
-        4.970000000000001,
-        0.84
+        96.359404025,
+        1.75,
+        139.359404025,
+        2.9
       ],
-      "width_pt": 246.35520000000025,
-      "height_pt": 229.3704,
-      "all_text_inside_card": true
+      "anchor": [
+        96.359404025,
+        3
+      ],
+      "width_pt": 371.01037037037037,
+      "height_pt": 104.7708313806355,
+      "all_text_inside_rectangle": true
     },
     {
       "rank": 1,
@@ -363,14 +414,18 @@
       "threads_per_block": 128,
       "GQA_BLOCK_M": 32,
       "bounds": [
-        5.03,
-        0.02,
-        5.970000000000001,
-        0.84
+        137.509930684,
+        4.1,
+        180.509930684,
+        5.25
       ],
-      "width_pt": 246.35520000000025,
-      "height_pt": 229.3704,
-      "all_text_inside_card": true
+      "anchor": [
+        137.509930684,
+        4
+      ],
+      "width_pt": 371.0103703703705,
+      "height_pt": 104.7708313806355,
+      "all_text_inside_rectangle": true
     },
     {
       "rank": 1,
@@ -389,14 +444,18 @@
       "threads_per_block": 128,
       "GQA_BLOCK_M": 32,
       "bounds": [
-        6.03,
-        0.02,
-        6.970000000000001,
-        0.84
+        140.408174744,
+        2.75,
+        183.408174744,
+        3.9
       ],
-      "width_pt": 246.35520000000025,
-      "height_pt": 229.3704,
-      "all_text_inside_card": true
+      "anchor": [
+        140.408174744,
+        4
+      ],
+      "width_pt": 371.0103703703705,
+      "height_pt": 104.7708313806355,
+      "all_text_inside_rectangle": true
     },
     {
       "rank": 1,
@@ -415,14 +474,68 @@
       "threads_per_block": 64,
       "GQA_BLOCK_M": null,
       "bounds": [
-        7.03,
-        0.02,
-        7.970000000000001,
-        0.84
+        187.402470349,
+        2.75,
+        230.402470349,
+        3.9
       ],
-      "width_pt": 246.35520000000025,
-      "height_pt": 229.3704,
-      "all_text_inside_card": true
+      "anchor": [
+        187.402470349,
+        4
+      ],
+      "width_pt": 371.0103703703705,
+      "height_pt": 104.7708313806355,
+      "all_text_inside_rectangle": true
+    }
+  ],
+  "panels": [
+    {
+      "rank": 0,
+      "xlim": [
+        -4.0,
+        239.0
+      ],
+      "ylim": [
+        0.65,
+        5.35
+      ],
+      "xticks": [
+        0.0,
+        25.0,
+        50.0,
+        75.0,
+        100.0,
+        125.0,
+        150.0,
+        175.0,
+        200.0,
+        225.0
+      ],
+      "rectangles_do_not_overlap": true
+    },
+    {
+      "rank": 1,
+      "xlim": [
+        -4.0,
+        239.0
+      ],
+      "ylim": [
+        0.65,
+        5.35
+      ],
+      "xticks": [
+        0.0,
+        25.0,
+        50.0,
+        75.0,
+        100.0,
+        125.0,
+        150.0,
+        175.0,
+        200.0,
+        225.0
+      ],
+      "rectangles_do_not_overlap": true
     }
   ],
   "sample_count": 16

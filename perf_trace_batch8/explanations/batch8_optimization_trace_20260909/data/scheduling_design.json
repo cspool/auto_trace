@@ -1,0 +1,220 @@
+{
+  "status": "complete",
+  "target_commit": "2b4b2119ae3cc2c4c626dc5690ef9593c1477f66",
+  "sources": [
+    {
+      "path": "source_snapshot/scripts/serve_cscc_dp2.sh",
+      "sha256": "233bb2ce6fee3654bc870e37e65b7ecf4de6874cb6c7fd1a6bd5687a40783699"
+    },
+    {
+      "path": "source_snapshot/vllm/v1/engine/core_client.py",
+      "sha256": "d167e7bc043fbbe79820b8177551fc73337556da5c18eb66925d7d6aa7e567a6"
+    },
+    {
+      "path": "source_snapshot/vllm/v1/core/sched/scheduler.py",
+      "sha256": "fe517e62653de8ee23e1a3c9ea7f82b9df5a98da37d12b0ff06a880afb041f97"
+    },
+    {
+      "path": "source_snapshot/vllm/platforms/rocm.py",
+      "sha256": "23d2089c9ad294adc5128cea4be2b22cbdfab67724ff16daa3d10c601a8da000"
+    },
+    {
+      "path": "source_snapshot/vllm/model_executor/layers/fla/ops/chunk_o.py",
+      "sha256": "189c434f0846b6829fdc76890db76e38add6f4448b60a56f57c4edbc5acbc809"
+    },
+    {
+      "path": "source_snapshot/docs/cscc/BATCH8_OFFICIAL_BASE_RECOMMENDATION.md",
+      "sha256": "20f2f5b271d130221147f218e5bf4860870981eb3b75feb7915a0f4b86efa5ec"
+    }
+  ],
+  "design": {
+    "topology": "DP2, TP1, PP1; two complete model replicas with independent scheduler and KV cache",
+    "router": "retained official request-level DPLBAsyncMPClient, not a new 4+4 partition algorithm",
+    "score": "4 * waiting + running",
+    "local_waiting_increment": "client_count",
+    "tie_scan_start": "floor(num_engines * client_index / client_count)",
+    "coordinator_stats_update_ms_from_source_comment": 100,
+    "length_based_cross_rank_tie_break_implemented": false,
+    "prefill_budget": {
+      "prompt_gt_16384": 512,
+      "prompt_gt_8192": 1024,
+      "other_prefill": 2048
+    },
+    "prefill_applies_to_single_request_per_rank": true,
+    "pure_decode": "does not enter prefill clamp",
+    "default_graph_capture_max_for_target": 16,
+    "chunk_o_autotune_key": [
+      "H",
+      "K",
+      "V",
+      "BT"
+    ]
+  },
+  "illustrative_dispatch": [
+    {
+      "request": 1,
+      "dispatch_ordinal": 0,
+      "request_id": "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c",
+      "client_begin_ns": 1788409245078978841,
+      "client_start_relative_ms": 0.0,
+      "requested_rank": 1,
+      "actual_rank": 1,
+      "prompt_tokens": 20576,
+      "http_status": 200,
+      "completion_tokens": 1024
+    },
+    {
+      "request": 2,
+      "dispatch_ordinal": 1,
+      "request_id": "batch8-dual-dcu-dp2-req-002-28a42990210e6f68",
+      "client_begin_ns": 1788409245079692955,
+      "client_start_relative_ms": 0.714114,
+      "requested_rank": 0,
+      "actual_rank": 0,
+      "prompt_tokens": 22296,
+      "http_status": 200,
+      "completion_tokens": 1024
+    },
+    {
+      "request": 3,
+      "dispatch_ordinal": 2,
+      "request_id": "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f",
+      "client_begin_ns": 1788409245080416569,
+      "client_start_relative_ms": 1.437728,
+      "requested_rank": 1,
+      "actual_rank": 1,
+      "prompt_tokens": 21372,
+      "http_status": 200,
+      "completion_tokens": 1024
+    },
+    {
+      "request": 4,
+      "dispatch_ordinal": 3,
+      "request_id": "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786",
+      "client_begin_ns": 1788409245081238974,
+      "client_start_relative_ms": 2.260133,
+      "requested_rank": 0,
+      "actual_rank": 0,
+      "prompt_tokens": 22387,
+      "http_status": 200,
+      "completion_tokens": 1024
+    },
+    {
+      "request": 5,
+      "dispatch_ordinal": 4,
+      "request_id": "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5",
+      "client_begin_ns": 1788409245082165879,
+      "client_start_relative_ms": 3.187038,
+      "requested_rank": 0,
+      "actual_rank": 0,
+      "prompt_tokens": 20537,
+      "http_status": 200,
+      "completion_tokens": 1024
+    },
+    {
+      "request": 6,
+      "dispatch_ordinal": 5,
+      "request_id": "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41",
+      "client_begin_ns": 1788409245083119704,
+      "client_start_relative_ms": 4.140863,
+      "requested_rank": 0,
+      "actual_rank": 0,
+      "prompt_tokens": 20623,
+      "http_status": 200,
+      "completion_tokens": 1024
+    },
+    {
+      "request": 7,
+      "dispatch_ordinal": 6,
+      "request_id": "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3",
+      "client_begin_ns": 1788409245083990199,
+      "client_start_relative_ms": 5.011358,
+      "requested_rank": 1,
+      "actual_rank": 1,
+      "prompt_tokens": 22258,
+      "http_status": 200,
+      "completion_tokens": 1024
+    },
+    {
+      "request": 8,
+      "dispatch_ordinal": 7,
+      "request_id": "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04",
+      "client_begin_ns": 1788409245084636213,
+      "client_start_relative_ms": 5.657372,
+      "requested_rank": 1,
+      "actual_rank": 1,
+      "prompt_tokens": 20575,
+      "http_status": 200,
+      "completion_tokens": 1024
+    }
+  ],
+  "historical_oom": {
+    "evidence_kind": "2026-08-11 repository ablation report, not OOM events from this fixed trace",
+    "source": "source_snapshot/docs/cscc/BATCH8_OFFICIAL_BASE_RECOMMENDATION.md",
+    "original_failure_log_root": "/public/home/tangyu408/Qwen_DCU_Worker_0/batch8_implementation_validation_20260811",
+    "original_failure_logs_accessible_now": false,
+    "incidents": [
+      {
+        "trigger": "4094-token mixed prefill/decode",
+        "allocation": "(4094,34816) BF16, about 272 MiB",
+        "site": "dense MLP"
+      },
+      {
+        "trigger": "one request per rank, about 15.9K input, old multi-request-only gate",
+        "allocation": "3582-token step, about 238 MiB",
+        "site": "dense MLP"
+      },
+      {
+        "trigger": "one 6760-token request, 4096-token step",
+        "allocation": "about 272 MiB",
+        "site": "dense MLP"
+      },
+      {
+        "trigger": "new T in old chunk_o autotune key",
+        "allocation": "256 MiB for benchmark L2 clear",
+        "site": "online autotuning"
+      }
+    ],
+    "ablations": [
+      {
+        "policy": "graph16 only",
+        "input_bucket": "4-8K",
+        "success": 27,
+        "failure": 23
+      },
+      {
+        "policy": "graph16 + multi-request prefill2048",
+        "input_bucket": "4-8K",
+        "success": 50,
+        "failure": 0
+      },
+      {
+        "policy": "graph16 + multi-request prefill2048",
+        "input_bucket": "8-16K",
+        "success": 39,
+        "failure": 11
+      },
+      {
+        "policy": "graph16 + length tiers",
+        "input_bucket": "4-8K",
+        "success": 50,
+        "failure": 0,
+        "output_tokens_per_s": 111.67
+      },
+      {
+        "policy": "graph16 + length tiers",
+        "input_bucket": "8-16K",
+        "success": 50,
+        "failure": 0,
+        "output_tokens_per_s": 98.06
+      },
+      {
+        "policy": "graph16 + length tiers",
+        "input_bucket": "16-32K",
+        "success": 50,
+        "failure": 0,
+        "output_tokens_per_s": 58.87
+      }
+    ]
+  }
+}

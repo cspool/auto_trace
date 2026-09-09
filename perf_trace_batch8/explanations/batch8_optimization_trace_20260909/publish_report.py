@@ -3,7 +3,7 @@
 from pathlib import Path
 import json,hashlib,subprocess,urllib.request,urllib.parse,urllib.error,os,zipfile,datetime,time
 O=Path(__file__).resolve().parent;P=O.parents[2];DIST=O/'dist';DIST.mkdir(exist_ok=True)
-REPO='cspool/auto_trace';TAG='perf-trace-batch8-dp2-scheduling-report-20260909-v2'
+REPO='cspool/auto_trace';TAG='perf-trace-batch8-dp2-scheduling-report-20260909-v3'
 def sha(p):
  h=hashlib.sha256()
  with p.open('rb') as f:
@@ -13,7 +13,8 @@ def dump(p,x):p.write_text(json.dumps(x,ensure_ascii=False,indent=2)+'\n')
 a=json.loads((O/'REPORT_AUDIT.json').read_text());assert a['status']=='complete';assert sha(O/'REPORT.html')==a['report_html']['sha256'];assert sha(O/'Batch8_DP2_Scheduling_Report.pdf')==a['pdf']['sha256']
 head=subprocess.check_output(['git','-C',str(P),'rev-parse','HEAD'],text=True).strip();remote=subprocess.check_output(['git','-C',str(P),'ls-remote','origin','refs/heads/main'],text=True,timeout=40).split()[0];assert head==remote
 status=subprocess.check_output(['git','-C',str(P),'status','--porcelain','--',str(O)],text=True);assert not status,status
-paths=[p for p in sorted(O.rglob('*')) if p.is_file() and not set(p.relative_to(O).parts)&{'dist','__pycache__','inspection'} and p.name not in ['PUBLICATION_COMPLETE.json']]
+pending_receipts={'PUBLICATION_COMPLETE.json','publication.log','publication_receipts/FILE_MANIFEST.json','publication_receipts/SHA256SUMS'}
+paths=[p for p in sorted(O.rglob('*')) if p.is_file() and not set(p.relative_to(O).parts)&{'dist','__pycache__','inspection'} and str(p.relative_to(O)) not in pending_receipts]
 manifest={'status':'verified','relative_root':'.','git_commit':head,'entries':[{'path':str(p.relative_to(O)),'size':p.stat().st_size,'sha256':sha(p)} for p in paths]};dump(DIST/'FILE_MANIFEST.json',manifest)
 archive=DIST/'Batch8_DP2_Scheduling_Report.zip'
 with zipfile.ZipFile(archive,'w',zipfile.ZIP_DEFLATED,compresslevel=6) as z:
@@ -34,8 +35,8 @@ try:release=api(base+'/releases/tags/'+TAG)
 except urllib.error.HTTPError as e:
  if e.code!=404:raise RuntimeError('Release lookup HTTP '+str(e.code)) from None
  body='使用固定、已验收的 Batch8 DP2 trace 解释 8 个请求如何分配到两张卡，各卡如何形成 B1–B4 动态 batch，以及 512-token 长 prefill 预算怎样影响 kernel 路径。\n\n下载 PDF 可直接阅读；REPORT.html 为独立离线图文报告，含八请求定位控件；ZIP 包含全部报告、图表、原始归属表、源码快照、生成代码及审计。\n\n已核对全部 23,660 个唯一 kernel 和两个 rank 的 4+4 请求覆盖，实际离线 Chromium 检查通过。图表使用原始观测时间；组成占比不作为加速比。'
- body='可读性修订 v2：第一节客户端长区间改为两块折叠矩形，Marker 宽度统一放大 12 倍并直接标注原始时长；第二节改为两行 16 个大信息矩形，按每卡实际启动顺序展示 B、时间与 kernel 配置。数据与 trace 计量不变。\n\n'+body
- release=api(base+'/releases','POST',{'tag_name':TAG,'target_commitish':head,'name':'Batch8 双卡调度：可视化报告 v2（折叠时间轴与大信息矩形）','body':body,'draft':False,'prerelease':False})
+ body='v3：以实际调度设计为主线，解释官方 DP 负载选卡、各卡 continuous batching、长度分档预算、Graph 保护与 OOM 消融。图 2 恢复真实秒数横轴及 (time,B) 采样点，并用放大矩形展示每次启动信息。固定 4+4 trace 仅作为调度示意。历史 OOM 数字来自仓库 2026-08-11 记录，实际代码和本次 trace 分别核对。\n\n'+body
+ release=api(base+'/releases','POST',{'tag_name':TAG,'target_commitish':head,'name':'Batch8 双卡调度设计与 OOM 处理：时间线报告 v3','body':body,'draft':False,'prerelease':False})
 existing={a['name']:a for a in release['assets']}
 for p in assets:
  digest='sha256:'+sha(p)

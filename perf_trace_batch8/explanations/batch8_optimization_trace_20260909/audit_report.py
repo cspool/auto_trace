@@ -66,19 +66,40 @@ for r in ar:
   assert r['scale']==12 and not r['folded']
   assert abs(r['display_end']-r['start']-12*(r['raw_end_ns']-r['raw_begin_ns'])/1e9)<1e-9
  assert abs(r['start']-(r['raw_begin_ns']-origin)/1e9)<1e-9
-sf=json.loads((O/'SCHEDULING_FIGURE_AUDIT.json').read_text());assert sf['sample_count']==16 and sf['information_card_fraction_of_axes']>.75
-assert sf['information_card_fraction_of_full_figure']>.50
+sf=json.loads((O/'SCHEDULING_FIGURE_AUDIT.json').read_text());assert sf['sample_count']==16
+assert sf['x_axis']=='actual seconds since earliest client start' and not sf['rectangle_width_is_measured_duration']
 assert {q['kernel_instance_id'] for q in sf['samples']}=={q['kernel_instance_id'] for q in s['launch_samples']}
 for rank in (0,1):
  cards=sorted((q for q in sf['samples'] if q['rank']==rank),key=lambda q:q['order'])
  expected=sorted((q for q in s['launch_samples'] if q['rank']==rank),key=lambda q:q['launch_begin_ns'])
+ panel=next(v for v in sf['panels'] if v['rank']==rank);assert panel['xticks']==list(range(0,226,25))
  assert len(cards)==8
- for card,sample in zip(cards,expected):
+ for i,(card,sample) in enumerate(zip(cards,expected)):
   for key in ['request','phase','kernel_instance_id','launch_begin_ns','client_relative_s','local_batch_sequences','grid','threads_per_block','GQA_BLOCK_M']:assert card[key]==sample[key]
-  assert card['all_text_inside_card'] and card['width_pt']>200 and card['height_pt']>200
-  x0,y0,x1,y1=card['bounds'];assert 0<=x0<x1<=8 and 0<=y0<y1<=2
+  assert card['all_text_inside_rectangle'] and card['width_pt']>300 and card['height_pt']>100
+  x0,y0,x1,y1=card['bounds'];assert panel['xlim'][0]<=x0<x1<=panel['xlim'][1] and panel['ylim'][0]<=y0<y1<=panel['ylim'][1]
+  assert card['anchor']==[sample['client_relative_s'],sample['local_batch_sequences']]
+  assert x0==sample['client_relative_s'] and abs((x1-x0)-43)<1e-9
+  for prior in cards[:i]:
+   px0,py0,px1,py1=prior['bounds'];assert not (max(x0,px0)<min(x1,px1) and max(y0,py0)<min(y1,py1))
 checks['eight_client_folds_and_16_enlarged_markers_keep_raw_times']=True
-checks['16_large_scheduling_cards_match_actual_launch_order_and_values']=True
+checks['16_large_time_plot_rectangles_keep_actual_seconds_and_batch_anchors']=True
+policy=json.loads((D/'scheduling_design.json').read_text());assert policy['status']=='complete'
+for record in policy['sources']:assert sha(O/record['path'])==record['sha256']
+rr_source=next(x for x in a['sources'] if x['path'].endswith('/request_timeline.csv'));assert sha(Path(rr_source['path']))==rr_source['sha256']
+rr={int(r['measured_request_ordinal']):r for r in csv.DictReader(Path(rr_source['path']).open())}
+for dispatch in policy['illustrative_dispatch']:
+ row=rr[dispatch['request']]
+ for key,raw_key in [('dispatch_ordinal','dispatch_ordinal'),('client_begin_ns','begin_ns'),('requested_rank','data_parallel_rank_requested'),('actual_rank','rank'),('prompt_tokens','prompt_tokens'),('http_status','http_status'),('completion_tokens','completion_tokens')]:assert dispatch[key]==int(row[raw_key])
+ assert dispatch['requested_rank']==dispatch['actual_rank']
+ assert dispatch['client_start_relative_ms']==(int(row['begin_ns'])-origin)/1e6
+historical=(O/policy['historical_oom']['source']).read_text()
+for value in ['4094','3582','6760','256 MiB','27 成功 / 23 失败','39 成功 / 11 失败','111.67','98.06','58.87']:assert value in historical
+md=(O/'REPORT.md').read_text()
+for value in ['4 × waiting + running','client_count','尚未实现','3.2 OOM','27 / 23','39 / 11','key=[H,K,V,BT]','原目录当前不可访问']:assert value in md
+assert len(policy['historical_oom']['ablations'])==6 and not policy['historical_oom']['original_failure_logs_accessible_now']
+checks['actual_design_sources_and_illustrative_dispatch_verified']=True
+checks['historical_oom_document_evidence_separated_from_current_trace']=True
 assert (O/'REPORT.html').read_text().count('<svg ')==5
 browser_errors=[];network=[];B=O/'validation';B.mkdir(exist_ok=True)
 with sync_playwright() as p:
@@ -108,6 +129,6 @@ with sync_playwright() as p:
  context.close();browser.close()
 assert not browser_errors,browser_errors;assert not network,network
 checks.update({'actual_offline_browser_opened':True,'all_eight_request_selectors_exact_ns_and_ids':seen,'five_embedded_figures_rendered':True,'Chinese_font_available':True,'page_errors':browser_errors,'external_network_attempts':network,'browser_closed':True,'pdf_generated':True})
-result={'status':'complete','utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'builder_imported':False,'original_R09_raw_table_reconciled':True,'checks':checks,'report_html':rec(O/'REPORT.html'),'report_markdown':rec(O/'REPORT.md'),'pdf':rec(O/'Batch8_DP2_Scheduling_Report.pdf'),'browser_screenshots':[rec(p) for p in sorted(B.glob('report_*.png'))],'figure_audit':rec(O/'FIGURE_AUDIT.json'),'interpreter':sys.executable}
+result={'status':'complete','utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'builder_imported':False,'original_R09_raw_table_reconciled':True,'checks':checks,'report_html':rec(O/'REPORT.html'),'report_markdown':rec(O/'REPORT.md'),'pdf':rec(O/'Batch8_DP2_Scheduling_Report.pdf'),'browser_screenshots':[rec(p) for p in sorted(B.glob('report_*.png'))],'figure_audit':rec(O/'FIGURE_AUDIT.json'),'scheduling_figure_audit':rec(O/'SCHEDULING_FIGURE_AUDIT.json'),'design_evidence':rec(D/'scheduling_design.json'),'interpreter':sys.executable}
 (O/'REPORT_AUDIT.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n');print('REPORT_AUDIT_COMPLETE',json.dumps({'raw_kernel_count':len(raw),'request_controls':len(seen),'network_attempts':len(network),'pdf_bytes':(O/'Batch8_DP2_Scheduling_Report.pdf').stat().st_size}),flush=True)
 print('PDF_UTILITIES',shutil.which('pdftoppm'),shutil.which('pdftotext'),shutil.which('pdfinfo'),flush=True)

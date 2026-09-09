@@ -1,31 +1,57 @@
-# Batch8 如何调度到双卡：一个固定 trace 的完整案例
+# Batch8 双卡调度设计与 OOM 处理：可视化分析报告
 
-这份报告用已经验收的 `batch8-dp2-fresh-003` 解释当前优化：**8 个并发请求分给两个完整模型副本，每卡 4 个；各卡独立进行 continuous batching，长 prefill 使用较小的 token 预算，再根据实际单卡批量选择 kernel。** 重点是请求分配与每卡内部调度，kernel 图用于解释调度落到设备上的具体结果。
+**实际设计由三层组成：前端按请求负载把八并发分发到两个完整模型副本；每卡独立 continuous batching，用按输入长度分档的 prefill token 预算控制显存峰值；kernel 再按实际单卡 batch 选择配置。** 选卡沿用官方 DP 负载均衡，优化重点是每卡的工作集控制、Graph 内存保护和适配 local batch 的算子路径。
 
-本例为 Qwen3.5-27B、BF16、gfx936，`DP=2 / TP=1 / PP=1`，每请求输出 1024 token。报告采用 AutoTrace 的 `build-optimization-trace-report` skill，复用已验收 R09/R10 数据。时间来自 R07 原始观测；分析范围覆盖全部 8 个请求的客户端区间，以及每请求首个 prefill、首个 decode 各 784 个声明 process 目标。
+目标配置为 Qwen3.5-27B、BF16、gfx936，`DP=2 / TP=1 / PP=1`。本报告先解释实际代码中的调度与 OOM 处理，再用已经验收的 `batch8-dp2-fresh-003` 固定 trace 作时间线示意。图中的 4+4 是示例分配；服务对每个到达请求独立选卡，分配比例随两卡负载变化。
 
-## 1. 8 个请求首先落到两个独立副本
+报告采用 AutoTrace 的 `build-optimization-trace-report` skill。图中时间来自 R07 原始观测及已验收 R09/R10 数据，覆盖八请求客户端区间，以及每请求首个 prefill、首个 decode 各 784 个声明 process 目标；每请求输出 1024 token。历史 OOM 消融另列在第三节。
 
-`serve_cscc_dp2.sh` 启动一个对外服务，使用内部 MP 数据并行。每个 EngineCore 有自己的调度器和 KV cache，并在对应 DCU 上运行完整模型。一个请求在选定的副本中推进 prefill 和 decode。
+## 1. 最初的 8 个并发请求怎样调度到双卡
+
+### 1.1 服务拓扑与逐请求选卡
+
+`serve_cscc_dp2.sh` 以 `--data-parallel-size 2 --tensor-parallel-size 1 --data-parallel-backend mp` 启动服务。两张卡各运行完整模型，各自拥有 EngineCore、调度器和 KV cache。客户端的 Batch8 表示最多 8 个请求同时在途；前端每收到一个请求就选定一个 EngineCore，无需等到八个请求全部到齐。
+
+**选卡发生在 `DPLBAsyncMPClient.get_core_engine_for_request()`。** 普通生成请求未指定 rank 时，前端读取两卡的等待数和运行数，分别计算 `score = 4 × waiting + running`，将整个请求发送到分数较低的 EngineCore。例如 rank 0 为 `(waiting=1,running=2)`、rank 1 为 `(0,3)`，分数为 6 和 3，下一请求就进入 rank 1。等待请求的权重更大，可避免新请求持续堆积到同一副本。
+
+选定后，前端立即把该卡的本地 waiting 计数增加 `client_count`，在协调器约 100 ms 的统计更新之间反映新负载。同分时，从 `floor(num_engines × client_index / client_count)` 对应的卡开始扫描，保留扫描到的第一个最小值；这能让不同 API 前端在空载时分散选择。
 
 <pre class="process-art">
-                         Batch8: R01 ... R08
-                         max_concurrency = 8
+on_each_request(request):
+    if request.data_parallel_rank is specified:
+        rank = request.data_parallel_rank
+    else:  # ordinary generation request
+        <strong>rank = argmin_over_engines(4 * waiting[rank] + running[rank])</strong>
+        waiting[rank] += client_count
+    send_ADD(request, EngineCore[rank])
+</pre>
+
+因此八请求在负载相近时可形成接近 4+4 的分流；后续有请求完成、排队长度变化，下一请求的目标卡也可改变。当前设计保留官方请求数负载均衡；输入长度用于每卡内部预算。跨卡按 prompt token 总量再做 tie-break 尚未实现：多个 API 前端的局部 token 计数不能直接当作全局计数，精确实现需要共享状态或协调器协议支持。
+
+### 1.2 选卡之后，两个调度器独立推进
+
+一个请求进入选定 EngineCore 后，在该副本内推进 prefill 和 decode。每卡从自己的 waiting/running 队列选择本步工作，不必凑齐 local B4；因此开始阶段可出现 B1，之后逐步形成 B2、B3、B4，以及 prefill/decode 混合 batch。请求完成时该卡的负载下降，前端之后的选卡会反映这一变化。
+
+<pre class="process-art">
+                    8 concurrent client requests
                                   |
-                  <strong>DP frontend: request -> engine rank</strong>
+              <strong>per-request DP routing: min(4*waiting + running)</strong>
                          /                    \
                         v                      v
                EngineCore / rank 0     EngineCore / rank 1
                DCU 0, full model       DCU 1, full model
                own scheduler + KV     own scheduler + KV
-               R02 R04 R05 R06         R01 R03 R08 R07
                         |                      |
-               <strong>local continuous batching, independently</strong>
+               <strong>independent continuous batching</strong>
                         |                      |
-               local B = 1,2,3,4       local B = 1,2,3,4
+               remaining prefill?     remaining prefill?
+               <strong>length-tier token budget: 2048 / 1024 / 512</strong>
+                        |                      |
+               actual local B         actual local B
+               -> kernel config       -> kernel config
 </pre>
 
-本例的请求映射固定下来用于解释和可视化。请求表的 `data_parallel_rank_requested` 与实际原生 kernel 的 rank 全部一致，以下 4+4 分配有完整 trace 支持。
+以下 4+4 固定 trace 用于展示这套设计在两个副本上的执行路径。采集请求显式指定的 rank 与原生 kernel 归属一致；它展示分卡后的 batch 演进，默认选卡算法由上述实际源码说明。逐请求的采集分配和原始时间保存在 [调度设计与证据记录](data/scheduling_design.json)。
 
 | 设备 / rank | 本例请求 | 输入 token 总数 | 输出 token 总数 | 请求数 |
 | --- | --- | --- | --- | --- |
@@ -33,8 +59,6 @@
 | 1 | R01, R03, R08, R07 | 84,781 | 4,096 | 4 |
 
 两卡输入 token 总量分别为 85,843 和 84,781，差值 1,062，相对均值差约 1.24%。全部 8 个请求共同处于客户端在途状态的交集为 **666.185 秒**。这证明本例八并发已形成，4 个请求也都实际落到了各自设备。
-
-正常服务中，若请求没有显式指定 `data_parallel_rank`，`DPLBAsyncMPClient.get_core_engine_for_request()` 计算每个副本的 `score = 4 × waiting + running`，选最小值；并更新本地等待计数，配合协调器约 100 ms 的统计更新。该策略按请求负载选卡；本例使用固定映射来展示它之后的双卡执行过程。
 
 源代码：[服务拓扑](source_snapshot/scripts/serve_cscc_dp2.sh)、[请求选卡](source_snapshot/vllm/v1/engine/core_client.py)。
 
@@ -46,7 +70,7 @@
 
 每张卡最早处理一个长请求的 prefill；后续请求开始 prefill 时，已有请求可以同时推进 decode。因此同一个物理 batch 中会出现 prefill 和 decode 混合。R01 的记录名虽然是 decode，但此时 rank 1 的 GQA 启动已经处理两个序列；后面的 R03 decode 记录对应三个序列。这正是“请求自己的阶段”和“整张卡当前 batch”之间的关系。
 
-<figure class="report-figure"><img src="figures/scheduling_local_batch.svg" alt="图 S：每卡一行，8 个大信息矩形按实际启动顺序从左向右排列。每块直接显示请求阶段、单卡 B、kernel 配置、线程数与真实启动秒数；等宽矩形表示离散样本，宽度不代表时长。"><figcaption>图 S：每卡一行，8 个大信息矩形按实际启动顺序从左向右排列。每块直接显示请求阶段、单卡 B、kernel 配置、线程数与真实启动秒数；等宽矩形表示离散样本，宽度不代表时长。</figcaption></figure>
+<figure class="report-figure"><img src="figures/scheduling_local_batch.svg" alt="图 S：恢复真实秒数横轴，每卡一幅时间图。圆点给出准确的启动时刻与单卡 B；大信息矩形的左边界与该时刻对齐，直接显示请求阶段、时间和 kernel 配置。矩形宽度固定为 43 显示秒，仅用于放大标注，右边界不代表执行结束。"><figcaption>图 S：恢复真实秒数横轴，每卡一幅时间图。圆点给出准确的启动时刻与单卡 B；大信息矩形的左边界与该时刻对齐，直接显示请求阶段、时间和 kernel 配置。矩形宽度固定为 43 显示秒，仅用于放大标注，右边界不代表执行结束。</figcaption></figure>
 
 | 卡 | 请求 / 阶段 | 启动位置（s） | 单卡 B | 实际路径 / 配置 |
 | --- | --- | --- | --- | --- |
@@ -67,9 +91,13 @@
 | 1 | R08 decode | 140.408 | 4 | GQA BM32 |
 | 1 | R07 decode | 187.402 | 4 | packed B4 / 64 threads |
 
-上述位置是相对最早客户端开始时间的原始 R07 启动时刻，用 16 个声明阶段的代表启动展示本例；完整 23,660 个 kernel 仍保留在数据表中。图 S 的横向顺序为每卡的启动序号；每个矩形都保留真实时间，不插值推测样本之间的调度状态。
+上述位置是相对最早客户端开始时间的原始 R07 启动时刻，用 16 个声明阶段的代表启动展示本例；完整 23,660 个 kernel 仍保留在数据表中。图 S 的横轴保留真实时间距离；prefill 标注放在圆点上方、decode 标注放在下方，以便放大矩形后仍能看清相邻启动。
 
-## 3. 调度优化的重点：约束每卡的长 prefill 工作集
+## 3. 控制 OOM：每卡的调度预算与内存保护
+
+### 3.1 为什么分到两卡后还要限制 prefill
+
+DP2 将请求和 KV 工作负载分到两个副本，每卡仍常驻一份完整权重，并承担本步 MLP、attention 和 GDN 的临时张量。即便一张卡暂时只有一个长请求，它的一次大 prefill 也可能耗尽剩余显存。因此这项保护覆盖每卡所有剩余 prefill，单请求阶段同样生效。
 
 源码中的 `Scheduler.schedule()` 从每卡的 running / waiting / skipped-waiting 请求取出尚有 prompt token 未计算的请求，检查其中最大的真实 prompt 长度，再限制该步 token 预算：
 
@@ -94,6 +122,38 @@
 这说明预算为何能控制大 MLP 中间张量：该张量的理论体积由 272 MiB 变为 34 MiB。它是尺寸计算，整体显存峰值还包含权重、KV、其他中间量和缓存。平台代码还为精确目标配置提供最大 Graph capture size=16 的默认保护；本报告用时间线解释实际调度，不把初始化图内存策略另算成一次已测速度收益。
 
 源代码：[每步调度与三档预算](source_snapshot/vllm/v1/core/sched/scheduler.py)、[Graph 默认配置](source_snapshot/vllm/platforms/rocm.py)。
+
+### 3.2 OOM 出现在哪里，最终怎样处理
+
+下表来自目标仓库 **2026-08-11 的 OOM 消融记录**，描述形成当前设计时遇到的失败。图中的固定 trace 用于展示最终调度路径；历史失败与后续验证由[原始仓库记录](source_snapshot/docs/cscc/BATCH8_OFFICIAL_BASE_RECOMMENDATION.md)支持。
+
+| 失败场景 | OOM 发生位置 / 申请量 | 设计中的处理 |
+| --- | --- | --- |
+| 4094-token mixed prefill/decode | dense MLP 的 gate/up 张量 `(4094,34816)` BF16，约 272 MiB | 在进入本步计算前收缩 prefill token 预算，减小 MLP 临时张量 |
+| DP2 分流后每卡仅一个约 15.9K 输入请求，早期“多请求才保护”的条件未命中 | 仍调度 3582 tokens，MLP 申请约 238 MiB | 去掉请求数条件；每卡只要仍有 prefill，就应用长度分档 |
+| 单请求输入 6760 tokens，仍允许 4096-token prefill | MLP 申请约 272 MiB | 短输入的 prefill 也限制到 2048；保护覆盖 B1 阶段 |
+| 旧 `chunk_o` autotune key 包含 T，Aggregation 尾批遇到新 T | 在线 benchmark 为清空 L2 额外申请 256 MiB | 恢复官方 `key=[H,K,V,BT]`，删除 T4096 固定 pruner，跨 T 复用调优结果 |
+
+历史 MLP 失败时记录了设备 free=0、PyTorch 约 500 MiB reserved-but-unallocated，原记录将问题定位为峰值和碎片共同作用；当时 ROCm 环境也不支持所尝试的 `expandable_segments`。最终处理落实到调度预算和算子调优行为，而不是依赖这个 allocator 开关。
+
+Graph 保护先在平台配置阶段起作用：对目标 gfx936 / BF16 / Qwen3.5-27B / TP1-DP2 配置，且用户没有显式指定 capture 档位时，将最大 capture size 设为 16。历史记录中 Graph 占用约由 0.27 GiB 降到 0.13 GiB；下面的失败计数说明，释放这部分空间后仍需限制每步 prefill。调度器在本步执行前检查真实 prompt 长度并选择 2048/1024/512；`chunk_o` 再通过稳定 autotune key 避免新长度触发额外调优申请。
+
+### 3.3 处理后的验证结果
+
+**历史吞吐消融：全局并发 8、50 prompts、每条输出 1024 tokens。** 各版本的成功/失败数如下；长度三档最终分别覆盖三个输入桶。
+
+| 版本 / 策略 | 输入桶 | 成功 / 失败 | 历史 output tok/s |
+| --- | --- | --- | --- |
+| 仅 Graph cap=16 | 4–8K | 27 / 23 | — |
+| Graph cap=16 + 并发 prefill 固定 2048 | 4–8K | 50 / 0 | 111.67 |
+| Graph cap=16 + 并发 prefill 固定 2048 | 8–16K | 39 / 11 | — |
+| Graph cap=16 + 长度三档 | 4–8K（2048 档） | 50 / 0 | 111.67 |
+| Graph cap=16 + 长度三档 | 8–16K（1024 档） | 50 / 0 | 98.06 |
+| Graph cap=16 + 长度三档 | 16–32K（512 档） | 50 / 0 | 58.87 |
+
+当前固定 trace 的 8 个请求均返回 HTTP 200、各完成 1024 tokens；其输入约 20.5–22.4K，672 次 GDN 融合归一化启动对应物理 T=512。它把最终方案中的 **长输入 → 每卡 512-token 预算 → 混合 batch 与 kernel 配置** 连到可视化上。上述历史 OOM 计数和吞吐不作为本次 trace 的失败事件或速度提升。
+
+历史失败日志的原目录当前不可访问，因此这里保留仓库原记录及 SHA256 作为证据，不将其标为本次重新执行的消融。对应实际代码见 [scheduler](source_snapshot/vllm/v1/core/sched/scheduler.py)、[Graph 默认保护](source_snapshot/vllm/platforms/rocm.py)、[`chunk_o` autotune key](source_snapshot/vllm/model_executor/layers/fla/ops/chunk_o.py)，结构化索引见 [调度设计与 OOM 证据](data/scheduling_design.json)。
 
 ## 4. 调度怎样改变 GQA 的具体执行
 
@@ -220,11 +280,11 @@ R09 的 418 条机会候选中，383 条位于 `gdn_recurrent_core`；这可作�
 
 每个 kernel 通过 R09 的唯一 `kernel_instance_id` 计一次，使用 `owner_process_range_id` 与 HIP runtime index 复核归属，全部 23,660 个启动参数均可在原始 process context 中找到。时长和 = Σ(end_ns−begin_ns)；组成占比的分母是该行或该列所包含的实际 kernel 时长和。嵌套 process 时长、双份显示轨道、客户端墙钟都不混入这个分母。
 
-这是一份固定优化版本的例子报告，没有同条件 DP1/旧版对照，因此给出路径、位置和组成。图 A 保留真实左边界，对灰色长区间折叠、彩色 Marker 放大；图 S 按每卡真实启动顺序排列等宽信息矩形，并直接标注原始时间。所有显示变换及图 B/C/D 的放大、折叠公式均写在各图中。R07 的历史原生控制器终止无法追认，其已有离线恢复说明保留；当前 R09/R10 已完成独立验收。
+这是一份固定优化版本的例子报告，没有同条件 DP1/旧版对照，因此给出路径、位置和组成。图 A 保留真实左边界，对灰色长区间折叠、彩色 Marker 放大；图 S 保留真实秒数轴及 (time,B) 圆点，大信息矩形的左边界对齐真实启动时刻。所有显示变换及图 B/C/D 的放大、折叠公式均写在各图中。R07 的历史原生控制器终止无法追认，其已有离线恢复说明保留；当前 R09/R10 已完成独立验收。
 
 - [报告统计与输入 SHA256](data/analysis.json)、[双卡调度数据](data/scheduling.json)、[匹配与计量规则](data/MATCHERS.json)。
 - [全量唯一 kernel 表](data/kernels.csv)、[原始 HIP 启动参数](data/observed_launches.csv)、[process 表](data/processes.csv)、[请求表](data/requests.csv)。
-- [原始 FX process 清单](data/process_range_inventory.json)、[源码快照](source_snapshot/)、[图表审计](FIGURE_AUDIT.json)、[16 个信息矩形布局审计](SCHEDULING_FIGURE_AUDIT.json)。
+- [原始 FX process 清单](data/process_range_inventory.json)、[源码快照](source_snapshot/)、[图表审计](FIGURE_AUDIT.json)、[16 个时间图标注矩形审计](SCHEDULING_FIGURE_AUDIT.json)。
 - [数据提取代码](analyze_trace.py)、[调度分析代码](analyze_scheduling.py)、[图表生成代码](build_figures.py)、[报告生成代码](build_report.py)。
 
 独立验收结果与本报告打包清单在交付时追加到本目录。所有新输出保存在 NFS；原有 R08–R10 封存材料保持原始字节。

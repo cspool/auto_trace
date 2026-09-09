@@ -30,15 +30,19 @@
   "source_tables_and_report_audit": "REPORT_AUDIT.json",
   "pdf_audit": "PDF_AUDIT.json",
   "latest_revision": {
-    "revision": 2,
+    "revision": 3,
     "user_requested_changes": [
-      "fold long client intervals and enlarge marker widths",
-      "make scheduling rectangles occupy the majority of the figure"
+      "restore actual time axes with large information rectangles",
+      "explain actual dual-device scheduling design; fixed 4+4 is only a trace illustration",
+      "include OOM occurrence, handling and validation"
     ],
     "client_display_cap_s": 260,
     "marker_display_scale": 12,
+    "scheduling_axis": "actual seconds; raw (time,B) anchors; information rectangle left edges at actual launch time",
     "scheduling_figure_audit": "SCHEDULING_FIGURE_AUDIT.json",
-    "changed_figures_and_combined_inspected": true,
-    "HTML_and_PDF_changed_figures_inspected": true
+    "scheduling_design_and_oom_evidence": "data/scheduling_design.json",
+    "changed_figures_and_HTML_PDF_inspected": true,
+    "historical_oom_original_failure_logs_available": false,
+    "historical_oom_repository_record_hash_verified": true
   }
 }

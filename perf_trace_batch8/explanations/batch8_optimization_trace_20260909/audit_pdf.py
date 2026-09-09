@@ -12,7 +12,7 @@ for i,page in enumerate(doc):
  if 'How global Batch8' in text or 'folded client spans' in text or i==0:
   page.get_pixmap(matrix=pymupdf.Matrix(1.2,1.2),alpha=False).save(V/f'pdf_page_{i+1:02d}.png')
 text='\n'.join(p.get_text() for p in doc)
-for phrase in ['双卡','512','579.996','756','256','128']:
+for phrase in ['双卡','512','579.996','756','256','128','waiting','client_count','OOM','3582','6760','27 / 23','39 / 11']:
  assert phrase in text,('missing required PDF content',phrase)
 width=max(im.width for im in thumbs);height=max(im.height for im in thumbs);sheet=Image.new('RGB',(width*3,height*((len(thumbs)+2)//3)),'#e5e7eb')
 for i,im in enumerate(thumbs):sheet.paste(im,((i%3)*width,(i//3)*height))
