@@ -1,7 +1,7 @@
 {
-  "revision": "report-repair-001/candidate-004-folded-trapezoid",
+  "revision": "report-repair-001/candidate-005-folded-trapezoid-full-overview",
   "kind": "authorized_presentation_only",
-  "utc": "2026-09-09T03:04:59.242064+00:00",
+  "utc": "2026-09-09T03:09:19.692083+00:00",
   "status": "built_pending_browser_and_independent_audit",
   "argv": [
     "tools/build.py"
@@ -213,8 +213,8 @@
       },
       "after": {
         "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/report-repair-001/acceptance/HIGH_LATENCY_PROCESS_HARDWARE_TIMELINE.html",
-        "size": 117910459,
-        "sha256": "8ec518a2c564147722bdffedb3c513c16c344dfc77ad977c83409db6c5048997"
+        "size": 117910485,
+        "sha256": "a5bc4d0fa6fe8e7391a052c4f2c591cd32d43e7f36b935330b7ac3e19a417e92"
       },
       "payload_sha256": "83d200a97a2b0bd511d91890fa730eb901ab4028a00b80b372153e9bd3af1689",
       "payload_bytes_unchanged": true,
@@ -235,8 +235,8 @@
       },
       "after": {
         "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/report-repair-001/acceptance/CONCURRENCY_UTILIZATION.html",
-        "size": 247649028,
-        "sha256": "cbf89bb641fc5b8e9f6f6e1fcffbbd0e9f908656a5093d80c54b2d69da67ba6a"
+        "size": 247649054,
+        "sha256": "c0eb6b69ffbfd611fa46597ae69a0f62ab43d395adef4501223f89dc4798b6c6"
       },
       "payload_sha256": "4c5f02cbd07a2d8d9c8041ed58d3adaa372352c0991724ee41cafdf672919eec",
       "payload_bytes_unchanged": true,
@@ -258,23 +258,28 @@
   "tools": [
     {
       "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/report-repair-001/tools/audit.py",
-      "size": 9697,
-      "sha256": "af6d493a308f442fe4b6cef48fe747d02484d32a0928f5a5a2f006e50e33bcca"
+      "size": 10257,
+      "sha256": "ccc30722a19f8ffb974958308f298a76ca00be9881b1a5b30a1ad53c310cdeda"
     },
     {
       "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/report-repair-001/tools/browser_audit.py",
-      "size": 9301,
-      "sha256": "3d14c4d4fed274fa3c92b016b34d0f04b8405ae29043b96293810ebb12d666c7"
+      "size": 9555,
+      "sha256": "4576e182e7603de9404193141fa5ec907999ff32c90599322ef45dca2abd9a90"
     },
     {
       "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/report-repair-001/tools/build.py",
-      "size": 7937,
-      "sha256": "d6577309afd64cafdc52fe52ef01e3188c382e9fc3455d7b3443de996782cad8"
+      "size": 7951,
+      "sha256": "c637d9a935528f92c37b6615650dc10f76536b103d6147c690ccc4b073436df7"
     },
     {
       "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/report-repair-001/tools/group_band.js",
-      "size": 10826,
-      "sha256": "730f0ddeed69032ddb91f1e9a062c85910f58a8bf74143b2f93ee8a2d1d87641"
+      "size": 10852,
+      "sha256": "6454a539b63580ba66655886931eecbe6aa997240296610ebf7acf7d11141789"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/report-repair-001/tools/publish.py",
+      "size": 6086,
+      "sha256": "bb3141dca3993ca85311946bc551980c7cacf80a7d916064ee74e67bc6caf113"
     },
     {
       "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R10/report-repair-001/tools/ranked.css",
@@ -287,5 +292,5 @@
       "sha256": "c90e2f87f8e9cb8f2647c950fc517843ec52cd4940ecd76162d3e2d53321dd40"
     }
   ],
-  "elapsed_seconds": 7.998143911361694
+  "elapsed_seconds": 9.120887756347656
 }

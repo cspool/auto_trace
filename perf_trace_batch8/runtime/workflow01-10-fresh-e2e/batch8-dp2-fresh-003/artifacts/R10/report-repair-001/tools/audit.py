@@ -23,7 +23,9 @@ def main():
  start=time.time();build=read(ROOT/'BUILD_MANIFEST.json');browser=read(ROOT/'validation/BROWSER_AUDIT.json');assert browser['status']=='complete' and not browser['external_requests'] and not browser['browser_errors']
  for r in build['source_sealed_inputs']:
   p=Path(r['path']);assert sha(p)==r['sha256'];copy=ROOT/'original'/p.relative_to(SOURCE);assert sha(copy)==r['sha256']
- checks={'sealed_originals_unchanged':True,'offline_browser_passed':True};payloads={}
+ trim=read(ROOT/'validation/REQUEST_TRIM_AUDIT.json');assert trim['status']=='complete'
+ for r in trim['output_files']:assert sha(ROOT/r['path'])==r['sha256']
+ checks={'sealed_originals_unchanged':True,'offline_browser_passed':True,'request_tail_trim_independently_audited':True};payloads={}
  for r in build['page_revisions']:
   before=Path(r['before']['path']);after=Path(r['after']['path']);assert sha(after)==r['after']['sha256'];s=after.read_text();data=s.split('<script>const PAYLOAD=',1)[1].split(';</script>',1)[0];old=before.read_text().split('<script>const PAYLOAD=',1)[1].split(';</script>',1)[0];assert data==old and hashlib.sha256(data.encode()).hexdigest()==r['payload_sha256'];payloads[after.name]=json.loads(data)
   # No network calls/assets in executable presentation code. Textual source paths may be preserved inside data.

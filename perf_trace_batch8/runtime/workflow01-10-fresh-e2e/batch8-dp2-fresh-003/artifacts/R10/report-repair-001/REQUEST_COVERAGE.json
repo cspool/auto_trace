@@ -1,0 +1,148 @@
+{
+  "scope": "R09 declared first-prefill/first-decode universe; Request is client outstanding interval, not continuous device execution",
+  "sources": [
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/continuation_001/tables/request_timeline.csv",
+      "sha256": "791ef2cf9f22d6295e880b77cb4596f260782acf2edc6e7a8ada2d13f7785ba0"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/continuation_001/tables/process_timeline.csv",
+      "sha256": "abc86a88e8b83e78c71914d3075dd77c2f128c98e763aae8bacf5b628f44d723"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/continuation_001/tables/kernel_timeline.csv",
+      "sha256": "56d5ccb807550dc93748dbcc43146a74f6606cd041df6795c4df0f65b6bd257c"
+    }
+  ],
+  "requests": [
+    {
+      "request_id": "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c",
+      "ordinal": 1,
+      "rank": "1",
+      "request_begin_ns": "1788409245078978841",
+      "request_end_ns": "1788409911270074537",
+      "request_duration_ns": "666191095696",
+      "last_selected_process_end_ns": "1788409294377711204",
+      "last_selected_kernel_end_ns": "1788409294374906406",
+      "tail_after_last_selected_process_or_kernel_ns": "616892363333",
+      "last_process_offset_ns": "49298732363",
+      "http_status": "200",
+      "completion_tokens": "1024",
+      "selected_process_count": 1568,
+      "selected_kernel_count": 3188
+    },
+    {
+      "request_id": "batch8-dual-dcu-dp2-req-002-28a42990210e6f68",
+      "ordinal": 2,
+      "rank": "0",
+      "request_begin_ns": "1788409245079692955",
+      "request_end_ns": "1788409920759320265",
+      "request_duration_ns": "675679627310",
+      "last_selected_process_end_ns": "1788409299265622513",
+      "last_selected_kernel_end_ns": "1788409299263045406",
+      "tail_after_last_selected_process_or_kernel_ns": "621493697752",
+      "last_process_offset_ns": "54185929558",
+      "http_status": "200",
+      "completion_tokens": "1024",
+      "selected_process_count": 1568,
+      "selected_kernel_count": 3188
+    },
+    {
+      "request_id": "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f",
+      "ordinal": 3,
+      "rank": "1",
+      "request_begin_ns": "1788409245080416569",
+      "request_end_ns": "1788409933628466184",
+      "request_duration_ns": "688548049615",
+      "last_selected_process_end_ns": "1788409343965674455",
+      "last_selected_kernel_end_ns": "1788409343962638807",
+      "tail_after_last_selected_process_or_kernel_ns": "589662791729",
+      "last_process_offset_ns": "98885257886",
+      "http_status": "200",
+      "completion_tokens": "1024",
+      "selected_process_count": 1568,
+      "selected_kernel_count": 3380
+    },
+    {
+      "request_id": "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786",
+      "ordinal": 4,
+      "rank": "0",
+      "request_begin_ns": "1788409245081238974",
+      "request_end_ns": "1788409946738291384",
+      "request_duration_ns": "701657052410",
+      "last_selected_process_end_ns": "1788409348628863045",
+      "last_selected_kernel_end_ns": "1788409348626153940",
+      "tail_after_last_selected_process_or_kernel_ns": "598109428339",
+      "last_process_offset_ns": "103547624071",
+      "http_status": "200",
+      "completion_tokens": "1024",
+      "selected_process_count": 1568,
+      "selected_kernel_count": 3380
+    },
+    {
+      "request_id": "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5",
+      "ordinal": 5,
+      "rank": "0",
+      "request_begin_ns": "1788409245082165879",
+      "request_end_ns": "1788409967714189962",
+      "request_duration_ns": "722632024083",
+      "last_selected_process_end_ns": "1788409393143708973",
+      "last_selected_kernel_end_ns": "1788409393141127324",
+      "tail_after_last_selected_process_or_kernel_ns": "574570480989",
+      "last_process_offset_ns": "148061543094",
+      "http_status": "200",
+      "completion_tokens": "1024",
+      "selected_process_count": 1568,
+      "selected_kernel_count": 3380
+    },
+    {
+      "request_id": "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41",
+      "ordinal": 6,
+      "rank": "0",
+      "request_begin_ns": "1788409245083119704",
+      "request_end_ns": "1788409989825824507",
+      "request_duration_ns": "744742704803",
+      "last_selected_process_end_ns": "1788409438033481269",
+      "last_selected_kernel_end_ns": "1788409438015759034",
+      "tail_after_last_selected_process_or_kernel_ns": "551792343238",
+      "last_process_offset_ns": "192950361565",
+      "http_status": "200",
+      "completion_tokens": "1024",
+      "selected_process_count": 1568,
+      "selected_kernel_count": 1882
+    },
+    {
+      "request_id": "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3",
+      "ordinal": 7,
+      "rank": "1",
+      "request_begin_ns": "1788409245083990199",
+      "request_end_ns": "1788409978702800268",
+      "request_duration_ns": "733618810069",
+      "last_selected_process_end_ns": "1788409434538678243",
+      "last_selected_kernel_end_ns": "1788409434520197071",
+      "tail_after_last_selected_process_or_kernel_ns": "544164122025",
+      "last_process_offset_ns": "189454688044",
+      "http_status": "200",
+      "completion_tokens": "1024",
+      "selected_process_count": 1568,
+      "selected_kernel_count": 1882
+    },
+    {
+      "request_id": "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04",
+      "ordinal": 8,
+      "rank": "1",
+      "request_begin_ns": "1788409245084636213",
+      "request_end_ns": "1788409955160739582",
+      "request_duration_ns": "710076103369",
+      "last_selected_process_end_ns": "1788409388185471621",
+      "last_selected_kernel_end_ns": "1788409388183058479",
+      "tail_after_last_selected_process_or_kernel_ns": "566975267961",
+      "last_process_offset_ns": "143100835408",
+      "http_status": "200",
+      "completion_tokens": "1024",
+      "selected_process_count": 1568,
+      "selected_kernel_count": 3380
+    }
+  ],
+  "tail_breakdown": "unavailable: cannot assign remaining request time to compute/queue/communication from this selected process timeline"
+}

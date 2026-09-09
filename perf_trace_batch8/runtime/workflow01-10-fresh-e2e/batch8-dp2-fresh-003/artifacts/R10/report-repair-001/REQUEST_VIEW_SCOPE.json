@@ -1,0 +1,99 @@
+{
+  "source_origin_ns": "1788409245078978841",
+  "source_request_envelope_end_ns": "1788409989825824507",
+  "display_end_ns": "1788409438036662757",
+  "original_envelope_duration_ns": "744746845666",
+  "display_envelope_duration_ns": "192957683916",
+  "omitted_global_tail_ns": "551789161750",
+  "request_ends": {
+    "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c": {
+      "display_end_ns": "1788409294381065953",
+      "source_end_ns": "1788409911270074537",
+      "source_begin_ns": "1788409245078978841",
+      "omitted_tail_ns": "616889008584",
+      "display_duration_ns": "49302087112",
+      "source_duration_ns": "666191095696",
+      "rank": "1"
+    },
+    "batch8-dual-dcu-dp2-req-002-28a42990210e6f68": {
+      "display_end_ns": "1788409299268652550",
+      "source_end_ns": "1788409920759320265",
+      "source_begin_ns": "1788409245079692955",
+      "omitted_tail_ns": "621490667715",
+      "display_duration_ns": "54188959595",
+      "source_duration_ns": "675679627310",
+      "rank": "0"
+    },
+    "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f": {
+      "display_end_ns": "1788409343968527852",
+      "source_end_ns": "1788409933628466184",
+      "source_begin_ns": "1788409245080416569",
+      "omitted_tail_ns": "589659938332",
+      "display_duration_ns": "98888111283",
+      "source_duration_ns": "688548049615",
+      "rank": "1"
+    },
+    "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786": {
+      "display_end_ns": "1788409348631853232",
+      "source_end_ns": "1788409946738291384",
+      "source_begin_ns": "1788409245081238974",
+      "omitted_tail_ns": "598106438152",
+      "display_duration_ns": "103550614258",
+      "source_duration_ns": "701657052410",
+      "rank": "0"
+    },
+    "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5": {
+      "display_end_ns": "1788409393146600369",
+      "source_end_ns": "1788409967714189962",
+      "source_begin_ns": "1788409245082165879",
+      "omitted_tail_ns": "574567589593",
+      "display_duration_ns": "148064434490",
+      "source_duration_ns": "722632024083",
+      "rank": "0"
+    },
+    "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41": {
+      "display_end_ns": "1788409438036662757",
+      "source_end_ns": "1788409989825824507",
+      "source_begin_ns": "1788409245083119704",
+      "omitted_tail_ns": "551789161750",
+      "display_duration_ns": "192953543053",
+      "source_duration_ns": "744742704803",
+      "rank": "0"
+    },
+    "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3": {
+      "display_end_ns": "1788409434541799601",
+      "source_end_ns": "1788409978702800268",
+      "source_begin_ns": "1788409245083990199",
+      "omitted_tail_ns": "544161000667",
+      "display_duration_ns": "189457809402",
+      "source_duration_ns": "733618810069",
+      "rank": "1"
+    },
+    "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04": {
+      "display_end_ns": "1788409388188510038",
+      "source_end_ns": "1788409955160739582",
+      "source_begin_ns": "1788409245084636213",
+      "omitted_tail_ns": "566972229544",
+      "display_duration_ns": "143103873825",
+      "source_duration_ns": "710076103369",
+      "rank": "1"
+    }
+  },
+  "display_rule": "clip each Request at maximum end of retained process/kernel/HIP runtime/layer/forward context; keep source Request outcome unchanged",
+  "traced_scope": "all eight requests; declared first prefill/first decode process targets and their exact owned kernels/runtime/context",
+  "not_visualized": "later invocations outside the declared first-prefill/first-decode scope; their compute/queue/communication decomposition unavailable",
+  "sources": [
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/continuation_001/tables/request_timeline.csv",
+      "sha256": "791ef2cf9f22d6295e880b77cb4596f260782acf2edc6e7a8ada2d13f7785ba0"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/continuation_001/tables/process_timeline.csv",
+      "sha256": "abc86a88e8b83e78c71914d3075dd77c2f128c98e763aae8bacf5b628f44d723"
+    },
+    {
+      "path": "/public/home/accl15ptg7/auto_trace/perf_trace_batch8/runtime/workflow01-10-fresh-e2e/batch8-dp2-fresh-003/artifacts/R09/continuation_001/tables/kernel_timeline.csv",
+      "sha256": "56d5ccb807550dc93748dbcc43146a74f6606cd041df6795c4df0f65b6bd257c"
+    }
+  ]
+}

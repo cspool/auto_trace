@@ -25,6 +25,8 @@ try:
     page.wait_for_function('window.PAGE_READY || window.PAGE_ERROR',timeout=360000)
     assert not page.evaluate('window.PAGE_ERROR || null'),page.evaluate('window.PAGE_ERROR');assert not errors,errors
     print('PAGE_READY',mode,round(time.time()-start,2),flush=True)
+    page.add_style_tag(content='.rank-toolbar{position:static!important}')
+    assert page.locator('.band-scroll').evaluate_all('(els)=>els.every(e=>e.scrollHeight<=e.clientHeight+1)'), 'overview must display every group row without vertical truncation'
     item={'page_sha256':sha(ROOT/'acceptance'/name),'coverage_rows':page.locator('#coverage tbody tr').count(),'tables':page.evaluate('Object.fromEntries(Object.entries(TABLES).map(([n,t])=>[n,t.data.length]))')};assert item['coverage_rows']==8
     if mode=='hardware':
      item['groups']=page.evaluate("RANKED.hardware.groups.map(g=>({key:g.key,score:g.score,members:g.members.map(m=>m.p.process_range_id)}))")
