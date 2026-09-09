@@ -1,0 +1,24 @@
+{
+  "counts": {
+    "request": 1,
+    "layer": 1856,
+    "forward": 29,
+    "hip_runtime": 428023,
+    "process": 17168,
+    "strict_owned_kernel": 29964,
+    "gpu_queue": 29964
+  },
+  "high_groups": 1,
+  "high_processes": 128,
+  "forward_groups": 29,
+  "raw_process_groups": 26,
+  "samples": 34782,
+  "ineligible_samples": 4,
+  "sample_intervals": 34781,
+  "launch_gaps": 47132,
+  "launch_groups": 30,
+  "kernel_peak": 2,
+  "queue_peak": 1,
+  "hardware_rows": 32,
+  "high_top20_members": 128
+}

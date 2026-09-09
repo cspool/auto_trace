@@ -11,6 +11,15 @@ Create the offline acceptance bundle for the single fresh-run lineage. R10 is a
 presentation/validation stage only: do not run the model, GPU, profiler, new
 trace, PMC replay, or additional sampling.
 
+## Execution Modes
+
+For a new formal R10 run, use the same-run admission contract below. When the
+user asks to improve an already accepted report, use the retained presentation
+replay mode in [references/ranked-single-batch-timelines.md](references/ranked-single-batch-timelines.md).
+That mode preserves source archives and requires no new model/profiler run; it
+does not claim fresh R09/R10 regeneration. The ranked views supplement the
+complete event universe; a reversible top-20 view is navigation, not sampling.
+
 ## Inputs
 
 Require `user.evidence_acquisition_mode=fresh_no_prior_runtime_reuse`, complete
