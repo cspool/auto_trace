@@ -10,3 +10,5 @@
 - 独立审计识别 hipExtModuleLaunchKernel 的 global/localWorkSize 参数格式；保留原始参数，未出现的 gridDim 字段保持为空。首次审计日志保存于 audit_attempt001.log，修正审计器以核对这两类原始格式。
 
 - 2026-09-09T01:36:39.200046+00:00: 中文报告、5 张主图、67 英寸四图组合、八请求交互定位与 15 页 PDF 完成。独立核对 23,660 个唯一 kernel 及 launch 参数；离线 Chromium 检查全部 8 个选择项，0 页面错误、0 外部网络请求；浏览器关闭。PDF 全部页面非空、中文可提取、文字未越出页界；逐图、HTML、PDF 已人工视觉检查。
+
+- 2026-09-09T01:41:18.858580+00:00: 完整报告提交 `b491a616a30694dd436d8af183e23a185268afcf` 已推送并确认远端 main 一致。专用 Release 发布成功：https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-dp2-scheduling-report-20260909；5 个资产均核对大小与服务端 SHA256，ZIP 内 67 个成员通过完整性与清单校验。发布日志、回执、文件清单及下载入口一起提交保存。

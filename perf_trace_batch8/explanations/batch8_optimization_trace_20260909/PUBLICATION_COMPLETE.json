@@ -1,0 +1,41 @@
+{
+  "status": "published",
+  "utc": "2026-09-09T01:39:59.101467+00:00",
+  "release_url": "https://github.com/cspool/auto_trace/releases/tag/perf-trace-batch8-dp2-scheduling-report-20260909",
+  "git_commit": "b491a616a30694dd436d8af183e23a185268afcf",
+  "all_expected_asset_sizes_and_server_SHA256_verified": true,
+  "assets": [
+    {
+      "name": "Batch8_DP2_Scheduling_Report.zip",
+      "size": 13506413,
+      "digest": "sha256:a719d365779537390f61ebabc775df5ea3a547849de48d60d3b5aca29303dff8",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-dp2-scheduling-report-20260909/Batch8_DP2_Scheduling_Report.zip"
+    },
+    {
+      "name": "REPORT.html",
+      "size": 207368,
+      "digest": "sha256:d05e9d7fbd9d60395ac1b96f5c63faa3b63b0204499883d2d2013dfd81527372",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-dp2-scheduling-report-20260909/REPORT.html"
+    },
+    {
+      "name": "Batch8_DP2_Scheduling_Report.pdf",
+      "size": 1254968,
+      "digest": "sha256:e0e3d271678110baf87459a76c35985e41ceb1a61b8e73f4905fa4b97b5b1bdd",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-dp2-scheduling-report-20260909/Batch8_DP2_Scheduling_Report.pdf"
+    },
+    {
+      "name": "FILE_MANIFEST.json",
+      "size": 10797,
+      "digest": "sha256:eba0261fa28bb8f72bc09f08d69cb2751483d2b99e0fe297a3efbc4dc183b9c1",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-dp2-scheduling-report-20260909/FILE_MANIFEST.json"
+    },
+    {
+      "name": "SHA256SUMS",
+      "size": 361,
+      "digest": "sha256:5af6f7f57f5cfe0663fa019058495131d17bab6b39c15a14881fac869b1194e1",
+      "browser_download_url": "https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-dp2-scheduling-report-20260909/SHA256SUMS"
+    }
+  ],
+  "archive_member_count": 67,
+  "archive_members_SHA256_verified": true
+}
