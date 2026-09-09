@@ -28,3 +28,7 @@
 八请求全部保留首个 prefill/decode 的过程 trace，不能解读为 1024 个解码步都有过程追踪。R08 重放只作硬件属性旁证，不参与延迟排名。采样缺口不是零利用率，selected-kernel 间隔不是设备空闲；跨设备同轴显示不证明细粒度时钟同步。
 
 `validation/REVISION_AUDIT.json` 独立对照 R09 CSV；`validation/BROWSER_AUDIT.json` 记录禁止网络后的交互与截图检查；`BUILD_MANIFEST.json` 证明所有原始内嵌数据字节不变。`original/` 是原始 R10 完整副本，`attempts/` 保留本次展示候选、工具、日志和审计历史。
+
+## 复现生成顺序
+
+在同一封存来源下的新候选目录运行：`tools/build.py` → `tools/explain_request_coverage.py` → `tools/trim_request_tails.py` → `tools/browser_audit.py` → `tools/audit_request_trim.py` → `tools/audit.py`。先保留旧候选再生成，不能覆写已封存原始 R10。

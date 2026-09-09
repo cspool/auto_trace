@@ -1,0 +1,108 @@
+{
+  "status": "complete",
+  "argv": [
+    "tools/audit_request_trim.py"
+  ],
+  "script_sha256": "0e78ead6bacf52c17e249e962e020bc61a5967366ca6c08c302b5862558dfafa",
+  "elapsed_seconds": 17.598968982696533,
+  "checks": {
+    "independent_R09_context_endpoints_and_tail_durations": true,
+    "all_eight_requests_retained": true,
+    "only_request_presentation_endpoints_changed": true,
+    "all_non_request_intervals_unchanged": true,
+    "complete_original_payload_unchanged": true,
+    "scope_and_omitted_durations_before_visualization": true,
+    "network_denied_browser": true
+  },
+  "browser": {
+    "eventCount": 59872,
+    "contextCount": 318850,
+    "view": [
+      "0",
+      "192957683916"
+    ],
+    "requests": [
+      {
+        "id": "batch8-dual-dcu-dp2-req-001-9ff911f1de6b093c",
+        "display_end_ns": "1788409294381065953",
+        "source_end_ns": "1788409911270074537",
+        "omitted_tail_ns": "616889008584"
+      },
+      {
+        "id": "batch8-dual-dcu-dp2-req-002-28a42990210e6f68",
+        "display_end_ns": "1788409299268652550",
+        "source_end_ns": "1788409920759320265",
+        "omitted_tail_ns": "621490667715"
+      },
+      {
+        "id": "batch8-dual-dcu-dp2-req-003-f69e92ff8427bd4f",
+        "display_end_ns": "1788409343968527852",
+        "source_end_ns": "1788409933628466184",
+        "omitted_tail_ns": "589659938332"
+      },
+      {
+        "id": "batch8-dual-dcu-dp2-req-004-71f4a612b67ff786",
+        "display_end_ns": "1788409348631853232",
+        "source_end_ns": "1788409946738291384",
+        "omitted_tail_ns": "598106438152"
+      },
+      {
+        "id": "batch8-dual-dcu-dp2-req-005-9c4c6d4653893ac5",
+        "display_end_ns": "1788409393146600369",
+        "source_end_ns": "1788409967714189962",
+        "omitted_tail_ns": "574567589593"
+      },
+      {
+        "id": "batch8-dual-dcu-dp2-req-006-1075ae173cde2b41",
+        "display_end_ns": "1788409438036662757",
+        "source_end_ns": "1788409989825824507",
+        "omitted_tail_ns": "551789161750"
+      },
+      {
+        "id": "batch8-dual-dcu-dp2-req-007-02dcf32f532b8ed3",
+        "display_end_ns": "1788409434541799601",
+        "source_end_ns": "1788409978702800268",
+        "omitted_tail_ns": "544161000667"
+      },
+      {
+        "id": "batch8-dual-dcu-dp2-req-008-d1b15af09df90d04",
+        "display_end_ns": "1788409388188510038",
+        "source_end_ns": "1788409955160739582",
+        "omitted_tail_ns": "566972229544"
+      }
+    ],
+    "allNonRequestIntervalsRetained": true,
+    "noEventBeyondCut": true,
+    "allRequestCutsContainTheirEvents": true,
+    "interactions": {
+      "locate_clipped_request": true,
+      "source_original_retained": true,
+      "one_ns_zoom": true
+    }
+  },
+  "browser_errors": [],
+  "external_requests": [],
+  "scope_sha256": "d63ce88effbdd2abd075edb796a0db06c395b42d2579302bdd65c1fe040a4f6e",
+  "output_files": [
+    {
+      "path": "acceptance/E2E_PROCESS_TIMELINE_LOSSLESS.html",
+      "sha256": "2ae368d5679c09be481172150d7c5bc3411834b30ea12e283af9e47d4aa9f4a4",
+      "size": 56071600
+    },
+    {
+      "path": "acceptance/REQUEST_COVERAGE.html",
+      "sha256": "af3a788268b3a324c5f8ea9261a6156b128eb625197c4dcc33806ea887114e3c",
+      "size": 913175
+    },
+    {
+      "path": "index.html",
+      "sha256": "d45a2e9da4e9f40835151bcdf44a2c17906e82015490aceb32e3549d8e857ad2",
+      "size": 7147
+    },
+    {
+      "path": "acceptance/index.html",
+      "sha256": "291970fd49079d3d1921ef8b3ec5517e69a534da1a4ba525d5ae53f817599b0b",
+      "size": 7146
+    }
+  ]
+}
