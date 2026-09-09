@@ -14,16 +14,36 @@
     "R10"
   ],
   "bindings": {
-    "R01": {"skill": "qwen-dcu-same-input-layer-wise-workflow"},
-    "R02": {"skill": "qwen-dcu-fx-process-nvtx-instrumentation"},
-    "R03": {"skill": "qwen-dcu-process-performance-breakdown"},
-    "R04": {"skill": "qwen-dcu-process-gpu-hardware-trace"},
-    "R05": {"skill": "qwen-dcu-segmented-process-attribution"},
-    "R06": {"skill": "qwen-dcu-workflow05-evidence-planning"},
-    "R07": {"skill": "qwen-dcu-workflow05-full-request-process-trace"},
-    "R08": {"skill": "qwen-dcu-workflow05-targeted-hardware-gap-analysis"},
-    "R09": {"skill": "qwen-dcu-workflow05-utilization-concurrency-analysis"},
-    "R10": {"skill": "qwen-dcu-workflow05-trace-visualization-reporting"}
+    "R01": {
+      "skill": "qwen-dcu-same-input-layer-wise-workflow"
+    },
+    "R02": {
+      "skill": "qwen-dcu-fx-process-nvtx-instrumentation"
+    },
+    "R03": {
+      "skill": "qwen-dcu-process-performance-breakdown"
+    },
+    "R04": {
+      "skill": "qwen-dcu-process-gpu-hardware-trace"
+    },
+    "R05": {
+      "skill": "qwen-dcu-segmented-process-attribution"
+    },
+    "R06": {
+      "skill": "qwen-dcu-workflow05-evidence-planning"
+    },
+    "R07": {
+      "skill": "qwen-dcu-workflow05-full-request-process-trace"
+    },
+    "R08": {
+      "skill": "qwen-dcu-workflow05-targeted-hardware-gap-analysis"
+    },
+    "R09": {
+      "skill": "qwen-dcu-workflow05-utilization-concurrency-analysis"
+    },
+    "R10": {
+      "skill": "qwen-dcu-workflow05-trace-visualization-reporting"
+    }
   },
   "requires": [
     "one continuous fresh R01-R10 lineage; external runtime evidence is forbidden",
@@ -31,6 +51,6 @@
     "all GPU work runs serially on physical DCU 1",
     "R07 captures one full-request process timeline with live SE utilization",
     "R07 and R08 generate the dependency and traffic/resource models",
-    "R10 emits a self-contained offline acceptance bundle"
+    "R10 preserves the complete lossless archive and separately renders Process trapezoids and associated hardware-resource windows under the shared view contract"
   ]
 }

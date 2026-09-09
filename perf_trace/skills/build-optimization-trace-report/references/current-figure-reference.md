@@ -2,6 +2,11 @@
 
 Select the visual baseline by the question the figure answers:
 
+- For Process-distribution/high-latency and resource-window/concurrency pages,
+  use the [Workflow05 Process/resource contract](../../qwen-dcu-workflow05-trace-visualization-reporting/references/process-resource-contract.md).
+  That profile uses trapezoids, a common clock, simultaneous proportional
+  resource glyphs and explicit omission of uncovered resource windows. The
+  A–D physical dimensions, Top-K labels and per-event caps below do not apply.
 - Use the single-batch A–D profile below for composition and process/kernel
   zoom figures.
 - For a long client overview and multi-device scheduling over time, use the

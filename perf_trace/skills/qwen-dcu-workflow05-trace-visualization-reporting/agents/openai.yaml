@@ -1,4 +1,7 @@
 interface:
-  display_name: "Qwen DCU Fresh E2E Visualization"
-  short_description: "Build a self-contained offline acceptance bundle"
-  default_prompt: "Use $qwen-dcu-workflow05-trace-visualization-reporting to generate and independently validate the same fresh run's complete process timeline with deterministic distinct colors for the top 10 observed process-latency contributors and readable event labels inside every request/forward/layer/process/runtime/queue/kernel rectangle as zoom permits, high-latency hardware view, concurrency/utilization view, and self-contained offline acceptance manifest."
+  display_name: Qwen DCU Process and Resource Views
+  short_description: Build a self-contained offline acceptance bundle
+  default_prompt: Use $qwen-dcu-workflow05-trace-visualization-reporting to distinguish
+    formal fresh R10 from retained presentation, render Process trapezoids and only
+    associated hardware-resource windows with simultaneous proportional metrics, and
+    audit source scope, omissions and offline operation.

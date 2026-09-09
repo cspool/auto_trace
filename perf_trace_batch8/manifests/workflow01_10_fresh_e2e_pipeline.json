@@ -88,8 +88,8 @@
       "adapt_goal": "A06",
       "skill": "qwen-dcu-workflow05-evidence-planning",
       "skill_path": "perf_trace_batch8/skills/qwen-dcu-workflow05-evidence-planning/SKILL.md",
-      "skill_file_sha256": "50ecf049df469a1e135adfd88d3ae53d8e18f788ff21f5aa473e7bfe43dfe0b0",
-      "skill_tree_sha256": "58ca11ec18de7e00344553f7d7901bcc325cd9c16535cb3a920db19b514ab0ab",
+      "skill_file_sha256": "7ee6848da8f43077ada28cc5dd6d9f688fe0b745d5f7a94fdf46251a4adbd38b",
+      "skill_tree_sha256": "faa799adbade24a9dfca7f279258bf877f5e2d63c1bcdc3c8831ff6a84b8ac97",
       "skill_tree_files": [
         "SKILL.md"
       ],
@@ -105,8 +105,8 @@
       "adapt_goal": "A07",
       "skill": "qwen-dcu-workflow05-full-request-process-trace",
       "skill_path": "perf_trace_batch8/skills/qwen-dcu-workflow05-full-request-process-trace/SKILL.md",
-      "skill_file_sha256": "ca4fb8878eb51e871af69262413a706073bf709d129e8a9f5d8f4632d5c77e03",
-      "skill_tree_sha256": "5e13fa8dbd03e630d89f524442e7b726e8e90a8b974686b5753ed920665b645c",
+      "skill_file_sha256": "247890d0859bf3aef15289f1c1a68537b8a4625fa9738cafa6bac56de984bca2",
+      "skill_tree_sha256": "1afbf18866c1f89b1a9a61fdd24778ff9719f20151207f33be540bc458aa984d",
       "skill_tree_files": [
         "SKILL.md"
       ],
@@ -123,10 +123,11 @@
       "adapt_goal": "A08",
       "skill": "qwen-dcu-workflow05-targeted-hardware-gap-analysis",
       "skill_path": "perf_trace_batch8/skills/qwen-dcu-workflow05-targeted-hardware-gap-analysis/SKILL.md",
-      "skill_file_sha256": "91a9d5bf6a0c9630c0ab75775f1426457e6e4f91d2c62a08fd6506a886e84da6",
-      "skill_tree_sha256": "8f1bd1f21d2599a8cee0518224f728ebd2bf1ac380fd7a8dc28cfe5c923cb2be",
+      "skill_file_sha256": "d6394df08be79e7704761125b40f9ca88fb2416444a7399ce66e61731f70bd52",
+      "skill_tree_sha256": "3e1a40cfdf3e8c30da427ad76b1c57bd84c02393ce48ad3c0460633c9226d6be",
       "skill_tree_files": [
-        "SKILL.md"
+        "SKILL.md",
+        "references/formal-runtime.md"
       ],
       "predecessors": [
         "R01",
@@ -142,10 +143,11 @@
       "adapt_goal": "A09",
       "skill": "qwen-dcu-workflow05-utilization-concurrency-analysis",
       "skill_path": "perf_trace_batch8/skills/qwen-dcu-workflow05-utilization-concurrency-analysis/SKILL.md",
-      "skill_file_sha256": "584c67c790a61216301c29f508911556de9b8a2e0d9f1e6d486a9e7c931898c7",
-      "skill_tree_sha256": "61100ebf768d24d4ab61f7957a54dd25b84e012825a7250db6ffbff68b59c705",
+      "skill_file_sha256": "21d977ab4855182bd5c3bace3f2a2bb1d6f79320ada11a3019467f677675ddaf",
+      "skill_tree_sha256": "e9ca5ec2e517a06e8fe3ea2d6e8479dd8565ff014f010fce2056a41922f14775",
       "skill_tree_files": [
-        "SKILL.md"
+        "SKILL.md",
+        "references/formal-runtime.md"
       ],
       "predecessors": [
         "R01",
@@ -162,10 +164,12 @@
       "adapt_goal": "A10",
       "skill": "qwen-dcu-workflow05-trace-visualization-reporting",
       "skill_path": "perf_trace_batch8/skills/qwen-dcu-workflow05-trace-visualization-reporting/SKILL.md",
-      "skill_file_sha256": "980f01b2f76bd5cdd900605f87c9b331b9132ce16fab2196123e0ef3933a72a0",
-      "skill_tree_sha256": "43a711b2d52946985849dea4d0f24930c614a0034174d94ef38dee35121f0466",
+      "skill_file_sha256": "9de1de6472cb36562aa503a7794ff18aea36e9cd2e586a5433d9d16458dd9920",
+      "skill_tree_sha256": "85168021417cd8aaa8290e48943fc66437ebe73313b2496a1c29c05bac7bd289",
       "skill_tree_files": [
-        "SKILL.md"
+        "SKILL.md",
+        "references/formal-runtime.md",
+        "references/process-resource-contract.md"
       ],
       "predecessors": [
         "R01",
@@ -272,6 +276,6 @@
     "world size 2, tensor parallel size 1, pipeline parallel size 1, data parallel size 2, and data_parallel_backend=mp remain fixed",
     "each Goal consumes and hash-validates the complete same-run predecessor handoff prefix and immutable cumulative ledger",
     "the scheduler advances only after a complete handoff passes the profile, lineage, evidence, path, and hash gates",
-    "R07 is the sole observed request clock, R08 attributes are replay_projected, R09 owns twelve normalized tables, and R10 is lossless and offline"
+    "R07 preserves declared observed scope; R08 retains own-pass counters and times; R09 preserves twelve full tables and derived view inputs; R10 separates Process trapezoids, hardware-only resource windows and the complete lossless archive"
   ]
 }

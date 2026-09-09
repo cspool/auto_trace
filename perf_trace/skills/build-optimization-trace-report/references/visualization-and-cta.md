@@ -1,5 +1,13 @@
 # Visualization and CTA Rules
 
+Choose the profile before choosing geometry. Workflow05 high-latency Process
+trapezoids and resource-window plots follow the
+[shared Process/resource contract](../../qwen-dcu-workflow05-trace-visualization-reporting/references/process-resource-contract.md).
+Their common time map, continuous metric heights and hardware-only visibility
+are not the per-rectangle enlargement/capping scheme used below. These
+remaining rules apply to optimization composition, scheduling annotations and
+CTA explanations; keep the user's requested profile rather than mixing them.
+
 ## Separate measured coordinates from display coordinates
 
 Keep two representations:

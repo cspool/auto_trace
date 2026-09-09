@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "dispatches_checked": 4608,
+  "process_direction_profiles_checked": 3840,
+  "source_counter_formulas_independently_recomputed": true,
+  "same_row_timestamps": true,
+  "no_R07_latency_denominator": true,
+  "read_write_kept_separate": true,
+  "shape_gate_verified": true,
+  "over_100_values_preserved": true,
+  "outputs": {
+    "DISPATCH_BANDWIDTH.csv": "3ec7e09a11f774db0b76ec8fed58cc7544bca771b425aaf2484194de74419b79",
+    "DISPATCH_BANDWIDTH.jsonl": "59a797268ede818128376dd4eb8ff3c30bfa4a1686f07c95c1413d83d4b01f2e",
+    "PROCESS_BANDWIDTH.json": "a73ea47bceb1329f8cdc02743ef74a80288b9cae70153b45f66b371a9d176775"
+  }
+}

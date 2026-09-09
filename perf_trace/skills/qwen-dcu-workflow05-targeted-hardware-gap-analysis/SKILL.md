@@ -1,154 +1,71 @@
 ---
 name: qwen-dcu-workflow05-targeted-hardware-gap-analysis
-description: Execute R08 for one Qwen3.5-27B fresh R01-R10 lineage. Consume the same run's R07 observed full-request trace and R06 bounded family plan, allow audited profiling-tool source changes without source-hash equality, collect serial DCU 1 PMC evidence, probe gfx936 capabilities, and build the FX-visible traffic/DCU-resource model without turning replay timing into latency.
+description: Collect bounded same-lineage PMC evidence or restore retained dispatch counters and their own timings for audited resource references. Preserve missing states and distinguish replay resources from observed latency.
 ---
 
-# Qwen DCU Fresh Targeted Hardware Evidence
+# R08: Process evidence and analytical views
 
-## Objective
+Own hardware evidence and its scope. Capture only when explicitly running
+the authorized fresh R08 plan; for an existing report, restore and calculate
+from retained counters before considering any new acquisition.
 
-Attach fresh, replay-projected hardware diagnostics to the bounded high-value
-kernel-family subset selected by R06 while preserving R07 non-replay time as
-the only latency axis. Build the traffic/resource model used by R09 and R10.
+Read the [shared Process/resource contract](../qwen-dcu-workflow05-trace-visualization-reporting/references/process-resource-contract.md) for formulas,
+selection, geometry, availability, time mapping and acceptance. Its rules are
+shared across R08–R10 so producer fields and displayed meaning stay consistent.
 
-## Inputs
+## Execution modes
 
-Require `user.evidence_acquisition_mode=fresh_no_prior_runtime_reuse` and the
-same run's complete R06/R07 handoffs. Rehash:
+For a scheduler-assigned fresh stage, read [formal runtime requirements](references/formal-runtime.md)
+and validate its full predecessor prefix, target/profile/topology, source hashes,
+artifact ownership, immutable attempts and handoff gates. These formal rules
+remain applicable even when the visual subset is small.
 
-- R06 lineage and target manifests;
-- R06 bounded hardware-family plan;
-- R07 full-request metadata and normalized timing/ownership tables;
-- R07 fresh-run dependency adapter;
-- current profiler, capability probe, consolidator, and model builder.
+For retained evidence, work in a separate output directory, keep original
+archives/tables/handoffs unchanged, and record `formal_r10_regeneration=false`
+for presentation. Restoring existing bytes and calculating sidecars is not a
+new R07/R08 acquisition or a fresh R09/R10 handoff. Do not invoke the scheduler,
+create a Goal or start a profiler merely to revise a report.
 
-Reject paths from another runtime tree, archived PMC data, user-supplied
-adapters/models, and untracked substitutions.
+## Procedure
 
-## Lineage and Source Changes
+1. Identify fresh capture versus retained restoration; pin the lineage and sources.
+2. In fresh mode, validate the R06 bounded plan, R07 ownership and formal runtime
+   binding before any device work. Preserve full topology and immutable attempts.
+3. Retain raw counters and their own begin/end times per dispatch. In retained
+   mode, rehash existing archives/normalized records and perform CPU-only recovery.
+4. Derive separate directional bandwidth and L2 activity only from supported
+   counters; compare original derived metrics independently. Require valid
+   own-pass durations, exact identities and shape gates for projection.
+5. Publish metric coverage and reason-coded missing states with source hashes.
+   Do not increase capture scope just to remove empty rectangles in a report.
 
-Carry the same `lineage_id`. R08 may change profiling wrappers, counter lists,
-exporters, analyzers, or trace-only code. Record these changes in
-`R08_SOURCE_LINEAGE.json`; source hash equality with R01/R07 is not required.
+## Local tools and capability boundary
 
-Preserve model/input/sampling/device and inference-output semantics. Stop when
-a change alters those semantics or invalidates R07 process/family identity.
+The project tools are in `perf_trace/scripts/` (also used for Batch8).
+Read the [execution guide](../../scripts/process_pile_assets/README.md)
+when restoring or generating a retained report.
 
-## Device and Collection
+- Restore/calculate: `restore_batch8_bandwidth_sources.py`,
+  `calculate_batch8_replay_bandwidth.py`, `audit_batch8_replay_bandwidth.py`,
+  `calculate_batch8_l2_activity.py`.
+- Render/audit retained supported schemas: `build_process_duration_piles.py`,
+  `audit_process_duration_piles.py`.
 
-Use physical DCU 1 only and run GPU work serially. Re-probe device identity and
-load immediately before each capture. Allocate a new empty output directory for
-every replay mode/batch.
+These retained adapters do not implement a fresh scheduler stage or regenerate
+its twelve-table analysis. A formal R10 must use a bound native builder that
+implements the same profile; verify capability before declaring completion.
+No new acquisition, upload or publication is implied. Keep existing user scope.
 
-Use R06's bounded family subset, not the full process target list, for expensive
-PMC work. A plan-bounded superset capture is allowed only when every discarded
-row is audited and exact selected-family post-attribution is complete.
+## Serial Runtime Contract
 
-For each batch:
-
-1. freeze the exact request, environment, literal kernel-family filter and
-   expected process/family order;
-2. collect the required compute, memory/cache and occupancy/stall counter modes
-   in separate fresh roots;
-3. retain raw DB/PMC/exporter logs and device/tool provenance;
-4. recover selected rows by same-replay pid, exact name subsequence and dispatch
-   order, then strict HIPTX/runtime/`_Index`/HIPOPS ownership;
-5. require selected-name/order match rate at least `0.99`, zero selected
-   ambiguity, and complete selected-family coverage.
-
-Never use replay duration, replay launch gaps, or replay overlap as request or
-process latency.
-
-## Capability Probe
-
-Run:
+This machine-readable block applies only to fresh execution. It preserves the
+existing scheduler interface; retained work does not emit this handoff.
 
 ```text
-pra2026-bh408/scripts/perf_trace/probe_dcu_capabilities.py
+runtime_branch=workflow01-10-fresh-e2e
+runtime_goal=R08
+runtime_predecessors=R01,R02,R03,R04,R05,R06,R07
+runtime_artifact_root=<scheduler-assigned>
+runtime_handoff_output=<scheduler-assigned>
+advance_only_after=complete
 ```
-
-Require physical device 1 and architecture `gfx936`. Record verified counter
-availability and unavailable quantities explicitly. Do not infer HBM/DRAM
-bandwidth from logical tensor bytes. Treat occupancy formulas as theoretical
-upper bounds unless an achieved field is directly observed.
-
-## Traffic and Resource Model
-
-Run:
-
-```bash
-python3 pra2026-bh408/scripts/perf_trace/build_traffic_resource_model.py \
-  --lineage-manifest <R06-fresh-run-lineage-manifest.json> \
-  --dependency-adapter <R07-fresh-run-dependency-adapter.json> \
-  --hardware-metrics <R08-hardware-metrics.csv> \
-  --device-capabilities <R08-device-capabilities.json> \
-  --output-dir <runtime_artifact_root>/traffic-resource-model
-```
-
-Inputs are the R07 fresh-run dependency adapter, R08 current PMC metrics, the
-R01/R02 fixed-input FX shapes referenced by the lineage, and the R08 capability
-JSON. Require:
-
-```text
-model_type=fresh_run_fx_visible_traffic_and_dcu_family_resource
-status=complete
-lineage_id=<R06/R07 lineage_id>
-traffic_boundary.hbm_or_dram_traffic_claimed=false
-resource_boundary.achieved_occupancy_claimed=false
-```
-
-Logical FX tensor bytes, visible working sets, FLOPs, theoretical occupancy,
-observed counters, replay projections, and unavailable values must remain
-separate fields.
-
-## Required Outputs
-
-Write under `runtime_artifact_root`:
-
-```text
-R08_SOURCE_LINEAGE.json
-device_capabilities.json
-targeted_family_plan.json
-raw/<batch>/...
-hardware_metrics.csv
-hardware_metrics_by_kernel_family.csv
-hardware_coverage.json
-traffic-resource-model/process_traffic_model.csv
-traffic-resource-model/kernel_family_resource_model.csv
-traffic-resource-model/traffic_resource_model.json
-R08_COMPLETION_AUDIT.json
-```
-
-Every selected R07 family must appear exactly once in the final disposition as
-`collected`, `no_kernel`, `unavailable`, or `failed`.
-
-## Handoff
-
-Write only the scheduler-assigned R08 handoff:
-
-```json
-{
-  "runtime_goal": "R08",
-  "status": "complete",
-  "execution_status": "complete",
-  "evidence_status": "complete",
-  "coverage_target_met": true,
-  "next_authorization_required": false,
-  "fresh_e2e_evidence": {
-    "schema_version": 1,
-    "status": "complete",
-    "lineage_id": "...",
-    "device_capabilities": {"path": "...", "sha256": "..."},
-    "traffic_resource_model": {"path": "...", "sha256": "..."},
-    "source_lineage": {"path": "...", "sha256": "..."}
-  }
-}
-```
-
-## Stop Conditions
-
-Stop for external evidence, lineage mismatch, semantic-contract change,
-concurrent GPU use, cap violation, profiler/device drift, filter ambiguity,
-selected-family coverage gaps, ownership failure, unverified required counter
-semantics, replay timing mixed into latency, or model-builder validation
-failure. Preserve raw evidence and diagnostics.

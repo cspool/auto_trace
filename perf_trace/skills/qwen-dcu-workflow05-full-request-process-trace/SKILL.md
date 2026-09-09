@@ -11,6 +11,21 @@ Collect exactly one non-replay request containing every R06 process range,
 along with live SE utilization and the process dependency adapter required by
 R08-R10. This is the observed latency clock for the rest of the run.
 
+## Declared scope and downstream coverage
+
+Record the frozen request/rank/device/phase/step scope and actual covered ranges
+with the trace. R07 target coverage, live-mean availability and R08 hardware
+coverage have distinct denominators. Keep original samples/gaps and no-kernel
+Process rows even when a downstream resource view hides them. Do not turn
+missing resource metrics into missing Process execution, or an eight-request
+envelope into an all-token trace claim. Scope changes require the runtime's
+explicit contract revision; they cannot be invented after a failed capture.
+
+The downstream [Process/resource contract](../qwen-dcu-workflow05-trace-visualization-reporting/references/process-resource-contract.md)
+uses R07 intervals for Process distribution and only eligible resource windows
+for the resource page. Those display masks never alter this stage's capture
+or completion target.
+
 ## Inputs
 
 Require `user.evidence_acquisition_mode=fresh_no_prior_runtime_reuse` and a

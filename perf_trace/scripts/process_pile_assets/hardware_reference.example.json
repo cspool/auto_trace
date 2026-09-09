@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "architecture": "gfx936",
+  "wavefront_size": 64,
+  "vendor_as_reported": "海光 DCU",
+  "device_model": "not specified in reference",
+  "bandwidth_reference": {
+    "value": 1206,
+    "unit": "GB/s",
+    "bytes_per_second": 1206000000000,
+    "class": "document_reported_empirical_microbenchmark_reference",
+    "manufacturer_rated_peak": false,
+    "same_physical_device_verified": false,
+    "unit_convention": "decimal GB = 10^9 bytes"
+  },
+  "compute_reference": {
+    "value": 395,
+    "unit": "TFLOPS",
+    "dtype": "BF16",
+    "class": "document_reported_empirical_microbenchmark_reference"
+  },
+  "source": {
+    "sha256": "88c6f716f24c4db87fb33e92d599a5a95eca763052444e558a6c24ffa32260e4",
+    "title": "为什么 decode 慢、双缓冲又没用?——海光 DCU 上的实测拆解",
+    "reported_experiments": [
+      "expA.py",
+      "dbocc.hip/py"
+    ],
+    "raw_microbenchmark_sources_in_share": false
+  },
+  "usage": "Reference denominator only; keep empirical label. Requires bytes and duration from the same replay/native dispatch. Never divide replay bytes by R07 Process duration and relabel as observed R07 utilization. Read/write captures may be different runs."
+}

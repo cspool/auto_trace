@@ -104,6 +104,21 @@ Use the current-run products with these boundaries:
 Never add host-range duration, kernel-duration sum, or busy union as if they
 were the same metric. Never use replay duration as request/process latency.
 
+## Trace scope and analytical-view capability
+
+Freeze request/rank/device/phase/step capture scope separately from hardware
+coverage. A completed request envelope is not proof of every token's Process
+trace. Do not apply the display ten-percent threshold to R07 target enumeration.
+Keep every planned Process/fragment and explicitly account for unselected PMC
+families. Never shrink declared scope after seeing missing captures.
+
+The [Process/resource contract](../qwen-dcu-workflow05-trace-visualization-reporting/references/process-resource-contract.md)
+requires a Process-trapezoid view and a separate hardware-window view. Probe
+whether the bound R10 builder supports those semantics, not just whether it
+can open a generic timeline. The repository retained-schema adapter does not
+by itself prove support for a new fresh R09 input. Record any missing producer/
+renderer capability before initiating costly work; do not claim it was executed.
+
 ## Planning Workflow
 
 1. Revalidate the R01-R05 ledger and write the lineage manifest.
@@ -136,8 +151,8 @@ were the same metric. Never use replay duration as request/process latency.
 8. Independently recompute counts, joins, hashes, conservation, and target
    coverage before writing the handoff.
 
-The full R07 target lists are not cost-truncated. The bounded ranking controls
-only R08 PMC and R10 zoom selection.
+The full R07 target lists are not cost-truncated. The bounded ranking controls only R08 PMC cost. R09/R10 derive their display
+selection independently from the complete observed Process denominator.
 
 ## Required Outputs
 

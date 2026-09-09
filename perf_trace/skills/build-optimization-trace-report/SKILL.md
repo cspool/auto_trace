@@ -66,10 +66,10 @@ by GPU-time overlap. Keep nested totals separate.
 
 If the task requires creating or reviewing sampled latency attribution and the
 skill is available, use `$visipruner-sampled-latency-attribution`. If the input
-is a fresh Workflow05 acceptance lineage, use
+is a Workflow05 fresh acceptance or retained analytical-view task, use
 `$qwen-dcu-workflow05-trace-visualization-reporting` to generate/validate that
-bundle first; this skill consumes the accepted trace rather than replacing
-R10.
+bundle under its correct execution mode; this report skill consumes that
+evidence and does not start fresh acquisition or replace the R10 handoff.
 
 ### 3. Compute the observed result
 
@@ -86,6 +86,18 @@ composition share, latency delta or throughput delta. Do not subtract or add
 unlike quantities.
 
 ### 4. Visualize the result
+
+First select the figure's job. For Workflow05 Process distribution or resource
+availability, read the
+[shared analytical-view contract](../qwen-dcu-workflow05-trace-visualization-reporting/references/process-resource-contract.md).
+Use trapezoid member-line groups for high latency and simultaneously displayed,
+proportionally sized resource glyphs on eligible hardware windows for the
+resource view. Retain the complete source denominator separately. Do not apply
+composition-panel Top-K labels, per-event width stretching, or a full-request
+resource display mandate to that profile.
+
+The following composition/optimization examples apply when that is the user's
+question, rather than the analytical-view profile:
 
 Split figures by question instead of forcing all information into one panel.
 A useful, non-mandatory layout is:

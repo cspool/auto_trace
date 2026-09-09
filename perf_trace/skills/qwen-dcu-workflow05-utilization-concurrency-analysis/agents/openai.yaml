@@ -1,4 +1,7 @@
 interface:
-  display_name: "Qwen DCU Fresh E2E Analysis"
-  short_description: "Analyze full-request utilization and concurrency"
-  default_prompt: "Use $qwen-dcu-workflow05-utilization-concurrency-analysis to combine the same run's R07 observed timeline/live samples and R08 replay-projected model into deterministic process, concurrency, launch-gap, utilization, dependency, and opportunity tables."
+  display_name: Qwen DCU Process and Resource Analysis
+  short_description: Analyze full-request utilization and concurrency
+  default_prompt: Use $qwen-dcu-workflow05-utilization-concurrency-analysis to preserve
+    complete R07 tables, validate R08 same-pass resource rates, derive the global
+    Process pile plan and explicit coverage, and keep retained sidecars separate from
+    formal fresh R09.

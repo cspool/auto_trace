@@ -1,0 +1,208 @@
+{
+  "single_batch": {
+    "source_processes": 17168,
+    "groups": 3,
+    "piles": 15,
+    "source_hashes_unchanged": true,
+    "pages": {
+      "HIGH_LATENCY_PROCESS_HARDWARE_TIMELINE.html": {
+        "tracks": 15,
+        "order": [
+          "gdn_recurrent_core/5",
+          "qkv_projection/5",
+          "gdn_recurrent_core/1",
+          "mlp/2",
+          "qkv_projection/1",
+          "mlp/1",
+          "qkv_projection/4",
+          "mlp/5",
+          "mlp/3",
+          "gdn_recurrent_core/2",
+          "gdn_recurrent_core/4",
+          "qkv_projection/3",
+          "mlp/4",
+          "qkv_projection/2",
+          "gdn_recurrent_core/3"
+        ],
+        "compute_known": 1265,
+        "bandwidth_known": 0,
+        "trapezoids": {
+          "envelopes": 7,
+          "contained_lines": 335
+        },
+        "browser_errors": [],
+        "external_requests": [],
+        "ten_sections": true,
+        "linear_scale": true,
+        "exact_1ns": true,
+        "member_details": true,
+        "rendering": {
+          "resource_rectangles": 0,
+          "heights": [
+            2
+          ]
+        }
+      },
+      "CONCURRENCY_UTILIZATION.html": {
+        "tracks": 7,
+        "order": [
+          "qkv_projection/5",
+          "gdn_recurrent_core/1",
+          "qkv_projection/1",
+          "mlp/1",
+          "qkv_projection/4",
+          "mlp/3",
+          "mlp/4"
+        ],
+        "compute_known": 1265,
+        "bandwidth_known": 0,
+        "default_resource_windows": {
+          "eligible_instances": 10,
+          "visible_piles": 7,
+          "skipped_intervals": 11,
+          "skipped_duration_ns": 17373911596
+        },
+        "l2": {
+          "source_rows": 32,
+          "displayed_instances": 10,
+          "default_peak": null,
+          "all_visible_samples_selectable": 14,
+          "user_reference_formula_checked": true,
+          "no_default_utilization": true
+        },
+        "coverage_diagnostics": {
+          "compute": {
+            "available": 1265,
+            "too_few_samples": 3839
+          },
+          "l2_projected": {
+            "no_l2_sample": 5094,
+            "available": 10
+          }
+        },
+        "proportional_glyphs": {
+          "metric_count": 2,
+          "epsilon_markers": 3839,
+          "values_kept_unknown": true
+        },
+        "browser_errors": [],
+        "external_requests": [],
+        "ten_sections": true,
+        "linear_scale": true,
+        "exact_1ns": true,
+        "member_details": true,
+        "rendering": {
+          "resource_rectangles": 1,
+          "heights": [
+            84
+          ]
+        }
+      }
+    }
+  },
+  "batch8": {
+    "source_processes": 12544,
+    "groups": 3,
+    "piles": 15,
+    "source_hashes_unchanged": true,
+    "pages": {
+      "HIGH_LATENCY_PROCESS_HARDWARE_TIMELINE.html": {
+        "tracks": 15,
+        "order": [
+          "mlp/5",
+          "gdn_recurrent_core/2",
+          "gdn_recurrent_core/3",
+          "gdn_recurrent_core/4",
+          "post_attention_rmsnorm/2",
+          "post_attention_rmsnorm/3",
+          "post_attention_rmsnorm/1",
+          "gdn_recurrent_core/1",
+          "post_attention_rmsnorm/4",
+          "gdn_recurrent_core/5",
+          "mlp/2",
+          "post_attention_rmsnorm/5",
+          "mlp/1",
+          "mlp/3",
+          "mlp/4"
+        ],
+        "compute_known": 2807,
+        "bandwidth_known": 0,
+        "trapezoids": {
+          "envelopes": 12,
+          "contained_lines": 736
+        },
+        "browser_errors": [],
+        "external_requests": [],
+        "ten_sections": true,
+        "linear_scale": true,
+        "exact_1ns": true,
+        "member_details": true,
+        "rendering": {
+          "resource_rectangles": 0,
+          "heights": [
+            2
+          ]
+        }
+      },
+      "CONCURRENCY_UTILIZATION.html": {
+        "tracks": 9,
+        "order": [
+          "gdn_recurrent_core/2",
+          "gdn_recurrent_core/3",
+          "gdn_recurrent_core/4",
+          "post_attention_rmsnorm/2",
+          "post_attention_rmsnorm/3",
+          "post_attention_rmsnorm/1",
+          "post_attention_rmsnorm/4",
+          "gdn_recurrent_core/5",
+          "post_attention_rmsnorm/5"
+        ],
+        "compute_known": 2807,
+        "bandwidth_known": 0,
+        "default_resource_windows": {
+          "eligible_instances": 992,
+          "visible_piles": 9,
+          "skipped_intervals": 931,
+          "skipped_duration_ns": 186957601602
+        },
+        "coverage_diagnostics": {
+          "compute": {
+            "available": 2807,
+            "short_window": 3078,
+            "sampling_gap": 3
+          },
+          "read": {
+            "available": 992,
+            "not_sampled": 4896
+          },
+          "write": {
+            "available": 660,
+            "not_sampled": 4896,
+            "invalid_counter_or_duration": 332
+          },
+          "l2": {
+            "available": 992,
+            "not_sampled": 4896
+          }
+        },
+        "proportional_glyphs": {
+          "metric_count": 5,
+          "epsilon_markers": 3078,
+          "values_kept_unknown": true
+        },
+        "browser_errors": [],
+        "external_requests": [],
+        "ten_sections": true,
+        "linear_scale": true,
+        "exact_1ns": true,
+        "member_details": true,
+        "rendering": {
+          "resource_rectangles": 2,
+          "heights": [
+            204
+          ]
+        }
+      }
+    }
+  }
+}
