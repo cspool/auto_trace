@@ -9,3 +9,5 @@
 - 原始 R10 交互时间线：[下载 ZIP](https://github.com/cspool/auto_trace/releases/download/perf-trace-batch8-r10-complete-20260908/R10_offline_acceptance.zip)，解压后打开 `acceptance/index.html`。
 
 采用仓库 [build-optimization-trace-report](../../../perf_trace/skills/build-optimization-trace-report/SKILL.md) skill。使用固定例子，全部 8 请求均有完整声明范围内的 trace。全量 kernel / process / request 表、原始 HIP launch 参数、输入 SHA256、源码快照、生成器和审计均随报告保存。
+
+可读性修订 v2 已发布，产物对应提交 `66f3e96a60d375e4ff09c0eb4bca30d1c71f684b`。五个下载文件均通过大小与 GitHub 服务端 SHA256 核对；完整发布回执见 [PUBLICATION_COMPLETE.json](PUBLICATION_COMPLETE.json)，日志见 [publication.log](publication.log)。v1 回执保存在 `publication_receipts/v1/`。
