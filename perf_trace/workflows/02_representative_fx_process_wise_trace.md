@@ -2,6 +2,32 @@
 
 目标：对代表 input-layer 采集 strict FX process-wise trace，得到 direct process timing、kernel families、validation status、GPU kernel launch order。
 
+## 在串行链条中的位置
+
+w01–w05 **不是五个可独立执行的工作流，而是一条串行方法链**，共同覆盖
+R01–R10，在**同一 lineage 内按序执行一次**：
+
+| 工作流 | 覆盖 Goal |
+|---|---|
+| w01 | R01 |
+| w02 | R02、R03 |
+| w03 | R04 |
+| w04 | R05 |
+| w05 | R06–R10 |
+
+本文档是 **w02，覆盖 R02、R03**。据此有三条不可混淆的约束：
+
+- **不存在"只执行 w05"**：R06–R10 的 admission 要求完整有序的 R01–R05 前驱
+  handoff/ledger，缺任一前驱即不得启动。
+- **不存在"先跑 R01–R04，再从 w01 重跑一遍 R01–R10"**：链条只走一次；
+  中断恢复是从首个未完成 Goal 继续，不回到链条起点重跑，也不复用不完整产物。
+- **下游只消费上游产物，不重新证明其结论**：例如 w03 不重新证明 w02 的
+  process timing attribution，w05 不重新推导 R05 的类型映射与分母。
+
+一次 lineage 内可能包含**多轮模型采集**（如 R07 的 trace 轮次与 R08 的各计数族
+轮次是不同的 run），这属于同一条链条内不同 Goal 的采集轮次，
+**不是重复执行工作流**。
+
 ## Skills
 
 ```text
