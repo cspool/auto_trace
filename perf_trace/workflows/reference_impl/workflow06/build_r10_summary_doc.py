@@ -168,14 +168,96 @@ postprocess、sample 等）。</li></ul>
 </table>
 <p class="theme">读后面所有图时的换算：橙/蓝车道（bfcl/sharegpt）是"短而多/短而长尾"的调用，
 绿车道（lats）是巨量小调用的持续洪流；重 forward 堆的成员是"大 batch 的 step"，
-不属于任何单个 call。</p>"""
+不属于任何单个 call。</p>
+{{CHAR_ART}}"""
+
+
+def char_art(cf, cc, pf_hl):
+    """Character-art process anatomy from real trace numbers (LLaMA pair)."""
+    idx_f = {(r["program_id"], r["call_index"]): r for r in cf}
+    idx_c = {(r["program_id"], r["call_index"]): r for r in cc}
+    # worst-wait bfcl call present on both sides
+    key = max((k for k, r in idx_f.items() if r["class"] == "bfcl" and k in idx_c),
+              key=lambda k: idx_f[k]["first_token_rel_ms"] - idx_f[k]["submitted_rel_ms"])
+    rf, rc = idx_f[key], idx_c[key]
+    wf = rf["first_token_rel_ms"] - rf["submitted_rel_ms"]
+    sf = rf["finished_rel_ms"] - rf["first_token_rel_ms"]
+    wc = rc["first_token_rel_ms"] - rc["submitted_rel_ms"]
+    sc = rc["finished_rel_ms"] - rc["first_token_rel_ms"]
+    unit = max(wf + sf, wc + sc) / 46
+    bar = lambda w, s: "█" * max(1, round(w / unit)) + "░" * max(1, round(s / unit))
+    n_calls = sum(1 for r in cf if r["program_id"] == key[0])
+    def med(t):
+        v = sorted(d for p in pf_hl["piles"] if p["type"].endswith(t)
+                   for rows in p["rows"] for _, d in rows)
+        return v[len(v) // 2] / 1e3 if v else 0
+    art = f"""program 层（每个 program 是一条 call 链；lats 为 5 路并行的波）
+  bfcl    p=8 :  [c0]->[c1]->[c2]-> ... ->[c11]         12.5 call/程序, 串行, 工具延迟穿插
+  sharegpt p=5:  [c0]----->[c1]----->[c2]->[c3]         4.6 call/程序, 长 decode
+  lats   p=12 :  [c0 c1 c2 c3 c4] => [c5 .. c9] => ...  每波 5 个并行 call, ~193 call/程序
+
+call 层（真实调用 {key[0]}#{key[1]}，bfcl，程序共 {n_calls} 个 call；█=等待 ░=服务，同一比例尺）
+  FCFS        |{bar(wf, sf)}|  等待 {wf:,.0f} ms + 服务 {sf:,.0f} ms = {wf+sf:,.0f} ms
+  agentix_core|{bar(wc, sc)}|  等待 {wc:,.0f} ms + 服务 {sc:,.0f} ms = {wc+sc:,.0f} ms
+  —— 服务段几乎等长（{sf:,.0f} vs {sc:,.0f} ms），被移走的全部是 █ 等待段。
+
+step 层（引擎一次连续批迭代；LLaMA 捕获的 scope 中位时长）
+  [ preprocess ~{med('preprocess'):,.0f} µs | forward ~{med('forward'):,.0f} µs | sample/postprocess ... ]  × ~14,800 次/捕获
+  一个 call 的 ░ 服务段 = 连续许多 step 中各占一片：
+     step_k   [ c_a | c_b | …… | c_p ]   <= 一个 step 同时服务至多 16 个 call 各一个 token
+     step_k+1 [ c_a | c_b | …… | c_p ]      调度改变的只是谁的 token 进入下一个 step"""
+    return f'<pre class="art">{art}</pre>'
 
 
 def call_top_pile(calls_rows):
     ms = [{"d": int((r["finished_rel_ms"] - r["submitted_rel_ms"]) * 1e6),
            "start": int(r["submitted_rel_ms"] * 1e6), "end": int(r["finished_rel_ms"] * 1e6),
-           "id": i, "cls": r["class"]} for i, r in enumerate(calls_rows)]
+           "id": i, "cls": r["class"], "pid": r["program_id"], "idx": r["call_index"]}
+          for i, r in enumerate(calls_rows)]
     return lloyd_piles(ms)[4]
+
+
+def e2e_zoom_strip(calls, w0, w1, y0, tag):
+    """Paper-Fig.2-grained zoom: only short-program lanes, thick bars, short window."""
+    lanes = {}
+    for c in calls:
+        if c["class"] == "lats" or c["finished_rel_ms"] < w0 or c["submitted_rel_ms"] > w1:
+            continue
+        lanes.setdefault(c["program_id"], {"cls": c["class"], "cs": []})["cs"].append(c)
+    order = sorted(lanes.items(), key=lambda kv: (kv[1]["cls"], kv[0]))
+    rh = 20
+    out = [f'<text x="4" y="{y0+12}" font-size="11.5" font-weight="600" fill="{"#2f6f9f" if "core" in tag else "#1f2f45"}">{tag}</text>']
+    X = lambda t: LEFT + (W - LEFT - RIGHT) * (max(min(t, w1), w0) - w0) / (w1 - w0)
+    for i, (pid, ln) in enumerate(order):
+        y = y0 + 18 + i * rh
+        out.append(f'<text x="{LEFT-6}" y="{y+12}" font-size="9.5" text-anchor="end" fill="#48607d">{pid}·{ln["cls"]}</text>')
+        for c in ln["cs"]:
+            x0, x1, x2 = X(c["submitted_rel_ms"]), X(c["first_token_rel_ms"]), X(c["finished_rel_ms"])
+            out.append(f'<rect x="{x0:.1f}" y="{y+3}" width="{max(x1-x0,0.6):.1f}" height="12" fill="{WAIT}" opacity=".9"/>')
+            out.append(f'<rect x="{x1:.1f}" y="{y+3}" width="{max(x2-x1,0.6):.1f}" height="12" fill="{CLS_COLOR[ln["cls"]]}"/>')
+            if x1 - x0 > 30:
+                out.append(f'<text x="{(x0+x1)/2:.0f}" y="{y+12}" font-size="8.5" text-anchor="middle" fill="#fff">{c["first_token_rel_ms"]-c["submitted_rel_ms"]:.0f}ms</text>')
+    return out, y0 + 18 + len(order) * rh + 6
+
+
+def pair_bars(seg_f, idx_c, y0):
+    """Top short-class calls of the FCFS top pile vs the SAME call under core."""
+    shorts = sorted([m for m in seg_f if m["cls"] != "lats"], key=lambda m: -m["d"])[:5]
+    out = []
+    y = y0
+    dmax = max(m["d"] for m in shorts)
+    X = lambda ns: LEFT + (W - LEFT - RIGHT - 120) * ns / dmax
+    for m in shorts:
+        rc = idx_c.get((m["pid"], m["idx"]))
+        out.append(f'<text x="{LEFT-6}" y="{y+11}" font-size="9.5" text-anchor="end" fill="#48607d">{m["pid"]}#{m["idx"]} {m["cls"]}</text>')
+        out.append(f'<rect x="{LEFT}" y="{y+2}" width="{X(m["d"])-LEFT:.1f}" height="10" fill="{WAIT}" opacity=".85"/>')
+        out.append(f'<text x="{X(m["d"])+6:.0f}" y="{y+11}" font-size="9" fill="#1f2f45">FCFS {m["d"]/1e9:.1f} s</text>')
+        if rc:
+            dc = (rc["finished_rel_ms"] - rc["submitted_rel_ms"]) * 1e6
+            out.append(f'<rect x="{LEFT}" y="{y+14}" width="{max(X(dc)-LEFT,1):.1f}" height="10" fill="#2f6f9f" opacity=".85"/>')
+            out.append(f'<text x="{X(dc)+6:.0f}" y="{y+23}" font-size="9" fill="#2f6f9f">core {dc/1e9:.1f} s（{m["d"]/max(dc,1):.1f}×）</text>')
+        y += 32
+    return out, y + 4
 
 
 def call_pile_strip(seg, y0, tag, w0, w1):
@@ -267,12 +349,17 @@ def main():
     stats = {}
     audit = {"purpose": "excerpt-selection criteria and windows for R10_SUMMARY figures",
              "models": {}}
+    compo_html = ""
     for key, name in MODELS:
         cf = load_calls(a.art / f"{key}_fcfs_cap16")
         cc = load_calls(a.art / f"{key}_core_cap16")
         pf = json.loads((a.scratch / f"payload_{key}_fcfs_cap16.json").read_text())
         pc = json.loads((a.scratch / f"payload_{key}_core_cap16.json").read_text())
         facts = json.loads((a.art / f"gain_facts_{key}.json").read_text())
+        if key == "llama":
+            compo_html = compo_section(
+                Path("experiments/h23-agentix-8b/workloads/thr_mixed_r0.5.json")
+            ).replace("{CHAR_ART}", char_art(cf, cc, pf["hl"]))
         # -- part 1 window: 30 s maximizing FCFS wait mass of the SHORT program
         # classes (bfcl+sharegpt) — the classes the optimization acts on
         short = [c for c in cf if c["class"] != "lats"]
@@ -282,13 +369,29 @@ def main():
         parts = axis(w0, w1, 26, 560)
         s1, yn = e2e_strip(cf, w0, w1, 30, "FCFS baseline")
         s2, ye = e2e_strip(cc, w0, w1, yn, "agentix_core")
-        figs[1].append((name, fig(parts + s1 + s2, ye + 6),
+        # paper-grained zoom around the worst-wait short call in the window
+        shorts_w = [c for c in cf if c["class"] != "lats" and w0 <= c["submitted_rel_ms"] <= w1]
+        wc0 = max(shorts_w, key=lambda c: c["first_token_rel_ms"] - c["submitted_rel_ms"]) if shorts_w else None
+        zoom_html = ""
+        if wc0:
+            z0 = max(0.0, wc0["submitted_rel_ms"] - 500)
+            z1 = wc0["finished_rel_ms"] + 1500
+            zp = axis(z0, z1, 26, 260)
+            za, zy = e2e_zoom_strip(cf, z0, z1, 30, "FCFS baseline")
+            zb, zy2 = e2e_zoom_strip(cc, z0, z1, zy, "agentix_core")
+            zoom_html = (f'<p class="cap"><b>放大（论文 Fig.2 粒度，{(z1-z0)/1e3:.1f} s 窗，仅短程序车道，'
+                         f'红段内标注等待毫秒数）：</b>同一批调用，上图红段以秒计、下图以十毫秒计。</p>'
+                         + fig(zp + za + zb, zy2 + 6))
+        figs[1].append((name, fig(parts + s1 + s2, ye + 6) + zoom_html,
                         f"图示 [{w0/1e3:.0f}, {w1/1e3:.0f}] s 这 30 秒里的全部调用。上图（FCFS）中，"
                         f"bfcl（橙）与 sharegpt（蓝）车道的调用几乎每条都拖着长红段：这些短程序的调用"
                         f"排在 lats 洪流后面，等待远长于自身服务。下图（agentix_core）同一批调用的红段"
                         f"几乎消失——窗内短程序等待合计从 {wsum/1e3:.1f} s 降到 {wsum_c/1e3:.1f} s"
                         f"（{100*(wsum_c/max(wsum,1e-9)-1):+.0f} %），而绿（lats）车道两图肉眼无差别。"
-                        f"process 视角：每条红段的消失都对应『该 call 更早获得第一个 step 的成员资格』。"))
+                        f"process 视角：每条红段的消失都对应『该 call 更早获得第一个 step 的成员资格』。"
+                        f"<br><b>轴注：</b>横轴数字 + \"s\" = 从运行起点起算的墙钟秒（所有 process 的公共时钟，"
+                        f"call 的提交/首token/完成都落在这条轴上）；纵轴无刻度，一行 = 一个 program 的车道，"
+                        f"行内每条横条 = 该 program 的一个 call；放大图中 \"ms\" = 该 call 红段（等待）的毫秒长度。"))
         stats.setdefault(key, {})["w1"] = (wsum, wsum_c)
         audit["models"].setdefault(key, {})["part1"] = {
             "criterion": "sliding 30 s window maximizing FCFS short-class (bfcl+sharegpt) wait mass",
@@ -326,9 +429,20 @@ def main():
                    f"上一张图里调用堆的巨大差异，全部来自调用进入这些 step 的顺序。两图合起来是"
                    f"提升比例估算的依据：服务侧不变 ⇒ 用等待几何量重放 baseline 得上界，"
                    f"本模型为程序级重放估算的上界（见 gain_facts 与审计文件）。")
+        idx_cc = {(r["program_id"], r["call_index"]): r for r in cc}
+        pb, pby = pair_bars(seg_f, idx_cc, 30)
+        pb_head = [f'<text x="{LEFT}" y="16" font-size="10" fill="#48607d">同一调用两种策略下的端到端时长（上条 FCFS 红、下条 core 蓝；取 baseline 高延迟堆中最长的 5 个短程序调用）</text>']
         figs[2].append((name, fig(parts_call + c1 + c2, ye + 6) +
-                        f'<p class="cap"><b>图注：</b>{cap_call}</p>' +
-                        fig(parts + s1 + s2, ye2 + 6), cap_fwd))
+                        f'<p class="cap"><b>图注：</b>{cap_call}'
+                        f'<br><b>轴注：</b>横轴 \"s\" = 全程墙钟秒；一条线 = 一个 call 从提交到完成的窗口，'
+                        f'线长 = 该 call 的端到端时长（等待+服务）；梯形只圈成员归属。</p>' +
+                        fig(pb_head + pb, pby + 6) +
+                        f'<p class="cap"><b>放大（逐调用配对）：</b>同一个 call（同 program 同序号）在两种策略下的'
+                        f'端到端时长直接对比——差值全部是等待。<b>轴注：</b>横轴为时长（条长正比于秒数，'
+                        f'条尾标注实际秒数与倍数）；行标签 = program#call 序号与类别。</p>' +
+                        fig(parts + s1 + s2, ye2 + 6), cap_fwd +
+                        "<br><b>轴注：</b>横轴 \"ms\" = 所选段内墙钟毫秒（0 为段首）；一条细线 = 一个 forward "
+                        "step（引擎一次迭代的模型前向 scope），线长 = 该 step 的耗时；纵向只是排列顺序，无量纲。"))
         audit["models"][key]["part2"] = {
             "call_pile": {"universe": "call durations, lloyd 5 piles, top pile shown",
                           "fcfs": {"n": len(seg_f), "sum_s": sum(m['d'] for m in seg_f)/1e9,
@@ -371,9 +485,25 @@ def main():
                      f"DRAM 只有 17 %——瓶颈顶在 L2/tensor 上，且两种策略顶在同一面墙上。"
                      f"process 视角的结论：step 内部已无油水，agentix 的收益只能来自 call→step 的排序，"
                      f"这正是它与 baseline 唯一不同的地方。")
+        span2 = int(30e6)
+        at_f2 = kernel_micro_best(sq_f, at_f, at_f + span, span2)
+        at_c2 = kernel_micro_best(sq_c, at_c, at_c + span, span2)
+        u1, uy, _, _ = kernel_micro_strip(sq_f, 30, "FCFS baseline", at_f2, span2)
+        u2, uy2, _, _ = kernel_micro_strip(sq_c, uy + 4, "agentix_core", at_c2, span2)
+        micro2_axis = [f'<text x="{LEFT}" y="16" font-size="10" fill="#48607d">再放大到 30 ms：单个 kernel 可分辨（一个 step 的一簇 gemm ≈ 模型各层的线性层依次发射）</text>']
         figs[3].append((name, fig(parts + s1 + s2, ye + 6) +
-                        f'<p class="cap"><b>图注：</b>{cap_lanes}</p>' +
-                        fig(micro_axis + m1 + m2, ym2 + 8), cap_micro))
+                        f'<p class="cap"><b>图注：</b>{cap_lanes}'
+                        f'<br><b>轴注：</b>横轴 \"s\" = 全程墙钟秒；lane 高度为该指标的满量程'
+                        f'（busy/gemm 满格 = 100 %，在飞满格 = 观测峰值，红虚线 = cap 16 个 call）。</p>' +
+                        fig(micro_axis + m1 + m2, ym2 + 8) +
+                        f'<p class="cap"><b>图注：</b>{cap_micro}'
+                        f'<br><b>轴注：</b>横轴为该 300 ms 窗内的真实时间（比例尺一致）；黄行/蓝行'
+                        f'每个矩形 = 一个 kernel 的起止；右侧竖条 = NCU 对 gemm 家族重放的中位利用率。</p>' +
+                        fig(micro2_axis + u1 + u2, uy2 + 8),
+                        f"30 ms 级放大：黄色 gemm 矩形逐个可辨——一簇 ≈ 一个 step 内模型各层线性层的"
+                        f"依次发射，簇间空白是 step 间的 host 调度间隙。两侧的簇形、簇密度与空隙结构"
+                        f"同构：机制没有改变任何一个 step 的内部，这就是收益只能来自 call 排序的"
+                        f"kernel 级证据。<br><b>轴注：</b>横轴为 30 ms 窗内真实时间；行与矩形含义同上图。"))
         audit["models"][key]["part3"] = {
             "lanes_window": {"criterion": "30 s window with max FCFS time-at-cap",
                              "window_s": [w0c / 1e9, w1c / 1e9]},
@@ -485,13 +615,15 @@ h3{{font-size:15px;margin:20px 0 6px}}
 table{{border-collapse:collapse;font-size:13px;margin:10px 0}}
 td,th{{border:1px solid #c9d6e4;padding:4px 10px;text-align:right}}
 td:first-child,th:first-child{{text-align:left}}
+pre.art{{background:#f7f9f7;border:1px solid #cfd9cf;border-radius:6px;padding:12px 14px;
+font:12px/1.55 "IBM Plex Mono","Noto Sans Mono CJK SC",monospace;overflow-x:auto;max-width:1150px}}
 </style></head><body><div class="wrap">
 <h1>Agentix（agentix_core）优化如何被时间线可视化解释 —— 三模型总结</h1>
 <p class="sub">数据：本项目 3 模型 × {{FCFS, agentix_core}} 的 cap16 r0.5 采集（同负载同栈，唯一变量调度策略）。
 配图 FCFS 在上、agentix_core 在下、共轴；截取窗口与选材标准的完整记录在
 R10_SUMMARY_AUDIT.json，报告正文只讲内容。完整可交互时间线见 R10_COMPARE_{{llama,qwen3,qwenvl}}.html。</p>
 
-{compo_section(Path("experiments/h23-agentix-8b/workloads/thr_mixed_r0.5.json"))}
+{compo_html}
 
 {section("一、", "端到端 Process 时间线 —— 优化生效的直观效果", PAPER1, PFIGS1, IMPL1,
  """<p><b>图中缩写（process 视角）：</b>FCFS = 先来先服务（vLLM 原生调度，call 按到达序进 step）；
