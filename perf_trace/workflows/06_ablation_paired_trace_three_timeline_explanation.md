@@ -1,4 +1,4 @@
-# workflow06 — 消融配对采集与三类时间线图形化解释（A01–A05）
+# workflow06 — 消融配对采集与三类时间线图形化解释（A00–A05）
 
 来源实践：h23（Agentix 8B 机制复现，单卡 RTX 4090，三模型，github.com/cspool/AgentSys）。
 本工作流把 AutoTrace 的单次运行分析链（workflow01–05）扩展为**消融对照链**：同一负载、
