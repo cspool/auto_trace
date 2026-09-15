@@ -24,6 +24,12 @@ description: 消融时间线总结文档（workflow06 A05）的写作与配图�
 - 图内缩写在附近无 process 视角解释。
 - 图注声称与实测数字矛盾的形态（如低 busy 却写"排满"）。
 
+## 模板（必须引用）
+
+排版、颜色语义与图形几何一律按 `references/report-template.md` 执行——该文件固化了 h23
+定稿报告的全部常数（正文 22px、图注 20px、字符画 18px；车道行高 24、lane 高 138、
+kernel 行高 84 等）；可执行形态即下方参考实现脚本。偏离模板须在审计文件记录理由。
+
 ## 参考实现
 
 `perf_trace/workflows/reference_impl/workflow06/build_r10_summary_doc.py`（h23 实例）。
