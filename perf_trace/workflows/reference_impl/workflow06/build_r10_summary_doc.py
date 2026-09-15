@@ -57,6 +57,76 @@ def axis(w0, w1, y, h):
     return out
 
 
+def class_lifecycle_figs(cf):
+    """Preamble: one real exemplar program per class, drawn e2e-style on its own
+    lifetime axis — load shape and lifecycle differences at a glance."""
+    from collections import defaultdict
+    progs = defaultdict(list)
+    for c in cf:
+        progs[c["program_id"]].append(c)
+    out_blocks = []
+    for cls, note in [("bfcl", "串行工具链：调用短而密，寿命被『等待+工具延迟』主导"),
+                      ("sharegpt", "会话链：调用少、decode 长（彩段远长于 bfcl），寿命被服务段主导"),
+                      ("lats", "树搜索：5 路并行波推进，寿命 = 关键路径（最慢的一路决定下一波开始）")]:
+        cands = [(pid, cs) for pid, cs in progs.items() if cs[0]["class"] == cls]
+        cands.sort(key=lambda kv: len(kv[1]))
+        pid, cs = cands[len(cands) // 2]
+        cs = sorted(cs, key=lambda c: c["submitted_rel_ms"])
+        t0 = min(c["submitted_rel_ms"] for c in cs)
+        t1 = max(c["finished_rel_ms"] for c in cs)
+        X = lambda t: LEFT + (W - LEFT - RIGHT) * (t - t0) / max(t1 - t0, 1e-9)
+        waves = sorted({c.get("wave", 0) for c in cs})
+        rows = min(len(waves), 5) if cls == "lats" else 1
+        H0 = 46 + rows * 16
+        svg = [f'<text x="4" y="14" font-size="11.5" font-weight="600">{cls} · 程序 {pid} · {len(cs)} 个调用 · 寿命 {(t1-t0)/1e3:.1f} s（真实 trace，FCFS 侧）</text>']
+        for i in range(7):
+            t = t0 + (t1 - t0) * i / 6
+            svg.append(f'<text x="{X(t):.0f}" y="26" font-size="9" text-anchor="middle" fill="#48607d">{(t-t0)/1e3:.1f}s</text>')
+        for c in cs:
+            r = (c.get("wave", 0) % 5) if cls == "lats" else 0
+            y = 32 + r * 16
+            x0, x1, x2 = X(c["submitted_rel_ms"]), X(c["first_token_rel_ms"]), X(c["finished_rel_ms"])
+            svg.append(f'<rect x="{x0:.1f}" y="{y}" width="{max(x1-x0,0.5):.1f}" height="11" fill="{WAIT}" opacity=".85"/>')
+            svg.append(f'<rect x="{x1:.1f}" y="{y}" width="{max(x2-x1,0.5):.1f}" height="11" fill="{CLS_COLOR[cls]}" opacity=".9"/>')
+        if cls == "lats":
+            svg.append(f'<text x="{LEFT-6}" y="{32+40}" font-size="9" text-anchor="end" fill="#48607d">5 路并行</text>')
+        out_blocks.append(fig(svg, H0) + f'<p class="cap"><b>{cls} 的生命周期：</b>{note}。'
+                          f'红段 = 等待（提交→首token），彩段 = 服务；横轴为该程序自身的寿命时间。</p>')
+    return "".join(out_blocks)
+
+
+def e2e_paired_strip(cf, cc, w0, w1, y0, rh=8, short_only=False, annotate=False):
+    """One panel, lanes = programs; each program gets TWO adjacent sub-rows:
+    FCFS on top, agentix_core below — same p side by side, calls stay in-lane."""
+    lanes = {}
+    for src, rows in (("f", cf), ("c", cc)):
+        for c in rows:
+            if short_only and c["class"] == "lats":
+                continue
+            if c["finished_rel_ms"] < w0 or c["submitted_rel_ms"] > w1:
+                continue
+            L = lanes.setdefault(c["program_id"], {"cls": c["class"], "f": [], "c": []})
+            L[src].append(c)
+    order = sorted(lanes.items(), key=lambda kv: ({"bfcl": 0, "sharegpt": 1, "lats": 2}[kv[1]["cls"]], kv[0]))
+    pair_h = 2 * rh + 6
+    out = []
+    X = lambda t: LEFT + (W - LEFT - RIGHT) * (max(min(t, w1), w0) - w0) / (w1 - w0)
+    for i, (pid, L) in enumerate(order):
+        y = y0 + i * pair_h
+        out.append(f'<text x="{LEFT-24}" y="{y+rh+3}" font-size="9" text-anchor="end" fill="#48607d">{pid}·{L["cls"]}</text>')
+        for j, src in enumerate(("f", "c")):
+            yy = y + j * rh
+            out.append(f'<text x="{LEFT-4}" y="{yy+rh-1}" font-size="8" text-anchor="end" fill="{"#1f2f45" if src=="f" else "#2f6f9f"}">{"F" if src=="f" else "A"}</text>')
+            for c in L[src]:
+                x0, x1, x2 = X(c["submitted_rel_ms"]), X(c["first_token_rel_ms"]), X(c["finished_rel_ms"])
+                out.append(f'<rect x="{x0:.1f}" y="{yy+1}" width="{max(x1-x0,0.5):.1f}" height="{rh-2}" fill="{WAIT}" opacity=".9"/>')
+                out.append(f'<rect x="{x1:.1f}" y="{yy+1}" width="{max(x2-x1,0.5):.1f}" height="{rh-2}" fill="{CLS_COLOR[L["cls"]]}"/>')
+                if annotate and x1 - x0 > 30:
+                    out.append(f'<text x="{(x0+x1)/2:.0f}" y="{yy+rh-2}" font-size="7.5" text-anchor="middle" fill="#fff">{c["first_token_rel_ms"]-c["submitted_rel_ms"]:.0f}ms</text>')
+        out.append(f'<line x1="{LEFT}" y1="{y+pair_h-3}" x2="{W-RIGHT}" y2="{y+pair_h-3}" stroke="#eef2ee"/>')
+    return out, y0 + len(order) * pair_h + 6
+
+
 def e2e_strip(calls, w0, w1, y0, tag):
     lanes = {}
     for c in calls:
@@ -359,7 +429,9 @@ def main():
         if key == "llama":
             compo_html = compo_section(
                 Path("experiments/h23-agentix-8b/workloads/thr_mixed_r0.5.json")
-            ).replace("{CHAR_ART}", char_art(cf, cc, pf["hl"]))
+            ).replace("{CHAR_ART}", char_art(cf, cc, pf["hl"])
+                      + '<h2 style="font-size:15px">三类负载的真实生命周期（各取一个中位规模的程序实例）</h2>'
+                      + class_lifecycle_figs(cf))
             # concretize the paper figures with our own trace numbers (LLaMA pair)
             idx_f0 = {(r["program_id"], r["call_index"]): r for r in cf}
             idx_c0 = {(r["program_id"], r["call_index"]): r for r in cc}
@@ -407,8 +479,7 @@ def main():
         wsum_c = sum(max(0.0, min(c["first_token_rel_ms"], w1) - max(c["submitted_rel_ms"], w0))
                      for c in cc if c["class"] != "lats")
         parts = axis(w0, w1, 26, 560)
-        s1, yn = e2e_strip(cf, w0, w1, 30, "FCFS baseline")
-        s2, ye = e2e_strip(cc, w0, w1, yn, "agentix_core")
+        s12, ye = e2e_paired_strip(cf, cc, w0, w1, 30)
         # paper-grained zoom around the worst-wait short call in the window
         shorts_w = [c for c in cf if c["class"] != "lats" and w0 <= c["submitted_rel_ms"] <= w1]
         wc0 = max(shorts_w, key=lambda c: c["first_token_rel_ms"] - c["submitted_rel_ms"]) if shorts_w else None
@@ -416,18 +487,19 @@ def main():
         if wc0:
             z0 = max(0.0, wc0["submitted_rel_ms"] - 500)
             z1 = wc0["finished_rel_ms"] + 1500
-            zp = axis(z0, z1, 26, 260)
-            za, zy = e2e_zoom_strip(cf, z0, z1, 30, "FCFS baseline")
-            zb, zy2 = e2e_zoom_strip(cc, z0, z1, zy, "agentix_core")
-            zoom_html = (f'<p class="cap"><b>放大（论文 Fig.2 粒度，{(z1-z0)/1e3:.1f} s 窗，仅短程序车道，'
-                         f'红段内标注等待毫秒数）：</b>同一批调用，上图红段以秒计、下图以十毫秒计。</p>'
-                         + fig(zp + za + zb, zy2 + 6))
-        figs[1].append((name, fig(parts + s1 + s2, ye + 6) + zoom_html,
-                        f"图示 [{w0/1e3:.0f}, {w1/1e3:.0f}] s 这 30 秒里的全部调用。上图（FCFS）中，"
-                        f"bfcl（橙）与 sharegpt（蓝）车道的调用几乎每条都拖着长红段：这些短程序的调用"
-                        f"排在 lats 洪流后面，等待远长于自身服务。下图（agentix_core）同一批调用的红段"
-                        f"几乎消失——窗内短程序等待合计从 {wsum/1e3:.1f} s 降到 {wsum_c/1e3:.1f} s"
-                        f"（{100*(wsum_c/max(wsum,1e-9)-1):+.0f} %），而绿（lats）车道两图肉眼无差别。"
+            zp = axis(z0, z1, 26, 300)
+            za, zy2 = e2e_paired_strip(cf, cc, z0, z1, 30, rh=14, short_only=True, annotate=True)
+            zoom_html = (f'<p class="cap"><b>放大（论文 Fig.2 粒度，{(z1-z0)/1e3:.1f} s 窗，仅短程序，'
+                         f'每程序 F/A 两行相邻，红段内标注等待毫秒数）：</b>同一程序上下两行直接对看，'
+                         f'F 行红段以秒计、A 行以十毫秒计。</p>'
+                         + fig(zp + za, zy2 + 6))
+        figs[1].append((name, fig(parts + s12, ye + 6) + zoom_html,
+                        f"图示 [{w0/1e3:.0f}, {w1/1e3:.0f}] s 这 30 秒里的全部调用；**同一程序占相邻两行**："
+                        f"上行 F = FCFS、下行 A = agentix_core，同程序的调用留在各自行内，上下对看即为"
+                        f"同一负载在两种策略下的直接对比。看橙（bfcl）与蓝（sharegpt）程序：F 行几乎每条"
+                        f"调用都拖着长红段（排在 lats 洪流后面），紧贴其下的 A 行红段消失——窗内短程序"
+                        f"等待合计 {wsum/1e3:.1f} s → {wsum_c/1e3:.1f} s（{100*(wsum_c/max(wsum,1e-9)-1):+.0f} %）；"
+                        f"绿（lats）程序的 F/A 两行肉眼无差别。"
                         f"process 视角：每条红段的消失都对应『该 call 更早获得第一个 step 的成员资格』。"
                         f"<br><b>轴注：</b>横轴数字 + \"s\" = 从运行起点起算的墙钟秒（所有 process 的公共时钟，"
                         f"call 的提交/首token/完成都落在这条轴上）；纵轴无刻度，一行 = 一个 program 的车道，"
@@ -472,7 +544,7 @@ def main():
         o = int(pf["hl"]["origin"])
         sw0, sw1 = int(sec["begin_ns"]) - o, int(sec["end_ns"]) - o
         starts = sorted(s for s, _ in p1["rows"][si])
-        win2 = int(2e9)
+        win2 = int(1e9)
         best_n, w0n = -1, sw0
         for t in range(sw0, max(sw0 + 1, sw1 - win2), int(200e6)):
             import bisect as _b
@@ -489,10 +561,18 @@ def main():
                    f"上一张图里调用堆的巨大差异，全部来自调用进入这些 step 的顺序。两图合起来是"
                    f"提升比例估算的依据：服务侧不变 ⇒ 用等待几何量重放 baseline 得上界，"
                    f"本模型为程序级重放估算的上界（见 gain_facts 与审计文件）。")
+        guide2 = (f'<p class="cap"><b>本模型三图导读（{name}）：</b>图一画『最贵的调用』——两侧各自的'
+                  f'最高时长调用堆（FCFS {len(seg_f)} 个/{sum(m["d"] for m in seg_f)/1e9:.0f} s，'
+                  f'core {len(seg_c)} 个/{sum(m["d"] for m in seg_c)/1e9:.0f} s），看的是堆的大小与颜色构成'
+                  f'（粗彩线 = 被排队抬进来的短程序调用）；图二从图一里挑出最长的 5 个短程序调用，'
+                  f'与 core 侧的同一调用逐个配对，看的是单个调用的倍数差；图三画『最贵的 step』——'
+                  f'两侧重 forward step 堆在同一 1 秒窗内的逐条对比，看的是两侧纹理是否一致（应当一致：'
+                  f'step 是共享的引擎迭代，机制改不动它）。三图合读：图三钉死服务不变，图一/图二把'
+                  f'全部差异归到等待上。</p>')
         idx_cc = {(r["program_id"], r["call_index"]): r for r in cc}
         pb, pby = pair_bars(seg_f, idx_cc, 30)
         pb_head = [f'<text x="{LEFT}" y="16" font-size="10" fill="#48607d">同一调用两种策略下的端到端时长（上条 FCFS 红、下条 core 蓝；取 baseline 高延迟堆中最长的 5 个短程序调用）</text>']
-        figs[2].append((name, fig(parts_call + c1 + c2, ye + 6) +
+        figs[2].append((name, guide2 + fig(parts_call + c1 + c2, ye + 6) +
                         f'<p class="cap"><b>图注：</b>{cap_call}'
                         f'<br><b>轴注：</b>横轴 \"s\" = 全程墙钟秒；一条线 = 一个 call 从提交到完成的窗口，'
                         f'线长 = 该 call 的端到端时长（等待+服务）；梯形只圈成员归属。</p>' +
@@ -618,43 +698,49 @@ def main():
         "饿出了长尾；Agentix 蓝线膝点仍最右。这解释了为什么我们实测的收益里 p99（2.67×）比 mean（1.35×）"
         "大：MLFQ 家族的收益天然集中在尾部，而 β 反饥饿控制住了另一侧的尾巴。{OUR_FIG13}")
 
-    PAPER1 = """<p>Agentix（Autellix, NSDI'26）§3.1 用等待/执行时间比（其 Fig.5/6）论证两级病灶：
-<b>调用级队头阻塞</b>——长 decode 的调用挡住短调用（vLLM 等引擎等在批的 decode 完成后才调度新调用）；
-<b>程序级队头阻塞</b>——现有调度器是"程序无关"的，长程序的众多调用把短程序拖住，其 Fig.6 显示
-FCFS 与朴素 MLFQ 在调用数少的（短）程序上等待/执行比最高，故"负载升高后程序的大部分时间花在等待上"。
-创新点是把<b>程序（而非请求）作为一等调度实体</b>（§4.2.1）：仿 OS 维护全局<b>进程表</b>，逐程序记录
-服务时间（多线程程序取最长观测关键路径）、等待时间（用于反饥饿）、线程元数据、最近到达/完成时刻；
-调用到达时携带其程序历史，调度据此排序——全程 non-clairvoyant，不需预知程序长度。</p>"""
+    PAPER1 = """<p><b>先看下面第一张示意图（论文 Fig.2）怎么讲问题：</b>(a) 表里 4 个程序同时到达，
+D 只有 1 个 4 步的调用；顺着 (b) FCFS 的甘特图看，D1 这个色块被 A、B 的调用挤到 t≈4 才进批槽——
+这就是<b>队头阻塞</b>画在图上的样子。再看 (d) PLAS：同样两个批槽、同样的色块，只是顺序变了，
+C、D 的色块整体左移提前完成。论文 §3.1 把这个现象量化成第二张示意图（Fig.6）的『等待/执行比』：
+FCFS 的蓝线在"短"的一端（左列短 decode、右列少调用的程序）翘得最高，说明<b>越短的调用/程序等得
+越冤</b>；朴素 MLFQ（橙线）能压住左列（调用级）却压不住右列（程序级）——因为它不认识程序。
+Agentix 的创新（§4.2.1）就是让引擎认识程序：仿 OS 维护全局<b>进程表</b>，逐程序记录服务时间
+（多线程取最长观测关键路径）、等待时间、线程元数据与最近到达/完成时刻，调用到达时带着程序历史
+进调度，全程不需预知长度（non-clairvoyant）。<b>再往下看我们的 trace 图</b>：车道图就是 Fig.2 甘特图
+的实盘放大版——每个程序 F/A 两行相邻，红段（等待）在 F 行成片、在 A 行消失，而 Fig.2 里
+"色块只换位置不换大小"对应我们图中彩段（服务）长度不变。</p>"""
     IMPL1 = """<p>本实现把进程表放在客户端 serving 适配层（<code>serve_agentix.py</code>）：
 每程序维护 {attained_us, wait_us}，每个调用提交时以程序累计服务时间为优先级进入
 MLFQ（下详），vLLM 0.29 原生 priority 调度 / 前缀缓存 / chunked prefill 作为接入项。
 端到端时间线的"车道 = 程序、调用 = 红(等待)+彩(服务)段"是论文 §3.1 等待/执行比度量（其 Fig.6）
 在真实 trace 上的逐调用展开：优化是否生效，看红段是否从短程序车道消失。</p>"""
 
-    PAPER2 = """<p>论文的调度算法（§4.2.1–4.2.2, Algorithm 1）：SJF/SRPT 虽最优但需预知运行时长，
-违背非透视假设，故取 <b>LAS 的程序级推广 PLAS</b>——第 j 个调用的优先级
-p(c_j) = Σ<sub>k&lt;j, 同程序</sub> t_k（式 1，值大 = 优先级低），从进程表直读、调用完成时回写；
-多线程程序用 <b>ATLAS</b>（式 2）：p(c_j) = max<sub>父调用</sub>{p(c_k)+t_k}，以单个"最长观测关键路径"
-标量非透视地逼近 DAG 关键路径，并使同程序并行调用天然成组（gang），防止散兵线程拖垮程序完成。
-为避免连续优先级退化为最坏轮转与频繁 KV 换入换出，§4.2.2 把优先级<b>离散化为 K 级 MLFQ</b>：
-调用按 p(c)∈[Q_i^lo, Q_i^hi) 直接入第 i 队（不同于传统 MLFQ 全部从 Q1 开始），队内 FCFS、
-配时间量子、量子用尽降级。该设计的隐含前提是调度只重排等待、不加速任何 forward——这正是
-高延迟 Process 时间线可检验的论断：两侧重 forward 堆同形 ⇒ 前提成立 ⇒ 提升上界可从等待几何量估算。
-论文 §6.3 的单引擎端点：ShareGPT/BFCL 上至高 2× vLLM-opt（1.5× MLFQ），LATS 2× vLLM-opt，
-Mixed 高载至高 5× vLLM-opt；本机排队压力对应其中低载区间。</p>"""
+    PAPER2 = """<p><b>先看下面第一张示意图（论文 Fig.10）怎么讲方法：</b>新调用从左上进来，第 ① 步查左边的
+进程表拿到自己程序的累计服务 p(c)——这就是 <b>PLAS</b>（式 1：p(c_j) = Σ 同程序先前调用运行时，
+值大 = 优先级低；SJF/SRPT 虽最优但要预知时长，PLAS 用"已经花了多少"替代"还要花多少"）；
+第 ② 步顺着红线直接落进 Q1–QK 中对应的队（注意不是传统 MLFQ 那样全从 Q1 开始——短程序的
+新调用直接落在高优先级队，长程序的直接落在低队）；第 ③ 步的箭头是量子用尽向上（低优先级方向）
+降级；第 ④ 步的箭头是 β 反饥饿把等太久的调用拉回 Q1。多线程程序用 <b>ATLAS</b>（式 2：
+p(c_j) = max 父调用{p(c_k)+t_k}，单个"最长观测关键路径"标量近似 DAG 关键路径，同程序并行调用
+天然成组）。<b>这套机制动的只是队列，不动 GPU 上的任何 forward</b>——所以再看第二张示意图
+（Fig.12）：四条曲线画的是"延迟起飞点"，Agentix 蓝线膝点最靠右，但每个 step 本身没有变快。
+<b>再往下看我们的 trace 图</b>：图一/图二里调用堆和逐调用配对的差异，就是 Fig.10 的 ②（按程序历史
+入队）在真实负载上的效果；图三里两侧 step 堆纹理一致，就是"机制不动 forward"的实盘证据。
+论文 §6.3 端点：ShareGPT/BFCL 至高 2× vLLM-opt、Mixed 高载至高 5×；本机排队压力在其低载区间。</p>"""
     IMPL2 = """<p>本实现的 MLFQ 常数（论文未给数值，自行标定并在报告声明）：K=4，入队界
 [0, 2, 8, 32] s（按程序累计服务），量子 32/64/128/256 token；量子用尽的调用以
 prompt+已生成 token 重提交（前缀缓存重命中，实现 chunk 边界的"抢占"），ATLAS 已实现。
 高延迟时间线上的 core 侧重堆多出的质量（如 LLaMA +2.3 s）即 continuation 的机制签名。</p>"""
 
-    PAPER3 = """<p>论文 §4.2.2 的反饥饿组件：简单的"等待超时提升"会退化为朴素 MLFQ（长程序调用进 Q1
-反过来打断短程序），故 Agentix 用进程表度量<b>程序级</b>饥饿——当程序等待/服务比
-(W_p+W_c)/(T_p+T_c) ≥ β 时把该调用提回 Q1，仅重置 W_c/T_c；β 调节平均响应时间与公平性的权衡。
-关于收益来源，§3.1 指出降低等待同时反哺吞吐（调用完成更快 → 程序更快发起下一调用 → 到达率上升，
-其 Fig.4：同批稳态下 Agentix 比 FCFS 多容纳约 10 个并发调用）；§6.3 的尾延迟结论是 8 场景中 7 个
-P95/99 优于 MLFQ 与 vLLM-opt（至高 1.7×）。这些论断的可检验形态正是并发/资源时间线：
-若 GPU busy、gemm 占比、在飞数在两策略下同形，则收益必须解释为<b>饱和态下的纯排序收益</b>，
-且随排队压力增大而增大。</p>"""
+    PAPER3 = """<p><b>先看下面的示意图（论文 Fig.13）怎么讲尾延迟：</b>两列分别是 P95/P99，看 ShareGPT
+那一行——MLFQ（橙线）平均延迟不差，但在这里比 Agentix（蓝线）先起飞：它只顾追短调用，把长程序
+饿出了长尾。Agentix 的解法是 §4.2.2 的<b>程序级 β 反饥饿</b>：不是"等超时就提升"（那会退化成
+朴素 MLFQ），而是看程序的等待/服务比 (W_p+W_c)/(T_p+T_c) ≥ β 才提回 Q1，且只重置本调用的
+W_c/T_c——所以蓝线在均值端和尾端同时占优。§3.1 还指出降等待会反哺吞吐：调用完成更快 →
+程序更快发起下一调用（其 Fig.4：稳态多容纳约 10 个并发调用）。<b>再往下看我们的 trace 图</b>：
+这些论断的可检验形态是——若 5 秒细节窗里 GPU busy、gemm 占比、在飞数两侧逐条同形，且
+300 ms / 30 ms 显微图里 kernel 簇结构一致，那么收益只能是<b>饱和态下的纯排序收益</b>；
+我们的 β 提升 0 次、p99 2.67× 也与图中"尾部收益大于均值"的形态一致。</p>"""
     IMPL3 = """<p>本实现在 trace 内留下机制自证：入队分布 Q1–Q4、降级次数、多量子调用数、
 β 提升次数（本负载 β=2.0 未触发）都从调用记录可读出。并发/资源时间线的三条 lane
 （GPU busy、gemm 占比、在飞调用数）是对"资源与并发不变"这一论文论证的直接检验；
