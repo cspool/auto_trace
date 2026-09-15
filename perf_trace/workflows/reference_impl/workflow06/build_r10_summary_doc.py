@@ -855,6 +855,24 @@ busy 同水平、且都顶着同一面 L2/tensor 墙 → step 内部无优化空
  "排队压力决定杠杆：above-cap 时长 LLaMA 169 s→p90 1.86×，VL 77 s→1.15×，Qwen3 40 s→1.11×——"
  "这同时解释了三个模型提升幅度的差异。", figs[3])}
 
+<h2>补充：host 侧代表 process（workload_analysis W1–W5 的产物）</h2>
+<p class="theme">本版之前，报告只能说"host 开销大"，说不出大在哪——因为 process 宇宙里
+<code>preprocess</code> 与 <code>schedule</code> 是不透明块。补做 workload_analysis 后，
+三个模型各自的试运行→热点定位→插桩→代表采集→代表集选择（W1–W5）给出以下可归因结果，
+新捕获已把它们全部纳入 process 宇宙（13–14 类 host process + 量子块/降级事件）：</p>
+<table><tr><th>发现</th><th>LLaMA-3.1-8B</th><th>Qwen3-1.7B</th><th>Qwen2.5-VL-3B</th></tr>
+<tr><td>preprocess 中 <code>_prepare_inputs</code> 占比</td><td>70 %（33.9 s）</td><td>（17.2 s）</td><td>（15.4 s）</td></tr>
+<tr><td>其中 CUDA API 占比（其余为纯 Python）</td><td>19.1 %</td><td>21.8 %</td><td>20.1 %</td></tr>
+<tr><td>主导空闲边界：sampled_token_ids → update_from_output</td><td>108.0 s</td><td>21.0 s</td><td>23.2 s</td></tr>
+<tr><td>host 代表集覆盖 / 旧宇宙缺失份额</td><td>25.5 % / 13.6 %</td><td>43.4 % / 25.0 %</td><td>34.2 % / 19.5 %</td></tr>
+<tr><td>量子块 / 降级事件（core 侧）</td><td>2,601 / 151</td><td>2,739 / 292</td><td>2,660 / 212</td></tr></table>
+<p class="theme"><b>这改变了优化方向的判断：</b>此前从显微图只能得出"step 间有 host 空隙"；
+现在可以定位到具体过程——最大的单项不是任何命名的 host 工作，而是<b>异步输出等待</b>
+（引擎在 <code>set_async_sampled_token_ids</code> 之后、<code>update_from_output</code> 之前
+的空档，LLaMA 上 108 s、约 13,568 次、平均 8 ms，期间 GPU 基本空闲），其规模超过 forward
+本身（54.6 s）与全部命名 host 工作（37.6 s）之和；其次才是 <code>_prepare_inputs</code> 内部
+约 80 % 的纯 Python 张量构建。两者都与调度策略无关，对 FCFS 与 agentix_core 同等存在，
+因此不影响本报告的排序收益结论，但它们是下一步优化的主目标。插桩开销实测 −0.9 %。</p>
 <p class="cap">记账：配图为截取窗口（非全程），每张图的选材标准与窗口参数记录在
 R10_SUMMARY_AUDIT.json；完整无损/全量视图与全部账目在
 R10_COMPARE_*.html 与 GROUPS/payload；硬件关联 family 级；trace 开销两侧同担。

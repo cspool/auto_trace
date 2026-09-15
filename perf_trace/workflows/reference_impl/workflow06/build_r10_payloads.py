@@ -32,14 +32,39 @@ def load_sqlite(sq: Path):
     db = sqlite3.connect(str(sq))
     strings = dict(db.execute("select id, value from StringIds"))
     scopes, begins, ends = [], {}, {}
+    chunk_begins, chunk_ends, mech_marks = {}, {}, []
     for text, tid_, s, e in db.execute("select text, textId, start, end from NVTX_EVENTS"):
         n = text if text else strings.get(tid_, "")
-        if e and e > s and (n.startswith("schedule:") or n.startswith("gpu_model_runner:")):
+        if e and e > s and (n.startswith("schedule:") or n.startswith("gpu_model_runner:")
+                            or n.startswith("w.")):
+            # W5: the representative set now includes the host-path probes, so the
+            # scope universe carries them too (containers excluded to avoid
+            # double counting their probed children).
+            if n.startswith(("w.engine: process_engine_step", "w.run: prepare_inputs")):
+                continue
             scopes.append({"type": n[:60], "start": s, "end": e, "d": e - s})
+        elif n.startswith("agentix.chunk_begin::"):
+            k = n.split("::", 1)[1]
+            chunk_begins[k] = s
+        elif n.startswith("agentix.chunk_end::"):
+            k = n.split("::", 1)[1]
+            chunk_ends[k] = s
+        elif n.startswith("agentix.demote::") or n.startswith("agentix.promote::"):
+            mech_marks.append((s, n.split("::")[0].split(".")[1]))
         elif n.startswith("agentix.call_begin::"):
             begins[n.split("::", 1)[1]] = s
         elif n.startswith("agentix.call_end::"):
             ends[n.split("::", 1)[1]] = s
+    chunks = []
+    for k, s in chunk_begins.items():
+        e = chunk_ends.get(k)
+        if e and e > s:
+            parts = k.split("::")
+            chunks.append({"type": f"chunk {parts[-1]}", "start": s, "end": e, "d": e - s,
+                           "label": "::".join(parts[:-1])})
+    chunks.sort(key=lambda m: (m["start"], m["end"]))
+    for i, m in enumerate(chunks):
+        m["id"] = i
     calls = []
     for k, s in begins.items():
         e = ends.get(k)
@@ -55,7 +80,7 @@ def load_sqlite(sq: Path):
         for i, m in enumerate(lst):
             m["id"] = i
     kernels.sort()
-    return scopes, calls, kernels
+    return scopes, calls, kernels, chunks, mech_marks
 
 
 def union(iv):
@@ -160,7 +185,7 @@ def main():
     ap.add_argument("--out", type=Path, required=True)
     a = ap.parse_args()
     sq = next(a.capture_dir.glob("*.sqlite"))
-    scopes, calls, kernels = load_sqlite(sq)
+    scopes, calls, kernels, chunks, mech_marks = load_sqlite(sq)
 
     # e2e: request-level universe, all classes kept (representative view; the
     # >10 % rule is a selection device for the scope universe, declared adapted)
@@ -223,11 +248,25 @@ def main():
                   for p in hl["piles"] if "forward" in p["type"]],
         "hidden_ranks": [p["rank"] for p in hl["piles"] if "forward" not in p["type"]],
     }
-    a.out.write_text(json.dumps({"e2e": e2e, "hl": hl, "cu": cu}))
+    # mechanism layer: quantum chunks as first-class processes (W5)
+    mech = None
+    if chunks:
+        by_q = defaultdict(list)
+        for c in chunks:
+            by_q[c["type"]].append(c)
+        om, xm = min(c["start"] for c in chunks), max(c["end"] for c in chunks)
+        mech = pile_payload(by_q, om, xm)
+        mech["events"] = {"demote": sum(1 for _, k in mech_marks if k == "demote"),
+                          "promote": sum(1 for _, k in mech_marks if k == "promote"),
+                          "chunks": len(chunks)}
+    a.out.write_text(json.dumps({"e2e": e2e, "hl": hl, "cu": cu, "mech": mech}))
     print(json.dumps({"capture": str(a.capture_dir), "calls": len(calls),
                       "scope_members": sum(p["count"] for p in hl["piles"]),
                       "e2e_piles": len(e2e["piles"]), "hl_piles": len(hl["piles"]),
-                      "elig_windows": len(elig), "bytes": a.out.stat().st_size}))
+                      "elig_windows": len(elig), "chunks": len(chunks),
+                      "mech_marks": len(mech_marks),
+                      "host_probe_types": sum(1 for t in by_type if t.startswith("w.")),
+                      "bytes": a.out.stat().st_size}))
 
 
 if __name__ == "__main__":

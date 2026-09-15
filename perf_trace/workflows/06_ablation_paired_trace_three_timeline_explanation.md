@@ -51,6 +51,26 @@ step(forward scope 实例，一次引擎迭代) → scope(step, phase)。
 
 **验收**：六个捕获（3 模型 × 2 策略）的 a00 全部 all_pass；G-S 的每个偏差均带解释入档。
 
+### A0W workload_analysis 前置链（W1–W5，每模型串行）
+
+A00 只保证层级对账；**代表 process 的发现属于 workload_analysis 的另一半，必须在 A01 之前执行**，
+否则 process 宇宙只是"引擎现成给什么用什么"，热点内部不可见（h23 教训：preprocess 是不透明块，
+报告只能说"host 开销大"）。五步严格串行，一步一卡：
+
+- **W1 试运行**：短定长运行 + CPU 采样（ +  + 上下文切换）+ 现有探针。
+- **W2 热点定位**（参考实现 ）：按 UNION 时间排名 host process；对头号
+  host process 做 CUDA-API vs 纯 host 拆分（按引擎线程过滤，跨线程 OSRT 不可用于归因）；
+  容器内部归因率；**空闲边界榜 = 命名区间并集在 step 内的补集**（逐对相邻区间算 gap 会在嵌套
+  长区间上造出假空隙——h23 曾因此得到 99,457 s 的荒谬值）。
+- **W3 插桩修订**（）：按 W2 结论增删探针；去掉与引擎自带 scope 重复的项；
+  把机制事件（量子块、降级、提升）升为一等 process。必须复测插桩开销（h23：−0.9 %）。
+- **W4 代表性采集**：完整负载 + 修订插桩，无 CPU 采样。
+- **W5 代表集选择**（）：以 UNION(step) − UNION(forward) 为 host 分母，
+  贪心选叶至覆盖目标；输出容器归因、空闲边界与 **perf_trace 覆盖差**，给出
+   /  判定。
+
+**验收**：三模型各自 W5 产出代表集；判定为 RECAPTURE_REQUIRED 时，A01 必须带修订插桩重采。
+
 ### A01 单变量配对采集
 
 对每个模型采集两次：baseline（如 fcfs）与机制（如 agentix_core），除 `--policy` 外命令
@@ -116,6 +136,7 @@ token 规模，并给出"1 个 call 的服务段由多个 step 的成员资格�
 
 | 步骤 | 产物 |
 |---|---|
+| A0W | `workload_analysis/<model>_w1/W2_HOTSPOTS.json`、`<model>_w4/W5_REPRESENTATIVE_PROCESSES.json` |
 | A00 | `<tag>/a00_process_view.json`（层级、事件族计数、四门结果与解释） |
 | A01 | `<tag>/cap.nsys-rep`、`profile.log`、`run/*.jsonl`、`run/summary_*.json` |
 | A02 | `<tag>_views/HIGH_LATENCY_PROCESS_HARDWARE_TIMELINE.html`、`CONCURRENCY_UTILIZATION.html`、`GROUPS.json` |
@@ -127,6 +148,9 @@ token 规模，并给出"1 个 call 的服务段由多个 step 的成员资格�
 
 `reference_impl/`（取自 AgentSys `experiments/h23-agentix-8b/code`，提交 4b1cd2d）：
 
+- `w_instrument.py` — W3 host 路径插桩层（含机制事件）
+- `w2_hotspot_report.py` — W2 热点/容器/空闲边界分析
+- `w5_select_processes.py` — W5 代表集与 perf_trace 覆盖判定
 - `analyze_a00_workload_process_view.py` — A00 负载 process 视图拆解 + 守恒门
 - `render_w05_contract_views.py` — A02 契约双页（serving 适配）
 - `analyze_gain_explain.py` — A03 配对事实

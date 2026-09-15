@@ -442,6 +442,10 @@ NCU 中位数一致（L2≈76% / SM≈49% / DRAM 14–20%），资源墙在 L2/t
 隐藏堆保留排名：baseline $hidden_f；core $hidden_c（preprocess 堆无 gemm 关联，按契约隐藏）。
 折叠上限 = max(2×中位时长, 段宽/2000)，只压大空洞（适配声明）。</p>
 
+<p class="note"><b>本版新增（workload_analysis W1–W5 补齐）：</b>process 宇宙现含 13–14 类
+host 路径代表 process（w.sched/w.run/w.prep/w.kv/w.engine），此前它们藏在不透明的
+preprocess/schedule 块内；agentix_core 侧的量子块（chunk）与降级/提升事件已成为一等 process。
+W5 判定曾为 RECAPTURE_REQUIRED（缺失 host 份额 13.6–25.0 %），本捕获据此重采。</p>
 <p class="note">记账：全部成员绘制、未抽样；硬件关联 family 级非逐实例；trace 开销两侧同担；
 payload 内含绝对 ns（BigInt 处理，无精度损失）。数字出处 gain_facts_$key.json 与两侧 payload。
 A00 守恒门（workflow06）已认证本对捕获：程序/调用键集合在负载规格、运行记录、trace NVTX 三方相等，
