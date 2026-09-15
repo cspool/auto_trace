@@ -430,7 +430,7 @@ def main():
             compo_html = compo_section(
                 Path("experiments/h23-agentix-8b/workloads/thr_mixed_r0.5.json")
             ).replace("{CHAR_ART}", char_art(cf, cc, pf["hl"])
-                      + '<h2 style="font-size:15px">三类负载的真实生命周期（各取一个中位规模的程序实例）</h2>'
+                      + '<h2 style="font-size:22px">三类负载的真实生命周期（各取一个中位规模的程序实例）</h2>'
                       + class_lifecycle_figs(cf))
             # concretize the paper figures with our own trace numbers (LLaMA pair)
             idx_f0 = {(r["program_id"], r["call_index"]): r for r in cf}
@@ -749,25 +749,25 @@ W_c/T_c——所以蓝线在均值端和尾端同时占优。§3.1 还指出降�
 
     doc = f"""<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
 <title>Agentix 优化的时间线解释 · 三模型总结</title><style>
-body{{margin:0;font:14.5px/1.7 "Noto Sans CJK SC",system-ui,sans-serif;color:#1f2f45;background:#fff}}
+body{{margin:0;font:22px/1.7 "Noto Sans CJK SC",system-ui,sans-serif;color:#1f2f45;background:#fff}}
 .wrap{{max-width:1200px;margin:0 auto;padding:26px 22px 60px}}
-h1{{font-size:22px;margin:0 0 6px}} h2{{font-size:18px;color:#2f6f9f;margin:36px 0 6px}}
-h3{{font-size:15px;margin:20px 0 6px}}
-.sub,.cap,.theme{{font-size:13px;color:#48607d;max-width:120ch}}
+h1{{font-size:33px;margin:0 0 6px}} h2{{font-size:27px;color:#2f6f9f;margin:36px 0 6px}}
+h3{{font-size:22px;margin:20px 0 6px}}
+.sub,.cap,.theme{{font-size:20px;color:#48607d;max-width:120ch}}
 .cap{{margin:6px 0 0}} .theme{{margin:10px 0 8px}}
-.block{{background:#f2f7fb;border:1px solid #c9d6e4;border-radius:6px;padding:10px 14px;margin:8px 0;font-size:13.5px;max-width:120ch}}
+.block{{background:#f2f7fb;border:1px solid #c9d6e4;border-radius:6px;padding:12px 16px;margin:10px 0;font-size:20px;max-width:120ch}}
 .block.impl{{background:#f4faf6;border-color:#bcd8c6}}
 .block.howto{{background:#fbf7ef;border-color:#e2d3ae}}
 .pfig{{margin:10px 0;max-width:980px}}
 .pfig img{{width:100%;height:auto;border:1px solid #c9d6e4;border-radius:6px;background:#fff}}
-.pfig figcaption{{font-size:12.5px;color:#48607d;margin-top:4px;line-height:1.6}}
+.pfig figcaption{{font-size:19px;color:#48607d;margin-top:4px;line-height:1.6}}
 .block b{{display:block;margin-bottom:2px;color:#2f6f9f}}
 .block p{{margin:4px 0}}
-table{{border-collapse:collapse;font-size:13px;margin:10px 0}}
+table{{border-collapse:collapse;font-size:20px;margin:10px 0}}
 td,th{{border:1px solid #c9d6e4;padding:4px 10px;text-align:right}}
 td:first-child,th:first-child{{text-align:left}}
 pre.art{{background:#f7f9f7;border:1px solid #cfd9cf;border-radius:6px;padding:12px 14px;
-font:12px/1.55 "IBM Plex Mono","Noto Sans Mono CJK SC",monospace;overflow-x:auto;max-width:1150px}}
+font:18px/1.55 "IBM Plex Mono","Noto Sans Mono CJK SC",monospace;overflow-x:auto;max-width:1150px}}
 </style></head><body><div class="wrap">
 <h1>Agentix（agentix_core）优化如何被时间线可视化解释 —— 三模型总结</h1>
 <p class="sub">数据：本项目 3 模型 × {{FCFS, agentix_core}} 的 cap16 r0.5 采集（同负载同栈，唯一变量调度策略）。
