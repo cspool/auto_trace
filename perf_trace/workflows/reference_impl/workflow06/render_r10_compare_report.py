@@ -443,7 +443,10 @@ NCU 中位数一致（L2≈76% / SM≈49% / DRAM 14–20%），资源墙在 L2/t
 折叠上限 = max(2×中位时长, 段宽/2000)，只压大空洞（适配声明）。</p>
 
 <p class="note">记账：全部成员绘制、未抽样；硬件关联 family 级非逐实例；trace 开销两侧同担；
-payload 内含绝对 ns（BigInt 处理，无精度损失）。数字出处 gain_facts_$key.json 与两侧 payload。</p>
+payload 内含绝对 ns（BigInt 处理，无精度损失）。数字出处 gain_facts_$key.json 与两侧 payload。
+A00 守恒门（workflow06）已认证本对捕获：程序/调用键集合在负载规格、运行记录、trace NVTX 三方相等，
+调用→step 连接全通过（各捕获 a00_process_view.json）；preprocess 宇宙含 0.2–0.4 % 的空批引擎迭代
+（真实 scope，落在最低时长堆），采集停止可能截断最后一个迭代的 forward 后各 phase（至多各 1 个实例）。</p>
 <div id="tip"></div>
 $payloads
 <script>$js</script></body></html>""").substitute(

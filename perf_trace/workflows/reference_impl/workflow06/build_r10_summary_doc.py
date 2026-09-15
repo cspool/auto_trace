@@ -341,7 +341,12 @@ td:first-child,th:first-child{{text-align:left}}
  "这同时解释了三个模型提升幅度的差异。", figs[3])}
 
 <p class="cap">记账：配图为按明示准则截取的窗口（非全程）；完整无损/全量视图与全部账目在
-R10_COMPARE_*.html 与 GROUPS/payload；硬件关联 family 级；trace 开销两侧同担。</p>
+R10_COMPARE_*.html 与 GROUPS/payload；硬件关联 family 级；trace 开销两侧同担。
+A00 守恒门认证（workflow06，6/6 捕获 all_pass，见各捕获 a00_process_view.json）：程序与调用键集合
+在负载规格 / 运行记录 / trace NVTX 三方完全相等（25 程序 / 2,440 调用），每个调用窗口都与 ≥1 个
+forward step 相交。两条边界披露：preprocess 宇宙含少量空批引擎迭代（+26～+62 次，占 0.2–0.4 %，
+落在最低时长堆，不影响分堆与结论）；qwenvl_fcfs 的最后一个引擎迭代被采集停止截断，其 forward
+之后的各 phase scope 各缺 1 个实例。</p>
 </div></body></html>"""
     a.out.write_text(doc)
     print("wrote", a.out, a.out.stat().st_size // 1024, "KB")
