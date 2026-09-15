@@ -57,17 +57,17 @@ A00 只保证层级对账；**代表 process 的发现属于 workload_analysis �
 否则 process 宇宙只是"引擎现成给什么用什么"，热点内部不可见（h23 教训：preprocess 是不透明块，
 报告只能说"host 开销大"）。五步严格串行，一步一卡：
 
-- **W1 试运行**：短定长运行 + CPU 采样（ +  + 上下文切换）+ 现有探针。
-- **W2 热点定位**（参考实现 ）：按 UNION 时间排名 host process；对头号
+- **W1 试运行**：短定长运行 + CPU 采样（`--sample=process-tree` + `osrt` + 上下文切换）+ 现有探针。
+- **W2 热点定位**（参考实现 `w2_hotspot_report.py`）：按 UNION 时间排名 host process；对头号
   host process 做 CUDA-API vs 纯 host 拆分（按引擎线程过滤，跨线程 OSRT 不可用于归因）；
   容器内部归因率；**空闲边界榜 = 命名区间并集在 step 内的补集**（逐对相邻区间算 gap 会在嵌套
   长区间上造出假空隙——h23 曾因此得到 99,457 s 的荒谬值）。
-- **W3 插桩修订**（）：按 W2 结论增删探针；去掉与引擎自带 scope 重复的项；
+- **W3 插桩修订**（`w_instrument.py`）：按 W2 结论增删探针；去掉与引擎自带 scope 重复的项；
   把机制事件（量子块、降级、提升）升为一等 process。必须复测插桩开销（h23：−0.9 %）。
 - **W4 代表性采集**：完整负载 + 修订插桩，无 CPU 采样。
-- **W5 代表集选择**（）：以 UNION(step) − UNION(forward) 为 host 分母，
+- **W5 代表集选择**（`w5_select_processes.py`）：以 UNION(step) − UNION(forward) 为 host 分母，
   贪心选叶至覆盖目标；输出容器归因、空闲边界与 **perf_trace 覆盖差**，给出
-   /  判定。
+   `COVERED` / `RECAPTURE_REQUIRED` 判定。
 
 **验收**：三模型各自 W5 产出代表集；判定为 RECAPTURE_REQUIRED 时，A01 必须带修订插桩重采。
 
