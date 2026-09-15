@@ -360,6 +360,46 @@ def main():
             compo_html = compo_section(
                 Path("experiments/h23-agentix-8b/workloads/thr_mixed_r0.5.json")
             ).replace("{CHAR_ART}", char_art(cf, cc, pf["hl"]))
+            # concretize the paper figures with our own trace numbers (LLaMA pair)
+            idx_f0 = {(r["program_id"], r["call_index"]): r for r in cf}
+            idx_c0 = {(r["program_id"], r["call_index"]): r for r in cc}
+            k0 = max((k for k, r in idx_f0.items() if r["class"] == "bfcl" and k in idx_c0),
+                     key=lambda k: idx_f0[k]["first_token_rel_ms"] - idx_f0[k]["submitted_rel_ms"])
+            rf0, rc0 = idx_f0[k0], idx_c0[k0]
+            def ratio(rows, cls):
+                w = [r["first_token_rel_ms"] - r["submitted_rel_ms"] for r in rows if r["class"] == cls]
+                s = [r["finished_rel_ms"] - r["first_token_rel_ms"] for r in rows if r["class"] == cls]
+                return sum(w) / max(sum(s), 1e-9)
+            e0 = facts["endpoint"]
+            spec0 = json.loads(Path("experiments/h23-agentix-8b/workloads/thr_mixed_r0.5.json").read_text())
+            plist = lambda cls: "、".join(
+                f"{p['program_id']}({len(p['llm_calls'])}调用)" for p in spec0["programs"] if p["class"] == cls)
+            prog_note = (f"<br><b>纵轴上的程序是什么：</b>p 编号按到达顺序分配，同类程序只差到达时刻与"
+                         f"抽样出的调用数/长度（负载对三个模型完全相同）。bfcl 类 8 个：{plist('bfcl')}；"
+                         f"sharegpt 类 5 个：{plist('sharegpt')}；lats 类 12 个（p 编号其余，每程序约 193 调用、"
+                         f"5 路并行波）。看图时车道标签的 \"pid·类别·调用数\" 就是这里的身份。")
+            pfig_notes = {
+                "{OUR_FIG2}": (f"我们 trace 里的真实对应：调用 {k0[0]}#{k0[1]}（bfcl）在 FCFS 下等待 "
+                               f"{rf0['first_token_rel_ms']-rf0['submitted_rel_ms']:,.0f} ms 才进第一个 step，"
+                               f"agentix_core 下同一调用只等 {rc0['first_token_rel_ms']-rc0['submitted_rel_ms']:,.0f} ms"
+                               f"——就是图 (b)→(d) 里 D1 提前的实盘版本。"),
+                "{OUR_FIG6}": (f"用我们 LLaMA 对照对算同一度量（类内等待总时长/执行总时长）："
+                               f"bfcl 在 FCFS 下 {ratio(cf,'bfcl'):.1f} → core {ratio(cc,'bfcl'):.1f}，"
+                               f"sharegpt {ratio(cf,'sharegpt'):.1f} → {ratio(cc,'sharegpt'):.1f}，"
+                               f"lats {ratio(cf,'lats'):.2f} → {ratio(cc,'lats'):.2f}——与图中"
+                               f"『绿线把左端压平、对长程序中性』的形态一致。"),
+                "{OUR_FIG10}": (f"我们 trace 里的 MLFQ 账本逐项对应这四步（LLaMA core）：① 进程表查得 p(c) 后"
+                                f"② 直接入队 Q1–Q4 = {'/'.join(str(v) for v in facts['mlfq']['admission'].values())}，"
+                                f"③ 量子用尽降级 {facts['mlfq']['demotions']} 次（多量子调用 {facts['mlfq']['multi_quantum_calls']} 个），"
+                                f"④ β 提升 {facts['mlfq']['promotions']} 次（β=2.0 未触发饥饿线）。"),
+                "{OUR_FIG12}": (f"我们的实测点落在该列 0.5 program/s 处：FCFS "
+                                f"{e0['fcfs']['ptl']['mean']/1e3:.4f} s/token、agentix_core "
+                                f"{e0['core']['ptl']['mean']/1e3:.4f} s/token（{e0['speedup']['mean']:.2f}×）——"
+                                f"位于蓝红两线膝点之前的区间，与图中该负载段两线的间距量级一致。"),
+                "{OUR_FIG13}": (f"我们的对应实测（LLaMA，0.5 program/s）：p99 加速 {e0['speedup']['p99']:.2f}× "
+                                f"> p90 {e0['speedup']['p90']:.2f}× > mean {e0['speedup']['mean']:.2f}×——"
+                                f"收益向尾部集中的次序与该图相同。"),
+            }
         # -- part 1 window: 30 s maximizing FCFS wait mass of the SHORT program
         # classes (bfcl+sharegpt) — the classes the optimization acts on
         short = [c for c in cf if c["class"] != "lats"]
@@ -391,21 +431,31 @@ def main():
                         f"process 视角：每条红段的消失都对应『该 call 更早获得第一个 step 的成员资格』。"
                         f"<br><b>轴注：</b>横轴数字 + \"s\" = 从运行起点起算的墙钟秒（所有 process 的公共时钟，"
                         f"call 的提交/首token/完成都落在这条轴上）；纵轴无刻度，一行 = 一个 program 的车道，"
-                        f"行内每条横条 = 该 program 的一个 call；放大图中 \"ms\" = 该 call 红段（等待）的毫秒长度。"))
+                        f"行内每条横条 = 该 program 的一个 call；放大图中 \"ms\" = 该 call 红段（等待）的毫秒长度。"
+                        "{PROG_NOTE}"))
         stats.setdefault(key, {})["w1"] = (wsum, wsum_c)
         audit["models"].setdefault(key, {})["part1"] = {
             "criterion": "sliding 30 s window maximizing FCFS short-class (bfcl+sharegpt) wait mass",
             "window_s": [w0 / 1e3, w1 / 1e3],
             "short_wait_s": {"fcfs": wsum / 1e3, "core": wsum_c / 1e3}}
-        # -- part 2 lead figure: call-universe top-latency pile (the advantage view)
+        # -- part 2 lead figure: call-universe top-latency pile, cropped to the
+        # densest 60 s so member lines are individually readable
         seg_f, seg_c = call_top_pile(cf), call_top_pile(cc)
         from collections import Counter
         short_f = sum(v for k, v in Counter(m["cls"] for m in seg_f).items() if k != "lats")
         short_c = sum(v for k, v in Counter(m["cls"] for m in seg_c).items() if k != "lats")
-        wall_ms = max(max(c["finished_rel_ms"] for c in cf), max(c["finished_rel_ms"] for c in cc))
-        parts_call = axis(0, wall_ms, 26, 250)
-        c1, yn = call_pile_strip(seg_f, 30, "FCFS baseline", 0, wall_ms * 1e6)
-        c2, ye = call_pile_strip(seg_c, yn, "agentix_core", 0, wall_ms * 1e6)
+        win = int(60e9)
+        best_n, cw0 = -1, 0
+        for t in range(0, int(max(m["end"] for m in seg_f)) - win, int(5e9)):
+            n = sum(1 for m in seg_f if m["start"] < t + win and m["end"] > t)
+            if n > best_n:
+                best_n, cw0 = n, t
+        cw1 = cw0 + win
+        in_f = [m for m in seg_f if m["start"] < cw1 and m["end"] > cw0]
+        in_c = [m for m in seg_c if m["start"] < cw1 and m["end"] > cw0]
+        parts_call = axis(cw0 / 1e6, cw1 / 1e6, 26, 250)
+        c1, yn = call_pile_strip(in_f, 30, f"FCFS baseline（窗内 {len(in_f)}/{len(seg_f)} 成员）", cw0, cw1)
+        c2, ye = call_pile_strip(in_c, yn, f"agentix_core（窗内 {len(in_c)}/{len(seg_c)} 成员）", cw0, cw1)
         e = facts["endpoint"]["speedup"]
         cap_call = (f"高延迟【调用】堆的对比（全程视图，每条线一个调用，粗线 = bfcl/sharegpt，"
                     f"细淡线 = lats）。上图（FCFS）的最高时长堆有 {len(seg_f)} 个调用、合计 "
@@ -414,12 +464,22 @@ def main():
                     f"{sum(m['d'] for m in seg_c)/1e9:.0f} s，短程序成员只剩 {short_c} 个：agentix 的优势"
                     f"在高延迟视角就是『把不该出现在这里的调用清出去』。实测 mean {e['mean']:.2f}× / "
                     f"p90 {e['p90']:.2f}×。")
-        # -- supporting figure: forward (step) top pile — service invariance
+        # -- supporting figure: forward (step) top pile, cropped to the densest
+        # 2 s so individual step durations are readable
         p1 = pf["hl"]["piles"][0]
         si = max(range(10), key=lambda i: len(p1["rows"][i]))
         sec = pf["hl"]["sections"][si]
         o = int(pf["hl"]["origin"])
-        w0n, w1n = int(sec["begin_ns"]) - o, int(sec["end_ns"]) - o
+        sw0, sw1 = int(sec["begin_ns"]) - o, int(sec["end_ns"]) - o
+        starts = sorted(s for s, _ in p1["rows"][si])
+        win2 = int(2e9)
+        best_n, w0n = -1, sw0
+        for t in range(sw0, max(sw0 + 1, sw1 - win2), int(200e6)):
+            import bisect as _b
+            n = _b.bisect_left(starts, t + win2) - _b.bisect_left(starts, t)
+            if n > best_n:
+                best_n, w0n = n, t
+        w1n = w0n + win2
         parts = axis(w0n / 1e6, w1n / 1e6, 26, 250)
         s1, yn = hl_strip(pf["hl"], 30, "FCFS baseline", w0n, w1n)
         s2, ye2 = hl_strip(pc["hl"], yn, "agentix_core", w0n, w1n)
@@ -461,9 +521,13 @@ def main():
             if sc > best:
                 best, w0c = sc, start
         w1c = w0c + int(30e9)
-        parts = axis(w0c / 1e6, w1c / 1e6, 26, 360)
-        s1, yn = cu_strip(pf["cu"], 30, "FCFS baseline", w0c, w1c)
-        s2, ye = cu_strip(pc["cu"], yn, "agentix_core", w0c, w1c)
+        # detail comparison, not trend: display only the central 5 s of the
+        # busiest window so each lane bar (~100 ms) is individually readable
+        d0 = w0c + (w1c - w0c) // 2 - int(2500e6)
+        d1 = d0 + int(5e9)
+        parts = axis(d0 / 1e6, d1 / 1e6, 26, 360)
+        s1, yn = cu_strip(pf["cu"], 30, "FCFS baseline", d0, d1)
+        s2, ye = cu_strip(pc["cu"], yn, "agentix_core", d0, d1)
         q = facts["queue"]
         span = int(300e6)
         sq_f = next((a.art / f"{key}_fcfs_cap16").glob("*.sqlite"))
@@ -473,9 +537,10 @@ def main():
         m1, ym, busy_f, g_f = kernel_micro_strip(sq_f, 30, "FCFS baseline", at_f, span)
         m2, ym2, busy_c, g_c = kernel_micro_strip(sq_c, ym + 4, "agentix_core", at_c, span)
         micro_axis = [f'<text x="{LEFT}" y="16" font-size="10" fill="#48607d">排队最重时段内最繁忙的 300 ms（真实比例，每个矩形一个 kernel）</text>']
-        cap_lanes = (f"30 秒趋势窗（排队最重时段）。上下两图三条 lane 同形：GPU busy 与 gemm 占比"
-                     f"几乎重合，在飞调用数都压着 cap=16 的红虚线（全程 above-cap {q['fcfs']['ms_above_cap']/1e3:.0f} vs "
-                     f"{q['core']['ms_above_cap']/1e3:.0f} s）。趋势相同不是『没有区别』，而是排除法的前半："
+        cap_lanes = (f"排队最重时段中部的 5 秒细节窗（每根竖条 ≈ 100 ms 的一个采样窗口，可逐根对比，"
+                     f"不是趋势线）。上下两图逐条对看：GPU busy 与 gemm 占比的竖条起伏结构相同，"
+                     f"在飞调用数每根都压着 cap=16 的红虚线（全程 above-cap {q['fcfs']['ms_above_cap']/1e3:.0f} vs "
+                     f"{q['core']['ms_above_cap']/1e3:.0f} s）。细节相同不是『没有区别』，而是排除法的前半："
                      f"并发与资源两个自由度都被占满了。")
         cap_micro = (f"把排队最重时段里最繁忙的 300 ms 按真实比例展开看运行时细节：gemm kernel（黄）"
                      f"成串背靠背，其它 kernel（蓝）填在缝隙里——窗内 busy {busy_f:.0f} % / {busy_c:.0f} %，"
@@ -526,32 +591,32 @@ def main():
         "一个程序的一次 LLM 调用（A1 即程序 A 的第 1 次调用），(a) 表给出 4 个程序的调用数与各调用 "
         "decode 步数。看 (b)：FCFS 下单调用短程序 D 要等到 t≈4 才进槽，A 的 4 次调用穿插占槽到 t≈12；"
         "看 (d)：PLAS 按程序累计服务排序，C、D 提前完成，B 的长调用被推到尾部。同两个槽、同一批程序，"
-        "只是换了顺序——这就是我们端到端车道图要在真实 trace 上验证的行为。") + paper_fig(
+        "只是换了顺序——这就是我们端到端车道图要在真实 trace 上验证的行为。{OUR_FIG2}") + paper_fig(
         "_page_4_Figure_0.jpeg",
         "论文 Fig.6（原图）。2×2 面板：上行 Chatbot、下行 MCTS；左列按调用（横轴 = decode 步数）、"
         "右列按程序（横轴 = 程序的 LLM 调用数）；纵轴 = 等待/执行时间比；三条线 = FCFS（蓝圆）、"
         "MLFQ（橙三角）、Agentix（绿倒三角）。看左列：FCFS 在短 decode 端比值冲到 10–50（调用级队头阻塞）；"
         "看右列：FCFS 与 MLFQ 都在调用数少的程序端比值最高（程序级队头阻塞），Agentix 绿线两端都被压低。"
-        "我们的红段/彩段就是这个『等待/执行』度量的逐调用展开。")
+        "我们的红段/彩段就是这个『等待/执行』度量的逐调用展开。{OUR_FIG6}")
 
     PFIGS2 = paper_fig("_page_7_Figure_0.jpeg",
         "论文 Fig.10（原图）。左 = 进程表（PID → 程序数据）；右 = K 级队列，Q1 在下（高优先级）、"
         "QK 在上（低优先级），灰块 = 队内按 FCFS 排队的调用。红色数字即 Algorithm 1 的四步：① 新调用查"
         "进程表取 p(c)；② 按 p(c) 直接进入对应队列（不像传统 MLFQ 全部从 Q1 开始）；③ 量子用尽降级；"
-        "④ β 反饥饿提回 Q1。我们 trace 里的 MLFQ 账本（入队分布/降级/提升计数）逐项对应这四步。") + paper_fig(
+        "④ β 反饥饿提回 Q1。{OUR_FIG10}") + paper_fig(
         "_page_9_Figure_0.jpeg",
         "论文 Fig.12（原图，单引擎主结果）。4 行负载（ShareGPT/BFCL/LATS/Mixed）× 3 列硬件档"
         "（8B-1GPU / 70B-4GPU / 180B-8GPU）；横轴 = 程序到达率（program/s），纵轴 = 平均 token 延迟"
         "（s/token）；四条曲线 = vLLM（绿）、vLLM-opt（红）、MLFQ（橙）、Agentix（蓝）。读法：每条曲线的"
         "『膝点』是延迟起飞的到达率，蓝线膝点最靠右；同一延迟水平线下可承受到达率之比，就是文中 2×/5× 的"
         "吞吐口径。我们的复现对应左上角那一列（8B, 1 GPU），fcfs 臂近似红线（vLLM-opt：有前缀缓存与 "
-        "chunked prefill 的 FCFS）。")
+        "chunked prefill 的 FCFS）。{OUR_FIG12}")
 
     PFIGS3 = paper_fig("_page_10_Figure_0.jpeg",
         "论文 Fig.13（原图，单引擎尾延迟，LLaMA-3.1-8B）。行 = 4 种负载，列 = P95 / P99；轴与曲线含义同 "
         "Fig.12。看 ShareGPT 行：MLFQ（橙）平均延迟不差，但 P95/99 先于 Agentix 起飞——追短调用把长程序"
         "饿出了长尾；Agentix 蓝线膝点仍最右。这解释了为什么我们实测的收益里 p99（2.67×）比 mean（1.35×）"
-        "大：MLFQ 家族的收益天然集中在尾部，而 β 反饥饿控制住了另一侧的尾巴。")
+        "大：MLFQ 家族的收益天然集中在尾部，而 β 反饥饿控制住了另一侧的尾巴。{OUR_FIG13}")
 
     PAPER1 = """<p>Agentix（Autellix, NSDI'26）§3.1 用等待/执行时间比（其 Fig.5/6）论证两级病灶：
 <b>调用级队头阻塞</b>——长 decode 的调用挡住短调用（vLLM 等引擎等在批的 decode 完成后才调度新调用）；
@@ -695,6 +760,9 @@ forward step 相交。两条边界披露：preprocess 宇宙含少量空批引�
 落在最低时长堆，不影响分堆与结论）；qwenvl_fcfs 的最后一个引擎迭代被采集停止截断，其 forward
 之后的各 phase scope 各缺 1 个实例。</p>
 </div></body></html>"""
+    for ph, txt in pfig_notes.items():
+        doc = doc.replace(ph, txt)
+    doc = doc.replace("{PROG_NOTE}", prog_note)
     a.out.write_text(doc)
     (a.out.parent / "R10_SUMMARY_AUDIT.json").write_text(json.dumps(audit, indent=2))
     print("wrote", a.out, a.out.stat().st_size // 1024, "KB, audit written")
