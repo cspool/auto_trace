@@ -53,7 +53,7 @@ def axis(w0, w1, y, h):
         t = w0 + (w1 - w0) * i / 6
         x = LEFT + (W - LEFT - RIGHT) * i / 6
         out.append(f'<line x1="{x:.0f}" y1="{y}" x2="{x:.0f}" y2="{y+h}" stroke="#e6edf4"/>')
-        out.append(f'<text x="{x:.0f}" y="{y-5}" font-size="10" text-anchor="middle" fill="#48607d">{t/1e3:.0f} s</text>')
+        out.append(f'<text x="{x:.0f}" y="{y-12}" font-size="17" text-anchor="middle" fill="#48607d">{t/1e3:.0f} s</text>')
     return out
 
 
@@ -77,25 +77,25 @@ def class_lifecycle_figs(cf):
         X = lambda t: LEFT + (W - LEFT - RIGHT) * (t - t0) / max(t1 - t0, 1e-9)
         waves = sorted({c.get("wave", 0) for c in cs})
         rows = min(len(waves), 5) if cls == "lats" else 1
-        H0 = 46 + rows * 16
-        svg = [f'<text x="4" y="14" font-size="11.5" font-weight="600">{cls} · 程序 {pid} · {len(cs)} 个调用 · 寿命 {(t1-t0)/1e3:.1f} s（真实 trace，FCFS 侧）</text>']
+        H0 = 100 + rows * 48
+        svg = [f'<text x="4" y="30" font-size="20" font-weight="600">{cls} · 程序 {pid} · {len(cs)} 个调用 · 寿命 {(t1-t0)/1e3:.1f} s（真实 trace，FCFS 侧）</text>']
         for i in range(7):
             t = t0 + (t1 - t0) * i / 6
-            svg.append(f'<text x="{X(t):.0f}" y="26" font-size="9" text-anchor="middle" fill="#48607d">{(t-t0)/1e3:.1f}s</text>')
+            svg.append(f'<text x="{X(t):.0f}" y="60" font-size="15" text-anchor="middle" fill="#48607d">{(t-t0)/1e3:.1f}s</text>')
         for c in cs:
             r = (c.get("wave", 0) % 5) if cls == "lats" else 0
-            y = 32 + r * 16
+            y = 74 + r * 48
             x0, x1, x2 = X(c["submitted_rel_ms"]), X(c["first_token_rel_ms"]), X(c["finished_rel_ms"])
-            svg.append(f'<rect x="{x0:.1f}" y="{y}" width="{max(x1-x0,0.5):.1f}" height="11" fill="{WAIT}" opacity=".85"/>')
-            svg.append(f'<rect x="{x1:.1f}" y="{y}" width="{max(x2-x1,0.5):.1f}" height="11" fill="{CLS_COLOR[cls]}" opacity=".9"/>')
+            svg.append(f'<rect x="{x0:.1f}" y="{y}" width="{max(x1-x0,0.5):.1f}" height="34" fill="{WAIT}" opacity=".85"/>')
+            svg.append(f'<rect x="{x1:.1f}" y="{y}" width="{max(x2-x1,0.5):.1f}" height="34" fill="{CLS_COLOR[cls]}" opacity=".9"/>')
         if cls == "lats":
-            svg.append(f'<text x="{LEFT-6}" y="{32+40}" font-size="9" text-anchor="end" fill="#48607d">5 路并行</text>')
+            svg.append(f'<text x="{LEFT-6}" y="{74+120}" font-size="15" text-anchor="end" fill="#48607d">5 路并行</text>')
         out_blocks.append(fig(svg, H0) + f'<p class="cap"><b>{cls} 的生命周期：</b>{note}。'
                           f'红段 = 等待（提交→首token），彩段 = 服务；横轴为该程序自身的寿命时间。</p>')
     return "".join(out_blocks)
 
 
-def e2e_paired_strip(cf, cc, w0, w1, y0, rh=8, short_only=False, annotate=False):
+def e2e_paired_strip(cf, cc, w0, w1, y0, rh=24, short_only=False, annotate=False):
     """One panel, lanes = programs; each program gets TWO adjacent sub-rows:
     FCFS on top, agentix_core below — same p side by side, calls stay in-lane."""
     lanes = {}
@@ -108,22 +108,22 @@ def e2e_paired_strip(cf, cc, w0, w1, y0, rh=8, short_only=False, annotate=False)
             L = lanes.setdefault(c["program_id"], {"cls": c["class"], "f": [], "c": []})
             L[src].append(c)
     order = sorted(lanes.items(), key=lambda kv: ({"bfcl": 0, "sharegpt": 1, "lats": 2}[kv[1]["cls"]], kv[0]))
-    pair_h = 2 * rh + 6
+    pair_h = 2 * rh + 18
     out = []
     X = lambda t: LEFT + (W - LEFT - RIGHT) * (max(min(t, w1), w0) - w0) / (w1 - w0)
     for i, (pid, L) in enumerate(order):
         y = y0 + i * pair_h
-        out.append(f'<text x="{LEFT-24}" y="{y+rh+3}" font-size="9" text-anchor="end" fill="#48607d">{pid}·{L["cls"]}</text>')
+        out.append(f'<text x="{LEFT-24}" y="{y+rh+3}" font-size="15" text-anchor="end" fill="#48607d">{pid}·{L["cls"]}</text>')
         for j, src in enumerate(("f", "c")):
             yy = y + j * rh
-            out.append(f'<text x="{LEFT-4}" y="{yy+rh-1}" font-size="8" text-anchor="end" fill="{"#1f2f45" if src=="f" else "#2f6f9f"}">{"F" if src=="f" else "A"}</text>')
+            out.append(f'<text x="{LEFT-4}" y="{yy+rh-1}" font-size="14" text-anchor="end" fill="{"#1f2f45" if src=="f" else "#2f6f9f"}">{"F" if src=="f" else "A"}</text>')
             for c in L[src]:
                 x0, x1, x2 = X(c["submitted_rel_ms"]), X(c["first_token_rel_ms"]), X(c["finished_rel_ms"])
-                out.append(f'<rect x="{x0:.1f}" y="{yy+1}" width="{max(x1-x0,0.5):.1f}" height="{rh-2}" fill="{WAIT}" opacity=".9"/>')
-                out.append(f'<rect x="{x1:.1f}" y="{yy+1}" width="{max(x2-x1,0.5):.1f}" height="{rh-2}" fill="{CLS_COLOR[L["cls"]]}"/>')
+                out.append(f'<rect x="{x0:.1f}" y="{yy+3}" width="{max(x1-x0,0.5):.1f}" height="{rh-6}" fill="{WAIT}" opacity=".9"/>')
+                out.append(f'<rect x="{x1:.1f}" y="{yy+3}" width="{max(x2-x1,0.5):.1f}" height="{rh-6}" fill="{CLS_COLOR[L["cls"]]}"/>')
                 if annotate and x1 - x0 > 30:
-                    out.append(f'<text x="{(x0+x1)/2:.0f}" y="{yy+rh-2}" font-size="7.5" text-anchor="middle" fill="#fff">{c["first_token_rel_ms"]-c["submitted_rel_ms"]:.0f}ms</text>')
-        out.append(f'<line x1="{LEFT}" y1="{y+pair_h-3}" x2="{W-RIGHT}" y2="{y+pair_h-3}" stroke="#eef2ee"/>')
+                    out.append(f'<text x="{(x0+x1)/2:.0f}" y="{yy+rh-2}" font-size="13" text-anchor="middle" fill="#fff">{c["first_token_rel_ms"]-c["submitted_rel_ms"]:.0f}ms</text>')
+        out.append(f'<line x1="{LEFT}" y1="{y+pair_h-9}" x2="{W-RIGHT}" y2="{y+pair_h-9}" stroke="#eef2ee"/>')
     return out, y0 + len(order) * pair_h + 6
 
 
@@ -134,11 +134,11 @@ def e2e_strip(calls, w0, w1, y0, tag):
     order = sorted(lanes.items(), key=lambda kv: ({"bfcl": 0, "sharegpt": 1, "lats": 2}[kv[1]["cls"]],
                                                   min(x["submitted_rel_ms"] for x in kv[1]["cs"])))
     rh = 9
-    out = [f'<text x="4" y="{y0+10}" font-size="11.5" font-weight="600" fill="{"#2f6f9f" if "core" in tag else "#1f2f45"}">{tag}</text>']
+    out = [f'<text x="4" y="{y0+10}" font-size="20" font-weight="600" fill="{"#2f6f9f" if "core" in tag else "#1f2f45"}">{tag}</text>']
     X = lambda t: LEFT + (W - LEFT - RIGHT) * (max(min(t, w1), w0) - w0) / (w1 - w0)
     for i, (pid, ln) in enumerate(order):
         y = y0 + 16 + i * rh
-        out.append(f'<text x="{LEFT-6}" y="{y+7}" font-size="8" text-anchor="end" fill="#8fa2b6">{pid}·{ln["cls"]}</text>')
+        out.append(f'<text x="{LEFT-6}" y="{y+7}" font-size="14" text-anchor="end" fill="#8fa2b6">{pid}·{ln["cls"]}</text>')
         for c in ln["cs"]:
             if c["finished_rel_ms"] < w0 or c["submitted_rel_ms"] > w1:
                 continue
@@ -154,8 +154,8 @@ def hl_strip(payload, y0, tag, w0_ns, w1_ns):
     origin = int(payload["origin"])
     ms = [m for rows in p1["rows"] for m in rows if m[0] + m[1] > w0_ns and m[0] < w1_ns]
     ms.sort(key=lambda m: m[0])
-    out = [f'<text x="4" y="{y0+10}" font-size="11.5" font-weight="600" fill="{"#2f6f9f" if "core" in tag else "#1f2f45"}">{tag} · #1 {p1["type"]} 堆{p1["pile_index"]} · 全堆 {p1["count"]} 次 / 和 {p1["sum_ns"]/1e9:.2f} s · 窗内 {len(ms)} 次</text>']
-    top, bottom = y0 + 18, y0 + 100
+    out = [f'<text x="4" y="{y0+10}" font-size="20" font-weight="600" fill="{"#2f6f9f" if "core" in tag else "#1f2f45"}">{tag} · #1 {p1["type"]} 堆{p1["pile_index"]} · 全堆 {p1["count"]} 次 / 和 {p1["sum_ns"]/1e9:.2f} s · 窗内 {len(ms)} 次</text>']
+    top, bottom = y0 + 46, y0 + 300
     X = lambda t: LEFT + (W - LEFT - RIGHT) * (min(max(t, w0_ns), w1_ns) - w0_ns) / (w1_ns - w0_ns)
     n = len(ms)
     if n:
@@ -168,17 +168,17 @@ def hl_strip(payload, y0, tag, w0_ns, w1_ns):
         out.append(f'<path d="M{li:.1f} {top} L{ri:.1f} {top} L{ri+rs:.1f} {bottom} L{li+ls:.1f} {bottom} Z" fill="#eef4fa" stroke="#8fb2ce"/>')
         seg = "".join(f'M{e[0]:.1f} {top+frac(k)*(bottom-top):.1f}H{e[1]:.1f}' for k, e in enumerate(ends))
         out.append(f'<path d="{seg}" stroke="#2f6f9f" stroke-width="1" fill="none" opacity=".8"/>')
-    return out, bottom + 10
+    return out, bottom + 26
 
 
 def cu_strip(payload, y0, tag, w0_ns, w1_ns, cap=16):
-    out = [f'<text x="4" y="{y0+10}" font-size="11.5" font-weight="600" fill="{"#2f6f9f" if "core" in tag else "#1f2f45"}">{tag}</text>']
-    y = y0 + 14
+    out = [f'<text x="4" y="{y0+10}" font-size="20" font-weight="600" fill="{"#2f6f9f" if "core" in tag else "#1f2f45"}">{tag}</text>']
+    y = y0 + 36
     X = lambda t: LEFT + (W - LEFT - RIGHT) * (min(max(t, w0_ns), w1_ns) - w0_ns) / (w1_ns - w0_ns)
     for ln in payload["lanes"]:
-        lane_h = 46
-        base = y + lane_h - 4
-        out.append(f'<text x="{LEFT-6}" y="{y+16}" font-size="9.5" text-anchor="end" fill="#48607d">{ln["label"]}</text>')
+        lane_h = 138
+        base = y + lane_h - 10
+        out.append(f'<text x="{LEFT-6}" y="{y+16}" font-size="16" text-anchor="end" fill="#48607d">{ln["label"]}</text>')
         out.append(f'<rect x="{LEFT}" y="{y}" width="{W-LEFT-RIGHT}" height="{lane_h}" fill="#fbfbf9" stroke="#eee"/>')
         path = ""
         for rows in ln["rows"]:
@@ -186,14 +186,14 @@ def cu_strip(payload, y0, tag, w0_ns, w1_ns, cap=16):
                 if r[0] + r[1] < w0_ns or r[0] > w1_ns:
                     continue
                 x1, x2 = X(r[0]), X(r[0] + r[1])
-                h = (lane_h - 8) * min(1.0, r[2] / ln["max"])
+                h = (lane_h - 24) * min(1.0, r[2] / ln["max"])
                 path += f'M{x1:.1f} {base:.1f}V{base-h:.1f}H{x2:.1f}V{base:.1f}'
         out.append(f'<path d="{path}" stroke="{ln["color"]}" stroke-width="1" fill="none"/>')
         if ln["unit"] == "个":
-            yc = base - (lane_h - 8) * min(1.0, cap / ln["max"])
+            yc = base - (lane_h - 24) * min(1.0, cap / ln["max"])
             out.append(f'<line x1="{LEFT}" y1="{yc:.1f}" x2="{W-RIGHT}" y2="{yc:.1f}" stroke="{WAIT}" stroke-dasharray="4 3"/>')
-            out.append(f'<text x="{W-RIGHT-2}" y="{yc-3:.1f}" font-size="9" text-anchor="end" fill="{WAIT}">cap=16</text>')
-        y += lane_h + 8
+            out.append(f'<text x="{W-RIGHT-2}" y="{yc-3:.1f}" font-size="15" text-anchor="end" fill="{WAIT}">cap=16</text>')
+        y += lane_h + 24
     return out, y + 4
 
 
@@ -296,17 +296,17 @@ def e2e_zoom_strip(calls, w0, w1, y0, tag):
         lanes.setdefault(c["program_id"], {"cls": c["class"], "cs": []})["cs"].append(c)
     order = sorted(lanes.items(), key=lambda kv: (kv[1]["cls"], kv[0]))
     rh = 20
-    out = [f'<text x="4" y="{y0+12}" font-size="11.5" font-weight="600" fill="{"#2f6f9f" if "core" in tag else "#1f2f45"}">{tag}</text>']
+    out = [f'<text x="4" y="{y0+12}" font-size="20" font-weight="600" fill="{"#2f6f9f" if "core" in tag else "#1f2f45"}">{tag}</text>']
     X = lambda t: LEFT + (W - LEFT - RIGHT) * (max(min(t, w1), w0) - w0) / (w1 - w0)
     for i, (pid, ln) in enumerate(order):
         y = y0 + 18 + i * rh
-        out.append(f'<text x="{LEFT-6}" y="{y+12}" font-size="9.5" text-anchor="end" fill="#48607d">{pid}·{ln["cls"]}</text>')
+        out.append(f'<text x="{LEFT-6}" y="{y+12}" font-size="16" text-anchor="end" fill="#48607d">{pid}·{ln["cls"]}</text>')
         for c in ln["cs"]:
             x0, x1, x2 = X(c["submitted_rel_ms"]), X(c["first_token_rel_ms"]), X(c["finished_rel_ms"])
             out.append(f'<rect x="{x0:.1f}" y="{y+3}" width="{max(x1-x0,0.6):.1f}" height="12" fill="{WAIT}" opacity=".9"/>')
             out.append(f'<rect x="{x1:.1f}" y="{y+3}" width="{max(x2-x1,0.6):.1f}" height="12" fill="{CLS_COLOR[ln["cls"]]}"/>')
             if x1 - x0 > 30:
-                out.append(f'<text x="{(x0+x1)/2:.0f}" y="{y+12}" font-size="8.5" text-anchor="middle" fill="#fff">{c["first_token_rel_ms"]-c["submitted_rel_ms"]:.0f}ms</text>')
+                out.append(f'<text x="{(x0+x1)/2:.0f}" y="{y+12}" font-size="14" text-anchor="middle" fill="#fff">{c["first_token_rel_ms"]-c["submitted_rel_ms"]:.0f}ms</text>')
     return out, y0 + 18 + len(order) * rh + 6
 
 
@@ -319,14 +319,14 @@ def pair_bars(seg_f, idx_c, y0):
     X = lambda ns: LEFT + (W - LEFT - RIGHT - 120) * ns / dmax
     for m in shorts:
         rc = idx_c.get((m["pid"], m["idx"]))
-        out.append(f'<text x="{LEFT-6}" y="{y+11}" font-size="9.5" text-anchor="end" fill="#48607d">{m["pid"]}#{m["idx"]} {m["cls"]}</text>')
-        out.append(f'<rect x="{LEFT}" y="{y+2}" width="{X(m["d"])-LEFT:.1f}" height="10" fill="{WAIT}" opacity=".85"/>')
-        out.append(f'<text x="{X(m["d"])+6:.0f}" y="{y+11}" font-size="9" fill="#1f2f45">FCFS {m["d"]/1e9:.1f} s</text>')
+        out.append(f'<text x="{LEFT-6}" y="{y+26}" font-size="16" text-anchor="end" fill="#48607d">{m["pid"]}#{m["idx"]} {m["cls"]}</text>')
+        out.append(f'<rect x="{LEFT}" y="{y+8}" width="{X(m["d"])-LEFT:.1f}" height="30" fill="{WAIT}" opacity=".85"/>')
+        out.append(f'<text x="{X(m["d"])+6:.0f}" y="{y+30}" font-size="15" fill="#1f2f45">FCFS {m["d"]/1e9:.1f} s</text>')
         if rc:
             dc = (rc["finished_rel_ms"] - rc["submitted_rel_ms"]) * 1e6
-            out.append(f'<rect x="{LEFT}" y="{y+14}" width="{max(X(dc)-LEFT,1):.1f}" height="10" fill="#2f6f9f" opacity=".85"/>')
-            out.append(f'<text x="{X(dc)+6:.0f}" y="{y+23}" font-size="9" fill="#2f6f9f">core {dc/1e9:.1f} s（{m["d"]/max(dc,1):.1f}×）</text>')
-        y += 32
+            out.append(f'<rect x="{LEFT}" y="{y+44}" width="{max(X(dc)-LEFT,1):.1f}" height="30" fill="#2f6f9f" opacity=".85"/>')
+            out.append(f'<text x="{X(dc)+6:.0f}" y="{y+66}" font-size="15" fill="#2f6f9f">core {dc/1e9:.1f} s（{m["d"]/max(dc,1):.1f}×）</text>')
+        y += 96
     return out, y + 4
 
 
@@ -334,8 +334,8 @@ def call_pile_strip(seg, y0, tag, w0, w1):
     from collections import Counter
     comp = Counter(m["cls"] for m in seg)
     lab = " ".join(f"{k}:{v}" for k, v in comp.most_common())
-    out = [f'<text x="4" y="{y0+11}" font-size="11.5" font-weight="600" fill="{"#2f6f9f" if "core" in tag else "#1f2f45"}">{tag} · 最高时长堆：{len(seg)} 个调用 · 合计 {sum(m["d"] for m in seg)/1e9:.0f} s · 单次 {seg[0]["d"]/1e9:.1f}–{seg[-1]["d"]/1e9:.1f} s · 构成 {lab}</text>']
-    top, bottom = y0 + 16, y0 + 108
+    out = [f'<text x="4" y="{y0+11}" font-size="20" font-weight="600" fill="{"#2f6f9f" if "core" in tag else "#1f2f45"}">{tag} · 最高时长堆：{len(seg)} 个调用 · 合计 {sum(m["d"] for m in seg)/1e9:.0f} s · 单次 {seg[0]["d"]/1e9:.1f}–{seg[-1]["d"]/1e9:.1f} s · 构成 {lab}</text>']
+    top, bottom = y0 + 44, y0 + 320
     X = lambda t: LEFT + (W - LEFT - RIGHT) * (min(max(t, w0), w1) - w0) / (w1 - w0)
     ms = sorted(seg, key=lambda m: m["start"])
     n = len(ms)
@@ -348,8 +348,8 @@ def call_pile_strip(seg, y0, tag, w0, w1):
     out.append(f'<path d="M{li:.1f} {top} L{ri:.1f} {top} L{ri+rs:.1f} {bottom} L{li+ls:.1f} {bottom} Z" fill="#eef4fa" stroke="#8fb2ce"/>')
     for k, m in enumerate(ms):
         yy = top + frac(k) * (bottom - top)
-        out.append(f'<path d="M{ends[k][0]:.1f} {yy:.1f}H{ends[k][1]:.1f}" stroke="{CLS_COLOR.get(m["cls"], "#888")}" stroke-width="{2.2 if m["cls"] != "lats" else 1}" opacity="{0.95 if m["cls"] != "lats" else 0.45}"/>')
-    return out, bottom + 12
+        out.append(f'<path d="M{ends[k][0]:.1f} {yy:.1f}H{ends[k][1]:.1f}" stroke="{CLS_COLOR.get(m["cls"], "#888")}" stroke-width="{5 if m["cls"] != "lats" else 2.2}" opacity="{0.95 if m["cls"] != "lats" else 0.45}"/>')
+    return out, bottom + 28
 
 
 def kernel_micro_best(sq: Path, abs_lo, abs_hi, span_ns):
@@ -392,20 +392,20 @@ def kernel_micro_strip(sq: Path, y0, tag, abs0, span_ns):
     busy = sum(e - s for s, e in merged) / span_ns * 100
     gsum = sum(min(e, abs0 + span_ns) - max(s, abs0) for s, e in gemm) / span_ns * 100
     X = lambda t: LEFT + (W - LEFT - RIGHT - 150) * (min(max(t, abs0), abs0 + span_ns) - abs0) / span_ns
-    out = [f'<text x="4" y="{y0+11}" font-size="11.5" font-weight="600" fill="{"#2f6f9f" if "core" in tag else "#1f2f45"}">{tag} · 窗内 kernel {len(rows):,} 个 · GPU busy {busy:.0f} % · gemm 占 {gsum:.0f} %</text>']
-    for lane_y, iv, col, name in [(y0 + 18, gemm, "#a8802f", "gemm 家族"), (y0 + 52, other, "#2f6f9f", "其它 kernel")]:
-        out.append(f'<text x="{LEFT-6}" y="{lane_y+18}" font-size="9.5" text-anchor="end" fill="#48607d">{name}</text>')
-        out.append(f'<rect x="{LEFT}" y="{lane_y}" width="{W-LEFT-RIGHT-150}" height="28" fill="#fbfbf9" stroke="#eee"/>')
+    out = [f'<text x="4" y="{y0+11}" font-size="20" font-weight="600" fill="{"#2f6f9f" if "core" in tag else "#1f2f45"}">{tag} · 窗内 kernel {len(rows):,} 个 · GPU busy {busy:.0f} % · gemm 占 {gsum:.0f} %</text>']
+    for lane_y, iv, col, name in [(y0 + 46, gemm, "#a8802f", "gemm 家族"), (y0 + 150, other, "#2f6f9f", "其它 kernel")]:
+        out.append(f'<text x="{LEFT-6}" y="{lane_y+52}" font-size="16" text-anchor="end" fill="#48607d">{name}</text>')
+        out.append(f'<rect x="{LEFT}" y="{lane_y}" width="{W-LEFT-RIGHT-150}" height="84" fill="#fbfbf9" stroke="#eee"/>')
         for s, e in iv:
             x1, x2 = X(s), X(e)
-            out.append(f'<rect x="{x1:.2f}" y="{lane_y+3}" width="{max(x2-x1,0.25):.2f}" height="22" fill="{col}" opacity=".8"/>')
+            out.append(f'<rect x="{x1:.2f}" y="{lane_y+8}" width="{max(x2-x1,0.25):.2f}" height="68" fill="{col}" opacity=".8"/>')
     bx = W - RIGHT - 130
-    out.append(f'<text x="{bx}" y="{y0+14}" font-size="9.5" fill="#48607d">资源墙（NCU family 中位）</text>')
+    out.append(f'<text x="{bx}" y="{y0+34}" font-size="16" fill="#48607d">资源墙（NCU family 中位）</text>')
     for i, (lab, v, col) in enumerate([("L2", 76, "#9085e9"), ("SM/tensor", 49, "#1baf7a"), ("DRAM", 17, "#eb6834")]):
         bxx = bx + i * 44
-        out.append(f'<rect x="{bxx}" y="{y0+18+(62*(1-v/100)):.1f}" width="26" height="{62*v/100:.1f}" fill="{col}" opacity=".85"/>')
-        out.append(f'<text x="{bxx+13}" y="{y0+92}" font-size="9" text-anchor="middle" fill="#48607d">{lab} {v}%</text>')
-    return out, y0 + 100, busy, gsum
+        out.append(f'<rect x="{bxx}" y="{y0+50+(190*(1-v/100)):.1f}" width="26" height="{190*v/100:.1f}" fill="{col}" opacity=".85"/>')
+        out.append(f'<text x="{bxx+13}" y="{y0+262}" font-size="15" text-anchor="middle" fill="#48607d">{lab} {v}%</text>')
+    return out, y0 + 276, busy, gsum
 
 
 def main():
@@ -478,8 +478,8 @@ def main():
         w0, w1, wsum = pick_wait_window(short)
         wsum_c = sum(max(0.0, min(c["first_token_rel_ms"], w1) - max(c["submitted_rel_ms"], w0))
                      for c in cc if c["class"] != "lats")
-        parts = axis(w0, w1, 26, 560)
-        s12, ye = e2e_paired_strip(cf, cc, w0, w1, 30)
+        parts = axis(w0, w1, 60, 1700)
+        s12, ye = e2e_paired_strip(cf, cc, w0, w1, 70)
         # paper-grained zoom around the worst-wait short call in the window
         shorts_w = [c for c in cf if c["class"] != "lats" and w0 <= c["submitted_rel_ms"] <= w1]
         wc0 = max(shorts_w, key=lambda c: c["first_token_rel_ms"] - c["submitted_rel_ms"]) if shorts_w else None
@@ -487,8 +487,8 @@ def main():
         if wc0:
             z0 = max(0.0, wc0["submitted_rel_ms"] - 500)
             z1 = wc0["finished_rel_ms"] + 1500
-            zp = axis(z0, z1, 26, 300)
-            za, zy2 = e2e_paired_strip(cf, cc, z0, z1, 30, rh=14, short_only=True, annotate=True)
+            zp = axis(z0, z1, 60, 900)
+            za, zy2 = e2e_paired_strip(cf, cc, z0, z1, 70, rh=42, short_only=True, annotate=True)
             zoom_html = (f'<p class="cap"><b>放大（论文 Fig.2 粒度，{(z1-z0)/1e3:.1f} s 窗，仅短程序，'
                          f'每程序 F/A 两行相邻，红段内标注等待毫秒数）：</b>同一程序上下两行直接对看，'
                          f'F 行红段以秒计、A 行以十毫秒计。</p>'
@@ -525,8 +525,8 @@ def main():
         cw1 = cw0 + win
         in_f = [m for m in seg_f if m["start"] < cw1 and m["end"] > cw0]
         in_c = [m for m in seg_c if m["start"] < cw1 and m["end"] > cw0]
-        parts_call = axis(cw0 / 1e6, cw1 / 1e6, 26, 250)
-        c1, yn = call_pile_strip(in_f, 30, f"FCFS baseline（窗内 {len(in_f)}/{len(seg_f)} 成员）", cw0, cw1)
+        parts_call = axis(cw0 / 1e6, cw1 / 1e6, 60, 740)
+        c1, yn = call_pile_strip(in_f, 70, f"FCFS baseline（窗内 {len(in_f)}/{len(seg_f)} 成员）", cw0, cw1)
         c2, ye = call_pile_strip(in_c, yn, f"agentix_core（窗内 {len(in_c)}/{len(seg_c)} 成员）", cw0, cw1)
         e = facts["endpoint"]["speedup"]
         cap_call = (f"高延迟【调用】堆的对比（全程视图，每条线一个调用，粗线 = bfcl/sharegpt，"
@@ -552,8 +552,8 @@ def main():
             if n > best_n:
                 best_n, w0n = n, t
         w1n = w0n + win2
-        parts = axis(w0n / 1e6, w1n / 1e6, 26, 250)
-        s1, yn = hl_strip(pf["hl"], 30, "FCFS baseline", w0n, w1n)
+        parts = axis(w0n / 1e6, w1n / 1e6, 60, 740)
+        s1, yn = hl_strip(pf["hl"], 70, "FCFS baseline", w0n, w1n)
         s2, ye2 = hl_strip(pc["hl"], yn, "agentix_core", w0n, w1n)
         cap_fwd = (f"高延迟【step】堆的对比（同一时段放大）。这两个梯形刻意地看不出区别——它们是"
                    f"『重 forward step』（大 batch/含 prefill 的引擎迭代），全堆和 {p1['sum_ns']/1e9:.1f} vs "
@@ -570,8 +570,8 @@ def main():
                   f'step 是共享的引擎迭代，机制改不动它）。三图合读：图三钉死服务不变，图一/图二把'
                   f'全部差异归到等待上。</p>')
         idx_cc = {(r["program_id"], r["call_index"]): r for r in cc}
-        pb, pby = pair_bars(seg_f, idx_cc, 30)
-        pb_head = [f'<text x="{LEFT}" y="16" font-size="10" fill="#48607d">同一调用两种策略下的端到端时长（上条 FCFS 红、下条 core 蓝；取 baseline 高延迟堆中最长的 5 个短程序调用）</text>']
+        pb, pby = pair_bars(seg_f, idx_cc, 70)
+        pb_head = [f'<text x="{LEFT}" y="36" font-size="17" fill="#48607d">同一调用两种策略下的端到端时长（上条 FCFS 红、下条 core 蓝；取 baseline 高延迟堆中最长的 5 个短程序调用）</text>']
         figs[2].append((name, guide2 + fig(parts_call + c1 + c2, ye + 6) +
                         f'<p class="cap"><b>图注：</b>{cap_call}'
                         f'<br><b>轴注：</b>横轴 \"s\" = 全程墙钟秒；一条线 = 一个 call 从提交到完成的窗口，'
@@ -605,8 +605,8 @@ def main():
         # busiest window so each lane bar (~100 ms) is individually readable
         d0 = w0c + (w1c - w0c) // 2 - int(2500e6)
         d1 = d0 + int(5e9)
-        parts = axis(d0 / 1e6, d1 / 1e6, 26, 360)
-        s1, yn = cu_strip(pf["cu"], 30, "FCFS baseline", d0, d1)
+        parts = axis(d0 / 1e6, d1 / 1e6, 60, 1100)
+        s1, yn = cu_strip(pf["cu"], 70, "FCFS baseline", d0, d1)
         s2, ye = cu_strip(pc["cu"], yn, "agentix_core", d0, d1)
         q = facts["queue"]
         span = int(300e6)
@@ -614,9 +614,9 @@ def main():
         sq_c = next((a.art / f"{key}_core_cap16").glob("*.sqlite"))
         at_f = kernel_micro_best(sq_f, int(pf["hl"]["origin"]) + w0c, int(pf["hl"]["origin"]) + w1c, span)
         at_c = kernel_micro_best(sq_c, int(pc["hl"]["origin"]) + w0c, int(pc["hl"]["origin"]) + w1c, span)
-        m1, ym, busy_f, g_f = kernel_micro_strip(sq_f, 30, "FCFS baseline", at_f, span)
+        m1, ym, busy_f, g_f = kernel_micro_strip(sq_f, 70, "FCFS baseline", at_f, span)
         m2, ym2, busy_c, g_c = kernel_micro_strip(sq_c, ym + 4, "agentix_core", at_c, span)
-        micro_axis = [f'<text x="{LEFT}" y="16" font-size="10" fill="#48607d">排队最重时段内最繁忙的 300 ms（真实比例，每个矩形一个 kernel）</text>']
+        micro_axis = [f'<text x="{LEFT}" y="16" font-size="17" fill="#48607d">排队最重时段内最繁忙的 300 ms（真实比例，每个矩形一个 kernel）</text>']
         cap_lanes = (f"排队最重时段中部的 5 秒细节窗（每根竖条 ≈ 100 ms 的一个采样窗口，可逐根对比，"
                      f"不是趋势线）。上下两图逐条对看：GPU busy 与 gemm 占比的竖条起伏结构相同，"
                      f"在飞调用数每根都压着 cap=16 的红虚线（全程 above-cap {q['fcfs']['ms_above_cap']/1e3:.0f} vs "
@@ -633,9 +633,9 @@ def main():
         span2 = int(30e6)
         at_f2 = kernel_micro_best(sq_f, at_f, at_f + span, span2)
         at_c2 = kernel_micro_best(sq_c, at_c, at_c + span, span2)
-        u1, uy, _, _ = kernel_micro_strip(sq_f, 30, "FCFS baseline", at_f2, span2)
+        u1, uy, _, _ = kernel_micro_strip(sq_f, 70, "FCFS baseline", at_f2, span2)
         u2, uy2, _, _ = kernel_micro_strip(sq_c, uy + 4, "agentix_core", at_c2, span2)
-        micro2_axis = [f'<text x="{LEFT}" y="16" font-size="10" fill="#48607d">再放大到 30 ms：单个 kernel 可分辨（一个 step 的一簇 gemm ≈ 模型各层的线性层依次发射）</text>']
+        micro2_axis = [f'<text x="{LEFT}" y="16" font-size="17" fill="#48607d">再放大到 30 ms：单个 kernel 可分辨（一个 step 的一簇 gemm ≈ 模型各层的线性层依次发射）</text>']
         figs[3].append((name, fig(parts + s1 + s2, ye + 6) +
                         f'<p class="cap"><b>图注：</b>{cap_lanes}'
                         f'<br><b>轴注：</b>横轴 \"s\" = 全程墙钟秒；lane 高度为该指标的满量程'
