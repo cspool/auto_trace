@@ -15,6 +15,7 @@
 | 时间线视图 | R10 两页（高延迟分堆、并发资源窗口） | **三类且各承担解释职责**，每类上下共轴排布一对 |
 | 结论形态 | 单运行资源缺口与机会 | 端侧指标差 = 时间线几何量差的闭环论证 + 上界估算 |
 | 复用关系 | — | A02 逐捕获直接执行 workflow05 契约；折叠/梯形/十段制沿用其定义 |
+| 两部结构 | workload_profile 拆 process 视图 → perf_trace 对其 trace | **同构保留**：A00 = workload_profile 半边（层级 + 守恒门），A01–A05 = perf_trace 半边；A00 不过门则后续步骤不得消费捕获 |
 
 参考链的产物是本链的**构件**：workflow05 的 process-resource 契约页在 A02 原样生成，
 本链新增的是配对语义（选窗、共轴、对照读法、差量记账）。
@@ -29,6 +30,26 @@
   （vLLM：V1 runner + NVTX scopes 环境变量）。
 
 ## 2. 步骤
+
+### A00 负载→运行时 process 视图拆解与守恒门（workload_profile 半边）
+
+auto_trace 由两部分组成：workload_profile（把负载拆解成运行时 process 视图）与 perf_trace
+（对这些已定义 process 做性能与资源 trace）。A00 是前者在消融链中的对应物，必须在任何
+perf_trace 步骤消费捕获之前通过。参考实现 `analyze_a00_workload_process_view.py`，
+产出 `a00_process_view.json`。
+
+层级（规范键）：program(program_id) → call(program_id, call_index) →
+step(forward scope 实例，一次引擎迭代) → scope(step, phase)。
+
+守恒门（全部 PASS 才放行 A02–A04）：
+- **G-P**：程序集合 三方一致（负载规格 = 运行记录 = trace NVTX）。
+- **G-C**：调用键集合 三方相等（规格 2,440 = run jsonl = 配对 call_begin/end）。
+- **G-S**：引擎循环守恒——各 phase scope 计数相对 forward 数的偏差需可解释：
+  正偏差 = 空批迭代（调度器跑了 preprocess、批为空，h23 实测 +26/+62，0.2–0.4 %）；
+  −1 = 采集停止截断的尾部迭代；赤字 <−1 或大正偏差 = scope 丢失，FAIL。
+- **G-J**：每个调用窗口与 ≥1 个 forward step 区间相交（连续批下为成员关系而非独占）。
+
+**验收**：六个捕获（3 模型 × 2 策略）的 a00 全部 all_pass；G-S 的每个偏差均带解释入档。
 
 ### A01 单变量配对采集
 
@@ -82,6 +103,7 @@
 
 | 步骤 | 产物 |
 |---|---|
+| A00 | `<tag>/a00_process_view.json`（层级、事件族计数、四门结果与解释） |
 | A01 | `<tag>/cap.nsys-rep`、`profile.log`、`run/*.jsonl`、`run/summary_*.json` |
 | A02 | `<tag>_views/HIGH_LATENCY_PROCESS_HARDWARE_TIMELINE.html`、`CONCURRENCY_UTILIZATION.html`、`GROUPS.json` |
 | A03 | `gain_facts_<model>.json`、`payload_<tag>.json`（三视图数据，参考 schema：origin/sections/breaks/piles/lanes） |
@@ -92,6 +114,7 @@
 
 `reference_impl/`（取自 AgentSys `experiments/h23-agentix-8b/code`，提交 4b1cd2d）：
 
+- `analyze_a00_workload_process_view.py` — A00 负载 process 视图拆解 + 守恒门
 - `render_w05_contract_views.py` — A02 契约双页（serving 适配）
 - `analyze_gain_explain.py` — A03 配对事实
 - `build_r10_payloads.py` — A03/A04 三视图 payload（参考 batch16 页 schema）
